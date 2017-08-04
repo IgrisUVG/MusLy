@@ -1,0 +1,22 @@
+.idea
+BigPage/
+Flaming Hakama/
+IMG/
+CL_MOZART_DUETTI_LEIT/
+PDF/
+SNIPPETS/
+TEST/
+TRASH/
+*.count
+*.eps
+*.jpg
+*.jpeg
+*.log
+*.mid
+*.pdf
+*.tex
+*.texi
+*.txt
+*.xlsx
+*.zip
+*.ly~

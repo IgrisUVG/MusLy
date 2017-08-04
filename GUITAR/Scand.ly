@@ -155,9 +155,11 @@ dynamic = {
         \repeat unfold 16 {<d a>2 <d a>2} \bar ".|:"
         \repeat unfold 16 {<d a>4. <d a> <d a>4} \bar ":|."
         \repeat unfold 16 {<d a>4. <d a> <d a>4}
+        %{
         \repeat unfold 16 {<d a>4. <d a> <d a>4}
         \repeat unfold 16 {<d a>4. <d a> <d a>4}
         \repeat unfold 16 {<d a>4. <d a> <d a>4}
+        %}
       }
       \\
       {
@@ -167,8 +169,8 @@ dynamic = {
         \dynamic
         \dynamic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \repeat unfold 16 {s1 s\break}
-        \repeat unfold 16 {s1 s\break}
+        \repeat unfold 8 {s1 s\break} % 8 <- 16
+        %\repeat unfold 16 {s1 s\break}
       }
     >>
   }

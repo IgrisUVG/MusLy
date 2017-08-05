@@ -1,12 +1,12 @@
-.idea
-BigPage/
-Flaming Hakama/
-IMG/
-CL_MOZART_DUETTI_LEIT/
-PDF/
-SNIPPETS/
-TEST/
-TRASH/
+/.idea
+/BigPage/
+/Flaming Hakama/
+/IMG/
+/CL_MOZART_DUETTI_LEIT/
+/PDF/
+/SNIPPETS/
+/TEST/
+/TRASH/
 *.count
 *.eps
 *.jpg

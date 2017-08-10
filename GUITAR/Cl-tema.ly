@@ -13,8 +13,7 @@
   top-markup-spacing.basic-distance = 8
   markup-system-spacing.basic-distance = 25
   top-system-spacing.basic-distance = 20
-  system-system-spacing.basic-distance = 25
-  score-system-spacing.basic-distance = 28
+  system-system-spacing.basic-distance = 20
   last-bottom-spacing.basic-distance = 20
   
   %two-sided = ##t
@@ -31,8 +30,10 @@
   }
 }
 global ={
-	\defaultTimeSignature
+  \defaultTimeSignature
   \time 2/2
+  \override Score.RehearsalMark.extra-offset = #'(6 . 5)
+  \mark \markup {\fontsize #-2 {Allegro non moto}}
 }
 ersteStimme = \relative c' {
 	\clef "treble_8" 
@@ -78,6 +79,7 @@ zweiteStimme = \relative {
 
 \score {
   \new Staff \with {
+  	midiInstrument = #"acoustic guitar (nylon)"
     instrumentName = "Gitarre"
   }
   {
@@ -93,5 +95,9 @@ zweiteStimme = \relative {
 				\zweiteStimme
 			}
 		>>
+  }
+  \layout{}
+  \midi{
+  	\tempo 2 = 160
   }
 }

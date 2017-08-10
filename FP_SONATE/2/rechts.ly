@@ -1,5 +1,4 @@
 \version "2.19.15"
-%\version "2.18.0"
 
 \language "deutsch"
 
@@ -47,7 +46,7 @@ rechts = {
       \stemUp <gis e'~>4 \stemDown <a e'>2<ais h><gis ais>4<a! h>2 a4 gis2.
     }
   >>
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   <<
     {
       \once\override NoteColumn.ignore-collision = ##t
@@ -86,7 +85,7 @@ rechts = {
     }
   >>
   \bar "||"\break
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \relative {
     h'8 e, h e gis h fis e h e fis h gis e h e cis a'
     h8 e, h e gis h fis e h e fis h gis e h e cis a'

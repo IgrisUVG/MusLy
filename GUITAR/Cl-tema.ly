@@ -96,8 +96,10 @@ zweiteStimme = \relative {
 			}
 		>>
   }
+  %{
   \layout{}
   \midi{
   	\tempo 2 = 160
   }
+  %}
 }

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.19.15"
 
 \language "deutsch"
 
@@ -45,4 +45,10 @@
     \new Dynamics = "DYN" \dynamic
     \new Staff = "LH" \links
   >>
+  %{
+  \layout { }
+  \midi {
+  	\tempo 4 = 200
+  }
+  %}
 }

@@ -1,5 +1,4 @@
 \version "2.19.15"
-%\version "2.18.0"
 
 \language "deutsch"
 
@@ -48,7 +47,7 @@ links = {
       a2\rest ais4
     }
   >>
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   <<
     {
       fis'4 e'2 dis'2.
@@ -79,7 +78,7 @@ links = {
     }
   >>
   <gis dis'>2<h e'>4<a e'>2<h e'>4<e h e'>2.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   <<
     {
       \once \override NoteColumn.force-hshift = #-.5
@@ -115,7 +114,7 @@ links = {
       \once \override NoteColumn.force-hshift = #-.5
       h2 cis'4~
       \once \override NoteColumn.force-hshift = #-.5
-      cis'2.
+      cis'2. 
       \once \override NoteColumn.force-hshift = #-.5
       cis'2 e'4
       \once \override NoteColumn.force-hshift = #-.5

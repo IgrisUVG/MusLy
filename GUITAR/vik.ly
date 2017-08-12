@@ -10,15 +10,16 @@
   system-system-spacing.basic-distance = 25
   score-system-spacing.basic-distance = 28
   last-bottom-spacing.basic-distance = 20
-  
+
   %two-sided = ##t
   %inner-margin = 25
   %outer-margin = 15
   left-margin = 15
   right-margin = 15
-  
+
   footnote-padding = 8
   footnote-footer-padding = 7
+  footnote-separator-markup = \markup \null
 }
 
 \header {
@@ -44,36 +45,36 @@
 xLV = #(define-music-function (parser location further) (number?) #{
   \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
   \once \override LaissezVibrerTie.details.note-head-gap = #(/
-                                                                  further -2)
+                                                             further -2)
   \once \override LaissezVibrerTie.extra-offset = #(cons (/
-                                                             further 2) 0)
+                                                          further 2) 0)
          #})
 
 stringNumberSpanner =
 #(define-music-function (parser location StringNumber) (string?)
-  #{
-    \override TextSpanner.font-size = #-5
-    \override TextSpanner.dash-fraction = #0.3
-    \override TextSpanner.dash-period = #1.5
-    \override TextSpanner.bound-details.right.arrow = ##t
-    \override TextSpanner.arrow-width = #0.2
-    \override TextSpanner.arrow-length = #0.7
-    \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-    \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
-  #})
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     \override TextSpanner.bound-details.right.arrow = ##t
+     \override TextSpanner.arrow-width = #0.2
+     \override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
 
 stringNumSpan =
 #(define-music-function (parser location StringNumber) (string?)
-  #{
-    \override TextSpanner.font-size = #-5
-    \override TextSpanner.dash-fraction = #0.3
-    \override TextSpanner.dash-period = #1.5
-    %\override TextSpanner.bound-details.right.arrow = ##t
-    %\override TextSpanner.arrow-width = #0.2
-    %\override TextSpanner.arrow-length = #0.7
-    \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-    \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
-  #})
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     %\override TextSpanner.bound-details.right.arrow = ##t
+     %\override TextSpanner.arrow-width = #0.2
+     %\override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
@@ -91,7 +92,7 @@ stringNumSpan =
       \time 2/4
       \override Staff.TimeSignature.stencil = ##f
       \override Score.RehearsalMark.extra-offset = #'(8 . 5)
-      \mark \markup {\fontsize #-2 {Неторопливо и нежно}}
+      \mark \markup {\fontsize #-2 {Andantino e dolce}}
       <h d>4 <cis e>
       \time 10/4
       <<
@@ -100,9 +101,9 @@ stringNumSpan =
           %\override TextScript.extra-offset = #'(0 . 0.5)
           g'
           \once\override Fingering.extra-offset = #'(-0.2 . 0.6)
-          d'-4 a'-"V" d 
+          d'-4 a'-"V" d
           \once\override TextScript.extra-offset = #'(0 . 0.75)
-          fis,-"IIV" g 
+          fis,-"IIV" g
           \once\override TextScript.extra-offset = #'(0 . 1.5)
           e2-"V" s4 a
         }
@@ -130,8 +131,8 @@ stringNumSpan =
           \once\override Slur.direction = #DOWN
           \once\override Slur.positions = #'(2.5 . 3.5)
           \acciaccatura b8-\markup {
-            	\postscript #"0.5 -3.1 moveto 2.3 0.8 rlineto stroke"
-            }
+            \postscript #"0.5 -3.1 moveto 2.3 0.8 rlineto stroke"
+          }
           d4 a' d fis, g e2
         }
         \\
@@ -172,7 +173,7 @@ stringNumSpan =
           \voiceTwo
           \revert Stem.length
           \override TextScript.font-size = -2
-          s2 \stemDown <g, d'> 
+          s2 \stemDown <g, d'>
           \once\override TextScript.extra-offset = #'(0 . 3)
           <a e' a d>^"II" <a g' cis e>^"V"
         }
@@ -220,11 +221,11 @@ stringNumSpan =
         \override Staff.NoteCollision.merge-differently-headed = ##t
         <<
           {
-            cis''4. d8 h4. 
+            cis''4. d8 h4.
             \once\override Slur.direction = #DOWN
             \once\override Slur.positions = #'(2.5 . 3.5)
             \acciaccatura h8-\markup {
-            	\postscript #"2.5 -1.6 moveto 2.5 1 rlineto stroke"
+              \postscript #"2.5 -1.6 moveto 2.5 1 rlineto stroke"
             }
             d8 fis,4. a8
           }
@@ -286,9 +287,9 @@ stringNumSpan =
             {
               \voiceTwo
               d,,2 e''8 d-\markup {
-								\postscript #"1 4.5 moveto 3.3 -1 rlineto stroke"
-							}
-            b4 d,4\rest g f,8\rest a d_\5 r
+                \postscript #"1 4.5 moveto 3.3 -1 rlineto stroke"
+              }
+              b4 d,4\rest g f,8\rest a d_\5 r
             }
           >>
         }
@@ -335,7 +336,7 @@ stringNumSpan =
           \once\override Slur.positions = #'(-9 . -4)
           \revert TextScript.font-size
           \override TextScript.extra-offset = #'(0 . 2.5)
-          g8\rest( e a4) g8\rest c g 
+          g8\rest( e a4) g8\rest c g
           \once\override TextScript.font-size = -2
           e~^"II" e4 fis
         }
@@ -353,21 +354,21 @@ stringNumSpan =
     \new Dynamics {
       s2 s2*5 s2*4 s2 s8 s8\> s4 s2*2
       \repeat volta 3 {
-				\override TextScript.extra-offset = #'(-2.3 . 2.3)
-				s2*8\!-\markup {
-					\column {
-						\line { \teeny 1: \small\dynamic p }
-						\line { \teeny 2: \small\dynamic f }
-					}
-				}
+        \override TextScript.extra-offset = #'(-2.3 . 2.3)
+        s2*8\!-\markup {
+          \column {
+            \line { \teeny 1: \small\dynamic p }
+            \line { \teeny 2: \small\dynamic f }
+          }
+        }
       }
       \alternative{
-      	{
-      		s2*4
-      	}
-      	{
-      		s2
-      	}
+        {
+          s2*4
+        }
+        {
+          s2
+        }
       }
       s2*2 s8 s16 s\> s4 s2*2 s2\!
     }
@@ -397,9 +398,9 @@ stringNumSpan =
       {
         \once\override StrokeFinger.extra-offset = #'(-2.8 . -0.3)
         \once\override StringNumber.extra-offset = #'(-0.5 . -2.5)
-        a2\5\RH #1 
+        a2\5\RH #1
         \once\override StringNumber.extra-offset = #'(-0.5 . -3.5)
-        fis\5 
+        fis\5
         \once\override StrokeFinger.extra-offset = #'(-2.8 . -0.6)
         \once\override StringNumber.extra-offset = #'(-0.5 . -4)
         e~\5\RH #1 e4
@@ -417,7 +418,7 @@ stringNumSpan =
         \once\override StringNumber.extra-offset = #'(-1.6 . 1.8)
         a'~_\6 a4
         \revert NoteColumn.force-hshift
-        a 
+        a
         \shape #'((0 . 0) (0 . -1) (0 . -1) (0 . 0)) LaissezVibrerTie
         \xLV #16 d,2\laissezVibrer s
         \override NoteColumn.force-hshift = #.2
@@ -494,11 +495,11 @@ stringNumSpan =
       {
         \once\override StrokeFinger.extra-offset = #'(-3.3 . 0.6)
         \once\override StringNumber.extra-offset = #'(0.5 . -4.2)
-        cis4.\4\RH #2 d8 
+        cis4.\4\RH #2 d8
         \once\override Fingering.extra-offset = #'(-1 . -2.4)
-        h4.^0 
+        h4.^0
         \once\override StringNumber.extra-offset = #'(-1.4 . -1.7)
-        d8^\4 fis,4. 
+        d8^\4 fis,4.
         \once\override StringNumber.extra-offset = #'(-1 . -2.5)
         a8^\5 e2
       }
@@ -555,8 +556,8 @@ stringNumSpan =
       }
       \\
       {
-      	\override TextScript.font-size = -5
-      	\hideNotes
+        \override TextScript.font-size = -5
+        \hideNotes
         s8
         \once\override TextScript.extra-offset = #'(0 . -3.3)
         fis'-\markup {\circle\bold 2}
@@ -584,8 +585,8 @@ stringNumSpan =
       }
       \\
       {
-      	\override TextScript.font-size = -5
-      	\hideNotes
+        \override TextScript.font-size = -5
+        \hideNotes
         s8
         \once\override TextScript.extra-offset = #'(-0.6 . -6)
         fis^"VII"
@@ -615,7 +616,7 @@ stringNumSpan =
       {
         \voiceTwo
         \shape #'((0 . 0) (0 . -1) (0 . -1) (0 . 0)) LaissezVibrerTie
-        \xLV #16 d,,,2\laissezVibrer s a' 
+        \xLV #16 d,,,2\laissezVibrer s a'
         \shape #'((0 . 0) (0 . -1) (0 . -1) (0 . 0)) LaissezVibrerTie
         \xLV #16 d,2\laissezVibrer s
       }
@@ -624,10 +625,10 @@ stringNumSpan =
     <<
       {
         \override TextScript.extra-offset = #'(0 . 2)
-        e''4. h'8 cis4. d8 h4. d8 
+        e''4. h'8 cis4. d8 h4. d8
         \once\override StringNumber.extra-offset = #'(-0.5 . -2.2)
         \once\override Fingering.extra-offset = #'(-1.3 . -1.3)
-        fis,2-4\2 
+        fis,2-4\2
         \once\override StringNumber.extra-offset = #'(-0.5 . -2.2)
         \once\override Fingering.extra-offset = #'(-1.3 . -1)
         e-2\2-\markup{\italic rit.}
@@ -636,13 +637,13 @@ stringNumSpan =
       {
         \override NoteHead.style = #'harmonic
         \override Rest.extra-offset = #'(0 . 1.8)
-        e,8\rest a'[ d] s r 
-        \override NoteColumn.force-hshift = 0 
+        e,8\rest a'[ d] s r
+        \override NoteColumn.force-hshift = 0
         fis[ h] r r d,[ g] r r a,[ fis' d] r a[ d cis]
       }
       \\
       {
-      	\hideNotes
+        \hideNotes
         s2 s8
         \once\override TextScript.extra-offset = #'(-0.6 . -3.3)
         fis-\markup {\circle\bold 2}
@@ -668,7 +669,7 @@ stringNumSpan =
       }
       \\
       {
-      	\hideNotes
+        \hideNotes
         s2 s8
         \once\override TextScript.extra-offset = #'(-1.3 . -6)
         fis^"VII"
@@ -714,23 +715,23 @@ stringNumSpan =
     \mark \markup{\fontsize #-2 {\bold {Var 3} \italic {a tempo}}}
     <<
       {
-      	\stringNumberSpanner "2"
-      	\textSpannerUp
-      	\override Fingering.staff-padding = #'()
-      	\once\override Fingering.extra-offset = #'(-0.8 . -5.3)
-      	\once\override TextSpanner.extra-offset = #'(-0.8 . -4.75)
-        <d' fis'-4>16\startTextSpan 
+        \stringNumberSpanner "2"
+        \textSpannerUp
+        \override Fingering.staff-padding = #'()
+        \once\override Fingering.extra-offset = #'(-0.8 . -5.3)
+        \once\override TextSpanner.extra-offset = #'(-0.8 . -4.75)
+        <d' fis'-4>16\startTextSpan
         \once\override Fingering.extra-offset = #'(0 . 0.3)
         g_0
         \once\override Fingering.extra-offset = #'(0 . 0.3)
         d_0 <e g'>\stopTextSpan g d <a fis''><d g>
         <g, e''> g' d cis g' <h, d'> g' d
-        <d fis' a>16 g d 
+        <d fis' a>16 g d
         \set fingeringOrientations = #'(left)
         \once\override Fingering.extra-offset = #'(0.2 . 0)
         <e g'-4 h-3> g d <a fis'' a><d g>
         <g, e'' g> g' d cis g' d <h d' fis> <d g>
-        <e h''> 
+        <e h''>
         \once\override Fingering.extra-offset = #'(0 . 0.3)
         h'_0
         \once\override Fingering.extra-offset = #'(0 . 0.3)
@@ -750,7 +751,7 @@ stringNumSpan =
         %\compoundMeter #'((4 4) (1 8))
         \time 7/8
         \override Fingering.extra-offset = #'(0.5 . 0.9)
-        <g, fis''-4>[ g' d <cis e'>] 
+        <g, fis''-4>[ g' d <cis e'>]
         \once\override Beam.positions = #'(4.3 . 4)
         g'[ d <d, d''-1> g'] fis[ a, g' fis] d g
         \time 4/4
@@ -774,23 +775,23 @@ stringNumSpan =
         \dotsUp
         \once\override Fingering.extra-offset = #'(0.2 . 3)
         \once\override StringNumber.extra-offset = #'(-1.7 . -6.6)
-        d8.-1\5 
+        d8.-1\5
         \once\override Fingering.extra-offset = #'(0.2 . 4)
-        e-2 
+        e-2
         \once\override Fingering.extra-offset = #'(0.2 . 2.5)
         \once\override StringNumber.extra-offset = #'(-1.8 . -7.6)
-        a,8-3\6 g8. cis8 h8. d8. 
+        a,8-3\6 g8. cis8 h8. d8.
         \once\override Fingering.extra-offset = #'(-1.3 . 6)
         e-2 a,8 g8. cis h8
         \once\override StringNumber.extra-offset = #'(-1.7 . -6.4)
-        e8.\5 
+        e8.\5
         \once\override StringNumber.extra-offset = #'(0.6 . -8.2)
-        h\6 g8 
+        h\6 g8
         \once\override Fingering.extra-offset = #'(-1.3 . 5.3)
         \once\override StringNumber.extra-offset = #'(0.6 . -6.3)
-        fis'8.-1\5 
+        fis'8.-1\5
         \once\override Fingering.extra-offset = #'(-1.3 . 5.3)
-        e-1 
+        e-1
         \once\override Fingering.extra-offset = #'(-1.3 . 4.2)
         \once\override StringNumber.extra-offset = #'(0.6 . -8.8)
         a,8-2\6 g8.[ cis] d,[ a' d8]
@@ -806,10 +807,10 @@ stringNumSpan =
         \once\override Beam.positions = #'(7.4 . 6.5)
         \once \override Arpeggio.positions = #'(-6 . -1)
         \once\override StringNumber.extra-offset = #'(-0.7 . -9)
-        <d, fis'\5 d''>16\arpeggio a''' g, d 
+        <d, fis'\5 d''>16\arpeggio a''' g, d
         \stringNumberSpanner "2"
-      	\textSpannerUp
-      	\once\override TextSpanner.extra-offset = #'(-0.8 . -3.4)
+        \textSpannerUp
+        \once\override TextSpanner.extra-offset = #'(-0.8 . -3.4)
         a''[\startTextSpan g, d h'']\stopTextSpan
         \time 2/4
         a,, a'' g, d a'' g, a, g''
@@ -841,9 +842,9 @@ stringNumSpan =
         \break
         <d a''> h' g fis h g <e h''><g h>
         \stringNumberSpanner "2"
-      	\textSpannerUp
-      	\once\override TextSpanner.extra-offset = #'(-0.8 . -3.5)
-      	\once\override Beam.positions = #'(5.3 . 5)
+        \textSpannerUp
+        \once\override TextSpanner.extra-offset = #'(-0.8 . -3.5)
+        \once\override Beam.positions = #'(5.3 . 5)
         <g, fis''>\startTextSpan g' d\stopTextSpan a g' d <h a''><d g>
         \compoundMeter #'((3 8) (2 4))
         <d g'> g d <a e''> g' d <h d'> g' d g, g'[ d <cis e'> g']
@@ -859,20 +860,20 @@ stringNumSpan =
       \\
       {
         \dotsUp
-        d8. e a,8 g8. cis8 h8. fis'8. 
+        d8. e a,8 g8. cis8 h8. fis'8.
         \once\override StringNumber.extra-offset = #'(0.6 . -7.3)
-        d\6 h8 g8. d' 
+        d\6 h8 g8. d'
         \once\override StringNumber.extra-offset = #'(0.6 . -6.8)
         e8\5
         \once\override StringNumber.extra-offset = #'(0.6 . -7.3)
         \once\override Beam.positions = #'(-5.3 . -5)
-        d8.\5 fis e8 g,8. 
+        d8.\5 fis e8 g,8.
         \once\override Fingering.extra-offset = #'(0 . 2.6)
         a-0
         \once\override StringNumber.extra-offset = #'(0.6 . -8.2)
-        h8\6 
+        h8\6
         \once\override StringNumber.extra-offset = #'(0.6 . -7.3)
-        d8.[\5 
+        d8.[\5
         \once\override Fingering.extra-offset = #'(0.2 . 2.6)
         a-0] h[ g cis8]
         d8.[ a] d,[ a'
@@ -898,34 +899,34 @@ stringNumSpan =
 %%%%%%%%%%%%%%% VAR 4 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% СНОСКА %%%%%%%%%%%%%%%%
 %{%}
-\markup { 
+\markup {
   \null
-  \footnote 
-  \null 
-  \concat { 
+  \footnote
+  \null
+  \concat {
     "*" \hspace #1.5
     \score {
       \relative {
-      	\key d \major
-      	\magnifyStaff #(magstep -2)
-      	\override Staff.TimeSignature.stencil = ##f
-      	\override TupletNumber.transparent = ##t
-      	<<
-      		{
-      			\set subdivideBeams = ##t
-      			\set baseMoment = #(ly:make-moment 1/8)
-      			\set beatStructure = #'(2 2 2 2)
-      			\override Fingering.staff-padding = #'()
-          	\override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
+        \key d \major
+        \magnifyStaff #(magstep -2)
+        \override Staff.TimeSignature.stencil = ##f
+        \override TupletNumber.transparent = ##t
+        <<
+          {
+            \set subdivideBeams = ##t
+            \set baseMoment = #(ly:make-moment 1/8)
+            \set beatStructure = #'(2 2 2 2)
+            \override Fingering.staff-padding = #'()
+            \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
             d32 a'''\RH #4 a\RH #3 a\RH #2 fis, a' a a s
-      		}
-      		\\
-      		{
-      			\shape #'((0 . 0) (1 . 0) (2 . 0) (3 . 0)) Slur
-      			d,,,8([ \set stemRightBeamCount = #1 fis'16
-      			\hideNotes \set stemLeftBeamCount = #1 g16)]
-      		}
-      	>>
+          }
+          \\
+          {
+            \shape #'((0 . 0) (1 . 0) (2 . 0) (3 . 0)) Slur
+            d,,,8([ \set stemRightBeamCount = #1 fis'16
+            \hideNotes \set stemLeftBeamCount = #1 g16)]
+          }
+        >>
       }
       \layout {
         indent = 0
@@ -951,16 +952,16 @@ stringNumSpan =
           \set beatStructure = #'(2 2 2 2)
           \override TupletNumber.stencil = ##f
           \tuplet 10/8 4 {
-          	\override Fingering.staff-padding = #'()
-          	\override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
-          	\textSpannerUp
-          	\stringNumberSpanner "2"
-          	\once\override TextScript.font-size = 2
-          	%\once\override TextScript.extra-offset = #'(0 . 0)
-            d32^"*" 
-            a'''\RH #2 \startTextSpan a\RH #4 a\RH #3 a\RH #2 
+            \override Fingering.staff-padding = #'()
+            \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
+            \textSpannerUp
+            \stringNumberSpanner "2"
+            \once\override TextScript.font-size = 2
+            %\once\override TextScript.extra-offset = #'(0 . 0)
+            d32^"*"
+            a'''\RH #2 \startTextSpan a\RH #4 a\RH #3 a\RH #2
             fis,\stopTextSpan a' a a a g, a' a a a a, a' a a a
-            e, fis' fis fis 
+            e, fis' fis fis
             \override TextScript.font-size = -5
             \once\override TextScript.extra-offset = #'(0.7 . -6.3)
             fis-\markup {\circle\bold 6}
@@ -997,69 +998,69 @@ stringNumSpan =
         }
         \\
         {
-        	\override Fingering.staff-padding = #'()
-        	\shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          d,,8( 
+          \override Fingering.staff-padding = #'()
+          \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
+          d,,8(
           \once\override StringNumber.extra-offset = #'(0.6 . -6.3)
-          fis'\5 
+          fis'\5
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
-          g^0 
+          g^0
           \once\override StringNumber.extra-offset = #'(0.6 . -5.3)
-          a\4) 
+          a\4)
           \once\override StringNumber.extra-offset = #'(-0.6 . -4)
           \once\override Fingering.extra-offset = #'(0.2 . 3.2)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          e-2\5( 
+          e-2\5(
           a\harmonic
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
-          g^0 
+          g^0
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           d^0)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
           a( e' a d)
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          h^0( 
+          h^0(
           \once\override StringNumber.extra-offset = #'(0.6 . -4.3)
-          cis\3 
+          cis\3
           \once\override StringNumber.extra-offset = #'(0.6 . -5.7)
           g\4 a,)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
           d,8( fis' g a)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          e( a\harmonic g d) 
+          e( a\harmonic g d)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          a( e' a d) 
+          a( e' a d)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
           h( cis g a,)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          d,( h' fis' g) 
+          d,( h' fis' g)
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          g,^1( 
+          g,^1(
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           d'^1 a' d)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          a,( d a' 
+          a,( d a'
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           \arpeggioBracket
           \once\override Arpeggio.positions = #'(1.5 . 2.5)
           \once\override Arpeggio.padding = 0.1
-          e'^4)\arpeggio 
+          e'^4)\arpeggio
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
           d^4( a e a,)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          d,( a' 
+          d,( a'
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           fis'^2 g)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          b,( g' d' e,) 
+          b,( g' d' e,)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
-          d( e' d a) 
+          d( e' d a)
           \shape #'((0.3 . 0) (1 . -1) (-0.5 . -1) (-0.3 . 0)) Slur
           c,( e g c)
-          d 
+          d
           \once\override Fingering.extra-offset = #'(-0.2 . -0.3)
           g,^0
           \once\override StringNumber.extra-offset = #'(1.2 . -5.7)
@@ -1067,14 +1068,14 @@ stringNumSpan =
           \once\override StringNumber.extra-offset = #'(1.2 . -6.3)
           e\5
           \once\override Fingering.extra-offset = #'(-1.3 . 1.5)
-          d4-0 
+          d4-0
           \set stringNumberOrientations = #'(left)
           <d, a' fis'\4>
         }
       >>
       \bar "||"
     }
-    %%%%%%%%%%%%%%%%% OSSIA %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% OSSIA %%%%%%%%%%%%%%%%%
     %{
     \new Staff = "ossia" \with {
       %\remove "Time_signature_engraver"
@@ -1143,14 +1144,14 @@ stringNumSpan =
     \set stemLeftBeamCount = #1 d(\glissando e)\stopTextSpan
     \stringNumSpan "4"
     fis\startTextSpan \set stemRightBeamCount = #1 g
-    \set stemLeftBeamCount = #1 a(\glissando h)\stopTextSpan 
+    \set stemLeftBeamCount = #1 a(\glissando h)\stopTextSpan
     \once\override StringNumber.extra-offset = #'(0 . -0.5)
     cis_\3 d]
     \bar "|"
     <<
       {
-      	\once\override StringNumber.extra-offset = #'(-0.7 . -3.5)
-        fis8\2([ g) a 
+        \once\override StringNumber.extra-offset = #'(-0.7 . -3.5)
+        fis8\2([ g) a
         \once\override StringNumber.extra-offset = #'(-0.6 . -4.3)
         d,\3]
       }
@@ -1161,12 +1162,12 @@ stringNumSpan =
     >>
     <<
       {
-      	\arpeggioBracket
-      	r8
+        \arpeggioBracket
+        r8
         \once\override Arpeggio.positions = #'(3 . 4.5)
         \once\override Arpeggio.padding = 0.1
         \once\override Fingering.extra-offset = #'(-0.2 . -3.8)
-        a'''-4[\arpeggio 
+        a'''-4[\arpeggio
         \once\override Fingering.extra-offset = #'(-0.2 . -2.6)
         d-4
         \once\override Arpeggio.padding = 0.1
@@ -1262,7 +1263,7 @@ stringNumSpan =
       }
       \\
       {
-      	\override StringNumber.staff-padding = #'()
+        \override StringNumber.staff-padding = #'()
         \override Glissando.minimum-length = #3
         \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
         d4 \stemUp\acciaccatura a8 \glissando \stemDown cis4\3
@@ -1276,20 +1277,20 @@ stringNumSpan =
     <<
       {
         \once\override StringNumber.extra-offset = #'(2 . -12)
-      	cis''4.\6
-      	\once\override StringNumber.extra-offset = #'(-8.6 . -11.5)
-      	d8\5
+        cis''4.\6
+        \once\override StringNumber.extra-offset = #'(-8.6 . -11.5)
+        d8\5
         \once \override Dots.extra-offset = #'(-1.7 . 0)
         h4. d8
       }
       \\
       {
-      	\set stringNumberOrientations = #'(left)
+        \set stringNumberOrientations = #'(left)
         <h,, fis' g fis'>2<g d' a'\4 d\3>
       }
       \\
       {
-      	\set stringNumberOrientations = #'(right)
+        \set stringNumberOrientations = #'(right)
         \once\override NoteColumn.force-hshift = #0.3
         d'\4 h'\2
       }
@@ -1332,7 +1333,7 @@ stringNumSpan =
     >>
     \break
     \override Score.RehearsalMark.extra-offset = #'(16 . .4)
-    \mark \markup{\fontsize #-2 {\bold {Coda} \italic {Ещё нежнее. Ближе к грифу}}}
+    \mark \markup{\fontsize #-2 {\bold {Coda} \italic {Dolcissimo, sul tasto}}}
     <<
       {
         a''4 fis
@@ -1440,7 +1441,7 @@ stringNumSpan =
     <<
       {
         \override TextScript.extra-offset = #'(0 . 1)
-        e''2 cis!4.-\markup{\italic rit.} 
+        e''2 cis!4.-\markup{\italic rit.}
         \override TextScript.font-size = -5
         \once\override TextScript.extra-offset = #'(19.6 . 0)
         d8~-"IV"
@@ -1453,29 +1454,35 @@ stringNumSpan =
         \once\override NoteColumn.force-hshift = #1.3
         \override TextScript.font-size = -5
         \once\override TextScript.extra-offset = #'(1.5 . 9.8)
+        \override Stem.length = 6.6
         d''\harmonic-\markup {\circle\bold 3}
       }
       \\
       {
         \voiceTwo
-        c,,2 g'8\rest a f,8\rest 
+        c,,2 g'8\rest a f,8\rest
         \override TextScript.font-size = -5
-        \once\override TextScript.extra-offset = #'(19.9 . 10.3)
+        \once\override TextScript.extra-offset = #'(19.9 . 10.5)
         a-"V"
         %\stemUp
         \override Stem.length = 6.5
-        \once\override TextScript.extra-offset = #'(9.2 . 14.2)
+        \once\override TextScript.extra-offset = #'(9.2 . 14)
+        \stemUp
         d,2-\markup {\circle\bold 5}
       }
       \\
       {
         \voiceOne
         \override TextScript.font-size = -5
-        s2 s s4 
-        \once\override TextScript.extra-offset = #'(-1 . -2.8)
+        s2 s s4
+        \once\override TextScript.extra-offset = #'(-1 . -5.2)
         <a'''\harmonic fis'\harmonic>_\fermata-\markup {\circle\bold 4}
       }
     >>
     \bar "|."
+    \revert Score.RehearsalMark.extra-offset
+    \override Score.RehearsalMark.self-alignment-X = #RIGHT
+    \override Score.RehearsalMark.direction = #DOWN
+    \mark \markup {\teeny MCMXCIX}
   }
 }

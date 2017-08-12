@@ -96,6 +96,8 @@ guitarMusic = \relative {
   <e, h' gis'>8) r <gis, e' h'> r <a cis' e> r
   <<
     {
+      \once\override Slur.positions = #'(0 . 1)
+      \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
       h''8.( a16 \stemDown <e, h' gis'>8)
     }
     \\
@@ -106,6 +108,8 @@ guitarMusic = \relative {
   r8 <gis cis' e> r <a cis' fis> r
   <<
     {
+      \once\override Slur.positions = #'(0 . 1)
+      \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
       h''8.( a16 \stemDown <e, h' gis'>8)
     }
     \\

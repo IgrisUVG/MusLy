@@ -143,8 +143,12 @@ dynamic = {
           g) e c( d) fis g( a) d(
           h) a fis gis([ a) g] e cis(
           d) e g a( fis) h d a(
-          h) g d fis([ e) d] c( h)
-          g( a)
+          h) g d fis([ e) d]
+          \stemUp
+          c( h)
+          g([ a) h] d[
+          \once\override Script.extra-offset = #'(2 . -4.3)
+          cis(\prall h)] c( h)
         }
       }
       \\

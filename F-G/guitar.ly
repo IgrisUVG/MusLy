@@ -7,8 +7,10 @@ guitarMusic = \relative {
   \clef treble
   \key d \major
   \time 4/4
-  \override Staff.TimeSignature #'stencil = ##f
-  d4_( <a' a''> <g' e'> fis) d,4_( <a' a''> <fis' e'> d')
+  \override Staff.TimeSignature.stencil = ##f
+  \override Fingering.staff-padding = #'()
+  \set fingeringOrientations = #'(left)
+  d4_( <a' a''-3> <g'-0 e'-2> fis-1) d,4_( <a' a''> <fis' e'> d')
   d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' cis''> <h' cis> ais)
   d,,4_( <a' a''> <g' e'> fis) d,4_( <a' a''> <fis' e'> d')
   d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' his''> <a' eis'> g)

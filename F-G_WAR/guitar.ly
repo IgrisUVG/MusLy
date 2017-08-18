@@ -151,7 +151,11 @@ guitarMusic = \relative {
       \once \override NoteColumn.force-hshift = #.3
       h s dis, s 
       \override NoteColumn.force-hshift = #.3
-      fis s gis
+      fis s 
+      \once\override Beam.positions = #'(3 . 2.7)
+      gis16_( 
+      \revert NoteColumn.force-hshift
+      a) h e, fis_( gis) a dis, e
     }
     \\
     {
@@ -170,7 +174,7 @@ guitarMusic = \relative {
       dis,8 r e, r
       \once\override StringNumber.extra-offset = #'(1 . 2)
       cis'_\6 r a r gis r a r dis r cis r h r e r a, r gis r h r
-      e,
+      e,4 a8. h16
     }
   >>
 }

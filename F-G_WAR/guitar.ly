@@ -22,14 +22,21 @@ guitarMusic = \relative {
   \time 2/4
   %\override Staff.TimeSignature #'stencil = ##f
   \override Fingering #'staff-padding = #'()
+  \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     e8 r <gis' h e> r h, r <fis' h dis> r
     dis r <h' fis' h> r e, r <h' e gis> r
     <gis, h' e> r <cis e' a> <dis h' fis'> <e h' gis'> r <cis gis' e'> r
   }
   \alternative {
-    {<a cis' e> r <h fis' dis'> r <e h' e> r <a, cis' e> r}
-    {<a cis' e> r}
+    {
+      <a cis' e> r
+      \set Score.repeatCommands = #'((volta #f))
+      <h fis' dis'> r <e h' e> r <a, cis' e> r
+    }
+    {
+      <a cis' e> r
+    }
   }
   <h fis' dis'> r <cis gis' cis> r <h dis' fis>4
   <e h' e>8 r r <h e' gis> <a cis' e> r <h dis' fis>4
@@ -89,8 +96,14 @@ guitarMusic = \relative {
     <gis h' e> r <cis e' a> <dis h' fis'> <e h' gis'> r <cis gis' e'> r
   }
   \alternative{
-    {<a cis' e> r <h fis' dis'> r <e h' e> r <a, cis' a'> r}
-    {<a cis' e> r}
+    {
+      <a cis' e> r
+      \set Score.repeatCommands = #'((volta #f))
+      <h fis' dis'> r <e h' e> r <a, cis' a'> r
+    }
+    {
+      <a cis' e> r
+    }
   }
   <h fis' dis'> r <cis gis' cis> r h''8.( a16
   <e, h' gis'>8) r <gis, e' h'> r <a cis' e> r
@@ -140,9 +153,9 @@ guitarMusic = \relative {
     {
       \voiceOne
       fis''8 s h, s a s
-      \once\override StringNumber.extra-offset = #'(-0.6 . -3) 
+      \once\override StringNumber.extra-offset = #'(-0.6 . -3)
       gis8.(\1 fis16)
-      e8 s h' s a s 
+      e8 s h' s a s
       \override TextScript.extra-offset = #'(-0.5 . -2)
       gis8.(^\markup{\teeny II} fis16)
       e8 s
@@ -151,7 +164,7 @@ guitarMusic = \relative {
     {
       \voiceTwo
       dis,8 r e, r
-      \once\override StringNumber.extra-offset = #'(1 . 2) 
+      \once\override StringNumber.extra-offset = #'(1 . 2)
       cis'_\6 r a r gis r a r dis r cis r h r e, r
     }
   >>

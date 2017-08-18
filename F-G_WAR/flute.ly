@@ -7,7 +7,7 @@ fluteMusic = \relative e'' {
   \key e \major
   \time 2/4
   %\override Staff.TimeSignature #'stencil = ##f
-  \override Score.VoltaBracketSpanner.Y-offset = 7
+  %\override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
     h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h

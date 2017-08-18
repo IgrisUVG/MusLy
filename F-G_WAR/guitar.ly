@@ -147,15 +147,16 @@ guitarMusic = \relative {
       \once\override Slur.positions = #'(0 . 1)
       \once \override NoteColumn.force-hshift = #.3
       \once\override Beam.positions = #'(3.5 . 3)
-      h'8.( a16 gis8) s 
+      h'8.( a16 gis8) s
       \once \override NoteColumn.force-hshift = #.3
-      h s dis, s 
+      \set stringNumberOrientations = #'(left)
+      h\3 s dis, s
       \override NoteColumn.force-hshift = #.3
-      fis s 
+      fis s
       \once\override Beam.positions = #'(3 . 2.7)
-      gis16_( 
+      gis16_(
       \revert NoteColumn.force-hshift
-      a) h e, fis_( gis) a dis, e
+      a) h e,
     }
     \\
     {
@@ -166,15 +167,45 @@ guitarMusic = \relative {
       e8 s h' s a s
       \override TextScript.extra-offset = #'(-0.5 . -2)
       gis8.(^\markup{\teeny II} fis16)
-      e8 s s4 e8 s fis s dis s e
+      e8 s s4
+      \set stringNumberOrientations = #'(left)
+      \once\override StringNumber.extra-offset = #'(0.3 . 0.5)
+      e8\2 s fis s dis s e
     }
     \\
     {
       \voiceTwo
       dis,8 r e, r
       \once\override StringNumber.extra-offset = #'(1 . 2)
-      cis'_\6 r a r gis r a r dis r cis r h r e r a, r gis r h r
-      e,4 a8. h16
+      cis'_\6 r a r gis r a r dis r cis r h r e r
+      \once\override StringNumber.extra-offset = #'(-1.7 . 4.5)
+      a,_\6 r gis r h r
+      e,4
+    }
+  >>
+  <<
+    {
+      \unset stringNumberOrientations
+      \once\override StringNumber.extra-offset = #'(-0.5 . -3.5)
+      fis'16_(\4 gis) a dis, e( fis) gis a
+    }
+    \\
+    {
+      a,8. 
+      \once\override StringNumber.extra-offset = #'(1 . 3.5)
+      h16_\6 cis8 s
+    }
+  >>
+  h'16 cis dis e
+  <<
+    {
+      fis8 h r dis dis( cis) r gis fis cis' r e e( dis) r e
+      fis h, e16 dis cis h dis8 fis, h16 ais gis fis
+      gis8 h ais fis' dis8.( e16) h8 gis
+    }
+    \\
+    {
+      h,,8
     }
   >>
 }

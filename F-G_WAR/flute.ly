@@ -50,5 +50,7 @@ fluteMusic = \relative e'' {
   e8--) h16( e, h e fis h cis, e a cis fis, h cis e
   fis8--) e16( h e, fis h e fis, a cis e gis, h dis fis
   gis8--) e16( h a e h a gis fis gis h a fis a cis
-  e8--)
+  e8--) h'16( a fis e h a fis e gis a h e fis a)
+  cis( e cis h dis fis dis cis h gis fis h, a fis a cis 
+  e fis gis h cis a cis dis e8)
 }

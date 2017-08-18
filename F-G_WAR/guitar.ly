@@ -147,7 +147,11 @@ guitarMusic = \relative {
       \once\override Slur.positions = #'(0 . 1)
       \once \override NoteColumn.force-hshift = #.3
       \once\override Beam.positions = #'(3.5 . 3)
-      h'8.( a16 gis8) s
+      h'8.( a16 gis8) s 
+      \once \override NoteColumn.force-hshift = #.3
+      h s dis, s 
+      \override NoteColumn.force-hshift = #.3
+      fis s gis
     }
     \\
     {
@@ -158,14 +162,15 @@ guitarMusic = \relative {
       e8 s h' s a s
       \override TextScript.extra-offset = #'(-0.5 . -2)
       gis8.(^\markup{\teeny II} fis16)
-      e8 s
+      e8 s s4 e8 s fis s dis s e
     }
     \\
     {
       \voiceTwo
       dis,8 r e, r
       \once\override StringNumber.extra-offset = #'(1 . 2)
-      cis'_\6 r a r gis r a r dis r cis r h r e, r
+      cis'_\6 r a r gis r a r dis r cis r h r e r a, r gis r h r
+      e,
     }
   >>
 }

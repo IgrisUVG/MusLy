@@ -187,7 +187,7 @@ guitarMusic = \relative {
     {
       \unset stringNumberOrientations
       \once\override StringNumber.extra-offset = #'(-0.5 . -3.5)
-      fis'16_(\4 gis) a dis, e( fis) gis a
+      fis'16(\4 gis) a dis, e( fis) gis a
     }
     \\
     {
@@ -199,13 +199,13 @@ guitarMusic = \relative {
   h'16 cis dis e
   <<
     {
-      fis8 h r dis dis( cis) r gis fis cis' r e e( dis) r e
-      fis h, e16 dis cis h dis8 fis, h16 ais gis fis
-      gis8 h ais fis' dis8.( e16) h8 gis
+      f8 b r d d( c) r g f c' r es es( d) r es
+      f b, es16( d) c b d8 f, b16( a) g f
+      g8 b a f' d8.( es16) b8 g
     }
     \\
     {
-      h,,8
+      b,,8 r <c'es> r f, r
     }
   >>
 }

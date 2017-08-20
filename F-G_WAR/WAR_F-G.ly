@@ -32,6 +32,7 @@
 
 \include "flute.ly"
 \include "guitar.ly"
+\include "chordsSheet.ly"
 
 \score {
   \new StaffGroup<<
@@ -47,6 +48,7 @@
       instrumentName = "Guit."
     }
     \guitarMusic
+    \new Dynamics \hSheet
 
   >>
 }

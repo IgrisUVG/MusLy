@@ -48,7 +48,7 @@
       instrumentName = "Guit."
     }
     \guitarMusic
-    \new Dynamics \hSheet
+    %\new Dynamics \hSheet
 
   >>
 }

@@ -197,15 +197,43 @@ guitarMusic = \relative {
     }
   >>
   h'16 cis dis e
+  \bar "||"
   <<
     {
       f8 b r d d( c) r g f c' r es es( d) r es
       f b, es16( d) c b d8 f, b16( a) g f
-      g8 b a f' d8.( es16) b8 g
+      g8 b a f'
     }
     \\
     {
-      b,,8 r <c'es> r f, r
+      b,,,8 r <b'es> r f r \acciaccatura {es'16[ a, c,]} f,8 r
+      a r <c' es> r b, r 
+      \once\override Slur.direction = #UP
+      \acciaccatura {b'16[ a' d]} g8 r
+      as,,4 g fis? f es8 c' f, d'
+    }
+  >>
+  <<
+    {
+      d'8.( es16)
+    }
+    \\
+    {
+      s8 <b, e?>
+    }
+    \\
+    {
+      \voiceTwo
+      b,4
+    }
+  >>
+  <<
+    {
+      b''8 g
+    }
+    \\
+    {
+      es,8 r
     }
   >>
 }

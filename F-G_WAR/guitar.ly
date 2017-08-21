@@ -207,7 +207,7 @@ guitarMusic = \relative {
     \\
     {
       b,,,8 r <b' d> r f4 \acciaccatura {es'16[ a, c,]} f,8 r
-      a r <c' es> r b, r 
+      a r <c' es> r b,4 
       \once\override Slur.direction = #UP
       \acciaccatura {b'16[ a' d]} g8 r
       as,,4 g fis? f es8 c' f, d'

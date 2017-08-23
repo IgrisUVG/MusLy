@@ -239,4 +239,17 @@ guitarMusic = \relative {
       es,8 r
     }
   >>
+  <<
+    {
+      f'8 b r d d( c) r g f c' r es es( d) r es
+      f b, es16( d) c b d8 f, b16( a) g f
+      g8 b c a
+    }
+    \\
+    {
+      b,,8 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'
+      f es c a a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r b,8 r16 g''
+      f d b g d4
+    }
+  >>
 }

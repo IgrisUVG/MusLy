@@ -249,7 +249,7 @@ guitarMusic = \relative {
     {
       b,,8 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'
       f es c e,? a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r b,8 r16 g''
-      f d b g d4 cis'?8 g fis c' h!4
+      f d b fis? d4 cis'?8 g fis c' h!4 b8 g e c f
     }
   >>
 }

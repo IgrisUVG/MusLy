@@ -191,7 +191,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      a,8. 
+      a,8.
       \once\override StringNumber.extra-offset = #'(1 . 3.5)
       h16_\6 cis8 s
     }
@@ -206,11 +206,11 @@ guitarMusic = \relative {
     }
     \\
     {
-      b,,,8 r <b' d> r f4 
+      b,,,8 r <b' d> r f4
       \once\override Slur.direction = #UP
       \once\override Slur.positions = #'(1 . -4)
       \acciaccatura {es'16[ a, c,]} f,8 r
-      a r <c' es> r b,4 
+      a r <c' es> r b,4
       \once\override Slur.direction = #UP
       \acciaccatura {b'16[ a' d]} g8 r
       as,,4 g fis? f es8 c' f, d'
@@ -248,8 +248,24 @@ guitarMusic = \relative {
     \\
     {
       b,,8 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'
-      f es c e,? a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r b,8 r16 g''
-      f d b fis? d4 cis'?8 g fis c' h!4 b8 g e c f
+      f es c e,? a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r 
+      b,8 b'16\rest g'
+      f d b fis? d4 cis'?8 g fis c' h!4 b8 g e c
     }
   >>
+  <<
+    {
+      b''4
+    }
+    \\
+    {
+      e,16\rest f c\glissando^( b)
+    }
+    \\
+    {
+      \voiceTwo
+      f4
+    }
+  >>
+  a16 g f e
 }

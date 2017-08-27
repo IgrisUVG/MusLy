@@ -41,9 +41,9 @@ paren =
 #(define-event-function (parser location dyn) (ly:event?)
    (make-dynamic-script
     #{ \markup \concat {
-         \normal-text \italic \fontsize #1 (
-         	#(ly:music-property dyn 'text)
-         	\normal-text \italic \fontsize #1 )
+      \normal-text \italic \fontsize #1 (
+      #(ly:music-property dyn 'text)
+      \normal-text \italic \fontsize #1 )
        }
     #}))
 
@@ -56,7 +56,8 @@ rechtsOne = \relative {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
-
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lento dolce"
   <<
     {
       \override Slur.positions = #'(3 . 1)
@@ -70,7 +71,7 @@ rechtsOne = \relative {
     {
       r8 <f, g>4. r8 <f b> r <f a>4. r8 b r <es, g>4. r4 r8 <d f>4. r8 <a' c>
       r8 <f g>4. r8 <f b> r <f a>4. r8 b r <es, g>4. r4 r8 <d f>4. r8 b'
-      r <c es>4. 
+      r <c es>4.
       \once \override Rest.extra-offset = #'(0.5 . 0.5)
       r4 r8 <d f>~ q2
       r8 <b c>4. r8 <b es> r <b d>4. r8 es r <as, c>4. r4 r8 <g h>4. r8 <d' f>
@@ -191,7 +192,8 @@ rechtsTwo = \relative {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
-
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lento dolce"
   <<
     {
       \override Slur.positions = #'(3 . 1)
@@ -206,7 +208,7 @@ rechtsTwo = \relative {
     {
       r8 <f, g>4. r8 <f b> r <f a>4. r8 b r <es, g>4. r4 r8 <d f>4. r8 <a' c>
       r8 <f g>4. r8 <f b> r <f a>4. r8 b r <es, g>4. r4 r8 <d f>4. r8 b'
-      r <c es>4. 
+      r <c es>4.
       \once \override Rest.extra-offset = #'(0.5 . 0.5)
       r4 r8 <d f>~ q2
       r8 <b c>4. r8 <b es> r <b d>4. r8 d r <as ces>4. r4 r8 <g! b>4. r8 <b des>
@@ -315,7 +317,7 @@ dynamicTwo = {
   s2.*5\p s2 s4-\markup { \italic { poco cresc. } } s2.*3
   s4
   \once\override DynamicText.extra-offset = #'(0 . -.5)
-  s2\ff 
+  s2\ff
   \once\override DynamicText.extra-offset = #'(0 . -2)
   s2.\sp
   \override DynamicTextSpanner.extra-offset = #'(-1.5 . -1)
@@ -338,8 +340,6 @@ dynamicTwo = {
     print-all-headers = ##t
   }
   \header {
-    %title = \markup { \fontsize #4 "1" }
-    %meter = "Lento dolce"
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
@@ -354,7 +354,6 @@ dynamicTwo = {
     \header {
       title = "Вальс I"
       composer = ##f
-      meter = "Lento dolce"
     }
     \layout {
       \context {
@@ -374,7 +373,6 @@ dynamicTwo = {
     \header {
       title = "Вальс II"
       composer = ##f
-      meter = "Lento dolce"
     }
     \layout {
       \context {

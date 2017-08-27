@@ -510,10 +510,7 @@ linksEins = {
                  ((0 . 0) (0 . 0) (0 . 0) (3 . 0))
                  ((0 . -4) (-2 . -3) (-5 . -1) (0 . 0))
                  ) Slur
-      a,,4_(-\tweak self-alignment-X #2
-      -\tweak Y-offset #ly:self-alignment-interface::y-aligned-on-self
-      -\tweak self-alignment-Y #12 _\finger \rhMark
-      h,2\rest g,,8.) fis,,4_~ fis,,16_~
+      a,,4_( h,2\rest g,,8.) fis,,4_~ fis,,16_~
       fis,,16\noBeam fis,,8. fis,,\noBeam fis,, fis,,\noBeam fis,, s2
       \times 4/6 {a,,16_\markup {\italic "non legato"} e, d, a, e, f,}
       \times 4/6 {a,,16 e, d, a, e,-\markup {\italic "sim."} f,}

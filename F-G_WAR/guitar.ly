@@ -198,6 +198,7 @@ guitarMusic = \relative {
   >>
   h'16 cis dis e
   \bar "||"
+  \break
   <<
     {
       f8 b r d d( c) r g f c' r es es( d) r es
@@ -236,7 +237,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      es,8 r
+      es,4
     }
   >>
   <<

@@ -36,7 +36,7 @@
 \include "rechts.ly"
 %%%%%%%%%%% LH %%%%%%%%%%%%
 \include "links.ly"
-%%%%%%%%%%%%D%%%%%%%%%%%%
+%%%%%%%%%%%% D %%%%%%%%%%%%
 \include "dynamic.ly"
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

@@ -48,12 +48,14 @@ rechts = {
         }
         \\
         {
-          r4 ces'^( as4. \stemUp des,8 ges,1) s1*3
+          r4 
+          \shape #'((0 . 0) (0 . 0) (-1 . -1) (0 . -4)) Slur
+          ces'^( as4. \stemUp des,8 ges,1) s1*3
         }
         \\
         {
           \voiceTwo
-          s1. ges'4.( ces,8 es,2) b''4.( des,8 <b, f'>2) as''4.( as,8 cis,2) g''4.( a,8)
+          s1. ges'4.( ces,8 es,2) b''4.( des,8 <b, f'>2) as''4.( as,8 cis,2) g''4.^( a,8)
         }
       >>
       \bar "||"
@@ -138,7 +140,9 @@ rechts = {
       {
         des1( ces4) r r2 as2( ces4) r ces2( es4) r es1( des4) r r2 b2( des4) r des2( f4) r
         \makeOctaves #1 {\stemDown f,2( es des ces b as ges1)}
-        \stemUp f'2( es des ces b as \stemNeutral \acciaccatura {es8[ f]} ges4_.)
+        \stemUp f'2( es des ces b as \stemNeutral 
+        \once\override Slur.direction = #DOWN
+        \acciaccatura {es8[ f]} ges4_.)
       }
       \\
       {
@@ -221,12 +225,14 @@ rechts = {
     \repeat unfold 2 {des,( ges b des) ces,( des ges ces) b,( des ges b) ces,( des ges ces)}
     des,( ges b des) ces,( des ges ces) b,( des ges b) as,( des es as) ges,( b des ges) f,( b des f)
     fes,( as des fes) es,( as b es) des,( ges b des) ces,( des f ces') b,( es ges b) a,( des f a)
-    g,( des' fes g) ges,( c es ges) f,( as d f) r( b, des e) r a, c es f a, ces e
+    g,( des' fes g) ges,( c es ges) f,( as d f) 
+    \shape #'((0 . -4) (-0.5 . 0.5) (0.5 . -2) (0 . 0)) Slur
+    r_( b, des e) r a, c es f a, ces e
     \bar "||"
     \key d \major
     <<
       {
-        d'4\p g fis a
+        d'4 g fis a
         \makeOctaves #-1 {
           \once \override NoteColumn.force-hshift = #-.3
           e d fis d

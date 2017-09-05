@@ -20,10 +20,11 @@ hSheet = {
   s8^\markup{\concat{IV \super 6}} s8^\markup{\concat{V \super 6}}
   s4^"I" s^"VI" 
   %%%%%%%%%%%%%%%%%% 1 VOLTA %%%%%%%%%%%%%%%%%%%%%
-  s^"IV" s^"V" s^"I" s^"IV"
+  %s^"IV" s^"V" s^"I" s^"IV"
   %%%%%%%%%%%%%%%%%% 2 VOLTA %%%%%%%%%%%%%%%%%%%%%
   %s^"IV" s^"V" s^"VI" 
   %%%%%%%%%%%%%%%%%%         %%%%%%%%%%%%%%%%%%%%%
-  %s^"V" s4.^"I" s8^\markup{\concat{I \super \concat{{4 \normal-size-sub 6}}}}
-  %s4^"IV" s^"V" s^"I" s^"VI" s^"IV" s^"V" s^"I" s^"VI" s^"IV" s^"V" s2^"VI"
+  s2*9 s4
+  s^"V" s4.^"I" s8^\markup{\concat{I \super \concat{{4 \normal-size-sub 6}}}}
+  s4^"IV" s^"V" s^"I" s^"VI" s^"IV" s^"V" s^"I" s^"VI" s^"IV" s^"V" s2^"VI"
 }

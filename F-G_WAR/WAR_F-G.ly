@@ -1,4 +1,5 @@
 \version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -47,7 +48,7 @@
       instrumentName = "Guit."
     }
     \guitarMusic
-    %\new Dynamics \hSheet
+    \new Dynamics \hSheet
 
   >>
 }

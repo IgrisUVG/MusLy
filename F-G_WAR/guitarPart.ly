@@ -30,7 +30,11 @@
 }
 
 \include "guitar.ly"
+\include "chordsSheet.ly"
 
 \score {
-  \new Staff \guitarMusic
+  <<
+    \new Staff \guitarMusic
+    \new Dynamics \hSheet
+  >>
 }

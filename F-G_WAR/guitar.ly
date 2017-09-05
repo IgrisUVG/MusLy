@@ -249,7 +249,7 @@ guitarMusic = \relative {
     \\
     {
       b,,8 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'
-      f es c e,? a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r 
+      f es c e,? a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r
       b,8 b'16\rest g'
       f d b fis? d4 cis'?8 g fis c' h!4 b8 g e c
     }
@@ -269,29 +269,29 @@ guitarMusic = \relative {
     }
   >>
   <<
-  	{
-			a16 g f es
-			<<
-				{
-					a'( g) f( es)
-				}
-				\\
-				{
-					<d, b'>4
-				}
-			>>
-			<cis cis'>16( <d d'>)
-		}
-		\new Staff \with {
+    {
+      a16 g f es
+      <<
+        {
+          a'( g) f( es)
+        }
+        \\
+        {
+          <d, b'>4
+        }
+      >>
+      <cis cis'>16( <d d'>)
+    }
+    \new Staff \with {
       \remove "Time_signature_engraver"
       alignAboveContext = #"main"
       \magnifyStaff #2/3
       firstClef = ##f
     }
-    { 
-    	\key e \major
-    	f'8.( es16 d8) b f r g c f8.( es16 d8) f b, r
-    	g c f8.( es16 d8) es f b, a b c a b
+    {
+      \key e \major
+      f'8.( es16 d8) b f r g c f8.( es16 d8) f b, r
+      g c f8.( es16 d8) es f b, a b c a b
     }
   >>
 }

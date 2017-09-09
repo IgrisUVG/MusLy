@@ -273,7 +273,7 @@ guitarMusic = \relative {
       a16 g f es
       <<
         {
-          a'( g) f( es) <cis, cis'>16( <d d'>) s8
+          a'( g) f( es) <cis, cis'>16( <d d'>) r8
         }
         \\
         {

@@ -273,14 +273,13 @@ guitarMusic = \relative {
       a16 g f es
       <<
         {
-          a'( g) f( es)
+          a'( g) f( es) <cis, cis'>16( <d d'>) s8
         }
         \\
         {
-          <d, b'>4
+          <d b'>4 s8 f
         }
       >>
-      <cis cis'>16( <d d'>)
     }
     \new Staff \with {
       \remove "Time_signature_engraver"

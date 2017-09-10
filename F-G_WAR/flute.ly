@@ -53,4 +53,8 @@ fluteMusic = \relative e'' {
   e8--) h'16( a fis e h a fis e gis a h e fis a)
   cis( e cis h dis fis dis cis h gis fis h, a fis a cis 
   e\( fis gis\) h\( cis a\) cis dis fis8) e32( h a fis e8) r
+  r a32( gis e cis h8) r
+  \bar "||"
+  \break
+  r32 f''( e f) r e( dis e) \acciaccatura {h16([ e gis]} cis8) his,\prall
 }

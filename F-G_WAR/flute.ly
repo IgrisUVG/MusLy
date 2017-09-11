@@ -2,6 +2,8 @@
 
 \language "deutsch"
 
+\include "scripts.ly"
+
 fluteMusic = \relative e'' {
   \clef treble
   \key e \major
@@ -56,5 +58,6 @@ fluteMusic = \relative e'' {
   r a32( gis e cis h8) r
   \bar "||"
   \break
-  r32 f''( e f) r e( dis e) \acciaccatura {h16([ e gis]} cis8) his,\prall
+  r32 f''( e f) r e( dis e) \acciaccatura {\slashI h16([ e gis]} cis8) r32 his,( cis his)
+  r cis( dis cis) \acciaccatura {\slashI fis16[( h, dis,]} a8)
 }

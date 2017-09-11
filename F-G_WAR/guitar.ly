@@ -2,6 +2,8 @@
 
 \language "deutsch"
 
+\include "scripts.ly"
+
 stringNumberSpanner =
 #(define-music-function (parser location StringNumber) (string?)
    #{
@@ -208,12 +210,18 @@ guitarMusic = \relative {
     \\
     {
       b,,,8 r <b' d> r f4
-      \once\override Slur.direction = #UP
+      %\once\override Slur.direction = #DOWN
       \once\override Slur.positions = #'(1 . -4)
-      \acciaccatura {es'16[ a, c,]} f,8 r
+      \stemUp
+      \acciaccatura {\slashI es'16[ a, c,]} 
+      \stemDown
+      f,8 r
       a r <c' es> r b,4
-      \once\override Slur.direction = #UP
-      \acciaccatura {b'16[ a' d]} g8 r
+      %\once\override Slur.direction = #DOWN
+      \stemUp
+      \acciaccatura {\slashI b'16[ a' d]} 
+      \stemDown
+      g8 r
       as,,4 g fis? f es8 c' f, d'
     }
   >>

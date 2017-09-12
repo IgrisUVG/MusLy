@@ -203,8 +203,8 @@ guitarMusic = \relative {
   \break
   %\key b \major
   \tag #'changeSpacingSpanner {
-		\newSpacingSection
-		\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
+    \newSpacingSection
+    \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
   }
   <<
     {
@@ -218,14 +218,14 @@ guitarMusic = \relative {
       %\once\override Slur.direction = #DOWN
       \once\override Slur.positions = #'(1 . -4)
       \stemUp
-      \acciaccatura {\slashI es'16[ a, c,]} 
+      \acciaccatura {\slashI es'16[ a, c,]}
       \stemDown
       f,8 r
       a r <c' es> r b,4
       %\once\override Slur.direction = #DOWN
       \shape #'((0.3 . 0.3) (0 . -0.3) (0.6 . -0.2) (1 . 0.2)) Slur
       \stemUp
-      \acciaccatura {\slashIII b'16[ a' d]} 
+      \acciaccatura {\slashIII b'16[ a' d]}
       \stemDown
       g8 r
       as,,4 g fis? f es8 c' f, d'
@@ -298,27 +298,27 @@ guitarMusic = \relative {
         }
       >>
       <<
-      	{
-      		f'''8.( es16 d8) es
-      	}
-      	\\
-      	{
-      		e,8\rest <h a'> s4
-      	}
-      	\\
-      	{
-      		\voiceTwo
-      		f4 <b, f' c'>8 r
-      	}
+        {
+          f'''8.( es16 d8) es
+        }
+        \\
+        {
+          e,8\rest <h a'> s4
+        }
+        \\
+        {
+          \voiceTwo
+          f4 <b, f' c'>8 r
+        }
       >>
       <<
-      	{
-      		f'''8 b, a b c a b
-      	}
-      	\\
-      	{
-      		
-      	}
+        {
+          f'''8 b, a b c a b
+        }
+        \\
+        {
+
+        }
       >>
     }
     %{

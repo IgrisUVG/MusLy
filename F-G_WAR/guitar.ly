@@ -321,7 +321,7 @@ guitarMusic = \relative {
         }
       >>
     }
-    %{
+    %{%}
     \new Staff \with {
       \remove "Time_signature_engraver"
       alignAboveContext = #"main"
@@ -333,6 +333,6 @@ guitarMusic = \relative {
       f'8.( es16 d8) b f r g c f8.( es16 d8) f b, r
       g c f8.( es16 d8) es f b, a b c a b
     }
-    %}
+    %{%}
   >>
 }

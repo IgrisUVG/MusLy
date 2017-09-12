@@ -202,6 +202,8 @@ guitarMusic = \relative {
   \bar "||"
   \break
   %\key b \major
+  \newSpacingSection
+  \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
   <<
     {
       f8 b r d d( c) r g f c' r es es( d) r es

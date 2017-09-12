@@ -202,12 +202,14 @@ guitarMusic = \relative {
   \bar "||"
   \break
   %\key b \major
-  \newSpacingSection
-  \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
+  \tag #'changeSpacingSpanner {
+		\newSpacingSection
+		\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
+  }
   <<
     {
-      f8 b r d d( c) r g f c' r es es( d) r es
-      f b, es16( d) c b d8 f, b16( a) g f
+      f8 b r d d_( c) r g f c' r es es_( d) r es
+      f b, es16_( d) c b d8 f, b16_( a) g f
       g8 b a f'
     }
     \\
@@ -221,8 +223,9 @@ guitarMusic = \relative {
       f,8 r
       a r <c' es> r b,4
       %\once\override Slur.direction = #DOWN
+      \shape #'((0.3 . 0.3) (0 . -0.3) (0.6 . -0.2) (1 . 0.2)) Slur
       \stemUp
-      \acciaccatura {\slashI b'16[ a' d]} 
+      \acciaccatura {\slashIII b'16[ a' d]} 
       \stemDown
       g8 r
       as,,4 g fis? f es8 c' f, d'
@@ -253,8 +256,8 @@ guitarMusic = \relative {
   >>
   <<
     {
-      f'8 b r d d( c) r g f c' r es es( d) r es
-      f b, es16( d) c b d8 f, b16( a) g f
+      f'8 b r d d_( c) r g f c' r es es_( d) r es
+      f b, es16_( d) c b d8 f, b16_( a) g f
       g8 b c a
     }
     \\
@@ -284,15 +287,41 @@ guitarMusic = \relative {
       a16 g f es
       <<
         {
-          a'( g) f( es) <cis, cis'>16_( <d d'>) r8
-          <h h'>16_( <c c'>) r8 <a a'>16_( <b b'>) r8
+          a'_( g) f_( es) <cis, cis'>16_( <d d'>) r8
+          <h h'>16_( <c c'>) r8 <a a'>16_( <b b'>) r16 es''
+          d8 f b, r g c
         }
         \\
         {
-          <d b'>4 s8 f s f s f
+          <d,, b'>4 s8 f s f s f
+          b, <fis'? d'> g, <f' cis'?> <fis,? b' es> r
         }
       >>
+      <<
+      	{
+      		f'''8.( es16 d8) es
+      	}
+      	\\
+      	{
+      		e,8\rest <h a'> s4
+      	}
+      	\\
+      	{
+      		\voiceTwo
+      		f4 <b, f' c'>8 r
+      	}
+      >>
+      <<
+      	{
+      		f'''8 b, a b c a b
+      	}
+      	\\
+      	{
+      		
+      	}
+      >>
     }
+    %{
     \new Staff \with {
       \remove "Time_signature_engraver"
       alignAboveContext = #"main"
@@ -304,5 +333,6 @@ guitarMusic = \relative {
       f'8.( es16 d8) b f r g c f8.( es16 d8) f b, r
       g c f8.( es16 d8) es f b, a b c a b
     }
+    %}
   >>
 }

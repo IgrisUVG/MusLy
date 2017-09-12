@@ -56,3 +56,7 @@ slashI = {
 slashII = {
   \slash 45 0.5 0.8
 }
+
+slashIII = {
+  \slash 60 0.8 1.2
+}

@@ -30,11 +30,8 @@
 }
 
 \include "guitar.ly"
-\include "chordsSheet.ly"
 
 \score {
-  <<
-    \new Staff \guitarMusic
-    \new Dynamics \hSheet
-  >>
+	\removeWithTag #'changeSpacingSpanner
+  \guitarMusic
 }

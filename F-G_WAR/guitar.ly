@@ -208,7 +208,8 @@ guitarMusic = \relative {
   }
   <<
     {
-      f8 b r d d_( c) r g f c' r es es_( d) r es
+      \once\override StringNumber.extra-offset = #'(-0.6 . -3.5)
+      f8\3 b r d d_( c) r g f c' r es es_( d) r es
       f b, es16_( d) c b d8 f, b16_( a) g f
       g8 b a f'
     }
@@ -294,7 +295,7 @@ guitarMusic = \relative {
         \\
         {
           <d,, b'>4 s8 f s f s f
-          b, <fis'? d'> g, <f' cis'?> <fis,? b' es> r
+          <b, fis''> <fis'? d'> g, <f' cis'?> <fis,? b' es> r
         }
       >>
       <<

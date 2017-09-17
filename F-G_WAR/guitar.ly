@@ -309,7 +309,7 @@ guitarMusic = \relative {
         \\
         {
           \voiceTwo
-          f4 <b, f' c'>8 r
+          f4 <b, f' c'>4
         }
       >>
       <<
@@ -318,11 +318,11 @@ guitarMusic = \relative {
         }
         \\
         {
-
+          g16 es c g <es b'>4 <f g'> b,8
         }
       >>
     }
-    %{%}
+    %{
     \new Staff \with {
       \remove "Time_signature_engraver"
       alignAboveContext = #"main"
@@ -334,6 +334,6 @@ guitarMusic = \relative {
       f'8.( es16 d8) b f r g c f8.( es16 d8) f b, r
       g c f8.( es16 d8) es f b, a b c a b
     }
-    %{%}
+    %}
   >>
 }

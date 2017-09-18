@@ -283,57 +283,54 @@ guitarMusic = \relative {
       f4
     }
   >>
+  a16 g f es
   <<
     {
-      a16 g f es
-      <<
-        {
-          a'_( g) f_( es) <cis, cis'>16_( <d d'>) r8
-          <h h'>16_( <c c'>) r8 <a a'>16_( <b b'>) r16 es''
-          d8 f b, r g c
-        }
-        \\
-        {
-          <d,, b'>4 s8 f s f s f
-          <b, fis''> <fis'? d'> g, <f' cis'?> <fis,? b' es> r
-        }
-      >>
-      <<
-        {
-          f'''8.( es16 d8) es
-        }
-        \\
-        {
-          e,8\rest <h a'> s4
-        }
-        \\
-        {
-          \voiceTwo
-          f4 <b, f' c'>4
-        }
-      >>
-      <<
-        {
-          f'''8 b, a b c a b
-        }
-        \\
-        {
-          g16 es c g <es b'>4 <f g'> b,8
-        }
-      >>
+      a'_( g) f_( es) <cis, cis'>16_( <d d'>) r8
+      <h h'>16_( <c c'>) r8 <a a'>16_( <b b'>) r16 es''
+      d8 f b, r g c
     }
-    %{
-    \new Staff \with {
-      \remove "Time_signature_engraver"
-      alignAboveContext = #"main"
-      \magnifyStaff #2/3
-      firstClef = ##f
-    }
+    \\
     {
-      \key e \major
-      f'8.( es16 d8) b f r g c f8.( es16 d8) f b, r
-      g c f8.( es16 d8) es f b, a b c a b
+      <d,, b'>4 s8 f s f s f
+      <b, fis''> <fis'? d'> g, <f' cis'?> <fis,? b' es> r
     }
-    %}
+  >>
+  <<
+    {
+      f'''8.( es16 d8) es
+    }
+    \\
+    {
+      e,8\rest <h a'> s4
+    }
+    \\
+    {
+      \voiceTwo
+      f4 <b, f' c'>4
+    }
+  >>
+  <<
+    {
+      f'''8 b, a b c a
+    }
+    \\
+    {
+      g16 es c g <es b'>4 <f g'>
+    }
+  >>
+  <<
+    {
+      b'8
+    }
+    \\
+    {
+      es,16( f) g a h c cis dis
+    }
+    \\
+    {
+      \voiceTwo
+      g,,8
+    }
   >>
 }

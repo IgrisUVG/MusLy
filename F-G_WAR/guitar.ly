@@ -330,6 +330,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
+      \once \override NoteColumn.force-hshift = #0.3
       g,,8
     }
   >>

@@ -325,7 +325,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      d,16 e? fis? g
+      d,16 e? fis?^( g)
     }
     \\
     {

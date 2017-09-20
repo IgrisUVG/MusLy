@@ -325,7 +325,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      d,16 e? fis? g
+      d,16 e? fis?^( g)
     }
     \\
     {
@@ -343,7 +343,17 @@ guitarMusic = \relative {
     }
     \\
     {
-      e,8 ais h r fis
+      e,8 ais h r
     }
+  >>
+  <<
+  	  {
+  	  	  r16 dis( e) gis \acciaccatura e8 fis16 gis( a) 
+  	  	  cis \acciaccatura a8 h16 cis( dis) fis
+  	  }
+  	  \\
+  	  {
+  	  	  
+  	  }
   >>
 }

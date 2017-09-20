@@ -365,11 +365,13 @@ guitarMusic = \relative {
 			<<
 				{
 					\override Slur.direction = #DOWN
-					\acciaccatura e'8 fis16 gis_( a) cis \acciaccatura a8 h16 cis_( dis) fis
+					\acciaccatura e'8 fis16 gis_( a) cis
+					\acciaccatura a8 h16 cis_( dis) fis
+					\acciaccatura dis8 e16 fis( gis) h
 				}
 				\\
 				{
-					s8 a, s dis
+					s8 a, s dis s gis
 				}
 			>>
 		}

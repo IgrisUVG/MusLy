@@ -53,16 +53,18 @@ fluteMusic = \relative e'' {
   fis8--) e16( h e, fis h e fis, a cis e gis, h dis fis
   gis8--) e16( h a e h a gis fis gis h a fis a cis
   e8--) h'16( a fis e h a fis e gis a h e fis a)
-  cis( e cis h dis fis dis cis h gis fis h, a fis a cis 
+  cis( e cis h dis fis dis cis h gis fis h, a fis a cis
   e\( fis gis\) h\( cis a\) cis dis fis8) e32( h a fis e8) r
   r a32( gis e cis h8) r
   \bar "||"
-  \break
-  r32 f''( e f) r e( dis e) 
+  \tag #'pageBreack {
+    \pageBreak
+  }
+  r32 f''( e f) r e( dis e)
   \shape #'((0 . 0) (0 . -0.3) (0.5 . -0.2) (1 . 0)) Slur
-  \acciaccatura {\slashIII h16([ e gis]} cis8) r32 his,( cis his)
-  r cis( dis cis) \acciaccatura {\slashI fis16([ h, dis,]} a8) r32 c'( h c) r h( ais h)
+  \acciaccatura {\slashIII h16([ e gis]} cis8-.) r32 his,( cis his)
+  r cis( dis cis) \acciaccatura {\slashI fis16([ h, dis,]} a8-.) r32 c'( h c) r h( ais h)
   \shape #'((0 . 0) (0 . -0.3) (0.5 . -0.2) (1 . 0)) Slur
-  \acciaccatura {\slashIII h,16([ a' dis]} gis8) r32 fisis,( gis fisis)
-  r gis( ais gis) \acciaccatura {\slashI cis16([ fis, ais,]} e8)
+  \acciaccatura {\slashIII h,16([ a' dis]} gis8-.) r32 fisis,( gis fisis)
+  r gis( ais gis) \acciaccatura {\slashI cis16([ fis, ais,]} e8-.)
 }

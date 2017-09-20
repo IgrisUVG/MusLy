@@ -15,7 +15,7 @@
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #8
-  system-system-spacing.basic-distance = #14
+  system-system-spacing.basic-distance = #15
   last-bottom-spacing.basic-distance = #25
   two-sided = ##t
   inner-margin = 25

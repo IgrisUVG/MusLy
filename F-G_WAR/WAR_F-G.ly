@@ -41,6 +41,7 @@
     \with {
       instrumentName = "Fl."
     }
+    \removeWithTag #'pageBreack
     \fluteMusic
 
     \new Staff

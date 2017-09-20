@@ -32,6 +32,6 @@
 \include "guitar.ly"
 
 \score {
-	\removeWithTag #'changeSpacingSpanner
+  \removeWithTag #'changeSpacingSpanner
   \guitarMusic
 }

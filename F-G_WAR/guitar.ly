@@ -325,7 +325,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      d,16 e? fis?^( g)
+      d,16 e? fis? g
     }
     \\
     {
@@ -335,4 +335,15 @@ guitarMusic = \relative {
     }
   >>
   a'16 b c d
+  \bar "||"
+  \break
+  <<
+    {
+      <h, gis' e'>8 r <e gis><c, a'>\noBeam
+    }
+    \\
+    {
+      e,8 ais h r fis
+    }
+  >>
 }

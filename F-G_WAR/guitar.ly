@@ -341,25 +341,25 @@ guitarMusic = \relative {
     {
       <<
         {
-          <h, gis' e'>8 r <e gis><c, a'>\noBeam
+          <h, gis' e'>8 r <e gis>
         }
         \\
         {
-          e,8 ais h r
+          e,,8 ais h
         }
       >>
       <<
         {
 
-          r16 dis_([ e) gis]
+          s8 r16 dis_([ e) gis]
         }
         \\
         {
-          s8 e
+          r8 s e
         }
         \\
         {
-          fis,8 s
+          <c a'>8\glissando fis, s
         }
       >>
       <<

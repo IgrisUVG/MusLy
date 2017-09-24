@@ -74,5 +74,6 @@ fluteMusic = \relative e'' {
   \acciaccatura {\slashIII e,([ h']} gis'16-.)
   r32 h( cis h) r gis( fis gis) r a( h a) r dis,( cis dis)
   r gis( a gis) r e( dis e) r fis( gis fis) r h,( a h)
-  r eis( fis eis) r e( dis e) \acciaccatura {\slashIII h16([ e gis]} cis8-.)
+  r eis( fis eis) r e( dis e) \acciaccatura {\slashIII h16([ e gis]} cis16-.) r32 f,(
+  e f) r fis( g fis) r h( cis h) r cis( dis cis) r a( gis a) r
 }

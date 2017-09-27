@@ -67,16 +67,17 @@ fluteMusic = \relative e'' {
   \shape #'((0 . 0) (0 . -0.3) (0.5 . -0.2) (1 . 0)) Slur
   \acciaccatura {\slashIII h,16([ a' dis]} gis8-.) r32 fisis,( gis fisis)
   r gis( ais gis) \acciaccatura {\slashI cis16([ fis, ais,]} e8-.)
-  r32 g'( fis g) r fis( eis fis) r16. gis32( a gis) r a( b a)
-  r dis( e dis) r e( f e) r cis( c cis) r c( h c)
-  r ais( h ais) r eis( fis eis) r cis( his cis) 
+  \override Beam.breakable = ##t
+  r32 g'( fis g) r fis( eis fis) r16. gis32( a gis) r a([ b a)]
+  r dis( e dis) r e([ f e)] r cis( c cis) r c([ h c)]
+  r ais( h ais) r eis([ fis eis)] r cis( his cis) 
   \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
   \acciaccatura {\slashIII e,([ h']} gis'16-.)
   r32 h( cis h) r gis( fis gis) r a( h a) r dis,( cis dis)
   r gis( a gis) r e( dis e) r fis( gis fis) r h,( a h)
   r eis( fis eis) r e( dis e) \acciaccatura {\slashIII h16([ e gis]} cis16-.) r32 f,(
-  e f) r fis( g fis) r h( cis h) r cis( dis cis) r b( a b) r a(
-  gis a) r fis( gis fis) r cis( dis cis) r a( gis a)
+  e f) r fis([ g fis)] r h( cis h) r cis([ dis cis)] r b( a b) r a([
+  gis a)] r fis( gis fis) r cis([ dis cis)] r a( gis a)
   \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
   \acciaccatura {\slashIII fisis([ cis']} a'16-.)
 }

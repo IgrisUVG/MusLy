@@ -80,4 +80,13 @@ fluteMusic = \relative e'' {
   gis a)] r fis( gis fis) r cis([ dis cis)] r a( gis a)
   \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
   \acciaccatura {\slashIII fisis([ cis']} a'16-.)
+  r32 cis( h cis) r e( fis e) r dis( cis dis) r fis( gis fis)
+  r g( a g) r gis( ais gis) r a( h a) r fis( e fis)
+  r g( a g) r e( d e) r fis(gis fis) r dis( cis dis)
+  r e( fis e) r c( b c) r d( e d) r b( gis b)
+  r c( d c) r a( g a) r f'( g f) r es( d es)
+  r d( c d) r b( a b) r f( g f) r b( a b)
+  r g( f g) r c( d c) r f( g f) 
+  %\shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
+  \acciaccatura {\slashIII fis,([ c' dis]} h'8-.)
 }

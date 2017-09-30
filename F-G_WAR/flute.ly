@@ -103,6 +103,8 @@ fluteMusic = \relative e'' {
   #(define afterGraceFraction (cons 15 16))
   \afterGrace d\startTrillSpan {cis16(\stopTrillSpan d} 
   \bar "||"
-  h'8-.) cis, ais( h) gis(\prall fis-.) dis( e)
-  h' \acciaccatura e fis
+  \override TupletNumber #'transparent = ##t
+  \override TupletBracket #'bracket-visibility = ##f
+  h'8-.) cis, ais( h) \times 2/3 {gis16( a gis} fis8-.) dis( e)
+  h' \acciaccatura e fis dis4
 }

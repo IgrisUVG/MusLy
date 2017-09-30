@@ -87,6 +87,6 @@ fluteMusic = \relative e'' {
   r c( d c) r a( g a) r f'( g f) r es( d es)
   r d( c d) r b( a b) r f( g f) r b( a b)
   r g( f g) r c( d c) r f( g f) 
-  %\shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
+  \shape #'((0 . 0) (0 . 0) (1 . 0) (1 . 0)) Slur
   \acciaccatura {\slashIII fis,([ c' dis]} h'8-.)
 }

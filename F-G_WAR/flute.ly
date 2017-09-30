@@ -97,5 +97,9 @@ fluteMusic = \relative e'' {
   \acciaccatura {\slashIII h,([ gis']} dis'16-.)
   r32 h( cis h) r gis([ fis gis)] r g( f g) r fis([ e fis)] r f( dis f)
   \shape #'((0 . 0) (0 . -1) (1 . -1) (1 . -1.5)) Slur
-  \acciaccatura {\slashIII b,([ f']} cis'16-.)
+  \acciaccatura {\slashIII b,([ f']} cis'16-.) r4
+  \override TrillSpanner.bound-details.left.text = \markup{ 
+    \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat }
+  #(define afterGraceFraction (cons 15 16))
+  \afterGrace d\startTrillSpan {cis16(\stopTrillSpan d} h')
 }

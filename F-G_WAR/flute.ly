@@ -107,5 +107,6 @@ fluteMusic = \relative e'' {
   \override TupletBracket #'bracket-visibility = ##f
   h'8-.) cis, ais( h) \times 2/3 {gis16( a gis} fis8-.) dis( e)
   h' \acciaccatura eis fis dis4 \times 2/3 {a16( h a} gis8-.) cis a
-  h \acciaccatura dis e cis4
+  h \acciaccatura dis e cis4 h8 \acciaccatura fis' gis e \times 2/3 {cis16( gis e}
+  cis8) h16( e dis gis fis h) gis( h e, a fis gis e cis)
 }

@@ -369,9 +369,9 @@ guitarMusic = \relative {
       <<
         {
           \override Slur.direction = #DOWN
-          \acciaccatura e'8 fis16 gis_( a) cis
-          \acciaccatura a8 h16 cis_( dis) fis
-          \acciaccatura dis8 e16 fis( gis) h
+          \acciaccatura e'8\glissando fis16 gis_( a) cis
+          \acciaccatura a8\glissando h16 cis_( dis) fis
+          \acciaccatura dis8\glissando e16 fis( gis) h
         }
         \\
         {
@@ -387,6 +387,41 @@ guitarMusic = \relative {
           e,,8 ais h
         }
       >>
+      <<
+        {
+
+          s8 r16 eis_([ fis) h]
+        }
+        \\
+        {
+          r8 s fis
+        }
+        \\
+        {
+          <dis! c'>8\glissando gis, s
+        }
+      >>
+      <<
+      	{
+      		\override Slur.direction = #DOWN
+      		\acciaccatura fis'8\glissando gis16 his( cis) dis
+      		\acciaccatura gis,8\glissando a16 cis( dis) gis
+      		\acciaccatura a,8\glissando c16 e( fis) a
+      	}
+      	\\
+      	{
+      		s8 cis, s dis s fis
+      	}
+      >>
+      <<
+      	{
+      		<cis? e'>8
+      	}
+      	\\
+      	{
+      		a,8
+      	}
+      >>
     }
     \new Staff \with {
       \remove "Time_signature_engraver"
@@ -396,7 +431,7 @@ guitarMusic = \relative {
     }
     {
       \key e \major
-      h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h'8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

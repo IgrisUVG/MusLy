@@ -415,11 +415,11 @@ guitarMusic = \relative {
       >>
       <<
       	{
-      		<cis? e'>8
+      		<e e'>8
       	}
       	\\
       	{
-      		a,8
+      		<a,, a'>8
       	}
       >>
     }

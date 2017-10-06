@@ -209,7 +209,7 @@ guitarMusic = \relative {
   <<
     {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3.5)
-      f8\3 b r d d_( c) r g f c' r es es_( d) r es
+      f8\3 b r d d_( c) r g f c' r es es_( d) s es
       f b, es16_( d) c b d8 f, b16_( a) g f
       g8 b a f'
     }
@@ -228,8 +228,8 @@ guitarMusic = \relative {
       \stemUp
       \acciaccatura {\slashIII b'16[ a' d]}
       \stemDown
-      g8 r
-      as,,4 g fis? f es8 c' f, d'
+      g8^. h,,\rest
+      as4 g fis? f es8 c' f, d'
     }
   >>
   <<

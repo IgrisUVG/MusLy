@@ -53,68 +53,80 @@ fluteExp = \relative e'' {
   %\clef treble
   %\key e \major
   %\time 2/4
-  r16 f'\W r e\W
+  r16[ f'\W r e\W]
   \shape #'((0 . 0) (0 . -0.3) (0.5 . -0.2) (1 . 0)) Slur
-  \acciaccatura {\slashIII h16([ e gis]} cis8-.)
-  r16 his,\M r cis\M \acciaccatura {\slashI fis16([ h, dis,]} a8-.)
-  r16 c'\W r 
+  \acciaccatura {\slashIII h16([ e gis]} cis8-.)[
+  r16 his,\M] r cis\M \acciaccatura {\slashI fis16([ h, dis,]} a8-.)
+  r16[ c'\W r 
   \once\override TextScript.script-priority = #-100
-  h\W^\markup { \teeny \sharp }
+  h\W^\markup { \teeny \sharp }]
   \shape #'((0 . 0) (0 . -0.3) (0.5 . -0.2) (1 . 0)) Slur
-  \acciaccatura {\slashIII h,16([ a' dis]} gis8-.)
-  r16 fisis,\M r gis\M^\markup { \teeny \sharp }
+  \acciaccatura {\slashIII h,16([ a' dis]} gis8-.)[
+  r16 fisis,\M] r gis\M^\markup { \teeny \sharp }
   \acciaccatura {\slashI cis16([ fis, ais,]} e8-.)
-  r16 g'\W r 
+  r16[ g'\W r 
   \once\override TextScript.script-priority = #-100
-  fis\W^\markup { \teeny \sharp } r16. gis16\M r a32\M^\markup{\teeny\flat}~
-  a r16 dis\M r e\M^\markup{\teeny\natural} r
+  fis\W^\markup { \teeny \sharp }]
+  \set subdivideBeams = ##t
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(2 2 2 2)  
+  r16.[ gis32\M~gis r16 a32\M^\markup{\teeny\flat}~]
+  a[ r16 dis32\M~dis r16 e32\M^\markup{\teeny\natural}~]e[ r16
   \once\override TextScript.script-priority = #-100
-  cis\W^\markup{\teeny\sharp} r c32\W~ c r16 ais\M r eis\M r
+  cis32\W^\markup{\teeny\sharp}~cis r16 c32\W~]c[ r16 ais32\M~ais r16 eis32\M~]eis[ r16
   \once\override TextScript.script-priority = #-100
-  cis\W^\markup{\teeny\sharp} r32
+  cis32\W^\markup{\teeny\sharp}~cis r]
   \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
   \acciaccatura {\slashIII e,16([ h']} gis'16-.)
-  r h\M r gis\W r a\M r dis,\W r gis\M r e\W r fis\M r h,\W
-  r eis\M r e\W \acciaccatura {\slashIII h16([ e gis]} cis16-.) r32 f,16\W r 
-  fis32\M^\markup{\teeny\natural}~ fis r16 h\M r cis\M r b\W r a32\W~
-  a r16 fis\M r cis\M r a\W r32
+  \set subdivideBeams = ##f
+  r[ h\M r gis\W] r[ a\M r dis,\W] r[ gis\M r e\W] r[ fis\M r h,\W]
+  r[ eis\M r e\W] 
+  \set subdivideBeams = ##t
+  \acciaccatura {\slashIII h16([ e gis]} cis16-.)[ r32 f,32\W~f r16 
+  fis32\M^\markup{\teeny\natural}~]fis[ r16 h32\M~h r16 cis32\M~]cis[ r16 b32\W~b r16 a32\W~]
+  a[ r16 fis32\M~fis r16 cis32\M~]cis[ r16 a32\W~a r]
   \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) Slur
   \acciaccatura {\slashIII fisis16([ cis']} a'16-.)
-  r cis\W r e\M r dis\W r fis\M r g\M r 
+  \set subdivideBeams = ##f
+  r[ cis\W r e\M] r[ dis\W r fis\M] r[ g\M r 
   \once\override TextScript.script-priority = #-100
-  gis\M^\markup{\teeny\sharp} r a\M r fis\W r g\M r
+  gis\M^\markup{\teeny\sharp}] r[ a\M r fis\W] r[ g\M r
   \once\override TextScript.script-priority = #-100
-  e\W^\markup{\teeny\natural} r fis\M^\markup{\teeny\sharp} r dis\W
-  r e\M r
+  e\W^\markup{\teeny\natural}] r[ fis\M^\markup{\teeny\sharp} r dis\W]
+  r[ e\M r
   \once\override TextScript.script-priority = #-100
-  c\W^\markup{\teeny\flat} r d\M r ais\W r c\M^\markup{\teeny\natural} r
+  c\W^\markup{\teeny\flat}] r[ d\M r ais\W] r[ c\M^\markup{\teeny\natural} r
   \once\override TextScript.script-priority = #-100
-  a\W^\markup{\teeny\natural} r f'\M^\markup{\teeny\natural} r
+  a\W^\markup{\teeny\natural}] r[ f'\M^\markup{\teeny\natural} r
   \once\override TextScript.script-priority = #-100
-  es\W^\markup{\teeny\natural} r
+  es\W^\markup{\teeny\natural}] r[
   \once\override TextScript.script-priority = #-100
-  d\W^\markup{\teeny\natural} r b\W r f\M^\markup{\teeny\natural} r b\W r
+  d\W^\markup{\teeny\natural} r b\W] r[ f\M^\markup{\teeny\natural} r b\W] r[
   \once\override TextScript.script-priority = #-100
-  g\W^\markup{\teeny\natural} r c\M^\markup{\teeny\natural} r f\M^\markup{\teeny\natural}
+  g\W^\markup{\teeny\natural} r c\M^\markup{\teeny\natural}]
+  \set subdivideBeams = ##t
+  r[ f\M^\markup{\teeny\natural}
   \shape #'((0 . 0) (0 . 0) (1 . 0) (1 . 0)) Slur
-  \acciaccatura {\slashIII fis,16([ c' dis]} h'?16-.) r32 f\M^\markup{\teeny\natural}~
-  f r16 dis\W r
+  \acciaccatura {\slashIII fis,16([ c' dis]} h'?16-.) r32 f\M^\markup{\teeny\natural}~]
+  f[ r16 dis32\W~dis r16
   \once\override TextScript.script-priority = #-100
-  d\W^\markup{\teeny\natural} r cis\W r
+  d32\W^\markup{\teeny\natural}~]d[ r16 cis32\W~cis r16
   \once\override TextScript.script-priority = #-100
-  c32\W^\markup{\teeny\flat}~ c r
+  c32\W^\markup{\teeny\flat}~]c[ r
   \shape #'((0 . 0) (0 . 0) (1 . 0) (1 . 0)) Slur
-  \acciaccatura {\slashIII dis,16([ h']} gis'16-.) r dis\M^\markup{\teeny\sharp}
-  r h\W r ais\W r
+  \acciaccatura {\slashIII dis,16([ h']} gis'16-.) r dis\M^\markup{\teeny\sharp}]
+  \set subdivideBeams = ##f
+  r[ h\W r ais\W] r[
   \once\override TextScript.script-priority = #-100
-  a\W^\markup{\teeny\natural} r gis\W
+  a\W^\markup{\teeny\natural} r gis\W]
   \shape #'((0 . 0) (0 . -1) (1 . -1) (1 . -1.5)) Slur
-  \acciaccatura {\slashIII h,16([ gis']} dis'16-.) r32 h16\M r gis32\W~
-  gis r16
+  \set subdivideBeams = ##t
+  \acciaccatura {\slashIII h,16([ gis']} dis'16-.)[ r32 h\M~h r16 gis32\W~]
+  gis[ r16
   \once\override TextScript.script-priority = #-100
-  g\W^\markup{\teeny\natural} r fis\W r
+  g32\W^\markup{\teeny\natural}~g r16 fis32\W~]fis[ r16
   \once\override TextScript.script-priority = #-100
-  f\W^\markup{\teeny\flat} r32
+  f32\W^\markup{\teeny\flat}~f r]
   \shape #'((0 . 0) (0 . -1) (1 . -1) (1 . -1.5)) Slur
-  \acciaccatura {\slashIII b,16([ f']} cis'16-.) 
+  \acciaccatura {\slashIII b,16([ f']} cis'16-.)
 }

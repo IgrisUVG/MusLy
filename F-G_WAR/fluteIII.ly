@@ -129,4 +129,5 @@ fluteExp = \relative e'' {
   f32\W^\markup{\teeny\flat}~f r]
   \shape #'((0 . 0) (0 . -1) (1 . -1) (1 . -1.5)) Slur
   \acciaccatura {\slashIII b,16([ f']} cis'16-.)
+  \set subdivideBeams = ##f
 }

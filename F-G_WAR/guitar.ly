@@ -398,7 +398,7 @@ guitarMusic = \relative {
         }
         \\
         {
-          <dis! c'>8\glissando gis, s
+          <dis c'>8\glissando gis, s
         }
       >>
       <<

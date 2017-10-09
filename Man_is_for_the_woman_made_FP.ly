@@ -25,6 +25,7 @@
 \layout {
   \context {
     \Score
+    \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
     \remove "Bar_number_engraver"
   }
 }
@@ -144,6 +145,68 @@
         r <e a c>-- r <c g' c>-- r <d g h>-- r <h d g>--
         r <a d f>--<d f a>--<f a d>--<e g h>2.--<c g' c>4-.
         r <g e' g>-. r <g d' f>-. r <g c e>-. c,-.
+        <g c e>-. q2.-- <g' c e>4-.
+        <<
+        	{
+        		\omit TupletNumber
+        		\tuplet 3/2 4 {f'8( g a g[ f e] d c h a[ g f]} <c e g>2.)
+        	}
+        	\\
+        	{
+        		<g' d'>8 s4. s2 s2.
+        	}
+        >>
+        <c e g>4-.
+        <<
+        	{
+        		\omit TupletNumber
+        		\tuplet 3/2 4 {h'8( c d c[ h a] g f e d[ c h]} <e, g c>2.)
+        	}
+        	\\
+        	{
+        		<f' g>8 s4. s2 s2.
+        	}
+        >>
+        <e g c>4-.
+        <<
+        	{
+        		\omit TupletNumber
+        		\tuplet 3/2 4 {d'8( e f e[ d c] h a g f[ e d]}
+        		\stemDown
+        		<g, c e>2.)
+        		\stemNeutral
+        	}
+        	\\
+        	{
+        		<f' g>8 s4. s2 s2.
+        	}
+        >>
+        <g, c e>4-.
+        <<
+        	{
+        		\omit TupletNumber
+        		\tuplet 3/2 4 {fis'8( g as a[ b h] c cis d dis[ e f])}
+        	}
+        	\\
+        	{
+        		\once \override NoteColumn.force-hshift = #1.7
+        		\once \override Accidental.extra-offset = #'(2.5 . 0)
+        		<d, f!>8 s s2.
+        	}
+        >>
+        s4 <e c' e>-! s <g h g'>-! s <d h' d>-! s <h g' h>-!
+        s <d f d'>-! <a f' a>-! <f d' f>-!
+        <<
+        	{
+        		e'8( d c h c h a g)
+        	}
+        	\\
+        	{
+        		<e g h>8 s s2.
+        	}
+        >>
+        r4 <g c e g>-! r <h d g h>-! s <c e g c>-! s8 r r4
+        \bar "|."
       }
       \new Staff = "lower" \relative c' {
         \clef bass
@@ -182,6 +245,37 @@
         <d d'>2. q4 <e e'>8( d' c h c h a g c,4) e f g
         c,2.
         \bar "||"
+        <c, c'>4-. q2.-- q4-.
+        \repeat unfold 3{
+        	<h h'>(<d d'><h h'><g g'><c c'>2.) q4-.
+        }
+        <h h'>(<d d'><h h'><g g'>)
+        <<
+        	{
+        		s4 <e'' c'> s <h g'> s <d h'> s <h' d>
+        		s <a f'>-!<f d'>-!<d a'>-!<g h>8 s s2.
+        	}
+        	\\
+        	{
+        		<a,, a'>2-> e'-> g-> g'-><d, d'>2.-> s4
+        		e'8( d c h c h a g)
+        	}
+        >>
+        <c, c'>4-><e e'>-><f f'>-><g g'>->
+        <<
+        	{
+        		s4 <c g' e'>
+        	}
+        	\\
+        	{
+        		c,2
+        	}
+        >>
+        \ottava #-1
+        c,8
+        \ottava #0
+        r r4
+        \bar "|."
       }
     >>
   >>

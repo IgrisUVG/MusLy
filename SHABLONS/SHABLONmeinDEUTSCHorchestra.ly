@@ -6,7 +6,7 @@
   title = "SCHABLON"
   meter = "Von Langsam bis Rasch"
   composer = "I. G."
-  tagline = ##f
+  tagline = ##f%\markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 #(set-global-staff-size 17)

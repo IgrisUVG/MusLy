@@ -68,6 +68,7 @@
 					\new Lyrics  = "secondVerse" 
 					\with { alignBelowContext = #"firstVerse" } {
 						\set associatedVoice = "mel"
+						\set stanza = #"(1.)"
 						scep -- ter to be sway'd,
 						As for night's the ser -- e -- nade,
 						As for pud -- ding is the pan,
@@ -79,6 +80,7 @@
 					\new Lyrics = "thirdVerse"
 					\with { alignBelowContext = #"secondVerse" } {
 						\set associatedVoice = "mel"
+						\set stanza = #"(2.)"
 						%Be she 
 						wid -- ow, wife or maid,
 						Be she wan -- ton, be she stayed,
@@ -92,7 +94,19 @@
 				And the wo -- man made for
 			}
 			\alternative {
-				{man. As the}\bar ":|."
+				{
+					<<
+						{
+							man. \set stanza = #"2." As the
+						}
+						\new Lyrics  = "secondVerse" 
+						\with { alignBelowContext = #"firstVerse" } {
+						\set associatedVoice = "mel"
+							\skip 1 \set stanza = #"3." Be she
+						}
+					>>
+				}
+				\bar ":|."
 				{man.}
 			}
 		}

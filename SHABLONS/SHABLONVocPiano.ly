@@ -15,7 +15,7 @@
   opus = "opus"
   composer = "X. Z."
   copyright = "copir"
-  tagline = ##f
+  tagline = ##f%\markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {

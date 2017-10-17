@@ -13,7 +13,7 @@
   piece = "nazva"
   opus = "opus"
   copyright = "copir"
-  tagline = "proga"
+  tagline = "proga"%\markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {

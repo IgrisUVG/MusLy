@@ -402,25 +402,45 @@ guitarMusic = \relative {
         }
       >>
       <<
-      	{
-      		\override Slur.direction = #DOWN
-      		\acciaccatura fis'8\glissando gis16 his( cis) dis
-      		\acciaccatura gis,8\glissando a16 cis( dis) gis
-      		\acciaccatura a,8\glissando c16 e( fis) a
-      	}
-      	\\
-      	{
-      		s8 cis, s dis s fis
-      	}
+        {
+          \override Slur.direction = #DOWN
+          \acciaccatura fis'8\glissando gis16 his( cis) dis
+          \acciaccatura gis,8\glissando a16 cis( dis) gis
+          \acciaccatura a,8\glissando c16 e( fis) a
+        }
+        \\
+        {
+          s8 cis, s dis s fis
+        }
       >>
       <<
-      	{
-      		<e e'>8
-      	}
-      	\\
-      	{
-      		<a,, a'>8
-      	}
+        {
+          <e e'>8
+        }
+        \\
+        {
+          <a,, a'>8
+        }
+      >>
+      \acciaccatura h''8 <a cis>
+      <<
+        {
+          fis'
+        }
+        \\
+        {
+          <dis,, h'>
+        }
+      >>
+      \acciaccatura a'' <fis h>
+      <<
+        {
+          h,
+        }
+        \\
+        {
+          <e,, e'>
+        }
       >>
     }
     \new Staff \with {
@@ -431,7 +451,7 @@ guitarMusic = \relative {
     }
     {
       \key e \major
-      h'8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h''8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

@@ -433,7 +433,26 @@ guitarMusic = \relative {
         }
       >>
       \acciaccatura a'' <fis h>
-      <h,, fis' gis'> r <a e' cis'> r
+      <<
+        {
+          <h,, fis' gis'>
+        }
+        \\
+        {
+          e'
+        }
+      >>
+      r
+      <<
+        {
+          <a,, e' cis'>
+        }
+        \\
+        {
+          h'
+        }
+      >>
+      r
     }
     \new Staff \with {
       \remove "Time_signature_engraver"
@@ -443,7 +462,7 @@ guitarMusic = \relative {
     }
     {
       \key e \major
-      h'8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

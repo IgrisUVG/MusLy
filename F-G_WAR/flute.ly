@@ -61,25 +61,26 @@ fluteMusic = \relative e'' {
   \tag #'pageBreack {
     \pageBreak
   }
-  
+
   %\fluteExpMusic
   \fluteExp
-  
+
   r4
-  \override TrillSpanner.bound-details.left.text = \markup{ 
-    \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat }
+  \override TrillSpanner.bound-details.left.text = \markup{
+    \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat
+  }
   #(define afterGraceFraction (cons 15 16))
   \tag #'trillLen {
-		\once\override TrillSpanner.minimum-length = #6
-		\once\override TrillSpanner.springs-and-rods = #ly:spanner::set-spacing-rods
+    \once\override TrillSpanner.minimum-length = #6
+    \once\override TrillSpanner.springs-and-rods = #ly:spanner::set-spacing-rods
   }
-  \afterGrace d'\startTrillSpan {cis16(\stopTrillSpan d} 
+  \afterGrace d'\startTrillSpan {cis16(\stopTrillSpan d}
   \bar "||"
   \override TupletNumber #'transparent = ##t
   \override TupletBracket #'bracket-visibility = ##f
   h'16-.) b( a gis g fis f e) \times 2/3 {gis16( a gis} fis8-.) e \acciaccatura h cis
   h \acciaccatura eis fis gis \acciaccatura e dis e16( dis d cis c h b a)
-  h8 \acciaccatura dis e a \acciaccatura dis, cis 
+  h8 \acciaccatura dis e a \acciaccatura dis, cis
   h8 \acciaccatura fis' gis e \times 2/3 {cis16( gis e}
   cis8) h16( e dis gis fis h) gis( h e, a fis gis e cis)
 }

@@ -433,7 +433,7 @@ guitarMusic = \relative {
         }
       >>
       \acciaccatura a'' <fis h>
-      <e, h' gis'> r <a, e' cis'> r
+      <h,, fis' gis'> r <a e' cis'> r
     }
     \new Staff \with {
       \remove "Time_signature_engraver"

@@ -69,6 +69,10 @@ fluteMusic = \relative e'' {
   \override TrillSpanner.bound-details.left.text = \markup{ 
     \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat }
   #(define afterGraceFraction (cons 15 16))
+  \tag #'trillLen {
+		\once\override TrillSpanner.minimum-length = #6
+		\once\override TrillSpanner.springs-and-rods = #ly:spanner::set-spacing-rods
+  }
   \afterGrace d'\startTrillSpan {cis16(\stopTrillSpan d} 
   \bar "||"
   \override TupletNumber #'transparent = ##t

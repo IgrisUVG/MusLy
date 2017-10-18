@@ -439,6 +439,7 @@ guitarMusic = \relative {
         }
         \\
         {
+        	\once \override NoteColumn.force-hshift = #1.3
           e'
         }
       >>
@@ -449,6 +450,7 @@ guitarMusic = \relative {
         }
         \\
         {
+        	\once \override NoteColumn.force-hshift = #1.6
           h'
         }
       >>

@@ -454,7 +454,7 @@ guitarMusic = \relative {
           h'
         }
       >>
-      r
+      r <fis, cis' gis'>
     }
     \new Staff \with {
       \remove "Time_signature_engraver"

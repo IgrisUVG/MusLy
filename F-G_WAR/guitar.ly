@@ -454,7 +454,8 @@ guitarMusic = \relative {
           h'
         }
       >>
-      r <fis, cis' gis'>
+      r
+      <fis, cis' gis'> cis''-"ais.m" e fis
     }
     \new Staff \with {
       \remove "Time_signature_engraver"
@@ -464,7 +465,7 @@ guitarMusic = \relative {
     }
     {
       \key e \major
-      h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h,8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

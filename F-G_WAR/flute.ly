@@ -82,9 +82,14 @@ fluteMusic = \relative e'' {
   h \acciaccatura eis fis gis \acciaccatura e dis e16( dis d cis c h b a)
   h8 \acciaccatura dis e a \acciaccatura dis, cis
   h8 \acciaccatura fis' gis e \times 2/3 {cis16( gis e}
-  cis8) h16( e dis gis fis h) gis( h e, a fis gis e cis)
+  cis8) h16( e dis gis fis h) 
+  \once\override Slur.positions = #'(1 . 1)
+  gis( h e, a fis gis e cis)
   a( cis h e cis fis a h gis dis h fis' cis a gis e 
   cis8) dis16( fis a cis e gis) a( e cis gis' e h a fis)
-  dis( e gis h a cis e fis) gis( a h cis e fis e h)
+  dis( e gis h a cis e fis) 
+  \once \override Slur.eccentricity = #1.5
+  gis( a h cis e fis e h)
+  \shape #'((0 . -1) (0 . 1) (0 . 1) (0 . 0)) Slur
   cis( e cis a gis h gis fis e fis e h)
 }

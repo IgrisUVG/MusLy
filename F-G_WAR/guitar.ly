@@ -456,13 +456,8 @@ guitarMusic = \relative {
       >>
       r
       <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r <cis gis' e'?> r
-<<<<<<< .merge_file_a08752
       <h' cis fis> r eis, r <cis' gis' cis> r fis, r <cis' fis a> r
-      <a, cis' fis> r <dis fis' h> <e cis' gis'> <fis cis' a'> r <d a' fis'> r
-=======
-      <cis' fis> r eis, r <cis' gis' cis> r fis, r <cis' fis a> r
       <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
->>>>>>> .merge_file_a08396
       <h d' fis> r <cis gis' e'> r <d a' cis> r 
     }
     \new Staff \with {

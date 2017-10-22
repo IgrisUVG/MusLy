@@ -91,5 +91,7 @@ fluteMusic = \relative e'' {
   \once \override Slur.eccentricity = #1.5
   gis( a h cis e fis e h)
   \shape #'((0 . -1) (0 . 1) (0 . 1) (0 . 0)) Slur
-  cis( e cis a gis h gis fis e fis e h)
+  cis( e cis a gis h gis fis e fis e h) gis( cis h a
+  gis cis dis gis) h( cis h fis gis dis cis dis h e h a
+  gis cis dis gis) h( cis h fis gis dis cis dis h e h a)
 }

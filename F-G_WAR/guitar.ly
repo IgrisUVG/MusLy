@@ -439,7 +439,7 @@ guitarMusic = \relative {
         }
         \\
         {
-        	\once \override NoteColumn.force-hshift = #1.3
+          \once \override NoteColumn.force-hshift = #1.3
           e'
         }
       >>
@@ -450,7 +450,7 @@ guitarMusic = \relative {
         }
         \\
         {
-        	\once \override NoteColumn.force-hshift = #1.6
+          \once \override NoteColumn.force-hshift = #1.6
           h'
         }
       >>
@@ -458,8 +458,8 @@ guitarMusic = \relative {
       <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r <cis gis' e'?> r
       <h' cis fis> r eis, r <cis' gis' cis> r fis, r <cis' fis a> r
       <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
-      <h d' fis> r <cis gis' e'> r <d a' cis> r <a e' h'> r
-      <c f as>
+      <h d' fis> r <cis gis' e'> r <d a' cis>4 r8 <a e' h'>
+      <c f as>4
     }
     \new Staff \with {
       \remove "Time_signature_engraver"

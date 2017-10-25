@@ -458,15 +458,57 @@ guitarMusic = \relative {
       <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r <cis gis' e'?> r
       <h' cis fis> r eis, r <cis' gis' cis> r fis, r <cis' fis a> r
       <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
-      <h d' fis> r <cis gis' e'> r <d a' cis>4 <a e' h'> <c f as> r8
+      <h d' fis> r <cis gis' e'> r
+      <<
+      	{
+      		cis'4 h as
+      	}
+      	\\
+      	{
+      		<d, a'>4 <a e'> <c f>
+      	}
+      >>
+      r8
       <<
         {
-          g'' e!2 d4 r8 fis
+        	\override NoteColumn.force-hshift = #-0.3
+          g'' e!2 d4
         }
         \\
         {
-          <des, as' c>8 <as es' b'>4 <h! as'> <e? g> r8 <c g' h>
+        	\voiceOne
+        	c8 b4 as g
         }
+        \\
+        {
+        	\voiceTwo
+          <des as'>8 <as es'>4 h! e?
+        }
+      >>
+      r8
+      <<
+      	{
+      		fis'
+      	}
+      	\\
+      	{
+      		<c, g' h>
+      	}
+      >>
+      <<
+      	{
+      		\override NoteColumn.force-hshift = #-0.3
+      		h''2
+      	}
+      	\\
+      	{
+      		\voiceOne
+      		e,4 dis h
+      	}
+      	\\
+      	{
+      		\voiceTwo
+      	}
       >>
     }
     \new Staff \with {
@@ -477,7 +519,7 @@ guitarMusic = \relative {
     }
     {
       \key e \major
-      h'8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

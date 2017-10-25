@@ -461,11 +461,11 @@ guitarMusic = \relative {
       <h d' fis> r <cis gis' e'> r <d a' cis>4 <a e' h'> <c f as> r8
       <<
         {
-          g'' e!2 d4
+          g'' e!2 d4 r8 fis
         }
         \\
         {
-          <des, as' c>8 <as es' b'>4 <h as'> <e? g>
+          <des, as' c>8 <as es' b'>4 <h! as'> <e? g> r8 <c g' h>
         }
       >>
     }

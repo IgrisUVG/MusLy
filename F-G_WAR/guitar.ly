@@ -460,55 +460,56 @@ guitarMusic = \relative {
       <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
       <h d' fis> r <cis gis' e'> r
       <<
-      	{
-      		cis'4 h as
-      	}
-      	\\
-      	{
-      		<d, a'>4 <a e'> <c f>
-      	}
+        {
+          cis'4 h as
+        }
+        \\
+        {
+          <d, a'>4 <a e'> <c f>
+        }
       >>
       r8
       <<
         {
-        	\override NoteColumn.force-hshift = #-0.3
+          \override NoteColumn.force-hshift = #-0.3
           g'' e!2 d4
         }
         \\
         {
-        	\voiceOne
-        	c8 b4 as g
+          \voiceOne
+          c8 b4 as g
         }
         \\
         {
-        	\voiceTwo
+          \voiceTwo
           <des as'>8 <as es'>4 h! e?
         }
       >>
       r8
       <<
-      	{
-      		fis'
-      	}
-      	\\
-      	{
-      		<c, g' h>
-      	}
+        {
+          fis'
+        }
+        \\
+        {
+          <c, g'>
+        }
       >>
       <<
-      	{
-      		\override NoteColumn.force-hshift = #-0.3
-      		h''2
-      	}
-      	\\
-      	{
-      		\voiceOne
-      		e,4 dis h
-      	}
-      	\\
-      	{
-      		\voiceTwo
-      	}
+        {
+          \override NoteColumn.force-hshift = #-0.3
+          h''2
+        }
+        \\
+        {
+          \voiceOne
+          e,4 dis h
+        }
+        \\
+        {
+          \voiceTwo
+          <a, c'>4 <cis! gis'?>
+        }
       >>
     }
     \new Staff \with {

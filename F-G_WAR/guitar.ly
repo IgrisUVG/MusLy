@@ -497,18 +497,20 @@ guitarMusic = \relative {
       >>
       <<
         {
-          \override NoteColumn.force-hshift = #-0.3
+          \once\override NoteColumn.force-hshift = #-0.3
           h''2 fis4
         }
         \\
         {
           \voiceOne
-          e4 dis h
+          e4 dis 
+          \once\override NoteColumn.force-hshift = #0.6
+          h
         }
         \\
         {
           \voiceTwo
-          <a, c'>4 <cis! gis'?> <fis, h fis'>
+          <a, c'>4 <cis! gis'?> <fis, h fis' cis'>
         }
       >>
     }

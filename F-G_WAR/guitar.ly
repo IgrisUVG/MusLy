@@ -503,7 +503,7 @@ guitarMusic = \relative {
         \\
         {
           \voiceOne
-          e4 dis 
+          e4 dis
           \once\override NoteColumn.force-hshift = #0.6
           h
         }
@@ -514,24 +514,26 @@ guitarMusic = \relative {
         }
       >>
     }
-    \new Staff \with {
-      \remove "Time_signature_engraver"
-      alignAboveContext = #"main"
-      \magnifyStaff #2/3
-      firstClef = ##f
-    }
-    {
-      \key e \major
-      h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
-      h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
-      cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
-      h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
-      h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
-      cis8) e-. fis-. dis-. e-. r
-      h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
-      cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
-      h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
-      cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
+    \tag #'changeSpacingSpanner {
+      \new Staff \with {
+        \remove "Time_signature_engraver"
+        alignAboveContext = #"main"
+        \magnifyStaff #2/3
+        firstClef = ##f
+      }
+      {
+        \key e \major
+        h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+        h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
+        cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
+        h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+        h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
+        cis8) e-. fis-. dis-. e-. r
+        h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
+        cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
+        h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
+        cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
+      }
     }
   >>
 }

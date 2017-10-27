@@ -33,5 +33,6 @@
 
 \score {
   \removeWithTag #'changeSpacingSpanner
+  \removeWithTag #'addOssia
   \guitarMusic
 }

@@ -513,9 +513,9 @@ guitarMusic = \relative {
           <a, c'>4 <cis! gis'?> <fis, h fis' cis'>
         }
       >>
-      d''16 e fis gis
+      d''16( e) fis( gis) r8
     }
-    \tag #'changeSpacingSpanner {
+    \tag #'addOssia {
       \new Staff \with {
         \remove "Time_signature_engraver"
         alignAboveContext = #"main"

@@ -94,5 +94,6 @@ fluteMusic = \relative e'' {
   cis( e cis a gis h gis fis e fis e h) gis( cis h a
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a)
-  gis( h cis e fis gis h cis) dis8( e)
+  gis( h cis e fis gis h cis) dis8( e) eis( fis)
+  h
 }

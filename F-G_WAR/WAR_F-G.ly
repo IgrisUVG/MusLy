@@ -48,8 +48,8 @@
     \with {
       instrumentName = "Guit."
     }
-    \removeWithTag #'addOssia
+    %\removeWithTag #'addOssia
     \guitarMusic
-    %\new Dynamics \hSheet
+    \new Dynamics \hSheet
   >>
 }

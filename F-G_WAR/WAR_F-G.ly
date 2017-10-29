@@ -50,6 +50,6 @@
     }
     %\removeWithTag #'addOssia
     \guitarMusic
-    \new Dynamics \hSheet
+    %\new Dynamics \hSheet
   >>
 }

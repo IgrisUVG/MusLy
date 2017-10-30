@@ -79,7 +79,7 @@ fluteMusic = \relative e'' {
   \override TupletNumber #'transparent = ##t
   \override TupletBracket #'bracket-visibility = ##f
   h'16-.) ais,( dis gis g h, f' e) \times 2/3 {gis16( a gis} fis8-.) e \acciaccatura h cis
-  h \acciaccatura eis fis gis \acciaccatura fis dis e16( dis d cis c h b a)
+  h \acciaccatura eis fis gis \acciaccatura fis dis e16( dis fis, d' cis c gis ais)
   h8 \acciaccatura dis e a \acciaccatura dis, cis
   h8 \acciaccatura fis' gis e \times 2/3 {cis16( gis e}
   cis8) h16( e dis gis fis h)

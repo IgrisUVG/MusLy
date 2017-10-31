@@ -516,7 +516,7 @@ guitarMusic = \relative {
       d''16( e) fis( gis)
       <<
         {
-          cis,( dis?) e( fis) h,( cis) dis( e)
+          cis,( d) e( fis) h,( cis) dis( e)
           a,( h) cis( dis)\glissando \stemDown fis4
           \stemNeutral
         }
@@ -530,7 +530,8 @@ guitarMusic = \relative {
           )
         }
       >>
-      <h'' e>8
+      <h'' e>8 <h,, a' fis'> <a'' h>\noBeam
+      <a,, f' h e>
     }
     \tag #'addOssia {
       \new Staff \with {
@@ -541,7 +542,7 @@ guitarMusic = \relative {
       }
       {
         \key e \major
-        h,8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+        h'8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
         h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
         cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
         h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

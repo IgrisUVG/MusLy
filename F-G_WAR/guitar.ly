@@ -550,6 +550,8 @@ guitarMusic = \relative {
           fis,,\glissando \stemDown<h e c'>4 s8
         }
       >>
+      <cis'' eis>8 <a,, h' e!> <h'' dis>\noBeam
+      <cis,, ais' fis'>
     }
     \tag #'addOssia {
       \new Staff \with {

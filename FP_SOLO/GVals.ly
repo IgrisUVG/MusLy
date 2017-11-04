@@ -97,8 +97,8 @@ rechtsDovn = \relative {
   r4 <as b des>2 r4 <ges heses>2 r4 heses( as)
   r4 <f as c>2 r4 <as b des>2 r4 <ges heses>2
   r4 heses( as) r4 <b des f>2 r4 <b ges'>2
-  r4 <ges ces es>2 r4 <ges b ces>2 r4 <ges b des>2~
-  q \bar "|."
+  r4 <ges ces es>2 r4 <ges b ces>2 r2 <ges b des>4~
+  q2 \bar "|."
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -115,7 +115,7 @@ links = \relative {
   %\pageBreak
   b, c es
   ges as b4 <ces b'>2 ges2.
-  des es f4 <fes f'>2 <<{s4 ges'2}\\{as,2.}>>
+  des es f4 <ges f'>2 <<{s4 ges'2}\\{as,2.}>>
   des, es f4 <ges f'>2 <<{s4 ges'2}\\{as,2.}>>
   ges eses des ces ges'~ ges2
   \bar "|."

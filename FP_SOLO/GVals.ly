@@ -5,20 +5,19 @@
 
 \header {
   title = "G valse"
-  meter = "Lento"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
   #(set-paper-size "a4")
-  %top-system-spacing #'basic-distance = #25
-  %top-markup-spacing #'basic-distance = #10
-  %markup-system-spacing #'basic-distance = #30
-  %system-system-spacing #'basic-distance = #25
-  %last-bottom-spacing #'basic-distance = #30
-  %left-margin = 15
-  %right-margin = 15
+  top-system-spacing #'basic-distance = #25
+  top-markup-spacing #'basic-distance = #5
+  markup-system-spacing #'basic-distance = #30
+  system-system-spacing #'basic-distance = #25
+  last-bottom-spacing #'basic-distance = #30
+  left-margin = 25
+  right-margin = 25
   %two-sided = ##t
   %inner-margin = 25
   %outer-margin = 15
@@ -67,6 +66,8 @@ rechtsUp = \relative {
   %\override Score.SpacingSpanner.strict-note-spacing = ##t
   \set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
   %\set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark.extra-offset = #'(-3 . 3)
+  \mark "Lento"
   \partial 4
   \stemDown
   b'

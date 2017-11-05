@@ -95,5 +95,8 @@ fluteMusic = \relative e'' {
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a)
   gis( h cis e fis gis h cis) dis8( e) eis( fis)
-  h
+  h \tuplet 3/2 8 {
+  	a16 gis e cis h gis e dis h
+  }
+  a gis fis e
 }

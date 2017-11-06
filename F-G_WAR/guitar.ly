@@ -510,13 +510,14 @@ guitarMusic = \relative {
         \\
         {
           \voiceTwo
-          <a, c'>4 <cis! gis'?> <fis, h fis' cis'>
+          <a, c'>4 <\tweak Accidental.extra-offset #'(2.5 . 0) cis! gis'?> <fis, h fis' cis'>
         }
       >>
       d''16( e) fis( gis)
       <<
         {
-          cis,( d) e( fis) h,( cis) dis( e)
+          cis,( \tweak AccidentalPlacement.right-padding #0 d) e( fis) 
+          h,( cis) \tweak AccidentalPlacement.right-padding #0 dis( e)
           a,( h) cis( dis)\glissando \stemDown fis4
           \stemNeutral
         }
@@ -539,7 +540,16 @@ guitarMusic = \relative {
           s8
           \once\override Slur.positions = #'(0 . 1)
           \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
-          h''8.( a16 \stemDown <eis, cis'! dis! gis>8)
+          h''8.( a16 \stemDown 
+          <
+          \tweak AccidentalPlacement.right-padding #-1
+          \tweak Accidental.extra-offset #'(1 . 0)
+          eis, 
+          \tweak Accidental.extra-offset #'(-0.3 . 0)
+          cis'!
+          \tweak Accidental.extra-offset #'(-0.7 . 0)
+          dis! gis
+          >8)
         }
         \\
         {
@@ -547,7 +557,7 @@ guitarMusic = \relative {
         }
         \\
         {
-          fis,,\glissando \stemDown<h e c'>4 s8
+          fis,,!\glissando \stemDown<h e c'>4 s8
         }
       >>
       <cis'' eis>8 <a,, h' e!> <h'' dis>\noBeam

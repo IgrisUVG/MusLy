@@ -17,9 +17,11 @@
   markup-system-spacing.basic-distance = #8
   system-system-spacing.basic-distance = #25
   last-bottom-spacing.basic-distance = #25
-  two-sided = ##t
-  inner-margin = 20
-  outer-margin = 15
+  left-margin = 20
+  right-margin = 20
+  %two-sided = ##t
+  %inner-margin = 20
+  %outer-margin = 15
 }
 
 \layout {
@@ -48,7 +50,7 @@
     \with {
       instrumentName = "Guit."
     }
-    %\removeWithTag #'addOssia
+    \removeWithTag #'addOssia
     \guitarMusic
     %\new Dynamics \hSheet
   >>

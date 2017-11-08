@@ -102,5 +102,10 @@ fluteMusic = \relative e'' {
   	a16 gis e cis h gis e dis h
   }
   \set subdivideBeams = ##f
-  a gis fis e
+  a gis fis e r 
+  \set subdivideBeams = ##t
+  fis
+  \tuplet 3/2 8 {
+  	h cis e fis h e
+  }
 }

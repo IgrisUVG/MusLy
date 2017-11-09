@@ -102,8 +102,7 @@ fluteMusic = \relative e'' {
     a16 gis e cis h fis e dis h
   }
   \set subdivideBeams = ##f
-  a gis fis e r 
-  \set stemLeftBeamCount = #2
+  a gis fis e r[
   \set stemRightBeamCount = #1
   fis
   \tuplet 3/2 8 {
@@ -111,6 +110,7 @@ fluteMusic = \relative e'' {
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
     \set stemLeftBeamCount = #1
-    h cis e fis h e a gis e cis h fis e dis h
+    h cis e] fis h e a gis e cis h fis e dis h
+    dis cis ais gis fis cis fis h cis fis h cis
   }
 }

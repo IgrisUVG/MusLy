@@ -472,14 +472,14 @@ guitarMusic = \relative {
       <<
         {
           \override NoteColumn.force-hshift = #-0.3
-          g'' e!2 
+          g'' e!2
           \revert NoteColumn.force-hshift
           d4
         }
         \\
         {
           \voiceOne
-          c8 b4 as 
+          c8 b4 as
           \once\override NoteColumn.force-hshift = #0.8
           fis
         }
@@ -520,7 +520,7 @@ guitarMusic = \relative {
       d''16( e) fis( gis)
       <<
         {
-          cis,( \tweak AccidentalPlacement.right-padding #0 d) e( fis) 
+          cis,( \tweak AccidentalPlacement.right-padding #0 d) e( fis)
           h,( cis) \tweak AccidentalPlacement.right-padding #0 dis( e)
           a,( h) cis( dis)\glissando \stemDown fis4
           \stemNeutral
@@ -544,11 +544,11 @@ guitarMusic = \relative {
           s8
           \once\override Slur.positions = #'(0 . 1)
           \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
-          h''8.( a16 \stemDown 
+          h''8.( a16 \stemDown
           <
           \tweak AccidentalPlacement.right-padding #-1
           \tweak Accidental.extra-offset #'(1 . 0)
-          eis, 
+          eis,
           \tweak Accidental.extra-offset #'(-0.3 . 0)
           cis'!
           \tweak Accidental.extra-offset #'(-0.7 . 0)

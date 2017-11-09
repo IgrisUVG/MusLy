@@ -96,16 +96,14 @@ fluteMusic = \relative e'' {
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a)
   gis( h cis e fis gis h cis) dis8( e) eis( fis)
   h \tuplet 3/2 8 {
-  	\set subdivideBeams = ##t
-  	\set baseMoment = #(ly:make-moment 1/8)
-  	\set beatStructure = #'(2 2 2 2)
-  	a16 gis e cis h gis e dis h
+    \set subdivideBeams = ##t
+    \set baseMoment = #(ly:make-moment 1/8)
+    \set beatStructure = #'(2 2 2 2)
+    a16 gis e cis h gis e dis h
   }
   \set subdivideBeams = ##f
-  a gis fis e r 
-  \set subdivideBeams = ##t
-  fis
+  a gis fis e r fis
   \tuplet 3/2 8 {
-  	h cis e fis h e
+    h cis e fis h e
   }
 }

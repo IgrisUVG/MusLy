@@ -571,11 +571,13 @@ guitarMusic = \relative {
           s8
           \once\override Slur.positions = #'(0 . 1)
           \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
-          h''8.( a16 \stemDown          
+          h''8.( a16
+          \stemDown
+          <e, h' gis'>8)
         }
         \\
         {
-          s8 h,\rest <c e>
+          s8 h'\rest <c e>
         }
         \\
         {

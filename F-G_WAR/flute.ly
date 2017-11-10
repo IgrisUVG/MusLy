@@ -112,5 +112,6 @@ fluteMusic = \relative e'' {
     \set stemLeftBeamCount = #1
     h cis e] fis h e a gis e cis h fis e dis h
     dis cis ais gis fis cis fis h cis fis h cis
+    h cis h cis h cis dis cis dis cis h cis
   }
 }

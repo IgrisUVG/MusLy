@@ -566,6 +566,22 @@ guitarMusic = \relative {
       >>
       <cis'' eis>8 <a,, h' e!> <h'' dis>\noBeam
       <cis,, ais' fis'>
+      <<
+        {
+          s8
+          \once\override Slur.positions = #'(0 . 1)
+          \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
+          h''8.( a16 \stemDown          
+        }
+        \\
+        {
+          s8 h,\rest <c e>
+        }
+        \\
+        {
+          g,\glissando \stemDown dis'4
+        }
+      >>
     }
     \tag #'addOssia {
       \new Staff \with {

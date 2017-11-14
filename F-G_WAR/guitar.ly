@@ -573,15 +573,30 @@ guitarMusic = \relative {
           \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
           h''8.( a16
           \stemDown
-          <e, h' gis'>8)
+          <e, h' gis'>8)<c' a'>
         }
         \\
         {
-          s8 h'\rest <c e>
+          s8 h\rest <c e>
         }
         \\
         {
           g,\glissando \stemDown dis'4
+        }
+      >>
+      <gis dis' h'>8<g e'>
+      <<
+        {
+          dis' e fis4
+        }
+        \\
+        {
+          g,8\rest g a4
+        }
+        \\
+        {
+          \voiceTwo
+          c,4 h
         }
       >>
     }

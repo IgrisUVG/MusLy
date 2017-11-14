@@ -99,20 +99,20 @@ fluteMusic = \relative e'' {
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
-    a16 gis e cis h fis e dis h
+    a16( gis e cis h fis e dis h)
   }
   \set subdivideBeams = ##f
-  a gis fis e r[
+  a( gis fis e) r[
   \set stemRightBeamCount = #1
-  fis
+  fis(
   \tuplet 3/2 8 {
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
     \set stemLeftBeamCount = #1
-    h cis e] fis h e a gis e cis h fis e dis h
-    dis cis ais gis fis cis fis h cis fis h cis
-    h cis h cis h cis dis cis dis cis h cis
-    h gis h a cis a gis h gis fis gis fis
+    h cis e] a h e) a( gis e cis h fis e dis h)
+    dis( cis ais gis) fis( cis fis h cis fis) h( cis
+    h cis h cis h cis dis cis dis cis h cis)
+    h( gis h a cis a gis h gis fis gis fis)
   }
 }

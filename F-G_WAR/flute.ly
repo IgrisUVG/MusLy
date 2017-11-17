@@ -113,6 +113,8 @@ fluteMusic = \relative e'' {
     h cis e] a h e) a( gis e cis h fis e dis h)
     dis( cis ais gis) fis( cis fis h cis fis) h( cis
     h cis h cis h cis dis cis dis cis h cis)
-    h( gis h a cis a gis h gis fis gis fis)
+    h( gis h a cis a gis h gis fis gis fis
+    gis fis gis a gis a h cis h cis h cis)
+    h( a h a fis a fis e fis e cis e h8)
   }
 }

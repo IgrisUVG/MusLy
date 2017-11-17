@@ -587,7 +587,7 @@ guitarMusic = \relative {
       <gis dis' h'>8<g e'>
       <<
         {
-          dis' e fis4
+          dis' e fis8. h16
         }
         \\
         {
@@ -599,6 +599,7 @@ guitarMusic = \relative {
           c,4 h
         }
       >>
+      <cis cis' a' e'>8 gis'''
     }
     \tag #'addOssia {
       \new Staff \with {

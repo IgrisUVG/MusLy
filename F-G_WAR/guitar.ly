@@ -602,20 +602,20 @@ guitarMusic = \relative {
         }
       >>
       <<
-      	{
-      		e''8 gis c, e h
-      	}
-      	\\
-      	{
-      		<cis,, cis' a'> e' b g gis!
-      	}
-      	\\
-      	{
-      		\voiceTwo
-      		s8
-      		\once\override NoteColumn.force-hshift = #0.2
-      		h4 s8 s
-      	}
+        {
+          e''8\glissando gis\glissando c,\glissando e h
+        }
+        \\
+        {
+          <cis,, cis' a'> e'\glissando b g gis!
+        }
+        \\
+        {
+          \voiceTwo
+          s8
+          \once\override NoteColumn.force-hshift = #0.2
+          h4 s8 s
+        }
       >>
     }
     \tag #'addOssia {

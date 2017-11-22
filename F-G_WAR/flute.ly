@@ -115,6 +115,7 @@ fluteMusic = \relative e'' {
     h cis h cis h cis dis cis dis cis h cis)
     h( gis h a cis a gis h gis fis gis fis
     gis fis gis a gis a h cis h cis h cis)
-    h( a h a fis a fis e fis e cis e h8)
+    h( a h a fis a fis e fis e cis e
   }
+  h8) \acciaccatura {cis16[( cisis dis]} e8) g, \acciaccatura {a16[( h c]} cis8)
 }

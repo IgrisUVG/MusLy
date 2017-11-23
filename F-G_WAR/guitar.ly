@@ -603,18 +603,39 @@ guitarMusic = \relative {
       >>
       <<
         {
-          e''8\glissando gis\glissando c,\glissando e h
+          e''8\glissando gis\glissando c,\glissando e
         }
         \\
         {
-          <cis,, cis' a'> e'\glissando b g gis!
+          <cis,, cis' a'> e'\glissando b g
         }
         \\
         {
           \voiceTwo
           s8
           \once\override NoteColumn.force-hshift = #0.2
-          h4 s8 s
+          h4 s8
+        }
+      >>
+      <<
+        {
+          h'
+        }
+        \\
+        {
+          \override TupletNumber #'transparent = ##t
+          \override TupletBracket #'bracket-visibility = ##f
+          \tuplet 3/2 8 {
+            \set subdivideBeams = ##t
+            \set baseMoment = #(ly:make-moment 1/8)
+            \set beatStructure = #'(2 2 2 2)
+            f16\rest fis e cis h gis
+          }
+        }
+        \\
+        {
+          \voiceTwo
+          gis!8
         }
       >>
     }

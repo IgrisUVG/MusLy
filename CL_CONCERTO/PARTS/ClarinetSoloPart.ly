@@ -13,11 +13,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #8
-  system-system-spacing #'basic-distance = #14
-  last-bottom-spacing #'basic-distance = #16
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #8
+  system-system-spacing.basic-distance = #14
+  last-bottom-spacing.basic-distance = #16
   left-margin = 15
   right-margin = 15
   %two-sided = ##t

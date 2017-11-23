@@ -619,7 +619,7 @@ guitarMusic = \relative {
       >>
       <<
         {
-          h'
+          h' s dis,
         }
         \\
         {
@@ -629,13 +629,13 @@ guitarMusic = \relative {
             \set subdivideBeams = ##t
             \set baseMoment = #(ly:make-moment 1/8)
             \set beatStructure = #'(2 2 2 2)
-            f16\rest fis^( e) dis cis h
+            f16\rest fis^( e) dis cis h a\rest h^( a) gis fis e
           }
         }
         \\
         {
           \voiceTwo
-          gis!8
+          gis!8 s c,
         }
       >>
     }

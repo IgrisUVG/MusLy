@@ -34,6 +34,7 @@
 
 \include "flute.ly"
 \include "guitar.ly"
+\include "dynamic.ly"
 \include "chordsSheet.ly"
 
 \score {
@@ -45,6 +46,8 @@
     }
     \removeWithTag #'pageBreack
     \fluteMusic
+
+    \new Dynamics \dynamic
 
     \new Staff
     \with {

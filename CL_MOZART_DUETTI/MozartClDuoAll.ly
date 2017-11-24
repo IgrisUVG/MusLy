@@ -31,7 +31,7 @@
 %%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
 \include "CL_MoDu_erste.ly"
 \include "CL_MoDu_zweite.ly"
-\include "CL_MoDu_Leitung.ly"
+%\include "CL_MoDu_Leitung.ly"
 
 \book {
   \paper {

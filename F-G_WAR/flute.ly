@@ -117,5 +117,25 @@ fluteMusic = \relative e'' {
     gis fis gis a gis a h cis h cis h cis)
     h( a h a fis a fis e fis e cis e
   }
-  h8) \acciaccatura {cis16[( cisis dis]} e8) g, \acciaccatura {a16[( h c]} cis8)
+  \tag #'SpacingSection {
+    \newSpacingSection
+    \override Score.SpacingSpanner.strict-grace-spacing = ##t
+    \set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
+  }
+  h8)
+  \tag #'SpacingSection {
+    \once\override Score.GraceSpacing.spacing-increment = #1.3
+  }
+  \acciaccatura {cis16[( cisis dis]} e8) g,
+  \tag #'SpacingSection {
+    \once\override Score.GraceSpacing.spacing-increment = #1.3
+  }
+  \acciaccatura {a16[( h c]}
+  \tweak Accidental.extra-offset #'(0.4 . 0)
+  cis8)
+  \tag #'SpacingSection {
+    \newSpacingSection
+    \revert SpacingSpanner.strict-grace-spacing
+    \unset Score.proportionalNotationDuration
+  }
 }

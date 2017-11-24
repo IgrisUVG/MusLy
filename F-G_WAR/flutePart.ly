@@ -34,5 +34,8 @@
 \include "flute.ly"
 
 \score {
-  \new Staff \fluteMusic
+  \new Staff {
+    \removeWithTag #'SpacingSection
+    \fluteMusic
+  }
 }

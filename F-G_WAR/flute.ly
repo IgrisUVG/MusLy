@@ -126,11 +126,11 @@ fluteMusic = \relative e'' {
   \tag #'SpacingSection {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
-  \acciaccatura {cis16[( cisis dis]} e8) g,
+  \acciaccatura {\slashI cis16[( cisis dis]} e8) g,
   \tag #'SpacingSection {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
-  \acciaccatura {a16[( h c]}
+  \acciaccatura {\slashI a16[( h c]}
   \tweak Accidental.extra-offset #'(0.4 . 0)
   cis8)
   \tag #'SpacingSection {

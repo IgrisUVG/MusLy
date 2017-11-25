@@ -131,8 +131,11 @@ fluteMusic = \relative e'' {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
   \acciaccatura {\slashI a16[( h c]}
-  \tweak Accidental.extra-offset #'(0.4 . 0)
-  cis8)
+  \tag #'Part { cis8) }
+  \tag #'Partitur {
+    \tweak Accidental.extra-offset #'(0.4 . 0)
+    cis8)
+  }
   \tag #'SpacingSection {
     \newSpacingSection
     \revert SpacingSpanner.strict-grace-spacing

@@ -45,6 +45,7 @@
       instrumentName = "Fl."
     }
     \removeWithTag #'pageBreack
+    \removeWithTag #'Part
     \fluteMusic
 
     \new Dynamics \dynamic

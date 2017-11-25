@@ -36,6 +36,7 @@
 \score {
   \new Staff {
     \removeWithTag #'SpacingSection
+    \removeWithTag #'Partitur
     \fluteMusic
   }
 }

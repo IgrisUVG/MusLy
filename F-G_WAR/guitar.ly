@@ -619,7 +619,7 @@ guitarMusic = \relative {
       >>
       <<
         {
-          h' s dis,
+          h' s dis, s
         }
         \\
         {
@@ -635,9 +635,10 @@ guitarMusic = \relative {
         \\
         {
           \voiceTwo
-          gis!8 s c,
+          gis!8 s c, s
         }
       >>
+      \bar "||"
     }
     \tag #'addOssia {
       \new Staff \with {

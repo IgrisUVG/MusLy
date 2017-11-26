@@ -141,4 +141,5 @@ fluteMusic = \relative e'' {
     \revert SpacingSpanner.strict-grace-spacing
     \unset Score.proportionalNotationDuration
   }
+  \bar "||"
 }

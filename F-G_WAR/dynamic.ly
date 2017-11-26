@@ -18,5 +18,5 @@ dynamic = {
   s2*6\!-\markup\line{\number \magnify #0.6 1. \dynamic f}
   s8 s4.\> s2\! s4 s\f s2*11 s4 s8 s\> s2*3 
   \once\override DynamicText.extra-offset = #'(-2.5 . -2.5)
-  s2*8\mp s2*7\mf s2\f
+  s2*8\mp s2*7\mf s2*15\f s8 s4.\> s2 s2*11\! s4 s\< s2 s4 s\!
 }

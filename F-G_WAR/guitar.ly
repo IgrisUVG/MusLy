@@ -649,7 +649,7 @@ guitarMusic = \relative {
       >>
       <<
         {
-          e''8 dis fis
+          e''8 dis fis gis fis e
         }
         \\
         {
@@ -660,13 +660,16 @@ guitarMusic = \relative {
             \set baseMoment = #(ly:make-moment 1/8)
             \set beatStructure = #'(2 2 2 2)
             \once\override Beam.positions = #'(-2.2 . -2.2)
-            e16 h cis dis h e fis gis, e'
+            e16 h cis dis h e fis gis, e' gis e h' fis e h' e, h' fis
           }
         }
         \\
         {
           \voiceTwo
-          a,,8 fis cis'
+          a,,8 gis 
+          \override NoteColumn.force-hshift = #0.2
+          \once\override Beam.positions = #'(-7 . -7.5)
+          cis a cis h
         }
       >>
     }

@@ -646,6 +646,27 @@ guitarMusic = \relative {
           e, s
         }
       >>
+      <<
+        {
+          e''8 dis fis
+        }
+        \\
+        {
+          \override TupletNumber #'transparent = ##t
+          \override TupletBracket #'bracket-visibility = ##f
+          \tuplet 3/2 8 {
+            \set subdivideBeams = ##t
+            \set baseMoment = #(ly:make-moment 1/8)
+            \set beatStructure = #'(2 2 2 2)
+            e16 h cis dis h e fis gis, e'
+          }
+        }
+        \\
+        {
+          \voiceTwo
+          a,,8 fis cis'
+        }
+      >>
     }
     \tag #'addOssia {
       \new Staff \with {

@@ -620,6 +620,8 @@ guitarMusic = \relative {
       <<
         {
           h' s dis, s
+          \bar "||" \break
+          gis, a
         }
         \\
         {
@@ -629,16 +631,18 @@ guitarMusic = \relative {
             \set subdivideBeams = ##t
             \set baseMoment = #(ly:make-moment 1/8)
             \set beatStructure = #'(2 2 2 2)
-            e16\rest fis^( e) dis cis h a\rest h^( a) gis fis e
+            e'16\rest fis^( e) dis cis h a\rest h^( a) gis fis e\glissando
+            h fis' h a cis^( d)
           }
         }
         \\
         {
           \voiceTwo
-          gis!8 s c, s
+          gis,!8 s c, s
+          \once\override NoteColumn.force-hshift = #0.2
+          e, s
         }
       >>
-      \bar "||"
     }
     \tag #'addOssia {
       \new Staff \with {

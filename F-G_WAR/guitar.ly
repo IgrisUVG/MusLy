@@ -635,6 +635,7 @@ guitarMusic = \relative {
             \override Glissando.breakable = ##t
             \override Glissando.after-line-breaking = ##t
             e\glissando
+            \once\override Beam.positions = #'(-10 . -4)
             h fis' h a cis^( d)
           }
         }
@@ -658,6 +659,7 @@ guitarMusic = \relative {
             \set subdivideBeams = ##t
             \set baseMoment = #(ly:make-moment 1/8)
             \set beatStructure = #'(2 2 2 2)
+            \once\override Beam.positions = #'(-2.2 . -2.2)
             e16 h cis dis h e fis gis, e'
           }
         }

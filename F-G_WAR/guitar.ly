@@ -660,7 +660,13 @@ guitarMusic = \relative {
             \set baseMoment = #(ly:make-moment 1/8)
             \set beatStructure = #'(2 2 2 2)
             \once\override Beam.positions = #'(-2.2 . -2.2)
-            e16 h cis dis h e fis gis, e' gis e h' fis e h' e, h' fis
+            e16 h
+            \once\override StringNumber.extra-offset = #'(0 . -1.2)
+            cis\3 dis h e
+            \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
+            fis\2 gis, e'^0 gis e\3 h' fis e^0 h'
+            \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
+            e,\3 h' fis
           }
         }
         \\

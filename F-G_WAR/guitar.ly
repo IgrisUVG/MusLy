@@ -37,7 +37,7 @@ guitarMusic = \relative {
       <h fis' dis'> r <e h' e> r <a, cis' e> r
     }
     {
-      <a cis' e> r
+      <a cis' e> r \noBreak
     }
   }
   <h fis' dis'> r <cis gis' cis> r <h dis' fis>4
@@ -104,7 +104,7 @@ guitarMusic = \relative {
       <h fis' dis'> r <e h' e> r <a, cis' a'> r
     }
     {
-      <a cis' e> r
+      <a cis' e> r \noBreak
     }
   }
   <h fis' dis'> r <cis gis' cis> r h''8.( a16
@@ -209,8 +209,8 @@ guitarMusic = \relative {
   <<
     {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3.5)
-      f8\3 b r d d_( c) r g f c' r es es_( d) s es
-      f b, es16_( d) c b d8 f, b16_( a) g f
+      f8\3 b r d d_( c) r g\2 f c' r es es_( d) s es
+      f b, es16_( d) c b d8 f, b16_( a) g f-4
       g8 b a f'
     }
     \\
@@ -229,7 +229,7 @@ guitarMusic = \relative {
       \acciaccatura {\slashIII b'16[ a' d]}
       \stemDown
       g8^. h,,\rest
-      as4 g fis? f es8 c' f, d'
+      as4 g-0 fis? f es8 c' f, d'
     }
   >>
   <<
@@ -432,7 +432,7 @@ guitarMusic = \relative {
           <dis,, h'>
         }
       >>
-      \acciaccatura a'' <fis h>
+      \acciaccatura a'' <fis h\2>
       <<
         {
           <h,, fis' gis'>
@@ -440,7 +440,8 @@ guitarMusic = \relative {
         \\
         {
           \once \override NoteColumn.force-hshift = #1.3
-          e'
+          \once\override Fingering.extra-offset = #'(1.2 . -1)
+          e'^0
         }
       >>
       r
@@ -451,7 +452,8 @@ guitarMusic = \relative {
         \\
         {
           \once \override NoteColumn.force-hshift = #1.6
-          h'
+          \once\override Fingering.extra-offset = #'(0.8 . -2)
+          h'^0
         }
       >>
       r

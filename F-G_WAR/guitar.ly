@@ -101,7 +101,7 @@ guitarMusic = \relative {
     {
       <a cis' e> r
       \set Score.repeatCommands = #'((volta #f))
-      <h fis' dis'> r <e h' e> r <a, cis' a'> r
+      <h fis' dis'> r <e h' e> r <a, cis' a'> r \break
     }
     {
       <a cis' e> r \noBreak
@@ -209,8 +209,12 @@ guitarMusic = \relative {
   <<
     {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3.5)
-      f8\3 b r d d_( c) r g\2 f c' r es es_( d) s es
-      f b, es16_( d) c b d8 f, b16_( a) g f-4
+      f8\3 b r d d_( c) r 
+      \once\override StringNumber.extra-offset = #'(-0.6 . -3)
+      g\2 f c' r es es_( d) s es
+      f b, es16_( d) c b d8 f, b16_( a) g
+      \once\override Fingering.extra-offset = #'(0 . -3.2)
+      f-4
       g8 b a f'
     }
     \\

@@ -623,7 +623,7 @@ guitarMusic = \relative {
           fis,,!\glissando \stemDown<h e c'>4 s8
         }
       >>
-      <cis'' eis>8 
+      <cis'' eis>8
       \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
       <a,, h' e!\3> <h'' dis>\noBeam
       <cis,, ais' fis'>
@@ -646,7 +646,9 @@ guitarMusic = \relative {
         }
       >>
       \set glissandoMap = #'((2 . 1))
-      <gis dis' h'>8\glissando <g_0 e'>
+      <gis dis' h'>8\glissando
+      \set fingeringOrientations = #'(right)
+      <g-0 e'>
       <<
         {
           dis' e fis8. h16
@@ -669,7 +671,10 @@ guitarMusic = \relative {
         }
         \\
         {
-          <cis,, cis' a'> e'\glissando b g
+          \set glissandoMap = #'((1 . 0))
+          <cis,, cis' a'>\glissando
+          \unset glissandoMap
+          e'\glissando b g
         }
         \\
         {
@@ -693,7 +698,35 @@ guitarMusic = \relative {
             \set subdivideBeams = ##t
             \set baseMoment = #(ly:make-moment 1/8)
             \set beatStructure = #'(2 2 2 2)
-            e'16\rest fis^( e) dis cis h a\rest h^( a) gis fis
+            e'16\rest
+            \once\override Slur.positions = #'(3.5 . 3)
+            \tag #'Part {
+              fis^(-\markup {
+                \postscript #"0.5 7.5 moveto 2.3 -0.5 rlineto stroke"
+              }
+              e)
+            }
+            \tag #'Partitur {
+              fis^(-\markup {
+                \postscript #"0.7 7.5 moveto 3 -0.5 rlineto stroke"
+              }
+              e)
+            }
+            dis cis h a\rest
+            \once\override Slur.positions = #'(1.5 . 1)
+            \tag #'Part {
+              h^(-\markup {
+                \postscript #"0.5 7.5 moveto 2.3 -0.5 rlineto stroke"
+              }
+              a)
+            }
+            \tag #'Partitur {
+              h^(-\markup {
+                \postscript #"0.7 7.5 moveto 3 -0.5 rlineto stroke"
+              }
+              a)
+            }
+            gis fis
             \override Glissando.breakable = ##t
             \override Glissando.after-line-breaking = ##t
             e\glissando

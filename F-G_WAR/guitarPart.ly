@@ -37,5 +37,6 @@
 \score {
   \removeWithTag #'changeSpacingSpanner
   \removeWithTag #'addOssia
+  \removeWithTag #'Partitur
   \guitarMusic
 }

@@ -55,6 +55,7 @@
       instrumentName = "Guit."
     }
     \removeWithTag #'addOssia
+    \removeWithTag #'Part
     \guitarMusic
     %\new Dynamics \hSheet
   >>

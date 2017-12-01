@@ -63,7 +63,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      s4.					   <cis, a' e' a>8
+      s4. <cis, a' e' a>8
       \override TextScript.extra-offset = #'(-0.5 . 6)
       h4-\markup{\teeny VII} \FO #'0.2 #'0.2 a-0
     }
@@ -209,7 +209,7 @@ guitarMusic = \relative {
   <<
     {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3.5)
-      f8\3 b r d d_( c) r 
+      f8\3 b r d d_( c) r
       \once\override StringNumber.extra-offset = #'(-0.6 . -3)
       g\2 f c' r es es_( d) s es
       f b, es16_( d) c b d8 f, b16_( a) g
@@ -373,9 +373,21 @@ guitarMusic = \relative {
       <<
         {
           \override Slur.direction = #DOWN
-          \acciaccatura e'8\glissando fis16 gis_( a) cis
-          \acciaccatura a8\glissando h16 cis_( dis) fis
-          \acciaccatura dis8\glissando e16 fis( gis) h
+          \once\override Slur.positions = #'(2.5 . 3.5)
+          \acciaccatura e'8-\markup {
+            \postscript #"0.5 -5.3 moveto 2.3 0.5 rlineto stroke"
+          }
+          fis16 gis_( a) cis
+          \once\override Slur.positions = #'(2.5 . 3.5)
+          \acciaccatura a8-\markup {
+            \postscript #"0.5 -3.8 moveto 2.3 0.5 rlineto stroke"
+          }
+          h16 cis_( dis) fis
+          \once\override Slur.positions = #'(2.5 . 3.5)
+          \acciaccatura dis8-\markup {
+            \postscript #"0.5 -2.3 moveto 2.3 0.5 rlineto stroke"
+          }
+          e16 fis( gis) h
         }
         \\
         {
@@ -408,9 +420,29 @@ guitarMusic = \relative {
       <<
         {
           \override Slur.direction = #DOWN
-          \acciaccatura fis'8\glissando gis16 his( cis) dis
-          \acciaccatura gis,8\glissando a16 cis( dis) gis
-          \acciaccatura a,8\glissando c16 e( fis) a
+          \once\override Slur.positions = #'(2.5 . 3.5)
+          \acciaccatura fis'8-\markup {
+            \postscript #"0.5 -4.8 moveto 2.3 0.5 rlineto stroke"
+          }
+          gis16 his( cis) dis
+          \once\override Slur.positions = #'(2.5 . 3.5)
+          \acciaccatura gis,8-\markup {
+            \postscript #"0.5 -4.3 moveto 2.3 0.5 rlineto stroke"
+          }
+          a16 cis( dis) gis
+          \once\override Slur.positions = #'(2.5 . 3.5)
+          \tag #'Part {
+            \acciaccatura a,8-\markup {
+              \postscript #"0.5 -7 moveto 3.2 0.9 rlineto stroke"
+            }
+            c16 e( fis) a
+          }
+          \tag #'Partitur {
+            \acciaccatura a,8-\markup {
+              \postscript #"0.5 -3.8 moveto 3.2 0.8 rlineto stroke"
+            }
+            c16 e( fis) a
+          }
         }
         \\
         {
@@ -439,7 +471,7 @@ guitarMusic = \relative {
       \acciaccatura a'' <fis h\2>
       <<
         {
-          <h,, fis' gis'>
+          <h,,_\6 fis' gis'>
         }
         \\
         {
@@ -461,7 +493,9 @@ guitarMusic = \relative {
         }
       >>
       r
-      <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r <cis gis' e'?> r
+      <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r
+      \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
+      <cis gis' e'?\2> r
       <h' cis fis> r eis, r <cis' gis' cis> r fis, r <cis' fis a> r
       <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
       <h d' fis> r <cis gis' e'> r
@@ -478,13 +512,15 @@ guitarMusic = \relative {
       <<
         {
           \override NoteColumn.force-hshift = #-0.3
-          g'' e!2
+          \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
+          g''\2 e!2^0
           \revert NoteColumn.force-hshift
           d4
         }
         \\
         {
           \voiceOne
+          %\tweak Accidental.extra-offset #'(0.5 . 0)
           c8 b4 as
           \once\override NoteColumn.force-hshift = #0.8
           fis
@@ -526,18 +562,35 @@ guitarMusic = \relative {
       d''16( e) fis( gis)
       <<
         {
-          cis,( \tweak AccidentalPlacement.right-padding #0 d) e( fis)
-          h,( cis) \tweak AccidentalPlacement.right-padding #0 dis( e)
-          a,( h) cis( dis)\glissando \stemDown fis4
+          \override Fingering.staff-padding = #'()
+          \once\override Fingering.extra-offset = #'(-0.2 . -3)
+          cis,^2( \tweak AccidentalPlacement.right-padding #0 d) e( fis)
+          h,( cis_3) \tweak AccidentalPlacement.right-padding #0 dis( e_4)
+          a,( h)
+          \tag #'Part {
+            cis(-\markup {
+              \postscript #"0.5 -2.6 moveto 4.8 0.9 rlineto stroke"
+            }
+            \once\override StringNumber.extra-offset = #'(0.2 . -6.2)
+            dis\2) \stemDown fis4
+          }
+          \tag #'Partitur {
+            cis16(-\markup {
+              \postscript #"0.5 -2.6 moveto 6.3 0.9 rlineto stroke"
+            }
+            \once\override StringNumber.extra-offset = #'(0.2 . -6.2)
+            dis\2) \stemDown fis4
+          }
           \stemNeutral
         }
         \\
         {
-          r8 <a,, cis'> r <h fis'> r <cis gis'>
+          r8 <a,, cis'> r <h fis'>^\markup{\teeny II} r <cis gis'>^\markup{\teeny IV}
           \stemUp
           \once\override Slur.positions = #'(0 . 1)
           \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
-          h''8.^( a16
+          \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
+          h''8.\2^( a16
           \stemDown
           <e, h' gis'>8)
           )
@@ -570,7 +623,9 @@ guitarMusic = \relative {
           fis,,!\glissando \stemDown<h e c'>4 s8
         }
       >>
-      <cis'' eis>8 <a,, h' e!> <h'' dis>\noBeam
+      <cis'' eis>8 
+      \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
+      <a,, h' e!\3> <h'' dis>\noBeam
       <cis,, ais' fis'>
       <<
         {
@@ -590,7 +645,8 @@ guitarMusic = \relative {
           g,\glissando \stemDown dis'4
         }
       >>
-      <gis dis' h'>8<g e'>
+      \set glissandoMap = #'((2 . 1))
+      <gis dis' h'>8\glissando <g_0 e'>
       <<
         {
           dis' e fis8. h16
@@ -678,7 +734,7 @@ guitarMusic = \relative {
         \\
         {
           \voiceTwo
-          a,,8 gis 
+          a,,8 gis
           \override NoteColumn.force-hshift = #0.2
           \once\override Beam.positions = #'(-7 . -7.5)
           cis a cis h

@@ -144,5 +144,7 @@ fluteMusic = \relative e'' {
   \bar "||" \break
   \set subdivideBeams = ##f
   \override TupletNumber #'transparent = ##f
-  r16 \times 2/3 {h'8[( a) e]} fis16( cis h a) gis( cis dis fis8)
+  r16 \times 2/3 {h'8[( a) e]} fis16( cis h a)
+  gis( cis dis fis8) r16 \acciaccatura {\slashI h,[( dis gis]} cis)
+  r \times 2/3 {dis8[( cis) gis]}
 }

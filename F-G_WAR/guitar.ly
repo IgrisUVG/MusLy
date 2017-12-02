@@ -655,7 +655,9 @@ guitarMusic = \relative {
         }
         \\
         {
-          g,8\rest g a4
+          g,8\rest
+          \once\override StringNumber.extra-offset = #'(0.6 . -7)
+          g\3 a4
         }
         \\
         {
@@ -684,6 +686,10 @@ guitarMusic = \relative {
           h4 s8
         }
       >>
+      \tag #'Part {
+        \newSpacingSection
+        \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/64)
+      }
       <<
         {
           h' s dis, s
@@ -730,6 +736,10 @@ guitarMusic = \relative {
             \override Glissando.breakable = ##t
             \override Glissando.after-line-breaking = ##t
             e\glissando
+            \tag #'Partitur {
+              \newSpacingSection
+              \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/64)
+            }
             \once\override Beam.positions = #'(-10 . -4)
             h fis' h a cis^( d)
           }
@@ -744,7 +754,9 @@ guitarMusic = \relative {
       >>
       <<
         {
-          e''8 dis fis gis fis e dis d cis a h h
+          e''8 dis fis gis fis e
+          
+          dis d cis a h h
         }
         \\
         {

@@ -142,4 +142,7 @@ fluteMusic = \relative e'' {
     \unset Score.proportionalNotationDuration
   }
   \bar "||" \break
+  \set subdivideBeams = ##f
+  \override TupletNumber #'transparent = ##f
+  r16 \times 2/3 {h'8[( a) e]} fis16( cis h a) gis( cis dis fis8)
 }

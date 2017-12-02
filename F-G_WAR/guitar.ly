@@ -744,7 +744,7 @@ guitarMusic = \relative {
       >>
       <<
         {
-          e''8 dis fis gis fis e
+          e''8 dis fis gis fis e dis d cis a h h
         }
         \\
         {
@@ -761,7 +761,9 @@ guitarMusic = \relative {
             \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
             fis\2 gis, e'^0 gis e\3 h' fis e^0 h'
             \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-            e,\3 h' fis
+            e,\3 h' fis dis e fis d e a cis, e h a e' cis
+            \once\override Beam.positions = #'(-2.7 . -3.5)
+            h e dis h fis' e
           }
         }
         \\
@@ -770,7 +772,11 @@ guitarMusic = \relative {
           a,,8 gis
           \override NoteColumn.force-hshift = #0.2
           \once\override Beam.positions = #'(-7 . -7.5)
-          cis a cis h
+          cis a
+          \revert NoteColumn.force-hshift
+          cis h e a,4 h8 fis
+          \once\override NoteColumn.force-hshift = #0.2
+          <e a fis'>
         }
       >>
     }

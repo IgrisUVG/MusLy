@@ -755,11 +755,14 @@ guitarMusic = \relative {
       <<
         {
           e''8 dis fis gis fis e
-          
-          dis d cis a h h
+          \once\override Beam.positions = #'(4.5 . 4.5)
+          dis d
+          \once\override Beam.positions = #'(4.5 . 3.5)
+          cis a h h cis dis
         }
         \\
         {
+          \override Fingering #'staff-padding = #'()
           \override TupletNumber #'transparent = ##t
           \override TupletBracket #'bracket-visibility = ##f
           \tuplet 3/2 8 {
@@ -773,9 +776,9 @@ guitarMusic = \relative {
             \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
             fis\2 gis, e'^0 gis e\3 h' fis e^0 h'
             \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-            e,\3 h' fis dis e^0 fis d e a cis, e h a e' cis
+            e,\3 h' fis dis e^0 fis d e a\2 cis, e h a e' cis^4
             \once\override Beam.positions = #'(-2.7 . -3.5)
-            h e dis h fis' e
+            h e dis h fis' e cis gis' fis dis a' gis
           }
         }
         \\
@@ -788,7 +791,7 @@ guitarMusic = \relative {
           \revert NoteColumn.force-hshift
           cis h
           \once\override StringNumber.extra-offset = #'(0.5 . 1.8)
-          e_\5 a,4 h8 fis
+          e_\5 a,4 h8-2 fis
           \once\override NoteColumn.force-hshift = #0.2
           <e a fis'>
         }

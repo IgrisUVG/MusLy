@@ -793,7 +793,10 @@ guitarMusic = \relative {
           \once\override StringNumber.extra-offset = #'(0.5 . 1.8)
           e_\5 a,4 h8-2 fis
           \once\override NoteColumn.force-hshift = #0.2
-          <e a fis'> b' e a
+          <e a fis'>
+          \override NoteColumn.force-hshift = #0.2
+          \once\override Beam.positions = #'(-7 . -6.5)
+          b' f' a
         }
       >>
     }

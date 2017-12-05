@@ -754,11 +754,21 @@ guitarMusic = \relative {
       >>
       <<
         {
+          \override Fingering #'staff-padding = #'()
           e''8 dis fis gis fis e
           \once\override Beam.positions = #'(4.5 . 4.5)
           dis d
           \once\override Beam.positions = #'(4.5 . 3.5)
           cis a h h cis dis e
+          \override TupletNumber #'transparent = ##t
+          \override TupletBracket #'bracket-visibility = ##f
+          \tuplet 3/2 8 {
+            \set subdivideBeams = ##t
+            \set baseMoment = #(ly:make-moment 1/8)
+            \set beatStructure = #'(2 2 2 2)
+            cis16[ cis'\1 h\2] a e_0 dis fis e d
+          }
+          cis8
         }
         \\
         {
@@ -778,17 +788,21 @@ guitarMusic = \relative {
             \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
             e,\3 h' fis dis e^0 fis d e a\2 cis, e h a e' cis^4
             \once\override Beam.positions = #'(-2.7 . -3.5)
-            h e dis h fis' e\2 cis 
+            h e dis h fis' e\2 cis
             \once\override Fingering.extra-offset = #'(-1.2 . -1)
-            e^0 fis dis e gis 
+            e^0 fis dis e gis
             \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-            e\3 a gis
+            e\3[ a gis]
+          }
+          s4.
+          \tuplet 3/2 8 {
+            cis,16 e h
           }
         }
         \\
         {
           \voiceTwo
-          a,,8 gis
+          a,8 gis
           \override NoteColumn.force-hshift = #0.2
           \once\override Beam.positions = #'(-7 . -7.5)
           cis a
@@ -800,7 +814,15 @@ guitarMusic = \relative {
           <e a fis'>
           \override NoteColumn.force-hshift = #0.2
           \once\override Beam.positions = #'(-7 . -6.5)
-          b' f' a
+          b' f'
+          \once\override Beam.positions = #'(-5 . -4.2)
+          a
+          \revert NoteColumn.force-hshift
+          cis\4
+          \once\override Beam.positions = #'(-2 . -2.5)
+          a' fis
+          \override NoteColumn.force-hshift = #0.2
+          e,
         }
       >>
     }

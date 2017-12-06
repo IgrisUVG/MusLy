@@ -48,7 +48,7 @@
       \guitarMusic
     }
 
-    \new Staff \ossia
+    %\new Staff \ossia
 
   >>
 }

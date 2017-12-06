@@ -781,7 +781,12 @@ guitarMusic = \relative {
         %
         fis e d
       }
-      cis8\3 dis! fis\3 h,
+      \once\override StringNumber.extra-offset = #'(-0.5 . -3.5)
+      \once\override Beam.positions = #'(4 . 5)
+      cis8\3 dis! 
+      \once\override StringNumber.extra-offset = #'(-0.5 . -3)
+      \once\override Beam.positions = #'(5 . 3.5)
+      fis\3 h,
     }
     \\
     {
@@ -809,9 +814,13 @@ guitarMusic = \relative {
       }
       s4.
       \tuplet 3/2 8 {
-        cis,16 e h dis e gis
+        cis,16 e^0 h dis e gis
         \once\override Beam.positions = #'(-1.7 . -2.5)
-        fis e dis\4 h e dis\2
+        fis e 
+        \once\override StringNumber.extra-offset = #'(0 . -0.6)
+        dis\4 h e
+        \once\override StringNumber.extra-offset = #'(0 . -0.7)
+        dis\2
       }
     }
     \\
@@ -839,7 +848,9 @@ guitarMusic = \relative {
       a' fis
       \override NoteColumn.force-hshift = #0.2
       \once\override Beam.positions = #'(-6 . -6.2)
-      e, cis
+      e, 
+      \once\override StringNumber.extra-offset = #'(-1.8 . -6.3)
+      cis\6
       \revert NoteColumn.force-hshift
       a gis
     }

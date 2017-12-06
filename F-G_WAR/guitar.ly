@@ -781,7 +781,7 @@ guitarMusic = \relative {
         %
         fis e d
       }
-      cis8
+      cis8\3 dis! fis\3 h,
     }
     \\
     {
@@ -809,7 +809,9 @@ guitarMusic = \relative {
       }
       s4.
       \tuplet 3/2 8 {
-        cis,16 e h
+        cis,16 e h dis e gis
+        \once\override Beam.positions = #'(-1.7 . -2.5)
+        fis e dis\4 h e dis\2
       }
     }
     \\
@@ -836,7 +838,10 @@ guitarMusic = \relative {
       \once\override Beam.positions = #'(-2 . -2.5)
       a' fis
       \override NoteColumn.force-hshift = #0.2
-      e,
+      \once\override Beam.positions = #'(-6 . -6.2)
+      e, cis
+      \revert NoteColumn.force-hshift
+      a gis
     }
   >>
 }

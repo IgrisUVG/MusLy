@@ -28,7 +28,11 @@
   \context {
     \Score
     \override StaffGrouper.staff-staff-spacing.basic-distance = #14
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
+  }
+  \context {
+    \Staff \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
   }
 }
 
@@ -36,9 +40,10 @@
 \include "guitar.ly"
 \include "dynamic.ly"
 \include "chordsSheet.ly"
+\include "ossia.ly"
 
 \score {
-  \new StaffGroup<<
+  \new StaffGroup <<
 
     \new Staff
     \with {
@@ -54,9 +59,11 @@
     \with {
       instrumentName = "Guit."
     }
-    \removeWithTag #'addOssia
     \removeWithTag #'Part
     \guitarMusic
     %\new Dynamics \hSheet
+
+    \new Staff \ossia
+    
   >>
 }

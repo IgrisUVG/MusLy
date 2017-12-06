@@ -29,14 +29,25 @@
     \Score
     \remove "Bar_number_engraver"
   }
+  \context {
+    \Staff \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
+  }
 }
 
 \include "flute.ly"
+\include "ossia.ly"
 
 \score {
-  \new Staff {
-    \removeWithTag #'SpacingSection
-    \removeWithTag #'Partitur
-    \fluteMusic
-  }
+  \new StaffGroup <<
+
+    \new Staff {
+      \removeWithTag #'SpacingSection
+      \removeWithTag #'Partitur
+      \fluteMusic
+    }
+
+    \new Staff \ossia
+
+  >>
 }

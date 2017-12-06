@@ -30,13 +30,25 @@
     proportionalNotationDuration = #(ly:make-moment 1/16)
     \remove "Bar_number_engraver"
   }
+  \context {
+    \Staff \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
+  }
 }
 
 \include "guitar.ly"
+\include "ossia.ly"
 
 \score {
-  \removeWithTag #'changeSpacingSpanner
-  \removeWithTag #'addOssia
-  \removeWithTag #'Partitur
-  \guitarMusic
+  \new StaffGroup <<
+
+    \new Staff {
+      \removeWithTag #'changeSpacingSpanner
+      \removeWithTag #'Partitur
+      \guitarMusic
+    }
+
+    \new Staff \ossia
+
+  >>
 }

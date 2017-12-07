@@ -148,5 +148,5 @@ fluteMusic = \relative e'' {
   gis( cis dis fis8) r16 \acciaccatura {\slashIII h,[( dis gis]} cis)
   r dis \times 2/3 {cis8\prall[( h) fis]} e16( h a gis) fis( h cis e8) r16
   \acciaccatura {\slashIII gis,[( cis fis]} h8) e,16( dis h) gis( a h) 
-  \times 2/3 {cis8 e gis} r16
+  \times 2/3 {cis8 e gis} r16 dis( e) a gis( h)
 }

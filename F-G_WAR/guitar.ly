@@ -17,6 +17,15 @@ FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
         #{
           \once \override Voice.Fingering.extra-offset = #(cons offsetX offsetY)
         #})
+#(define RH rightHandFinger)
+glissandoSkipOn = {
+  \override NoteColumn.glissando-skip = ##t
+  \override NoteHead.no-ledgers = ##t
+}
+glissandoSkipOff = {
+  \revert NoteColumn.glissando-skip
+  \revert NoteHead.no-ledgers
+}
 
 guitarMusic = \relative {
   \clef treble
@@ -765,28 +774,27 @@ guitarMusic = \relative {
         \set baseMoment = #(ly:make-moment 1/8)
         \set beatStructure = #'(2 2 2 2)
         cis16[
+        \set strokeFingerOrientations = #'(up)
+        \override StrokeFinger.add-stem-support = ##t
         \once\override StringNumber.extra-offset = #'(0 . -5.7)
-        cis'\1
+        \override StrokeFinger.extra-offset = #'(0 . -2.2)
+        cis'\1\RH #4
         \once\override StringNumber.extra-offset = #'(0 . -6.3)
-        h\2\glissando] a\glissando
-        % glissandoSkipOn
-        \override NoteColumn.glissando-skip = ##t
-        \override NoteHead.no-ledgers = ##t
-        %
+        h\2\RH #3 \glissando]
+        \revert StrokeFinger.extra-offset
+        a\RH #2 \glissando
+        \glissandoSkipOn
         \once\override Fingering.extra-offset = #'(0 . 0.2)
-        e_0 dis
-        %glissandoSkipOff
-        \revert NoteColumn.glissando-skip
-        \revert NoteHead.no-ledgers
-        %
+        e_0\RH #3 dis\RH #1
+        \glissandoSkipOff
         fis e d
       }
       \once\override StringNumber.extra-offset = #'(-0.5 . -3.5)
       \once\override Beam.positions = #'(4 . 5)
-      cis8\3 dis! 
+      cis8\3 dis!
       \once\override StringNumber.extra-offset = #'(-0.5 . -3)
       \once\override Beam.positions = #'(5 . 3.5)
-      fis\3 h,
+      fis\3 h, cis4
     }
     \\
     {
@@ -816,11 +824,11 @@ guitarMusic = \relative {
       \tuplet 3/2 8 {
         cis,16 e^0 h dis e gis
         \once\override Beam.positions = #'(-1.7 . -2.5)
-        fis e 
+        fis e
         \once\override StringNumber.extra-offset = #'(0 . -0.6)
         dis\4 h e
         \once\override StringNumber.extra-offset = #'(0 . -0.7)
-        dis\2
+        dis\2 cis e a, \stemUp h,[ e' h]
       }
     }
     \\
@@ -840,7 +848,7 @@ guitarMusic = \relative {
       \once\override Beam.positions = #'(-7 . -6.5)
       b' f'
       \once\override Beam.positions = #'(-5 . -4.2)
-      a
+      a\glissando
       \revert NoteColumn.force-hshift
       \once\override StringNumber.extra-offset = #'(-0.5 . -1.3)
       cis\4
@@ -848,11 +856,11 @@ guitarMusic = \relative {
       a' fis
       \override NoteColumn.force-hshift = #0.2
       \once\override Beam.positions = #'(-6 . -6.2)
-      e, 
+      e,
       \once\override StringNumber.extra-offset = #'(-1.8 . -6.3)
       cis\6
       \revert NoteColumn.force-hshift
-      a gis
+      a gis a h
     }
   >>
 }

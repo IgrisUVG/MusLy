@@ -5,12 +5,14 @@
 \include "scripts.ly"
 \include "fluteIII.ly"
 
-fluteMusic = \relative e'' {
+fluteMusic = \new Voice \with {
+  \remove "Forbid_line_break_engraver"
+  \override Beam.breakable = ##t
+}
+\relative e'' {
   \clef treble
   \key e \major
   \time 2/4
-  %\override Staff.TimeSignature #'stencil = ##f
-  %\override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
     h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
@@ -147,6 +149,7 @@ fluteMusic = \relative e'' {
   r16 \times 2/3 {h'8[( a) e]} fis16( cis h a)
   gis( cis dis fis8) r16 \acciaccatura {\slashIII h,[( dis gis]} cis)
   r dis \times 2/3 {cis8\prall[( h) fis]} e16( h a gis) fis( h cis e8) r16
-  \acciaccatura {\slashIII gis,[( cis fis]} h8) e,16( dis h) gis( a h) 
-  \times 2/3 {cis8 e gis} r16 dis( e) a gis( h)
+  \acciaccatura {\slashIII gis,[( cis fis]} h8) e,16( dis h) gis( a h)
+  \times 2/3 {cis8 e gis} r16 dis( e) a gis( h) e a,[( fis]
+  \tuplet 3/2 {h,8[) e( dis16~ dis~]} dis e) cis' gis( a8) e'16
 }

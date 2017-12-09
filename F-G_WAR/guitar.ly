@@ -681,7 +681,7 @@ guitarMusic = \relative {
     \\
     {
       \set glissandoMap = #'((1 . 0))
-      <cis,, cis' a'>\glissando
+      <fis,, cis' a'>\glissando
       \unset glissandoMap
       e'\glissando b g
     }

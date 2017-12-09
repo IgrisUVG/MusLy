@@ -762,6 +762,7 @@ guitarMusic = \relative {
   <<
     {
       \override Fingering #'staff-padding = #'()
+      \acciaccatura{s8.}
       e''8 dis fis gis fis e
       \once\override Beam.positions = #'(4.5 . 4.5)
       dis d

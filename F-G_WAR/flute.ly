@@ -157,4 +157,12 @@ fluteMusic = \new Voice \with {
   \acciaccatura {\slashIII gis,[( cis fis]} h8) e,16( dis h) gis( a h)
   \times 2/3 {cis8 e gis} r16 dis( e) a gis( h) e a,[( fis]
   \tuplet 3/2 {h,8[) e( dis16~ dis~]} dis e) cis' gis( a8) e'16
+  \override TupletNumber #'transparent = ##t
+  \override TupletBracket #'bracket-visibility = ##f
+  \tuplet 3/2 8 {
+    \set subdivideBeams = ##t
+    \set baseMoment = #(ly:make-moment 1/8)
+    \set beatStructure = #'(2 2 2 2)
+    r16[ b'( as) es f b,]( as)
+  }
 }

@@ -151,6 +151,9 @@ fluteMusic = \new Voice \with {
   r dis \times 2/3 {cis8\prall[( h) fis]} e16( h a gis) fis( h cis e8) r16
   %\once\override Score.GraceSpacing.spacing-increment = #1.3
   %\once\override Staff.KeySignature.Y-offset = #5
+  \tag #'Partitur {
+    \once\override Staff.KeySignature.space-alist.first-note = #'(extra-space . 30)
+  }
   \acciaccatura {\slashIII gis,[( cis fis]} h8) e,16( dis h) gis( a h)
   \times 2/3 {cis8 e gis} r16 dis( e) a gis( h) e a,[( fis]
   \tuplet 3/2 {h,8[) e( dis16~ dis~]} dis e) cis' gis( a8) e'16

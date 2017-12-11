@@ -4,29 +4,6 @@
 
 \include "scripts.ly"
 
-stringNumberSpanner =
-#(define-music-function (parser location StringNumber) (string?)
-   #{
-     \override TextSpanner.style = #'solid
-     \override TextSpanner.font-size = #-5
-     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
-   #})
-
-FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
-        #{
-          \once \override Voice.Fingering.extra-offset = #(cons offsetX offsetY)
-        #})
-#(define RH rightHandFinger)
-glissandoSkipOn = {
-  \override NoteColumn.glissando-skip = ##t
-  \override NoteHead.no-ledgers = ##t
-}
-glissandoSkipOff = {
-  \revert NoteColumn.glissando-skip
-  \revert NoteHead.no-ledgers
-}
-
 guitarMusic = \relative {
   \clef treble
   \key e \major
@@ -211,7 +188,7 @@ guitarMusic = \relative {
   \bar "||"
   \break
   %\key b \major
-  \tag #'changeSpacingSpanner {
+  \tag #'Partitur {
     \newSpacingSection
     \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
   }
@@ -350,7 +327,7 @@ guitarMusic = \relative {
   a'16 b c d
   \bar "||"
   \break
-  \tag #'changeSpacingSpanner {
+  \tag #'Partitur {
     \newSpacingSection
     \revert Score.SpacingSpanner.base-shortest-duration
   }
@@ -766,7 +743,53 @@ guitarMusic = \relative {
       \once\override Beam.positions = #'(4.5 . 4.5)
       dis d
       \once\override Beam.positions = #'(4.5 . 3.5)
-      cis a h h cis dis e
+      cis a h h cis dis
+    }
+    \\
+    {
+      \override Fingering #'staff-padding = #'()
+      \override TupletNumber #'transparent = ##t
+      \override TupletBracket #'bracket-visibility = ##f
+      \tuplet 3/2 8 {
+        \set subdivideBeams = ##t
+        \set baseMoment = #(ly:make-moment 1/8)
+        \set beatStructure = #'(2 2 2 2)
+        \once\override Beam.positions = #'(-2.2 . -2.2)
+        e16 h
+        \once\override StringNumber.extra-offset = #'(0 . -1.2)
+        cis\3 dis h e
+        \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
+        fis\2 gis, e'^0 gis e\3 h' fis e^0 h'
+        \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
+        e,\3 h' fis dis e^0 fis d e a\2 cis, e h a e' cis^4
+        \once\override Beam.positions = #'(-2.7 . -3.5)
+        h e dis h fis' e\2 cis
+        \once\override Fingering.extra-offset = #'(-1.2 . -1)
+        e^0 fis dis e gis
+      }
+    }
+    \\
+    {
+      \voiceTwo
+      a,,8 gis
+      \override NoteColumn.force-hshift = #0.2
+      \once\override Beam.positions = #'(-7 . -7.5)
+      cis a
+      \revert NoteColumn.force-hshift
+      cis h
+      \once\override StringNumber.extra-offset = #'(0.5 . 1.8)
+      e_\5 a,4 h8-2 fis
+      \once\override NoteColumn.force-hshift = #0.2
+      <e a fis'>
+      \override NoteColumn.force-hshift = #0.2
+      \once\override Beam.positions = #'(-7 . -6.5)
+      b' f'
+      \revert NoteColumn.force-hshift
+    }
+  >>
+  <<
+    {
+      e'8
       \override TupletNumber #'transparent = ##t
       \override TupletBracket #'bracket-visibility = ##f
       \tuplet 3/2 8 {
@@ -805,20 +828,8 @@ guitarMusic = \relative {
         \set subdivideBeams = ##t
         \set baseMoment = #(ly:make-moment 1/8)
         \set beatStructure = #'(2 2 2 2)
-        \once\override Beam.positions = #'(-2.2 . -2.2)
-        e16 h
-        \once\override StringNumber.extra-offset = #'(0 . -1.2)
-        cis\3 dis h e
         \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-        fis\2 gis, e'^0 gis e\3 h' fis e^0 h'
-        \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-        e,\3 h' fis dis e^0 fis d e a\2 cis, e h a e' cis^4
-        \once\override Beam.positions = #'(-2.7 . -3.5)
-        h e dis h fis' e\2 cis
-        \once\override Fingering.extra-offset = #'(-1.2 . -1)
-        e^0 fis dis e gis
-        \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-        e\3[ a gis]
+        e16\3[ a gis]
       }
       s4.
       \tuplet 3/2 8 {
@@ -834,21 +845,9 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
-      a,8 gis
       \override NoteColumn.force-hshift = #0.2
-      \once\override Beam.positions = #'(-7 . -7.5)
-      cis a
-      \revert NoteColumn.force-hshift
-      cis h
-      \once\override StringNumber.extra-offset = #'(0.5 . 1.8)
-      e_\5 a,4 h8-2 fis
-      \once\override NoteColumn.force-hshift = #0.2
-      <e a fis'>
-      \override NoteColumn.force-hshift = #0.2
-      \once\override Beam.positions = #'(-7 . -6.5)
-      b' f'
       \once\override Beam.positions = #'(-4 . -3.2)
-      a\glissando
+      a8\glissando
       \revert NoteColumn.force-hshift
       \once\override StringNumber.extra-offset = #'(-0.5 . -1.3)
       cis\4

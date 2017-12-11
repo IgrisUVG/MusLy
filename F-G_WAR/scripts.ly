@@ -60,3 +60,26 @@ slashII = {
 slashIII = {
   \slash 60 0.8 1.2
 }
+
+stringNumberSpanner =
+#(define-music-function (parser location StringNumber) (string?)
+   #{
+     \override TextSpanner.style = #'solid
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
+
+FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
+        #{
+          \once \override Voice.Fingering.extra-offset = #(cons offsetX offsetY)
+        #})
+#(define RH rightHandFinger)
+glissandoSkipOn = {
+  \override NoteColumn.glissando-skip = ##t
+  \override NoteHead.no-ledgers = ##t
+}
+glissandoSkipOff = {
+  \revert NoteColumn.glissando-skip
+  \revert NoteHead.no-ledgers
+}

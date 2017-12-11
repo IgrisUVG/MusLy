@@ -42,7 +42,6 @@
   \new StaffGroup <<
 
     \new Staff {
-      \removeWithTag #'SpacingSection
       \removeWithTag #'Partitur
       \fluteMusic
     }

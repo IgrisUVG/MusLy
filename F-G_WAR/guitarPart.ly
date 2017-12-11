@@ -43,7 +43,6 @@
   \new StaffGroup <<
 
     \new Staff {
-      \removeWithTag #'changeSpacingSpanner
       \removeWithTag #'Partitur
       \guitarMusic
     }

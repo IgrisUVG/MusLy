@@ -119,17 +119,17 @@ fluteMusic = \new Voice \with {
     gis fis gis a gis a h cis h cis h cis)
     h( a h a fis a fis e fis e cis e
   }
-  \tag #'SpacingSection {
+  \tag #'Partitur {
     \newSpacingSection
     \override Score.SpacingSpanner.strict-grace-spacing = ##t
     \set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
   }
   h8)
-  \tag #'SpacingSection {
+  \tag #'Partitur {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
   \acciaccatura {\slashI cis16[( cisis dis]} e8) g,
-  \tag #'SpacingSection {
+  \tag #'Partitur {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
   \acciaccatura {\slashI a16[( h c]}
@@ -138,7 +138,7 @@ fluteMusic = \new Voice \with {
     \tweak Accidental.extra-offset #'(0.4 . 0)
     cis8)
   }
-  \tag #'SpacingSection {
+  \tag #'Partitur {
     \newSpacingSection
     \revert SpacingSpanner.strict-grace-spacing
     \unset Score.proportionalNotationDuration
@@ -152,9 +152,10 @@ fluteMusic = \new Voice \with {
   %\once\override Score.GraceSpacing.spacing-increment = #1.3
   %\once\override Staff.KeySignature.Y-offset = #5
   \tag #'Partitur {
-    \once\override Staff.KeySignature.space-alist.first-note = #'(extra-space . 30)
+    \newSpacingSection
+    \once\revert Score.SpacingSpanner.strict-grace-spacing
   }
-  \acciaccatura {\slashIII gis,[( cis fis]} h8) e,16( dis h) gis( a h)
+  \acciaccatura {\slashIII gis,16[( cis fis]} h8) e,16( dis h) gis( a h)
   \times 2/3 {cis8 e gis} r16 dis( e) a gis( h) e a,[( fis]
   \tuplet 3/2 {h,8[) e( dis16~ dis~]} dis e) cis' gis( a8) e'16
   \override TupletNumber #'transparent = ##t

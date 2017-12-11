@@ -37,6 +37,7 @@
 }
 
 \include "guitar.ly"
+\include "dynamicG.ly"
 \include "ossia.ly"
 
 \score {
@@ -46,6 +47,8 @@
       \removeWithTag #'Partitur
       \guitarMusic
     }
+    
+    \new Dynamics \dynamic
 
     %\new Staff \ossia
 

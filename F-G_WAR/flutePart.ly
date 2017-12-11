@@ -15,7 +15,7 @@
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #8
-  system-system-spacing.basic-distance = #15
+  system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #25
   left-margin = 20
   right-margin = 20
@@ -36,6 +36,7 @@
 }
 
 \include "flute.ly"
+\include "dynamicF.ly"
 \include "ossia.ly"
 
 \score {
@@ -45,6 +46,8 @@
       \removeWithTag #'Partitur
       \fluteMusic
     }
+    
+    \new Dynamics \dynamic
 
     \new Staff \ossia
 

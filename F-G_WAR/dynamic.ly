@@ -19,5 +19,5 @@ dynamic = {
   s8 s4.\> s2\! s4 s\f s2*11 s4 s8 s\> s2*3 
   \once\override DynamicText.extra-offset = #'(-2.5 . -2.5)
   s2*8\mp s2*7\mf s2*15\f s8 s4.\> s2 s2*4\! s4 s\> s2 s2\! s2*4
-  s4 s\< s2 s4 s\! s2*7 s16 s\> s4. s2*8\!
+  s4 s\< s2 s4 s\! s2*7 s16 s\> s4. s2*7\! s2\< s2*8\!
 }

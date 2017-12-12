@@ -869,8 +869,9 @@ guitarMusic = \relative {
       \once\override Beam.positions = #'(-7 . -6.2)
       a, cis h
       \revert NoteColumn.force-hshift
-      e,
+      e,->
     }
   >>
-  <as es' as g h c'>8
+  \break
+  <as es' \parenthesize as des es c'>8
 }

@@ -166,6 +166,6 @@ fluteMusic = \new Voice \with {
     \set beatStructure = #'(2 2 2 2)
     r16[ b'( as) es f b,]( as) 
     \shape #'((0 . -2.5) (-1 . 0) (0 . 2) (0 . -2)) Slur
-    es( c' e, as' h,) b( c b c b c)
+    es( c' e, as' h,) c( h c b a b as) des,( c des es g,)
   }
 }

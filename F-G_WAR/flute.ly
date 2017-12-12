@@ -164,6 +164,8 @@ fluteMusic = \new Voice \with {
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
-    r16[ b'( as) es f b,]( as)
+    r16[ b'( as) es f b,]( as) 
+    \shape #'((0 . -2.5) (-1 . 0) (0 . 2) (0 . -2)) Slur
+    es( c' e, as' h,) b( c b c b c)
   }
 }

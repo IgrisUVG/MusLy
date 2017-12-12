@@ -817,7 +817,7 @@ guitarMusic = \relative {
       cis8\3 dis!
       \once\override StringNumber.extra-offset = #'(-0.5 . -3)
       \once\override Beam.positions = #'(5 . 3.5)
-      fis\3 h, cis4
+      fis\3 h, cis4 s8 cis h a
     }
     \\
     {
@@ -829,7 +829,7 @@ guitarMusic = \relative {
         \set baseMoment = #(ly:make-moment 1/8)
         \set beatStructure = #'(2 2 2 2)
         \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-        e16\3[ a gis]
+        e'16\3[ a gis]
       }
       s4.
       \tuplet 3/2 8 {
@@ -839,7 +839,9 @@ guitarMusic = \relative {
         \once\override StringNumber.extra-offset = #'(0 . -0.6)
         dis\4 h e
         \once\override StringNumber.extra-offset = #'(0 . -0.7)
-        dis\2 cis e a,^~ \stemUp a[ e' h]
+        dis\2 cis e a,^~ \stemUp a[ e' h~] h[ e fis] \stemDown cis e dis
+        \once\override Beam.positions = #'(-5.8 . -4.6)
+        h fis' e a, e' dis
       }
     }
     \\
@@ -859,7 +861,11 @@ guitarMusic = \relative {
       \once\override StringNumber.extra-offset = #'(-1.8 . -6.3)
       cis\6
       \revert NoteColumn.force-hshift
-      a gis a <h a'>
+      a gis a <h a'> e, 
+      \override NoteColumn.force-hshift = #0.2
+      e'
+      \once\override Beam.positions = #'(-7 . -6.2)
+      a, cis
     }
   >>
 }

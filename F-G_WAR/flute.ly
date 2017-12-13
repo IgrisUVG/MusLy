@@ -172,7 +172,7 @@ fluteMusic = \new Voice \with {
     \set beatStructure = #'(2 2 2 2)
     r16[ b'( as) es f b,]( as) 
     \shape #'((0 . -2.5) (-1 . 0) (0 . 2) (0 . -2)) Slur
-    es( c' e, as' h,) c( b c b as b as)
+    es( c' e, as' h,) c( b c b a b as)
     %\once\override Slur.eccentricity = #0.5
     des,( c des es f,)
   }

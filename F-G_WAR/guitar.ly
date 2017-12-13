@@ -843,7 +843,7 @@ guitarMusic = \relative {
         \once\override StringNumber.extra-offset = #'(0 . -0.6)
         dis\4 h e
         \once\override StringNumber.extra-offset = #'(0 . -0.7)
-        dis\2 cis e a,^~ \stemUp a[ e' h~] h[ e fis] \stemDown cis e dis
+        dis\2 cis e a,^~ \stemUp a[ e' h^~] h[ e fis] \stemDown cis e dis
         \once\override Beam.positions = #'(-5.8 . -4.6)
         h fis' e a, e' dis
         \once\override Beam.positions = #'(-5.5 . -3.5)

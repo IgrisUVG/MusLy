@@ -13,6 +13,8 @@ fluteMusic = \new Voice \with {
   \clef treble
   \key e \major
   \time 2/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lustig"
   \repeat volta 2 {
     h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
     h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
@@ -144,6 +146,8 @@ fluteMusic = \new Voice \with {
     \unset Score.proportionalNotationDuration
   }
   \bar "||" \break
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Meno mosso"
   \set subdivideBeams = ##f
   \override TupletNumber #'transparent = ##f
   r16 \times 2/3 {h'8[( a) e]} fis16( cis h a)
@@ -158,6 +162,8 @@ fluteMusic = \new Voice \with {
   \acciaccatura {\slashIII gis,16[( cis fis]} h8) e,16( dis h) gis( a h)
   \times 2/3 {cis8 e gis} r16 dis( e) a gis( h) e a,[( fis]
   \tuplet 3/2 {h,8[) e( dis16~ dis~]} dis e) cis' gis( a8) e'16
+  \override Score.RehearsalMark.extra-offset = #'(-2.5 . -2)
+  \mark "Tempo I"
   \override TupletNumber #'transparent = ##t
   \override TupletBracket #'bracket-visibility = ##f
   \tuplet 3/2 8 {
@@ -166,6 +172,8 @@ fluteMusic = \new Voice \with {
     \set beatStructure = #'(2 2 2 2)
     r16[ b'( as) es f b,]( as) 
     \shape #'((0 . -2.5) (-1 . 0) (0 . 2) (0 . -2)) Slur
-    es( c' e, as' h,) c( h c b a b as) des,( c des es g,)
+    es( c' e, as' h,) c( b c b as b as)
+    %\once\override Slur.eccentricity = #0.5
+    des,( c des es f,)
   }
 }

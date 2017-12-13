@@ -8,6 +8,8 @@ guitarMusic = \relative {
   \clef treble
   \key e \major
   \time 2/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lustig"
   %\override Staff.TimeSignature #'stencil = ##f
   \override Fingering #'staff-padding = #'()
   \override Score.VoltaBracketSpanner.Y-offset = 7
@@ -724,6 +726,8 @@ guitarMusic = \relative {
           \newSpacingSection
           \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/64)
         }
+        \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+        \mark "Meno mosso"
         \once\override Beam.positions = #'(-10 . -4)
         h fis' h a cis^( d)
       }
@@ -841,7 +845,7 @@ guitarMusic = \relative {
         \once\override StringNumber.extra-offset = #'(0 . -0.7)
         dis\2 cis e a,^~ \stemUp a[ e' h~] h[ e fis] \stemDown cis e dis
         \once\override Beam.positions = #'(-5.8 . -4.6)
-        h fis' e a, e' dis 
+        h fis' e a, e' dis
         \once\override Beam.positions = #'(-5.5 . -3.5)
         a e' cis gis e' h
       }
@@ -863,7 +867,7 @@ guitarMusic = \relative {
       \once\override StringNumber.extra-offset = #'(-1.8 . -6.3)
       cis\6
       \revert NoteColumn.force-hshift
-      a gis a <h a'> e, 
+      a gis a <h a'> e,
       \override NoteColumn.force-hshift = #0.2
       e'
       \once\override Beam.positions = #'(-7 . -6.2)
@@ -873,5 +877,7 @@ guitarMusic = \relative {
     }
   >>
   \break
-  <as es' \parenthesize as des es c'>8
+  \override Score.RehearsalMark.extra-offset = #'(1 . 2)
+  \mark "Tempo I"
+  <as es' \parenthesize as des es c'>4 r
 }

@@ -5,7 +5,7 @@
 
 \header {
   title = "F&G War."
-  meter = "Lustig"
+  %meter = "Lustig"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }

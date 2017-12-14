@@ -879,5 +879,15 @@ guitarMusic = \relative {
   \break
   \override Score.RehearsalMark.extra-offset = #'(1 . 2)
   \mark "Tempo I"
-  <as es' \parenthesize as des es c'>4 r
+  <as es' \parenthesize as des es c'>4
+  <<
+    {
+      <b' g' es'>8 <c as'>
+    }
+    \\
+    {
+      c,4
+    }
+  >>
+  <es as des b'>4 es''8 g, as4
 }

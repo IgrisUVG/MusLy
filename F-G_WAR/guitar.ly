@@ -889,5 +889,14 @@ guitarMusic = \relative {
       c,4
     }
   >>
-  <es as des b'>4 es''8 g, as4
+  <es as des b'>4
+  <<
+    {
+      es''8 <es,_~ g> \stemDown <des, es' as>4
+    }
+    \\
+    {
+      <g b>4 s
+    }
+  >>
 }

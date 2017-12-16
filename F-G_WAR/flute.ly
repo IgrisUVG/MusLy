@@ -175,6 +175,6 @@ fluteMusic = \new Voice \with {
     es( c' e, as' h,) c( b c b as b as)
     %\once\override Slur.eccentricity = #0.5
     des,( c des es f,)
-    r[ c'''( b) es, as( g]) c, f-. es-. b( as) des( c es, as g as g)
+    r[ c'''( b) es, as( g]) c, f-. es-. b( as) des( c es des c b c)
   }
 }

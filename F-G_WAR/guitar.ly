@@ -821,7 +821,9 @@ guitarMusic = \relative {
       cis8\3 dis!
       \once\override StringNumber.extra-offset = #'(-0.5 . -3)
       \once\override Beam.positions = #'(5 . 3.5)
-      fis\3 h, cis4 s8 cis h a a h
+      fis\3 h, cis4 s8 cis h a a
+      \once\override StringNumber.extra-offset = #'(-0.5 . -3)
+      h\3
     }
     \\
     {
@@ -847,7 +849,7 @@ guitarMusic = \relative {
         \once\override Beam.positions = #'(-5.8 . -4.6)
         h fis' e a, e' dis
         \once\override Beam.positions = #'(-4.5 . -3.5)
-        a e' cis h e h
+        a e' cis h e h^0
       }
     }
     \\

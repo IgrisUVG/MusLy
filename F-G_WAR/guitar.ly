@@ -726,8 +726,8 @@ guitarMusic = \relative {
           \newSpacingSection
           \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/64)
         }
-        \override Score.RehearsalMark.extra-offset = #'(4 . 2)
-        \mark "Meno mosso"
+        %\override Score.RehearsalMark.extra-offset = #'(4 . 2)
+        %\mark "Meno mosso"
         \once\override Beam.positions = #'(-10 . -4)
         h fis' h a cis^( d)
       }
@@ -821,7 +821,7 @@ guitarMusic = \relative {
       cis8\3 dis!
       \once\override StringNumber.extra-offset = #'(-0.5 . -3)
       \once\override Beam.positions = #'(5 . 3.5)
-      fis\3 h, cis4 s8 cis h a a gis
+      fis\3 h, cis4 s8 cis h a a h
     }
     \\
     {
@@ -833,7 +833,7 @@ guitarMusic = \relative {
         \set baseMoment = #(ly:make-moment 1/8)
         \set beatStructure = #'(2 2 2 2)
         \once\override StringNumber.extra-offset = #'(-0.5 . -0.3)
-        e'16\3[ a gis]
+        e16\3[ a gis]
       }
       s4.
       \tuplet 3/2 8 {
@@ -846,8 +846,8 @@ guitarMusic = \relative {
         dis\2 cis e a,^~ \stemUp a[ e' h^~] h[ e fis] \stemDown cis e dis
         \once\override Beam.positions = #'(-5.8 . -4.6)
         h fis' e a, e' dis
-        \once\override Beam.positions = #'(-5.5 . -3.5)
-        a e' cis gis e' h
+        \once\override Beam.positions = #'(-4.5 . -3.5)
+        a e' cis h e h
       }
     }
     \\
@@ -871,15 +871,16 @@ guitarMusic = \relative {
       \override NoteColumn.force-hshift = #0.2
       e'
       \once\override Beam.positions = #'(-7 . -6.2)
-      a, cis h
+      a, cis
+      \once\override Beam.positions = #'(-6 . -5.2)
+      d fis
       \revert NoteColumn.force-hshift
-      e,->
     }
   >>
   \break
-  \override Score.RehearsalMark.extra-offset = #'(1 . 2)
-  \mark "Tempo I"
-  <as es' \parenthesize as des es c'>4
+  %\override Score.RehearsalMark.extra-offset = #'(1 . 2)
+  %\mark "Tempo I"
+  <as, es' \parenthesize as des es c'>4
   <<
     {
       <b' g' es'>8 <c as'>

@@ -902,4 +902,13 @@ guitarMusic = \relative {
       <g b>4 s
     }
   >>
+  <<
+    {
+      g'8 <f, c' b'>
+    }
+    \\
+    {
+      <c f'>4
+    }
+  >>
 }

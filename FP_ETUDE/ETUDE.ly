@@ -37,6 +37,7 @@
 \include "EtudSechs.ly"
 \include "schaukel.ly"
 \include "schneesturm.ly"
+\include "EtudHdur.ly"
 \include "EtudCesGes.ly"
 
 \book {
@@ -225,6 +226,28 @@
     }
   }
   \pageBreak
+%%%%%%%%%%%%%%%%%%%% H-DUR %%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff <<
+      \new Staff = "RH" \rechtsHdur
+      \new Dynamics = "Dynamics_pf" \dynamicHdur
+      \new Staff = "LH" \linksHdur
+    >>
+    \header {
+      title = "Etude H-dur"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Score
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        \remove "Bar_number_engraver"
+        %proportionalNotationDuration = #(ly:make-moment 1/8)
+      }
+      ragged-last = ##t
+    }
+  }
+  \pageBreak  
 %%%%%%%%%%%%%%%% CES-GES-DUR %%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<

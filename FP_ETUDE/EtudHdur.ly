@@ -62,7 +62,7 @@ rechtsHdur = \relative {
   gis, ais h cis
   \ottava #1
   \set Staff.ottavation = #"8"
-  dis e fis gis ais h ais gis fis e dis cis 
+  dis e fis gis ais h ais gis fis e dis cis
   \ottava #0
   h ais gis fis e dis cis h ais h cis dis e fis gis ais
   \ottava #1
@@ -152,7 +152,7 @@ linksHdur = \relative {
   \clef treble
   <<
     {
-    cis'2 h
+      cis'2 h
     }
     \\
     {
@@ -205,5 +205,18 @@ linksHdur = \relative {
   ais h cis dis eis fisis gis ais
   \parenthesize h ais gis fisis e! dis cis e_1
   \clef bass
-  dis cis h ais gis fisis h ais  
+  dis cis h ais gis fisis h ais
+  gis ais h cis dis e dis cis h ais gis fisis ais gis fis e
+  dis cis h cis dis e fis gis a h cis dis e fis gis fis
+  e dis cis h a gis fis gis a h a gis fis e dis cis
+  dis his cis dis e fis gis a fis gis ais his cis dis e dis
+  cis dis cis h ais gis fisis gis ais h ais gis fisis eis dis eis
+  fisis gis fisis eis dis cis h cis dis e dis cis h ais gis ais
+  h ais gis fis e dis cis h
+  \ottava #-1
+  \set Staff.ottavation = #"8"
+  ais gis fis e dis e dis cisis
+  dis eis fisis gis ais h cis dis
+  \ottava #0
+  eis fisis gis ais h cis dis e!
 }

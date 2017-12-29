@@ -127,9 +127,37 @@ rechtsHdur = \relative {
     }
     \\
     {
-      
+      fis16 h dis fis
     }
   >>
+  h, dis fis h dis, fis h dis fis, h dis fis
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  h, dis fis h
+  dis h fis dis h' fis dis h
+  \ottava #0
+  fis' dis h fis dis' h fis dis
+  h' fis dis h fis' dis h fis dis' h fis dis h' fis dis h s1
+  \bar "||"
+  r4 r8 dis16 fis h dis fis h
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  dis fis h dis
+  fis dis h fis
+  \ottava #0
+  dis h fis dis h fis dis h \bot fis dis h fis \top dis''1-> s1*4 
+  \bot fis1-> \top s1*3 \bot fis1-> \top dis-> s gis-> s fis-> s cis-> s dis->
+  \bot \clef treble
+  dis''16-> cis h ais gis fis e dis h'-> ais gis fis e dis cis h
+  fis'-> e dis cis h ais gis fis h-> ais gis fis e dis cis h
+  \clef bass
+  ais gis fis e dis cis h ais gis fis e dis 
+  \ottava #-1
+  \set Staff.ottavation = #"8"
+  cis h ais gis fis e dis cis h2->
+  \ottava #0
+  r4
+  \bar "|."
 }
 
 dynamicHdur = {
@@ -267,5 +295,103 @@ linksHdur = \relative {
   ais gis fisis eis dis cis h ais gis h ais gis fis! e! dis cis
   \bar "||"
   h fis' h dis fis, h dis fis h, dis fis h dis, fis h dis
-  fis, h \top dis fis \bot h, \top dis fis h \bot r4
+  fis, h \top dis fis \bot h, \top dis fis h \bot r4 <fis, dis'>
+  <e fis h e>2 <dis fis h dis> <h h'>1~ q
+  \top fis''16 dis \bot h fis dis' h fis dis h' fis dis h fis' dis h fis
+  \bar "||"\break
+  \tweak #'duration-log #0
+  h,16-> fis' h dis fis h r8 r2 <h,, fis'''>1->
+  \tweak #'duration-log #0
+  gis16-> dis' gis cis dis gis cis dis \top gis cis dis gis
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  cis dis gis cis dis h gis dis gis dis h gis
+  \ottava #0
+  dis h gis dis \bot h gis dis h
+  \tweak #'duration-log #0
+  dis,-> fis ais dis fis ais \top dis fis ais dis fis ais
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  dis fis ais dis
+  fis dis ais fis
+  \ottava #0
+  dis ais fis dis ais fis dis \bot ais fis dis ais fis
+  \tweak #'duration-log #0
+  h,-> fis' gis dis' fis gis \top dis' fis gis dis' fis gis
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  dis' fis gis dis'
+  fis dis gis, fis
+  \ottava #0
+  dis gis, fis dis gis, fis dis \bot gis, fis dis gis, fis
+  \tweak #'duration-log #0
+  cis-> gis' cis e gis \top dis' e gis dis' e gis dis'
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  e gis cis dis e dis cis gis
+  \ottava #0
+  e dis gis, e dis gis, e dis \bot gis, e dis gis,
+  \tweak #'duration-log #0
+  cis,-> fis ais e' fis ais \top e' fis ais e' fis ais 
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  e' fis ais e'
+  fis e ais, fis
+  \ottava #0
+  e ais, fis e ais, fis e \bot ais, fis e ais, fis
+  \tweak #'duration-log #0
+  h,-> fis' h dis fis h \top dis fis h dis fis h
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  dis fis h dis
+  fis dis h fis
+  \ottava #0
+  dis h fis dis h fis dis \bot h fis dis h fis
+  \tweak #'duration-log #0
+  h,-> gis' h e gis h \top e gis h e gis h
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  e gis h e
+  gis e h gis
+  \ottava #0
+  e h gis e h gis e \bot h gis e h gis
+  \tweak #'duration-log #0
+  cis,-> fis h cis fis h \top cis fis h cis fis h
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  cis fis h cis
+  fis cis h fis
+  \ottava #0
+  cis h fis cis h fis cis \bot h fis cis h fis
+  \tweak #'duration-log #0
+  fis,-> fis' ais cis fis ais cis \top fis ais cis fis ais
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  cis fis ais cis
+  fis cis ais fis
+  \ottava #0
+  cis ais fis cis ais fis \bot cis ais fis cis ais fis
+  \tweak #'duration-log #0
+  h,-> fis' h dis fis h \top dis fis h dis fis h
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  dis fis h dis
+  %CODA
+  fis dis h fis
+  dis' h fis dis
+  h' fis dis h
+  fis' dis h fis
+  \ottava #0
+  dis' h fis dis
+  h' fis dis h
+  fis' dis h fis
+  dis' h fis dis
+  h' fis dis h
+  \clef bass
+  fis' dis h fis
+  dis' h fis dis
+  h' fis dis h
+  fis' dis h fis
+  h,2-> r4
+  \bar "|."
 }

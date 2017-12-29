@@ -2,6 +2,9 @@
 
 \language "deutsch"
 
+top = \change Staff = "RH"
+bot = \change Staff = "LH"
+
 rechtsHdur = \relative {
   \clef treble
   \key h \major
@@ -86,6 +89,47 @@ rechtsHdur = \relative {
   cis h ais gis fis e dis cis
   h1
   \bar "||"
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  <dis' h' dis>1
+  \ottava #0
+  <<
+    {
+      ais2 fisis ais gis fis dis fis e dis his dis cis h fisis ais gis dis4 eis
+    }
+    \\
+    {
+      <h' dis>1 <gis e'>
+      \once \override NoteColumn.force-hshift = #0.8
+      <a h> <gis h>
+      \once \override NoteColumn.force-hshift = #0.8
+      <fis gis> <e gis>
+      \once \override NoteColumn.force-hshift = #0.8
+      <cis dis> <h e> h2
+    }
+  >>
+  <ais fisis'>4 <h gis'>
+  <<
+    {
+      h'2 ais
+    }
+    \\
+    {
+      <cis, fisis>1
+    }
+  >>
+  <h dis gis>2 <cis' eis gis>4 <c e ais>
+  \bar "||"
+  <h dis h'>1 s2 dis,16 fis h dis
+  <<
+    {
+      fis,4
+    }
+    \\
+    {
+      
+    }
+  >>
 }
 
 dynamicHdur = {
@@ -219,4 +263,9 @@ linksHdur = \relative {
   dis eis fisis gis ais h cis dis
   \ottava #0
   eis fisis gis ais h cis dis e!
+  dis cis h ais gis fisis gis ais h cis dis eis fisis gis ais h
+  ais gis fisis eis dis cis h ais gis h ais gis fis! e! dis cis
+  \bar "||"
+  h fis' h dis fis, h dis fis h, dis fis h dis, fis h dis
+  fis, h \top dis fis \bot h, \top dis fis h \bot r4
 }

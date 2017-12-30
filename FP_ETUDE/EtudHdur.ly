@@ -149,14 +149,16 @@ rechtsHdur = \relative {
   \bot fis1-> \top s1*3 \bot fis1-> \top dis-> s gis-> s fis-> s cis-> s dis->
   \bot \clef treble
   dis''16-> cis h ais gis fis e dis h'-> ais gis fis e dis cis h
+  \bar ""\break
   fis'-> e dis cis h ais gis fis h-> ais gis fis e dis cis h
   \clef bass
   ais gis fis e dis cis h ais gis fis e dis 
   \ottava #-1
   \set Staff.ottavation = #"8"
-  cis h ais gis fis e dis cis h2->
+  cis h ais gis
+  \bar ""\break
+  fis e dis cis h1->
   \ottava #0
-  r4
   \bar "|."
 }
 
@@ -377,10 +379,12 @@ linksHdur = \relative {
   \set Staff.ottavation = #"8"
   dis fis h dis
   %CODA
+  \time 17/4
   fis dis h fis
   dis' h fis dis
   h' fis dis h
   fis' dis h fis
+  \bar ""\break
   \ottava #0
   dis' h fis dis
   h' fis dis h
@@ -391,7 +395,8 @@ linksHdur = \relative {
   fis' dis h fis
   dis' h fis dis
   h' fis dis h
+  \bar ""\break
   fis' dis h fis
-  h,2-> r4
+  h,1->
   \bar "|."
 }

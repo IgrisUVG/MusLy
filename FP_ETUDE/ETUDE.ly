@@ -247,7 +247,7 @@
       ragged-last = ##t
     }
   }
-  \pageBreak  
+  %\pageBreak  
 %%%%%%%%%%%%%%%% CES-GES-DUR %%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -261,7 +261,7 @@
     \layout {
       \context {
         \Score
-        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
         \remove "Bar_number_engraver"
         %proportionalNotationDuration = #(ly:make-moment 1/8)
       }

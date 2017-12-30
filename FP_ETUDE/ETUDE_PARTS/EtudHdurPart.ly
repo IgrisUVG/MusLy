@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing #'basic-distance = #20
+  top-markup-spacing #'basic-distance = #5
+  markup-system-spacing #'basic-distance = #20
+  system-system-spacing #'basic-distance = #20
+  last-bottom-spacing #'basic-distance = #20
   %left-margin = 15
   %right-margin = 15
   two-sided = ##t
@@ -27,9 +27,10 @@
 \layout {
   \context {
     \Score
-    %\remove "Bar_number_engraver"
-    \override StaffGrouper.staff-staff-spacing.basic-distance = #12
+    \remove "Bar_number_engraver"
+    \override StaffGrouper.staff-staff-spacing.basic-distance = #13
   }
+  ragged-last = ##t
 }
 
 \include "../EtudHdur.ly"

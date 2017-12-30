@@ -247,7 +247,7 @@
       ragged-last = ##t
     }
   }
-  %\pageBreak  
+  %\pageBreak
 %%%%%%%%%%%%%%%% CES-GES-DUR %%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<

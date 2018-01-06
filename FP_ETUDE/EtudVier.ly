@@ -196,11 +196,11 @@ linksFour = \relative {
       e,, a h \change Staff = "RH" e \change Staff = "LH" \stemUp e,, cis'
       \stemDown a e' h' a \change Staff = "RH" <e' d'><h' cis>\change Staff = "LH"
       eis,, a h \change Staff = "RH" eis \change Staff = "LH" \stemUp eis,, cis'
-      \stemDown a e' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
+      \stemDown a eis' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
       eis,, a h! \change Staff = "RH" eis \change Staff = "LH" \stemUp eis,, cis'
-      \stemDown a e' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
+      \stemDown a eis' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
       eis,, a h \change Staff = "RH" eis \change Staff = "LH" \stemUp eis,, cis'
-      \stemDown a e' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
+      \stemDown a eis' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
       fis, cis' \change Staff = "RH" d e \change Staff = "LH" \stemUp a,, fis'
       \stemDown d[ a' e'] \change Staff = "RH" d a' e' \change Staff = "LH"
       \set Timing.beatStructure = #'(2 4 3 3)

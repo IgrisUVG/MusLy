@@ -882,6 +882,10 @@ guitarMusic = \relative {
   \break
   %\override Score.RehearsalMark.extra-offset = #'(1 . 2)
   %\mark "Tempo I"
+  \tag #'Part {
+    \newSpacingSection
+    \revert Score.SpacingSpanner.base-shortest-duration
+  }
   <as, es' \parenthesize as des es c'>4
   <<
     {

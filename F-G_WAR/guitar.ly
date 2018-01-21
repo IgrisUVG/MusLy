@@ -917,5 +917,5 @@ guitarMusic = \relative {
   >>
   <as b' es>8 <des es' as> <es b' f'>4
   <as c es b' es>8 <c, b' es as> r <es des' c'> r <h dis''> r <fis' h ais'>
-  r <c e' g><a f'' c'><h a'' dis>
+  r <c g' e' g><a c' f c'><h fis' dis' a'><e, gis' e' h'>
 }

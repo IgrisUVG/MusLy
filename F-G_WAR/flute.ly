@@ -180,6 +180,6 @@ fluteMusic = \new Voice \with {
     des,( c des es f,)
     r[ c'''( b) es, as( g]) c, f-. es-. b( as) des( c es des c b c d) es,( f b as e)
     c' des,( e as g es) b' c,( f g e des) ais( h d eis ais gis cis) dis,( fis h cis, ais'
-    g) 
+    g d g,) e'( d c a) f'( c h) a'( gis)
   }
 }

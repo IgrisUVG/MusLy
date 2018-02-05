@@ -223,7 +223,7 @@ linksFier = \relative {
   \stemUp
   f8[
   \stemNeutral
-  <a' es'>]<b d><a es><b d>\noBeam
+  <a' es'>]<b d><a es'><b d>\noBeam
   \override TupletNumber #'transparent = ##t
   \override TupletBracket #'bracket-visibility = ##f
   \times 2/3 {
@@ -335,7 +335,7 @@ linksFier = \relative {
   \stemUp
   f8[
   \stemNeutral
-  <a' es'>]<b d><a es><b d>\noBeam
+  <a' es'>]<b d><a es'><b d>\noBeam
   \override TupletNumber #'transparent = ##t
   \override TupletBracket #'bracket-visibility = ##f
   \times 2/3 {

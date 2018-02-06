@@ -11,7 +11,7 @@
 \paper {
   #(set-paper-size "a4")
   top-markup-spacing.basic-distance = 5
-  markup-system-spacing.basic-distance = 15
+  markup-system-spacing.basic-distance = 18
   top-system-spacing.basic-distance = 20
   system-system-spacing.basic-distance = 25
   score-system-spacing.basic-distance = 28

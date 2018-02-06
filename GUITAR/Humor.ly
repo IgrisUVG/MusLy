@@ -10,11 +10,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-markup-spacing.basic-distance = 5
-  markup-system-spacing.basic-distance = 18
+  top-markup-spacing.basic-distance = 6
+  markup-system-spacing.basic-distance = 19
   top-system-spacing.basic-distance = 20
-  system-system-spacing.basic-distance = 25
-  score-system-spacing.basic-distance = 28
+  system-system-spacing.basic-distance = 20
+  %score-system-spacing.basic-distance = 28
   last-bottom-spacing.basic-distance = 20
 
   %two-sided = ##t
@@ -79,11 +79,11 @@ stringNumSpan =
   }
   \relative {
     \clef "treble_8"
-    \key a \major
+    \key e \major
     \time 2/4
     \override Staff.TimeSignature.stencil = ##f
-    \override Score.RehearsalMark.extra-offset = #'(2 . 4)
-    \mark \markup {\fontsize #-2 {Allegro}}
+    \override Score.RehearsalMark.extra-offset = #'(0 . 3.5)
+    \mark \markup {\fontsize #-2 {Allegretto}}
     <<
       {
         cis''16( d cis8) c a
@@ -121,6 +121,86 @@ stringNumSpan =
       \\
       {
         ais,,8 h his4
+      }
+    >>
+    <<
+      {
+        gis''16 e' h d
+      }
+      \\
+      {
+        \once\override Beam.positions = #'(-1 . 0)
+        <e, gis>8 <e h'>
+      }
+      \\
+      {
+        \voiceTwo
+        cis,8 gis'
+      }
+    >>
+    <<
+      {
+        cis'16( d cis8) c a
+      }
+      \\
+      {
+        e4 f8 e
+      }
+      \\
+      {
+        \voiceTwo
+        a,,4 a16 b c8
+      }
+    >>
+    <<
+      {
+        e'8 d\rest
+      }
+      \\
+      {
+        \voiceOne
+        \once\override NoteColumn.force-hshift = #.2
+        <cis,! gis'>8 s
+      }
+      \\
+      {
+        \voiceTwo
+        e,16( fis) gis a
+      }
+    >>
+    <<
+      {
+        r16 h'' a! gis fis8 e
+      }
+      \\
+      {
+        ais,,8 h his4
+      }
+    >>
+    <<
+      {
+        gis''16 e' gis dis e8 r
+      }
+      \\
+      {
+        \once\override Beam.positions = #'(-1.3 . -1.3)
+        e,8 <e cis'>16 <fis dis'> <h, gis'>8 s
+      }
+      \\
+      {
+        \voiceTwo
+        cis,8 a16 h e,8 r
+      }
+    >>
+    %\override BreathingSign.Y-offset = #3
+    \acciaccatura dis'8 e->\breathe
+    <<
+      {
+        e'16(fis)
+      }
+      \\
+      {
+        r8
       }
     >>
   }

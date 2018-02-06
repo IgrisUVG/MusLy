@@ -26,7 +26,7 @@
   system-system-spacing.basic-distance = 25
   score-system-spacing.basic-distance = 28
   last-bottom-spacing.basic-distance = 20
-  
+
   %two-sided = ##t
   %inner-margin = 25
   %outer-margin = 15
@@ -36,10 +36,53 @@
 
 \layout {
   \context {
+    \Voice
+    \override Glissando.thickness = #1.5
+    \override Glissando.gap = #0.1
+  }
+  \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#(define RH rightHandFinger)
+
+xLV = #(define-music-function (parser location further) (number?) #{
+  \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
+  \once \override LaissezVibrerTie.details.note-head-gap = #(/
+                                                             further -2)
+  \once \override LaissezVibrerTie.extra-offset = #(cons (/
+                                                          further 2) 0)
+         #})
+
+stringNumberSpanner =
+#(define-music-function (parser location StringNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     \override TextSpanner.bound-details.right.arrow = ##t
+     \override TextSpanner.arrow-width = #0.2
+     \override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
+
+stringNumSpan =
+#(define-music-function (parser location StringNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     %\override TextSpanner.bound-details.right.arrow = ##t
+     %\override TextSpanner.arrow-width = #0.2
+     %\override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 global = {
   \key d \major
@@ -50,12 +93,16 @@ classicalGuitar = \relative c' {
   \global
   \compressFullBarRests
   R1*16
-  
+
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new Staff \with {
-    instrumentName = "Chit."
-  } { \clef "treble_8" \classicalGuitar }
+    instrumentName = "Guitar"
+  }
+  {
+    \clef "treble_8" \classicalGuitar
+  }
   \layout { }
 }

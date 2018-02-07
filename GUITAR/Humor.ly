@@ -192,7 +192,7 @@ stringNumSpan =
         cis,8 a16 h e,8 r
       }
     >>
-    %\override BreathingSign.Y-offset = #3
+    \override BreathingSign.extra-offset = #'(-.5 . 0)
     \acciaccatura dis'8 e->\breathe
     <<
       {
@@ -201,6 +201,53 @@ stringNumSpan =
       \\
       {
         r8
+      }
+    >>
+    <<
+      {
+        g8. fis16
+      }
+      \\
+      {
+        c16\rest d g,8
+      }
+      \\
+      {
+        \voiceTwo
+        dis4
+      }
+    >>
+    <<
+      {
+        dis'4 e8. r16
+      }
+      \\
+      {
+        g,16\rest fis8 s16 g\rest a8 s16
+      }
+      \\
+      {
+        \voiceTwo
+        s8 g s h16 s
+      }
+      \\
+      {
+        \voiceTwo
+        h,8. a16 gis8. <fis fis'>16
+      }
+    >>
+    <<
+      {
+        r8. gis'16\glissando cis8 h r cis16\glissando e <dis gis>4 s16 h' s8
+      }
+      \\
+      {
+        s16 ais,,( h8) s4 gis'16^( a8.) g16\rest\( h cis, dis' fis, h' e,^( fis)\)
+      }
+      \\
+      {
+        \voiceTwo
+        <e,, e'>4 a8 <gis dis'> fis4 e s
       }
     >>
   }

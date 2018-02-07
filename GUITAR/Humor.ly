@@ -304,7 +304,27 @@ stringNumSpan =
     \mark \markup {\fontsize #-2 {Lento}}
     <<
       {
-        es'''4. c8 g4. fis8
+        es'''4. c8 g4. fis8 dis'4. his16 ais f4. e8
+      }
+      \\
+      {
+        d16\rest g c, es s4 d16\rest d,( g) a~ <a d>4
+        d16\rest fisis his, dis s4 c16\rest d,( g) gis~ <gis cisis>4
+      }
+      \\
+      {
+        \voiceTwo
+        c,4 fis es s his fis'! dis s
+      }
+    >>
+    \bar "||"
+    <<
+      {
+        
+      }
+      \\
+      {
+        
       }
       \\
       {

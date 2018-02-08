@@ -82,6 +82,8 @@ stringNumSpan =
     \key e \major
     \time 2/4
     \override Staff.TimeSignature.stencil = ##f
+    \mergeDifferentlyHeadedOn
+    \mergeDifferentlyDottedOn
     \override Score.RehearsalMark.extra-offset = #'(0 . 3.5)
     \mark \markup {\fontsize #-2 {Allegretto}}
     <<
@@ -320,19 +322,45 @@ stringNumSpan =
     \bar "||"
     <<
       {
-        
+        dis'4^\markup{\italic {a tempo}} e8. dis16 d4 s
       }
       \\
       {
-        
+        s8 g, s h s g16( a)%\glissando
+        ^\markup{\italic rit.} c8 b
       }
       \\
       {
-        
+        \voiceTwo
+        a16\rest fis8. h16\rest a8. a16\rest f8. s4
       }
       \\
       {
-        
+        \voiceTwo
+        h,8. a16 <gis cis>4 b s
+      }
+    >>
+    <g d' a'>8^\markup{\italic lento} <gis dis' fisis> <h d fis>4^\fermata
+    <f' c' g'>8^\markup{\italic grave} <fis cis' eis> <gis his e>4^\fermata
+    \bar "||"
+    \time 3/8
+    <<
+      {
+        s8. gis'
+      }
+      \\
+      {
+        \voiceOne
+        eis4.^\markup{\italic {a tempo}}
+      }
+      \\
+      {
+        \voiceOne
+        cis,4.
+      }
+      \\
+      {
+        cis16( gis' g gis' his, gis)
       }
     >>
   }

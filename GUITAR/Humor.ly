@@ -363,5 +363,54 @@ stringNumSpan =
         cis16( gis' g gis' his, gis)
       }
     >>
+    <<
+      {
+        e'!4 s8
+      }
+      \\
+      {
+        \voiceOne
+        gis,,4.
+      }
+      \\
+      {
+        \voiceTwo
+        gis16( e' h' e,, h' \stemUp\acciaccatura fis'8 \stemDown gis16)
+      }
+    >>
+    <<
+      {
+        s8. gis'
+      }
+      \\
+      {
+        \voiceOne
+        eis4.
+      }
+      \\
+      {
+        \voiceOne
+        cis,4.
+      }
+      \\
+      {
+        cis16( gis' g gis' his, gis)
+      }
+    >>
+    <<
+      {
+        h'4.
+      }
+      \\
+      {
+        \voiceOne
+        a,,4.
+      }
+      \\
+      {
+        \voiceTwo
+        a16( c' e f c g)
+      }
+    >>
   }
 }

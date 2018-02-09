@@ -412,5 +412,81 @@ stringNumSpan =
         a16( c' e f c g)
       }
     >>
+    \time 2/4
+    <<
+      {
+        \set subdivideBeams = ##t
+        \set baseMoment = #(ly:make-moment 1/8)
+        \set beatStructure = #'(2 2 2 2)
+        <fis, ais''>16 ais''32 ais d,, ais'' ais ais
+        cis,, ais'' ais ais g, ais' ais ais
+        h, h' h h cis, h' h h dis, cis' cis cis ais, cis' cis cis
+      }
+      \\
+      {
+        fis,,,8( d' cis g') h( cis) dis( ais)
+      }
+    >>
+    \time 1/4
+    \stemDown
+    <e, gis' his  dis'>4-.
+    \stemNeutral
+    \time 2/4
+    <<
+      {
+        cis'''16( d cis8) c a
+      }
+      \\
+      {
+        e4 f8 e
+      }
+      \\
+      {
+        \voiceTwo
+        a,,4 a16 b c8
+      }
+    >>
+    <<
+      {
+        e'8 d\rest
+      }
+      \\
+      {
+        \voiceOne
+        \once\override NoteColumn.force-hshift = #.2
+        <cis,! gis'>8 s
+      }
+      \\
+      {
+        \voiceTwo
+        e,16( fis) gis a
+      }
+    >>
+    <<
+      {
+        r16 h'' a! gis fis8 e
+      }
+      \\
+      {
+        ais,,8 h his4
+      }
+    >>
+    <<
+      {
+        gis''16 e' gis dis e8 r
+      }
+      \\
+      {
+        \once\override Beam.positions = #'(-1.3 . -1.3)
+        e,8 <e cis'>16 <fis dis'> <h, gis'>8 s
+      }
+      \\
+      {
+        \voiceTwo
+        cis,8 a16 h e,8 r
+      }
+    >>
+    \override BreathingSign.extra-offset = #'(-.5 . 0)
+    \acciaccatura dis'8 e->\breathe
   }
 }

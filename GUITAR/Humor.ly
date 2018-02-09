@@ -302,6 +302,7 @@ stringNumSpan =
       }
     >>
     \bar "||"
+    \break
     \override Score.RehearsalMark.extra-offset = #'(0 . .5)
     \mark \markup {\fontsize #-2 {Lento}}
     <<
@@ -320,9 +321,12 @@ stringNumSpan =
       }
     >>
     \bar "||"
+    \break
+    \override Score.RehearsalMark.extra-offset = #'(1.5 . 1)
+    \mark \markup {\fontsize #-2 {Tempo I}}
     <<
       {
-        dis'4^\markup{\italic {a tempo}} e8. dis16 d4 s
+        dis'4 e8. dis16 d4 s
       }
       \\
       {
@@ -497,6 +501,7 @@ stringNumSpan =
         r8
       }
     >>
+    %{
     \bar ".|:"
     \time 3/8
     \override Score.RehearsalMark.extra-offset = #'(0 . .5)
@@ -508,22 +513,27 @@ stringNumSpan =
       \\
       {
         \voiceOne
-        b4.( a g \stemDown e)
+        b4.( a g \stemDown
+        e)
       }
       \\
       {
         \voiceOne
-        \override Beam.positions = #'(2 . 4)
-        \repeat unfold 2 {e,,16 fis' g d' g, fis}
-        \override Beam.positions = #'(1.5 . 4)
+        \repeat unfold 2 {
+          \once\override Beam.positions = #'(2 . 4)
+          e,,16 fis' g d' g, fis
+        }
+        \once\override Beam.positions = #'(1.5 . 4)
         e, f' g dis'! g, f
-        \override Beam.positions = #'(.4 . 1.8)
-        e, f' g g' g, f
+        \once\override Beam.positions = #'(.35 . 1.6)
+        e, f' g \stemUp g'\stemDown g, f
       }
       \\
       {
         e,8. cis' e, c' e, h' e, b'
       }
     >>
+    \bar ":|."
+    %}
   }
 }

@@ -347,6 +347,7 @@ stringNumSpan =
     <g d' a'>8^\markup{\italic lento} <gis dis' fisis> <h d fis>4^\fermata
     <f' c' g'>8^\markup{\italic grave} <fis cis' eis> <gis his e>4^\fermata
     \bar "||"
+    \break
     \time 3/8
     <<
       {
@@ -501,7 +502,6 @@ stringNumSpan =
         r8
       }
     >>
-    %{
     \bar ".|:"
     \time 3/8
     \override Score.RehearsalMark.extra-offset = #'(0 . .5)
@@ -512,13 +512,16 @@ stringNumSpan =
       }
       \\
       {
-        \voiceOne
-        b4.( a g \stemDown
-        e)
+        \voiceFour
+        \stemUp
+        \dotsUp
+        b4.^( a g
+        \stemDown
+        e4.)
       }
       \\
       {
-        \voiceOne
+        \voiceThree
         \repeat unfold 2 {
           \once\override Beam.positions = #'(2 . 4)
           e,,16 fis' g d' g, fis
@@ -526,14 +529,48 @@ stringNumSpan =
         \once\override Beam.positions = #'(1.5 . 4)
         e, f' g dis'! g, f
         \once\override Beam.positions = #'(.35 . 1.6)
-        e, f' g \stemUp g'\stemDown g, f
+        %\once\override NoteColumn.force-hshift = #-.2
+        e,16 f' g \stemDown g' \stemUp g, f
       }
       \\
       {
-        e,8. cis' e, c' e, h' e, b'
+        %\voiceTwo
+        e,8. cis' e, c' e, h'
+        e,8. b'
       }
     >>
     \bar ":|."
-    %}
+    \override Score.RehearsalMark.extra-offset = #'(0 . .5)
+    \mark \markup {\fontsize #-2 {Largetto}}
+    <<
+      {
+        \repeat unfold 2 {e'4.~ e4 r8}
+        \repeat unfold 2 {gis8\prall fis\prall e cis16\prall h cis8 e}
+        \repeat unfold 2 {<e, h' e gis>-^ <c' a'>16\prall <h gis'> <c a'>8}
+        \repeat unfold 2 {gis'8\prall fis\prall e cis16\prall h cis8 e}
+        <e, h' e gis>-^ <c' a'>16\prall <h gis'> <c a'>8
+        <gis e' h'>-^ <cis! a'>16\prall <h gis'> <cis a'>8
+        <h gis'>8\prall <a fis'>\prall <h e> cis16\prall h <a cis>8 <gis h e>
+        <h gis'>8\prall <a fis'>\prall <h e> cis16\prall h <a cis>8 <h e fis>
+        gis' fis\prall <e a> <gis, e' h'> e'4
+      }
+      \\
+      {
+        \repeat unfold 8 {<e,, h'>4 q8-.} q s4 q8 s4
+        \repeat unfold 4 {<e h'>4 q8-.} q s4 <e e'>8 s4
+        \repeat unfold 4 {<e h' e>4 q8} <a e' a cis>4 <h e h'>8
+        <e, e'> <a e' h' cis> <h fis' a h>
+      }
+    >>
+    \time 2/4
+    \grace {
+      e,8[ h' e gis h e
+      \override NoteHead.style = #'harmonic
+      gis h]
+    }
+    e2
+    \time 3/4
+    <<{e,2.\5\fermata}\\{e,\6\fermata}>>
+    \bar "|."
   }
 }

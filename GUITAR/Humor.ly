@@ -10,12 +10,12 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-markup-spacing.basic-distance = 6
-  markup-system-spacing.basic-distance = 19
-  top-system-spacing.basic-distance = 20
+  top-markup-spacing.basic-distance = 15
+  markup-system-spacing.basic-distance = 25
+  top-system-spacing.basic-distance = 25
   system-system-spacing.basic-distance = 23
   %score-system-spacing.basic-distance = 28
-  last-bottom-spacing.basic-distance = 20
+  last-bottom-spacing.basic-distance = 25
 
   %two-sided = ##t
   %inner-margin = 25
@@ -84,7 +84,7 @@ stringNumSpan =
     \override Staff.TimeSignature.stencil = ##f
     \mergeDifferentlyHeadedOn
     \mergeDifferentlyDottedOn
-    \override Score.RehearsalMark.extra-offset = #'(0 . 3.5)
+    \override Score.RehearsalMark.extra-offset = #'(0 . 3)
     \mark \markup {\fontsize #-2 {Allegretto}}
     <<
       {
@@ -510,13 +510,16 @@ stringNumSpan =
     \mark \markup {\fontsize #-2 {Largo}}
     <<
       {
-        s4. s s s8. g
+        s4. s s s8. 
+        \once \override Dots.extra-offset = #'(-1.7 . 0)
+        g
       }
       \\
       {
         \voiceFour
         \stemUp
         \dotsUp
+        \shape #'((0 . -1) (2 . 0) (3 . 2) (0 . -1.5)) Slur
         b4.^( a g
         \stemDown
         e4.)
@@ -548,7 +551,9 @@ stringNumSpan =
     <<
       {
         \repeat unfold 2 {e'4.~ e4 r8}
-        \repeat unfold 2 {gis8\prall fis\prall e cis16\prall h cis8 e}
+        gis8\prall fis\prall e cis16\prall h cis8 e
+        \break
+        gis8\prall fis\prall e cis16\prall h cis8 e
         \repeat unfold 2 {<e, h' e gis>-^ <c' a'>16\prall <h gis'> <c a'>8}
         \repeat unfold 2 {gis'8\prall fis\prall e cis16\prall h cis8 e}
         <e, h' e gis>-^ <c' a'>16\prall <h gis'> <c a'>8
@@ -567,13 +572,28 @@ stringNumSpan =
     >>
     \time 2/4
     \grace {
+      \override Slur.positions = #'(1 . -0.5)
       e,8[( h' e gis h e
       \override NoteHead.style = #'harmonic
       gis h]
     }
     e2)
     \time 3/4
-    <<{e,2.\5\fermata}\\{e,_\6\fermata}>>
+    <<
+      {
+        \set harmonicDots = ##t
+        \once\override StringNumber.extra-offset = #'(-0.6 . -2.5)
+        \override Script.padding = #-1.5
+        e,2.\harmonic\5\fermata
+      }
+      \\
+      {
+        \set harmonicDots = ##t
+        \once\override StringNumber.extra-offset = #'(0.5 . 2.5)
+        \override Script.padding = #-1.5
+        e,\harmonic _\6\fermata
+      }
+    >>
     \bar "|."
   }
 }

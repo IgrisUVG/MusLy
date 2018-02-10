@@ -351,7 +351,9 @@ stringNumSpan =
     \time 3/8
     <<
       {
-        s8. gis'
+        s8.
+        \once \override Dots.extra-offset = #'(-0.8 . 0)
+        gis'
       }
       \\
       {
@@ -385,7 +387,9 @@ stringNumSpan =
     >>
     <<
       {
-        s8. gis'
+        s8.
+        \once \override Dots.extra-offset = #'(-0.8 . 0)
+        gis'
       }
       \\
       {
@@ -510,8 +514,8 @@ stringNumSpan =
     \mark \markup {\fontsize #-2 {Largo}}
     <<
       {
-        s4. s s s8. 
-        \once \override Dots.extra-offset = #'(-1.7 . 0)
+        s4. s s s8.
+        \once \override Dots.extra-offset = #'(-0.7 . 0)
         g
       }
       \\
@@ -539,9 +543,10 @@ stringNumSpan =
       }
       \\
       {
-        %\voiceTwo
-        e,8. cis' e, c' e, h'
-        e,8. b'
+        \dotsUp
+        e,8. cis' e, c' e, h' e,8.
+        \once \override Dots.extra-offset = #'(-0.8 . 0)
+        b'
       }
     >>
     \bar ":|."

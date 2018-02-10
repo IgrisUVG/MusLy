@@ -13,7 +13,7 @@
   top-markup-spacing.basic-distance = 6
   markup-system-spacing.basic-distance = 19
   top-system-spacing.basic-distance = 20
-  system-system-spacing.basic-distance = 20
+  system-system-spacing.basic-distance = 23
   %score-system-spacing.basic-distance = 28
   last-bottom-spacing.basic-distance = 20
 
@@ -436,6 +436,8 @@ stringNumSpan =
     \stemDown
     <e, gis' his  dis'>4-.
     \stemNeutral
+    \bar "||"
+    \break
     \time 2/4
     <<
       {
@@ -529,7 +531,7 @@ stringNumSpan =
         \once\override Beam.positions = #'(1.5 . 4)
         e, f' g dis'! g, f
         \once\override Beam.positions = #'(.35 . 1.6)
-        %\once\override NoteColumn.force-hshift = #-.2
+        \once\override NoteColumn.force-hshift = #-.1
         e,16 f' g \stemDown g' \stemUp g, f
       }
       \\
@@ -540,7 +542,8 @@ stringNumSpan =
       }
     >>
     \bar ":|."
-    \override Score.RehearsalMark.extra-offset = #'(0 . .5)
+    \break
+    \override Score.RehearsalMark.extra-offset = #'(3 . .5)
     \mark \markup {\fontsize #-2 {Largetto}}
     <<
       {
@@ -564,13 +567,13 @@ stringNumSpan =
     >>
     \time 2/4
     \grace {
-      e,8[ h' e gis h e
+      e,8[( h' e gis h e
       \override NoteHead.style = #'harmonic
       gis h]
     }
-    e2
+    e2)
     \time 3/4
-    <<{e,2.\5\fermata}\\{e,\6\fermata}>>
+    <<{e,2.\5\fermata}\\{e,_\6\fermata}>>
     \bar "|."
   }
 }

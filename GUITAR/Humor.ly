@@ -240,7 +240,13 @@ stringNumSpan =
     >>
     <<
       {
-        r8. gis'16\glissando cis8 h r cis16\glissando e <dis gis>4 s16 h' s8
+        r8. gis'16-\markup {
+          \postscript #"1 -4.1 moveto 3.2 1.3 rlineto stroke"
+        }
+        cis8 h r cis16-\markup {
+          \postscript #"1 -2.8 moveto 2.4 0.9 rlineto stroke"
+        }
+        e <dis gis>4 s16 h' s8
       }
       \\
       {
@@ -287,12 +293,20 @@ stringNumSpan =
     >>
     <<
       {
-        r8. gis'16\glissando cis8 h r cis16\glissando e <dis gis>4 s16 h' s8
+        r8. gis'16-\markup {
+          \postscript #"1 -4.1 moveto 3.2 1.3 rlineto stroke"
+        }
+        cis8 h r cis16-\markup {
+          \postscript #"1 -2.8 moveto 2.4 0.9 rlineto stroke"
+        }
+        e <dis gis>4 s16 h' s8
       }
       \\
       {
         s16 ais,,( h8) s4 gis'16^( a8.) g16\rest( h cis, dis' fis,^\markup{\italic rit.}
-        h')%\glissando
+        h')-\markup {
+          \postscript #"0.5 9.8 moveto 2.2 1.2 rlineto stroke"
+        }
         <h,, g' dis''>8^\fermata
       }
       \\
@@ -330,7 +344,11 @@ stringNumSpan =
       }
       \\
       {
-        s8 g, s h s g16( a)%\glissando
+        s8 g, s h s g16(
+        \override TextScript.extra-offset = #'(0 . 2)
+        a)-\markup {
+          \postscript #"0.6 3.3 moveto 3.2 1 rlineto stroke"
+        }
         ^\markup{\italic rit.} c8 b
       }
       \\
@@ -344,6 +362,7 @@ stringNumSpan =
         h,8. a16 <gis cis>4 b s
       }
     >>
+    \override TextScript.extra-offset = #'(0 . 1)
     <g d' a'>8^\markup{\italic lento} <gis dis' fisis> <h d fis>4^\fermata
     <f' c' g'>8^\markup{\italic grave} <fis cis' eis> <gis his e>4^\fermata
     \bar "||"
@@ -358,6 +377,7 @@ stringNumSpan =
       \\
       {
         \voiceOne
+        \override TextScript.extra-offset = #'(0 . 1)
         eis4.^\markup{\italic {a tempo}}
       }
       \\

@@ -91,11 +91,11 @@ stringNumSpan =
     <<
       {
         <cis! h'>4
-        e,,16( h' fis' h \stemDown e) fis\2 a h
+        e,,16_( h' fis' h \stemDown e) fis\2 a h
       }
       \\
       {
-        cis,16 fis fis, h-0^~ 
+        cis,16 fis fis, h-0^~
         \stemUp h8
       }
       \\
@@ -119,6 +119,84 @@ stringNumSpan =
         a4. \stemUp f8
       }
     >>
+    <<
+      {
+        e16_( h' fis' h \stemDown e) fis a h
+      }
+      \\
+      {
+        \stemUp h,8 s4.
+      }
+      \\
+      {
+        \voiceTwo
+        e,,2
+      }
+    >>
+    <<
+      {
+        cis'''4( e,)
+      }
+      \\
+      {
+        \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        cis'16^( a, h e) e a,( f, c')
+      }
+      \\
+      {
+        \voiceTwo
+        a4. \stemUp f8
+      }
+    >>
+    <<
+      {
+        e16_( h' fis' h \stemDown e) fis a h
+      }
+      \\
+      {
+        \stemUp h,8 s4.
+      }
+      \\
+      {
+        \voiceTwo
+        e,,2
+      }
+    >>
+    <<
+      {
+        cis'''4 h8 a fis e
+      }
+      \\
+      {
+        \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        cis'16^( a, h e) h' e, a cis, fis d e a,
+      }
+      \\
+      {
+        \voiceTwo
+        a,4 a~ a
+      }
+    >>
+    \repeat unfold 2{
+      <<
+        {
+          h'4
+        }
+        \\
+        {
+          \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          \once\override Beam.positions = #'(-7.3 . -7)
+          h16^( h, fis' gis)
+        }
+        \\
+        {
+          \voiceTwo
+          \once \override NoteColumn.force-hshift = #0.2
+          e,4
+        }
+      >>
+      <c' f>8(\glissando <e a>)
+    }
     %\bar "|."
   }
 }

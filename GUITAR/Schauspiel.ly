@@ -259,13 +259,32 @@ stringNumSpan =
         e8.[ d16]\prall cis[ a g f] e4-\markup {
           \postscript #"1.2 -1.7 moveto 3.2 -2.2 rlineto stroke"
         }
-        r2
+        r2 e'8\harmonic[\fermata fis,16( f]) b8\fermata r
       }
       \\
       {
         a,,2~( a8.[ b16] h8\glissando e4.)^\fermata
+        \set harmonicDots = ##t
+        a4.\harmonic e,8
       }
     >>
+    \bar ""
+    \break
+    <<
+      {
+        e'''8.[ d16]\prall cis[ a \acciaccatura a fis e] d8-\markup {
+          \postscript #"1.2 -1.7 moveto 3.2 -2.2 rlineto stroke"
+        } r8 r4 \stemDown e,,2
+      }
+      \\
+      {
+        a2~ a16[ d e f]\glissando a8.[ gis16]~ 
+        gis32[ fis''^( e) d cis^( h) a gis]^( fis[) e d^( cis) h a^( gis) fis]
+      }
+    >>
+    e2\fermata
+    \cadenzaOff
+    \time 2/4
     %\bar "|."
   }
 }

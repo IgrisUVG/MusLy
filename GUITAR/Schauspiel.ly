@@ -82,7 +82,7 @@ stringNumSpan =
     \key a \major
     \time 4/4
     %\override Staff.TimeSignature.stencil = ##f
-    \mergeDifferentlyHeadedOn
+    %\mergeDifferentlyHeadedOn
     %\mergeDifferentlyDottedOn
     \override Score.RehearsalMark.extra-offset = #'(0 . 3)
     \mark \markup {\fontsize #-2 {Allegretto}}
@@ -91,7 +91,8 @@ stringNumSpan =
     <<
       {
         <cis! h'>4
-        e,,16_( h' fis' h \stemDown e) fis\2 a h
+        \voiceThree
+        e,,16( h' fis' h \stemDown e) fis\2 a h
       }
       \\
       {
@@ -121,21 +122,21 @@ stringNumSpan =
     >>
     <<
       {
-        e16_( h' fis' h \stemDown e) fis a h
-      }
-      \\
-      {
-        \stemUp h,8 s4.
+        h'8 s4.
       }
       \\
       {
         \voiceTwo
         e,,2
       }
+      \\
+      {
+        e16( h' fis' h \stemDown e) fis a h
+      }
     >>
     <<
       {
-        cis'''4( e,)
+        cis4( e,)
       }
       \\
       {
@@ -150,21 +151,21 @@ stringNumSpan =
     >>
     <<
       {
-        e16_( h' fis' h \stemDown e) fis a h
-      }
-      \\
-      {
-        \stemUp h,8 s4.
+        h'8 s4.
       }
       \\
       {
         \voiceTwo
         e,,2
       }
+      \\
+      {
+        e16( h' fis' h \stemDown e) fis a h
+      }
     >>
     <<
       {
-        cis'''4 h8 a fis e
+        cis4 h8 a fis e
       }
       \\
       {
@@ -184,7 +185,7 @@ stringNumSpan =
         }
         \\
         {
-          \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          \shape #'((0 . -5.5) (-1.5 . -2.5) (-1 . 0) (0 . 0)) Slur
           \once\override Beam.positions = #'(-7.3 . -7)
           h16^( h, fis' gis)
         }
@@ -197,6 +198,74 @@ stringNumSpan =
       >>
       <c' f>8(\glissando <e a>)
     }
+    <<
+      {
+        h'8 cis!
+      }
+      \\
+      {
+        \once\override Beam.positions = #'(-4.3 . -2.5)
+        h16 <fis gis> cis' <a e'>
+      }
+      \\
+      {
+        \voiceTwo
+        e,8 a
+      }
+    >>
+    h'16 <a' d> a, <e' cis'>
+    <<
+      {
+        <cis h'>4 e,,16 a_( cis e) gis a h cis-\markup {
+          \postscript #"0.5 -4.8 moveto 2.2 1.1 rlineto stroke"
+        }
+      }
+      \\
+      {
+        cis16 fis fis, h^~ \stemUp h8 s4.
+      }
+      \\
+      {
+        \voiceTwo
+        s4 e,,2
+      }
+    >>
+    e''16 fis a h
+    <<
+      {
+        cis4( e)
+        \voiceThree
+        e,,,16 a h c d[ f g a]
+      }
+      \\
+      {
+        <e, a' e'>4 a e2
+      }
+      \\
+      {
+        e8 <f' h>
+        \voiceOne
+        d'[_(\glissando e,])~ e
+      }
+    >>
+    \acciaccatura <d a'>8 <e h'>4\fermata
+    \bar "||"
+    \once \override Script.outside-staff-priority = #100
+    cis2~\startTrillSpan\fermata
+    cis32\stopTrillSpan d e fis gis a h cis d e fis gis a h cis d
+    \cadenzaOn
+    <<
+      {
+        e8.[ d16]\prall cis[ a g f] e4-\markup {
+          \postscript #"1.2 -1.7 moveto 3.2 -2.2 rlineto stroke"
+        }
+        r2
+      }
+      \\
+      {
+        a,,2~( a8.[ b16] h8\glissando e4.)^\fermata
+      }
+    >>
     %\bar "|."
   }
 }

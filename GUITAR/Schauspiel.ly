@@ -275,7 +275,7 @@ stringNumSpan =
     \break
     <<
       {
-        e'''8.[ d16]\prall cis[ a \acciaccatura a fis e] d8-\markup {
+        e'''8.[ d16]\prall cis[ a \slurDown\acciaccatura a fis e] d8-\markup {
           \postscript #"1.2 -1.7 moveto 3.2 -2.2 rlineto stroke"
         } r8 r4 \stemDown e,,2
       }
@@ -297,7 +297,7 @@ stringNumSpan =
     \override Score.RehearsalMark.extra-offset = #'(0 . 1)
     \mark \markup {\fontsize #-2 {Adagio con moto}}
     \mergeDifferentlyDottedOn
-    \repeat volta 4 {
+    \repeat volta 3 {
       <<
         {
           e''8. d16\prall cis a\prall g f~
@@ -314,6 +314,97 @@ stringNumSpan =
           a,,2 a4 e->
         }
       >>
+      <<
+        {
+          e'''8. d16\prall cis a\prall \glissando fis \slurDown\acciaccatura gis a
+        }
+        \\
+        {
+          \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          e'16^( cis, e8) cis'16 d,,8.
+        }
+        \\
+        {
+          \voiceTwo
+          a2
+        }
+      >>
+      <<
+        {
+          e''4~ e16\noBeam h'-. cis-. dis-.
+        }
+        \\
+        {
+          e,16 g,32^( c h16) g32^( c h4)
+        }
+        \\
+        {
+          \voiceTwo
+          s4 r8 e,,
+        }
+      >>
+      <<
+        {
+          e'''8. d16\prall cis a\prall g f~
+          f8 \slurDown\acciaccatura h, cis~ cis s
+        }
+        \\
+        {
+          \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          e'16^( cis, e8) cis'16 d,,8 a'16~ a e'8^( h16)~ h8 <h' gis'>\noBeam
+        }
+        \\
+        {
+          \voiceTwo
+          a,,2 a4 e->
+        }
+      >>
+      <<
+        {
+          \set subdivideBeams = ##t
+          \set baseMoment = #(ly:make-moment 1/8)
+          \set beatStructure = #'(2 2 2 2)
+          e'''8. d16\prall cis h32 a gis fis e d
+        }
+        \\
+        {
+          \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          e'16^( cis, e8) s4
+        }
+        \\
+        {
+          \voiceTwo
+          a,,4 d
+        }
+      >>
+    }
+    \alternative {
+      {
+        <<
+          {
+            cis'8~ cis32 h\prall a fis
+          }
+          \\
+          {
+            r8 e,
+          }
+        >>
+        \set subdivideBeams = ##f
+        e'16-- gis,-. a-. h-.
+      }
+      \bar ":|."
+      {
+        <<
+          {
+            cis'8~ cis32 h\prall a fis
+          }
+          \\
+          {
+            r8 e,
+          }
+        >>
+        e'16-- <gis, h'>-. <a cis'>-. <h d'>-.
+      }
     }
     %\bar "|."
   }

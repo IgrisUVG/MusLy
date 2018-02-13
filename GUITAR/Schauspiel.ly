@@ -293,14 +293,17 @@ stringNumSpan =
     e2\fermata
     \cadenzaOff
     \break
+    %\pageBreak
     \time 2/4
-    \override Score.RehearsalMark.extra-offset = #'(0 . 1)
+    \override Score.RehearsalMark.extra-offset = #'(0 . -2.5)
     \mark \markup {\fontsize #-2 {Adagio con moto}}
     \mergeDifferentlyDottedOn
     \repeat volta 3 {
       <<
         {
-          e''8. d16\prall cis a\prall g f~
+          \override TextScript.extra-offset = #'(-3 . -5)
+          e''8.^\markup {\musicglyph #"scripts.segno"}
+          d16\prall cis a\prall g f~
           f8 \slurDown\acciaccatura h, cis~ cis s
         }
         \\
@@ -406,6 +409,9 @@ stringNumSpan =
         e'16-- <gis, h'>-. <a cis'>-. <h d'>-.
       }
     }
+    \once \override Score.RehearsalMark #'extra-offset = #'(0 . -4.1)
+    %\once \override Score.RehearsalMark #'font-size = #1
+    \mark \markup { \musicglyph #"scripts.coda" }
     %\bar "|."
   }
 }

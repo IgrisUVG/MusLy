@@ -252,6 +252,9 @@ stringNumSpan =
     \bar "||"
     \once \override Script.outside-staff-priority = #100
     cis2~\startTrillSpan\fermata
+    \set subdivideBeams = ##t
+    \set baseMoment = #(ly:make-moment 1/8)
+    \set beatStructure = #'(2 2 2 2)
     cis32\stopTrillSpan d e fis gis a h cis d e fis gis a h cis d
     \cadenzaOn
     <<
@@ -278,13 +281,40 @@ stringNumSpan =
       }
       \\
       {
-        a2~ a16[ d e f]\glissando a8.[ gis16]~ 
-        gis32[ fis''^( e) d cis^( h) a gis]^( fis[) e d^( cis) h a^( gis) fis]
+        a2~ a16[ d e f]\glissando a8.[ gis16]~
+        \set subdivideBeams = ##t
+        \set baseMoment = #(ly:make-moment 1/8)
+        \set beatStructure = #'(2 2 2 2)
+        gis32[ fis''^( e) d cis^( h) a gis]^(
+        \stemUp
+        fis[) e d( cis) h a( gis) fis]
       }
     >>
     e2\fermata
     \cadenzaOff
+    \break
     \time 2/4
+    \override Score.RehearsalMark.extra-offset = #'(0 . 1)
+    \mark \markup {\fontsize #-2 {Adagio con moto}}
+    \mergeDifferentlyDottedOn
+    \repeat volta 4 {
+      <<
+        {
+          e''8. d16\prall cis a\prall g f~
+          f8 \slurDown\acciaccatura h, cis~ cis s
+        }
+        \\
+        {
+          \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          e'16^( cis, e8) cis'16 d,,8 a'16~ a e'8^( h16)~ h8 <h' gis'>\noBeam
+        }
+        \\
+        {
+          \voiceTwo
+          a,,2 a4 e->
+        }
+      >>
+    }
     %\bar "|."
   }
 }

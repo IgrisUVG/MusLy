@@ -406,15 +406,18 @@ stringNumSpan =
             r8 e,
           }
         >>
-        \once \override Score.RehearsalMark #'extra-offset = #'(8.6 . -4.1)
+        %\once \override Score.RehearsalMark #'extra-offset = #'(8.7 . -4.1)
         %\once \override Score.RehearsalMark #'font-size = #1
-        \mark \markup { \musicglyph #"scripts.coda" }
+        %\mark \markup { \musicglyph #"scripts.coda" }
         e'16-- <gis, h'>-. <a cis'>-. <h d'>-.
       }
     }
+    \once \override Score.RehearsalMark #'extra-offset = #'(0 . -4.1)
+    %\once \override Score.RehearsalMark #'font-size = #1
+    \mark \markup { \musicglyph #"scripts.coda" }
     <<
       {
-        e'8. d16
+        e'8.-0 d16
       }
       \\
       {
@@ -480,7 +483,8 @@ stringNumSpan =
     >>
     <<
       {
-        g'4
+        \override TextScript.font-size = -2
+        g'4-"VIII"
       }
       \\
       {
@@ -497,11 +501,84 @@ stringNumSpan =
     >>
     <<
       {
-        f'16 r r8
+        f'16\3 r r8
       }
       \\
       {
         f16 b,, as8
+      }
+    >>
+    <<
+      {
+        e''8. d16
+      }
+      \\
+      {
+        \voiceOne
+        \shape #'((-1.5 . -1) (0 . -1) (0 . 0) (0 . 0)) Slur
+        s16_( e, g8)
+      }
+      \\
+      {
+        \voiceTwo
+        c,4
+      }
+    >>
+    <<
+      {
+        c'16\prall b as b
+      }
+      \\
+      {
+        r16 f,8 g16
+      }
+    >>
+    <<
+      {
+        g'4
+      }
+      \\
+      {
+        \set subdivideBeams = ##t
+        \set baseMoment = #(ly:make-moment 1/8)
+        \set beatStructure = #'(2 2 2 2)
+        g32 c, d e f g a h
+      }
+    >>
+    \set subdivideBeams = ##t
+    \set baseMoment = #(ly:make-moment 1/8)
+    \set beatStructure = #'(2 2 2 2)
+    c d e f g a h\glissando d\fermata
+    \bar "||"
+    <<
+      {
+        h8. a16\prall
+        \set subdivideBeams = ##t
+        \set baseMoment = #(ly:make-moment 1/8)
+        \set beatStructure = #'(2 2 2 2)
+        gis32 e fis gis a h cis dis
+        e8. d!16\prall cis8 r8 gis8. h16
+      }
+      \\
+      {
+        \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        h16^( gis, h8) h4\rest
+        e'16 cis, e8 cis'16 a\glissando dis, \stemUp\acciaccatura e8 \stemDown fis16
+        \shape #'((0 . -4.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        gis^( h, dis8)
+      }
+      \\
+      {
+        \voiceTwo
+        e,,2 a e4
+      }
+    >>
+    <<
+      {
+        %\acciaccatura cis'''8 \glissando dis cis
+      }
+      \\
+      {
       }
     >>
     %\bar "|."

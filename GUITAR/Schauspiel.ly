@@ -412,6 +412,98 @@ stringNumSpan =
     \once \override Score.RehearsalMark #'extra-offset = #'(0 . -4.1)
     %\once \override Score.RehearsalMark #'font-size = #1
     \mark \markup { \musicglyph #"scripts.coda" }
+    <<
+      {
+        e'8. d16
+      }
+      \\
+      {
+        \voiceOne
+        \shape #'((-1.5 . -1) (0 . -1) (0 . 0) (0 . 0)) Slur
+        s16_( e, g8)
+      }
+      \\
+      {
+        \voiceTwo
+        c,4
+      }
+    >>
+    <<
+      {
+        c'16\prall b as b
+      }
+      \\
+      {
+        r16 f,8 g16
+      }
+    >>
+    <<
+      {
+        g'8 r r4
+      }
+      \\
+      {
+        \once\override Beam.positions = #'(-8 . -8.5)
+        g16 e e,32^( f g16)\glissando b8. as16
+      }
+      \\
+      {
+        \voiceTwo
+        \once \override NoteColumn.force-hshift = #0.2
+        c8 s4.
+      }
+    >>
+    <<
+      {
+        e''8. d16
+      }
+      \\
+      {
+        \shape #'((0 . -6) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        \once\override Beam.positions = #'(-1.5 . -2.5)
+        e16^( c, g'8)
+      }
+      \\
+      {
+        \voiceTwo
+        c,,4
+      }
+    >>
+    <<
+      {
+        c''16\prall g as b
+      }
+      \\
+      {
+        c16 f,,8 g16
+      }
+    >>
+    <<
+      {
+        g'4
+      }
+      \\
+      {
+        \voiceOne
+        c,,16 f32_( g)
+        \voiceTwo
+        as[ c des es]
+      }
+      \\
+      {
+        \voiceTwo
+        c,4
+      }
+    >>
+    <<
+      {
+        f'16 r r8
+      }
+      \\
+      {
+        f16 b,, as8
+      }
+    >>
     %\bar "|."
   }
 }

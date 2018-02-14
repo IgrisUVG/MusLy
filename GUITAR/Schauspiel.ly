@@ -406,12 +406,12 @@ stringNumSpan =
             r8 e,
           }
         >>
+        \once \override Score.RehearsalMark #'extra-offset = #'(8.6 . -4.1)
+        %\once \override Score.RehearsalMark #'font-size = #1
+        \mark \markup { \musicglyph #"scripts.coda" }
         e'16-- <gis, h'>-. <a cis'>-. <h d'>-.
       }
     }
-    \once \override Score.RehearsalMark #'extra-offset = #'(0 . -4.1)
-    %\once \override Score.RehearsalMark #'font-size = #1
-    \mark \markup { \musicglyph #"scripts.coda" }
     <<
       {
         e'8. d16

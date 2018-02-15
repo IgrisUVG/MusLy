@@ -146,7 +146,85 @@ stringNumberSpanner =
       gis4 a, h e, gis' fis! e a,8 s a2 a4
     }
   >>
+  \set subdivideBeams = ##t
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(2 2 2 2)
   \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
   cis'32 h_0 a_\3 gis fis e d cis
+  <<
+    {
+      \override TextScript.font-size = -2
+      d'8.-"II" cis16\prall
+    }
+    \\
+    {
+      \voiceOne
+      h,16_( fis' h8)
+    }
+    \\
+    {
+      \voiceTwo
+      h,4
+    }
+  >>
+  <<
+    {
+      h'16 a\prall g f <a, e'>4
+    }
+    \\
+    {
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2 2)
+      \override StringNumber.staff-padding = #'()
+      g4 a32 e fis! gis! a h\5 c d
+    }
+  >>
+  \times 8/12 {e fis gis\4 a h c d e\3 fis gis\2 a h}
+  <<
+    {
+      c8. h16 gis4 c8.^\markup{\italic rit.} h16 gis4\fermata
+    }
+    \\
+    {
+      \repeat unfold 2 {
+        \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        c16^( d, f8) h,4\rest
+      }
+    }
+    \\
+    {
+      \voiceTwo
+      a,2 a\fermata
+    }
+  >>
+  \bar "||"
+  <<
+    {
+      c''8.^\markup{\italic {piu mosso}} h16 h8. a16
+      e'8. d16 d8. cis16 cis8. h16 h8. a16 e'8. d16 d8. cis16
+      c8. h16 gis4
+      c8.^\markup{\italic rit.} h16 gis4
+      c8.^\markup{\italic grave} h16 gis4
+    }
+    \\
+    {
+      \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      c16^( d, f8)
+      \shape #'((0 . -5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      h16^( cis, e8)
+      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \once\override Beam.positions = #'(-3.5 . -3)
+      e'16^( h, fis'8)
+    }
+    \\
+    {
+      \voiceTwo
+      a,,4 a
+      \once \override NoteColumn.force-hshift = #0.2
+      fis' fis d fis e, \repeat unfold 7 {a}
+    }
+  >>
+  \bar "||"
 }

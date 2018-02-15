@@ -577,6 +577,7 @@ stringNumSpan =
         e,,2 a e4
       }
     >>
+    %{
     <<
       {
         \slurDown\acciaccatura cis'''8 \glissando dis cis
@@ -611,6 +612,7 @@ stringNumSpan =
         
       }
     >>
+    %}
     %\bar "|."
   }
 }

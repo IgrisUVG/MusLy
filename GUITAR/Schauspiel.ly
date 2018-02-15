@@ -588,11 +588,11 @@ stringNumSpan =
         \set beatStructure = #'(2 2 2 2)
         \override Fingering.staff-padding = #'()
         a,,32
-        \once\override StringNumber.extra-offset = #'(-0.2 . -4.5)
+        \once\override StringNumber.extra-offset = #'(-0.4 . -4.7)
         h^(\6 cis) d!^0
-        \once\override StringNumber.extra-offset = #'(-0.2 . -3.3)
+        \once\override StringNumber.extra-offset = #'(-0.4 . -3.4)
         e^(\5 fis) 
-        \once\override StringNumber.extra-offset = #'(-0.4 . -2.3)
+        \once\override StringNumber.extra-offset = #'(-0.6 . -2.4)
         gis^(\4 a)
       }
     >>

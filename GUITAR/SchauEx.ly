@@ -114,24 +114,26 @@ stringNumberSpanner =
       \override StringNumber.staff-padding = #'()
       \set strokeFingerOrientations = #'(down)
       \override StrokeFinger.staff-padding = #'()
+      \override StrokeFinger.script-priority = #-100
       f32 cis'\RH #4 h\RH #3 a_\2\RH #2 gis\RH #3 fis\RH #2 e_\3 d
     }
     \\
     {
-      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \shape #'((0.5 . -2.5) (0 . 0) (0.5 . 0) (0 . 0)) Slur
       e16\rest^( d f8)
-      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \shape #'((0 . -5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
       h16^( cis, e8)
-      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \shape #'((0.2 . -4.5) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
       d16\rest^( fis, dis'8) gis32 h, cis dis e fis gis a
-      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \shape #'((0.5 . -2) (0 . 0) (0.5 . 0) (0 . 0)) Slur
       d,16\rest^( d f8)
-      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \shape #'((0.2 . -4) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
       f16\rest^( h,8 fis'16)
-      \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+      \shape #'((0.3 . -3) (-0.5 . -2) (-0.5 . 0) (0 . 0)) Slur
       \override StringNumber.staff-padding = #'()
       \set strokeFingerOrientations = #'(up)
       \override StrokeFinger.staff-padding = #'()
+      \override StrokeFinger.script-priority = #-100
       d16\rest^( d gis8) a32 cis,\4\RH #3 h\RH #2 a\5\RH #3
       \override TupletBracket.bracket-visibility = ##f
       \times 4/6 { gis\RH #2 fis e d\6 cis\RH #1 h\RH #1 }
@@ -144,6 +146,7 @@ stringNumberSpanner =
       gis4 a, h e, gis' fis! e a,8 s a2 a4
     }
   >>
+  \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
-  cis'32 h a_\3 gis fis e d cis
+  cis'32 h_0 a_\3 gis fis e d cis
 }

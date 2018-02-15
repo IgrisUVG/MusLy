@@ -577,6 +577,7 @@ stringNumSpan =
         e,,2 a e4
       }
     >>
+    %{
     <<
       {
         \slurDown\acciaccatura cis'''8 \glissando dis cis
@@ -591,7 +592,7 @@ stringNumSpan =
         \once\override StringNumber.extra-offset = #'(-0.4 . -4.7)
         h^(\6 cis) d!^0
         \once\override StringNumber.extra-offset = #'(-0.4 . -3.4)
-        e^(\5 fis)
+        e^(\5 fis) 
         \once\override StringNumber.extra-offset = #'(-0.6 . -2.4)
         gis^(\4 a)
       }
@@ -599,126 +600,19 @@ stringNumSpan =
     <<
       {
         \override TextScript.font-size = -2
-        h'8. \slurDown\acciaccatura h8 cis16 h8.-"V" a16
-        a8.-"II" \slurDown\acciaccatura a8 h16 gis8-"IV" r
-        h8. \slurDown\acciaccatura h8 cis16 e8-"IX" d h8.-"VII" cis16 a4\2
-        e'8. d16\prall cis a\prall g f~
-        \override StringNumber.staff-padding = #'()
-        \set strokeFingerOrientations = #'(down)
-        \override StrokeFinger.staff-padding = #'()
-        \override StrokeFinger.script-priority = #-100
-        f32 cis'\RH #4 h\RH #3 a_\2\RH #2 gis\RH #3 fis\RH #2 e_\3 d
+        h'''8. \acciaccatura h8 cis16 h8.-"V" a16
+        a8.-"II" \acciaccatura a8 h16 gis8-"IV" r
       }
       \\
       {
-        \shape #'((0.5 . -2.5) (0 . 0) (0.5 . 0) (0 . 0)) Slur
-        e16\rest^( d f8)
-        \shape #'((0 . -5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        h16^( cis, e8)
-        \shape #'((0.2 . -4.5) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
-        d16\rest^( fis, dis'8) gis32 h, cis dis e fis gis a
-        \shape #'((0.5 . -2) (0 . 0) (0.5 . 0) (0 . 0)) Slur
-        d,16\rest^( d f8)
-        \shape #'((0.2 . -4) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
-        f16\rest^( h,8 fis'16)
-        \shape #'((0.3 . -3) (-0.5 . -2) (-0.5 . 0) (0 . 0)) Slur
-        \override StringNumber.staff-padding = #'()
-        \set strokeFingerOrientations = #'(up)
-        \override StrokeFinger.staff-padding = #'()
-        \override StrokeFinger.script-priority = #-100
-        d16\rest^( d gis8) a32 cis,\4\RH #3 h\RH #2 a\5\RH #3
-        \override TupletBracket.bracket-visibility = ##f
-        \times 4/6 { gis\RH #2 fis e d\6 cis\RH #1 h\RH #1 }
-        \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        e''16^( cis, e8) cis'16 d,,8 a'16~ \stemUp a4
+        
       }
       \\
       {
-        \voiceTwo
-        gis4 a, h e, gis' fis! e a,8 s a2 a4
+        
       }
     >>
-    \set subdivideBeams = ##t
-    \set baseMoment = #(ly:make-moment 1/8)
-    \set beatStructure = #'(2 2 2 2)
-    \override Fingering.staff-padding = #'()
-    \override StringNumber.staff-padding = #'()
-    cis'32 h_0 a_\3 gis fis e d cis
-    <<
-      {
-        \override TextScript.font-size = -2
-        d'8.-"II" cis16\prall
-      }
-      \\
-      {
-        \voiceOne
-        h,16_( fis' h8)
-      }
-      \\
-      {
-        \voiceTwo
-        h,4
-      }
-    >>
-    <<
-      {
-        h'16 a\prall g f <a, e'>4
-      }
-      \\
-      {
-        \set subdivideBeams = ##t
-        \set baseMoment = #(ly:make-moment 1/8)
-        \set beatStructure = #'(2 2 2 2)
-        \override StringNumber.staff-padding = #'()
-        g4 a32 e fis! gis! a h\5 c d
-      }
-    >>
-    \times 8/12 {e fis gis\4 a h c d e\3 fis gis\2 a h}
-    <<
-      {
-        c8. h16 gis4 c8.^\markup{\italic rit.} h16 gis4\fermata
-      }
-      \\
-      {
-        \repeat unfold 2 {
-          \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-          c16^( d, f8) h,4\rest
-        }
-      }
-      \\
-      {
-        \voiceTwo
-        a,2 a\fermata
-      }
-    >>
-    \bar "||"
-    <<
-      {
-        c''8.^\markup{\italic {piu mosso}} h16 h8. a16
-        e'8. d16 d8. cis16 cis8. h16 h8. a16 e'8. d16 d8. cis16
-        c8. h16 gis4
-        c8.^\markup{\italic rit.} h16 gis4
-        c8.^\markup{\italic grave} h16 gis4
-      }
-      \\
-      {
-        \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        c16^( d, f8)
-        \shape #'((0 . -5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        h16^( cis, e8)
-        \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        \once\override Beam.positions = #'(-3.5 . -3)
-        e'16^( h, fis'8)
-      }
-      \\
-      {
-        \voiceTwo
-        a,,4 a
-        \once \override NoteColumn.force-hshift = #0.2
-        fis' fis d fis e, \repeat unfold 7 {a}
-      }
-    >>
-    \bar "||"
+    %}
     %\bar "|."
   }
 }

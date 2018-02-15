@@ -596,6 +596,21 @@ stringNumSpan =
         gis^(\4 a)
       }
     >>
+    <<
+      {
+        \override TextScript.font-size = -2
+        h'''8. \acciaccatura h8 cis16 h8.-"V" a16
+        a8.-"II" \acciaccatura a8 h16 gis8-"IV" r
+      }
+      \\
+      {
+        
+      }
+      \\
+      {
+        
+      }
+    >>
     %\bar "|."
   }
 }

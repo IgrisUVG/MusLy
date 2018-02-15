@@ -96,7 +96,8 @@ stringNumSpan =
       }
       \\
       {
-        cis,16 fis fis, h-0^~
+        \override Fingering.staff-padding = #'()
+        cis,16 fis fis, h^0^~
         \stemUp h8
       }
       \\
@@ -111,8 +112,9 @@ stringNumSpan =
       }
       \\
       {
+        \override Fingering.staff-padding = #'()
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        cis'16^( a, h-0 e) e-0 a,( f, c')
+        cis'16^( a, h^0 e) e^0 a,( f, c')
       }
       \\
       {
@@ -417,6 +419,7 @@ stringNumSpan =
     \mark \markup { \musicglyph #"scripts.coda" }
     <<
       {
+        \once\override Fingering.extra-offset = #'(-0.2 . -2.5)
         e'8.-0 d16
       }
       \\
@@ -501,6 +504,7 @@ stringNumSpan =
     >>
     <<
       {
+        \once\override StringNumber.extra-offset = #'(-0.5 . -2.8)
         f'16\3 r r8
       }
       \\
@@ -575,10 +579,21 @@ stringNumSpan =
     >>
     <<
       {
-        %\acciaccatura cis'''8 \glissando dis cis
+        \slurDown\acciaccatura cis'''8 \glissando dis cis
       }
       \\
       {
+        \set subdivideBeams = ##t
+        \set baseMoment = #(ly:make-moment 1/8)
+        \set beatStructure = #'(2 2 2 2)
+        \override Fingering.staff-padding = #'()
+        a,,32
+        \once\override StringNumber.extra-offset = #'(-0.2 . -4.5)
+        h^(\6 cis) d!^0
+        \once\override StringNumber.extra-offset = #'(-0.2 . -3.3)
+        e^(\5 fis) 
+        \once\override StringNumber.extra-offset = #'(-0.4 . -2.3)
+        gis^(\4 a)
       }
     >>
     %\bar "|."

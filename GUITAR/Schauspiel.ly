@@ -34,7 +34,7 @@
     \Score
     \remove "Bar_number_engraver"
   }
-  ragged-last = ##t
+  %ragged-last = ##t
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #(define RH rightHandFinger)
@@ -619,7 +619,9 @@ stringNumSpan =
         h'8. \slurDown\acciaccatura h8 cis16 h8.-"V" a16
         a8.-"II" \slurDown\acciaccatura a8 h16 gis8-"IV" r
         h8. \slurDown\acciaccatura h8 cis16 e8-"IX" d h8.-"VII" cis16 a4\2
+        \set subdivideBeams = ##f
         e'8. d16\prall cis a\prall g f~
+        \set subdivideBeams = ##t
         \override StringNumber.staff-padding = #'()
         \set strokeFingerOrientations = #'(down)
         \override StrokeFinger.staff-padding = #'()
@@ -646,6 +648,7 @@ stringNumSpan =
         d16\rest^( d gis8) a32 cis,\4\RH #3 h\RH #2 a\5\RH #3
         \override TupletBracket.bracket-visibility = ##f
         \times 4/6 { gis\RH #2 fis e d\6 cis\RH #1 h\RH #1 }
+        \break
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
         e''16^( cis, e8) cis'16 d,,8 a'16~ \stemUp a4
       }
@@ -709,12 +712,13 @@ stringNumSpan =
       }
     >>
     \bar "||"
+    \break
     <<
       {
         c''8.^\markup{\italic {piu mosso}} h16 h8. a16
         \override TextScript.font-size = -2
         e'8.-"IX" d16 d8. cis16
-        \break
+        %\break
         cis8.-"VII" h16 h8.-"IX" a16 e'8. d16 d8. cis16
         c8. h16 gis4
         \revert TextScript.font-size
@@ -748,7 +752,7 @@ stringNumSpan =
           \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
           c16^( d, f8) gis16 d^( f d)
         }
-        \break
+        %\break
         \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
         c'16^( d, f8) gis16 d^( f d\harmonic)^\fermata
       }
@@ -759,7 +763,7 @@ stringNumSpan =
         \once \override NoteColumn.force-hshift = #0.2
         fis' fis d
         \once \override NoteColumn.force-hshift = #0.2
-        fis e, \repeat unfold 7 {a}
+        fis e, a \break \repeat unfold 6 {a}
       }
     >>
     \once \override Score.RehearsalMark #'extra-offset = #'(0 . 0)

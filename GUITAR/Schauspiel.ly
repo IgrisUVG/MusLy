@@ -12,10 +12,10 @@
   #(set-paper-size "a4")
   top-markup-spacing.basic-distance = 15
   markup-system-spacing.basic-distance = 25
-  top-system-spacing.basic-distance = 25
-  system-system-spacing.basic-distance = 23
+  top-system-spacing.basic-distance = 30
+  system-system-spacing.basic-distance = 30
   %score-system-spacing.basic-distance = 28
-  last-bottom-spacing.basic-distance = 25
+  last-bottom-spacing.basic-distance = 30
 
   %two-sided = ##t
   %inner-margin = 25
@@ -34,6 +34,7 @@
     \Score
     \remove "Bar_number_engraver"
   }
+  ragged-last = ##t
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #(define RH rightHandFinger)
@@ -257,7 +258,10 @@ stringNumSpan =
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
-    cis32\stopTrillSpan d e fis gis a h cis d e fis gis a h cis d
+    cis32\stopTrillSpan d e
+    \once\override TextScript.extra-offset = #'(0 . 2)
+    fis^\markup{\italic rit.} gis a h cis
+    d e fis gis a h cis^\markup{\italic {ad lib}} d
     \cadenzaOn
     <<
       {
@@ -268,7 +272,9 @@ stringNumSpan =
       }
       \\
       {
-        a,,2~( a8.[ b16] h8\glissando e4.)^\fermata
+        \textSpannerDown
+        \stringNumSpan "5"
+        a,,2~(\startTextSpan a8.[ b16] h8\glissando e4.)^\fermata\stopTextSpan
         \set harmonicDots = ##t
         a4.\harmonic e,8
       }
@@ -283,7 +289,10 @@ stringNumSpan =
       }
       \\
       {
-        a2~ a16[ d e f]\glissando a8.[ gis16]~
+        a2~ a16[
+        \textSpannerDown
+        \stringNumSpan "4"
+        d\startTextSpan e f]\glissando a8.[ gis16]~\stopTextSpan
         \set subdivideBeams = ##t
         \set baseMoment = #(ly:make-moment 1/8)
         \set beatStructure = #'(2 2 2 2)
@@ -297,16 +306,24 @@ stringNumSpan =
     \break
     %\pageBreak
     \time 2/4
-    \override Score.RehearsalMark.extra-offset = #'(0 . -2.5)
-    \mark \markup {\fontsize #-2 {Adagio con moto}}
+    \override Score.RehearsalMark.extra-offset = #'(0 . -2)
+    \mark \markup {
+      \fontsize #-2 {Adagio con moto}
+      \concat {
+        \smaller \general-align #Y #DOWN \teeny\note #"4" #1
+        \fontsize #-4 {" = "}
+        \smaller \general-align #Y #DOWN \teeny\note #"8" #1
+      }
+    }
     \mergeDifferentlyDottedOn
     \repeat volta 3 {
       <<
         {
           \override TextScript.extra-offset = #'(-3 . -5)
-          e''8.^\markup {\musicglyph #"scripts.segno"}
-          d16\prall cis a\prall g f~
-          f8 \slurDown\acciaccatura h, cis~ cis s
+          e''8.^\markup {\small\musicglyph #"scripts.segno"}
+          d16\prall cis a\prall
+          \stringNumSpan "3"
+          g\startTextSpan f~ f8\stopTextSpan \slurDown\acciaccatura h, cis~ cis s
         }
         \\
         {
@@ -695,8 +712,12 @@ stringNumSpan =
     <<
       {
         c''8.^\markup{\italic {piu mosso}} h16 h8. a16
-        e'8. d16 d8. cis16 cis8. h16 h8. a16 e'8. d16 d8. cis16
+        \override TextScript.font-size = -2
+        e'8.-"IX" d16 d8. cis16
+        \break
+        cis8.-"VII" h16 h8.-"IX" a16 e'8. d16 d8. cis16
         c8. h16 gis4
+        \revert TextScript.font-size
         c8.^\markup{\italic rit.} h16 gis4
         c8.^\markup{\italic grave} h16 gis4
       }
@@ -709,16 +730,71 @@ stringNumSpan =
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
         \once\override Beam.positions = #'(-3.5 . -3)
         e'16^( h, fis'8)
+        \shape #'((0 . -4.5) (-1 . -2) (-0.5 . 0) (0 . 0)) Slur
+        \once\override Beam.positions = #'(-0.3 . -0.7)
+        d'16^( e, ais8)
+        \shape #'((0 . -4.7) (-1 . -2) (-0.5 . 0) (0 . 0)) Slur
+        %\once\override Beam.positions = #'(-0.3 . -0.7)
+        cis16^( d, fis8)
+        \shape #'((0 . -5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        \once\override Beam.positions = #'(-3.5 . -3)
+        h16^( cis, e8)
+        \shape #'((0 . -7.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        e'16^( h, gis'8)
+        \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        \once\override Beam.positions = #'(-2 . -2.2)
+        d'16^( e, a8)
+        \repeat unfold 2 {
+          \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+          c16^( d, f8) gis16 d^( f d)
+        }
+        \break
+        \shape #'((0 . -5.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
+        c'16^( d, f8) gis16 d^( f d\harmonic)^\fermata
       }
       \\
       {
         \voiceTwo
-        a,,4 a
+        a,4 a
         \once \override NoteColumn.force-hshift = #0.2
-        fis' fis d fis e, \repeat unfold 7 {a}
+        fis' fis d
+        \once \override NoteColumn.force-hshift = #0.2
+        fis e, \repeat unfold 7 {a}
       }
     >>
+    \once \override Score.RehearsalMark #'extra-offset = #'(0 . 0)
+    \mark\markup {
+      %\italic "   "
+      \small
+      %\raise #1.5
+      \musicglyph #"scripts.segno"
+    }
     \bar "||"
-    %\bar "|."
+    \cadenzaOn
+    \stopStaff
+    s4
+    \bar "|"
+    \startStaff
+    \cadenzaOff
+    \mergeDifferentlyHeadedOn
+    \once \override Score.RehearsalMark #'extra-offset = #'(-0.5 . -2)
+    %\once \override Score.RehearsalMark #'font-size = #1
+    \mark \markup {\musicglyph #"scripts.coda"}
+    <<
+      {
+        \override TextScript.font-size = -2
+        <a cis'>2->-"II"
+      }
+      \\
+      {
+        \teeny
+        \set Score.proportionalNotationDuration = #(ly:make-moment 1/64)
+        \shape #'((0.3 . 0.7) (0 . 2) (-1.5 . 1) (0 . -0.7)) Slur
+        a32^( a' e a'^~^>
+        \set Score.proportionalNotationDuration = #(ly:make-moment 1/16)
+        a8^~ a4)
+      }
+    >>
+    \bar "|."
   }
 }

@@ -32,7 +32,7 @@
 \include "guitarScript.ly"
 \include "guitar_AN27.ly"
 \include "Scand.ly"
-%\include "Schauspiel.ly"
+\include "Schauspiel.ly"
 \include "Humor.ly"
 
 \book {

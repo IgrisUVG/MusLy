@@ -62,10 +62,7 @@
   \score {
     \new Staff \with {
       instrumentName = \markup {
-        \center-column {
-          "Guitar"
-          \line { \circle 6"= D" }
-        }
+        \line { \circle 6"= D" }
       }
     }
 
@@ -85,9 +82,7 @@
   }
 %%%%%%%%%%%%%%%%%% SCHAUSPIEL %%%%%%%%%%%%%%%%%%%
   \score {
-    \new Staff \with {
-      instrumentName = "Guitar"
-    }
+    \new Staff
 
     \schauspiel
 
@@ -108,10 +103,7 @@
     <<
       \new Staff \with {
         instrumentName = \markup {
-          \center-column {
-            "Guitar"
-            \line { \circle 6"= D" }
-          }
+          \line { \circle 6"= D" }
         }
       }
       \vikTema
@@ -286,9 +278,7 @@
 %%%%%%%%%%%%%%%%%%%%% HUMOR %%%%%%%%%%%%%%%%%%%%%
   %{%}
   \score {
-    \new Staff \with {
-      instrumentName = "Guitar"
-    }
+    \new Staff
 
     \humor
 

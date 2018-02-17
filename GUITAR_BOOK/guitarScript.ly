@@ -36,3 +36,17 @@ stringNumSpan =
      \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
    #})
 
+spad = \override Fingering #'staff-padding = #'()
+sfol = \set fingeringOrientations = #'(left)
+sfor = \set fingeringOrientations = #'(right)
+sfod = \set fingeringOrientations = #'(down)
+sfou = \set fingeringOrientations = #'(up)
+ssnol = \set stringNumberOrientations = #'(left)
+ssnou = \set stringNumberOrientations = #'(up)
+ssnod = \set stringNumberOrientations = #'(down)
+ssnor = \set stringNumberOrientations = #'(right)
+FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
+        #{
+          \once \override Voice.Fingering #'extra-offset = #(cons offsetX offsetY)
+        #})
+

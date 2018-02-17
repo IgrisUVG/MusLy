@@ -1,58 +1,16 @@
 \version "2.18.0"
-\language "deutsch"
-\paper {
-  #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  %top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #10
-  system-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #20
-  %two-sided = ##t
-  %inner-margin = 25
-  %outer-margin = 15
-}
-\layout {
-  \context {
-    \Score
-    \remove "Bar_number_engraver"
-  }
-}
-\header{
-  title = "№ 27"
-  composer = "I. G"
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
-spad = \override Fingering #'staff-padding = #'()
-sfol = \set fingeringOrientations = #'(left)
-sfor = \set fingeringOrientations = #'(right)
-sfod = \set fingeringOrientations = #'(down)
-sfou = \set fingeringOrientations = #'(up)
-ssnol = \set stringNumberOrientations = #'(left)
-ssnou = \set stringNumberOrientations = #'(up)
-ssnod = \set stringNumberOrientations = #'(down)
-ssnor = \set stringNumberOrientations = #'(right)
-FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
-        #{
-          \once \override Voice.Fingering #'extra-offset = #(cons offsetX offsetY)
-        #})
 
-\new Staff \with {
-    instrumentName = \markup {
-      \center-column {
-        "Guitar"
-        \line { \circle 6"= D" }
-      }
-    }
-  }
-{
+\language "deutsch"
+
+guitarAN = {
   \clef treble \key d \major \time 12/16
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
   <<
     {
       <
-      \tweak #'duration-log #1 d 
-      \tweak #'duration-log #1 a 
+      \tweak #'duration-log #1 d
+      \tweak #'duration-log #1 a
       d'\4>16[( fis' a'])\glissando
       <<
         {
@@ -62,7 +20,8 @@ FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
           d''\3[( e''8]) a''\glissando h''8.
         }\\
         {h'8[ e''16]  fis''_\2[g''( fis''])\glissando a''8.}
-    >>}
+      >>
+    }
     \\
     %\stemUp
     {\stemDown \once \override Stem #'transparent = ##t <d a>2}

@@ -146,7 +146,10 @@ schauspiel = \relative {
   h'16 <a' d> a, <e' cis'>
   <<
     {
-      <cis h'>4 e,,16 a_( cis e) gis a h cis-\markup {
+      \textSpannerDown
+      \stringNumSpan "5"
+      <cis h'>4 e,,16 a_(\startTextSpan cis e)\stopTextSpan
+      gis a h cis-\markup {
         \postscript #"0.5 -4.8 moveto 2.2 1.1 rlineto stroke"
       }
     }
@@ -165,7 +168,9 @@ schauspiel = \relative {
     {
       cis4( e)
       \voiceThree
-      e,,,16 a h c d[ f g a]
+      \textSpannerDown
+      \stringNumSpan "5"
+      e,,,16 a\startTextSpan h c d[ f\stopTextSpan g a]
     }
     \\
     {
@@ -212,8 +217,10 @@ schauspiel = \relative {
   \break
   <<
     {
-      e'''8.[ d16]\prall cis[ a \slurDown\acciaccatura a fis e] d8-\markup {
-        \postscript #"1.2 -1.7 moveto 3.2 -2.2 rlineto stroke"
+      e'''8.[ d16]\prall cis[ a \slurDown\acciaccatura a-\markup {
+        \postscript #"0.5 -5.3 moveto 3.3 -1.2 rlineto stroke"
+      } fis e] d8-\markup {
+        \postscript #"1.3 -2 moveto 3.2 -2.2 rlineto stroke"
       } r8 r4 \stemDown e,,2
     }
     \\
@@ -260,7 +267,9 @@ schauspiel = \relative {
       \\
       {
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        e'16^( cis, e8) cis'16 d,,8 a'16~ a e'8^( h16)~ h8 <h' gis'>\noBeam
+        e'16^( cis, e8) cis'16
+        \once\override Fingering.extra-offset = #'(0.2 . 2.5)
+        d,,8-0 a'16~ a e'8^( h16)~ h8 <h' gis'>\noBeam
       }
       \\
       {
@@ -583,7 +592,7 @@ schauspiel = \relative {
       h8. \slurDown\acciaccatura h8-\markup {
         \postscript #"0.5 -4.6 moveto 2.2 0.5 rlineto stroke"
       }
-      cis16 e8-"IX" d h8.-"VII" cis16 
+      cis16 e8-"IX" d h8.-"VII" cis16
       \once\override StringNumber.extra-offset = #'(-0.3 . -1)
       a4\2
       \set subdivideBeams = ##f

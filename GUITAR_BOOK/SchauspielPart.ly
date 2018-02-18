@@ -9,7 +9,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-markup-spacing.basic-distance = 15
   markup-system-spacing.basic-distance = 25
   top-system-spacing.basic-distance = 30

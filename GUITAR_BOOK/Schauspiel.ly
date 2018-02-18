@@ -33,6 +33,7 @@ schauspiel = \relative {
   >>
   <<
     {
+      \override Slur.positions = #'(0 . 4.2)
       cis'''4( e,)
     }
     \\
@@ -92,7 +93,9 @@ schauspiel = \relative {
   >>
   <<
     {
-      cis4 h8 a fis e
+      %\override TextScript.font-size = -2
+      \fretNumSpan "V"
+      cis4 h8\startTextSpan a fis e\stopTextSpan
     }
     \\
     {
@@ -175,7 +178,9 @@ schauspiel = \relative {
       d'[_(\glissando e,])~ e
     }
   >>
-  \acciaccatura <d a'>8 <e h'>4\fermata
+  \acciaccatura <d a'>8-\markup {
+    \postscript #"0.5 0.3 moveto 2.2 0.4 rlineto stroke"
+  } <e h'>4\fermata
   \bar "||"
   \once \override Script.outside-staff-priority = #100
   cis2~\startTrillSpan\fermata
@@ -247,7 +252,10 @@ schauspiel = \relative {
         e''8.^\markup {\small\musicglyph #"scripts.segno"}
         d16\prall cis a\prall
         \stringNumSpan "3"
-        g\startTextSpan f~ f8\stopTextSpan \slurDown\acciaccatura h, cis~ cis s
+        g\startTextSpan f~ f8\stopTextSpan \slurDown\acciaccatura h,-\markup {
+          \postscript #"3.5 -0.3 moveto 2.2 0.3 rlineto stroke"
+        }
+        cis~ cis s
       }
       \\
       {
@@ -262,7 +270,13 @@ schauspiel = \relative {
     >>
     <<
       {
-        e'''8. d16\prall cis a\prall \glissando fis \slurDown\acciaccatura gis a
+        e'''8. d16\prall cis a\prall-\markup {
+          \postscript #"3.3 -1.2 moveto 2.1 -1 rlineto stroke"
+        }
+        fis \slurDown\acciaccatura gis-\markup {
+          \postscript #"3.5 -0.3 moveto 2.2 0.4 rlineto stroke"
+        }
+        a
       }
       \\
       {
@@ -292,7 +306,10 @@ schauspiel = \relative {
     <<
       {
         e'''8. d16\prall cis a\prall g f~
-        f8 \slurDown\acciaccatura h, cis~ cis s
+        f8 \slurDown\acciaccatura h,-\markup {
+          \postscript #"3.5 -0.3 moveto 2.2 0.3 rlineto stroke"
+        }
+        cis~ cis s
       }
       \\
       {
@@ -391,7 +408,10 @@ schauspiel = \relative {
     \\
     {
       \once\override Beam.positions = #'(-8 . -8.5)
-      g16 e e,32^( f g16)\glissando b8. as16
+      g16 e e,32^( f g16)-\markup {
+        \postscript #"0.8 4 moveto 3 1 rlineto stroke"
+      }
+      b8. as16
     }
     \\
     {
@@ -493,7 +513,10 @@ schauspiel = \relative {
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(2 2 2 2)
-  c d e f g a h\glissando d\fermata
+  c d e f g a h-\markup {
+    \postscript #"0.6 6.7 moveto 2 0.9 rlineto stroke"
+  }
+  d\fermata
   \bar "||"
   <<
     {
@@ -508,7 +531,13 @@ schauspiel = \relative {
     {
       \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
       h16^( gis, h8) h4\rest
-      e'16 cis, e8 cis'16 a\glissando dis, \stemUp\acciaccatura e8 \stemDown fis16
+      e'16 cis, e8 cis'16 a-\markup {
+        \postscript #"1.2 6.6 moveto 3.3 -2 rlineto stroke"
+      }
+      dis, \stemUp\acciaccatura e8-\markup {
+        \postscript #"0.5 4.3 moveto 2.2 0.4 rlineto stroke"
+      }
+      \stemDown fis16
       \shape #'((0 . -4.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
       gis^( h, dis8)
     }
@@ -520,7 +549,10 @@ schauspiel = \relative {
   >>
   <<
     {
-      \slurDown\acciaccatura cis'''8 \glissando dis cis
+      \slurDown\acciaccatura cis'''8-\markup {
+        \postscript #"0.5 -1.5 moveto 3.5 0.3 rlineto stroke"
+      }
+      dis cis
     }
     \\
     {
@@ -540,9 +572,20 @@ schauspiel = \relative {
   <<
     {
       \override TextScript.font-size = -2
-      h'8. \slurDown\acciaccatura h8 cis16 h8.-"V" a16
-      a8.-"II" \slurDown\acciaccatura a8 h16 gis8-"IV" r
-      h8. \slurDown\acciaccatura h8 cis16 e8-"IX" d h8.-"VII" cis16 a4\2
+      h'8. \slurDown\acciaccatura h8-\markup {
+        \postscript #"0.5 -4.6 moveto 2.2 0.5 rlineto stroke"
+      }
+      cis16 h8.-"V" a16
+      a8.-"II" \slurDown\acciaccatura a8-\markup {
+        \postscript #"0.4 -4.3 moveto 2.1 0.3 rlineto stroke"
+      }
+      h16 gis8-"IV" r
+      h8. \slurDown\acciaccatura h8-\markup {
+        \postscript #"0.5 -4.6 moveto 2.2 0.5 rlineto stroke"
+      }
+      cis16 e8-"IX" d h8.-"VII" cis16 
+      \once\override StringNumber.extra-offset = #'(-0.3 . -1)
+      a4\2
       \set subdivideBeams = ##f
       e'8. d16\prall cis a\prall g f~
       \set subdivideBeams = ##t
@@ -561,7 +604,7 @@ schauspiel = \relative {
       \shape #'((0.2 . -4.5) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
       d16\rest^( fis, dis'8) gis32 h, cis dis e fis gis a
       \shape #'((0.5 . -2) (0 . 0) (0.5 . 0) (0 . 0)) Slur
-      d,16\rest^( d f8)
+      e16\rest^( d f8)
       \shape #'((0.2 . -4) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
       f16\rest^( h,8 fis'16)
       \shape #'((0.3 . -3) (-0.5 . -2) (-0.5 . 0) (0 . 0)) Slur
@@ -569,7 +612,7 @@ schauspiel = \relative {
       \set strokeFingerOrientations = #'(up)
       \override StrokeFinger.staff-padding = #'()
       \override StrokeFinger.script-priority = #-100
-      d16\rest^( d gis8) a32 cis,\4\RH #3 h\RH #2 a\5\RH #3
+      d16\rest^( d gis8) a32\RH #4 cis,\4\RH #3 h\RH #2 a\5\RH #3
       \override TupletBracket.bracket-visibility = ##f
       \times 4/6 { gis\RH #2 fis e d\6 cis\RH #1 h\RH #1 }
       \break

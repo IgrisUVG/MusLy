@@ -36,6 +36,19 @@ stringNumSpan =
      \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
    #})
 
+fretNumSpan =
+#(define-music-function (parser location FretNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-2
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #0.5
+     %\override TextSpanner.bound-details.right.arrow = ##t
+     %\override TextSpanner.arrow-width = #0.2
+     %\override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \text #FretNumber }
+   #})
+
 spad = \override Fingering #'staff-padding = #'()
 sfol = \set fingeringOrientations = #'(left)
 sfor = \set fingeringOrientations = #'(right)

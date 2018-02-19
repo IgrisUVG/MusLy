@@ -262,14 +262,20 @@ schauspiel = \relative {
         g\startTextSpan f~ f8\stopTextSpan \slurDown\acciaccatura h,-\markup {
           \postscript #"3.5 -0.3 moveto 2.2 0.3 rlineto stroke"
         }
-        cis~ cis s
+        cis~\4 cis s
       }
       \\
       {
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
         e'16^( cis, e8) cis'16
-        \once\override Fingering.extra-offset = #'(0.2 . 2.5)
-        d,,8-0 a'16~ a e'8^( h16)~ h8 <h' gis'>\noBeam
+        \once\override Fingering.extra-offset = #'(0.2 . 2.4)
+        d,,8-0 
+        \once\override StringNumber.extra-offset = #'(0.6 . 3.7)
+        a'16~_\4 a 
+        \once\override Fingering.extra-offset = #'(0.2 . 4.4)
+        e'8-0^( 
+        \once\override Fingering.extra-offset = #'(0.2 . 2.8)
+        h16-0)~ h8 <h' gis'>\noBeam
       }
       \\
       {
@@ -304,7 +310,10 @@ schauspiel = \relative {
       }
       \\
       {
-        e,16 g,32^( c h16) g32^( c h4)
+        \once\override Fingering.extra-offset = #'(0.2 . 6.1)
+        e,16-0 g,32_\4^( c_\3 
+        \once\override Fingering.extra-offset = #'(0.2 . 4.6)
+        h16-0) g32^( c h4)
       }
       \\
       {
@@ -354,7 +363,8 @@ schauspiel = \relative {
     {
       <<
         {
-          cis'8~ cis32 h\prall a fis
+          \once\override StringNumber.extra-offset = #'(-0.6 . -3.7)
+          cis'8~\4 cis32 h\prall a fis
         }
         \\
         {

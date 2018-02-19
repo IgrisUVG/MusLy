@@ -25,8 +25,9 @@
 
 \layout {
   \context {
-    \PianoStaff
-    \consists #Span_stem_engraver
+    \Voice
+    \override Glissando.thickness = #1.5
+    \override Glissando.gap = #0.1
   }
   %ragged-last = ##t
   %ragged-right = ##f
@@ -35,6 +36,7 @@
 %%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
 \include "guitarScript.ly"
 \include "guitar_AN27.ly"
+\include "guitar_AN27new.ly"
 \include "Scand.ly"
 \include "Schauspiel.ly"
 %%%% VIK
@@ -66,7 +68,8 @@
       }
     }
 
-    \guitarAN
+    %\guitarAN
+    \guitarANnew
 
     \header {
       title = "№ 27"
@@ -78,6 +81,7 @@
         \Score
         \remove "Bar_number_engraver"
       }
+      ragged-last = ##t
     }
   }
 %%%%%%%%%%%%%%%%%% SCHAUSPIEL %%%%%%%%%%%%%%%%%%%

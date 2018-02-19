@@ -187,7 +187,10 @@ vikTema = \relative {
         \\
         {
           \voiceTwo
-          d,,2 e''8 d\glissando b4 d,4\rest g f,8\rest a d_\5 r
+          d,,2 e''8 d-\markup {
+            \postscript #"1 4.4 moveto 3.1 -1 rlineto stroke"
+          }
+          b4 d,4\rest g f,8\rest a d_\5 r
         }
       >>
     }

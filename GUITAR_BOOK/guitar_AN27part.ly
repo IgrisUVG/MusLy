@@ -42,6 +42,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include "guitarScript.ly"
 \include "guitar_AN27.ly"
+\include "guitar_AN27new.ly"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new Staff \with {
@@ -52,5 +53,5 @@
       }
     }
   }
-  \guitarAN
+  \guitarANnew
 }

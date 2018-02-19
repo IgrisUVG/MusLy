@@ -195,7 +195,11 @@ schauspiel = \relative {
   cis32\stopTrillSpan d e
   \once\override TextScript.extra-offset = #'(0 . 2)
   fis^\markup{\italic rit.} gis a h cis
-  d e fis gis a h cis^\markup{\italic {ad lib}} d
+  d e fis gis a h 
+  \tag #'Book {
+    \once\override TextScript.extra-offset = #'(0 . -2)
+  }
+  cis^\markup{\italic {ad lib}} d
   \cadenzaOn
   <<
     {

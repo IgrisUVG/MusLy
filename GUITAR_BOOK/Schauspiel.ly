@@ -612,7 +612,10 @@ schauspiel = \relative {
       \set strokeFingerOrientations = #'(down)
       \override StrokeFinger.staff-padding = #'()
       \override StrokeFinger.script-priority = #-100
-      f32 cis'\RH #4 h\RH #3 a_\2\RH #2 gis\RH #3 fis\RH #2 e_\3 d
+      \override StrokeFinger.extra-offset = #'(0 . 0.3)
+      f32 cis'\RH #4 h\RH #3 
+      \override StringNumber.extra-offset = #'(0 . 0.4)
+      a_\2\RH #2 gis\RH #3 fis\RH #2 e_\3 d
     }
     \\
     {
@@ -641,7 +644,7 @@ schauspiel = \relative {
     \\
     {
       \voiceTwo
-      gis4 a, h e, gis' fis! e a,8 s a2 a4
+      gis4 a, h e, gis' fis! e a,8 s a2 a4->
     }
   >>
   \set subdivideBeams = ##t
@@ -649,7 +652,11 @@ schauspiel = \relative {
   \set beatStructure = #'(2 2 2 2)
   \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
-  cis'32 h_0 a_\3 gis fis e d cis
+  cis'32 
+  \once\override Fingering.extra-offset = #'(0 . 0.4)
+  h_0 
+  \once\override StringNumber.extra-offset = #'(0 . 0.4)
+  a_\3 gis fis e d cis
   <<
     {
       \override TextScript.font-size = -2

@@ -37,6 +37,7 @@
 \include "guitarScript.ly"
 \include "guitar_AN27.ly"
 \include "guitar_AN27new.ly"
+\include "guitar_AN27clear.ly"
 \include "Scand.ly"
 \include "Schauspiel.ly"
 %%%% VIK
@@ -69,7 +70,8 @@
     }
 
     %\guitarAN
-    \guitarANnew
+    %\guitarANnew
+    \guitarANclear
 
     \header {
       title = "№ 27"

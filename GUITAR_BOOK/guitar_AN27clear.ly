@@ -2,7 +2,7 @@
 
 \language "deutsch"
 
-guitarANnew = \relative {
+guitarANclear = \relative {
   \clef "treble_8"
   \key d
   \major
@@ -17,7 +17,7 @@ guitarANnew = \relative {
       <
       \tweak #'duration-log #1 d,
       \tweak #'duration-log #1 a'
-      d\4
+      d
       >16[( fis' a])-\markup {
         \postscript #"0.6 -4.8 moveto 2.6 0.5 rlineto stroke"
       }
@@ -25,14 +25,14 @@ guitarANnew = \relative {
         {
           s
           \once\override StringNumber.extra-offset = #'(-0.4 . -3.2)
-          d\3[( e8]) a-\markup {
+          d[( e8]) a-\markup {
             \postscript #"2.2 -0.7 moveto 5 0.4 rlineto stroke"
           }
           h8.
         }
         \\
         {
-          h,8[ e16]  fis_\2[g( fis])-\markup {
+          h,8[ e16]  fis [g( fis])-\markup {
             \postscript #"1.6 4.8 moveto 2.6 0.5 rlineto stroke"
           }
           a8.
@@ -58,12 +58,12 @@ guitarANnew = \relative {
     \\
     {
       d16 < g,, e' b'> q e'' <g,, fis' a> q
-      \sfod \FO #'0.2 #'4.0 \override Beam.positions = #'(-2 . -2)
+      \override Beam.positions = #'(-2 . -2)
       \once\override StringNumber.extra-offset = #'(0 . 1.7)
-      <g'-1_\3>32 \sfod \FO #'0.2 #'4.5 <a-3> <c^2_\2>^(<h^1>) <a^3_\3> <g^1>
+      <g'>32 <a> <c>^(<h>) <a> <g>
     }
   >>
-  \stemUp \spad <fis_3> e_1 d_\4^4 h-1 a_\5^4 fis^1
+  \stemUp <fis> e d h a fis
   <<
     {
       \mergeDifferentlyHeadedOn
@@ -80,16 +80,16 @@ guitarANnew = \relative {
   >>
   <<
     {
-      g'!8.-4[ fis-3] e4.-0
+      g'!8.[ fis] e4.
     }
     \\
     {
       \override StringNumber.add-stem-support = ##t
-      d,16-0[ h'-0 a_\3] dis,-1[ h' a] e-2[ h' a]
+      d,16[ h' a] dis,[ h' a] e[ h' a]
       \times 6/9 {
-        \spad \override Beam #'positions = #'(-5 . -1)
-        <gis^1>32^( <a^2>) <h^0>^( <cis^1>) <e^4> <fis^1>^( <g^2>)
-        \stemUp \slurDown \acciaccatura a8 \stemDown <h^4>16
+        \override Beam #'positions = #'(-5 . -1)
+        <gis>32^( <a>) <h>^( <cis>) <e> <fis>^( <g>)
+        \stemUp \slurDown \acciaccatura a8 \stemDown <h>16
       }
     }
   >>
@@ -112,7 +112,7 @@ guitarANnew = \relative {
       fis' <a, d> q
     }
     {
-      <a,-0 cis''-4>4.
+      <a, cis''>4.
     }
   >>
   <<
@@ -134,10 +134,10 @@ guitarANnew = \relative {
     }
   >>
   \stemDown
-  <d,, a' d'^3 fis^2 d'^1>8.%^\markup{\fret-diagram #"6-o;5-o;4-12;3-11;2-x;1-10;"}
-  <cis''^2 e'^4>16 <g^1 h'^3><c^2 d'^4>
-  e'32_3\1 d_1 c_2\2 g_3\3 f_2( e_1) <c,-3_\6 g'-4 d'-1>4.%^\markup{\fret-diagram #"6-10;5-10;4-7;3-x;2-x;1-x;"}
-  \stemUp e8.-4
+  <d,, a' d' fis d'>8.%^\markup{\fret-diagram #"6-o;5-o;4-12;3-11;2-x;1-10;"}
+  <cis'' e'>16 <g h'><c d'>
+  e'32 d c g f( e) <c, g' d'>4.%^\markup{\fret-diagram #"6-10;5-10;4-7;3-x;2-x;1-x;"}
+  \stemUp e8.
   <<
     {
       \mergeDifferentlyHeadedOn
@@ -148,12 +148,14 @@ guitarANnew = \relative {
       d,,8.[ e d]
     }
   >>
-  g64_2 a_4 d-2_\5 e-4 fis-1_\4 a-4 h-1_\3 d-4 e-2_\2 fis-4 a-2_\1 h-4
+  g64 a d e fis a h d e fis a h
   <g,, d' g d' g c>4.%^\markup{\fret-diagram #"6-5;5-5;4-5;3-7;2-8;1-8;"}
   <f c' f c' d a'>%^\markup{\fret-diagram #"6-3;5-3;4-3;3-5;2-3;1-5;"}
   <e h' e a cis! g'>2.%^\markup{\fret-diagram #"6-2;5-2;4-2;3-2;2-2;1-3;"}
   \bar ":|."
-  <d a' d a' d fis>4.<dis h' dis a' c fis> \bar "|."\break
+  <d a' d a' d fis>4.<dis h' dis a' c fis>
+  \bar "|."
+  \break
   <<
     \shiftOff
     {
@@ -213,21 +215,21 @@ guitarANnew = \relative {
     }
   >>
   \break
-  h''16-3 g-4 e-1\stemUp h-0 g-0 e-3
+  h''16 g e\stemUp h g e
   <<
     {
       \mergeDifferentlyHeadedOn
       \mergeDifferentlyDottedOn
       \override StrokeFinger.staff-padding = #'()
       \slurDown
-      e,16-2 fis'-4 g-0 b-4( a-3) dis,-1 e-2 d'!-4( c-1) eis,-1 e'!-4( d-2)
-      f-4( e-3) cis-4 h-2 d-1 b-2 a-3 c-2( h-0) g-0( a-2) fis-4 e, fis' g b( a) dis,
-      e-1 e'-4( d-2) g,-0 f'-4( e-2) b-0 c'-4( b-2) e,-3 a-4( g-2)
+      e,16 fis' g b( a) dis, e d'!( c) eis, e'!( d)
+      f( e) cis h d b a c( h) g( a) fis e, fis' g b( a) dis,
+      e e'( d) g, f'( e) b c'( b) e, a( g)
     }
     \\
     {
-      e,,4. <c'_3 e>8.[ <cis_3 eis>] d4._0\break <dis_1 a'>8.[ dis,_1] e4.
-      <cis'_3_\5 e>8.[ <dis_3 g>] <e_3 h'>[ <a_1_\4 e'>]
+      e,,4. <c' e>8.[ <cis eis>] d4.\break <dis a'>8.[ dis,] e4.
+      <cis' e>8.[ <dis g>] <e h'>[ <a e'>]
     }
   >>
   \break

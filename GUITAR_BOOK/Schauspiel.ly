@@ -256,6 +256,7 @@ schauspiel = \relative {
     }
   }
   \mergeDifferentlyDottedOn
+  \override Score.VoltaBracketSpanner.Y-offset = 8
   \repeat volta 3 {
     <<
       {
@@ -395,7 +396,7 @@ schauspiel = \relative {
       e'16-- <gis, h'>-. <a cis'>-. <h d'>-.
     }
   }
-  \once \override Score.RehearsalMark #'extra-offset = #'(0 . -4.1)
+  \once \override Score.RehearsalMark #'extra-offset = #'(0 . 1)
   %\once \override Score.RehearsalMark #'font-size = #1
   \mark \markup { \musicglyph #"scripts.coda" }
   <<

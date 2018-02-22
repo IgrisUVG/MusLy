@@ -243,6 +243,7 @@
   }
 %%%%%%%%%%%%%%% VAR 5 %%%%%%%%%%%%%%%%
   \score {
+    \removeWithTag #'Part
     \vikFunfte
     \header {
       title = ##f

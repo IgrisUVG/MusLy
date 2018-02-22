@@ -229,9 +229,19 @@ vikFunfte = \relative {
       \override TextScript.extra-offset = #'(0 . 1)
       e''2 cis!4.-\markup{\italic rit.}
       \override TextScript.font-size = -5
-      \once\override TextScript.extra-offset = #'(19.6 . 0)
+      \tag #'Part {
+        \once\override TextScript.extra-offset = #'(19.6 . 0)
+      }
+      \tag #'Book {
+        \once\override TextScript.extra-offset = #'(19.2 . 0)
+      }
       d8~-"IV"
-      \once\override TextScript.extra-offset = #'(12.7 . -1)
+      \tag #'Part {
+        \once\override TextScript.extra-offset = #'(12.7 . -1)
+      }
+      \tag #'Book {
+        \once\override TextScript.extra-offset = #'(12.5 . -1)
+      }
       d2-"VII"\fermata
     }
     \\
@@ -247,7 +257,12 @@ vikFunfte = \relative {
       \voiceTwo
       c,,2 g'8\rest a f,8\rest
       \override TextScript.font-size = -5
-      \once\override TextScript.extra-offset = #'(19.9 . 10.3)
+      \tag #'Part {
+        \once\override TextScript.extra-offset = #'(19.9 . 10.3)
+      }
+      \tag #'Book {
+        \once\override TextScript.extra-offset = #'(19.7 . 10.3)
+      }
       a-"V"
       %\stemUp
       \override Stem.length = 6.5

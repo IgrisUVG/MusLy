@@ -195,7 +195,7 @@ schauspiel = \relative {
   cis32\stopTrillSpan d e
   \once\override TextScript.extra-offset = #'(0 . 2)
   fis^\markup{\italic rit.} gis a h cis
-  d e fis gis a h 
+  d e fis gis a h
   \tag #'Book {
     \once\override TextScript.extra-offset = #'(0 . -2)
   }
@@ -212,6 +212,7 @@ schauspiel = \relative {
     {
       \textSpannerDown
       \stringNumSpan "5"
+      \once\override TextSpanner.extra-offset = #'(0 . 1.9)
       a,,2~(\startTextSpan a8.[ b16] h8\glissando e4.)^\fermata\stopTextSpan
       \set harmonicDots = ##t
       a4.\harmonic e,8
@@ -264,6 +265,7 @@ schauspiel = \relative {
         e''8.^\markup {\small\musicglyph #"scripts.segno"}
         d16\prall cis a\prall
         \stringNumSpan "3"
+        \once\override TextSpanner.extra-offset = #'(-0.1 . -3.6)
         g\startTextSpan f~ f8\stopTextSpan \slurDown\acciaccatura h,-\markup {
           \postscript #"3.5 -0.3 moveto 2.2 0.3 rlineto stroke"
         }
@@ -273,13 +275,13 @@ schauspiel = \relative {
       {
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
         e'16^( cis, e8) cis'16
-        \once\override Fingering.extra-offset = #'(0.2 . 2.4)
-        d,,8-0 
-        \once\override StringNumber.extra-offset = #'(0.6 . 3.7)
-        a'16~_\4 a 
-        \once\override Fingering.extra-offset = #'(0.2 . 4.4)
-        e'8-0^( 
-        \once\override Fingering.extra-offset = #'(0.2 . 2.8)
+        \FO #'0.2 #'2.4
+        d,,8-0
+        \SO #'0.6 #'3.7
+        a'16~_\4 a
+        \FO #'0.2 #'4.4
+        e'8-0^(
+        \FO #'0.2 #'2.8
         h16-0)~ h8 <h' gis'>\noBeam
       }
       \\
@@ -315,9 +317,9 @@ schauspiel = \relative {
       }
       \\
       {
-        \once\override Fingering.extra-offset = #'(0.2 . 6.1)
-        e,16-0 g,32_\4^( c_\3 
-        \once\override Fingering.extra-offset = #'(0.2 . 4.6)
+        \FO #'0.2 #'6.1
+        e,16-0 g,32_\4^( c_\3
+        \FO #'0.2 #'4.6
         h16-0) g32^( c h4)
       }
       \\
@@ -368,7 +370,7 @@ schauspiel = \relative {
     {
       <<
         {
-          \once\override StringNumber.extra-offset = #'(-0.6 . -3.7)
+          \SO #'-0.6 #'-3.7
           cis'8~\4 cis32 h\prall a fis
         }
         \\
@@ -401,7 +403,7 @@ schauspiel = \relative {
   \mark \markup { \musicglyph #"scripts.coda" }
   <<
     {
-      \once\override Fingering.extra-offset = #'(-0.2 . -2.5)
+      \FO #'-0.2 #'-2.5
       e'8.-0 d16
     }
     \\
@@ -489,7 +491,7 @@ schauspiel = \relative {
   >>
   <<
     {
-      \once\override StringNumber.extra-offset = #'(-0.5 . -2.8)
+      \SO #'-0.5 #'-2.8
       f'16\3 r r8
     }
     \\
@@ -585,11 +587,11 @@ schauspiel = \relative {
       \set beatStructure = #'(2 2 2 2)
       \override Fingering.staff-padding = #'()
       a,,32
-      \once\override StringNumber.extra-offset = #'(-0.4 . -4.7)
+      \SO #'-0.4 #'-4.7
       h^(\6 cis) d!^0
-      \once\override StringNumber.extra-offset = #'(-0.4 . -3.4)
+      \SO #'-0.4 #'-3.4
       e^(\5 fis)
-      \once\override StringNumber.extra-offset = #'(-0.6 . -2.4)
+      \SO #'-0.6 #'-2.4
       gis^(\4 a)
     }
   >>
@@ -608,18 +610,18 @@ schauspiel = \relative {
         \postscript #"0.5 -4.6 moveto 2.2 0.5 rlineto stroke"
       }
       cis16 e8-"IX" d h8.-"VII" cis16
-      \once\override StringNumber.extra-offset = #'(-0.3 . -1)
+      \SO #'-0.3 #'-1
       a4\2
       \set subdivideBeams = ##f
       e'8. d16\prall cis a\prall g f~
       \set subdivideBeams = ##t
-      \override StringNumber.staff-padding = #'()
+      \npad
       \set strokeFingerOrientations = #'(down)
       \override StrokeFinger.staff-padding = #'()
       \override StrokeFinger.script-priority = #-100
       \override StrokeFinger.extra-offset = #'(0 . 0.3)
-      f32 cis'\RH #4 h\RH #3 
-      \override StringNumber.extra-offset = #'(0 . 0.4)
+      f32 cis'\RH #4 h\RH #3
+      \SO #'0 #'0.4
       a_\2\RH #2 gis\RH #3 fis\RH #2 e_\3 d
     }
     \\
@@ -635,7 +637,7 @@ schauspiel = \relative {
       \shape #'((0.2 . -4) (-1 . -3) (-0.5 . 0) (0 . 0)) Slur
       f16\rest^( h,8 fis'16)
       \shape #'((0.3 . -3) (-0.5 . -2) (-0.5 . 0) (0 . 0)) Slur
-      \override StringNumber.staff-padding = #'()
+      \npad
       \set strokeFingerOrientations = #'(up)
       \override StrokeFinger.staff-padding = #'()
       \override StrokeFinger.script-priority = #-100
@@ -655,12 +657,12 @@ schauspiel = \relative {
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(2 2 2 2)
-  \override Fingering.staff-padding = #'()
-  \override StringNumber.staff-padding = #'()
-  cis'32 
-  \once\override Fingering.extra-offset = #'(0 . 0.4)
-  h_0 
-  \once\override StringNumber.extra-offset = #'(0 . 0.4)
+  \spad
+  \npad
+  cis'32
+  \FO #'0 #'0.4
+  h_0
+  \SO #'0 #'0.4
   a_\3 gis fis e d cis
   <<
     {
@@ -687,7 +689,7 @@ schauspiel = \relative {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
-      \override StringNumber.staff-padding = #'()
+      \npad
       g4 a32 e fis! gis! a h\5 c d
     }
   >>

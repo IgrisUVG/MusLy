@@ -131,5 +131,6 @@
 }
 %%%%%%%%%%%%%%% VAR 5 %%%%%%%%%%%%%%%%
 \score {
+  \removeWithTag #'Book
   \vikFunfte
 }

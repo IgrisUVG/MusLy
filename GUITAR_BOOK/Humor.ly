@@ -168,10 +168,7 @@ humor = \relative {
       r8. gis'16-\markup {
         \postscript #"1 -4.1 moveto 3.2 1.3 rlineto stroke"
       }
-      cis8 h r cis16-\markup {
-        \postscript #"1 -2.8 moveto 2.4 0.9 rlineto stroke"
-      }
-      e <dis gis>4 s16 h' s8
+      cis8 h r cis16 e <dis gis>4 s16 h' s8
     }
     \\
     {
@@ -221,10 +218,7 @@ humor = \relative {
       r8. gis'16-\markup {
         \postscript #"1 -4.1 moveto 3.2 1.3 rlineto stroke"
       }
-      cis8 h r cis16-\markup {
-        \postscript #"1 -2.8 moveto 2.4 0.9 rlineto stroke"
-      }
-      e <dis gis>4 s16 h' s8
+      cis8 h r cis16 e <dis gis>4 s16 h' s8
     }
     \\
     {

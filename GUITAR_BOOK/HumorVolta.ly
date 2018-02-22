@@ -2,7 +2,7 @@
 
 \language "deutsch"
 
-humor = \relative {
+humorVolta = \relative {
   \clef "treble_8"
   \key e \major
   \time 2/4
@@ -130,70 +130,77 @@ humor = \relative {
       r8
     }
   >>
-  <<
-    {
-      g8. fis16
-    }
-    \\
-    {
-      c16\rest d g,8
-    }
-    \\
-    {
-      \voiceTwo
-      dis4
-    }
-  >>
-  <<
-    {
-      dis'4 e8. r16
-    }
-    \\
-    {
-      g,16\rest fis8 s16 g\rest a8 s16
-    }
-    \\
-    {
-      \voiceTwo
-      s8 g s h16 s
-    }
-    \\
-    {
-      \voiceTwo
-      h,8. a16 gis8. <fis fis'>16
-    }
-  >>
-  <<
-    {
-      r8. gis'16-\markup {
-        \postscript #"1 -4.1 moveto 3.2 1.3 rlineto stroke"
+  \repeat volta 3 {
+    <<
+      {
+        g8. fis16
       }
-      cis8 h r cis16 e
-    }
-    \\
+      \\
+      {
+        c16\rest d g,8
+      }
+      \\
+      {
+        \voiceTwo
+        dis4
+      }
+    >>
+    <<
+      {
+        dis'4 e8. r16
+      }
+      \\
+      {
+        g,16\rest fis8 s16 g\rest a8 s16
+      }
+      \\
+      {
+        \voiceTwo
+        s8 g s h16 s
+      }
+      \\
+      {
+        \voiceTwo
+        h,8. a16 gis8. <fis fis'>16
+      }
+    >>
+    <<
+      {
+        r8. gis'16-\markup {
+          \postscript #"1 -4.1 moveto 3.2 1.3 rlineto stroke"
+        }
+        cis8 h r cis16 e
+      }
+      \\
+      {
+        s16 ais,,( h8) s4 gis'16^( a8.)
+      }
+      \\
+      {
+        \voiceTwo
+        <e, e'>4 a8 <gis dis'> fis4
+      }
+    >>
+  }
+  \alternative {
     {
-      s16 ais,,( h8) s4 gis'16^( a8.)
+      <<
+        {
+          <dis'' gis>4 s16 h' s8
+        }
+        \\
+        {
+          g,16\rest\( h cis, dis' fis, h' e,^( fis)\)
+        }
+        \\
+        {
+          \voiceTwo
+          e,,4 s
+        }
+      >>
     }
-    \\
-    {
-      \voiceTwo
-      <e, e'>4 a8 <gis dis'> fis4
-    }
-  >>
-  <<
-    {
-      <dis'' gis>4 s16 h' s8
-    }
-    \\
-    {
-      g,16\rest\( h cis, dis' fis, h' e,^( fis)\)
-    }
-    \\
-    {
-      \voiceTwo
-      e,,4 s
-    }
-  >>
+    \bar ":|."
+    %{
   <<
     {
       g''8. fis16
@@ -244,24 +251,30 @@ humor = \relative {
       <e, e'>4 a8 <gis dis'> fis4
     }
   >>
-  <<
+    %}
     {
-      <dis'' gis>4 s16 h' s8
+      <<
+        {
+          <dis'' gis>4 s16 h' s8
+        }
+        \\
+        {
+          g,16\rest( h cis, dis'
+          \set Score.repeatCommands = #'((volta #f))
+          fis,^\markup{\italic rit.}
+          h')-\markup {
+            \postscript #"0.5 9.8 moveto 2.2 1.2 rlineto stroke"
+          }
+          <h,, g' dis''>8^\fermata
+        }
+        \\
+        {
+          \voiceTwo
+          e,4 s
+        }
+      >>
     }
-    \\
-    {
-      g,16\rest( h cis, dis' fis,^\markup{\italic rit.}
-      h')-\markup {
-        \postscript #"0.5 9.8 moveto 2.2 1.2 rlineto stroke"
-      }
-      <h,, g' dis''>8^\fermata
-    }
-    \\
-    {
-      \voiceTwo
-      e,4 s
-    }
-  >>
+  }
   \bar "||"
   \break
   \override Score.RehearsalMark.extra-offset = #'(0 . .5)

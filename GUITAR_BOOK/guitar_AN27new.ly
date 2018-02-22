@@ -228,6 +228,7 @@ guitarANnew = \relative {
     {
       \mergeDifferentlyHeadedOn
       \mergeDifferentlyDottedOn
+      \spad
       \override StrokeFinger.staff-padding = #'()
       \slurDown
       e,16-2 fis'-4 g-0 b-4( a-3) dis,-1 e-2 d'!-4( c-1) eis,-1 e'!-4( d-2)

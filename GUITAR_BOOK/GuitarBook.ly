@@ -62,6 +62,7 @@
   }
   \markup { \vspace #1 }
 %%%%%%%%%%%%%%%%%%%%%%% AN %%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff \with {
       instrumentName = \markup {
@@ -86,6 +87,7 @@
       ragged-last = ##t
     }
   }
+  %}
 %%%%%%%%%%%%%%%%%% SCHAUSPIEL %%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff
@@ -95,6 +97,7 @@
     \header {
       title = "Schauspiel"
       composer = ##f
+      breakbefore = ##t
     }
     \layout {
       \context {

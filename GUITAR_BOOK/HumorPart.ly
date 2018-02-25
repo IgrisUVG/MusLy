@@ -38,6 +38,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include "guitarScript.ly"
 \include "Humor.ly"
+\include "HumorVolta.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
@@ -45,4 +46,5 @@
     instrumentName = "Guitar"
   }
   \humor
+  %\humorVolta
 }

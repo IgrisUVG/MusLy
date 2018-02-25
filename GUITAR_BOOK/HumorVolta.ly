@@ -65,6 +65,7 @@ humorVolta = \relative {
       cis,8 gis'
     }
   >>
+  %\break
   <<
     {
       cis'16( d cis8) c a
@@ -259,9 +260,9 @@ humorVolta = \relative {
         }
         \\
         {
-          g,16\rest( h cis, dis'
+          g,16\rest( h[ cis,
           \set Score.repeatCommands = #'((volta #f))
-          fis,^\markup{\italic rit.}
+          dis']  fis,^\markup{\italic rit.}
           h')-\markup {
             \postscript #"0.5 9.8 moveto 2.2 1.2 rlineto stroke"
           }

@@ -655,14 +655,35 @@ guitarMusic = \relative {
   >>
   <<
     {
-      e''8\glissando gis\glissando c,\glissando e
+      e''8\glissando
+      \tag #'Part {
+        gis-\markup {
+          \postscript #"1.9 -3 moveto 2.8 -1.2 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        gis-\markup {
+          \postscript #"1.9 -3 moveto 4 -1.3 rlineto stroke"
+        }
+      }
+      c,\glissando e
     }
     \\
     {
       \set glissandoMap = #'((1 . 0))
       <fis,, cis' a'>\glissando
       \unset glissandoMap
-      e'\glissando b g
+      \tag #'Part {
+        e'-\markup {
+          \postscript #"1.5 5.3 moveto 3.2 -0.8 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        e-\markup {
+          \postscript #"1.5 5.3 moveto 4.5 -0.8 rlineto stroke"
+        }
+      }
+      b g
     }
     \\
     {
@@ -691,10 +712,10 @@ guitarMusic = \relative {
         \set baseMoment = #(ly:make-moment 1/8)
         \set beatStructure = #'(2 2 2 2)
         e'16\rest
-        \once\override Slur.positions = #'(3.5 . 3)
+        \once\override Slur.positions = #'(3.3 . 2.8)
         \tag #'Part {
           fis^(-\markup {
-            \postscript #"0.5 7.5 moveto 2.3 -0.5 rlineto stroke"
+            \postscript #"0.7 7.5 moveto 2.3 -0.5 rlineto stroke"
           }
           e)
         }
@@ -705,10 +726,10 @@ guitarMusic = \relative {
           e)
         }
         dis cis h a\rest
-        \once\override Slur.positions = #'(1.5 . 1)
+        \once\override Slur.positions = #'(1.4 . 0.8)
         \tag #'Part {
           h^(-\markup {
-            \postscript #"0.5 7.5 moveto 2.3 -0.5 rlineto stroke"
+            \postscript #"0.8 7.3 moveto 2.3 -0.5 rlineto stroke"
           }
           a)
         }
@@ -886,7 +907,15 @@ guitarMusic = \relative {
     \newSpacingSection
     \revert Score.SpacingSpanner.base-shortest-duration
   }
-  <as, es' \parenthesize as des es c'>4
+  <
+  \tweak AccidentalPlacement.right-padding #-1
+  \tweak Accidental.extra-offset #'(0.8 . 0)
+  as, es' \parenthesize as des 
+  \tweak Accidental.extra-offset #'(-0.7 . 0)
+  es 
+  \tweak Accidental.extra-offset #'(1 . 0)
+  c'
+  >4
   <<
     {
       <b' g' es'>8 <c as'>

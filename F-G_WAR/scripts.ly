@@ -1,3 +1,5 @@
+\version "2.19.15"
+
 slash =
 #(define-music-function (parser location ang stem-fraction protrusion)
    (number? number? number?)
@@ -69,12 +71,56 @@ stringNumberSpanner =
      \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
      \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
    #})
+stringNumberSpannerArrow =
+#(define-music-function (parser location StringNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     \override TextSpanner.bound-details.right.arrow = ##t
+     \override TextSpanner.arrow-width = #0.2
+     \override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
+stringNumSpan =
+#(define-music-function (parser location StringNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     %\override TextSpanner.bound-details.right.arrow = ##t
+     %\override TextSpanner.arrow-width = #0.2
+     %\override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
+
+fretNumSpan =
+#(define-music-function (parser location FretNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-2
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #0.5
+     %\override TextSpanner.bound-details.right.arrow = ##t
+     %\override TextSpanner.arrow-width = #0.2
+     %\override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \text #FretNumber }
+   #})
 
 FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
         #{
           \once \override Voice.Fingering.extra-offset = #(cons offsetX offsetY)
         #})
+
+SO = #(define-music-function (parser location offsetX offsetY)(number? number?)
+        #{
+          \once \override Voice.StringNumber.extra-offset = #(cons offsetX offsetY)
+        #})
+
 #(define RH rightHandFinger)
+
 glissandoSkipOn = {
   \override NoteColumn.glissando-skip = ##t
   \override NoteHead.no-ledgers = ##t

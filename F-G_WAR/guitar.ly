@@ -35,17 +35,17 @@ guitarMusic = \relative {
   <cis e' gis> r r4
   <<
     {
-      \stringNumberSpanner "2"
+      \stringNumSpan "2"
       \textSpannerUp
       \once\override TextSpanner.extra-offset = #'(0 . -0.5)
       \once\override TextSpanner #'(bound-details right padding) = #2
       h'8\startTextSpan <gis, e' h' e>_- r s
       h''16_( a) gis
-      \stringNumberSpanner "3"
+      \stringNumSpan "3"
       \once\override TextSpanner.extra-offset = #'(0.5 . 0)
       \once\override TextSpanner #'(bound-details right padding) = #2
       fis\stopTextSpan\startTextSpan e_( dis)
-      \stringNumberSpanner "4"
+      \stringNumSpan "4"
       \once\override TextSpanner.extra-offset = #'(0.5 . 0.5)
       cis\stopTextSpan\startTextSpan c\stopTextSpan
     }

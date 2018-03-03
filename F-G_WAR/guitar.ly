@@ -501,7 +501,7 @@ guitarMusic = \relative {
       \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
       g''\2 e!2^0
       \revert NoteColumn.force-hshift
-      d4
+      des4
     }
     \\
     {
@@ -509,12 +509,12 @@ guitarMusic = \relative {
       %\tweak Accidental.extra-offset #'(0.5 . 0)
       c8 b4 as
       \once\override NoteColumn.force-hshift = #0.8
-      fis
+      f
     }
     \\
     {
       \voiceTwo
-      <des as'>8 <as es'>4 h! e?
+      <des as'>8 <as es'>4 h! es
     }
   >>
   r8

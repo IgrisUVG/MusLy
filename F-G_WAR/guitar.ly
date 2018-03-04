@@ -574,8 +574,10 @@ guitarMusic = \relative {
       r8 <a,, cis'> r <h fis'>^\markup{\teeny II} r <cis gis'>^\markup{\teeny IV}
       \stemUp
       \once\override Slur.positions = #'(0 . 1)
-      \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
       \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
+      \tag #'Partitur {
+        \shape #'((0 . 0) (1 . 0) (0.5 . 0.5) (0 . 0)) Slur
+      }
       h''8.\2^( a16
       \stemDown
       <e, h' gis'>8)
@@ -588,7 +590,7 @@ guitarMusic = \relative {
     {
       s8
       \once\override Slur.positions = #'(0 . 1)
-      \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
+      %\shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
       h''8.( a16 \stemDown
       <
       \tweak AccidentalPlacement.right-padding #-1
@@ -617,7 +619,9 @@ guitarMusic = \relative {
     {
       s8
       \once\override Slur.positions = #'(0 . 1)
-      \shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
+      \tag #'Partitur {
+        \shape #'((0 . 0) (1 . 0) (0.5 . 0.5) (0 . 0)) Slur
+      }
       h''8.( a16
       \stemDown
       <e, h' gis'>8)<c' a'>
@@ -910,9 +914,9 @@ guitarMusic = \relative {
   <
   \tweak AccidentalPlacement.right-padding #-1
   \tweak Accidental.extra-offset #'(0.8 . 0)
-  as, es' \parenthesize as des 
+  as, es' \parenthesize as des
   \tweak Accidental.extra-offset #'(-0.7 . 0)
-  es 
+  es
   \tweak Accidental.extra-offset #'(1 . 0)
   c'
   >4

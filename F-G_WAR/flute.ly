@@ -98,7 +98,14 @@ fluteMusic = \new Voice \with {
   cis( e cis a gis h gis fis e fis e h) gis( cis h a
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a
   gis cis dis gis) h( cis h fis gis dis cis dis h e h a)
-  gis( h cis e fis gis h cis) dis8( e) eis( fis)
+  gis( h cis e fis gis h cis)
+  \tag #'Part {
+    dis8(
+  }
+  \tag #'Partitur {
+    dis?8(
+  }
+  e) eis( fis)
   h \tuplet 3/2 8 {
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
@@ -114,10 +121,45 @@ fluteMusic = \new Voice \with {
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
     \set stemLeftBeamCount = #1
-    h cis e] a h e) a( gis e cis h fis e dis h)
+    h cis e] a h e) a( gis e
+    \tag #'Part {
+      cis
+    }
+    \tag #'Partitur {
+      cis!
+    }
+    h fis e
+    \tag #'Part {
+      dis
+    }
+    \tag #'Partitur {
+      dis!
+    }
+    h)
     dis( cis ais gis) fis( cis fis h cis fis) h( cis
-    h cis h cis h cis dis cis dis cis h cis)
-    h( gis h a cis a gis h gis fis gis fis
+    h cis h cis h cis dis cis dis
+    \tag #'Part {
+      cis
+    }
+    \tag #'Partitur {
+      cis!
+    }
+    h cis)
+    h( gis h a
+    \tag #'Part {
+      cis
+    }
+    \tag #'Partitur {
+      cis!
+    }
+    a gis h gis fis
+    \tag #'Part {
+      gis
+    }
+    \tag #'Partitur {
+      gis!
+    }
+    fis
     gis fis gis a gis a h cis h cis h cis)
     h( a h a fis a fis e fis e cis e
   }
@@ -173,7 +215,7 @@ fluteMusic = \new Voice \with {
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
     \set beatStructure = #'(2 2 2 2)
-    r16[ b'( as) es f b,]( as) 
+    r16[ b'( as) es f b,]( as)
     \shape #'((0 . -2.5) (-1 . 0) (0 . 2) (0 . -2)) Slur
     es( c' e, as' h,) c( b c b as b as)
     %\once\override Slur.eccentricity = #0.5

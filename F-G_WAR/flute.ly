@@ -224,4 +224,6 @@ fluteMusic = \new Voice \with {
     c' des,( e as g es) b' c,( f g e des) ais( h) d( eis) ais( gis cis) dis,( fis h) cis, ais'(
     g d g,) e'( d c a) f'( c h) a'( gis)
   }
+  \set subdivideBeams = ##f
+  \times 2/3 {r8 e' h} \times 2/3 {a16 cis a} h8 gis \times 2/3 {fis16 h a} gis8 e
 }

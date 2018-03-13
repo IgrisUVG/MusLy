@@ -191,7 +191,7 @@ fluteMusic = \new Voice \with {
   %\override Score.RehearsalMark.extra-offset = #'(4 . 2)
   %\mark "Meno mosso"
   \set subdivideBeams = ##f
-  \override TupletNumber #'transparent = ##f
+  \override TupletNumber.transparent = ##f
   r16 \times 2/3 {h'8[( a) e]} fis16( cis h a)
   gis( cis dis fis8) r16 \acciaccatura {\slashIII h,[( dis gis]} cis)
   r dis \times 2/3 {cis8\prall[( h) fis]} e16( h a gis) fis( h cis e8) r16
@@ -209,8 +209,8 @@ fluteMusic = \new Voice \with {
   }
   %\override Score.RehearsalMark.extra-offset = #'(-2.5 . -2)
   %\mark "Tempo I"
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \override TupletNumber.transparent = ##t
+  \override TupletBracket.bracket-visibility = ##f
   \tuplet 3/2 8 {
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
@@ -225,5 +225,9 @@ fluteMusic = \new Voice \with {
     g d g,) e'( d c a) f'( c h) a'( gis)
   }
   \set subdivideBeams = ##f
-  \times 2/3 {r8 e' h} \times 2/3 {a16 cis a} h8 gis \times 2/3 {fis16 h a} gis8 e
+  \once\override TupletNumber.transparent = ##f
+  \times 2/3 {r8[ e' h]} \times 2/3 {a16 cis a} h8 gis \times 2/3 {fis16 h a}
+  \once\override TupletNumber.transparent = ##f
+  \once\override TupletBracket.bracket-visibility = ##t
+  \times 2/3 {gis4 e8~ e r4}
 }

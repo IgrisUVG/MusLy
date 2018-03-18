@@ -950,5 +950,29 @@ guitarMusic = \relative {
   >>
   <as b' es>8 <des es' as> <es b' f'>4
   <as c es b' es>8 <c, b' es as> r <es des' c'> r <h dis''> r <fis' h ais'>
-  r <c g' e' g><a c' f c'><h fis' dis' a'><e, gis' e' h'>
+  r <c g' e' g><a c' f c'><h fis' dis' a'><e, gis' e' h'> r r
+  <<
+    {
+      <a' e' cis'>8 <fis cis' fis>
+    }
+    \\
+    {
+      a,~ a
+    }
+  >>
+  r r
+  <<
+    {
+      s s <e'' c'>
+    }
+    \\
+    {
+      s <g, c g'>4
+    }
+    \\
+    {
+      \voiceTwo
+      \stemUp c,8~ \stemDown c4
+    }
+  >>
 }

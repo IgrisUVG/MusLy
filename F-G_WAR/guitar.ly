@@ -953,17 +953,17 @@ guitarMusic = \relative {
   r <c g' e' g><a c' f c'><h fis' dis' a'><e, gis' e' h'> r r
   <<
     {
-      <a' e' cis'>8 <fis cis' fis>
+      <a' e' cis'>8 <fis cis' fis>4
     }
     \\
     {
-      a,~ a
+      a,8~ a4
     }
   >>
-  r r
+  r8
   <<
     {
-      s s <e'' c'>
+      s8 s <e'' c'>
     }
     \\
     {

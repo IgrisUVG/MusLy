@@ -172,11 +172,19 @@ fluteMusic = \new Voice \with {
   \tag #'Partitur {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
-  \acciaccatura {\slashI cis16[( cisis dis]} e8) g,
+  \acciaccatura {
+    \slashI cis16[(
+    \tweak Accidental.extra-offset #'(0.3 . 0)
+    cisis dis]
+  } e8) g,
   \tag #'Partitur {
     \once\override Score.GraceSpacing.spacing-increment = #1.3
   }
-  \acciaccatura {\slashI a16[( h c]}
+  \acciaccatura {
+    \slashI a16[( h
+    \tweak Accidental.extra-offset #'(0.2 . 0)
+    c]
+  }
   \tag #'Part { cis8) }
   \tag #'Partitur {
     \tweak Accidental.extra-offset #'(0.4 . 0)

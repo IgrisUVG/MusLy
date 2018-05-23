@@ -205,7 +205,8 @@ guitarTwo = \relative{
   \textSpannerDown
   \stringNumSpan "2"
   e16(\startTextSpan fis) g a h(\stopTextSpan d) a( d) g, d'( h) g
-  e_\3\( c_\4 e fis( g)\) a h c d\glissando( e) h fis\glissando( 
+  \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0.3)) PhrasingSlur
+  e_\3\( c_\4 e fis( g)\) a h c d\glissando( e) h fis\glissando(
   \once\override TextScript.extra-offset = #'(-1 . 0)
   e^"VIII") g c a
   \break
@@ -231,9 +232,18 @@ guitarTwo = \relative{
   >>
   c16( a) g( e) d( h) g( e)
   \break
-  \repeat unfold 4 {
-    es8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
+  es8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
+  \stemDown 
+  \once \override StringNumber.extra-offset = #'(0.6 . 6.2)
+  f,^\4 
+  \once \override StringNumber.extra-offset = #'(0.8 . -0.8)
+  <dis'''\harmonic e\harmonic\3> \stemNeutral
+  \repeat unfold 3 {
+    es,,,8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
     \stemDown f, <dis'''\harmonic e\harmonic> \stemNeutral
   }
-  <d, h'>8[( g d])<c h'>[\(( a') e]\)<a, fis'>( d) <h g'>4
+  \break
+  <d, h'>8^"VII"[( g d])
+  \shape #'((0 . 0.3) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
+  <c h'>^"V"[\(( a') e]\)<a, fis'>^"VII"( d) <h g'>4
 }

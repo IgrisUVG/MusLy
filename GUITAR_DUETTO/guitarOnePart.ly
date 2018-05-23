@@ -17,8 +17,8 @@
   system-system-spacing #'basic-distance = #16
   last-bottom-spacing #'basic-distance = #25
   two-sided = ##t
-  inner-margin = 25
-  outer-margin = 15
+  inner-margin = 20
+  outer-margin = 13
 }
 
 \layout {
@@ -27,11 +27,19 @@
     \remove "Bar_number_engraver"
   }
 }
+
+\include "guitarScript.ly"
 \include "global.ly"
 \include "guitarOne.ly"
+
 \score {
   \new Staff \with {
-    instrumentName = "Guitar I"
+    instrumentName = \markup {
+      \right-column {
+        "Guitar I"
+        \line { \circle 6"= D" }
+      }
+    }
   }
   \guitarOne
 }

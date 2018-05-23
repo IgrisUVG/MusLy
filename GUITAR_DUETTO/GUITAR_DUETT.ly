@@ -20,8 +20,8 @@
   %score-system-spacing.basic-distance = #15
   last-bottom-spacing.basic-distance = #25
   two-sided = ##t
-  inner-margin = 25
-  outer-margin = 15
+  inner-margin = 20
+  outer-margin = 13
 }
 
 \layout {
@@ -33,9 +33,12 @@
   ragged-right = ##f
   ragged-last = ##f
 }
+
+\include "guitarScript.ly"
 \include "global.ly"
 \include "guitarOne.ly"
 \include "guitarTwo.ly"
+
 \score {
   \new StaffGroup = "Guitar" <<
     \new Staff \with {

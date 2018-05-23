@@ -50,9 +50,9 @@ guitarOne =
   \break
   \time 5/4
   \once \override StringNumber.extra-offset = #'(-0.5 . -2.3)
-  <g, g''\2>8[( a' 
+  <g, g''\2>8[( a'
   \once\override Fingering.extra-offset = #'(0 . -4)
-  g-0])<e a'\2>[( c' 
+  g-0])<e a'\2>[( c'
   \once\override Fingering.extra-offset = #'(0 . 3.3)
   g_0])
   \stemUp
@@ -61,12 +61,14 @@ guitarOne =
   <a,_0 e''\4 c'\2>(
   \unset stringNumberOrientations
   \once\override Fingering.extra-offset = #'(-0.2 . -6)
-  g'-0) 
+  g'-0)
   \once \override StringNumber.extra-offset = #'(-0.5 . -3.3)
   a\5( h)
   \stemNeutral
   \time 4/4
-  d4\4 c,\6 h a g8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) 
+  d4\4 c,\6 h a g8[( d' g]) a,[( d a'])(g) e(
+  \break
+  d[)( a' d])
   \once \override StringNumber.extra-offset = #'(-0.5 . -4.5)
   h,\6[( e h'])
   \stemDown a,
@@ -76,14 +78,14 @@ guitarOne =
   g,,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])( a) g\5
   e\5[( h'^"IV" fis]) d\5[\(( a'^"II" e])( fis) d, a'\) d_0 a'_3\glissando( d)
   \once\override Fingering.extra-offset = #'(0 . -4.8)
-  e,-3^"V"( g c) e, d( 
+  e,-3^"V"( g c) e, d(
   \once\override Fingering.extra-offset = #'(0 . -3.5)
-  a'-3) g_0 \appoggiatura a\glissando 
+  a'-3) g_0 \appoggiatura a\glissando
   \once\override Fingering.extra-offset = #'(-2 . -3.5)
-  fis-3 e,( h' fis' g)\acciaccatura fis\glissando 
+  fis-3 e,( h' fis' g)\acciaccatura fis\glissando
   \once \override StringNumber.extra-offset = #'(-2 . -2)
   a\4\noBeam
-  \acciaccatura fis'\glissando 
+  \acciaccatura fis'\glissando
   \once \override StringNumber.extra-offset = #'(-2.8 . -1)
   a\2 <e g><a, fis'>
   <<
@@ -124,6 +126,9 @@ guitarOne =
   e'8\harmonic fis\harmonic[ e\harmonic] h\harmonic[ cis\harmonic\5 a\harmonic\4]
   <<
     {
+      \override TextScript.font-size = -2
+      \override Fingering.staff-padding = #'()
+      \override StringNumber.staff-padding = #'()
       \once \override StringNumber.extra-offset = #'(-0.5 . -2.5)
       fis4\2 e8\noBeam fis[
       \once \override Fingering.extra-offset = #'(0 . -2.5)
@@ -133,7 +138,7 @@ guitarOne =
       \once \override StringNumber.extra-offset = #'(-0.5 . -3.8)
       c!\4
       \once \override Fingering.extra-offset = #'(-0.2 . -5.2)
-      g-0 a4 fis'16 h,( g) e\glissando _( fis) a a' a,\glissando _(
+      g-0 a4-"VII" fis'16_\2 h,_\3( g_0) e\glissando _( fis) a a' a,\glissando _(
       h) g' c, g
     }
     \\
@@ -160,19 +165,107 @@ guitarOne =
     g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
-  \acciaccatura e,\glissando \stemUp g4
+  \stemUp
+  \acciaccatura e,\glissando
+  \once \override StringNumber.extra-offset = #'(-2 . 0)
+  g4_\5
   <f f'>8<g g'>[(<f f'>]) \stemNeutral<c c'><d d'><b b'>
-  <<{c'16_( d, b' f')}\\{<c, c'>4}>>
-  <<{<g' e'>8 es'}\\{s16 \stemUp a,8 s16}\\{\stemDown g16 a es' g}>>
+  <<
+    {
+      c'16_( d, b' f')
+    }
+    \\
+    {
+      <c, c'>4
+    }
+  >>
+  <<
+    {
+      \set fingeringOrientations = #'(left)
+      <g'-0 e'-0>8 es'
+    }
+    \\
+    {
+      s16 \stemUp a,8 s16
+    }
+    \\
+    {
+      \stemDown g16 a_\4 es'-3 g-4
+    }
+  >>
   \stemNeutral
   b,\glissando( c) d f <<{s8. a16}\\{g e\glissando^( f8)}>>
-  <g b>4<f a>8<<{b[( a])}\\{c,4}>><b es>8\noBeam<a f'><g g' b><f a' c>4<g g' b>8<a f' c'>
-  <<{<b es b'>8 s}\\{b16( c) d^( es)}>> g16\glissando( b) d( es)
-  <f, a f'> b c d <es, g es'> a b c <<{des8 s}\\{<f, des'>16 a as g}>> fis f e es
-  <<{<d b'>8 s}\\{d16 f g\glissando^( as)}>> g( f) es d\glissando
-  f8 a,!16( h) c d es f
-  <b, g'>4<g f'>8<<{g'[( f])}\\{as,4}>><es c'>8\noBeam<f d'><c b'>
-  <b c'>[( f' g])<c, es'>[( fis g])\stemUp<d a' g'>( g)\stemNeutral
+  <g b\2>4 <f a>8^"X"
+  <<
+    {
+      b[( a])
+    }
+    \\
+    {
+      c,4
+    }
+  >>
+  \once\override TextScript.extra-offset = #'(-1 . 0)
+  <b es>8\noBeam^"VIII" <a f'><g g' b><f a' c>4<g g' b>8<a f' c'>
+  <<
+    {
+      <b es b'>8 s
+    }
+    \\
+    {
+      b16( c) d^( es)
+    }
+  >>
+  g16\glissando( b) d( es)
+  <f, a f'> b c d <es, g es'> a b c
+  <<
+    {
+      des8 s
+    }
+    \\
+    {
+      <f, des'>16 a^\2 as g
+    }
+  >>
+  fis^\3 f e es
+  <<
+    {
+      <d b'>8 s
+    }
+    \\
+    {
+      d16 f 
+      \once \override Fingering.extra-offset = #'(-0.5 . -1)
+      g^4\glissando^( as)
+    }
+  >>
+  g( f) es d\glissando
+  f8 a,!16^\4( h) c d es f
+  \once\override TextScript.extra-offset = #'(-1 . 0)
+  <b, g'>4^"VIII" <g f'>8
+  <<
+    {
+      g'[( f])
+    }
+    \\
+    {
+      as,4
+    }
+  >>
+  <es c'>8\noBeam
+  \once\override TextScript.extra-offset = #'(-0.8 . 0)
+  <f d'>^"III" <c b'>
+  <b c'>[( f' 
+  \once\override Fingering.extra-offset = #'(0 . -3)
+  g-0])<c, es'>[( fis 
+  \once\override Fingering.extra-offset = #'(0 . -4)
+  g-0])
+  \stemUp
+  \once \override StringNumber.extra-offset = #'(-0.5 . 0.3)
+  <d_\5 a' g'>( 
+  \once \override StringNumber.extra-offset = #'(-2.7 . -1.8)
+  \once \override Fingering.extra-offset = #'(0 . -7.5)
+  g-0\2)\stemNeutral
   g,8[( d' g]) a,[( d a']) e h g4 d8 e4 fis8[ e d]
   g8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
   \stemDown a, <e''\harmonic a\harmonic> \stemNeutral

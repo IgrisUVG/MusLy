@@ -83,16 +83,16 @@ guitarOne =
   e,-3^"V"( g c) e, d(
   \once\override Fingering.extra-offset = #'(0 . -3.5)
   a'-3) g_0 \appoggiatura a-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.2 1.5 moveto 1.5 -1.2 rlineto stroke"
   }
   \once\override Fingering.extra-offset = #'(-2 . -3.5)
   fis-3 e,( h' fis' g)\acciaccatura fis-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.5 0.4 moveto 2.3 1 rlineto stroke"
   }
   \once \override StringNumber.extra-offset = #'(-2 . -2)
   a\4\noBeam
   \acciaccatura fis'-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.5 3.9 moveto 2.3 1 rlineto stroke"
   }
   \once \override StringNumber.extra-offset = #'(-2.8 . -1)
   a\2 <e g><a, fis'>
@@ -124,7 +124,7 @@ guitarOne =
       \hideNotes d,,16(\unHideNotes
       e'^1[ g d'^3])~
       d8-\markup {
-        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+        \postscript #"1.4 4 moveto 1.9 1 rlineto stroke"
       }[ a'\2]
     }
     \\
@@ -150,9 +150,9 @@ guitarOne =
       c!\4
       \once \override Fingering.extra-offset = #'(-0.2 . -5.2)
       g-0 a4-"VII" fis'16_\2 h,_\3( g_0) e-\markup {
-        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+        \postscript #"0.6 -7.4 moveto 2 0.5 rlineto stroke"
       } _( fis) a a' a,-\markup {
-        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+        \postscript #"0.6 -7.6 moveto 2 0.5 rlineto stroke"
       } _(
       h) g' c, g
     }

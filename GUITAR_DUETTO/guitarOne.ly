@@ -76,16 +76,24 @@ guitarOne =
   <e''\harmonic\5 a\harmonic\4> \stemNeutral
   \unset stringNumberOrientations
   g,,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])( a) g\5
-  e\5[( h'^"IV" fis]) d\5[\(( a'^"II" e])( fis) d, a'\) d_0 a'_3\glissando( d)
+  e\5[( h'^"IV" fis]) d\5[\(( a'^"II" e])( fis) d, a'\) d_0 a'_3-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }( d)
   \once\override Fingering.extra-offset = #'(0 . -4.8)
   e,-3^"V"( g c) e, d(
   \once\override Fingering.extra-offset = #'(0 . -3.5)
-  a'-3) g_0 \appoggiatura a\glissando
+  a'-3) g_0 \appoggiatura a-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }
   \once\override Fingering.extra-offset = #'(-2 . -3.5)
-  fis-3 e,( h' fis' g)\acciaccatura fis\glissando
+  fis-3 e,( h' fis' g)\acciaccatura fis-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }
   \once \override StringNumber.extra-offset = #'(-2 . -2)
   a\4\noBeam
-  \acciaccatura fis'\glissando
+  \acciaccatura fis'-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }
   \once \override StringNumber.extra-offset = #'(-2.8 . -1)
   a\2 <e g><a, fis'>
   <<
@@ -115,7 +123,9 @@ guitarOne =
       c,,( d g e') h,( d g d') a,( d g cis)
       \hideNotes d,,16(\unHideNotes
       e'^1[ g d'^3])~
-      d8\glissando[ a'\2]
+      d8-\markup {
+        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+      }[ a'\2]
     }
     \\
     {
@@ -139,13 +149,19 @@ guitarOne =
       \once \override StringNumber.extra-offset = #'(-0.5 . -3.8)
       c!\4
       \once \override Fingering.extra-offset = #'(-0.2 . -5.2)
-      g-0 a4-"VII" fis'16_\2 h,_\3( g_0) e\glissando _( fis) a a' a,\glissando _(
+      g-0 a4-"VII" fis'16_\2 h,_\3( g_0) e-\markup {
+        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+      } _( fis) a a' a,-\markup {
+        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+      } _(
       h) g' c, g
     }
     \\
     {
       \override Fingering.staff-padding = #'()
-      gis16( a) g^0 a fis g^0 a_\4
+      gis16( a) g^0 a fis g^0
+      \once \override StringNumber.extra-offset = #'(-0.5 . 0)
+      a_\4
       \textSpannerDown
       \stringNumSpan "3"
       \once\override TextSpanner.extra-offset = #'(0 . 0.6)
@@ -168,7 +184,9 @@ guitarOne =
   }
   \break
   \stemUp
-  \acciaccatura e,\glissando
+  \acciaccatura e,-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }
   \once \override StringNumber.extra-offset = #'(-2.8 . 0.3)
   g4_\5
   <f f'>8<g g'>[(<f f'>]) \stemNeutral<c c'><d d'><b b'>
@@ -197,7 +215,20 @@ guitarOne =
     }
   >>
   \stemNeutral
-  b,\glissando( c) d f <<{s8. a16}\\{g e\glissando^( f8)}>>
+  b,-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }( c) d f
+  <<
+    {
+      s8. a16
+    }
+    \\
+    {
+      g e-\markup {
+        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+      }^( f8)
+    }
+  >>
   <g b\2>4 <f a>8^"X"
   <<
     {
@@ -221,7 +252,9 @@ guitarOne =
       b16( c) d^( es)
     }
   >>
-  g16\glissando( b) d( es)
+  g16-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }( b) d( es)
   <f, a f'> b c d <es, g es'> a b c
   <<
     {
@@ -239,12 +272,16 @@ guitarOne =
     }
     \\
     {
-      d16 f 
+      d16 f
       \once \override Fingering.extra-offset = #'(-0.5 . -1)
-      g^4\glissando^( as)
+      g^4-\markup {
+        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+      }^( as)
     }
   >>
-  g( f) es d\glissando
+  g( f) es d-\markup {
+    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+  }
   f8 a,!16^\4( h) c d es f
   \once\override TextScript.extra-offset = #'(-1 . 0)
   <b, g'>4^"VIII" <g f'>8
@@ -260,14 +297,14 @@ guitarOne =
   <es c'>8\noBeam
   \once\override TextScript.extra-offset = #'(-0.8 . 0)
   <f d'>^"III" <c b'>
-  <b c'>[( f' 
+  <b c'>[( f'
   \once\override Fingering.extra-offset = #'(0 . -3)
-  g-0])<c, es'>[( fis 
+  g-0])<c, es'>[( fis
   \once\override Fingering.extra-offset = #'(0 . -4)
   g-0])
   \stemUp
   \once \override StringNumber.extra-offset = #'(-0.5 . 0.3)
-  <d_\5 a' g'>( 
+  <d_\5 a' g'>(
   \once \override StringNumber.extra-offset = #'(-3.7 . -1.6)
   \once \override Fingering.extra-offset = #'(0 . -7.5)
   g-0\2)\stemNeutral

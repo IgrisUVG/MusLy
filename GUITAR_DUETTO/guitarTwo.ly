@@ -1,3 +1,10 @@
+\version "2.19.15"
+
+\language "deutsch"
+
+\include "guitarScript.ly"
+\include "global.ly"
+
 guitarTwo = \relative{
   \global
   \override Staff.TimeSignature #'stencil = ##f
@@ -233,11 +240,22 @@ guitarTwo = \relative{
   c16( a) g( e) d( h) g( e)
   \break
   es8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
-  \stemDown 
-  \once \override StringNumber.extra-offset = #'(0.6 . 6.2)
-  f,^\4 
-  \once \override StringNumber.extra-offset = #'(0.8 . -0.8)
-  <dis'''\harmonic e\harmonic\3> \stemNeutral
+  <<
+    {
+      \voiceTwo
+      \hideNotes
+      s
+      \once \override StringNumber.extra-offset = #'(-1.8 . -2.8)
+      c'\4
+      \unHideNotes
+    }
+    \\
+    {
+      f,,,
+      \once \override StringNumber.extra-offset = #'(0.8 . -0.8)
+      <dis'''\harmonic e\harmonic\3> \stemNeutral
+    }
+  >>
   \repeat unfold 3 {
     es,,,8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
     \stemDown f, <dis'''\harmonic e\harmonic> \stemNeutral

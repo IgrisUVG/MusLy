@@ -169,7 +169,7 @@ guitarOne =
   \break
   \stemUp
   \acciaccatura e,\glissando
-  \once \override StringNumber.extra-offset = #'(-2 . 0)
+  \once \override StringNumber.extra-offset = #'(-2.8 . 0.3)
   g4_\5
   <f f'>8<g g'>[(<f f'>]) \stemNeutral<c c'><d d'><b b'>
   <<
@@ -271,14 +271,6 @@ guitarOne =
   \once \override StringNumber.extra-offset = #'(-3.7 . -1.6)
   \once \override Fingering.extra-offset = #'(0 . -7.5)
   g-0\2)\stemNeutral
-  g,8[( d' g]) a,[( d a']) e h g4 d8 e4 fis8[ e d]
-  g8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
-  \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
-  \time 5/4
-  <g,, g''>8[( a' g])<e a'>[( c' g])
-  \stemUp
-  <a, e'' c'>( g') a( h)
-  \stemNeutral
   \time 4/4
   \repeat unfold 4 {
     g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])

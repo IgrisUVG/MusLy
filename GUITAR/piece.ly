@@ -4,6 +4,7 @@
 
 \header {
   title = "N"
+  meter = "Allegretto"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -77,17 +78,63 @@ stringNumSpan =
 global = {
   %\key d \major
   \time 4/4
+  \override Staff.TimeSignature.stencil = ##f
 }
 
 classicalGuitar = \relative {
   \global
   <<
     {
-      d''32 d d d as d d d g, d' d d e, d' d d r8 <a cis> r <g b>
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2 2)
+      \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
+      d''32\RH #1 d\RH #2 d\RH #3 d\RH #4 as d d d g, d' d d e, d' d d 
+      a, d' d d <a cis>8-.\noBeam r <g b>-.
     }
     \\
     {
       d8\rest as' g e <fis, a>4 cis
+    }
+  >>
+  <<
+    {
+      f'!32 c'!\2 c c as c c c g c c c cis, c'! c c
+    }
+    \\
+    {
+      f,8 as g cis,
+    }
+    \\
+    {
+      \voiceTwo
+      e,4\harmonic s
+    }
+  >>
+  b'16 as, d f h es fis8
+  <<
+    {
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2 2)
+      as32 as as as ges as as as f as as as c, as' as as 
+      g, as' as as <es g>8-.\noBeam r e
+    }
+    \\
+    {
+      h8\rest ges' f c 
+      \once\override Fingering.extra-offset = #'(-0.5 . -3)
+      <e, g!-0>4
+    }
+  >>
+  <<
+    {
+      fis'32 fis fis fis fis fis fis fis 
+      fis fis fis fis fis fis fis fis
+    }
+    \\
+    {
+      
     }
   >>
 }

@@ -90,11 +90,11 @@ classicalGuitar = \relative {
       \set beatStructure = #'(2 2 2 2)
       \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
       d''32\RH #1 d\RH #2 d\RH #3 d\RH #4 as d d d g, d' d d e, d' d d 
-      a, d' d d <a cis>8-.\noBeam r <g b>-.
+      b, d' d d <a cis>8-.\noBeam r <g b>-.
     }
     \\
     {
-      d8\rest as' g e <fis, a>4 cis
+      d8\rest as' g e <g, b>4 cis,
     }
   >>
   <<
@@ -111,25 +111,25 @@ classicalGuitar = \relative {
       e,4\harmonic s
     }
   >>
-  b'16 as, d f h es fis8
+  b'16 as, d f b( h) e8
   <<
     {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
       as32 as as as ges as as as f as as as c, as' as as 
-      g, as' as as <es g>8-.\noBeam r e
+      g, as' as as <es g>8-.\noBeam r <c e>
     }
     \\
     {
       h8\rest ges' f c 
       \once\override Fingering.extra-offset = #'(-0.5 . -3)
-      <e, g!-0>4
+      <e, g!-0>4 b
     }
   >>
   <<
     {
-      fis'32 fis fis fis fis fis fis fis 
+      fis''32 fis fis fis fis fis fis fis 
       fis fis fis fis fis fis fis fis
     }
     \\

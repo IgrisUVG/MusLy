@@ -88,22 +88,32 @@ classicalGuitar = \relative {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
-      \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
-      d''32\RH #1 d\RH #2 d\RH #3 d\RH #4 as d d d g, d' d d e, d' d d 
+      \override StrokeFinger.extra-offset = #'(-2.3 . 0.8)
+      d''32\RH #1 d\RH #2 d\RH #3 d\RH #4 as d d d d d d d e, d' d d
       b, d' d d <a cis>8-.\noBeam r <g b>-.
     }
     \\
     {
-      d8\rest as' g e <g, b>4 cis,
+      d8\rest as'( g4) <g, b>4 cis,
+    }
+    \\
+    {
+      \voiceTwo
+      s4. e'8 s2
     }
   >>
   <<
     {
-      f'!32 c'!\2 c c as c c c g c c c cis, c'! c c
+      f!32 c'!\2 c c as c c c c c c c cis, c'! c c
     }
     \\
     {
-      f,8 as g cis,
+      f,8 as( g4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. cis,8
     }
     \\
     {
@@ -111,30 +121,51 @@ classicalGuitar = \relative {
       e,4\harmonic s
     }
   >>
-  b'16 as, d f b( h) e8
+  b'16-\markup {
+    \postscript #"1.2 2.2 moveto 4.5 -2.5 rlineto stroke"
+  } as,\( d f b( h) e8\)
   <<
     {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
-      as32 as as as ges as as as f as as as c, as' as as 
+      as32 as as as ges as as as as as as as c, as' as as
       g, as' as as <es g>8-.\noBeam r <c e>
     }
     \\
     {
-      h8\rest ges' f c 
+      h8\rest ges'( f4)
       \once\override Fingering.extra-offset = #'(-0.5 . -3)
       <e, g!-0>4 b
+    }
+    \\
+    {
+      \voiceTwo
+      s4. c'8 s2
     }
   >>
   <<
     {
-      fis''32 fis fis fis fis fis fis fis 
-      fis fis fis fis fis fis fis fis
+      \override TextScript.font-size = -2
+      \once\override TextScript.extra-offset = #'(-0.5 . -1.5)
+      d32^"II" fis fis fis fis fis fis fis
+      a, fis' fis fis f,! fis'! fis fis
     }
     \\
     {
-      
+      d8( cis4) s8
+    }
+    \\
+    {
+      \voiceTwo
+      \hideNotes
+      \shape #'((0.8 . 0.3) (0 . 0) (0 . 0) (0 . 0)) Slur
+      d4(\unHideNotes a8 f)
+    }
+    \\
+    {
+      \voiceTwo
+      c!2
     }
   >>
 }

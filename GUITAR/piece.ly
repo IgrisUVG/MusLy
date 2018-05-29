@@ -122,7 +122,7 @@ classicalGuitar = \relative {
     }
   >>
   b'16-\markup {
-    \postscript #"1.2 2.2 moveto 4.5 -2.5 rlineto stroke"
+    \postscript #"1.2 2.2 moveto 3.6 -2.5 rlineto stroke"
   } as,\( d f b( h) e8\)
   <<
     {

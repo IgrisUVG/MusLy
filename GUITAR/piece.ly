@@ -81,6 +81,16 @@ global = {
   \override Staff.TimeSignature.stencil = ##f
 }
 
+ossia = \relative {
+  \set Staff.fontSize = #-3
+  \override Staff.StaffSymbol.staff-space = #(magstep -3)
+  \override Staff.StaffSymbol.thickness = #(magstep -3)
+  \global
+  d''2~ d8 cis-. r   b-. c!2 r as~ as8 g-. r e fis2 r
+  b~    b8   a-. r fis-. as2 r
+  %a8 c-. r es h2~ h8
+}
+
 classicalGuitar = \relative {
   \global
   <<
@@ -150,33 +160,39 @@ classicalGuitar = \relative {
       \once\override TextScript.extra-offset = #'(-0.5 . -1.5)
       d32^"II" fis fis fis fis fis fis fis
       a, fis' fis fis f,! fis'! fis fis
+      e, g' g g b, gis' gis gis cis, gis' gis gis a a a a
     }
     \\
     {
-      d8( cis4) s8
+      d,8( cis4) s8
     }
     \\
     {
       \voiceTwo
       \hideNotes
       \shape #'((0.8 . 0.3) (0 . 0) (0 . 0) (0 . 0)) Slur
-      d4(\unHideNotes a8 f)
+      d4(\unHideNotes a8 f) e( b' cis4)
     }
     \\
     {
       \voiceTwo
-      c!2
+      c,!1
     }
   >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
-  \new Staff \with {
-    instrumentName = "Guitar"
-  }
-  {
-    \clef "treble_8" \classicalGuitar
-  }
-  \layout { }
+  \new StaffGroup<<
+
+    \new Staff \ossia
+
+    \new Staff \with {
+      instrumentName = "Guitar"
+    }
+    {
+      \clef "treble_8" \classicalGuitar
+    }
+
+  >>
 }

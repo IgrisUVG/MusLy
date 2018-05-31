@@ -179,6 +179,22 @@ classicalGuitar = \relative {
       c,!1
     }
   >>
+  <<
+    {
+      \once\override TextScript.extra-offset = #'(-0.7 . -1.5)
+      b''32^"IV" b b b e, b' b b b b b b h,! b'! b b
+      fis, b' b b <f! a>8-.\noBeam r <d fis>-.
+    }
+    \\
+    {
+      r8 e( es4) <d, fis> as
+    }
+    \\
+    {
+      \voiceTwo
+      s4. h'8 s2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

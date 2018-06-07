@@ -87,7 +87,7 @@ ossia = \relative {
   \override Staff.StaffSymbol.thickness = #(magstep -3)
   \global
   d''2~ d8 cis-. r   b-. c!2 r as~ as8 g-. r e fis2 r
-  b~    b8   a-. r fis-. as2 r
+  b~    b8   a-. r fis-. as2 r f~   f8 e-. r d  es2 r
   %a8 c-. r es h2~ h8
 }
 
@@ -217,13 +217,31 @@ classicalGuitar = \relative {
   c16-\markup {
     \postscript #"1.7 1.2 moveto 3.5 1 rlineto stroke"
   } h!_\6\( es b'! c( cis) g'8\)
+  <<
+    {
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2 2)
+      f32 f f f d f f f f f f f a, f' f f
+      d, f' f f <cis e>8-.\noBeam r <b d>-.
+    }
+    \\
+    {
+      r8 d( cis4) <h, d> f
+    }
+    \\
+    {
+      \voiceTwo
+      s4. a'8 s2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
 
-    %\new Staff \ossia
+    \new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

@@ -187,7 +187,7 @@ classicalGuitar = \relative {
     }
     \\
     {
-      r8 e( es4) <d, fis> gis,
+      d8\rest e( es4) <d, fis> gis,
     }
     \\
     {
@@ -227,12 +227,29 @@ classicalGuitar = \relative {
     }
     \\
     {
-      r8 d( cis4) <h, d> f
+      h8\rest d( cis4) <h, d> f
     }
     \\
     {
       \voiceTwo
       s4. a'8 s2
+    }
+  >>
+  <<
+    {
+      es'32 es es es es es es es es es es es es es es es
+    }
+    \\
+    {
+      
+    }
+    \\
+    {
+      
+    }
+    \\
+    {
+      
     }
   >>
 }
@@ -241,7 +258,7 @@ classicalGuitar = \relative {
 \score {
   \new StaffGroup<<
 
-    \new Staff \ossia
+    %\new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

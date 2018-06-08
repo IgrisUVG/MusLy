@@ -217,6 +217,7 @@ classicalGuitar = \relative {
   c16-\markup {
     \postscript #"1.7 1.2 moveto 3.5 1 rlineto stroke"
   } h!_\6\( es b'! c( cis) g'8\)
+  \break
   <<
     {
       \set subdivideBeams = ##t
@@ -235,21 +236,27 @@ classicalGuitar = \relative {
       s4. a'8 s2
     }
   >>
+  \mergeDifferentlyHeadedOn
   <<
     {
-      es'32 es es es es es es es es es es es es es es es
+      h32 es es es es es es es es es es es es es es es
+      gis,, d'' d d d d d d d d d d cis cis cis cis
     }
     \\
     {
-      
+      h8( b4) s8 s4 a
     }
     \\
     {
-      
+      \voiceTwo
+      \hideNotes
+      \shape #'((0.8 . 0.3) (0 . 0) (0 . 0) (0 . 0)) Slur
+      h4(\unHideNotes fis8 d) s8 fis4.
     }
     \\
     {
-      
+      \voiceTwo
+      a,2 gis
     }
   >>
 }

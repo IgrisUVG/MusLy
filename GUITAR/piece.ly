@@ -237,10 +237,11 @@ classicalGuitar = \relative {
     }
   >>
   \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
   <<
     {
       h32 es es es es es es es es es es es es es es es
-      gis,, d'' d d d d d d d d d d cis cis cis cis
+      gis,, d'' d d fis, d' d d a d d d cis cis cis cis
     }
     \\
     {

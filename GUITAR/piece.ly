@@ -250,7 +250,7 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       \hideNotes
-      \shape #'((0.8 . 0.3) (0 . 0) (0 . 0) (0 . 0)) Slur
+      \shape #'((0.8 . 0.5) (0 . 0) (0 . 0) (0 . 0)) Slur
       h4(\unHideNotes fis8 d) s8 fis4.
     }
     \\

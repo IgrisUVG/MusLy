@@ -86,9 +86,15 @@ ossia = \relative {
   \override Staff.StaffSymbol.staff-space = #(magstep -3)
   \override Staff.StaffSymbol.thickness = #(magstep -3)
   \global
-  d''2~ d8 cis-. r   b-. c!2 r as~ as8 g-. r e fis2 r
-  b~    b8   a-. r fis-. as2 r f~   f8 e-. r d  es2 r
-  %a8 c-. r es h2~ h8
+  d''2~ d8 cis-. r b-. c!2 r
+  \break
+  as~ as8 g-. r e fis2 r
+  \break
+  b~ b8 a-. r fis-. as2 r
+  \break
+  f~ f8 e-. r d es2 d'4.( cis8)
+  \break
+  b4 f' e4. b'8
 }
 
 classicalGuitar = \relative {
@@ -99,7 +105,7 @@ classicalGuitar = \relative {
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
       \override StrokeFinger.extra-offset = #'(-2.3 . 0.8)
-      d''32\RH #1 d\RH #2 d\RH #3 d\RH #4 as d d d d d d d e, d' d d
+      d''32\RH #1 d\RH #4 d\RH #3 d\RH #2 as d d d d d d d e, d' d d
       b, d' d d <a cis>8-.\noBeam r <g b>-.
     }
     \\
@@ -228,7 +234,9 @@ classicalGuitar = \relative {
     }
     \\
     {
-      h8\rest d( cis4) <h, d> f
+      h8\rest d( cis4)
+      \once\override Fingering.extra-offset = #'(-0.3 . -4.2)
+      <h, d-0> f
     }
     \\
     {
@@ -240,24 +248,61 @@ classicalGuitar = \relative {
   \mergeDifferentlyDottedOn
   <<
     {
-      h32 es es es es es es es es es es es es es es es
+      h32 es es es es es es es fis, es' es es es es es es
       gis,, d'' d d fis, d' d d a d d d cis cis cis cis
     }
     \\
     {
-      h8( b4) s8 s4 a
+      h!8\3( b4) s8 s4 a
     }
     \\
     {
       \voiceTwo
       \hideNotes
-      \shape #'((0.8 . 0.5) (0 . 0) (0 . 0) (0 . 0)) Slur
+      \shape #'((1 . 0.8) (0 . 0) (0 . 0) (0 . 0)) Slur
       h4(\unHideNotes fis8 d) s8 fis4.
     }
     \\
     {
       \voiceTwo
       a,2 gis
+    }
+  >>
+  <<
+    {
+      s8 <cis' a'> s <gis' h!> s <h,! d'>
+    }
+    \\
+    {
+      \voiceOne
+      g,32[ b' b b]
+      \voiceTwo
+      \override StrokeFinger.extra-offset = #'(-1.3 . 1.5)
+      b\RH #1 b\RH #2 b\RH #4 b\RH #3 (\glissando
+      \voiceOne
+      \override StrokeFinger.extra-offset = #'(-1.3 . -1.2)
+      f')[ f\RH #4 f\RH #3 f\RH #2 ]
+      \voiceTwo
+      f f f f(\glissando
+      \voiceOne
+      e)[ e e e]
+      \voiceTwo
+      \override StrokeFinger.extra-offset = #'(-1.3 . 1.5)
+      h e\RH #2 e\RH #4 e\RH #3
+    }
+    \\
+    {
+      \voiceTwo
+      g,,!4 e b'
+    }
+  >>
+  <<
+    {
+      c32 e' e e <ges b>8-.\noBeam
+    }
+    \\
+    {
+      c,,4
     }
   >>
 }

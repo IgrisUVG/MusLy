@@ -110,7 +110,9 @@ classicalGuitar = \relative {
     }
     \\
     {
-      d8\rest as'( g4) <g, b>4 cis,
+      d8\rest as'( g4)
+      \once\override Fingering.extra-offset = #'(0.3 . 1)
+      <g,_0 b>4 cis,
     }
     \\
     {

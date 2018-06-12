@@ -94,7 +94,7 @@ ossia = \relative {
   \break
   f~ f8 e-. r d es2 d'4.( cis8)
   \break
-  b4 f' e4. b'8 g2~ g8 fis-. r es-.
+  b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as
 }
 
 classicalGuitar = \relative {
@@ -272,7 +272,9 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      s8 <cis' a'> s <gis' h!> s <h,! d'>
+      s8 <cis' a'> s <gis' h!> s 
+      \once\override Fingering.extra-offset = #'(1.2 . 2.9)
+      <h,!_0 d'>
     }
     \\
     {
@@ -290,7 +292,7 @@ classicalGuitar = \relative {
       e)[ e e e]
       \voiceTwo
       \override StrokeFinger.extra-offset = #'(-1.3 . 1.5)
-      h e\RH #2 e\RH #4 e\RH #3
+      e\RH #1 e\RH #2 e\RH #4 e\RH #3
     }
     \\
     {
@@ -320,6 +322,31 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       s4. h'8 s2
+    }
+  >>
+  <<
+    {
+      b32 f' f f des f f f f f f f fis, f'! f f
+      dis, gis' gis gis g,! gis'! gis gis h, gis' gis gis fis gis gis gis
+    }
+    \\
+    {
+      s2. s8 fis
+    }
+    \\
+    {
+      \voiceTwo
+      b,8 des( c4) s h
+    }
+    \\
+    {
+      \voiceTwo
+      s4. fis4 g4.
+    }
+    \\
+    {
+      \voiceTwo
+      a,2 dis
     }
   >>
 }

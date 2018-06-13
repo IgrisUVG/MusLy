@@ -349,6 +349,21 @@ classicalGuitar = \relative {
       a,2 dis
     }
   >>
+  <<
+    {
+      g'!32\2 g g g cis, g' g g g g g g a, g' g g
+      es, g' g g <d fis>8-.\noBeam r <c es>-.
+    }
+    \\
+    {
+      h8\rest cis( c4) es, h
+    }
+    \\
+    {
+      \voiceTwo
+      s4. a'8 s2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

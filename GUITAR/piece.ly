@@ -367,22 +367,27 @@ classicalGuitar = \relative {
   <<
     {
       f'!32 f f f f, f' f f f f f f f, f' f f
-      e, e' e e e e e e e e e e e e e e
+      e, e' e e e\harmonic e e e e\harmonic e e e e\harmonic e e e
     }
     \\
     {
+      %\override NoteColumn.force-hshift = #0.2
       e!4 e
+      %\revert NoteColumn.force-hshift
     }
     \\
     {
       \voiceTwo
-      s8 f, e f
+      s8 f, 
+      \once \override NoteColumn.force-hshift = #-0.4
+      e f
     }
     \\
     {
       \voiceTwo
+      \once \override NoteColumn.force-hshift = #-0.4
       d4 
-      \once \override NoteColumn.force-hshift = #1.2
+      %\once \override NoteColumn.force-hshift = #1.2
       d
     }
   >>

@@ -351,17 +351,39 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      g'!32\2 g g g cis, g' g g g g g g a, g' g g
+      g'!32\2 g g g des g g g g g g g a, g' g g
       es, g' g g <d fis>8-.\noBeam r <c es>-.
     }
     \\
     {
-      h8\rest cis( c4) es, h
+      h8\rest des( c4) es, h
     }
     \\
     {
       \voiceTwo
       s4. a'8 s2
+    }
+  >>
+  <<
+    {
+      f'!32 f f f f, f' f f f f f f f, f' f f
+      e, e' e e e e e e e e e e e e e e
+    }
+    \\
+    {
+      e!4 e
+    }
+    \\
+    {
+      \voiceTwo
+      s8 f, e f
+    }
+    \\
+    {
+      \voiceTwo
+      d4 
+      \once \override NoteColumn.force-hshift = #1.2
+      d
     }
   >>
 }

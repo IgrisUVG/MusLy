@@ -376,6 +376,7 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
+      \once\override NoteColumn.force-hshift = #0.2
       <d e'>2 e2
     }
   >>

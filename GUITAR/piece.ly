@@ -272,7 +272,7 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      s8 <cis' a'> s <gis' h!> s 
+      s8 <cis' a'> s <gis' h!> s
       \once\override Fingering.extra-offset = #'(1.2 . 2.9)
       <h,!_0 d'>
     }
@@ -388,11 +388,28 @@ classicalGuitar = \relative {
     }
     \\
     {
-      
+      s8 h\harmonic s a'\harmonic s e,4 e8
+      s a'\harmonic gis\harmonic a\harmonic
     }
     \\
     {
-      
+      \voiceTwo
+      a,,4 d e, e''\harmonic a,,2
+    }
+  >>
+  <<
+    {
+      b''4 h
+    }
+    \\
+    {
+      \voiceOne
+      c,,16_( g' gis h!)
+    }
+    \\
+    {
+      \voiceTwo
+      c,4
     }
   >>
 }

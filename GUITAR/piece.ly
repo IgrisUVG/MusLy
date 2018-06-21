@@ -379,6 +379,21 @@ classicalGuitar = \relative {
       <d e'>2 e2
     }
   >>
+  <<
+    {
+      a,32 e'' f dis h\harmonic e f dis d,! e' fis cis a'\harmonic e fis cis
+      e,, e'' g dis e, e' g dis e\harmonic e gis dis e, e' gis dis
+      a, e'' a dis, a'\harmonic e a dis, gis\harmonic e a dis, a'\harmonic e a dis,
+    }
+    \\
+    {
+      
+    }
+    \\
+    {
+      
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

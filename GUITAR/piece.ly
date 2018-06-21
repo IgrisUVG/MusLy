@@ -94,7 +94,7 @@ ossia = \relative {
   \break
   f~ f8 e-. r d es2 d'4.( cis8)
   \break
-  b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as
+  b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as f e R1*2 r2 b4 h g es' d2
 }
 
 classicalGuitar = \relative {
@@ -399,17 +399,16 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      b''4 h
+      c32 g'_0 gis h!_0 b' g, gis h!
     }
     \\
-    {
-      \voiceOne
-      c,,16_( g' gis h!)
+    {      
+      s8 b' s h
     }
     \\
     {
       \voiceTwo
-      c,4
+      c,,4 b
     }
   >>
 }

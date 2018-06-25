@@ -401,8 +401,8 @@ classicalGuitar = \relative {
     {
       \override Fingering.staff-padding = #'()
       c32 g'_0 gis h!_0 b' g, gis h! b, a' h!_0 c h' a, h c
-      as, fis' g cis g' fis, g cis a, b' h d es' b, h d
-      cis, h' c! es d' h, c es dis, b' h d d' b, h d
+      as, fis' g_0 cis g' fis, g cis a, b' h_0 d es' b, h d
+      cis, h'_0 c! es d' h, c es dis, b' h_0 d d' b, h d
     }
     \\
     {

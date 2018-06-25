@@ -356,7 +356,7 @@ classicalGuitar = \relative {
     }
     \\
     {
-      h8\rest des( c4) es, h
+      h8\rest des( c4) es, h_\5
     }
     \\
     {
@@ -366,25 +366,26 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      f'!32 f f f f, f' f f f f f f f, f' f f
+      f'!32\2 f f f f, f' f f f f f f f, f' f f
       e, e'\1 e\2 e\3 e\harmonic\6 e e e e\harmonic e e e e\harmonic e e e
     }
     \\
     {
-      s8 f, e f
+      s8 f,_\5 e f
     }
     \\
     {
       \voiceTwo
       \once\override NoteColumn.force-hshift = #0.2
-      <d e'>2 e2
+      \once\override StringNumber.extra-offset = #'(0.5 . -3.3)
+      <d_0 e'\3>2 e2
     }
   >>
   <<
     {
-      a,32 e'' f dis h\harmonic e f dis d,! e' fis cis a'\harmonic e fis cis
-      e,, e'' g dis e, e' g dis e\harmonic e gis dis e, e' gis dis
-      a, e'' a dis, a'\harmonic e a dis, gis\harmonic e a dis, a'\harmonic e a dis,
+      a,32 e'' f dis h\harmonic e f dis d,! e' fis cis a'\harmonic\5 e fis cis
+      e,, e'' g dis e, e' g dis e\harmonic\6 e gis dis e, e' gis dis
+      a, e'' a dis, a'\harmonic\4 e a dis, gis\harmonic\6 e a dis, a'\harmonic e a dis,
     }
     \\
     {
@@ -400,9 +401,9 @@ classicalGuitar = \relative {
   <<
     {
       \override Fingering.staff-padding = #'()
-      c32 g'_0 gis h!_0 b' g, gis h! b, a' h!_0 c h' a, h c
-      as, fis' g cis g' fis, g cis a, b' h d es' b, h d
-      cis, h' c! es d' h, c es dis, b' h d d' b, h d
+      c32 g'\3 gis\4 h!\2 b' g, gis h! b,\6 a'\4 h!\2 c\3 h' a, h c
+      as, fis'\4 g\3 cis\2 g' fis, g cis a, b'\4 h\2 d\3 es' b, h d
+      cis,\6 h'\2 c!\4 es\3 d' h, c es dis, b' h d d' b, h d
     }
     \\
     {

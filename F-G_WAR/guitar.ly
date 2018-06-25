@@ -975,4 +975,14 @@ guitarMusic = \relative {
       \stemUp c,8~ \stemDown c4
     }
   >>
+  r4 gis8
+  <<
+    {
+      s8 <f' cis' a'>4
+    }
+    \\
+    {
+      a,4.
+    }
+  >>
 }

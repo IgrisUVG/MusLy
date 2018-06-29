@@ -978,7 +978,7 @@ guitarMusic = \relative {
   r4 gis8
   <<
     {
-      s8 <f' cis' a'>4
+      s8 <e' h' cis? a'>4
     }
     \\
     {

@@ -982,7 +982,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      a,4.
+      a,4. c4 r8 g fis es'4 d8 e, b'4 r8 r
     }
   >>
 }

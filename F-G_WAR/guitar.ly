@@ -999,5 +999,15 @@ guitarMusic = \relative {
       c4 r8
     }
   >>
-  g-. fis es'4 d8 e, b'4 r8 r cis f, h
+  g-. fis
+  <<
+    {
+      r8 <g' b h>4
+    }
+    \\
+    {
+      es4 d8
+    }
+  >>
+  e, b'4 r8 r cis f, h
 }

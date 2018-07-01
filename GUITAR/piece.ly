@@ -95,6 +95,7 @@ ossia = \relative {
   f~ f8 e-. r d es2 d'4.( cis8)
   \break
   b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as f e R1*2 r2 b4 h g es' d2
+  cis4 d a fis' f2
 }
 
 classicalGuitar = \relative {
@@ -407,12 +408,12 @@ classicalGuitar = \relative {
     }
     \\
     {
-      s8 b' s h s g s es' s d s d
+      s8 b' s h s g s es' s d s d s cis s d s a s fis' s f!
     }
     \\
     {
       \voiceTwo
-      c,,4 b as a cis dis
+      c,,4 b as a cis dis d cis h b' e,
     }
   >>
 }
@@ -421,7 +422,7 @@ classicalGuitar = \relative {
 \score {
   \new StaffGroup<<
 
-    %\new Staff \ossia
+    \new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

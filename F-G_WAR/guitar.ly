@@ -335,7 +335,7 @@ guitarMusic = \relative {
   }
   <<
     {
-      <h, gis' e'>8 r <e gis>
+      <h, gis' e'>8 r <e fis>
     }
     \\
     {
@@ -975,14 +975,29 @@ guitarMusic = \relative {
       \stemUp c,8~ \stemDown c4
     }
   >>
-  r4 gis8
+  r4 gis8-.
   <<
     {
-      s8 <e' h' cis? a'>4
+      r8 <e' h' cis? a'>4
     }
     \\
     {
-      a,4. c4 r8 g fis es'4 d8 e, b'4 r8 r
+      a,4.
     }
   >>
+  <<
+    {
+      s4 <c' g'>8
+    }
+    \\
+    {
+      h8\rest <fis e'>4
+    }
+    \\
+    {
+      \voiceTwo
+      c4 r8
+    }
+  >>
+  g-. fis es'4 d8 e, b'4 r8 r cis f, h
 }

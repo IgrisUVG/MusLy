@@ -1002,11 +1002,11 @@ guitarMusic = \relative {
   g-. fis
   <<
     {
-      r8
+      h'8\rest
       \once \override Stem.length = #9
       %\displaceHeads #'(0.9 -0.001)
       \once \override Accidental.extra-offset = #'(1 . 0)
-      <g' b>4
+      <g b>4
     }
     \\
     {

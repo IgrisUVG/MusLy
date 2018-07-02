@@ -999,14 +999,15 @@ guitarMusic = \relative {
       c4 c8\rest
     }
   >>
-  g-. fis
+  g-. fis-.
   <<
     {
       h'8\rest
       \once \override Stem.length = #9
       %\displaceHeads #'(0.9 -0.001)
       \once \override Accidental.extra-offset = #'(1 . 0)
-      <g b>4
+      \once\override StringNumber.extra-offset = #'(0 . 0.9)
+      <g_\4 b>4
     }
     \\
     {
@@ -1024,8 +1025,8 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
-      es,4 d8
+      es,4 d8-.
     }
   >>
-  e, b'4 r8 r cis f, h
+  e,-. b'4 r8 r cis f, h
 }

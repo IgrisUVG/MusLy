@@ -1002,11 +1002,29 @@ guitarMusic = \relative {
   g-. fis
   <<
     {
-      r8 <g' b h>4
+      r8
+      \once \override Stem.length = #10
+      %\displaceHeads #'(0.9 -0.001)
+      \once \override Accidental.extra-offset = #'(1 . 0)
+      <g' b>4
     }
     \\
     {
-      es4 d8
+      \voiceThree
+      s8
+      \once \override NoteHead.X-offset = #0.9
+      \once \override Stem.rotation = #'(40 0 0)
+      \once \override Stem.extra-offset = #'(-0.2 . -0.5)
+      \once \override Stem.length = #8
+      \hide Flag
+      %\once \override Flag.stencil = ##f
+      \once \override Accidental.extra-offset = #'(2.6 . 0)
+      h!
+    }
+    \\
+    {
+      \voiceTwo
+      es,4 d8
     }
   >>
   e, b'4 r8 r cis f, h

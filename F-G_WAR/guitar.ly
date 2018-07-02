@@ -1003,7 +1003,11 @@ guitarMusic = \relative {
   <<
     {
       r8
+<<<<<<< HEAD
       \once \override Stem.length = #10
+=======
+      \once \override Stem.length = #9
+>>>>>>> 4ba216d7f29b75d091244898a714243c737379d2
       %\displaceHeads #'(0.9 -0.001)
       \once \override Accidental.extra-offset = #'(1 . 0)
       <g' b>4
@@ -1012,10 +1016,17 @@ guitarMusic = \relative {
     {
       \voiceThree
       s8
+<<<<<<< HEAD
       \once \override NoteHead.X-offset = #0.9
       \once \override Stem.rotation = #'(40 0 0)
       \once \override Stem.extra-offset = #'(-0.2 . -0.5)
       \once \override Stem.length = #8
+=======
+      \once \override NoteHead.X-offset = #1
+      \once \override Stem.rotation = #'(40 0 0)
+      \once \override Stem.extra-offset = #'(-0.2 . -0.5)
+      \once \override Stem.length = #7
+>>>>>>> 4ba216d7f29b75d091244898a714243c737379d2
       \hide Flag
       %\once \override Flag.stencil = ##f
       \once \override Accidental.extra-offset = #'(2.6 . 0)

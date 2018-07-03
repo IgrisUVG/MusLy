@@ -1028,5 +1028,20 @@ guitarMusic = \relative {
       es,4 d8-.
     }
   >>
-  e,-. b'4 r8 r cis f, h
+  e,-.
+  <<
+    {
+      s4 <as' c'>8
+    }
+    \\
+    {
+      h8\rest <g f'>4
+    }
+    \\
+    {
+      \voiceTwo
+      b,4 r8
+    }
+  >>
+  cis? f,-> h a->
 }

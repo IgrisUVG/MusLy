@@ -1040,7 +1040,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
-      b,4 r8
+      b,4_\6 r8
     }
   >>
   cis? f,-> h a->

@@ -384,7 +384,7 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      a,32 e'' f dis h\harmonic e f dis d,! e' fis cis a'\harmonic\5 e fis cis
+      a,32 dis'\3 e\1 f\2 h,\harmonic f'  e dis d,! cis' e fis a\harmonic\5 fis e cis
       e,, e'' g dis e, e' g dis e\harmonic\6 e gis dis e, e' gis dis
       a, e'' a dis, a'\harmonic\4 e a dis, gis\harmonic\6 e a dis, a'\harmonic e a dis,
     }

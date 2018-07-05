@@ -242,9 +242,9 @@ fluteMusic = \new Voice \with {
   \once\override TupletNumber.transparent = ##f
   \times 2/3 {gis8 h e} cis16 a fis) f~( f gis8 h16~ 
   \once\override TupletNumber.transparent = ##f
-  \tuplet 3/2 4 {h8) g d cis fis e}
+  \tuplet 3/2 4 {h8 g d cis) fis( e}
   \once\override TupletNumber.transparent = ##f
   \once\override TupletBracket.bracket-visibility = ##t
   %\once\override TupletBracket.direction = #UP
-  \times 2/3 {dis?4 gis r8 g} h fis cis4
+  \times 2/3 {dis?4 gis) r8 g(} h fis cis4)
 }

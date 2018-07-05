@@ -89,7 +89,9 @@ guitarMusic = \relative {
     {
       <a cis' e> r
       \set Score.repeatCommands = #'((volta #f))
-      <h fis' dis'> r <e h' e> r <a, cis' a'> r \pageBreak%\break
+      <h fis' dis'> r <e h' e> r <a, cis' a'> r
+      %\pageBreak
+      \break
     }
     {
       <a cis' e> r \noBreak

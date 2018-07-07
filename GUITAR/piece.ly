@@ -405,16 +405,33 @@ classicalGuitar = \relative {
       c32 g'\3 gis\4 h!\2 b' h,! gis g b,\6 a'\4 h!\2 c\3 h' c, h a
       as, fis'\4 g\3 cis\2 g' cis, g fis a, b'\4 h\2 d\3 es' d, h b
       cis,\6 h'\2 c!\4 es\3 d' es, c h dis, b'\4 h\2 d\3 d' d, h b
-      d, b' h es cis' es, h b cis, h'\2 c!\4 es\3 d' es, c h
+      %d, b' h es cis' es, h b cis, h'\2 c!\4 es\3 d' es, c h
     }
     \\
     {
-      s8 b' s h s g s es' s d s d s cis s d s a s fis' s f!
+      s8 b' s h s g s es' s d s d s 
+      %cis s d s a s fis' s f!
     }
     \\
     {
       \voiceTwo
-      c,,4 b as a cis dis d cis h b e
+      c,,4 b as a cis dis 
+      %d cis h b e
+    }
+  >>
+  <<
+    {
+      
+    }
+    \\
+    {
+      \voiceOne
+      cis' d a fis' f!
+    }
+    \\
+    {
+      \voiceTwo
+      d, cis h b e
     }
   >>
 }

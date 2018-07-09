@@ -431,7 +431,7 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      d, cis h b e
+      d, cis h b e,
     }
   >>
 }

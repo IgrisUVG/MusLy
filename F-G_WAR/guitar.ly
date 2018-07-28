@@ -414,7 +414,7 @@ guitarMusic = \relative {
       }
       gis16 his( cis) dis
       \once\override Slur.positions = #'(2.5 . 3.5)
-      \acciaccatura gis,8-\markup {
+      \acciaccatura g,8-\markup {
         \postscript #"0.5 -4.3 moveto 2.3 0.5 rlineto stroke"
       }
       a16 cis( dis) gis

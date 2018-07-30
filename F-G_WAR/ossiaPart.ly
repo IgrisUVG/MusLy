@@ -4,7 +4,7 @@
 
 \header {
   title = "F&G War."
-  instrument = "Flute"
+  %instrument = "Flute"
   %meter = "Lustig"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -35,21 +35,10 @@
   }
 }
 
-\include "flute.ly"
-\include "dynamicF.ly"
 \include "ossia.ly"
 
 \score {
-  \new StaffGroup <<
 
-    \new Staff {
-      \removeWithTag #'Partitur
-      \fluteMusic
-    }
-    
-    \new Dynamics \dynamic
+  \new Staff \ossia
 
-    %\new Staff \ossia
-
-  >>
 }

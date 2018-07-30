@@ -27,7 +27,7 @@
 \layout {
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \context {
     \Staff \RemoveEmptyStaves
@@ -38,7 +38,9 @@
 \include "ossia.ly"
 
 \score {
+  <<
 
-  \new Staff \ossia
-
+\chords{ e2 s2*49 b2 s2*22 e2 s2*7 fis2 s2*7 e2 s2*14 e2 s2*7 as2 s2*7 a2}
+    \new Staff \ossia
+  >>
 }

@@ -27,7 +27,7 @@
 \layout {
   \context {
     \Score
-    %\remove "Bar_number_engraver"
+    \remove "Bar_number_engraver"
   }
   \context {
     \Staff \RemoveEmptyStaves
@@ -40,7 +40,10 @@
 \score {
   <<
 
-\chords{ e2 s2*49 b2 s2*22 e2 s2*7 fis2 s2*7 e2 s2*14 e2 s2*7 as2 s2*7 a2 s2*6 e2}
+    \chords {
+      e2 s2*49 b2 s2*22 e2 s2*7 fis2:m s2*7 e2 s2*14
+      e2 s2*7 as2 s2*7 a2 s2*6 e2
+    }
     \new Staff \ossia
   >>
 }

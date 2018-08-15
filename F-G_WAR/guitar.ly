@@ -1045,5 +1045,5 @@ guitarMusic = \relative {
       b,4_\6 r8
     }
   >>
-  cis? f,-> h a->
+  cis? f,-> h a-> r4
 }

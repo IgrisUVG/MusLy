@@ -372,7 +372,7 @@ classicalGuitar = \relative {
     }
     \\
     {
-      s8 f,_\5 e f
+      s8 f,^(_\5 e) f
     }
     \\
     {

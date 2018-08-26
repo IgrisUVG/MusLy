@@ -1063,7 +1063,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      c,4. a8
+      c,4. a8-.
     }
   >>
   <<

@@ -1046,4 +1046,38 @@ guitarMusic = \relative {
     }
   >>
   cis? f,-> h a-> r4 <gis e' cis' fis h>
+  <<
+    {
+      <d' g>8
+      \set glissandoMap = #'((1 . 0))
+      <g d'>4\glissando <g' a>8
+    }
+    \\
+    {
+      <a,, es'>4. r8
+    }
+  >>
+  <<
+    {
+      r8 <d' es e'!>4 r8
+    }
+    \\
+    {
+      c,4. a8
+    }
+  >>
+  <<
+    {
+      s4 <f'' b>
+    }
+    \\
+    {
+      e8\rest <h cis>4.
+    }
+    \\
+    {
+      \voiceTwo
+      es,2
+    }
+  >>
 }

@@ -1080,4 +1080,18 @@ guitarMusic = \relative {
       es,2
     }
   >>
+  <<
+    {
+      s4 <gis'! d'>
+    }
+    \\
+    {
+      e8\rest <g, b>4.
+    }
+    \\
+    {
+      \voiceTwo
+      fis2
+    }
+  >>
 }

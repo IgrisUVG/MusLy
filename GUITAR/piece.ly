@@ -95,7 +95,7 @@ ossia = \relative {
   f~ f8 e-. r d es2 d'4.( cis8)
   \break
   b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as f e R1*2 r2 b4 h g es' d2
-  cis4 d a fis' f2
+  cis4 d a fis' f2 e~ e8 dis-. r c-. d2 h~ h8 b-. r g-. a2 r
 }
 
 classicalGuitar = \relative {
@@ -454,6 +454,26 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       d,4 cis h! b e, fis!
+    }
+  >>
+  <<
+    {
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2 2)
+      e''32 e e e d e e e e e e e b e e e
+      f, e' e e <h dis>8-.\noBeam r <a c>-.
+    }
+    \\
+    {
+      a8\rest d( cis4)
+      \once\override Fingering.extra-offset = #'(-0.3 . -4.2)
+      <d, f> gis,
+    }
+    \\
+    {
+      \voiceTwo
+      s4. b'8 s2
     }
   >>
 }

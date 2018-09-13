@@ -539,7 +539,7 @@ classicalGuitar = \relative {
     }
     \\
     {
-      f8\rest 
+      f8\rest
       \once\override StringNumber.extra-offset = #'(-0.6 . -2.3)
       a(\4_1 gis4_2)
       \once\override StringNumber.extra-offset = #'(0.6 . 2.5)
@@ -548,18 +548,25 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      s4. 
+      s4.
       \once\override Fingering.extra-offset = #'(1.3 . 3.2)
-      f'8_3 s2
+      f'8_3-\markup {
+        \postscript #"2.7 3.8 moveto 9.7 -0.3 rlineto stroke"
+      } s2
     }
   >>
   <<
     {
-      f32 a a a e a a a a a a a c, a' a a
+      \once\override Fingering.extra-offset =#'(-0.3 . -4.3)
+      f32-4 a_3 a a
+      \once\override Fingering.extra-offset =#'(-0.3 . -4.7)
+      e-2 a a a a a a a
+      \once\override Fingering.extra-offset =#'(-0.3 . -5.6)
+      c,-4 a' a a
     }
     \\
     {
-      f8 e( es4)
+      f8 e( es4_1)
     }
     \\
     {
@@ -578,7 +585,7 @@ classicalGuitar = \relative {
     }
     \\
     {
-      s8 f,,4 e'8\harmonic
+      s8 f,,4 e'8_\5\harmonic
     }
     \\
     {
@@ -634,7 +641,7 @@ classicalGuitar = \relative {
       \voiceOne
       h,![_2 g''_3 g g]
       \voiceTwo
-      g g g g     
+      g g g g
     }
     \\
     {

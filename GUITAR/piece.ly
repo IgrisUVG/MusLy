@@ -410,9 +410,9 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      a,32 dis'\3 e\1 f\2 h,\harmonic f'  e dis d,! cis' e fis a\harmonic\5 fis e cis
+      a,32 dis'\3\RH #2 e\1\RH #4 f\2\RH #3 h,\harmonic f'\RH #3 e\RH #4 dis\RH #2 d,! cis' e fis a\harmonic\5 fis e cis
       e,, dis'' e g e, g' e dis e\harmonic\6 dis e gis e, gis' e dis
-      a, e'' a dis, a'\harmonic\4 e a dis, gis\harmonic\6 e a dis, a'\harmonic e a dis,
+      a, e''\RH #4 a\RH #3 dis,\RH #2 a'\harmonic\4 e a dis, gis\harmonic\6 e a dis, a'\harmonic e a dis,
     }
     \\
     {
@@ -428,9 +428,9 @@ classicalGuitar = \relative {
   <<
     {
       \override Fingering.staff-padding = #'()
-      c32 g'\3 gis\4 h!\2 b' h,! gis g b,\6 a'\4 h!\2 c\3 h' c, h a
-      as, fis'\4 g\3 cis\2 g' cis, g fis a, b'\4 h\2 d\3 es' d, h b
-      cis,\6 h'\2 c!\4 es\3 d' es, c h dis, b'\4 h\2 d\3 d' d, h b
+      c32\RH #1 g'\3\RH #2 gis\4\RH #1 h!\2\RH #3 b'\RH #4 h,!\RH #3 gis\RH #1 g\RH #2 b,\6\RH #1 a'\4\RH #2 h!\2\RH #4 c\3\RH#3 h'\RH #4 c,\RH #2 h\RH #3 a\RH #1
+      as,\RH #1 fis'\4\RH #2 g\3\RH #3 cis\2\RH #4 g'\RH #3 cis,\RH #4 g\RH #3 fis\RH #2 a,\RH #1 b'\4\RH #2 h\2\RH #4 d\3\RH #3 es'\RH #4 d,\RH #2 h\RH #3 b\RH #1
+      cis,\6\RH #1 h'\2\RH #3 c!\4\RH #1 es\3\RH #2 d'\RH #4 es,\RH #2 c\RH #1 h\RH #3 dis, b'\4 h\2 d\3 d' d, h b
       %d, b' h es cis' es, h b cis, h'\2 c!\4 es\3 d' es, c h
     }
     \\

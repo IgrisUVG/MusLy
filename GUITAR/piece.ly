@@ -462,13 +462,11 @@ classicalGuitar = \relative {
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
       e''32 e e e d e e e e e e e b e e e
-      f, e' e e <h dis>8-.\noBeam r <a c>-.
+      f, e' e e <h dis>8-.\noBeam h\rest <a c>-.
     }
     \\
     {
-      a8\rest d( cis4)
-      \once\override Fingering.extra-offset = #'(-0.3 . -4.2)
-      <d, f> gis,
+      a8\rest d( cis4) <d, f> gis,
     }
     \\
     {
@@ -482,7 +480,6 @@ classicalGuitar = \relative {
     }
     \\
     {
-      \voiceTwo
       f,8 a( as4)
     }
     \\
@@ -496,13 +493,47 @@ classicalGuitar = \relative {
       e,2
     }
   >>
+  <<
+    {
+      h''32 h h h a h h h h h h h f h h h
+      d, h' h h <fis ais>8-.\noBeam h\rest <e, gis?>-.
+    }
+    \\
+    {
+      f8\rest a( gis4) <h, d> f!
+    }
+    \\
+    {
+      \voiceTwo
+      s4. f'8 s2
+    }
+  >>
+  <<
+    {
+      f32 a a a e a a a a a a a c, a' a a
+    }
+    \\
+    {
+      f8 e( es4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. c8
+    }
+    \\
+    {
+      \voiceTwo
+      e,2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
 
-    \new Staff \ossia
+    %\new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

@@ -96,6 +96,7 @@ ossia = \relative {
   \break
   b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as f e R1*2 r2 b4 h g es' d2
   cis4 d a fis' f2 e~ e8 dis-. r c-. d2 h~ h8 b-. r g-. a2 r
+  e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-. e2
 }
 
 classicalGuitar = \relative {
@@ -447,20 +448,29 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      s8 <e' c'!> s <f a> s <g b> s <es a> s <des b'> s <c as'>
+      s8 <e' c'!> s <f a> s
+      \set fingeringOrientations = #'(up)
+      <g-4 b-1> s <es-4 a-1> s <des-2 b'-4> s <c-3 as'-2>
     }
     \\
     {
+      \override TextScript.font-size = -2
+      \override Fingering.staff-padding = #'()
       \voiceOne
-      d,32[ cis' cis cis]
+      \once\override TextScript.extra-offset = #'(-0.5 . -1.5)
+      d,32[^"V" cis' cis cis]
       \voiceTwo
       cis! cis cis cis
       \voiceOne
-      cis,[ d' d d]
+      \once\override TextScript.extra-offset = #'(-0.8 . -1.5)
+      cis,[^"IV" d' d d]
       \voiceTwo
       d d d d
       \voiceOne
-      h,[^\6_2 a'_3 a a]
+      \once\override StringNumber.extra-offset = #'(-0.5 . -6)
+      h,[^\6_2-\markup {
+        \postscript #"1.5 -10.8 moveto 22 -0.2 rlineto stroke"
+      } a'_3 a a]
       \voiceTwo
       a a a a
       \voiceOne
@@ -468,11 +478,11 @@ classicalGuitar = \relative {
       \voiceTwo
       fis fis fis fis
       \voiceOne
-      e,,[ f''! f f]
+      e,,[ f''!_3 f f]
       \voiceTwo
       f f f f
       \voiceOne
-      fis,,[ f''! f f]
+      fis,,[ f''!_4 f f]
       \voiceTwo
       f f f f
     }
@@ -519,19 +529,28 @@ classicalGuitar = \relative {
       e,2
     }
   >>
+  \break
   <<
     {
-      h''32 h h h a h h h h h h h f h h h
-      d, h' h h <fis ais>8-.\noBeam h\rest <e, gis?>-.
+      h''32-0 h h h a h h h h h h h f h h h
+      \once\override StringNumber.extra-offset = #'(-0.5 . -6)
+      \once\override Fingering.extra-offset = #'(-1.5 . 1.8)
+      d,\5_3 h' h h <fis ais>8-.\noBeam h\rest <e, gis?>-.
     }
     \\
     {
-      f8\rest a( gis4) <h, d> f!
+      f8\rest 
+      \once\override StringNumber.extra-offset = #'(-0.6 . -2.3)
+      a(\4_1 gis4_2)
+      \once\override StringNumber.extra-offset = #'(0.6 . 2.5)
+      <h,_\6 d> f!
     }
     \\
     {
       \voiceTwo
-      s4. f'8 s2
+      s4. 
+      \once\override Fingering.extra-offset = #'(1.3 . 3.2)
+      f'8_3 s2
     }
   >>
   <<
@@ -551,6 +570,93 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       e,2
+    }
+  >>
+  <<
+    {
+      a32 a' a a f e' e e h a' a a_(\glissando e') e e e
+    }
+    \\
+    {
+      s8 f,,4 e'8\harmonic
+    }
+    \\
+    {
+      \voiceTwo
+      s4 h8 s
+    }
+    \\
+    {
+      \voiceTwo
+      a,2
+    }
+  >>
+  <<
+    {
+      e'''32 e e e b e e e e e e e fis, e' e e
+      c, e' e e <h dis>8-.\noBeam r <a c>-.
+    }
+    \\
+    {
+      d,8\rest b'( a4) <a,\harmonic c>4 es
+    }
+    \\
+    {
+      \voiceTwo
+      s4. fis'8 s2
+    }
+  >>
+  <<
+    {
+      s8 <f cis'> s <ges b> s <as c> s <e b'>
+    }
+    \\
+    {
+      \override TextScript.font-size = -2
+      \override Fingering.staff-padding = #'()
+      \voiceOne
+      e,32[ d' d d]
+      \voiceTwo
+      d d d d
+      \voiceOne
+      \once\override TextScript.extra-offset = #'(-0.8 . -1.5)
+      d,[_0 es' es es]
+      \voiceTwo
+      es es es es
+      \voiceOne
+      \once\override StringNumber.extra-offset = #'(-0.5 . -6)
+      cis,[^\6_2-\markup {
+        \postscript #"1.5 -11 moveto 22 -0.6 rlineto stroke"
+      }
+      h'_3 h h]
+      \voiceTwo
+      h h h h
+      \voiceOne
+      h,![_2 g''_3 g g]
+      \voiceTwo
+      g g g g     
+    }
+    \\
+    {
+      \voiceTwo
+      e,4 d cis h
+    }
+  >>
+  <<
+    {
+      \once\override Fingering.extra-offset = #'(1 . 0.8)
+      fis''32\2_3 fis fis fis es fis fis fis fis fis fis fis b, fis' fis fis
+      \once\override TextScript.extra-offset = #'(-1 . -1.5)
+      gis,^"VI" fis' fis fis <d f>8-.\noBeam r <h d>-.
+    }
+    \\
+    {
+      h8\rest es( d4) <e, gis> a,
+    }
+    \\
+    {
+      \voiceTwo
+      s4. b'8 s2
     }
   >>
 }

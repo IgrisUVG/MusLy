@@ -251,11 +251,15 @@ classicalGuitar = \relative {
   \mergeDifferentlyDottedOn
   <<
     {
+      \override TextScript.font-size = -2
       h32 es es es es es es es fis, es' es es es es es es
-      gis,, d'' d d fis, d' d d a d d d cis cis cis cis
+      gis,, d'' d d fis, d' d d
+      \once\override TextScript.extra-offset = #'(-0.5 . -1.5)
+      a^"II" d d d cis cis cis cis
     }
     \\
     {
+      \once\override StringNumber.extra-offset = #'(-0.5 . -1.5)
       h!8\3( b4) s8 s4 a
     }
     \\
@@ -283,12 +287,18 @@ classicalGuitar = \relative {
       g,32[ b' b b]
       \voiceTwo
       \override StrokeFinger.extra-offset = #'(-1.3 . 1.5)
-      b\RH #1 b\RH #2 b\RH #4 b\RH #3 (\glissando
+      b\RH #1 b\RH #2 b\RH #4
+      \once\override Slur.positions = #'(0 . 1)
+      b\RH #3 (-\markup {
+        \postscript #"1.5 4.5 moveto 2 1 rlineto stroke"
+      }
       \voiceOne
       \override StrokeFinger.extra-offset = #'(-1.3 . -1.2)
       f')[ f\RH #4 f\RH #3 f\RH #2 ]
       \voiceTwo
-      f f f f(\glissando
+      f f f f(-\markup {
+        \postscript #"0.8 3.8 moveto 2.3 -0.5 rlineto stroke"
+      }
       \voiceOne
       e)[ e e e]
       \voiceTwo
@@ -312,12 +322,18 @@ classicalGuitar = \relative {
   >>
   <<
     {
+      \override Fingering.staff-padding = #'()
       g''32 g g g e g g g g g g g h, g' g g
-      f, g' g g <d! fis>8-.\noBeam r <h dis>-.
+      \once\override Fingering.extra-offset = #'(-0.3 . 3)
+      f,_2
+      \once\override Fingering.extra-offset = #'(-0.3 . -4.2)
+      g'-3 g g
+      \set fingeringOrientations = #'(down right)
+      <d!-3 fis-1>8-.\noBeam r <h dis>-.
     }
     \\
     {
-      h8\rest e( es4) <des, f> g,
+      h8\rest e( es4) <des,_4 f> g,
     }
     \\
     {
@@ -327,7 +343,7 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      b32 f' f f des f f f f f f f fis, f'! f f
+      b32 f'\2 f f des f f f f f f f fis,^"IV" f'! f f
       dis, gis' gis gis g,! gis'! gis gis h, gis' gis gis fis gis gis gis
     }
     \\
@@ -353,11 +369,15 @@ classicalGuitar = \relative {
   <<
     {
       g'!32\2 g g g des g g g g g g g a, g' g g
-      es, g' g g <d fis>8-.\noBeam r <c es>-.
+      es, g' g g <d fis>8-.\noBeam r <c-4 es>-.-\markup {
+        \postscript #"1.5 -3.5 moveto 5.8 2.1 rlineto stroke"
+      }
     }
     \\
     {
-      h8\rest des( c4) es, h_\5
+      h8\rest des( c4) es,
+      \once\override StringNumber.extra-offset = #'(0.7 . 2)
+      h_\5
     }
     \\
     {
@@ -368,18 +388,24 @@ classicalGuitar = \relative {
   <<
     {
       f'!32\2 f f f f, f' f f f f f f f, f' f f
-      e, e'\1 e\2 e\3 e\harmonic\6 e e e e\harmonic e e e e\harmonic e e e
+      e, e'\1 e\2 e\3 e\harmonic\6_2 e e e e\harmonic e e e e\harmonic e e e
     }
     \\
     {
-      s8 f,^(_\5 e) f
+      s8
+      \once\override StringNumber.extra-offset = #'(0.7 . 3)
+      f,^(_\5 e)
+      \override Fingering.extra-offset = #'(0.5 . 3)
+      f-3-\markup {
+        \postscript #"1.8 3.8 moveto 9.9 -0.5 rlineto stroke"
+      }
     }
     \\
     {
       \voiceTwo
       \once\override NoteColumn.force-hshift = #0.2
       \once\override StringNumber.extra-offset = #'(0.5 . -3.3)
-      <d_0 e'\3>2 e2
+      <d_0 e'!\3>2 e2-3
     }
   >>
   <<
@@ -409,13 +435,13 @@ classicalGuitar = \relative {
     }
     \\
     {
-      s8 b' s h s g s es' s d s d 
+      s8 b' s h s g s es' s d s d
       %cis s d s a s fis' s f!
     }
     \\
     {
       \voiceTwo
-      c,,4 b as a cis dis 
+      c,,4 b as a cis dis
       %d cis h b e
     }
   >>

@@ -497,17 +497,25 @@ classicalGuitar = \relative {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
-      e''32 e e e d e e e e e e e b e e e
-      f, e' e e <h dis>8-.\noBeam h\rest <a c>-.
+      \once\override Fingering.extra-offset = #'(-0.3 . -3.3)
+      e''32-0 e e e d e e e e e e e b e e e
+      f, e' e e 
+      \set fingeringOrientations = #'(right)
+      <h-2 dis-3>8-.\noBeam h\rest <a c>-.
+      %\unset fingeringOrientations
     }
     \\
     {
-      a8\rest d( cis4) <d, f> gis,
+      a8\rest d(-2 cis4_1) 
+      \set fingeringOrientations = #'(right)
+      <d,-4 f-1>
+      %\unset fingeringOrientations
+      gis,_1
     }
     \\
     {
       \voiceTwo
-      s4. b'8 s2
+      s4. b'8-2 s2
     }
   >>
   <<
@@ -532,6 +540,7 @@ classicalGuitar = \relative {
   \break
   <<
     {
+      \once\override Fingering.extra-offset = #'(-0.3 . -3.5)
       h''32-0 h h h a h h h h h h h f h h h
       \once\override StringNumber.extra-offset = #'(-0.5 . -6)
       \once\override Fingering.extra-offset = #'(-1.5 . 1.8)

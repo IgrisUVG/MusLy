@@ -460,11 +460,11 @@ classicalGuitar = \relative {
       \voiceTwo
       d d d d
       \voiceOne
-      h,[ a' a a]
+      h,[^\6_2 a'_3 a a]
       \voiceTwo
       a a a a
       \voiceOne
-      b,[ fis'' fis fis]
+      b,[_2 fis''_3 fis fis]
       \voiceTwo
       fis fis fis fis
       \voiceOne

@@ -476,6 +476,26 @@ classicalGuitar = \relative {
       s4. b'8 s2
     }
   >>
+  <<
+    {
+      f32 d' d d a d d d d d d d es, d' d d
+    }
+    \\
+    {
+      \voiceTwo
+      f,8 a( as4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. es8
+    }
+    \\
+    {
+      \voiceTwo
+      e,2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

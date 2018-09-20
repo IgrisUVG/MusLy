@@ -55,10 +55,34 @@ ossia = \relative {
   %\break
   f~ f8 e-. r d es2 d'4.( cis8)
   %\break
-  b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as
-  g2~ g8 fis-. r es-. f2 e R1 r2 b4 h g es' d2
-  cis4 d a fis' f2 e~ e8 dis-. r c-. d2 h~ h8 b-. r g-. a2 r
-  e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-. e2
+  b4 f' e4. b'8
+  g2~ g8 fis-. r es-. f!2 as
+  g2~ g8 fis-. r es-. f2 e
+  R1 r2 b4 h g es' d2
+  cis4 d a fis' f2
+  e~ e8 dis-. r c-. d2
+  h~ h8 b-. r g-. a2 r
+  e'~ e8 dis-. r c-. d4 es h g'
+  fis2~ fis8 f-. r d-.
+  e2 es4.( d8) h4 fis' f4. h8
+  <<
+    {c2~ c8 h-. r gis-. b2 r}
+    \new Staff {
+      \omit Staff.TimeSignature
+      \omit Staff.Clef
+      {a2~ a8 gis-. r f-. g2 r}
+    }
+    \new Staff {
+      \omit Staff.TimeSignature
+      \omit Staff.Clef
+      {des'2~ des8 c-. r a-. h2 r}
+    }
+    \new Staff {
+      \omit Staff.TimeSignature
+      \omit Staff.Clef
+      {es2~ es8 d-. r h-. cis2 r}
+    }
+  >>
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

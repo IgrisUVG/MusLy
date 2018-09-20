@@ -679,30 +679,34 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      e32 e e e e e e e e e e e e e e e
+      c32 e e e e e e e e e e e e e e e
       es es es es es es es es es es es es d d d d
     }
     \\
     {
-
+      c8( h4) s8 s4 b
     }
     \\
     {
-
+      \voiceTwo
+      \hideNotes
+      \shape #'((1 . 0.8) (0 . 0) (0 . 0) (0 . 0)) Slur
+      c4(\unHideNotes g8 es) s8 g4.
     }
     \\
     {
-
+      \voiceTwo
+      b,2 a
     }
   >>
   <<
     {
-
+      s8 <d' b'> s <a' c> s <c, es'>
     }
     \\
     {
       \voiceOne
-      gis,,32[ h' h h]
+      gis,32[ h' h h]
       \voiceTwo
       h h h h (-\markup {
         \postscript #"1.5 4.5 moveto 2 1 rlineto stroke"
@@ -720,12 +724,13 @@ classicalGuitar = \relative {
     }
     \\
     {
-
+      \voiceTwo
+      gis,,!4 f h
     }
   >>
   <<
     {
-      cis,32 f' f f <g h>8-.\noBeam
+      cis32 f' f f <g h>8-.\noBeam
     }
     \\
     {

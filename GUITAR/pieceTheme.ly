@@ -66,21 +66,21 @@ ossia = \relative {
   fis2~ fis8 f-. r d-.
   e2 es4.( d8) h4 fis' f4. h8
   <<
-    {c2~ c8 h-. r gis-. b2 r}
+    {a2~ a8 gis-. r f-. g2 r}
     \new Staff {
       \omit Staff.TimeSignature
       \omit Staff.Clef
-      {a2~ a8 gis-. r f-. g2 r}
-    }
-    \new Staff {
-      \omit Staff.TimeSignature
-      \omit Staff.Clef
-      {des'2~ des8 c-. r a-. h2 r}
+      {c2~ c8 h-. r gis-. b2 r}
     }
     \new Staff {
       \omit Staff.TimeSignature
       \omit Staff.Clef
       {es2~ es8 d-. r h-. cis2 r}
+    }
+    \new Staff {
+      \omit Staff.TimeSignature
+      \omit Staff.Clef
+      {des2~ des8 c-. r a-. h2 r}
     }
   >>
 }

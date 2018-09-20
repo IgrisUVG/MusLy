@@ -97,7 +97,8 @@ ossia = \relative {
   b4 f' e4. b'8 g2~ g8 fis-. r es-. f!2 as
   g2~ g8 fis-. r es-. f2 e R1 r2 b4 h g es' d2
   cis4 d a fis' f2 e~ e8 dis-. r c-. d2 h~ h8 b-. r g-. a2 r
-  e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-. e2
+  e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-.
+  e2 es4.( d8) h4 fis' f4. h8
 }
 
 classicalGuitar = \relative {
@@ -500,14 +501,14 @@ classicalGuitar = \relative {
       \set beatStructure = #'(2 2 2 2)
       \once\override Fingering.extra-offset = #'(-0.3 . -3.3)
       e''32-0 e e e d e e e e e e e b e e e
-      f, e' e e 
+      f, e' e e
       \set fingeringOrientations = #'(right)
       <h-2 dis-3>8-.\noBeam h\rest <a c>-.
       %\unset fingeringOrientations
     }
     \\
     {
-      a8\rest d(-2 cis4_1) 
+      a8\rest d(-2 cis4_1)
       \set fingeringOrientations = #'(right)
       <d,-4 f-1>
       %\unset fingeringOrientations
@@ -674,6 +675,61 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       s4. b'8 s2
+    }
+  >>
+  <<
+    {
+      e32 e e e e e e e e e e e e e e e
+      es es es es es es es es es es es es d d d d
+    }
+    \\
+    {
+
+    }
+    \\
+    {
+
+    }
+    \\
+    {
+
+    }
+  >>
+  <<
+    {
+
+    }
+    \\
+    {
+      \voiceOne
+      gis,,32[ h' h h]
+      \voiceTwo
+      h h h h (-\markup {
+        \postscript #"1.5 4.5 moveto 2 1 rlineto stroke"
+      }
+      \voiceOne
+      fis')[ fis fis fis]
+      \voiceTwo
+      fis fis fis fis(-\markup {
+        \postscript #"0.8 3.8 moveto 2.3 -0.5 rlineto stroke"
+      }
+      \voiceOne
+      f)[ f f f]
+      \voiceTwo
+      f f f f
+    }
+    \\
+    {
+
+    }
+  >>
+  <<
+    {
+      cis,32 f' f f <g h>8-.\noBeam
+    }
+    \\
+    {
+      cis,,4
     }
   >>
 }

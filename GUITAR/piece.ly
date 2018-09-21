@@ -329,7 +329,7 @@ classicalGuitar = \relative {
       g''32 g g g e g g g g g g g h, g' g g
       \once\override Fingering.extra-offset = #'(-0.3 . 3)
       f,_2
-      \once\override Fingering.extra-offset = #'(-0.3 . -4.2)
+      \once\override Fingering.extra-offset = #'(-1.3 . -4.2)
       g'-3 g g
       \set fingeringOrientations = #'(down right)
       <d!-3 fis-1>8-.\noBeam r <h dis>-.
@@ -679,19 +679,22 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      c32 e e e e e e e e e e e e e e e
-      es es es es es es es es es es es es d d d d
+      c32 e e e e e e e g, e' e e es, e'! e e
+      a,, es'' es es g, es' es es b es es es d d d d
     }
     \\
     {
-      c8( h4) s8 s4 b
+      c8( h!4.) s4 b
     }
     \\
     {
       \voiceTwo
-      \hideNotes
-      \shape #'((1 . 0.8) (0 . 0) (0 . 0) (0 . 0)) Slur
-      c4(\unHideNotes g8 es) s8 g4.
+      s4 g
+    }
+    \\
+    {
+      \voiceTwo
+      \hideNotes c4\unHideNotes s8 es, s8 g4.
     }
     \\
     {
@@ -701,15 +704,19 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      s8 <d' b'>-\markup {
-        \postscript #"1.5 -3.3 moveto 10 1 rlineto stroke"
+      s8
+      \set fingeringOrientations = #'(left)
+      \once\override StringNumber.extra-offset = #'(-0.5 . -3)
+      <d'-4 b'\1>-\markup {
+        \postscript #"1.7 -8.3 moveto 10 1 rlineto stroke"
       } s <a' c> s <c, es'>
     }
     \\
     {
       \voiceOne
-      gis,32[ h' h h]
+      gis,32[ h'_0 h h]
       \voiceTwo
+      \shape #'((1.3 . 0.2) (1 . 0) (-1 . 0) (0 . -0.5)) Slur
       h^( h h h
       \voiceOne
       fis')[ fis fis fis]
@@ -735,13 +742,28 @@ classicalGuitar = \relative {
       cis,,4
     }
   >>
+  <<
+    {
+      a''32 a a a fis a a a a a a a cis, a' a a
+      g, a' a a <e! gis>8-.\noBeam r <des f>-.
+    }
+    \\
+    {
+      h8\rest fis'( f4) <es, g> a,
+    }
+    \\
+    {
+      \voiceTwo
+      s4. cis'8 s2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
 
-    %\new Staff \ossia
+    \new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

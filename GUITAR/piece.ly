@@ -701,31 +701,29 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      s8 <d' b'> s <a' c> s <c, es'>
+      s8 <d' b'>-\markup {
+        \postscript #"1.5 -3.3 moveto 10 1 rlineto stroke"
+      } s <a' c> s <c, es'>
     }
     \\
     {
       \voiceOne
       gis,32[ h' h h]
       \voiceTwo
-      h h h h (-\markup {
-        \postscript #"1.5 4.5 moveto 2 1 rlineto stroke"
-      }
+      h^( h h h
       \voiceOne
       fis')[ fis fis fis]
       \voiceTwo
-      fis fis fis fis(-\markup {
-        \postscript #"0.8 3.8 moveto 2.3 -0.5 rlineto stroke"
-      }
+      fis fis fis fis
       \voiceOne
-      f)[ f f f]
+      h,,[ f'' f f]
       \voiceTwo
       f f f f
     }
     \\
     {
       \voiceTwo
-      gis,,!4 f h
+      gis,,!4 f'! h,
     }
   >>
   <<

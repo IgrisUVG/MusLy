@@ -757,6 +757,30 @@ classicalGuitar = \relative {
       s4. cis'8 s2
     }
   >>
+  <<
+    {
+      c32^"VII" g' g g es g g g g g g g gis, g'! g g
+    }
+    \\
+    {
+      s2
+    }
+    \\
+    {
+      \voiceTwo
+      c,8 es( d4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. gis,4
+    }
+    \\
+    {
+      \voiceTwo
+      h,2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

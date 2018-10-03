@@ -773,7 +773,7 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      s4. gis,4
+      s4. gis,8
     }
     \\
     {
@@ -781,13 +781,14 @@ classicalGuitar = \relative {
       h,2
     }
   >>
+  cis16_\6\glissando a\( es'_\5 f_\4 b(_\3 h)\glissando d8\)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
 
-    \new Staff \ossia
+    %\new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

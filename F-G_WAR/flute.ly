@@ -250,5 +250,5 @@ fluteMusic = \new Voice \with {
   \once\override TupletNumber.transparent = ##f
   \times 4/5 {dis,16( e h' fis' ais} c8)-. f-. \times 2/3 {gis16( a gis} fis8)-.
   r4 \times 4/5 {ais,,16(  h cis f gis} c8)-. g'-. \times 2/3 {fis16( gis fis} e8)-.
-  r4 \times 4/5 {a,,16( cis dis e gis} c8)-. f-. h, \times 2/3 {a16( cis a} gis8)-.
+  r4 \times 4/5 {a,,16( cis dis e gis} c8)-. f-. \times 2/3 {h,16( cis h} ais8)-.
 }

@@ -184,7 +184,7 @@ groundTehor = \relative {
   \change Staff = RH
   \stemDown
   \once\override Beam.positions = #'(-4.5 . -4)
-  fis g! <e g! c><fis a es'>)
+  fis g! <e g! c><f a es'>)
   \change Staff = LH
   \stemUp
   cis,_( fis his fis'
@@ -394,7 +394,7 @@ dreizehnteRH = \relative {
     {
       s4 <a c>2. s4 
       \once\override NoteColumn.force-hshift = #.4
-      a4( g!2)
+      a4^( g!2)
     }
     \\
     {

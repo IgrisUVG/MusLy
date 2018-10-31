@@ -70,12 +70,12 @@ ossia = \relative {
     \new Staff {
       \omit Staff.TimeSignature
       \omit Staff.Clef
-      {c2~ c8 h-. r gis-. b2 r}
+      {es2~ es8 d-. r h-. cis2 r}
     }
     \new Staff {
       \omit Staff.TimeSignature
       \omit Staff.Clef
-      {es2~ es8 d-. r h-. cis2 r}
+      {c2~ c8 h-. r gis-. b2 r}
     }
     \new Staff {
       \omit Staff.TimeSignature

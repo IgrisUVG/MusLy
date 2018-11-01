@@ -99,6 +99,7 @@ ossia = \relative {
   cis4 d a fis' f2 e~ e8 dis-. r c-. d2 h~ h8 b-. r g-. a2 r
   e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-.
   e2 es4.( d8) h4 fis' f4. h8 a2~ a8 gis-. r f-. g2 r
+  es2~ es8 d-. r h-. cis2 r
 }
 
 classicalGuitar = \relative {
@@ -784,15 +785,20 @@ classicalGuitar = \relative {
   cis16_\6\glissando a\( es'_\5 f_\4 b(_\3 h)\glissando d8\)
   <<
     {
-      
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2 2)
+      es32 es es es c es es es es es es es g, es' es es
+      e,! es'! es es <h d>8-.\noBeam r <g h>-.
     }
     \\
     {
-      
+      a8\rest c( h4) <cis, e> as
     }
     \\
     {
-      
+      \voiceTwo
+      s4. g'8 s2
     }
   >>
 }
@@ -801,7 +807,7 @@ classicalGuitar = \relative {
 \score {
   \new StaffGroup<<
 
-    %\new Staff \ossia
+    \new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

@@ -783,6 +783,7 @@ classicalGuitar = \relative {
     }
   >>
   cis16_\6\glissando a\( es'_\5 f_\4 b(_\3 h)\glissando d8\)
+  \break
   <<
     {
       \set subdivideBeams = ##t
@@ -801,13 +802,27 @@ classicalGuitar = \relative {
       s4. g'8 s2
     }
   >>
+  <<
+    {
+      a32 cis cis cis cis cis cis cis
+    }
+    \\
+    {
+      a8( gis4.)
+    }
+    \\
+    {
+      \voiceTwo
+      g,1
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
 
-    \new Staff \ossia
+    %\new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

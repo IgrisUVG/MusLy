@@ -3,7 +3,7 @@
 \language "deutsch"
 
 \header {
-	title = "B"
+  title = "B"
   tagline = ##f
 }
 
@@ -32,7 +32,7 @@ fretNumberSpanner =
      \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
      \override TextSpanner.bound-details.left.text = \markup { #Text }
    #})
-	
+
 global = {
   \override Staff.TimeSignature.stencil = ##f
 }
@@ -40,17 +40,17 @@ global = {
 #(define RH rightHandFinger)
 
 classicalGuitar = \relative {
-	\set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
-	
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+
   %\override Fingering.staff-padding = #'()
   \set strokeFingerOrientations = #'(up)
-  
-	\override Glissando.bound-details.right.arrow = ##t
+
+  \override Glissando.bound-details.right.arrow = ##t
   \override Glissando.arrow-length = #1
   \override Glissando.arrow-width = #0.3
-  
+
   \defineBarLine "|.|:" #'("|." ".|:" "")
-  
+
   \cadenzaOn
   gis8_1[\RH #2 a_2\RH #3 ais_3 h_4] a-1[ b-2 h-3 c-4]
   \stemDown
@@ -78,7 +78,7 @@ classicalGuitar = \relative {
   \cadenzaOff
   \bar ":|.|:"\break
   \cadenzaOn
-  gis!_1[\RH #2 a_2\RH #3 gis a] a_1[ b_2 a b] 
+  gis!_1[\RH #2 a_2\RH #3 gis a] a_1[ b_2 a b]
   ais_1[ h_2 ais h] h_1[ c_2 h c] c_1[ des_2 c des]
   cis[ \set stemRightBeamCount = #1 d]\glissando s s s
   h'_2[ ais_1 h ais] b_2[ \set stemRightBeamCount = #1 a_1]\glissando s s s
@@ -117,13 +117,26 @@ classicalGuitar = \relative {
   \cadenzaOff
   \bar ":|.|:"\break
   \cadenzaOn
+  gis_1_1_1_1[\RH #3 \RH #2 a_1_2_2_2\RH #4 \RH #3 ais_2_2_3_3 h_3_3_3_4 c_4_4_4_4]
+  a_1_1_1_1[ b_1_2_2_2 h_2_2_3_3 c_3_3_3_4 des_4_4_4_4]
+  \set stemLeftBeamCount = #0
+  ais[]_1_1_1_1\glissando s s s
+  ces'_4_4_4_4[ b!_4_3_3_3 a_3_3_2_2 as_2_2_2_1 g_1_1_1_1]
+  b_4_4_4_4[ a_4_3_3_3 gis_3_3_2_2 g_2_2_2_1 fis!_1_1_1_1]
+  \set stemLeftBeamCount = #0
+  a[]_4_4_4_4\glissando s s s
+  \set stemRightBeamCount = #0
+  gis,[]
+  \cadenzaOff
+  \bar ":|.|:"\break
+  \cadenzaOn
 }
 
 \score {
   \new Staff {
     \global
     \clef "treble_8"
-    \classicalGuitar 
+    \classicalGuitar
   }
   \layout {
     indent = #0

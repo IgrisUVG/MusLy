@@ -97,7 +97,7 @@ classicalGuitar = \relative {
   \cadenzaOff
   \bar ":|.|:"\break
   \cadenzaOn
-  b_3_3[\RH #3 a_2_2\RH #2 gis_1_1] h_3_4[ b_2_3 a_1_2]
+  b_3_3[\RH #3 a_2_2\RH #2 gis!_1_1] h_3_4[ b_2_3 a_1_2]
   \set stemLeftBeamCount = #0
   c[]_3_4\glissando s s s
   \set stemRightBeamCount = #0
@@ -151,6 +151,39 @@ classicalGuitar = \relative {
   fis![]\glissando s s s
   \set stemRightBeamCount = #0
   a,[]
+  \cadenzaOff
+  \bar ":|.|:"\break
+  \cadenzaOn
+  gis!_1[ a_2 gis a gis a] a_2[ b!_3 a b a b]
+  ais_3[ \set stemRightBeamCount = #1 h_4] s s
+  h-1[ \set stemRightBeamCount = #1 c-2]\glissando s s s
+  as'!-4[ g-3 as g as g]
+  g[-3 \set stemRightBeamCount = #1 fis!-2] s s
+  ges[-2 \set stemRightBeamCount = #1 f-1] s s
+  f[-4 \set stemRightBeamCount = #1 e-3]\glissando s s s
+  \set stemLeftBeamCount = #1 a,[_2 gis_1]
+  \cadenzaOff
+  \bar ":|.|:"\break
+  \cadenzaOn
+  g_0[ as_1 g_0] gis_1[ a_2 gis_1] a_2[ b_3 a_2] ais_3[ h_4 ais_3] h-1[ c-2 h-1]
+  \set stemLeftBeamCount = #0
+  c-2[]\glissando s s s
+  a'-2[ b-3 a-2] ais-3[ h-4 ais-3]
+  \set stemLeftBeamCount = #0
+  a-2[]\glissando s s s
+  \set stemRightBeamCount = #0
+  a,_2[] gis!_1[ a_2 gis_1]
+  \cadenzaOff
+  \bar ":|.|:"\break
+  \cadenzaOn
+  as[  g as] a[ gis a] b[ a b] h[ ais h] c[ h c]
+  \set stemLeftBeamCount = #0
+  cis-2[]\glissando s s s
+  b'[ a b] h[ ais h]
+  \set stemLeftBeamCount = #0
+  b[]\glissando s s s
+  \set stemRightBeamCount = #0
+  b,[] a[ gis! a]
   \cadenzaOff
   \bar ":|.|:"\break
   \cadenzaOn

@@ -86,12 +86,12 @@ classicalGuitar = \relative {
   \cadenzaOff
   \bar ":|.|:"\break
   \cadenzaOn
-  h_4[\RH #3 b_3\RH #2 a_2 gis!_1] c_4[ h_3 b_2 a_1]
+  h_4[\RH #3 b_3\RH #2 a_2 gis!_1] c-4[ h-3 b-2 a-1]
   \set stemLeftBeamCount = #0
-  des_4[]\glissando s s s
-  h'_4[ b_3 a_2 gis!_1] gis_1[ a_2 ais_3 h_1] g_1[ gis_2 a_3 b_4]
+  des-4[]\glissando s s s
+  h'-4[ b-3 a-2 gis!-1] gis-1[ a-2 ais-3 h-1] g-1[ gis-2 a-3 b-4]
   \set stemLeftBeamCount = #0
-  fis_1\glissando s s s
+  fis-1\glissando s s s
   \set stemRightBeamCount = #0
   h,[]
   \cadenzaOff
@@ -118,7 +118,9 @@ classicalGuitar = \relative {
   \bar ":|.|:"\break
   \cadenzaOn
   gis_1_1_1_1[\RH #3 \RH #2 a_1_2_2_2\RH #4 \RH #3 ais_2_2_3_3 h_3_3_3_4 c_4_4_4_4]
+  \stemUp
   a_1_1_1_1[ b_1_2_2_2 h_2_2_3_3 c_3_3_3_4 des_4_4_4_4]
+  \stemNeutral
   \set stemLeftBeamCount = #0
   ais[]_1_1_1_1\glissando s s s
   ces'_4_4_4_4[ b!_4_3_3_3 a_3_3_2_2 as_2_2_2_1 g_1_1_1_1]
@@ -142,7 +144,10 @@ classicalGuitar = \relative {
   \cadenzaOff
   \bar ":|.|:"\break
   \cadenzaOn
-  gis_1_1_1[ a_2_2_2 ais_3_2_3 h_4_3_3] c_4_4_4[ h_3_3_3 b_2_2_2 a_1_1_1]
+  gis_1_1_1[ a_2_2_2 ais_3_2_3 h_4_3_3] 
+  \stemUp
+  c_4_4_4[ h_3_3_3 b_2_2_2 a_1_1_1]
+  \stemNeutral
   \set stemLeftBeamCount = #0
   ais_1_1_1[]\glissando s s s
   \set stemRightBeamCount = #0

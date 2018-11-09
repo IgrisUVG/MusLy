@@ -804,7 +804,7 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      a32 cis cis cis cis cis cis cis
+      a32 cis cis cis cis cis cis cis e, cis' cis cis c,! cis'! cis cis
     }
     \\
     {
@@ -813,7 +813,12 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      g,1
+      s4 e
+    }
+    \\
+    {
+      \voiceTwo
+      g,4. c8
     }
   >>
 }

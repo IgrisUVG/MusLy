@@ -4,14 +4,17 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #18
-  system-system-spacing #'basic-distance = #18
-  last-bottom-spacing #'basic-distance = #25
-  two-sided = ##t
-  inner-margin = 25
-  outer-margin = 15
+  top-system-spacing #'basic-distance = #15
+  top-markup-spacing #'basic-distance = #5
+  markup-system-spacing #'basic-distance = #15
+  system-system-spacing #'basic-distance = #15
+  last-bottom-spacing #'basic-distance = #15
+
+  %two-sided = ##t
+  %inner-margin = 25
+  %outer-margin = 15
+  left-margin = 15
+  right-margin = 15
 }
 
 \layout {
@@ -172,6 +175,7 @@
       composer = ##f
     }
   }
+  \pageBreak
   \score {
     \new Staff {
       \clef treble
@@ -251,8 +255,8 @@
       \time 3/4
       <<
         {
-          e16 h''-4 h'' h''          
-          g' h'' h'' h''          
+          e16 h''-4 h'' h''
+          g' h'' h'' h''
           h' h'' h'' h'' |
           e g''-1 g'' g''
           g' g'' g'' g''
@@ -290,13 +294,13 @@
           e' e'' e'' e''
           g' e'' e'' e''
           h' e'' e'' e'' |
-          c''e'' e'' e'' 
+          c''e'' e'' e''
           h' e'' e'' e''
           g' e'' e'' e'' |
           e e'' e'' e''
           g e'' e'' e''
           h e'' e'' e'' |
-          c' e'' e'' e'' 
+          c' e'' e'' e''
           h e'' e'' e''
           g e'' e'' e''
         }
@@ -316,8 +320,9 @@
           h-1 a' h' |
           e'-2 g' h' |
           c''-1 h' g' |
-          e g h |
-          c' h g
+          \break
+          e g-3 h-1 |
+          c'-2 h-1 g-2
           \bar ":|."
         }
       >>
@@ -331,4 +336,5 @@
       composer = ##f
     }
   }
+  \pageBreak
 }

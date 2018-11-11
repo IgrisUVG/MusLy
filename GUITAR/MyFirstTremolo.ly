@@ -4,11 +4,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
+  top-system-spacing #'basic-distance = #10
   top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #15
-  system-system-spacing #'basic-distance = #15
-  last-bottom-spacing #'basic-distance = #15
+  markup-system-spacing #'basic-distance = #10
+  system-system-spacing #'basic-distance = #10
+  last-bottom-spacing #'basic-distance = #10
 
   %two-sided = ##t
   %inner-margin = 25
@@ -101,7 +101,7 @@
       indent = #0
     }
     \header {
-      title = "1"
+      title = "1."
       subtitle = ##f
       composer = ##f
     }
@@ -170,7 +170,7 @@
       indent = #0
     }
     \header {
-      title = "2"
+      title = "2."
       subtitle = ##f
       composer = ##f
     }
@@ -242,7 +242,7 @@
       indent = #0
     }
     \header {
-      title = "3"
+      title = "3."
       subtitle = ##f
       composer = ##f
     }
@@ -331,10 +331,246 @@
       indent = #0
     }
     \header {
-      title = "4"
+      title = "4."
       subtitle = ##f
       composer = ##f
     }
   }
   \pageBreak
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 3/4
+      <<
+        {
+          \override StrokeFinger #'extra-offset = #'(-1 . 8.1)
+          c'16\RH #1
+          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          e''\RH #4 e''\RH #3 e''\RH #2
+          \override StrokeFinger #'extra-offset = #'(-1 . 6.2)
+          g'\RH #1
+          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          e''\RH #4 e''\RH #3 e''\RH #2
+          c'' e'' e'' e''
+          e' g''-4 g'' g''
+          g' g'' g'' g''
+          c'' e''-0 e'' e'' |
+          d' f''-2 f'' f''
+          g' g''-4 g'' g''
+          h' g''-4 g'' g'' |
+          f' g'' g'' g''
+          g' g'' g'' g''
+          h' g'' g'' g'' |
+          g' h''-4 h'' h''
+          h' h'' h'' h''
+          f' a''-4 a'' a'' |
+          e' g''-4 g'' g''
+          g' g'' g'' g''
+          d' f''-1 f'' f'' |
+          c' e'' e'' e''
+          e' e'' e'' e''
+          g' e'' e'' e'' |
+          c'' e'' e'' e''
+          g' e'' e'' e''
+          e' e'' e'' e''
+        }
+        \\
+        {
+          c'4-3 g'-0 c''-1 |
+          e'-2 g' c''-1 |
+          d' g' h' |\break
+          f'-3 g' h' |
+          g'_\4-1 h'-0  f'-1 |
+          e'-2 g' d' |
+          c'-3 e'-2 g'-0 |
+          c''-1 g' e'
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "5."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "6."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "7."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "8."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "9."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "10."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "11."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
+  \score {
+    \new Staff {
+      \clef treble
+      \numericTimeSignature
+      \time 4/4
+      <<
+        {
+          
+        }
+        \\
+        {
+          
+          \bar ":|."
+        }
+      >>
+    }
+    \layout {
+      indent = #0
+    }
+    \header {
+      title = "12."
+      subtitle = ##f
+      composer = ##f
+    }
+  }
 }

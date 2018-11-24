@@ -99,7 +99,7 @@ ossia = \relative {
   cis4 d a fis' f2 e~ e8 dis-. r c-. d2 h~ h8 b-. r g-. a2 r
   e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-.
   e2 es4.( d8) h4 fis' f4. h8 a2~ a8 gis-. r f-. g2 r
-  es2~ es8 d-. r h-. cis2 r
+  es2~ es8 d-. r h-. cis2 r es4 b f'4. es'8
 }
 
 classicalGuitar = \relative {
@@ -763,10 +763,10 @@ classicalGuitar = \relative {
       c32^"VII" g' g g es g g g g g g g gis, g'! g g
     }
     \\
-    {
+    %{
       s2
-    }
-    \\
+    %}
+    %\\
     {
       \voiceTwo
       c,8 es( d4)
@@ -821,13 +821,57 @@ classicalGuitar = \relative {
       g,4. c8
     }
   >>
+  <<
+    {
+      h32 d' d d f, d' d d d d d d g, d' d d
+    }
+    \\
+    {
+      s8 f,( fis4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. g8
+    }
+    \\
+    {
+      \voiceTwo
+      h,2
+    }
+  >>
+  <<
+    {
+      s8 <g'' d'> s <es g!>
+    }
+    \\
+    {
+      \voiceOne
+      h,32[ es' es es]
+      \voiceTwo
+      es es es es\glissando
+      \voiceOne
+      b[ b b b]
+      \voiceTwo
+      b b b b\glissando
+      \voiceOne
+      f'[ f f f]
+      \voiceTwo
+      f f f f
+    }
+    \\
+    {
+      \voiceTwo
+      h,,4 gis e
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
 
-    %\new Staff \ossia
+    \new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

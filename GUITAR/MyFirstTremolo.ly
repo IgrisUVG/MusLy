@@ -45,13 +45,13 @@
       \time 4/4
       <<
         {
-          \override StrokeFinger #'extra-offset = #'(-1 . 9.1)
+          \override StrokeFinger.extra-offset = #'(-1 . 9.1)
           a16\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           e''\RH #4 e''\RH #3 e''\RH #2
-          \override StrokeFinger #'extra-offset = #'(-1 . 5.6)
+          \override StrokeFinger.extra-offset = #'(-1 . 5.6)
           a'\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           e''\RH #4 e''\RH #3 e''\RH #2
           c'' e''-0 e'' e''
           a' e'' e'' e'' |
@@ -114,13 +114,13 @@
       <<
         {
           \bar ".|:"
-          \override StrokeFinger #'extra-offset = #'(-1 . 9.1)
+          \override StrokeFinger.extra-offset = #'(-1 . 9.1)
           a16\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           e''\RH #4 e''\RH #3 e''\RH #2
-          \override StrokeFinger #'extra-offset = #'(-1 . 5.6)
+          \override StrokeFinger.extra-offset = #'(-1 . 5.6)
           a'\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           e''\RH #4 e''\RH #3 e''\RH #2
           c'' e''-0 e'' e''
           a' e'' e'' e'' |
@@ -175,7 +175,7 @@
       composer = ##f
     }
   }
-  \pageBreak
+  %\pageBreak
   \score {
     \new Staff {
       \clef treble
@@ -184,14 +184,14 @@
       \time 4/4
       <<
         {
-          \override StrokeFinger #'extra-offset = #'(-1 . 11.6)
+          \override StrokeFinger.extra-offset = #'(-1 . 11.6)
           e16\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
-          \once\override Fingering #'extra-offset = #'(1.3 . -4)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
+          \once\override Fingering.extra-offset = #'(1.3 . -4)
           g''-4\RH #4 g''\RH #3 g''\RH #2
-          \override StrokeFinger #'extra-offset = #'(-1 . 7.2)
+          \override StrokeFinger.extra-offset = #'(-1 . 7.2)
           g'\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           g''\RH #4 g''\RH #3 g''\RH #2
           h' g'' g'' g''
           g' g'' g'' g'' |
@@ -336,7 +336,7 @@
       composer = ##f
     }
   }
-  \pageBreak
+  %\pageBreak
   \score {
     \new Staff {
       \clef treble
@@ -344,13 +344,14 @@
       \time 3/4
       <<
         {
-          \override StrokeFinger #'extra-offset = #'(-1 . 8.1)
+          \bar ".|:"
+          \override StrokeFinger.extra-offset = #'(-1 . 8.1)
           c'16\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           e''\RH #4 e''\RH #3 e''\RH #2
-          \override StrokeFinger #'extra-offset = #'(-1 . 6.2)
+          \override StrokeFinger.extra-offset = #'(-1 . 6.2)
           g'\RH #1
-          \override StrokeFinger #'extra-offset = #'(-1 . 3.8)
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
           e''\RH #4 e''\RH #3 e''\RH #2
           c'' e'' e'' e''
           e' g''-4 g'' g''
@@ -401,15 +402,61 @@
   \score {
     \new Staff {
       \clef treble
+      \key g \major
       \numericTimeSignature
       \time 4/4
       <<
         {
-          
+          \bar ".|:"
+          \override StrokeFinger.extra-offset = #'(-1 . 8.1)
+          g16\RH #1
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
+          h'\RH #4 h'\RH #3 h'\RH #2
+          \override StrokeFinger.extra-offset = #'(-1 . 6.2)
+          d'\RH #1
+          \override StrokeFinger.extra-offset = #'(-1 . 3.8)
+          h'\RH #4 h'\RH #3 h'\RH #2
+          e' h' h' h'
+          d' h' h' h' |
+          fis c''-1 c'' c''
+          d' c'' c'' c''
+          e' c'' c'' c''
+          d' c'' c'' c'' |
+          d' fis''-3 fis'' fis''
+          a' fis'' fis'' fis''
+          c'' e''-0 e'' e''
+          a' d''-4 d'' d'' |
+          g h'-0 h' h'
+          d' h' h' h'
+          e' h' h' h'
+          d' h' h' h' |
+          g h'-0 h' h'
+          d' h' h' h'
+          e' h' h' h'
+          d' h' h' h' |
+          fis c''-1 c'' c''
+          d' c'' c'' c''
+          e' c'' c'' c''
+          d' c'' c'' c'' |
+          d' fis''-3 fis'' fis''
+          a' fis'' fis'' fis''
+          c'' e''-0 e'' e''
+          a' fis''-3 fis'' fis'' |
+          g g''-3 g'' g''
+          d' g'' g'' g''
+          g' g'' g'' g''
+          h' g'' g'' g'' |
         }
         \\
         {
-          
+          g4-3 d'-0 e'-2 d' |
+          fis-2 d'-0 e'-2 d' |
+          d'-0 a'-2 c''-1 a' |
+          g-3 d'-0 e'-2 d' |
+          g-3 d'-0 e'-2 d' |
+          fis-2 d'-0 e'-2 d' |
+          d'-0 a'-2 c''-1 a' |
+          g-2 d'-0 g' h'
           \bar ":|."
         }
       >>
@@ -426,15 +473,48 @@
   \score {
     \new Staff {
       \clef treble
+      \key d \major
       \numericTimeSignature
-      \time 4/4
+      \time 3/4
       <<
         {
-          
+          \bar ".|:"
+          d'16^"II" d'' d'' d''
+          fis' d'' d'' d''
+          a' d'' d'' d'' |
+          d' fis'' fis'' fis''
+          a' fis'' fis'' fis''
+          d'' fis'' fis'' fis'' |
+          d' d'' d'' d''
+          fis' d'' d'' d''
+          a' d'' d'' d'' |
+          d' fis'' fis'' fis''
+          a' fis'' fis'' fis''
+          d'' fis'' fis'' fis'' |
+          a e''-0 e'' e''
+          e' e'' e'' e''
+          g' e'' e'' e'' |
+          a g''-4 g'' g''
+          e' g'' g'' g''
+          g' e''-0 e'' e'' |
+          a cis''-2 cis'' cis''
+          e' cis'' cis'' cis''
+          g' cis'' cis'' cis'' |
+          a cis'' cis'' cis''
+          g' cis'' cis'' cis''
+          e' cis'' cis'' cis'' |
         }
         \\
         {
-          
+          \once\override StringNumber.extra-offset = #'(1.5 . -7)
+          d'4-4\5 fis'-3 a'-1 |
+          d'-4 a' d'' |
+          d' fis' a' |
+          d' a' d'' |
+          a-0 e' g' |
+          a e'-1 g'-0 |
+          a-0 e'-1 g'-0 |
+          a g'-0 e'-1
           \bar ":|."
         }
       >>
@@ -451,15 +531,46 @@
   \score {
     \new Staff {
       \clef treble
+      \key g \major
       \numericTimeSignature
       \time 4/4
       <<
         {
-          
+          \bar ".|:"
+          g16 h'-0 h' h'
+          a c''-1 c'' c''
+          h d''-4 d'' d''
+          c' e''-0 e'' e'' |
+          d' fis''-2 fis'' fis''
+          e' g''-4 g'' g''
+          fis' a''-4 a'' a''
+          g' h''-4 h'' h'' |
+          a' c'''-4 c''' c'''
+          g' h''-4 h'' h''
+          fis' a''-4 a'' a''
+          e' g''-4 g'' g'' |
+          d' fis''-2 fis'' fis''
+          c' e''-0 e'' e''
+          h d''-4 d'' d''
+          a c''-1 c'' c'' |
+          g h'-0 h' h'
+          d' h' h' h'
+          g' h' h' h'
+          d' h' h' h' |
+          fis' c''-1 c'' c''
+          d' c'' c'' c''
+          c' c'' c'' c''
+          a c'' c'' c''
         }
         \\
         {
-          
+          \override StringNumber.extra-offset = #'(1.5 . -5.5)
+          g4-3 a-0 h-2 c'-3 |
+          d'-0 e'-1 fis'-2 g'-1\4 |
+          a'-2\4 g'-1 fis'-2 e'-1 |
+          d'-0 c'-3 h-2 a-0 |
+          g-3 d'-0 g'-0 d' |
+          fis'-4 d'-0 c'-3 a-0
           \bar ":|."
         }
       >>
@@ -476,15 +587,71 @@
   \score {
     \new Staff {
       \clef treble
+      \key g \major
       \numericTimeSignature
-      \time 4/4
+      \time 6/8
       <<
         {
-          
+          \bar ".|:"
+          g32 g'' g'' g''
+          d' g'' g'' g''
+          g' g'' g'' g''
+          h' fis'' fis'' fis''
+          g' fis'' fis'' fis''
+          d' fis'' fis'' fis'' |
+          g d'' d'' d''
+          h d'' d'' d''
+          d' d'' d'' d''
+          e' d'' d'' d''
+          d' d'' d'' d''
+          h d'' d'' d'' |
+          g g'' g'' g''
+          d' g'' g'' g''
+          g' e'' e'' e''
+          g g'' g'' g''
+          d' g'' g'' g''
+          g' e'' e'' e'' |
+          d' fis'' fis'' fis''
+          a' fis'' fis'' fis''
+          c'' fis'' fis'' fis''
+          a fis'' fis'' fis''
+          a' fis'' fis'' fis''
+          c'' fis'' fis'' fis'' |
+          d' a'' a'' a''
+          c'' a'' a'' a''
+          d'' a'' a'' a''
+          a g'' g'' g''
+          a' g'' g'' g''
+          c'' g'' g'' g'' |
+          d' fis'' fis'' fis''
+          a' fis'' fis'' fis''
+          c'' fis'' fis'' fis''
+          a fis'' fis'' fis''
+          a' fis'' fis'' fis''
+          c'' fis'' fis'' fis'' |
+          d' a'' a'' a''
+          c'' a'' a'' a''
+          d'' gis'' gis'' gis''
+          d' a'' a'' a''
+          c'' a'' a'' a''
+          d'' h'' h'' h'' |
+          g g'' g'' g''
+          d' g'' g'' g''
+          g' g'' g'' g''
+          h' g'' g'' g''
+          g' g'' g'' g''
+          d' g'' g'' g''
         }
         \\
         {
-          
+          g8 d' g' h' g' d' |
+          g h d' e' d' h |
+          g d' g' g d' g' |
+          d' a' c'' a a' c'' |
+          d' c'' d'' a a' c'' |
+          d' a' c'' a a' c'' |
+          d' c'' d'' d' c'' d'' |
+          g d' g' h' g' d'
           \bar ":|."
         }
       >>

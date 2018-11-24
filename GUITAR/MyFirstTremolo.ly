@@ -592,6 +592,9 @@
       \time 6/8
       <<
         {
+          \set subdivideBeams = ##t
+          \set baseMoment = #(ly:make-moment 1/8)
+          \set beatStructure = #'(3 3 3 3)
           \bar ".|:"
           g32 g'' g'' g''
           d' g'' g'' g''
@@ -672,11 +675,11 @@
       \time 4/4
       <<
         {
-          
+
         }
         \\
         {
-          
+
           \bar ":|."
         }
       >>
@@ -697,11 +700,11 @@
       \time 4/4
       <<
         {
-          
+
         }
         \\
         {
-          
+
           \bar ":|."
         }
       >>
@@ -722,11 +725,11 @@
       \time 4/4
       <<
         {
-          
+
         }
         \\
         {
-          
+
           \bar ":|."
         }
       >>

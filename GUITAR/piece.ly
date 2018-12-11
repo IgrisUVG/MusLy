@@ -872,6 +872,7 @@ classicalGuitar = \relative {
   \new StaffGroup<<
 
     %\new Staff \ossia
+    \new Staff \ossia
 
     \new Staff \with {
       instrumentName = "Guitar"

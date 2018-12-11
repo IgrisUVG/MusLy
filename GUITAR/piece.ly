@@ -871,7 +871,6 @@ classicalGuitar = \relative {
 \score {
   \new StaffGroup<<
 
-    %\new Staff \ossia
     \new Staff \ossia
 
     \new Staff \with {

@@ -842,7 +842,7 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      s8 <g'' d'> s <es g!>
+      s8 <g'' d'> s <es g!> s <c b'>
     }
     \\
     {
@@ -863,6 +863,15 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       h,,4 gis e!
+    }
+  >>
+  <<
+    {
+      cis'32 f' f f <c'! es>8-.\noBeam
+    }
+    \\
+    {
+      cis,,4
     }
   >>
 }

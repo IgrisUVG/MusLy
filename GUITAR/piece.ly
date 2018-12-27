@@ -884,11 +884,11 @@ classicalGuitar = \relative {
       %\once\override Fingering.extra-offset = #'(-1.3 . -4.2)
       c' c c
       %\set fingeringOrientations = #'(down right)
-      <g! h>8-.\noBeam r <e gis>-.
+      <g! h!>8-.\noBeam r <e gis>-.
     }
     \\
     {
-      e8\rest a( as4) <ges, b> c,
+      d8\rest a'( as4) <ges, b> c,
     }
     \\
     {
@@ -902,7 +902,7 @@ classicalGuitar = \relative {
     }
     \\
     {
-      s2.
+      s2
     }
     \\
     {

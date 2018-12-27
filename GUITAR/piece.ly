@@ -100,6 +100,7 @@ ossia = \relative {
   e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-.
   e2 es4.( d8) h4 fis' f4. h8 a2~ a8 gis-. r f-. g2 r
   es2~ es8 d-. r h-. cis2 r es4 b f'4. es'8
+  c2~ c8 h-. r gis-. b2 r
 }
 
 classicalGuitar = \relative {
@@ -867,7 +868,7 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      cis'32 f' f f <c'! es>8-.\noBeam
+      cis'32 f' f f <h! es>8-.\noBeam
     }
     \\
     {

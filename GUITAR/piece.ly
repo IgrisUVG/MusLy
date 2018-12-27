@@ -875,6 +875,51 @@ classicalGuitar = \relative {
       cis,,4
     }
   >>
+  <<
+    {
+      %\override Fingering.staff-padding = #'()
+      c''32 c c c a c c c c c c c e, c' c c
+      %\once\override Fingering.extra-offset = #'(-0.3 . 3)
+      b,
+      %\once\override Fingering.extra-offset = #'(-1.3 . -4.2)
+      c' c c
+      %\set fingeringOrientations = #'(down right)
+      <g! h>8-.\noBeam r <e gis>-.
+    }
+    \\
+    {
+      e8\rest a( as4) <ges, b> c,
+    }
+    \\
+    {
+      \voiceTwo
+      s4. e'8 s2
+    }
+  >>
+  <<
+    {
+      es32 b' b b ges b b b b b b b h,! b'! b b
+    }
+    \\
+    {
+      s2.
+    }
+    \\
+    {
+      \voiceTwo
+      es,8 ges( f4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. h,8
+    }
+    \\
+    {
+      \voiceTwo
+      d,2
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

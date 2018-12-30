@@ -790,22 +790,31 @@ classicalGuitar = \relative {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
-      es32 es es es c es es es es es es es g, es' es es
-      e,! es'! es es <h d>8-.\noBeam r <g h>-.
+      \once\override Fingering.extra-offset = #'(-0.3 . -3)
+      es32-3 es es es c es es es es es es es g, es' es es
+      e,!
+      \once\override Fingering.extra-offset = #'(-0.3 . -4)
+      es'!-4 es es <h d>8-.\noBeam r <g h>-.
     }
     \\
     {
-      a8\rest c( h4) <cis, e> as
+      a8\rest
+      \once\override Fingering.extra-offset = #'(-1.3 . 3.5)
+      c-4(
+      \once\override Fingering.extra-offset = #'(0.3 . 1.8)
+      h4-2) <cis, e> as
     }
     \\
     {
       \voiceTwo
-      s4. g'8 s2
+      s4.
+      \once\override Fingering.extra-offset = #'(-1.3 . 3.5)
+      g'8-4 s2
     }
   >>
   <<
     {
-      a32 cis cis cis cis cis cis cis e, cis' cis cis c,! cis'! cis cis
+      a32 cis-3 cis cis cis cis cis cis e, cis' cis cis c,! cis'! cis cis
     }
     \\
     {
@@ -819,12 +828,12 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      g,4. c8
+      g,4.-4 c8
     }
   >>
   <<
     {
-      h32 d' d d f, d' d d d d d d g, d' d d
+      h32 d'-3 d d f, d' d d d d d d g, d' d d
     }
     \\
     {
@@ -838,32 +847,37 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      h,2
+      h,2-1
     }
   >>
   <<
     {
-      s8 <g'' d'> s <es g!> s <c b'>
+      \set fingeringOrientations = #'(up)
+      s8 <g'' d'> s <es-4 g!-1> s <c b'>
     }
     \\
     {
       \voiceOne
-      h,32[ es' es es]
+      h,32[
+      \once\override Fingering.extra-offset = #'(-0.2 . -4.2)
+      es'-2 es es]
       \voiceTwo
       es es es es\glissando
       \voiceOne
-      b[ b b b]
+      \once\override Fingering.extra-offset = #'(-0.2 . -3.5)
+      b-2[ b b b]
       \voiceTwo
       b b b b\glissando
       \voiceOne
-      f'[ f f f]
+      \once\override Fingering.extra-offset = #'(-0.2 . -3)
+      f'-2[ f f f]
       \voiceTwo
       f f f f
     }
     \\
     {
       \voiceTwo
-      h,,4 gis e!
+      h,,4 gis-3 e!
     }
   >>
   <<
@@ -877,18 +891,15 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      %\override Fingering.staff-padding = #'()
       c''32 c c c a c c c c c c c e, c' c c
-      %\once\override Fingering.extra-offset = #'(-0.3 . 3)
-      b,
-      %\once\override Fingering.extra-offset = #'(-1.3 . -4.2)
-      c' c c
-      %\set fingeringOrientations = #'(down right)
-      <g! h!>8-.\noBeam r <e gis>-.
+      b, c' c c
+      \once\override Fingering.extra-offset = #'(-0.5 . -3)
+      <g!-3 h!-1>8-.\noBeam r <e gis>-.
     }
     \\
     {
-      d8\rest a'( as4) <ges, b> c,
+      \set fingeringOrientations = #'(right)
+      d8\rest a'( as4) <ges,-4 b-2> c,
     }
     \\
     {
@@ -898,7 +909,8 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      es32 b' b b ges b b b b b b b h,! b'! b b
+      \override TextScript.font-size = -2
+      es32^"IV" b' b b ges b b b b b b b h,! b'! b b
     }
     \\
     {

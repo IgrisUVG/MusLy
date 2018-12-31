@@ -14,9 +14,9 @@
   top-markup-spacing.basic-distance = 5
   markup-system-spacing.basic-distance = 15
   top-system-spacing.basic-distance = 20
-  system-system-spacing.basic-distance = 20
+  system-system-spacing.basic-distance = 19
   score-system-spacing.basic-distance = 20
-  last-bottom-spacing.basic-distance = 25
+  last-bottom-spacing.basic-distance = 20
 
   %two-sided = ##t
   %inner-margin = 25

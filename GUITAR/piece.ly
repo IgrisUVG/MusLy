@@ -142,7 +142,7 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      e,4\harmonic s
+      e,2\harmonic
     }
   >>
   b'16-\markup {
@@ -930,6 +930,46 @@ classicalGuitar = \relative {
     {
       \voiceTwo
       d,2
+    }
+  >>
+  <<
+    {
+      %\set subdivideBeams = ##t
+      %\set baseMoment = #(ly:make-moment 1/8)
+      %\set beatStructure = #'(2 2 2 2)
+      %\override StrokeFinger.extra-offset = #'(-2.3 . 0.8)
+      des''32 des des des g, des' des des des des des des es, des' des des
+      a, des' des des <as c>8-.\noBeam r <fis a>-.
+    }
+    \\
+    {
+      d8\rest g( fis4)
+      %\once\override Fingering.extra-offset = #'(0.3 . 1)
+      <fis, a>4 c
+    }
+    \\
+    {
+      \voiceTwo
+      s4. es'8 s2
+    }
+  >>
+  <<
+    {
+      e!32 h'\2 h h g h h h h h h h c, h' h h
+    }
+    \\
+    {
+      e,8 g( fis4)
+    }
+    \\
+    {
+      \voiceTwo
+      s4. c8
+    }
+    \\
+    {
+      \voiceTwo
+      es,2
     }
   >>
 }

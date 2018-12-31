@@ -100,7 +100,7 @@ ossia = \relative {
   e'~ e8 dis-. r c-. d4 es h g' fis2~ fis8 f-. r d-.
   e2 es4.( d8) h4 fis' f4. h8 a2~ a8 gis-. r f-. g2 r
   es2~ es8 d-. r h-. cis2 r es4 b f'4. es'8
-  c2~ c8 h-. r gis-. b2 r
+  c2~ c8 h-. r gis-. b2 des~ des8 c-. r a-. h2 a
 }
 
 classicalGuitar = \relative {
@@ -900,6 +900,7 @@ classicalGuitar = \relative {
     {
       \set fingeringOrientations = #'(right)
       d8\rest a'( as4) <ges,-4 b-2> c,
+      \unset fingeringOrientations
     }
     \\
     {
@@ -934,17 +935,12 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      %\set subdivideBeams = ##t
-      %\set baseMoment = #(ly:make-moment 1/8)
-      %\set beatStructure = #'(2 2 2 2)
-      %\override StrokeFinger.extra-offset = #'(-2.3 . 0.8)
       des''32 des des des g, des' des des des des des des es, des' des des
       a, des' des des <as c>8-.\noBeam r <fis a>-.
     }
     \\
     {
       d8\rest g( fis4)
-      %\once\override Fingering.extra-offset = #'(0.3 . 1)
       <fis, a>4 c
     }
     \\
@@ -955,11 +951,12 @@ classicalGuitar = \relative {
   >>
   <<
     {
-      e!32 h'\2 h h g h h h h h h h c, h' h h
+      \once\override Fingering.extra-offset = #'(-0.2 . -5.3)
+      e!32-0 h'\2 h h g h h h h h h h c, h' h h
     }
     \\
     {
-      e,8 g( fis4)
+      e,8 g(\glissando fis4)
     }
     \\
     {
@@ -969,17 +966,28 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      es,2
+      \once\override StringNumber.extra-offset = #'(0.5 . 2.8)
+      es,2_\6
     }
   >>
+  <<
+    {
+      <h' a'>2
+    }
+    \\
+    {
+      \override Fingering.extra-offset = #'(-1.3 . -1)
+      <a, e''-0>
+    }
+  >>
+  r
+  \bar "|."
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
-
-    %\new Staff \ossia
-
+    
     \new Staff \with {
       instrumentName = "Guitar"
     }

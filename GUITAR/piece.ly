@@ -862,7 +862,9 @@ classicalGuitar = \relative {
       \once\override Fingering.extra-offset = #'(-0.2 . -4.2)
       es'-2 es es]
       \voiceTwo
-      es es es es\glissando
+      es es es es-\markup {
+        \postscript #"1.5 4 moveto 2.2 -1 rlineto stroke"
+      }
       \voiceOne
       \once\override Fingering.extra-offset = #'(-0.2 . -3.5)
       b-2[ b b b]
@@ -956,7 +958,9 @@ classicalGuitar = \relative {
     }
     \\
     {
-      e,8 g(\glissando fis4)
+      e,8 g(-\markup {
+        \postscript #"1.5 5.1 moveto 10 -0.4 rlineto stroke"
+      } fis4)
     }
     \\
     {
@@ -982,12 +986,15 @@ classicalGuitar = \relative {
   >>
   r
   \bar "|."
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \mark \markup {\teeny{\char ##x00A9 "MMXVIII - XII - XXXI"}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup<<
-    
+
     \new Staff \with {
       instrumentName = "Guitar"
     }

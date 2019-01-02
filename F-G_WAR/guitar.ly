@@ -1042,6 +1042,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
+      \once\override StringNumber.extra-offset = #'(0.5 . 2.3)
       b,4_\6 r8
     }
   >>

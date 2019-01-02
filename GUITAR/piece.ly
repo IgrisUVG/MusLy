@@ -970,7 +970,7 @@ classicalGuitar = \relative {
     \\
     {
       \voiceTwo
-      \once\override StringNumber.extra-offset = #'(0.5 . 2.8)
+      \once\override StringNumber.extra-offset = #'(0.5 . 2.6)
       es,2_\6
     }
   >>

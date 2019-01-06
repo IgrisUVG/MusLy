@@ -34,7 +34,7 @@
   }
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,9 +43,9 @@ global = {
   %\key d \major
   \time 4/4
   \override Staff.TimeSignature.stencil = ##f
-  \set Staff.fontSize = #-1
-  \override Staff.StaffSymbol.staff-space = #(magstep -1)
-  \override Staff.StaffSymbol.thickness = #(magstep -1)
+  %\set Staff.fontSize = #-1
+  %\override Staff.StaffSymbol.staff-space = #(magstep -1)
+  %\override Staff.StaffSymbol.thickness = #(magstep -1)
 }
 
 ossia = \relative {
@@ -91,11 +91,13 @@ ossia = \relative {
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\score {
+%{
+  \score {
 
   \new Staff \ossia
 
 }
+%}
 
 \score {
   

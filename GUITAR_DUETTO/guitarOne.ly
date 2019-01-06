@@ -1,3 +1,10 @@
+\version "2.19.15"
+
+\language "deutsch"
+
+\include "guitarScript.ly"
+\include "global.ly"
+
 guitarOne =
 \relative{
   \global
@@ -185,7 +192,7 @@ guitarOne =
   \break
   \stemUp
   \acciaccatura e,-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.7 0.3 moveto 2 0.8 rlineto stroke"
   }
   \once \override StringNumber.extra-offset = #'(-2.8 . 0.3)
   g4_\5
@@ -216,7 +223,7 @@ guitarOne =
   >>
   \stemNeutral
   b,-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.7 4.5 moveto 1.9 0.5 rlineto stroke"
   }( c) d f
   <<
     {
@@ -225,7 +232,7 @@ guitarOne =
     \\
     {
       g e-\markup {
-        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+        \postscript #"0.8 4.8 moveto 1.8 0.5 rlineto stroke"
       }^( f8)
     }
   >>
@@ -253,7 +260,7 @@ guitarOne =
     }
   >>
   g16-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.8 5.8 moveto 2.3 1 rlineto stroke"
   }( b) d( es)
   <f, a f'> b c d <es, g es'> a b c
   <<
@@ -275,12 +282,12 @@ guitarOne =
       d16 f
       \once \override Fingering.extra-offset = #'(-0.5 . -1)
       g^4-\markup {
-        \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+        \postscript #"0.9 5.9 moveto 2.9 0.4 rlineto stroke"
       }^( as)
     }
   >>
   g( f) es d-\markup {
-    \postscript #"1 2.3 moveto 2.5 1.2 rlineto stroke"
+    \postscript #"0.7 4.4 moveto 1.8 0.7 rlineto stroke"
   }
   f8 a,!16^\4( h) c d es f
   \once\override TextScript.extra-offset = #'(-1 . 0)

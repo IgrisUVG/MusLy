@@ -148,12 +148,16 @@ guitarTwo = \relative{
     \\
     {
       \stemUp
-      \acciaccatura d''8\glissando \stemUp
+      \acciaccatura d''8-\markup {
+        \postscript #"0.5 2.9 moveto 2.3 1 rlineto stroke"
+      } \stemUp
       \once \override StringNumber.extra-offset = #'(-0.5 . -2.3)
       fis4\2
     }
   >>
-  e8 fis[( e]) \appoggiatura a,\glissando h\3 c a
+  e8 fis[( e]) \appoggiatura a,-\markup {
+    \postscript #"0.5 1.4 moveto 2.2 0.4 rlineto stroke"
+  } h\3 c a
   \break
   <<
     {
@@ -167,7 +171,9 @@ guitarTwo = \relative{
     }
   >>
   <c a'><d h'>\glissando(<c a'>)<c e>-><a fis'>4
-  <h d>8<g e'>4 a16( h) c8 <fis, d'>4 \acciaccatura a'8\glissando c <d, h'>
+  <h d>8<g e'>4 a16( h) c8 <fis, d'>4 \acciaccatura a'8-\markup {
+    \postscript #"0.5 4.9 moveto 2.3 0.9 rlineto stroke"
+  } c <d, h'>
   <<
     {
       d'4

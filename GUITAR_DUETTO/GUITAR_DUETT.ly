@@ -20,8 +20,8 @@
   %score-system-spacing.basic-distance = #15
   last-bottom-spacing.basic-distance = #25
   two-sided = ##t
-  inner-margin = 20
-  outer-margin = 13
+  inner-margin = 15
+  outer-margin = 10
 }
 
 \layout {
@@ -49,6 +49,7 @@
         }
       }
     }
+    \removeWithTag #'Part
     \guitarOne
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \new Dynamics = "dynamics"
@@ -61,6 +62,7 @@
         }
       }
     }
+    \removeWithTag #'Part
     \guitarTwo
   >>
 }

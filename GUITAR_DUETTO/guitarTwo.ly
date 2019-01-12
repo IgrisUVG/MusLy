@@ -40,7 +40,9 @@ guitarTwo = \relative{
     }
   >>
   <c e>8\noBeam<a fis'><h d>
-  \break
+  \tag #'Part {
+    \break
+  }
   <g e'>4<a c>8<h d>4<e g>8-.<a, c>4
   \once\override StrokeFinger.avoid-slur = #'outside
   \override StrokeFinger.staff-padding = #'()
@@ -56,7 +58,9 @@ guitarTwo = \relative{
   h-\RH #2 c) d-\RH #3 e-\RH #2 ( fis) g-\RH #3 a-\RH#2
   h-\RH #3 ( g-\RH #2 d-\RH#1) g\glissando( a) e-\RH#1 ( a-\RH#2 c-\RH#3)
   d-\RH#2 ( c) a\glissando-\RH#2 ( h) c-\RH#3 a-\RH#2 h-\RH#3 c-\RH#2 <h d>4<c e>8<h d>~
-  \break
+  \tag #'Part {
+    \break
+  }
   q <e, g><fis a><g h><a c>4 <h d>8 <a c>~ q <d, fis><e g><fis a>
   <<
     {
@@ -144,7 +148,9 @@ guitarTwo = \relative{
     }
   >>
   <e cis'>8
-  \break
+  \tag #'Part {
+    \break
+  }
   <\tweak #'duration-log #1 d, \tweak #'duration-log #1 a'>16(
   e'' d a d, a' h e) g(\( e) h g e g d' e\)
   <\tweak #'duration-log #1 d,, \tweak #'duration-log #1 a'>_\(
@@ -167,7 +173,9 @@ guitarTwo = \relative{
   e8 fis[( e]) \appoggiatura a,-\markup {
     \postscript #"0.5 1.4 moveto 2.2 0.4 rlineto stroke"
   } h\3 c a
-  \break
+  \tag #'Part {
+    \break
+  }
   <<
     {
       \override Fingering.staff-padding = #'()
@@ -213,7 +221,9 @@ guitarTwo = \relative{
     }
   >>
   <fis' d'><d c'><e g><g, e'>4<fis d'>8
-  \break
+  \tag #'Part {
+    \break
+  }
   <<
     {
       \override Fingering.staff-padding = #'()
@@ -231,7 +241,9 @@ guitarTwo = \relative{
   e_\3\( c_\4 e fis( g)\) a h c d\glissando( e) h fis\glissando(
   \once\override TextScript.extra-offset = #'(-1 . 0)
   e^"VIII") g c a
-  \break
+  \tag #'Part {
+    \break
+  }
   <g h> cis,_\4( d) c\glissando( h) a g fis
   <<
     {
@@ -253,7 +265,9 @@ guitarTwo = \relative{
     }
   >>
   c16( a) g( e) d( h) g( e)
-  \break
+  \tag #'Part {
+    \break
+  }
   es8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
   <<
     {
@@ -275,7 +289,9 @@ guitarTwo = \relative{
     es,,,8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
     \stemDown f, <dis'''\harmonic e\harmonic> \stemNeutral
   }
-  \break
+  \tag #'Part {
+    \break
+  }
   <d, h'>8^"VII"[( g d])
   \shape #'((0 . 0.3) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
   <c h'>^"V"[\(( a') e]\)<a, fis'>^"VII"( d) <h g'>4

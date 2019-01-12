@@ -18,8 +18,8 @@
   system-system-spacing.basic-distance = #18
   last-bottom-spacing.basic-distance = #20
   two-sided = ##t
-  inner-margin = 20
-  outer-margin = 13
+  inner-margin = 15
+  outer-margin = 10
 }
 
 \layout {

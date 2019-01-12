@@ -13,14 +13,22 @@ guitarTwo = \relative{
   \override StringNumber.staff-padding = #'()
   \override StrokeFinger.staff-padding = #'()
   \time 8/4
-  g8^"V"[( d' g]) a,[( d a']) \acciaccatura d,\glissando e h g4 d8 e4 fis8[ e d]
+  g8^"V"[( d' g]) a,[( d a']) \acciaccatura d,-\markup {
+    \postscript #"0.5 0.3 moveto 1.8 0.4 rlineto stroke"
+  } e h g4 d8 e4 fis8[ e d]
   \time 6/4
-  g8[( d' g]) a,[( d a']) \acciaccatura d,\glissando e h
-  a16_0( h) c d(\glissando e) fis g( a)
+  g8[( d' g]) a,[( d a']) \acciaccatura d,-\markup {
+    \postscript #"0.5 0.3 moveto 1.8 0.4 rlineto stroke"
+  } e h
+  a16_0( h) c d(-\markup {
+    \postscript #"0.5 0.3 moveto 2.2 0.5 rlineto stroke"
+  } e) fis g( a)
   \time 5/4
   h4\4 a8 h( a) e fis d e4
   \time 4/4
-  a,16( h c) d\glissando( e) fis g( a) h( c) d e( fis) g a( ais)
+  a,16( h c) d(-\markup {
+    \postscript #"0.5 0.3 moveto 2.2 0.5 rlineto stroke"
+  } e) fis g( a) h( c) d e( fis) g a( ais)
   <d, h'>4 <h a'>8
   <<
     {

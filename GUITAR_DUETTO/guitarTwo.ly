@@ -89,8 +89,8 @@ guitarTwo = \relative{
       g,
     }
   >>
-  <d h'\2>
-  \noBeam <e c'>^\markup {\tiny \parenthesize \sharp}<h a'>
+  <d h'\2>\noBeam
+  <e c'>^\markup \fontsize #-3 {\parenthesize \sharp}<h a'>
   <<
     {
       \override Fingering.staff-padding = #'()
@@ -146,7 +146,7 @@ guitarTwo = \relative{
   <e cis'>8
   \break
   <\tweak #'duration-log #1 d, \tweak #'duration-log #1 a'>16(
-  e'' d a d, a' h e) g( e h g e g d' e)
+  e'' d a d, a' h e) g(\( e) h g e g d' e\)
   <\tweak #'duration-log #1 d,, \tweak #'duration-log #1 a'>_\(
   fis' a d a'( e) d a\) d,_\( a' h g'_(\stemUp fis) d g, e\)\stemNeutral
   <<

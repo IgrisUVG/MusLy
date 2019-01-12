@@ -37,7 +37,7 @@
   \new Staff \with {
     instrumentName = \markup {
       \right-column {
-        "Guitar I"
+        "Guitar II"
         \line { \circle 6"= D" }
       }
     }

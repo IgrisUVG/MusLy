@@ -136,9 +136,17 @@ guitarOne =
       c,,( d g e') h,( d g d') a,( d g cis)
       \hideNotes d,,16(\unHideNotes
       e'^1[ g d'^3])~
-      d8-\markup {
-        \postscript #"1.4 4 moveto 1.9 1 rlineto stroke"
-      }[ a'\2]
+      \tag #'Part {
+        d8[-\markup {
+          \postscript #"1.4 4 moveto 1.9 1 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        d8[-\markup {
+          \postscript #"1.5 4 moveto 1.9 1.2 rlineto stroke"
+        }
+      }
+      a'\2]
     }
     \\
     {
@@ -162,11 +170,28 @@ guitarOne =
       \once \override StringNumber.extra-offset = #'(-0.5 . -3.8)
       c!\4
       \once \override Fingering.extra-offset = #'(-0.2 . -5.2)
-      g-0 a4-"VII" fis'16_\2 h,_\3( g_0) e-\markup {
-        \postscript #"0.6 -7.4 moveto 2 0.5 rlineto stroke"
-      } _( fis) a a' a,-\markup {
-        \postscript #"0.6 -7.6 moveto 2 0.5 rlineto stroke"
-      } _(
+      g-0 a4-"VII" fis'16_\2 h,_\3( g_0)
+      \tag #'Part {
+        e_(-\markup {
+          \postscript #"0.6 -6.8 moveto 2 0.5 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        e_(-\markup {
+          \postscript #"0.5 -7.6 moveto 1.8 0.5 rlineto stroke"
+        }
+      }
+      fis) a a'
+      \tag #'Part {
+        a,_(-\markup {
+          \postscript #"0.6 -7.7 moveto 2 0.5 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        a_(-\markup {
+          \postscript #"0.6 -7.7 moveto 1.8 0.6 rlineto stroke"
+        }
+      }
       h) g' c, g
     }
     \\
@@ -177,7 +202,12 @@ guitarOne =
       a_\4
       \textSpannerDown
       \stringNumSpan "3"
-      \once\override TextSpanner.extra-offset = #'(0 . 0.6)
+      \tag #'Part {
+        \once\override TextSpanner.extra-offset = #'(0 . 0.6)
+      }
+      \tag #'Partitur {
+        \once\override TextSpanner.extra-offset = #'(0 . 2.4)
+      }
       h\startTextSpan cis( d)
       \once \override NoteColumn.force-hshift = #1.3
       e^( fis)

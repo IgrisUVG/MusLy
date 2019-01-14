@@ -204,8 +204,11 @@ guitarTwo = \relative{
   >>
   <c a'><d h'>(
   -\markup {
-      \postscript #"0.8 7 moveto 2.6 -0.5 rlineto stroke"
-    }
+    \postscript #"1 7 moveto 2.6 -0.6 rlineto stroke"
+  }
+  -\markup {
+    \postscript #"1.2 4.8 moveto 2.4 -0.4 rlineto stroke"
+  }
   <c a'>)<c e>-><a fis'>4
   <h d>8<g e'>4 a16( h) c8 <fis, d'>4 \acciaccatura a'8-\markup {
     \postscript #"0.5 4.9 moveto 2.3 0.9 rlineto stroke"
@@ -250,20 +253,63 @@ guitarTwo = \relative{
     }
     \\
     {
-      g16_\4 h_\3^( c\glissando d)
+      g16_\4 h_\3^(
+      \tag #'Part {
+        c-\markup {
+          \postscript #"1 5.2 moveto 2.4 0.4 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        c-\markup {
+          \postscript #"0.7 7.4 moveto 1.3 0.3 rlineto stroke"
+        }
+      }
+      d)
     }
   >>
   \textSpannerDown
   \stringNumSpan "2"
   e16(\startTextSpan fis) g a h(\stopTextSpan d) a( d) g, d'( h) g
   \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0.3)) PhrasingSlur
-  e_\3\( c_\4 e fis( g)\) a h c d\glissando( e) h fis\glissando(
+  e_\3\( c_\4 e fis( g)\) a h c
+  \tag #'Part {
+    d(-\markup {
+      \postscript #"1 7.8 moveto 2.4 0.4 rlineto stroke"
+    }
+  }
+  \tag #' Partitur {
+    d(-\markup {
+      \postscript #"0.8 7.8 moveto 1.5 0.4 rlineto stroke"
+    }
+  }
+  e) h
+  \tag #'Part {
+    fis(-\markup {
+      \postscript #"1 5.3 moveto 2.4 -0.5 rlineto stroke"
+    }
+  }
+  \tag #'Partitur {
+    fis(-\markup {
+      \postscript #"1 5.3 moveto 1.4 -0.5 rlineto stroke"
+    }
+  }
   \once\override TextScript.extra-offset = #'(-1 . 0)
   e^"VIII") g c a
   \tag #'Part {
     \break
   }
-  <g h> cis,_\4( d) c\glissando( h) a g fis
+  <g h> cis,_\4( d)
+  \tag #'Part {
+    c(-\markup {
+      \postscript #"1 4.8 moveto 2.4 -0.5 rlineto stroke"
+    }
+  }
+  \tag #'Partitur {
+    c(-\markup {
+      \postscript #"1 4.8 moveto 1.5 -0.5 rlineto stroke"
+    }
+  }
+  h) a g fis
   <<
     {
       \override Fingering.staff-padding = #'()
@@ -277,10 +323,32 @@ guitarTwo = \relative{
     }
     \\
     {
-      \stemDown s16 a8_( h16 c\glissando a) c(
+      \stemDown s16 a8_( h16
+      \tag #'Part {
+        c-\markup {
+          \postscript #"1.2 -1.3 moveto 2.4 -1 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        c-\markup {
+          \postscript #"1.2 -1.3 moveto 1.5 -1 rlineto stroke"
+        }
+      }
+      a) c(
       \once \override Fingering.extra-offset = #'(0.3 . 3.5)
       d_4) s8. c16(
-      \stemUp d-1)\glissando h( d e)
+      \stemUp
+      \tag #'Part {
+        d-1)-\markup {
+          \postscript #"0.5 -5.8 moveto 2.6 -1 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        d-1)-\markup {
+          \postscript #"0.5 -6 moveto 1.7 -1.1 rlineto stroke"
+        }
+      }
+      h( d e)
     }
   >>
   c16( a) g( e) d( h) g( e)

@@ -42,5 +42,6 @@
       }
     }
   }
+  \removeWithTag #'Partitur
   \guitarTwo
 }

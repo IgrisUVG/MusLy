@@ -56,8 +56,12 @@ guitarTwo = \relative{
   \override StrokeFinger.avoid-slur = #'inside
   \set strokeFingerOrientations = #'(down)
   h-\RH #2 c) d-\RH #3 e-\RH #2 ( fis) g-\RH #3 a-\RH#2
-  h-\RH #3 ( g-\RH #2 d-\RH#1) g\glissando( a) e-\RH#1 ( a-\RH#2 c-\RH#3)
-  d-\RH#2 ( c) a\glissando-\RH#2 ( h) c-\RH#3 a-\RH#2 h-\RH#3 c-\RH#2 <h d>4<c e>8<h d>~
+  h-\RH #3 ( g-\RH #2 d-\RH#1) g(-\markup {
+    \postscript #"0.8 6 moveto 2.2 0.5 rlineto stroke"
+  } a) e-\RH#1 ( a-\RH#2 c-\RH#3)
+  d-\RH#2 ( c) a-\markup {
+    \postscript #"0.8 6.3 moveto 2.2 0.5 rlineto stroke"
+  }-\RH#2 ( h) c-\RH#3 a-\RH#2 h-\RH#3 c-\RH#2 <h d>4<c e>8<h d>~
   \tag #'Part {
     \break
   }
@@ -82,7 +86,18 @@ guitarTwo = \relative{
       c,4.
     }
   >>
-  <d fis\2>8<e g> a\glissando( h) d
+  <d fis\2>8<e g>
+  \tag #'Part {
+    a(-\markup {
+      \postscript #"0.8 6.3 moveto 3.8 0.5 rlineto stroke"
+    }
+  }
+  \tag #'Partitur {
+    a(-\markup {
+      \postscript #"0.8 6.3 moveto 2.6 0.5 rlineto stroke"
+    }
+  }
+  h) d
   <a fis'>4<fis e'>8
   <<
     {
@@ -187,7 +202,11 @@ guitarTwo = \relative{
       s8 <d' h'>^>
     }
   >>
-  <c a'><d h'>\glissando(<c a'>)<c e>-><a fis'>4
+  <c a'><d h'>(
+  -\markup {
+      \postscript #"0.8 7 moveto 2.6 -0.5 rlineto stroke"
+    }
+  <c a'>)<c e>-><a fis'>4
   <h d>8<g e'>4 a16( h) c8 <fis, d'>4 \acciaccatura a'8-\markup {
     \postscript #"0.5 4.9 moveto 2.3 0.9 rlineto stroke"
   } c <d, h'>

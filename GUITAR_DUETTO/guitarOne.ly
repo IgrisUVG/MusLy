@@ -75,7 +75,7 @@ guitarOne =
   a\5( h)
   \stemNeutral
   \time 4/4
-  d4\4 c,\6 h a g8[( d' g]) a,[( d a'])(g) e(
+  d4\4 c,_\6 h a g8[( d' g]) a,[( d a'])(g) e(
   \tag #'Part {
     \break
   }

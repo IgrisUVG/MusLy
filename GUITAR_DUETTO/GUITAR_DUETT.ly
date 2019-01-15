@@ -27,6 +27,8 @@
 \layout {
   \context {
     \Score
+    %proportionalNotationDuration = #(ly:make-moment 1/20)
+    %\override SpacingSpanner.uniform-stretching = ##t
     \remove "Bar_number_engraver"
   }
   indent = #15

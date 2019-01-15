@@ -382,5 +382,20 @@ guitarTwo = \relative{
   <d, h'>8^"VII"[( g d])
   \shape #'((0 . 0.3) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
   <c h'>^"V"[\(( a') e]\)<a, fis'>^"VII"( d)~
-  <h d g>8 d'16( c) h a g fis e-0 c'\2 g\3( f)
+  <h d g>8 d'16( c) h a g fis e-0 c'\2 g\3( fis) <d h'>8 <c a'>
+  <h d>[( d' a]) <es d'>[\(( c') g]\)
+  <<
+    {
+      \stemDown
+      <c, a'>( d)~
+      \stemUp
+      <d g>8 s
+    }
+    \\
+    {
+      s4
+      h16( c) d e
+    }
+  >>
+  fis g a h
 }

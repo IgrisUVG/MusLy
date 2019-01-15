@@ -143,7 +143,7 @@ guitarOne =
       }
       \tag #'Partitur {
         d8[-\markup {
-          \postscript #"1.5 4 moveto 1.9 1.2 rlineto stroke"
+          \postscript #"1.5 4 moveto 4.2 1.2 rlineto stroke"
         }
       }
       a'\2]
@@ -178,7 +178,7 @@ guitarOne =
       }
       \tag #'Partitur {
         e_(-\markup {
-          \postscript #"0.5 -7.6 moveto 1.8 0.5 rlineto stroke"
+          \postscript #"0.7 -6.8 moveto 2 0.3 rlineto stroke"
         }
       }
       fis) a a'
@@ -206,7 +206,7 @@ guitarOne =
         \once\override TextSpanner.extra-offset = #'(0 . 0.6)
       }
       \tag #'Partitur {
-        \once\override TextSpanner.extra-offset = #'(0 . 2.4)
+        \once\override TextSpanner.extra-offset = #'(0 . 0.5)
       }
       h\startTextSpan cis( d)
       \once \override NoteColumn.force-hshift = #1.3
@@ -300,7 +300,7 @@ guitarOne =
     }
   >>
   g16-\markup {
-    \postscript #"0.8 5.8 moveto 2.3 1 rlineto stroke"
+    \postscript #"1 5.8 moveto 2.3 0.8 rlineto stroke"
   }( b) d( es)
   <f, a f'> b c d <es, g es'> a b c
   <<

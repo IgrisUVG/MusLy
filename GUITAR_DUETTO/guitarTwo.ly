@@ -105,10 +105,10 @@ guitarTwo = \relative{
     }
     \\
     {
-      g,
+      g,4
     }
   >>
-  <d h'\2>\noBeam  
+  <d h'\2>8\noBeam  
   <e c'>^\markup \fontsize #-3 {\parenthesize \sharp}<h a'>
   <<
     {

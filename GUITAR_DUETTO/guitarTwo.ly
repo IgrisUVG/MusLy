@@ -108,11 +108,7 @@ guitarTwo = \relative{
       g,4
     }
   >>
-<<<<<<< HEAD
-  <d h'\2>8\noBeam  
-=======
-  <d h'\2>\noBeam
->>>>>>> f68423d3fe04feac66ee66c5556a889402a3c9fd
+  <d h'\2>8\noBeam 
   <e c'>^\markup \fontsize #-3 {\parenthesize \sharp}<h a'>
   <<
     {

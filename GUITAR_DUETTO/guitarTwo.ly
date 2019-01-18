@@ -108,7 +108,11 @@ guitarTwo = \relative{
       g,4
     }
   >>
+<<<<<<< HEAD
   <d h'\2>8\noBeam  
+=======
+  <d h'\2>\noBeam
+>>>>>>> f68423d3fe04feac66ee66c5556a889402a3c9fd
   <e c'>^\markup \fontsize #-3 {\parenthesize \sharp}<h a'>
   <<
     {
@@ -381,17 +385,19 @@ guitarTwo = \relative{
   }
   <d, h'>8^"VII"[( g d])
   %\shape #'((0 . 0.3) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
-  <c h'>^"V"[\(( a') e]\)<a, fis'>^"VII"( d)~
-  <h d g>8 d'16( c) h a g fis e-0 c'\2 g\3( fis) <d h'>8 <c a'>
+  <c h'>^"V"[\(( a') e]\)
+  \phrasingSlurDashed
+  \shape #'((0 . 0.3) (0 . 0) (0 . 0) (-0.5 . 0)) PhrasingSlur
+  <a, fis'>^"VII"\(( d)~ <h d g>8\)
+  \phrasingSlurSolid
+  d'16( c) h a g fis e-0 c'\2 g\3( fis) <d h'>8 <c a'>
   <h d>[( d' a]) <es d'>[\(( c') g]\)
   <<
     {
       \stemDown
-      \phrasingSlurDashed
-      \shape #'((0 . 0.3) (0 . 0) (0 . 0) (-0.5 . 0)) PhrasingSlur
-      <c, a'>\(( d)~
+      <c, a'>( d)~
       \stemUp
-      <d g>8\) s
+      <d g>8 s
     }
     \\
     {

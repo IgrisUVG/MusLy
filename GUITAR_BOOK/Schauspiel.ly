@@ -818,10 +818,31 @@ schauspielDynamics = {
   }
   \alternative{
     {
-      s2
+      s4 s16 s8\< s16\!
     }
     {
       s2
     }
   }
+  s2*2\f s2*2\p s2\f s4 s8\> s16. s32\! 
+  \once\override DynamicText.extra-offset = #'(-3.5 . 4)
+  s2*6\mf s4 s8
+  \once\override Hairpin.extra-offset = #'(1 . 10)
+  s16.\< s32\!
+  \once\override DynamicText.extra-offset = #'(-2.5 . 1)
+  s2\f s8 
+  \once\override Hairpin.extra-offset = #'(0.5 . 1)
+  s8\> s8 s16. 
+  \once\override DynamicText.extra-offset = #'(0.5 . 1)
+  s32\mf s2 s4
+  s4\> s2*2\p
+  \once\override DynamicText.extra-offset = #'(-3 . 2)
+  s2*7\mp
+  \cadenzaOn
+  \stopStaff
+  s4
+  \startStaff
+  \cadenzaOff
+  \once\override DynamicText.extra-offset = #'(-2 . 4.5)
+  s4\f
 }

@@ -42,9 +42,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
-  \new Staff \with {
-    instrumentName = "Guitar"
-  }
-  \removeWithTag #'Book
-  \schauspiel
+  <<
+    \new Staff \with {
+      instrumentName = "Guitar"
+    }
+    \removeWithTag #'Book
+    \schauspiel
+
+    \new Dynamics \schauspielDynamics
+  >>
 }

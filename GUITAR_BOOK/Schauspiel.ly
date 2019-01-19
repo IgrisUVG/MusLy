@@ -801,3 +801,27 @@ schauspiel = \relative {
   >>
   \bar "|."
 }
+
+schauspielDynamics = {
+  s1*8 s1
+  \cadenzaOn
+  s1 s2 s2 s1 s4
+  \cadenzaOff
+  \repeat volta 3 {
+    \override TextScript.extra-offset = #'(-4.5 . 2.5)
+    s2*7\!-\markup {
+      \column {
+        \line { \teeny 1: \small\dynamic p }
+        \line { \teeny 2: \small\dynamic f }
+      }
+    }
+  }
+  \alternative{
+    {
+      s2
+    }
+    {
+      s2
+    }
+  }
+}

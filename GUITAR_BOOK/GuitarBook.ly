@@ -91,8 +91,11 @@
 %%%%%%%%%%%%%%%%%% SCHAUSPIEL %%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff
+    <<
+      \schauspiel
 
-    \schauspiel
+      \new Dynamics \schauspielDynamics
+    >>
 
     \header {
       title = "Schauspiel"

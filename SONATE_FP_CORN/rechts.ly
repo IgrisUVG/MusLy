@@ -4,7 +4,7 @@
 \language "deutsch"
 
 \include "slash.ly"
-\include "..\noteHeads.ly"
+\include "noteHeads.ly"
 %\include "makeOctaves.ly"
 
 rechts = {

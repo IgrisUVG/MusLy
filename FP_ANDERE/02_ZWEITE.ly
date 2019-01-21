@@ -53,7 +53,7 @@ loopL = \relative {
         \mergeDifferentlyHeadedOn
         \mergeDifferentlyDottedOn
         \global
-        \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+        \once\override Score.RehearsalMark.extra-offset = #'(4 . 2)
         \mark "Con moto"
         \repeat unfold 3 { \loopR }
         \mark\markup {

@@ -12,7 +12,7 @@
 #(set-global-staff-size 16)
 \paper {
   system-separator-markup = \slashSeparator
-  %#(set-paper-size "a4")
+  %#(set-paper-size "a3")
   indent = 1.5\cm  % space for instrumentName
   short-indent = 1.0\cm  % space for shortInstrumentName
   top-system-spacing.basic-distance = #15
@@ -60,7 +60,7 @@
       shortInstrumentName = #"F-p"
       fontSize = #1
       \override StaffSymbol.staff-space = #(magstep 1)
-      \override StaffGrouper.staff-staff-spacing.basic-distance = #15
+      %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
       \consists #Span_stem_engraver
     }
     <<

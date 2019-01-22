@@ -57,7 +57,7 @@ RH = \relative {
     }
     \\
     {
-      <fisis, dis'>8 gis \bot 
+      <fisis, dis'>8 gis \bot
       \stemUp
       eis fis! \top
       \stemDown
@@ -77,7 +77,7 @@ RH = \relative {
     }
     \\
     {
-      <fisis, dis'>8 gis \bot 
+      <fisis, dis'>8 gis \bot
       \stemUp
       eis fis! \top
       \stemDown
@@ -96,9 +96,9 @@ RH = \relative {
   \set Staff.ottavation = #"8"
   his cis cisis dis eis fisis ais h! gis eis fis e his cis
   cisis dis gis fis dis e eis fis fisis gis a ais
-  h gis e dis his cis dis e eis fis fisis gis 
+  h gis e dis his cis dis e eis fis fisis gis
   ais h his cis h a gis a fis e dis cis e dis cisis dis gis fis
-  eis fis h ais fisis gis dis' cis his h a gis 
+  eis fis h ais fisis gis dis' cis his h a gis
   fis e dis cisis cis his
   \ottava #0
   h! ais gis a gis fisis fis! e dis cisis cis d
@@ -118,7 +118,7 @@ RH = \relative {
   \stemNeutral
   <b g'> g <as d> b <h e> c <cis f> d <h as'> c <d g> a
   <b fis'> es <c f> des <c e> b <a es'!> b g as <a d> b
-  <as! des> g <fis c'> g <as h> g 
+  <as! des> g <fis c'> g <as h> g
   <<
     {
       \stemDown
@@ -126,7 +126,7 @@ RH = \relative {
     }
     \\
     {
-      <e, b'> f <cis a'> d 
+      <e, b'> f <cis a'> d
       \stemUp \bot f e \top \stemNeutral
     }
   >>
@@ -136,7 +136,7 @@ RH = \relative {
     }
     \\
     {
-      <fis, d'>8 g \bot 
+      <fis, d'>8 g \bot
       \stemUp
       e f! \top
       \stemDown
@@ -154,7 +154,7 @@ RH = \relative {
     }
     \\
     {
-      <fis b> g <e a> f 
+      <fis b> g <e a> f
       \stemUp \bot fis f \top \stemNeutral
     }
   >>
@@ -166,7 +166,7 @@ RH = \relative {
     }
     \\
     {
-      <fisis, dis'>8 gis \bot 
+      <fisis, dis'>8 gis \bot
       \stemUp
       eis fis! \top
       \stemDown
@@ -180,7 +180,7 @@ RH = \relative {
     }
     \\
     {
-      <cis, e>8 h! \bot 
+      <cis, e>8 h! \bot
       \stemUp
       gis a \top
       \stemDown
@@ -222,7 +222,7 @@ RH = \relative {
     }
     \\
     {
-      s4. \stemUp \bot des,8 \stemDown \top es f 
+      s4. \stemUp \bot des,8 \stemDown \top es f
     }
   >>
   <g des'> as <e c'> f < g f'> as
@@ -238,7 +238,7 @@ RH = \relative {
     }
     \\
     {
-      <eis, cis'>8 fis \bot 
+      <eis, cis'>8 fis \bot
       \stemUp
       dis e! \top
       \stemDown
@@ -253,7 +253,7 @@ RH = \relative {
   <fis cis'> g <dis h'> e <g ais> fis
   <f a!> e <dis gis> e <dis fis> cis
   \bar "||"
-  \key cis \minor  
+  \key cis \minor
   <<
     {
       cis'8 h\rest a h\rest s4
@@ -265,7 +265,7 @@ RH = \relative {
       cisis,,8 dis eis fis
       \top \stemDown
       <gis e'> a
-      <fisis dis'>8 gis \bot 
+      <fisis dis'>8 gis \bot
       \stemUp
       eis fis! \top
       \stemDown
@@ -296,10 +296,10 @@ LH = \relative {
       h!4( ais a gis <fisis dis'> fis! fisis gis a)
     }
   >>
-  r4 dis( gis eis e dis cisis gis fisis) 
+  r4 dis( gis eis e dis cisis gis fisis)
   \clef treble
   dis'8_( e fis fisis
-  gis4 h dis, e eis gis fis e! dis cis) r2 
+  gis4 h dis, e eis gis fis e! dis cis) r2
   %\clef bass
   r dis4(
   gis eis e dis cisis gis fisis)
@@ -331,9 +331,9 @@ LH = \relative {
   >>
   \bar "||"
   \key c \minor
-  s2 \stemDown as4_( \stemNeutral b e d des c 
-  %\clef bass 
-  g fis) 
+  s2 \stemDown as4_( \stemNeutral b e d des c
+  %\clef bass
+  g fis)
   \once\override Slur.positions = #'(1 . 1)
   d'8( es f fis g4 b, as g c fis e es d cis) r s
   r s d( g e es d cis g fis)
@@ -341,7 +341,7 @@ LH = \relative {
   d'8_( es f fis g4 b d, es e g f es d c) r4 s
   \bar "||"
   \key cis \minor
-  e s 
+  e s
   \once\override Slur.positions = #'(1 . 1)
   dis_( gis eis e dis \stemDown d \stemNeutral fis
   cisis dis fisis cis! eis h a) r e'( dis) r a'( gis) r h(
@@ -364,8 +364,8 @@ LH = \relative {
   cis'8( d e eis fis4 a cis, d dis fis e d! cis c) r2
   \bar "||"
   \key cis \minor
-  s2 r4 r s dis( gis eis e dis cisis gis 
-  fisis) dis'8_( e fis fisis gis4 h dis, e eis gis fis e! dis 
+  s2 r4 r s dis( gis eis e dis cisis gis
+  fisis) dis'8_( e fis fisis gis4 h dis, e eis gis fis e! dis
   cis2 h4 e,2.~ e)
   \bar "|."
 }
@@ -375,7 +375,7 @@ Dynamic = {
   s2.*53\p s2.-\tweak Y-offset #-7 \pocoCr s2.*11\! s2.*4\f
   s2.*2\> s2\! s8 s\> s2 s8 s\! s4 s\pocoDim s\! s2.*3
   \once\override DynamicText.extra-offset = #'(-2 . 0)
-  s2.*15\p s2 s4\> s2.*2 
+  s2.*15\p s2 s4\> s2.*2
   \override Script.extra-offset = #'(0 . 1)
   s2.\ppp\fermata
 }

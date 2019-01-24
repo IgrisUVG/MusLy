@@ -108,11 +108,33 @@ rechtsDrei = \relative {
       d,8 cis
     }
   >>
-  <dis his'>8-><cisis his'>->
+  <dis his'>8-><cisis his'>-><dis his'>4-^<eis h'>-.<eis g>-.
+  <a, fis'>-^<cis eis>-.<cis fis>-.<cis eis>-.
+  a'8 cis16( his cis8) cis->~ cis fis eis16( fis gis8) a his,4 cis8->~
+  cis fis cis cis->~ cis cis4-> cis8->~ cis \acciaccatura cisis dis gis,4-^
+  \shape #'(
+             ((0 . 0) (0 . 0) (0 . 1) (0 . 2))
+             ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
+             ) Slur
+  <ais cis>(
+  <<
+    {
+      his8 cis
+    }
+    \\
+    {
+      a4
+    }
+  >>
+  <gis fis'><g eis'>)<fis ais>4(<eis h'><e cis'>2)<fis h dis>4-^<e ais cis>-^
+  <eis gis eis'>-^ r <his fis'>-^<cis eis>-^<cis fis>-^<d f>-.<cis fis>-.<cis eis>-.
+  a'8 cis16( his cis8) cis->~ cis fis eis16( fis gis8) a his,4 cis8->~
+  cis fis cis cis->~ cis cis4-> cis8->~ cis \acciaccatura cisis dis eis4-.
+  <a, fis'>-^ r
   \bar "|."
 }
 dynamicDrei = {
-  s2\f
+  s2\f s2*4 s4\ff s\sp s2 s4.\mf s8 s2*4 s4 s\ff s2*4\sp s2*4\sf s2*2\sp s4 s s2*4 s2\ff
 }
 %%%%%%%%%%%%%%%%%%%%%% FIER %%%%%%%%%%%%%%%%%%%%%%
 rechtsFier = \relative {

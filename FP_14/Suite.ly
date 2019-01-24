@@ -86,7 +86,7 @@
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \rechtsDrei
-      %\new Dynamics = "Dynamics_pf" \dynamicDrei
+      \new Dynamics = "Dynamics_pf" \dynamicDrei
       \new Staff = "LH" \linksDrei
     >>
     \header {

@@ -6,15 +6,16 @@
 makeOctaves =
 #(define-music-function (parser location arg mus)
    (integer? ly:music?)
-   #{<<  \withMusicProperty #'to-relative-callback
-         #(lambda (m p)
-            (let ((mu (ly:music-property m 'element)))
-              (ly:music-transpose mu (ly:make-pitch (- arg) 0 0))
-              (ly:make-music-relative! mu p)
-              (ly:music-transpose mu (ly:make-pitch arg 0 0)))
-            p)
-         \transpose c' $(ly:make-pitch arg 0 0) $mus
-         $mus
+   #{<<
+     \withMusicProperty #'to-relative-callback
+     #(lambda (m p)
+        (let ((mu (ly:music-property m 'element)))
+          (ly:music-transpose mu (ly:make-pitch (- arg) 0 0))
+          (ly:make-music-relative! mu p)
+          (ly:music-transpose mu (ly:make-pitch arg 0 0)))
+        p)
+     \transpose c' $(ly:make-pitch arg 0 0) $mus
+     $mus
      >>
    #})
 top = \change Staff = "RH"
@@ -31,21 +32,21 @@ rechtsEins = \relative {
   <c a'>8-.) gis'(^\markup {\italic \bold Lento} g gis a ais
   h gis f e d c)
   <<
-  	{
-  		#(define afterGraceFraction (cons 11 12))
-  		\afterGrace h2.(\startTrillSpan {ais16[ h]\stopTrillSpan} c4)
-  	}
-  	\\
-  	{
-  		<e, gis>4<es g><des f>-\markup {\italic rit.} <c e>
-  	}
+    {
+      #(define afterGraceFraction (cons 11 12))
+      \afterGrace h2.(\startTrillSpan {ais16[ h]\stopTrillSpan} c4)
+    }
+    \\
+    {
+      <e, gis>4<es g><des f>-\markup {\italic rit.} <c e>
+    }
   >>
   r2
   \bar "|."
 }
 dynamicEins = {
-	\override Hairpin.to-barline = ##f
-	s2\mf s4\< s4. s4.\! s2.\> s\! s2 s4\< s2 s4\! s4. s4.\> s4 s2\!
+  \override Hairpin.to-barline = ##f
+  s2\mf s4\< s4. s4.\! s2.\> s\! s2 s4\< s2 s4\! s4. s4.\> s4 s2\!
 }
 %%%%%%%%%%%%%%%%%%%%%% ZWEI %%%%%%%%%%%%%%%%%%%%%%
 rechtsZwei = \relative {
@@ -87,13 +88,36 @@ rechtsDrei = \relative {
   \clef treble
   \time 2/4
   \key fis \minor
-  
+  fis'8 fis16 fis <cis fis>8<his fis'><cis fis><his gis'>
+  <<
+    {
+      a'4
+    }
+    \\
+    {
+      cis,8 his
+    }
+  >>
+  <d gis>8<cis a'>
+  <<
+    {
+      h'4
+    }
+    \\
+    {
+      d,8 cis
+    }
+  >>
+  <dis his'>8-><cisis his'>->
   \bar "|."
+}
+dynamicDrei = {
+  s2\f
 }
 %%%%%%%%%%%%%%%%%%%%%% FIER %%%%%%%%%%%%%%%%%%%%%%
 rechtsFier = \relative {
   \clef treble
   \time 4/4
-  
+
   \bar "|."
 }

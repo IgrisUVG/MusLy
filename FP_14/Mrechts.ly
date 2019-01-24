@@ -29,7 +29,7 @@ rechtsEins = \relative {
   <g d'>4(<f cis'><e d'><es f'>2<fes es'>4<f! es'>2<fis d'>4<g es'>2.)
   es'4<des g><c b'><b as'><c g'> r a8( ais h c cis dis)
   <g, e'>4(<f d'><fis dis'><h g'>-.<c h'>-.<d gis>-.
-  <c a'>8-.) gis'(^\markup {\italic \bold Lento} g gis a ais
+  <c a'>8-.)\noBeam gis'(^\markup {\italic Lento} g gis a ais
   h gis f e d c)
   <<
     {
@@ -47,6 +47,9 @@ rechtsEins = \relative {
 dynamicEins = {
   \override Hairpin.to-barline = ##f
   s2\mf s4\< s4. s4.\! s2.\> s\! s2 s4\< s2 s4\! s4. s4.\> s4 s2\!
+  s2\f\< s4 s2.\> s4\p
+  \override TextScript.extra-offset = #'(0 . 1)
+  s2-\markup {\italic {poco cresc}} s2.*2 s8\f s8\p s2-\markup {\italic dolce} s2.*3
 }
 %%%%%%%%%%%%%%%%%%%%%% ZWEI %%%%%%%%%%%%%%%%%%%%%%
 rechtsZwei = \relative {
@@ -80,7 +83,10 @@ rechtsZwei = \relative {
 }
 dynamicZwei = {
   \override Hairpin.to-barline = ##f
-  s1\p s1\< s2. s4\! s2. s4\mf s1\< s4 s2.\! s1*2 s1\ff s1*2 s1\pp
+  \once\override TextScript.extra-offset = #'(-6 . 2.5)
+  s1\p-\markup {\italic lento} s1\< s2. s4\! s2. s4\mf s1\< s4 s2.\! s1*2
+  \override TextScript.extra-offset = #'(0 . 1)
+  s1\ff s1*2-\markup {\italic dim} s1\pp
   s2.\p s4\< s2. s4\! s2. s4\> s1 s\p
 }
 %%%%%%%%%%%%%%%%%%%%%% DREI %%%%%%%%%%%%%%%%%%%%%%
@@ -113,8 +119,8 @@ rechtsDrei = \relative {
   a'8 cis16( his cis8) cis->~ cis fis eis16( fis gis8) a his,4 cis8->~
   cis fis cis cis->~ cis cis4-> cis8->~ cis \acciaccatura cisis dis gis,4-^
   \shape #'(
-             ((0 . 0) (0 . 0) (0 . 1) (0 . 2))
-             ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
+             ((0 . 0) (-0.5 . 0.5) (0 . 1.5) (0 . 2))
+             ((0.5 . 0.5) (0 . 0) (0 . 0) (0 . 0))
              ) Slur
   <ais cis>(
   <<
@@ -134,7 +140,10 @@ rechtsDrei = \relative {
   \bar "|."
 }
 dynamicDrei = {
-  s2\f s2*4 s4\ff s\sp s2 s4.\mf s8 s2*4 s4 s\ff s2*4\sp s2*4\sf s2*2\sp s4 s s2*4 s2\ff
+  \override TextScript.extra-offset = #'(0 . 1)
+  s2\f s2*4-\markup {\italic cresc} s4\ff s\sp s2 s4.\mf
+  s8-\markup {\italic {poco cresc}} s2*4 s4 s\ff
+  s2*4\sp s2*4\sf s2*2\sp s4 s-\markup {\italic {poco cresc}} s2*4 s2\ff
 }
 %%%%%%%%%%%%%%%%%%%%%% FIER %%%%%%%%%%%%%%%%%%%%%%
 rechtsFier = \relative {

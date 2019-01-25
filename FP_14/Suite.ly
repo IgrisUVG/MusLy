@@ -107,7 +107,7 @@
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \rechtsFier
-      %\new Dynamics = "Dynamics_pf" \dynamicFier
+      \new Dynamics = "Dynamics_pf" \dynamicFier
       \new Staff = "LH" \linksFier
     >>
     \header {

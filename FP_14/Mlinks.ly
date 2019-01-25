@@ -6,15 +6,16 @@
 makeOctaves =
 #(define-music-function (parser location arg mus)
    (integer? ly:music?)
-   #{<<  \withMusicProperty #'to-relative-callback
-         #(lambda (m p)
-            (let ((mu (ly:music-property m 'element)))
-              (ly:music-transpose mu (ly:make-pitch (- arg) 0 0))
-              (ly:make-music-relative! mu p)
-              (ly:music-transpose mu (ly:make-pitch arg 0 0)))
-            p)
-         \transpose c' $(ly:make-pitch arg 0 0) $mus
-         $mus
+   #{<<
+     \withMusicProperty #'to-relative-callback
+     #(lambda (m p)
+        (let ((mu (ly:music-property m 'element)))
+          (ly:music-transpose mu (ly:make-pitch (- arg) 0 0))
+          (ly:make-music-relative! mu p)
+          (ly:music-transpose mu (ly:make-pitch arg 0 0)))
+        p)
+     \transpose c' $(ly:make-pitch arg 0 0) $mus
+     $mus
      >>
    #})
 
@@ -80,6 +81,27 @@ linksDrei = \relative {
 linksFier = \relative {
   \clef bass
   \time 4/4
-  
+  <<
+    {
+      \shape #'((0.5 . -6.5)(1 . -3)(0 . -12)(0 . -3)) Slur
+      \clef treble
+      e'4( dis e dis f e f e fis eis fis eis g fis g fis
+      as g as g a! gis a gis r
+      \top \stemDown gisis ais gisis ais gisis ais gisis)\bot
+    }
+    \\
+    {
+      s1*6 \clef bass fis,,1~ fis
+    }
+  >>
+  \clef treble
+  \stemNeutral
+  \shape #'((0.5 . 3)(0 . 0)(0 . 0)(0 . 0.5)) Slur
+  c'''4_( h c h b a b a as g as g g fis g fis f! e f e es1~ es2) r
+  \clef bass
+  \override Slur.positions = #'(1 . -1)
+  a,,4( c e a b2) r h,4( d fis h ais2) r
+  \override Slur.positions = #'(1 . 1)
+  h,4( dis f h b1) a^~ a2 r
   \bar "|."
 }

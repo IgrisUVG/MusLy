@@ -984,7 +984,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      a,4.
+      \dotsUp a,4.
     }
   >>
   <<
@@ -1055,7 +1055,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      <a,, es'>4. r8
+      \dotsUp <a,, es'>4. r8
     }
   >>
   <<
@@ -1064,7 +1064,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      c,4. a8-.
+      \dotsUp c,4. a8-.
     }
   >>
   <<
@@ -1087,7 +1087,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      e8\rest <g, b>4.
+      e8\rest \dotsUp <g, b>4.
     }
     \\
     {
@@ -1101,12 +1101,12 @@ guitarMusic = \relative {
     }
     \\
     {
-      c8\rest <g d'>4.
+      c8\rest \dotsUp <g d'>4.
     }
     \\
     {
       \voiceTwo
-      gis,4. c8
+      gis,?4. c8
     }
   >>
 }

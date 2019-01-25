@@ -45,15 +45,12 @@ oneTwoComb = {
 
 \score {
   <<
-    {
+    \new Staff {
+      \partcombine
       \clarinetEinsMusic
-    }
-    \\
-    {
       \clarinetZweiMusic
     }
-    \\
-    {
+    \new Staff {
       \clarinetDreiMusic
     }
   >>

@@ -4,7 +4,7 @@
 \language "deutsch"
 
 \header {
-  title = "***"
+  title = "4.5.97"
   %meter = "Rubato"
   subtitle = "3 Clarinetti"
   subsubtitle = "in B"

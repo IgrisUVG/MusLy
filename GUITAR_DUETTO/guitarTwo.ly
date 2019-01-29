@@ -108,7 +108,7 @@ guitarTwo = \relative{
       g,4
     }
   >>
-  <d h'\2>8\noBeam 
+  <d h'\2>8\noBeam
   <e c'>^\markup \fontsize #-3 {\parenthesize \sharp}<h a'>
   <<
     {
@@ -402,4 +402,13 @@ guitarTwo = \relative{
     }
   >>
   fis g a h
+  <<
+    {
+      s8. s8 h16 c( a)
+    }
+    \\
+    {
+      d16 a^( g) c,^(\glissando d8) g
+    }
+  >>
 }

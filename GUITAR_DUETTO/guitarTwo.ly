@@ -408,7 +408,18 @@ guitarTwo = \relative{
     }
     \\
     {
-      d16 a^( g) c,^(\glissando d8) g
+      d16 a^( g)
+      \tag #'Part {
+        c,^(-\markup {
+          \postscript #"0.7 4 moveto 1.8 0.5 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        c^(-\markup {
+          \postscript #"0.7 4 moveto 2.2 0.4 rlineto stroke"
+        }
+      }
+      d8) g
     }
   >>
 }

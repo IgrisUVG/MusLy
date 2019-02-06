@@ -404,7 +404,7 @@ guitarTwo = \relative{
   fis g a h
   <<
     {
-      s8. s8 h16 c( a) d h c g h fis a h, h' fis a c
+      s8. s8 h16 c( a) d h c g h fis a h, h' e, a c\glissando e f, fis d'
     }
     \\
     {
@@ -419,7 +419,7 @@ guitarTwo = \relative{
           \postscript #"0.7 4 moveto 2.2 0.4 rlineto stroke"
         }
       }
-      d8) g fis e d es c d
+      d8) g fis e d dis c d c h
     }
   >>
 }

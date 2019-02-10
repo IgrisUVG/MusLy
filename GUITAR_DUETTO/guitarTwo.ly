@@ -405,11 +405,11 @@ guitarTwo = \relative{
   <<
     {
       s8. s8 h16 c( a) d h c g h fis a h, h' e, a c\glissando e f, fis d'
-      c g a cis d g, c a h
+      c g a cis d g, c e, h' fis a d, g c, e d 
     }
     \\
     {
-      d16 a^( g)
+      d'16 a^( g)
       \tag #'Part {
         c,^(-\markup {
           \postscript #"0.7 4 moveto 1.8 0.5 rlineto stroke"
@@ -420,7 +420,12 @@ guitarTwo = \relative{
           \postscript #"0.7 4 moveto 2.2 0.4 rlineto stroke"
         }
       }
-      d8) g fis e d dis c d c h a g fis a e
+      d8) g <fis d'> <e c'> <d h'> <dis a'> <c h'> <d a'> <c e'> <h fis'>
+      <a c'> <g a'> <fis d''> <a c'> <e h''> <c a''> <d g'> <a' e'>
     }
   >>
+  \repeat unfold 3 {
+    g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
+    \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
+  }
 }

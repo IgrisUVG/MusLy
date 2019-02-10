@@ -370,7 +370,7 @@ guitarOne =
     \break
   }
   \time 4/4
-  \repeat unfold 4 {
+  \repeat unfold 3 {
     g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }

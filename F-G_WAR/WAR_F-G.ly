@@ -63,7 +63,7 @@
     \guitarMusic
     %\new Dynamics \hSheet
 
-    %\new Staff \ossia
+    \new Staff \ossia
     
   >>
 }

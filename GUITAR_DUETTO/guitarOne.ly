@@ -332,12 +332,12 @@ guitarOne =
   g( f) es
   \tag #'Part {
     d-\markup {
-      \postscript #"0.7 4.4 moveto 1.8 0.7 rlineto stroke"
+      \postscript #"0.7 4.3 moveto 2 0.7 rlineto stroke"
     }
   }
   \tag #'Partitur {
     d-\markup {
-      \postscript #"1.4 4 moveto 2 0.8 rlineto stroke"
+      \postscript #"0.8 4.3 moveto 2 0.8 rlineto stroke"
     }
   }
   f8 a,!16^\4( h) c d es f

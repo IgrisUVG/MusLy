@@ -426,13 +426,13 @@ guitarTwo = \relative{
       \tag #'Part {
         \once\override Fingering.extra-offset = #'(-1.1 . -2.5)
         c,^2_\4^(-\markup {
-          \postscript #"0.7 4.5 moveto 1.8 0.5 rlineto stroke"
+          \postscript #"0.7 6.1 moveto 1.8 0.4 rlineto stroke"
         }
       }
       \tag #'Partitur {
         \once\override Fingering.extra-offset = #'(-1.1 . -2.5)
         c^2_\4^(-\markup {
-          \postscript #"0.7 4.5 moveto 2.7 0.5 rlineto stroke"
+          \postscript #"0.7 6.1 moveto 2.8 0.4 rlineto stroke"
         }
       }
       d8) g <fis d'> <e c'> <d h'> <dis a'> <c h'> <d a'> <c e'> <h fis'>

@@ -374,4 +374,15 @@ guitarOne =
     g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
+  <<
+    {
+      d'8[( g, d]) 
+      \shape #'((0 . 0.3) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
+      d'[(\( c) fis,]\)
+    }
+    \\
+    {
+      h,4. h8( a4)
+    }
+  >>
 }

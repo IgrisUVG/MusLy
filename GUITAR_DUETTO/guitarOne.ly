@@ -385,5 +385,6 @@ guitarOne =
       h,4. h8( a4)
     }
   >>
-  <e' h'>8 <c g'>~ q <d a'>4
+  <e' h'>8 <c g'>~ q <d a'>4 <e' c>8 <h d> <e, g> <g h> <d fis>
+  <h' d> <a c>4 <d, fis>8 <fis a> <c e>4
 }

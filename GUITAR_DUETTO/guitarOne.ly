@@ -386,5 +386,6 @@ guitarOne =
     }
   >>
   <e' h'>8 <c g'>~ q <d a'>4 <e' c>8[ <h d> <e, g>] <g h> <d fis>
-  <h' d> <a c>4 <d, fis>8[ <fis a>] <c e>4
+  <h' d> <a c>4 <d, fis>8[ <fis a>] <c e>4 <h e'>8[
+  <fis' h> <cis a'>] <ais d'> r16 g''( fis) e d h a( g) r8
 }

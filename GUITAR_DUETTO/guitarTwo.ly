@@ -439,7 +439,7 @@ guitarTwo = \relative{
       <a c'> <g a'> <fis d''> <a c'> <e h''> <c a''> <d g'> <a' e'>
     }
   >>
-  \repeat unfold 3 {
+  \repeat unfold 2 {
     g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }

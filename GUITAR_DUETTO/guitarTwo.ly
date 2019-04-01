@@ -443,4 +443,5 @@ guitarTwo = \relative{
     g,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
+  r16 cis, a' fis
 }

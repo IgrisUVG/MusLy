@@ -493,8 +493,9 @@ guitarTwo = \relative{
     \\
     {
       e16[ g 
-      \once \override NoteColumn.force-hshift = #1.7
-      d' a']
+      %\once \override NoteColumn.force-hshift = #1.7
+      cis a']
     }
   >>
+  <fis, gis'>16 c' <f, e'> g' d ais fis
 }

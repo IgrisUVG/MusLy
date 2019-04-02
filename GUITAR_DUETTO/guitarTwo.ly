@@ -449,7 +449,7 @@ guitarTwo = \relative{
     {
       \override TextScript.font-size = -2
       fis16 h, cis' fis,
-      \shape #'((-0.5 . -4) (-0.5 . -4) (-0.3 . -4) (-0.5 . -4.5)) Slur
+      \shape #'((-0.5 . -3.9) (-0.5 . -4) (-0.3 . -4) (-0.5 . -4.4)) Slur
       \tag #'Part {
         e(-\markup {
           \postscript #"0.3 -1.8 moveto 1.8 -0.4 rlineto stroke"
@@ -469,7 +469,7 @@ guitarTwo = \relative{
   >>
   c? g-\markup {
     \postscript #"0.8 0.8 moveto 2.2 1 rlineto stroke"
-  } h8~
+  } h8-\shape #'((-0.5 . -0.5) (-0.5 . -0.6) (0.5 . -0.6) (0.5 . -0.5))~
   \stemUp
   h
   \stemNeutral

@@ -484,6 +484,17 @@ guitarTwo = \relative{
   \stemUp
   h
   \stemNeutral
-  <a a'>\noBeam <h h'>( <a a'>) <e e'> <fis fis'> <d d'> <e e'>~\noBeam
-  q
+  <a a'>\noBeam <h h'>( <a a'>) <e e'> <fis fis'> <d d'>
+  <<
+    {
+      \override TextScript.font-size = -2
+      <e_~ e'~>^"V"  q
+    }
+    \\
+    {
+      e16[ g 
+      \once \override NoteColumn.force-hshift = #1.7
+      d' a']
+    }
+  >>
 }

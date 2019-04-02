@@ -59,12 +59,14 @@ ssnol = \set stringNumberOrientations = #'(left)
 ssnou = \set stringNumberOrientations = #'(up)
 ssnod = \set stringNumberOrientations = #'(down)
 ssnor = \set stringNumberOrientations = #'(right)
-FO = #(define-music-function (parser location offsetX offsetY)(number? number?)
-        #{
-          \once \override Voice.Fingering.extra-offset = #(cons offsetX offsetY)
-        #})
+FO =
+#(define-music-function (parser location offsetX offsetY)(number? number?)
+   #{
+     \once \override Voice.Fingering.extra-offset = #(cons offsetX offsetY)
+   #})
 
-SO = #(define-music-function (parser location offsetX offsetY)(number? number?)
-        #{
-          \once \override Voice.StringNumber.extra-offset = #(cons offsetX offsetY)
-        #})
+SO =
+#(define-music-function (parser location offsetX offsetY)(number? number?)
+   #{
+     \once \override Voice.StringNumber.extra-offset = #(cons offsetX offsetY)
+   #})

@@ -67,4 +67,8 @@
     \removeWithTag #'Part
     \guitarTwo
   >>
+  %\layout { }
+  %\midi {
+  %  \tempo 4 = 140
+  %}
 }

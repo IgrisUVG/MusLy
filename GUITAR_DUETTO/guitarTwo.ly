@@ -404,7 +404,7 @@ guitarTwo = \relative{
   fis g a h
   <<
     {
-      s8. s8 
+      s8. s8
       \once\override Fingering.extra-offset = #'(-0.2 . -3)
       h16-4 c( a) d h c g h fis a h, h' e, a
       \tag #'Part {
@@ -444,7 +444,35 @@ guitarTwo = \relative{
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
   r16 cis,^"II" a' fis d' a^"V" e' d a' fis^"X" d' a e' h fis' e\prall
-  a,\2 g\3 d' g, fis h, cis' fis, e <a, d> a' e c? g\glissando h8~
-  h <a a'>\noBeam <h h'>( <a a'>) <e e'> <fis fis'> <d d'> <e e'>~
+  a,\2 g\3 d' g,
+  <<
+    {
+      \override TextScript.font-size = -2
+      fis16 h, cis' fis,
+      \shape #'((-0.5 . -4) (-0.5 . -4) (-0.3 . -4) (-0.5 . -4.5)) Slur
+      \tag #'Part {
+        e(-\markup {
+          \postscript #"0.3 -1.8 moveto 1.8 -0.4 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        e(-\markup {
+          \postscript #"0.3 -1.8 moveto 2.2 -0.4 rlineto stroke"
+        }
+      }
+      d) a'^"V" e
+    }
+    \\
+    {
+      s16 h4(\glissando a8) s16
+    }
+  >>
+  c? g-\markup {
+    \postscript #"0.8 0.8 moveto 2.2 1 rlineto stroke"
+  } h8~
+  \stemUp
+  h
+  \stemNeutral
+  <a a'>\noBeam <h h'>( <a a'>) <e e'> <fis fis'> <d d'> <e e'>~\noBeam
   q
 }

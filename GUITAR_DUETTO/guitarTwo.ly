@@ -464,7 +464,18 @@ guitarTwo = \relative{
     }
     \\
     {
-      s16 h4(\glissando a8) s16
+      s16
+      \tag #'Part {
+        h4(-\markup {
+          \postscript #"1.5 3.6 moveto 7.4 -0.3 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        h4(-\markup {
+          \postscript #"1.5 3.6 moveto 8.2 -0.3 rlineto stroke"
+        }
+      }
+      a8) s16
     }
   >>
   c? g-\markup {

@@ -492,10 +492,24 @@ guitarTwo = \relative{
     }
     \\
     {
-      e16[ g 
+      e16[ g
       %\once \override NoteColumn.force-hshift = #1.7
       cis a']
     }
   >>
-  <fis, gis'>16 c' <f, e'> g' d ais fis
+  <<
+    {
+      gis8[ s16 g8]
+    }
+    \\
+    {
+      r16 c,8. d16 ais
+    }
+    \\
+    {
+      \voiceTwo
+      <fis gis'>8[ <f e'>]
+    }
+  >>
+  fis16 h g ais
 }

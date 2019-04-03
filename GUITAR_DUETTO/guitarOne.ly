@@ -392,4 +392,29 @@ guitarOne =
     g,,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
+  <gis eis'>4<eis dis'>8
+  <<
+    {
+      eis'[( dis])
+    }
+    \\
+    {
+      fis,4
+    }
+  >>
+  <cis ais'>8\noBeam
+  <dis h'>^\markup \fontsize #-3 {\parenthesize \sharp}<ais gis'>
+  <<
+    {
+      \override Fingering.staff-padding = #'()
+      \set fingeringOrientations = #'(down left up)
+      <his ais'>4
+    }
+    \\
+    {
+      \override Fingering.staff-padding = #'()
+      \once \override NoteColumn.force-hshift = #1.5
+      cis4
+    }
+  >>
 }

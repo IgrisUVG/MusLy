@@ -503,7 +503,16 @@ guitarTwo = \relative{
     }
     \\
     {
-      r16 c,8. d16 ais
+      \once\override Rest.extra-offset = #'(0.4 . 8)
+      r16 c,8.
+      \tag #' Part {
+        \shape #'((-1.8 . 1.2) (0.5 . 1.5) (2.5 . 1) (3.2 . -1)) Slur
+        d16^( ais)
+      }
+      \tag #' Partitur {
+        \shape #'((-1.6 . 1.2) (0 . 1.5) (2 . 1) (2.8 . -1)) Slur
+        d16^( ais)
+      }
     }
     \\
     {
@@ -511,5 +520,23 @@ guitarTwo = \relative{
       <fis gis'>8[ <f e'>]
     }
   >>
-  fis16 h g ais
+  \mergeDifferentlyDottedOn
+  <<
+    {
+      fis16( h g ais)
+    }
+    \\
+    {
+      fis8.(-\markup {
+        \postscript #"0.6 3.3 moveto 6.6 1 rlineto stroke"
+      }
+      ais16)
+    }
+  >>
+  gis16 fis e d
+  \repeat unfold 2 {
+    cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
+    gis[)( dis gis,]) eis[( ais eis'])
+    \stemDown dis, <cis'''\harmonic fis\harmonic> \stemNeutral
+  }
 }

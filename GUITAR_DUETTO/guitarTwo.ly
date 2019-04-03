@@ -537,6 +537,10 @@ guitarTwo = \relative{
   \repeat unfold 2 {
     cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
     gis[)( dis gis,]) eis[( ais eis'])
-    \stemDown dis, <cis'''\harmonic fis\harmonic> \stemNeutral
+    \stemDown dis, 
+    \ottava #1
+    \set Staff.ottavation = #"8"
+    <fis'''\harmonic h\harmonic> \stemNeutral
+    \ottava #0
   }
 }

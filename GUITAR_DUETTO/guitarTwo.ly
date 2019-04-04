@@ -504,7 +504,7 @@ guitarTwo = \relative{
     \\
     {
       \once\override Rest.extra-offset = #'(0.4 . 8)
-      r16 
+      r16
       \once\override Fingering.extra-offset = #'(0 . -1.2)
       c,8.^3
       \tag #' Part {
@@ -537,21 +537,32 @@ guitarTwo = \relative{
   >>
   gis16( fis) e d
   cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
-    gis[)( dis gis,]) eis[( ais eis'])
-    \stemDown dis, 
-    \ottava #1
-    \set Staff.ottavation = #"8"
-    \set stringNumberOrientations = #'(left)
-    \once\override StringNumber.font-size = #'-7
-    <fis'''\harmonic\4 h\harmonic\3> \stemNeutral
-    \ottava #0
-  %\repeat unfold 2 {
+  gis[)( dis gis,]) eis[( ais eis'])
+  \stemDown dis,
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  \set stringNumberOrientations = #'(left)
+  \once\override StringNumber.font-size = #'-7
+  <fis'''\harmonic\4 h\harmonic\3> \stemNeutral
+  \ottava #0
+  \tag #'Partitur {
+    \repeat unfold 3 {
+      cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
+      gis[)( dis gis,]) eis[( ais eis'])
+      \stemDown dis,
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      <fis'''\harmonic h\harmonic> \stemNeutral
+      \ottava #0
+    }
+  }
+  \tag #'Part {
     cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
     gis[)( dis gis,]) eis[( ais eis'])
-    \stemDown dis, 
+    \stemDown dis,
     \ottava #1
     \set Staff.ottavation = #"8"
     <fis'''\harmonic h\harmonic> \stemNeutral
     \ottava #0
-  %}
+  }
 }

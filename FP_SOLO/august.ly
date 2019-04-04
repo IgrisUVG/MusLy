@@ -1,4 +1,4 @@
-\version "2.19.11"
+\version "2.19.15"
 
 \language "deutsch"
 
@@ -184,7 +184,10 @@ rechts = \relative {
     <f as!>16<as, es'>8.
   }
   \cadenzaOn
+  s1*30 s8
+  \clef bass
   s1*20
+  a32
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -375,45 +378,159 @@ links = \relative {
   }
   \cadenzaOn
   \clef treble
-  \override Beam #'breakable = ##t
-  des16[ as' des \small\top ges es \bot as,!
-  c \top as' des, \bot ges, b]
+  \override Beam.breakable = ##t
+  des16[ as' des
+  \small
+  \top ges es \bot as,! c
+  \top as' des, \bot ges, b]
   \repeat unfold 2 {
-    \top es![ c \bot ges! as! \top fes'! des!
-    \bot es,! as! \top c b \bot fes ges
+    \top es![ c \bot ges! as!
+    \top fes'! des! \bot es,! as!
+    \top c b \bot fes ges
     \top b as \bot c, fes]
   }
   \bar ""
-  \top des'[ b \bot f! ges \top eses' ces
-  \bot des, ges \top b as \bot es f
+  \top des'[ b \bot f! ges
+  \top eses' ces \bot des, ges
+  \top b as \bot es f
   \top as ges \bot c, es]
-  \top des'[ b \bot f ges \top eses' ces
-  \bot des, ges \top b as \bot es f
+  \top des'[ b \bot f ges
+  \top eses' ces \bot des, ges
+  \top b as \bot es f
   \top as ges \bot c, es]
-  \top deses'[ heses \bot fes ges \top des' ces
-  \bot des, ges \top heses as \bot es fes
+  \top deses'[ heses \bot fes ges
+  \top des' ces \bot des, ges
+  \top heses as \bot es fes
   \top as ges \bot c, es]
   \bar ""
   \repeat unfold 3 {
-    \top c'[ a \bot e fis \top des' b \bot cis, fis
-    \top a gis \bot dis e \top gis fis \bot c! dis]
+    \top c'[ a \bot e fis
+    \top des' b \bot cis, fis
+    \top a gis \bot dis e
+    \top gis fis \bot c! dis]
   }
   \bar ""
   \repeat unfold 2 {
-    \top ces'[ as \bot e f \top des' heses \bot cis, f
-    \top as g \bot dis e \top g f \bot c! dis]
+    \top ces'[ as \bot e f
+    \top des' heses \bot cis, f
+    \top as g \bot dis e
+    \top g f \bot c! dis]
   }
-  \top ces'[ as \bot e f \top des' heses \bot cis, f
-  \top as ges \bot dis e \top ges f \bot c! dis]
+  \top ces'[ as \bot e f
+  \top deses' heses \bot cis, f
+  \top as ges \bot dis e
+  \top ges f \bot c! dis]
   \bar ""
-  \top ces'[ as \bot e f \top des' heses \bot cis, f
-  \top as ges \bot dis e \top ges f \bot c! dis]
+  \top ces'[ as \bot e f
+  \top deses' heses \bot cis, f
+  \top as ges \bot dis e
+  \top ges f \bot c! dis]
   \repeat unfold 2 {
-    \top b'[ g \bot fis a \top as f \bot e g \top ges es
-    \bot d f \top ges es \bot e g \top as f \bot fis a]
+    \top b'[ g \bot fis a
+    \top as f \bot e g
+    \top ges es \bot d f
+    \top ges es \bot e g
+    \top as f \bot fis a]
   }
   \bar ""
-  
+  \top b[ g \bot fis a
+  \top as f \bot e g
+  \top ges es \bot d f
+  \top ges es \bot e g
+  \top as f \bot fis a]
+  \top b[ g \bot fis a
+  \top as f \bot e g
+  \top ges es \bot d f
+  \top e cis \bot c es
+  \top d h \bot b des
+  \top c a \bot as ces
+  \top c a \bot b des
+  \top d h \bot c es
+  \top e cis \bot d f
+  \top ges es \bot e g
+  \top as f \bot fis a
+  \top b g
+  \bar ""
+  \break
+  \bot gis h
+  \top c a \bot ais cis
+  \top d h \bot c es
+  \top e cis \bot d f]
+  \top fis[ dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot ais cis
+  \top d h \bot c es
+  \top e cis \bot d f]
+  \top fis[ dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot ais cis
+  \top d h \bot c es
+  \top e cis \bot d f
+  \top fis dis \bot e g
+  \top as f \bot fis a
+  \top b g \bot gis h
+  \bar ""
+  \break
+  \top c a \bot b des]
+  \top d[ h \bot b des
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top as f \bot e g
+  \top fis dis \bot d f
+  \top e cis \bot c es
+  \top e cis \bot d f
+  \top fis dis \bot e g]
+  \top as[ f \bot e g
+  \top fis dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot ais cis
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top b g \bot gis h
+  \top c a \bot ais cis]
+  \bar ""
+  \top d[ h \bot ais cis
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top as f \bot e g
+  \top ges es \bot d f
+  \top e cis \bot c es
+  \top e cis \bot d f
+  \top ges es \bot e g]
+  \once\override Beam.positions = #'(-5 . -1.5)
+  \top as[ f \bot e g
+  \top ges es \bot d f
+  \top e cis \bot c es
+  \clef bass
+  \top d h \bot b des
+  \top c a \bot as ces
+  \top b g \bot fis a
+  \top b g \bot as ces
+  \top c a \bot b des]
+  \bar ""
+  \top d[ h \bot b des
+  \top c a \bot as ces
+  \top b g \bot fis a
+  \top as f \bot e g
+  \top fis dis \bot d f
+  \top e cis \bot c es
+  \top e cis \bot d f
+  \top fis dis \bot e g]
+  \top as[ f \bot e g
+  \top fis dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot ais cis
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top b g \bot gis h
+  \top c a \bot ais cis]
+  \top d[ h \bot ais cis
+  \top c a \bot gis h
+  \bar ""
+  \break
+  \top b g \bot fis a
+  \top as f \bot e g
+  \top fis dis]
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

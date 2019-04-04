@@ -545,7 +545,7 @@ guitarTwo = \relative{
     \once\override StringNumber.font-size = #'-7
     <fis'''\harmonic\4 h\harmonic\3> \stemNeutral
     \ottava #0
-  \repeat unfold 3 {
+  %\repeat unfold 2 {
     cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
     gis[)( dis gis,]) eis[( ais eis'])
     \stemDown dis, 
@@ -553,5 +553,5 @@ guitarTwo = \relative{
     \set Staff.ottavation = #"8"
     <fis'''\harmonic h\harmonic> \stemNeutral
     \ottava #0
-  }
+  %}
 }

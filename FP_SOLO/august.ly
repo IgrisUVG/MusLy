@@ -186,7 +186,11 @@ rechts = \relative {
   \cadenzaOn
   s1*30 s8
   \clef bass
-  s1*20
+  s1*9
+  s4
+  \clef treble
+  s1*10
+  s1*10
   a32
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -531,6 +535,101 @@ links = \relative {
   \top b g \bot fis a
   \top as f \bot e g
   \top fis dis]
+  %@@@@@@@@@@@@@@
+  \bot d[ f \top fis dis
+  \bot e g \top as f
+  \bot fis a \top b g
+  \bot gis h \top c a
+  \bot ais cis \top d h
+  \bot c es \top e cis
+  %@@@@@@@@@@@@@@
+  \bot d f \top fis dis
+  \bot e g \top as f
+  \bot fis a \top b g
+  \bot as ces \top c a
+  \bot
+  \clef treble
+  b des \top d h
+  \bot c es \top e cis
+  \bar ""
+  \break
+  %@@@@@@@@@@@@@@
+  \bot d f \top fis dis
+  \bot e g \top as f
+  \bot fis a \top b g
+  \bot gis h \top c a
+  \bot ais cis \top d h
+  \bot c es \top e cis
+  %@@@@@@@@@@@@@@
+  \bot d f \top fis dis
+  \bot e g \top as f
+  \bot fis a \top b g
+  \bot gis h
+  \top
+  \ottava #1
+  c a
+  \bot
+  \ottava #1
+  ais cis \top d h
+  \bot c es \top e cis
+  \bar ""
+  \break
+  %@@@@@@@@@@@@@@
+  \bot d f \top fis dis
+  \bot e g \top as f
+  \bot fis a \top b g
+  \bot gis h \top c a
+  \bot ais cis \top d h
+  \bot c es \top e cis
+  \bot d f]
+  %@@@@@@@@@@@@@@
+  \top fis[ dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot cis ais
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top as f \bot e g
+  \bar ""
+  \break
+  %@@@@@@@@@@@@@@
+  \top fis dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot cis ais
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top as f
+  \ottava #0
+  \bot e g
+  \ottava #0
+  %@@@@@@@@@@@@@@
+  \top fis dis \bot d f
+  \top e cis \bot c es
+  \top d h \bot cis ais
+  \top c a \bot gis h
+  \top b g \bot fis a
+  \top as f \bot e g
+  \top fis dis \bot d f]
+  \bar ""
+  \break
+  %@@@@@@@@@@@@@@
+  \top e[ d \bot des es
+  \top d c \bot h cis
+  \top
+  \clef bass
+  c b \bot
+  \clef bass
+  a h
+  \top b as \bot g a
+  \top as ges \bot f g
+  \top ges e \bot es f
+  %@@@@@@@@@@@@@@
+  \top e d \bot des es
+  \top d c \bot h cis
+  \top c b \bot a h
+  \top b as \bot g a
+  \top as ges \bot f g
+  \top ges e \bot es f
+  ]
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

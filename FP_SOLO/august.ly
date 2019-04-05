@@ -8,6 +8,7 @@
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(set-global-staff-size 16)
 \paper {
   #(set-paper-size "a4")
@@ -36,6 +37,19 @@
     %\omit SpanBar
   }
 }
+
+blackPath =
+#'((moveto 0 0)
+   (lineto 20 18)
+   (lineto 20 17)
+   (lineto 0.5 -0.5)
+   (closepath))
+whitePath =
+#'((moveto 0.6 0.5)
+   (lineto 20 18)
+   (lineto 20 16.7)
+   (lineto 1.2 -0.2)
+   (closepath))
 
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
@@ -184,14 +198,60 @@ rechts = \relative {
     <f as!>16<as, es'>8.
   }
   \cadenzaOn
-  s1*30 s8
+  s1*50
+  s1*3 s2. s16
+  \normalsize
+  \tweak #'duration-log #1
+  cis,,,,4
+  \ottava #0
+  \clef treble
+  \override TextScript.outside-staff-priority = ##f
+  s1*3
+  \once\override TextScript.extra-offset = #'(0.95 . 4.6)
+  s16-\markup {
+    \musicglyph #"flags.d3"
+  }
+  \once\override TextScript.extra-offset = #'(0.7 . 4)
+  s-\markup {
+    \musicglyph #"flags.dgrace"
+  }
+  \shape #'((-0.5 . -4.5) (-1 . -4) (-1 . -4) (-1 . 0)) Slur
+  \once\override TextScript.extra-offset = #'(-0.26 . 6)
+  s4.-\markup {
+    \override #'(thickness . 1.5)
+    \draw-line #'(0 . 4)
+  }
+  \bot
+  <<
+    {
+      \voiceFour
+      \once \override NoteHead #'X-offset = #4
+      \once \override Stem #'rotation = #'(-40 0 0)
+      \once \override Stem #'extra-offset = #'(2.9 . 0.4)
+      \once \override Stem #'length = #9.2
+      \hide Flag
+      \once \override Accidental #'extra-offset = #'(5.1 . 0)
+      cis'''2
+    }
+    \\
+    {
+      \once \override Stem #'length = #12
+      <h c d>2^^
+    }
+  >>
+  \top
+  <as' ces g'>
+  \ottava #1
+  h'8[ b' a c, fis] f'!1
+  \ottava #0
   \clef bass
-  s1*9
+  \cadenzaOff
+  \bar "||"
+  \break
+  \time 2/4
   s4
   \clef treble
-  s1*10
-  s1*10
-  a32
+  <fis,,, h e>
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -452,11 +512,10 @@ links = \relative {
   \top d h \bot c es
   \top e cis \bot d f
   \top ges es \bot e g
-  \top as f \bot fis a
-  \top b g
   \bar ""
   \break
-  \bot gis h
+  \top as f \bot fis a
+  \top b g \bot gis h
   \top c a \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f]
@@ -470,11 +529,11 @@ links = \relative {
   \top d h \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f
+  \bar ""
+  \break
   \top fis dis \bot e g
   \top as f \bot fis a
   \top b g \bot gis h
-  \bar ""
-  \break
   \top c a \bot b des]
   \top d[ h \bot b des
   \top c a \bot gis h
@@ -487,12 +546,13 @@ links = \relative {
   \top as[ f \bot e g
   \top fis dis \bot d f
   \top e cis \bot c es
+  \bar ""
+  \break
   \top d h \bot ais cis
   \top c a \bot gis h
   \top b g \bot fis a
   \top b g \bot gis h
   \top c a \bot ais cis]
-  \bar ""
   \top d[ h \bot ais cis
   \top c a \bot gis h
   \top b g \bot fis a
@@ -501,17 +561,22 @@ links = \relative {
   \top e cis \bot c es
   \top e cis \bot d f
   \top ges es \bot e g]
+  \bar ""
   \once\override Beam.positions = #'(-5 . -1.5)
   \top as[ f \bot e g
   \top ges es \bot d f
-  \top e cis \bot c es
+  \top
   \clef bass
-  \top d h \bot b des
+  e cis
+  \bot c es
+  \top d h
+  \bot
+  \clef bass
+  b des
   \top c a \bot as ces
   \top b g \bot fis a
   \top b g \bot as ces
   \top c a \bot b des]
-  \bar ""
   \top d[ h \bot b des
   \top c a \bot as ces
   \top b g \bot fis a
@@ -520,6 +585,7 @@ links = \relative {
   \top e cis \bot c es
   \top e cis \bot d f
   \top fis dis \bot e g]
+  \bar ""
   \top as[ f \bot e g
   \top fis dis \bot d f
   \top e cis \bot c es
@@ -530,11 +596,10 @@ links = \relative {
   \top c a \bot ais cis]
   \top d[ h \bot ais cis
   \top c a \bot gis h
-  \bar ""
-  \break
   \top b g \bot fis a
   \top as f \bot e g
   \top fis dis]
+  \bar ""
   %@@@@@@@@@@@@@@
   \bot d[ f \top fis dis
   \bot e g \top as f
@@ -549,7 +614,10 @@ links = \relative {
   \bot as ces \top c a
   \bot
   \clef treble
-  b des \top d h
+  b des
+  \top
+  \clef treble
+  d h
   \bot c es \top e cis
   \bar ""
   \break
@@ -612,11 +680,11 @@ links = \relative {
   \bar ""
   \break
   %@@@@@@@@@@@@@@
-  \top e[ d \bot des es
-  \top d c \bot h cis
   \top
   \clef bass
-  c b \bot
+  e[ d \bot des es
+  \top d c \bot h cis
+  \top c b \bot
   \clef bass
   a h
   \top b as \bot g a
@@ -627,9 +695,49 @@ links = \relative {
   \top d c \bot h cis
   \top c b \bot a h
   \top b as \bot g a
+  \top
+  \ottava #-1
+  as ges \bot
+  \ottava #-1
+  f g
+  \top ges e \bot es f
+  \bar ""
+  \break
+  %@@@@@@@@@@@@@@
+  \top e d \bot des es
+  \top d c \bot h cis
+  \top c b \bot a h
+  \top b as \bot g a
   \top as ges \bot f g
   \top ges e \bot es f
-  ]
+  %@@@@@@@@@@@@@@
+  \top e d]
+  \bot
+  \normalsize
+  \autoBeamOff
+  \crossStaff <
+  \tweak #'duration-log #1 f,
+  \tweak #'duration-log #1 a
+  >4
+  \autoBeamOn
+  \ottava #0
+  \override TextScript.outside-staff-priority = ##f
+  \once\override TextScript.extra-offset = #'(-4.05 . 17.9)
+  s2-\markup {
+    \override #'(filled . #t) \path #0.15 #blackPath
+  }
+  \once\override TextScript.extra-offset = #'(-8.7 . 16.8)
+  s2-\markup {
+    \path #0.15 #whitePath
+  }
+  s1*3
+  <e'' c' fis des'>2
+  s2 s8 g,1
+  \cadenzaOff
+  \bar "||"
+  \break
+  \time 2/4
+  d'4-> <d' gis a>
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

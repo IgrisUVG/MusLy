@@ -123,7 +123,9 @@ guitarTwo = \relative{
       d4^1
     }
   >>
+  \override StringNumber.font-size = #'-7
   r8 d'\harmonic\3 r4 h8\harmonic\2 r
+  \revert StringNumber.font-size
   <d, h'>4 <h a'>8
   <<
     {
@@ -362,6 +364,7 @@ guitarTwo = \relative{
       \hideNotes
       s
       \once \override StringNumber.extra-offset = #'(-1.8 . -2.8)
+      \once\override StringNumber.font-size = #'-7
       c'\4
       \unHideNotes
     }
@@ -369,6 +372,7 @@ guitarTwo = \relative{
     {
       f,,,
       \once \override StringNumber.extra-offset = #'(0.8 . -0.8)
+      \once\override StringNumber.font-size = #'-7
       <dis'''\harmonic e\harmonic\3> \stemNeutral
     }
   >>
@@ -538,7 +542,12 @@ guitarTwo = \relative{
   gis16( fis) e d
   cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
   gis[)( dis gis,]) eis[( ais eis'])
-  \once\override StringNumber.extra-offset = #'(1.5 . 7.9)
+  \tag #'Part {
+    \once\override StringNumber.extra-offset = #'(0.3 . 7.9)
+  }
+  \tag #'Partitur {
+    \once\override StringNumber.extra-offset = #'(1.5 . 7.9)
+  }
   \once\override StringNumber.font-size = #'-7
   \stemDown dis,\4
   \ottava #1

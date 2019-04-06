@@ -84,7 +84,9 @@ guitarOne =
   h,\6[( e h'])
   \stemDown a,
   \set stringNumberOrientations = #'(left)
+  \override StringNumber.font-size = #'-7
   <e''\harmonic\5 a\harmonic\4> \stemNeutral
+  \revert StringNumber.font-size
   \unset stringNumberOrientations
   g,,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])( a) g\5
   e\5[( h'^"IV" fis]) d\5[\(( a'^"II" e])( fis) d, a'\) d_0 a'_3-\markup {
@@ -111,7 +113,9 @@ guitarOne =
     {
       \override StringNumber.staff-padding = #'()
       \once \override StringNumber.extra-offset = #'(-0.5 . -4.2)
+      \override StringNumber.font-size = #'-7
       e'8\3 a\harmonic_\4 h\harmonic_\2 g\harmonic_\3
+      \revert StringNumber.font-size
     }
     \\
     {
@@ -121,7 +125,9 @@ guitarOne =
   \tag #'Part {
     \break
   }
-  a''8_\5 d\harmonic _\4 g,_0
+  a''8_\5 
+  \once\override StringNumber.font-size = #'-7
+  d\harmonic _\4 g,_0
   \once\override Fingering.extra-offset = #'(0 . -3.5)
   h~-0 <h c\4> d\3 g\2 e-0
   <<
@@ -155,7 +161,10 @@ guitarOne =
       a4\2 \stemUp c fis, g e d cis \hide Flag d16 fis4^2
     }
   >>
-  e'8\harmonic fis\harmonic[ e\harmonic] h\harmonic[ cis\harmonic\5 a\harmonic\4]
+  e'8\harmonic fis\harmonic[ e\harmonic] h\harmonic[ 
+  \override StringNumber.font-size = #'-7
+  cis\harmonic\5 a\harmonic\4]
+  \revert StringNumber.font-size
   <<
     {
       \override TextScript.font-size = -2

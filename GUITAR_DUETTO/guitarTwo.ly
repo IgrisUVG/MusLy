@@ -452,12 +452,12 @@ guitarTwo = \relative{
       \shape #'((-0.5 . -3.9) (-0.5 . -4) (-0.3 . -4) (-0.5 . -4.4)) Slur
       \tag #'Part {
         e(-\markup {
-          \postscript #"0.3 -1.8 moveto 1.8 -0.4 rlineto stroke"
+          \postscript #"0.3 -1.8 moveto 1.6 -0.4 rlineto stroke"
         }
       }
       \tag #'Partitur {
         e(-\markup {
-          \postscript #"0.3 -1.8 moveto 2.2 -0.4 rlineto stroke"
+          \postscript #"0.3 -1.8 moveto 2.8 -0.4 rlineto stroke"
         }
       }
       d) a'^"V" e
@@ -467,12 +467,12 @@ guitarTwo = \relative{
       s16
       \tag #'Part {
         h4(-\markup {
-          \postscript #"1.5 3.6 moveto 7.4 -0.3 rlineto stroke"
+          \postscript #"1.5 3.6 moveto 7 -0.3 rlineto stroke"
         }
       }
       \tag #'Partitur {
         h4(-\markup {
-          \postscript #"1.5 3.6 moveto 8.2 -0.3 rlineto stroke"
+          \postscript #"1.5 3.6 moveto 10.5 -0.3 rlineto stroke"
         }
       }
       a8) s16
@@ -545,18 +545,7 @@ guitarTwo = \relative{
   \once\override StringNumber.font-size = #'-7
   <fis'''\harmonic\4 h\harmonic\3> \stemNeutral
   \ottava #0
-  \tag #'Partitur {
-    \repeat unfold 3 {
-      cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
-      gis[)( dis gis,]) eis[( ais eis'])
-      \stemDown dis,
-      \ottava #1
-      \set Staff.ottavation = #"8"
-      <fis'''\harmonic h\harmonic> \stemNeutral
-      \ottava #0
-    }
-  }
-  \tag #'Part {
+  \repeat unfold 3 {
     cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
     gis[)( dis gis,]) eis[( ais eis'])
     \stemDown dis,

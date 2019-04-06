@@ -125,7 +125,7 @@ guitarOne =
   \tag #'Part {
     \break
   }
-  a''8_\5 
+  a''8_\5
   \once\override StringNumber.font-size = #'-7
   d\harmonic _\4 g,_0
   \once\override Fingering.extra-offset = #'(0 . -3.5)
@@ -161,7 +161,7 @@ guitarOne =
       a4\2 \stemUp c fis, g e d cis \hide Flag d16 fis4^2
     }
   >>
-  e'8\harmonic fis\harmonic[ e\harmonic] h\harmonic[ 
+  e'8\harmonic fis\harmonic[ e\harmonic] h\harmonic[
   \override StringNumber.font-size = #'-7
   cis\harmonic\5 a\harmonic\4]
   \revert StringNumber.font-size
@@ -413,6 +413,7 @@ guitarOne =
     }
   >>
   <cis ais'>8\noBeam
+  \once\override TextScript.extra-offset = #'(0.4 . -1)
   <dis his'>^\markup \fontsize #-3 {\parenthesize \natural} <ais gis'>
   \mergeDifferentlyDottedOn
   <<
@@ -424,7 +425,9 @@ guitarOne =
     \\
     {
       %\once \override NoteColumn.force-hshift = #1.5
-      cis8. cis16^( dis) eis fis ais^( gis cis, ais8)-2
+      cis8. cis16^( dis) eis fis ais^( gis cis,
+\once\override Fingering.extra-offset = #'(0.4 . 2.8)
+      ais8)-2
       his'16( gis dis8) cis'16( ais eis8) dis'16( his gis)^(\glissando fis)
     }
     \\
@@ -433,7 +436,7 @@ guitarOne =
       %\override Fingering.staff-padding = #'()
       \once \override NoteColumn.force-hshift = #0.7
       cis16 gis'_( eis8) s4 s8. ais16( his8.) his16(\glissando
-      cis8.) cis16(\glissando dis8) s   
+      cis8.) cis16(\glissando dis8) s
     }
   >>
   eis,8

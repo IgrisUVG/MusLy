@@ -413,7 +413,7 @@ guitarOne =
     }
   >>
   <cis ais'>8\noBeam
-  <dis h'>^\markup \fontsize #-3 {\parenthesize \sharp}<ais gis'>
+  <dis his'>^\markup \fontsize #-3 {\parenthesize \natural} <ais gis'>
   \mergeDifferentlyDottedOn
   <<
     {

@@ -446,7 +446,7 @@ guitarOne =
     }
     \\
     {
-      dis,8 d'!16 c! gis' cis, h^(\glissando a)
+      dis,8 d'!16 his gis' cis, h^(\glissando a)
     }
   >>
   gis8

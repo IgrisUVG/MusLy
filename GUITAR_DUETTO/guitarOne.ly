@@ -413,17 +413,27 @@ guitarOne =
   >>
   <cis ais'>8\noBeam
   <dis h'>^\markup \fontsize #-3 {\parenthesize \sharp}<ais gis'>
+  \mergeDifferentlyDottedOn
   <<
     {
-      \override Fingering.staff-padding = #'()
-      \set fingeringOrientations = #'(down left up)
-      <his ais'>4
+      %\override Fingering.staff-padding = #'()
+      %\set fingeringOrientations = #'(down left up)
+      <his ais'>4 s2. s2
     }
     \\
     {
-      \override Fingering.staff-padding = #'()
-      \once \override NoteColumn.force-hshift = #1.5
-      cis4
+      %\once \override NoteColumn.force-hshift = #1.5
+      cis8. cis16^( dis) eis fis ais^( gis cis, ais8)-2
+      his'16( gis dis8) cis'16( ais eis8) dis'16( his gis)^(\glissando fis)
+    }
+    \\
+    {
+      \voiceThree
+      %\override Fingering.staff-padding = #'()
+      \once \override NoteColumn.force-hshift = #0.7
+      cis16 gis'_( eis8) s4 s8. ais16( his8.) his16(\glissando
+      cis8.) cis16(\glissando dis8) s   
     }
   >>
+  eis,8
 }

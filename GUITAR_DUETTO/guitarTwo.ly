@@ -543,7 +543,8 @@ guitarTwo = \relative{
   \set Staff.ottavation = #"8"
   \set stringNumberOrientations = #'(left)
   \once\override StringNumber.font-size = #'-7
-  <fis'''\harmonic\4 h\harmonic\3> \stemNeutral
+  <fis'''\harmonic\4 h\harmonic\3>
+  \stemNeutral
   \ottava #0
   \repeat unfold 3 {
     cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
@@ -551,7 +552,8 @@ guitarTwo = \relative{
     \stemDown dis,
     \ottava #1
     \set Staff.ottavation = #"8"
-    <fis'''\harmonic h\harmonic> \stemNeutral
+    <fis'''\harmonic h\harmonic>
+    \stemNeutral
     \ottava #0
   }
 }

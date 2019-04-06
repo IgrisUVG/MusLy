@@ -538,21 +538,23 @@ guitarTwo = \relative{
   gis16( fis) e d
   cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
   gis[)( dis gis,]) eis[( ais eis'])
-  \stemDown dis,
+  \once\override StringNumber.extra-offset = #'(1.5 . 7.9)
+  \once\override StringNumber.font-size = #'-7
+  \stemDown dis,\4
   \ottava #1
   \set Staff.ottavation = #"8"
-  \set stringNumberOrientations = #'(left)
+  \once\override StringNumber.extra-offset = #'(-1 . -1)
   \once\override StringNumber.font-size = #'-7
-  <fis'''\harmonic\4 h\harmonic\3>
+  <a''''\harmonic h\harmonic\3>
   \stemNeutral
   \ottava #0
   \repeat unfold 3 {
-    cis,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
+    cis,,,8[( gis' cis]) dis,[( gis dis'])(cis) ais(
     gis[)( dis gis,]) eis[( ais eis'])
     \stemDown dis,
     \ottava #1
     \set Staff.ottavation = #"8"
-    <fis'''\harmonic h\harmonic>
+    <a''''\harmonic h\harmonic>
     \stemNeutral
     \ottava #0
   }

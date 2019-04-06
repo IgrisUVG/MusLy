@@ -540,6 +540,7 @@ guitarTwo = \relative{
     }
   >>
   gis16( fis) e d
+  \break
   cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
   gis[)( dis gis,]) eis[( ais eis'])
   \tag #'Part {

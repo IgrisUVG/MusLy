@@ -401,6 +401,7 @@ guitarOne =
     g,,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
+  \break
   <gis eis'>4<eis dis'>8
   <<
     {

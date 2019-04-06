@@ -207,20 +207,21 @@ rechts = \relative {
   \clef treble
   \override TextScript.outside-staff-priority = ##f
   s1*3
-  \once\override TextScript.extra-offset = #'(0.95 . 4.6)
+  \once\override TextScript.extra-offset = #'(5.75 . 1)
   s16-\markup {
     \musicglyph #"flags.d3"
   }
-  \once\override TextScript.extra-offset = #'(0.7 . 4)
+  \once\override TextScript.extra-offset = #'(5.45 . 0.5)
   s-\markup {
     \musicglyph #"flags.dgrace"
   }
-  \shape #'((-0.5 . -4.5) (-1 . -4) (-1 . -4) (-1 . 0)) Slur
-  \once\override TextScript.extra-offset = #'(-0.26 . 6)
+  %\shape #'((-0.5 . -4.5) (-1 . -4) (-1 . -4) (-1 . 0)) Slur
+  \once\override TextScript.extra-offset = #'(4.8 . 5.3)
   s4.-\markup {
     \override #'(thickness . 1.5)
-    \draw-line #'(0 . 4)
+    \draw-line #'(0 . 7)
   }
+  s2
   \bot
   <<
     {
@@ -230,16 +231,18 @@ rechts = \relative {
       \once \override Stem #'extra-offset = #'(2.9 . 0.4)
       \once \override Stem #'length = #9.2
       \hide Flag
-      \once \override Accidental #'extra-offset = #'(5.1 . 0)
+      \once \override Accidental #'extra-offset = #'(4.2 . 0)
       cis'''2
     }
     \\
     {
       \once \override Stem #'length = #12
+      \once \override Accidental.stencil = ##f
       <h c d>2^^
     }
   >>
   \top
+  s2
   <as' ces g'>
   \ottava #1
   h'8[ b' a c, fis] f'!1
@@ -273,8 +276,8 @@ links = \relative {
   \change Staff = LH
   \time 17/8
   \set tupletSpannerDuration = #(ly:make-moment 1 8)
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \override TupletNumber.transparent = ##t
+  \override TupletBracket.bracket-visibility = ##f
   \tuplet 3/2 8 {
     \ottava #1
     \set Staff.ottavation = #"8"
@@ -701,10 +704,10 @@ links = \relative {
   \ottava #-1
   f g
   \top ges e \bot es f
-  \bar ""
-  \break
   %@@@@@@@@@@@@@@
   \top e d \bot des es
+  \bar ""
+  \break
   \top d c \bot h cis
   \top c b \bot a h
   \top b as \bot g a
@@ -726,11 +729,13 @@ links = \relative {
   s2-\markup {
     \override #'(filled . #t) \path #0.15 #blackPath
   }
-  \once\override TextScript.extra-offset = #'(-8.7 . 16.8)
+  \once\override TextScript.extra-offset = #'(-7.3 . 16.9)
   s2-\markup {
     \path #0.15 #whitePath
   }
+  s2
   s1*3
+  s2
   <e'' c' fis des'>2
   s2 s8 g,1
   \cadenzaOff

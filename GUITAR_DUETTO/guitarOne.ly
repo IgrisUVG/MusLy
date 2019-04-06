@@ -426,7 +426,7 @@ guitarOne =
     {
       %\once \override NoteColumn.force-hshift = #1.5
       cis8. cis16^( dis) eis fis ais^( gis cis,
-\once\override Fingering.extra-offset = #'(0.4 . 2.8)
+      \once\override Fingering.extra-offset = #'(0.4 . 2.8)
       ais8)-2
       his'16( gis dis8) cis'16( ais eis8) dis'16( his gis)^(\glissando fis)
     }
@@ -439,5 +439,15 @@ guitarOne =
       cis8.) cis16(\glissando dis8) s
     }
   >>
-  eis,8
+  eis,8 <gis cis>[ <fis dis'> <eis eis'>]
+  <<
+    {
+      <dis ais''>4 gis'8
+    }
+    \\
+    {
+      dis,8 d'!16 c! gis' cis, h^(\glissando a)
+    }
+  >>
+  gis8
 }

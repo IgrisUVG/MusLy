@@ -401,9 +401,9 @@ guitarOne =
     g,,8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
   }
-  \tag #'Partitur {
-    \break
-  }
+  %\tag #'Partitur {
+  \break
+  %}
   <gis eis'>4<eis dis'>8
   <<
     {
@@ -451,5 +451,7 @@ guitarOne =
       dis,8 d'!16 his gis' cis, h^(\glissando a)
     }
   >>
-  gis8
+  \override TextScript.font-size = -2
+  gis8 cis,16(^"XI" fis h fis')( dis8)
+  cis
 }

@@ -453,5 +453,5 @@ guitarOne =
   >>
   \override TextScript.font-size = -2
   gis8 cis,16(^"XI" fis h fis')( dis8)
-  cis
+  cis eis16( dis) h( gis) fis( dis) cis( a?) his8
 }

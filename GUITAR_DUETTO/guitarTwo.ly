@@ -363,7 +363,7 @@ guitarTwo = \relative{
       \voiceTwo
       \hideNotes
       s
-      \once \override StringNumber.extra-offset = #'(-1.8 . -2.8)
+      \once \override StringNumber.extra-offset = #'(-1.8 . -1.8)
       \once\override StringNumber.font-size = #'-7
       c'\4
       \unHideNotes
@@ -373,12 +373,12 @@ guitarTwo = \relative{
       f,,,
       \once \override StringNumber.extra-offset = #'(0.8 . -0.8)
       \once\override StringNumber.font-size = #'-7
-      <dis'''\harmonic e\harmonic\3> \stemNeutral
+      <fis'''!\harmonic g\harmonic\3> \stemNeutral
     }
   >>
   \repeat unfold 3 {
     es,,,8[( b' es]) f,[( b f'])(es) c( b[)( f' b]) g,[( c g'])
-    \stemDown f, <dis'''\harmonic e\harmonic> \stemNeutral
+    \stemDown f, <fis'''!\harmonic g\harmonic> \stemNeutral
   }
   \tag #'Part {
     \break

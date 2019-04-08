@@ -39,6 +39,7 @@
 }
 
 \include "myNoteHeads.ly"
+
 blackPath =
 #'((moveto 0 0)
    (lineto 20 18)
@@ -231,17 +232,17 @@ rechts = \relative {
   <<
     {
       \voiceFour
-      \once \override NoteHead #'X-offset = #4
-      \once \override Stem #'rotation = #'(-40 0 0)
-      \once \override Stem #'extra-offset = #'(2.9 . 0.4)
-      \once \override Stem #'length = #9.2
+      \once \override NoteHead.X-offset = #4
+      \once \override Stem.rotation = #'(-40 0 0)
+      \once \override Stem.extra-offset = #'(2.9 . 0.4)
+      \once \override Stem.length = #9.2
       \hide Flag
-      \once \override Accidental #'extra-offset = #'(4.2 . 0)
+      \once \override Accidental.extra-offset = #'(4.2 . 0)
       \tweak #'duration-log #1 cis'''4
     }
     \\
     {
-      \once \override Stem #'length = #12
+      \once \override Stem.length = #12
       \once \override Accidental.stencil = ##f
       <
       \tweak #'duration-log #1 h
@@ -261,13 +262,22 @@ rechts = \relative {
   f'!1
   \ottava #0
   \clef bass
-  %\cadenzaOff
   \bar "||"
   \break
   \time 2/4
+  \slashedGrace {
+    \myBigAccNoteHeadsFill
+    \once\override Stem.length = #13
+    \ottava #-1
+    \set Staff.ottavation = #"8"
+    \once \override Arpeggio.positions = #'(-5 . 0)
+    h,,,,,,,8\arpeggio
+    \ottava #0
+    \normalNoteHeads
+  }
   s4
   \clef treble
-  <fis,,, h e>
+  <fis'''' h e>
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -776,24 +786,27 @@ links = \relative {
     }
     \\
     {
-      \myBigNoteHeads g,,1 \normalNoteHeads
+      \myBigZebraNoteHeads g,,1 \normalNoteHeads
     }
   >>
   \ottava #0
   \revert Score.BarLine.stencil
   %\cadenzaOff
   \bar "||"
-  \break
   \time 2/4
-  %\acciaccatura {
-  %  \ottava #-1
-  %  \set Staff.ottavation = #"8"
-  %  \myBigNoteHeads
-  %  h8
-  %  \normalNoteHeads
-  %  \ottava #0
-  %}
-  d''4-> <d' gis a>
+  \autoBeamOff
+  \crossStaff
+  \acciaccatura {
+    \myBigAccNoteHeads
+    \once\override Stem.length = #13
+    \ottava #-1
+    \set Staff.ottavation = #"8"
+    h8
+    \ottava #0
+    \normalNoteHeads
+  }
+  \autoBeamOn
+  d'4^> <d' gis a>
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

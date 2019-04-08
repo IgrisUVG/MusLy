@@ -61,7 +61,7 @@ rechts = \relative {
   \accidentalStyle piano
   \clef bass
   \override Staff.TimeSignature.stencil = ##f
-  %\override Score.BarLine.stencil = ##f
+  \override Score.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \time 14/8
   d4 s8.
@@ -284,7 +284,7 @@ links = \relative {
   \accidentalStyle piano
   \clef bass
   \override Staff.TimeSignature.stencil = ##f
-  %\override Score.BarLine.stencil = ##f
+  \override Score.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \time 14/8
   g,,16[ d' a'
@@ -470,7 +470,7 @@ links = \relative {
   \time 11/16
   %\cadenzaOn
   \clef treble
-  \override Score.BarLine.stencil = ##f
+  %\override Score.BarLine.stencil = ##f
   \override Beam.breakable = ##t
   des16[ as' des
   \small
@@ -791,6 +791,7 @@ links = \relative {
   >>
   \ottava #0
   \revert Score.BarLine.stencil
+  \revert Score.SpanBar.stencil
   %\cadenzaOff
   \bar "||"
   \time 2/4

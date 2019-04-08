@@ -38,6 +38,7 @@
   }
 }
 
+\include "myNoteHeads.ly"
 blackPath =
 #'((moveto 0 0)
    (lineto 20 18)
@@ -197,31 +198,35 @@ rechts = \relative {
     <f as!>16<as, es'>8
     <f as!>16<as, es'>8.
   }
-  \cadenzaOn
+  %\cadenzaOn
   s1*50
   s1*3 s2. s16
+  \time 2/4
   \normalsize
   \tweak #'duration-log #1
   cis,,,,4
   \ottava #0
   \clef treble
+  s4
+  \time 3/4
   \override TextScript.outside-staff-priority = ##f
-  s1*3
-  \once\override TextScript.extra-offset = #'(5.75 . 1)
+  %s1*3
+  \once\override TextScript.extra-offset = #'(10.65 . 1)
   s16-\markup {
     \musicglyph #"flags.d3"
   }
-  \once\override TextScript.extra-offset = #'(5.45 . 0.5)
+  \once\override TextScript.extra-offset = #'(10.2 . 0.5)
   s-\markup {
     \musicglyph #"flags.dgrace"
   }
   %\shape #'((-0.5 . -4.5) (-1 . -4) (-1 . -4) (-1 . 0)) Slur
-  \once\override TextScript.extra-offset = #'(4.8 . 5.3)
-  s4.-\markup {
+  \once\override TextScript.extra-offset = #'(9 . 5.3)
+  s8-\markup {
     \override #'(thickness . 1.5)
     \draw-line #'(0 . 7)
   }
   s2
+  \time 2/4
   \bot
   <<
     {
@@ -232,23 +237,31 @@ rechts = \relative {
       \once \override Stem #'length = #9.2
       \hide Flag
       \once \override Accidental #'extra-offset = #'(4.2 . 0)
-      cis'''2
+      \tweak #'duration-log #1 cis'''4
     }
     \\
     {
       \once \override Stem #'length = #12
       \once \override Accidental.stencil = ##f
-      <h c d>2^^
+      <
+      \tweak #'duration-log #1 h
+      \tweak #'duration-log #1 c
+      \tweak #'duration-log #1 d
+      >4^^
     }
   >>
   \top
-  s2
-  <as' ces g'>
+  s4
+  <as' ces g'>2
   \ottava #1
-  h'8[ b' a c, fis] f'!1
+  \set Staff.ottavation = #"8"
+  \time 5/8
+  h'8[ b' a c, fis]
+  \time 4/4
+  f'!1
   \ottava #0
   \clef bass
-  \cadenzaOff
+  %\cadenzaOff
   \bar "||"
   \break
   \time 2/4
@@ -443,20 +456,24 @@ links = \relative {
     des,! as'! des! ges,! des'! ges
     des! as'! des! ges,! des'! ges
   }
-  \cadenzaOn
+  \break
+  \time 11/16
+  %\cadenzaOn
   \clef treble
+  \override Score.BarLine.stencil = ##f
   \override Beam.breakable = ##t
   des16[ as' des
   \small
   \top ges es \bot as,! c
   \top as' des, \bot ges, b]
+  \time 4/4
   \repeat unfold 2 {
     \top es![ c \bot ges! as!
     \top fes'! des! \bot es,! as!
     \top c b \bot fes ges
     \top b as \bot c, fes]
   }
-  \bar ""
+  %\bar ""
   \top des'[ b \bot f! ges
   \top eses' ces \bot des, ges
   \top b as \bot es f
@@ -469,14 +486,14 @@ links = \relative {
   \top des' ces \bot des, ges
   \top heses as \bot es fes
   \top as ges \bot c, es]
-  \bar ""
+  %\bar ""
   \repeat unfold 3 {
     \top c'[ a \bot e fis
     \top des' b \bot cis, fis
     \top a gis \bot dis e
     \top gis fis \bot c! dis]
   }
-  \bar ""
+  %\bar ""
   \repeat unfold 2 {
     \top ces'[ as \bot e f
     \top des' heses \bot cis, f
@@ -487,11 +504,12 @@ links = \relative {
   \top deses' heses \bot cis, f
   \top as ges \bot dis e
   \top ges f \bot c! dis]
-  \bar ""
+  %\bar ""
   \top ces'[ as \bot e f
   \top deses' heses \bot cis, f
   \top as ges \bot dis e
   \top ges f \bot c! dis]
+  \time 5/4
   \repeat unfold 2 {
     \top b'[ g \bot fis a
     \top as f \bot e g
@@ -499,12 +517,13 @@ links = \relative {
     \top ges es \bot e g
     \top as f \bot fis a]
   }
-  \bar ""
+  %\bar ""
   \top b[ g \bot fis a
   \top as f \bot e g
   \top ges es \bot d f
   \top ges es \bot e g
   \top as f \bot fis a]
+  %\time 15/4
   \top b[ g \bot fis a
   \top as f \bot e g
   \top ges es \bot d f
@@ -515,8 +534,8 @@ links = \relative {
   \top d h \bot c es
   \top e cis \bot d f
   \top ges es \bot e g
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   \top as f \bot fis a
   \top b g \bot gis h
   \top c a \bot ais cis
@@ -527,13 +546,14 @@ links = \relative {
   \top d h \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f]
+  \time 3/4
   \top fis[ dis \bot d f
   \top e cis \bot c es
   \top d h \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   \top fis dis \bot e g
   \top as f \bot fis a
   \top b g \bot gis h
@@ -549,8 +569,8 @@ links = \relative {
   \top as[ f \bot e g
   \top fis dis \bot d f
   \top e cis \bot c es
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   \top d h \bot ais cis
   \top c a \bot gis h
   \top b g \bot fis a
@@ -564,7 +584,7 @@ links = \relative {
   \top e cis \bot c es
   \top e cis \bot d f
   \top ges es \bot e g]
-  \bar ""
+  %\bar ""
   \once\override Beam.positions = #'(-5 . -1.5)
   \top as[ f \bot e g
   \top ges es \bot d f
@@ -588,7 +608,7 @@ links = \relative {
   \top e cis \bot c es
   \top e cis \bot d f
   \top fis dis \bot e g]
-  \bar ""
+  %\bar ""
   \top as[ f \bot e g
   \top fis dis \bot d f
   \top e cis \bot c es
@@ -602,7 +622,7 @@ links = \relative {
   \top b g \bot fis a
   \top as f \bot e g
   \top fis dis]
-  \bar ""
+  %\bar ""
   %@@@@@@@@@@@@@@
   \bot d[ f \top fis dis
   \bot e g \top as f
@@ -614,7 +634,7 @@ links = \relative {
   \bot d f \top fis dis
   \bot e g \top as f
   \bot fis a \top b g
-  \bot as ces \top c a
+  \bot as ces] \top c[ a
   \bot
   \clef treble
   b des
@@ -622,8 +642,8 @@ links = \relative {
   \clef treble
   d h
   \bot c es \top e cis
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   %@@@@@@@@@@@@@@
   \bot d f \top fis dis
   \bot e g \top as f
@@ -638,13 +658,15 @@ links = \relative {
   \bot gis h
   \top
   \ottava #1
+  \set Staff.ottavation = #"8"
   c a
   \bot
   \ottava #1
+  \set Staff.ottavation = #"8"
   ais cis \top d h
   \bot c es \top e cis
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   %@@@@@@@@@@@@@@
   \bot d f \top fis dis
   \bot e g \top as f
@@ -660,8 +682,8 @@ links = \relative {
   \top c a \bot gis h
   \top b g \bot fis a
   \top as f \bot e g
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   %@@@@@@@@@@@@@@
   \top fis dis \bot d f
   \top e cis \bot c es
@@ -680,8 +702,8 @@ links = \relative {
   \top b g \bot fis a
   \top as f \bot e g
   \top fis dis \bot d f]
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   %@@@@@@@@@@@@@@
   \top
   \clef bass
@@ -700,49 +722,78 @@ links = \relative {
   \top b as \bot g a
   \top
   \ottava #-1
+  \set Staff.ottavation = #"8"
   as ges \bot
   \ottava #-1
+  \set Staff.ottavation = #"8"
   f g
   \top ges e \bot es f
   %@@@@@@@@@@@@@@
   \top e d \bot des es
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   \top d c \bot h cis
   \top c b \bot a h
+  \time 7/8
   \top b as \bot g a
   \top as ges \bot f g
   \top ges e \bot es f
   %@@@@@@@@@@@@@@
   \top e d]
   \bot
+  \time 2/4
   \normalsize
+  \override TextScript.outside-staff-priority = ##f
+  \once\override TextScript.extra-offset = #'(2.2 . 17.9)
   \autoBeamOff
   \crossStaff <
   \tweak #'duration-log #1 f,
   \tweak #'duration-log #1 a
-  >4
-  \autoBeamOn
-  \ottava #0
-  \override TextScript.outside-staff-priority = ##f
-  \once\override TextScript.extra-offset = #'(-4.05 . 17.9)
-  s2-\markup {
+  >4-\markup {
     \override #'(filled . #t) \path #0.15 #blackPath
   }
-  \once\override TextScript.extra-offset = #'(-7.3 . 16.9)
-  s2-\markup {
+  \autoBeamOn
+  \ottava #0
+  \once\override TextScript.extra-offset = #'(-4.1 . 16.9)
+  s4-\markup {
     \path #0.15 #whitePath
   }
-  s2
-  s1*3
+  s2.
+  %s1*3
   s2
   <e'' c' fis des'>2
-  s2 s8 g,1
-  \cadenzaOff
+  \time 5/8
+  s2 s8
+  \time 4/4
+  \ottava #-1
+  \set Staff.ottavation = #"8"
+  <<
+    {
+      \once\override TextScript.extra-offset = #'(-1.5 . 7)
+      s2_\markup {\sharp}
+      \once\override TextScript.extra-offset = #'(-6.5 . -1)
+      s2_\markup {\flat}
+    }
+    \\
+    {
+      \myBigNoteHeads g,,1 \normalNoteHeads
+    }
+  >>
+  \ottava #0
+  \revert Score.BarLine.stencil
+  %\cadenzaOff
   \bar "||"
   \break
   \time 2/4
-  d'4-> <d' gis a>
+  %\acciaccatura {
+  %  \ottava #-1
+  %  \set Staff.ottavation = #"8"
+  %  \myBigNoteHeads
+  %  h8
+  %  \normalNoteHeads
+  %  \ottava #0
+  %}
+  d''4-> <d' gis a>
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

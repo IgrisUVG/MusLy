@@ -32,7 +32,8 @@
   \context{
     \Score
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
-    \remove "Bar_number_engraver"
+    \override BarNumber.break-visibility = ##(#t #t #t)
+    %\remove "Bar_number_engraver"
     %\omit BarLine
     %\omit SpanBar
   }
@@ -70,7 +71,7 @@ rechts = \relative {
   \clef bass
   \override Staff.TimeSignature.stencil = ##f
   \override Score.BarLine.stencil = ##f
-  \override Score.SpanBar.stencil = ##f
+  %\override Score.SpanBar.stencil = ##f
   \time 14/8
   d4 s8.
   \change Staff = LH
@@ -462,7 +463,7 @@ links = \relative {
   \clef bass
   \override Staff.TimeSignature.stencil = ##f
   \override Score.BarLine.stencil = ##f
-  \override Score.SpanBar.stencil = ##f
+  %\override Score.SpanBar.stencil = ##f
   \time 14/8
   g,,16[ d' a'
   \change Staff = RH

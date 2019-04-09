@@ -384,6 +384,73 @@ rechts = \relative {
       <es g c>2
     }
   >>
+  \clef bass
+  <e, g h e>2 <cis fis a cis> <b des ges b>1
+  \clef treble
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  h''!8 fis dis a
+  \clef bass
+  <<
+    {
+      b2 heses
+    }
+    \\
+    {
+      b8 b, es ges heses2
+    }
+  >>
+  \clef treble
+  as4 <a' d fis a>
+  h!8 fis dis a
+  \clef bass
+  <<
+    {
+      b2 heses
+    }
+    \\
+    {
+      b8 b, es ges heses2
+    }
+  >>
+  as2
+  \clef treble
+  <
+  \tweak #'duration-log #1 a!
+  \tweak #'duration-log #1 a'!
+  >8 cis fis gis <b, b'>4 <a a'>
+  <<
+    {
+      <des des'>2 <d' d'>4 <des des'>
+    }
+    \\
+    {
+      des,8 b' <f f'> c''
+      \once\override NoteColumn.force-hshift = #1.2
+      <g b>2
+    }
+  >>
+  \clef bass
+  <<
+    {
+      <f,,! f'!>2
+    }
+    \\
+    {
+      f8 <b, des ges b>^( <heses des ges heses>4)
+    }
+  >>
+  \clef treble
+  <<
+    {
+      cis''8 <fis,, a d fis>( <f a d f>4)
+    }
+    \\
+    {
+      <cis' cis'>2
+    }
+  >>
+  <d d'>2 <fis ais>8 q q q
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -1105,6 +1172,51 @@ links = \relative {
       e!8 <a, a'> <gis' gis'>4
     }
   >>
+  <dis, dis'>2 <e e'> <f f'> <a a'>
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  <b b'> <es, es'>
+  r8
+  <<
+    {
+      f'8 c as' <h,! h'!>2
+    }
+    \\
+    {
+      <f f'>4. h8 f' d' as'
+    }
+  >>
+  <b,, b'>2 <es, es'>
+  r8
+  <<
+    {
+      f'8 c as' <h,! h'!>2
+    }
+    \\
+    {
+      <f f'>4. h8 f' d' as'
+    }
+  >>
+  <
+  \tweak #'duration-log #1 fis,
+  \tweak #'duration-log #1 fis'
+  >8 cis' d e
+  <
+  \tweak #'duration-log #1 es,
+  \tweak #'duration-log #1 es'
+  > b' ges' \top d' \bot
+  <<
+    {
+      <b,, b'>2 <g! g'!>
+    }
+    \\
+    {
+      b8 <f' f'> <ges ges'> <as as'>
+      g, <d' d'> <b' b'> <fis' fis'>
+    }
+  >>
+  r8 <e,, e'>( <es es'>4) r8 <his' his'>( <h h'>4)
+  es8 heses' cis as' <e! e'!>2
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

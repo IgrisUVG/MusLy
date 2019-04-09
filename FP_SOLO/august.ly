@@ -40,6 +40,14 @@
 
 \include "myNoteHeads.ly"
 
+xLV = #(define-music-function (parser location further) (number?) #{
+  \once \override LaissezVibrerTie  #'X-extent = #'(0 . 0)
+  \once \override LaissezVibrerTie  #'details #'note-head-gap = #(/
+                                                                  further -2)
+  \once \override LaissezVibrerTie  #'extra-offset = #(cons (/
+                                                             further 2) 0)
+         #})
+
 blackPath =
 #'((moveto 0 0)
    (lineto 20 18)
@@ -296,31 +304,86 @@ rechts = \relative {
   <g,, as>
   \clef treble
   <gis' h f'!>
+  \repeat unfold 2 {
+    R2
+    <<
+      {
+        r8
+        <h' cis h'>
+        \ottava #1
+        <b' c b'> <a h a'>
+        \ottava #0
+        <c, d c'>8 <fis gis fis'>
+        \ottava #1
+        <f' g f'>4~ q2
+        \ottava #0
+      }
+      \\
+      {
+        r8
+        <h,,, dis gis ais>
+        <b' d g a> <a cis fis gis>
+        <c, e a h>8 <fis ais dis eis>
+        <f' a d e>4~ q2
+      }
+    >>
+  }
+  R2*3
+  \bar "||"
+  \cadenzaOn
+  r2
+  b8[( g! b, d e] c'8. des,,2)
+  \teeny b''8[( g! b, d e] c'8.
+  \xLV #6 des,,2)_\laissezVibrer
+  \normalsize
+  \cadenzaOff
+  \bar "||"
   \clef bass
+  \time 4/4
   <<
     {
-      \once \override Stem.length = #12
-      %\once \override Accidental.extra-offset = #'(1 . 0)
-      f,
+      \repeat unfold 4 {
+        <as des>2 b
+      }
+      <as des>4
     }
     \\
     {
-      \voiceThree
-      \once \override NoteHead.X-offset = #2
-      \once \override Stem.rotation = #'(40 0 0)
-      \once \override Stem.extra-offset = #'(0.2 . -0.2)
-      \once \override Stem.length = #9.5
-      \hide Flag
-      %\once \override Flag.stencil = ##f
-      \once \override Accidental.extra-offset = #'(3.7 . 0)
-      fis
+      \repeat unfold 2 {
+        des,1~ des2.~ \times 2/3 {des8 des des}
+      }
+      des4
     }
   >>
-  <g' h dis>
   \clef treble
-  r8 <h' cis h'>
-  \ottava #1
-  <b' c b'> <a h a'>
+  \times 2/3 {<c'' e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
+  r4 \times 2/3 {<c, e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
+  r r4 \times 2/3 {<c e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>1
+  \clef bass
+  <<
+    {
+      \repeat unfold 4 {
+        <as des>2 b
+      }
+    }
+    \\
+    {
+      des,1~ des2.~ \times 2/3 {des8 des des} des1~ des
+    }
+  >>
+  \bar "||"
+  <d! f as b d>2 <h! d fis gis h> <b des ges b> <h d fis h>
+  <dis fis a h dis> <c es g a c> <h d g h>
+  \clef treble
+  <<
+    {
+      e''!8 <a,, a'> <gis' gis'>4
+    }
+    \\
+    {
+      <es g c>2
+    }
+  >>
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -863,18 +926,183 @@ links = \relative {
     \normalNoteHeads
   }
   \autoBeamOn
-  d'4^> <d' gis a> <fis,, d'> <d'' fis a> <e,, d'> <d''! fis a>
+  d'4^> <d' gis a> <fis,, d'> <d'' fis a>
   <<
     {
-      <cis,, d'>4_\laissezVibrer s
+      <<
+        {
+          \once \override Stem.length = #12
+          %\once \override Accidental.extra-offset = #'(1 . 0)
+          f,
+        }
+        \\
+        {
+          \voiceThree
+          \once \override NoteHead.X-offset = #0.8
+          \once \override Stem.rotation = #'(25 0 0)
+          \once \override Stem.extra-offset = #'(-0.25 . -0.2)
+          \once \override Stem.length = #9.5
+          \hide Flag
+          %\once \override Flag.stencil = ##f
+          \once \override Accidental.extra-offset = #'(2.7 . 0)
+          fis
+        }
+      >>
+      <g' h dis>
+      \repeat unfold 2 {
+        R2
+        \clef treble
+        r4 r8
+        <<
+          {
+            <fis'_~ c'~> q2
+          }
+          \\
+          {
+            s4
+            \clef bass
+            <gis, h f'!>
+          }
+        >>
+        <<
+          {
+            \once \override Stem.length = #12
+            %\once \override Accidental.extra-offset = #'(1 . 0)
+            f,
+          }
+          \\
+          {
+            \voiceThree
+            \once \override NoteHead.X-offset = #0.8
+            \once \override Stem.rotation = #'(25 0 0)
+            \once \override Stem.extra-offset = #'(-0.25 . -0.2)
+            \once \override Stem.length = #9.5
+            \hide Flag
+            %\once \override Flag.stencil = ##f
+            \once \override Accidental.extra-offset = #'(2.7 . 0)
+            fis
+          }
+        >>
+        <g' h dis>
+      }
+      \repeat unfold 2 {
+        <e, f!>4
+        <<
+          {
+            d''4
+          }
+          \\
+          {
+            <fis, a d>
+          }
+        >>
+      }
+      \bar "||"
+      \cadenzaOn
+      <e d fis gis h>1\fermata
+      s s s8
+      \cadenzaOff
+      \bar "||"
+    }
+    \new Staff \relative {
+      \override Staff.TimeSignature.stencil = ##f
+      \clef bass
+      <e,, d'>4 <d''! fis a>
+      \repeat unfold 2 {
+        \xLV #6 <cis,, d'>4_\laissezVibrer s
+        r4 r8
+        <<
+          {
+            \autoBeamOff
+            \crossStaff
+            <d''_~ e_~ gis^~ ais^~>
+            \crossStaff
+            q2
+            \autoBeamOn
+          }
+          \\
+          {
+            s8
+            <<
+              {
+                \once \override Stem.length = #12
+                %\once \override NoteColumn.force-hshift = #1.7
+                g,4
+              }
+              \\
+              {
+                \voiceThree
+                \once \override NoteHead.X-offset = #0.8
+                \once \override Stem.rotation = #'(25 0 0)
+                \once \override Stem.extra-offset = #'(-0.25 . -0.2)
+                \once \override Stem.length = #9.5
+                \hide Flag
+                %\once \override Flag.stencil = ##f
+                \once \override Accidental.extra-offset = #'(2.7 . 0)
+                gis4
+              }
+            >>
+          }
+          \\
+          {
+            \voiceTwo
+            s8
+            %\once \override NoteColumn.force-hshift = #1.7
+            <fis, d'>4 <d'' fis a>
+          }
+        >>
+        <e,, d'>4 <d''! fis a>
+      }
+      \repeat unfold 2 {
+        <cis,, d'>4 <gis'' h e>
+      }
+      \bar "||"
+      \cadenzaOn
+      <cis, d e f! a>1\fermata
+      s s s8
+      \cadenzaOff
+      \bar "||"
+      \break
+      \time 4/4
+    }
+  >>
+  <<
+    {
+      <fes,, fes'>2 <f f'> <fes fes'> <f f'>
+      \repeat unfold 8 {
+        <fes as fes'>2 <f b f'>
+      }
+      <fes fes'>2 <f f'> <fes fes'> <f f'>
     }
     \\
     {
-      g'''8\rest
-      \clef treble
-      <h dis gis ais>
-      \ottava #1
-      <b' d g a> <a cis fis gis>
+      \repeat unfold 5 {
+        \once\override NoteColumn.force-hshift = #1
+        des'1~
+        \once\override NoteColumn.force-hshift = #1.2
+        des2.~ \times 2/3 {des8 des des}
+      }
+      \once\override NoteColumn.force-hshift = #1
+      des1~ des
+    }
+  >>
+  \bar "||"
+  <g, g'>4 <fis fis'>8 <g g'>
+  \ottava #-1
+  <es es'> <des des'> <d d'>8. <h h'>16 q2
+  \ottava #0
+  <es es'>8 as <g! g'!>4
+  <gis gis'>4 <fisis fisis'>8 <gis gis'>
+  \ottava #-1
+  <e e'> <d d'> <dis dis'>8. <c c'>16 q2
+  \ottava #0
+  <<
+    {
+      <g'' c es>2
+    }
+    \\
+    {
+      e!8 <a, a'> <gis' gis'>4
     }
   >>
 }

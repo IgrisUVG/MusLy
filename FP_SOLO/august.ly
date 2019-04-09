@@ -1158,6 +1158,7 @@ links = \relative {
     }
   >>
   \bar "||"
+  \break
   <g, g'>4 <fis fis'>8 <g g'>
   \ottava #-1
   \set Staff.ottavation = #"8"

@@ -278,6 +278,49 @@ rechts = \relative {
   s4
   \clef treble
   <fis'''' h e>
+  \clef bass
+  \slashedGrace {
+    \myBigAccNoteHeadsFill
+    \once\override Stem.length = #13
+    \ottava #-1
+    \set Staff.ottavation = #"8"
+    \once \override Arpeggio.positions = #'(-5 . 0)
+    h,,,,8\arpeggio
+    \ottava #0
+    \normalNoteHeads
+  }
+  s4
+  \clef treble
+  <fis'''' h e>
+  \clef bass
+  <g,, as>
+  \clef treble
+  <gis' h f'!>
+  \clef bass
+  <<
+    {
+      \once \override Stem.length = #12
+      %\once \override Accidental.extra-offset = #'(1 . 0)
+      f,
+    }
+    \\
+    {
+      \voiceThree
+      \once \override NoteHead.X-offset = #2
+      \once \override Stem.rotation = #'(40 0 0)
+      \once \override Stem.extra-offset = #'(0.2 . -0.2)
+      \once \override Stem.length = #9.5
+      \hide Flag
+      %\once \override Flag.stencil = ##f
+      \once \override Accidental.extra-offset = #'(3.7 . 0)
+      fis
+    }
+  >>
+  <g' h dis>
+  \clef treble
+  r8 <h' cis h'>
+  \ottava #1
+  <b' c b'> <a h a'>
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -808,6 +851,32 @@ links = \relative {
   }
   \autoBeamOn
   d'4^> <d' gis a>
+  \autoBeamOff
+  \crossStaff
+  \acciaccatura {
+    \myBigAccNoteHeads
+    \once\override Stem.length = #13
+    \ottava #-1
+    \set Staff.ottavation = #"8"
+    h,,8
+    \ottava #0
+    \normalNoteHeads
+  }
+  \autoBeamOn
+  d'4^> <d' gis a> <fis,, d'> <d'' fis a> <e,, d'> <d''! fis a>
+  <<
+    {
+      <cis,, d'>4_\laissezVibrer s
+    }
+    \\
+    {
+      g'''8\rest
+      \clef treble
+      <h dis gis ais>
+      \ottava #1
+      <b' d g a> <a cis fis gis>
+    }
+  >>
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

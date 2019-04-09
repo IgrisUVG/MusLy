@@ -92,8 +92,8 @@ rechts = \relative {
   \time 17/8
   \stemNeutral
   \set tupletSpannerDuration = #(ly:make-moment 1 8)
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \override TupletNumber.transparent = ##t
+  \override TupletBracket.bracket-visibility = ##f
   \tuplet 3/2 8 {
     \ottava #2
     \set Staff.ottavation = #"15"
@@ -311,10 +311,12 @@ rechts = \relative {
         r8
         <h' cis h'>
         \ottava #1
+        \set Staff.ottavation = #"8"
         <b' c b'> <a h a'>
         \ottava #0
         <c, d c'>8 <fis gis fis'>
         \ottava #1
+        \set Staff.ottavation = #"8"
         <f' g f'>4~ q2
         \ottava #0
       }
@@ -356,6 +358,7 @@ rechts = \relative {
     }
   >>
   \clef treble
+  \override TupletNumber.transparent = ##f
   \times 2/3 {<c'' e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
   r4 \times 2/3 {<c, e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
   r r4 \times 2/3 {<c e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>1
@@ -1156,11 +1159,13 @@ links = \relative {
   \bar "||"
   <g, g'>4 <fis fis'>8 <g g'>
   \ottava #-1
+  \set Staff.ottavation = #"8"
   <es es'> <des des'> <d d'>8. <h h'>16 q2
   \ottava #0
   <es es'>8 as <g! g'!>4
   <gis gis'>4 <fisis fisis'>8 <gis gis'>
   \ottava #-1
+  \set Staff.ottavation = #"8"
   <e e'> <d d'> <dis dis'>8. <c c'>16 q2
   \ottava #0
   <<

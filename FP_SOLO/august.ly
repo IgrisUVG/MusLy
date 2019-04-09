@@ -358,6 +358,7 @@ rechts = \relative {
     }
   >>
   \clef treble
+  \unset tupletSpannerDuration
   \override TupletNumber.transparent = ##f
   \times 2/3 {<c'' e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
   r4 \times 2/3 {<c, e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2

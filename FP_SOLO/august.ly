@@ -65,7 +65,7 @@ whitePath =
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
-%%%%%%%%%%% RH %%%%%%%%%%%%
+%%%%%%%%%%% RH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rechts = \relative {
   \accidentalStyle piano
   \clef bass
@@ -215,7 +215,7 @@ rechts = \relative {
   \time 2/4
   \normalsize
   \tweak #'duration-log #1
-  cis,,,,4
+  cis,,,,4^\markup {\dynamic ff}
   \ottava #0
   \clef treble
   s4
@@ -258,11 +258,13 @@ rechts = \relative {
       \tweak #'duration-log #1 h
       \tweak #'duration-log #1 c
       \tweak #'duration-log #1 d
-      >4^^
+      >4^^^\sf
     }
   >>
   \top
   s4
+  \once\override Score.RehearsalMark.extra-offset = #'(-1 . 2)
+  \mark \markup {\italic Lento}
   <as' ces g'>2
   \ottava #1
   \set Staff.ottavation = #"8"
@@ -275,6 +277,8 @@ rechts = \relative {
   \bar "||"
   \break
   \time 2/4
+  \once\override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark \markup {\italic Allegretto}
   \slashedGrace {
     \myBigAccNoteHeadsFill
     \once\override Stem.length = #13
@@ -287,7 +291,8 @@ rechts = \relative {
   }
   s4
   \clef treble
-  <fis'''' h e>
+  \once\override TextScript.extra-offset = #'(0 . -2)
+  <fis'''' h e>-\markup {\italic dim.}
   \clef bass
   \slashedGrace {
     \myBigAccNoteHeadsFill
@@ -460,8 +465,92 @@ rechts = \relative {
     }
   >>
   <d d'>2 <fis ais>8 q q q
+  <<
+    {
+      \stemDown
+      <as as'>2 <a a'>
+      \stemNeutral
+    }
+    \\
+    {
+      s4 r8 es s4 b'
+    }
+  >>
+  \clef bass
+  <fis, fis'>4 <d f a d> <b des ges b> <a c e a>
+  \bar "||"
+  <<
+    {
+      s1 ges''1~ ges2 fes~ fes es~ es
+    }
+    \\
+    {
+      <f, as>2 q q q q <f! as> q <f as> <fes as>
+    }
+  >>
+  \clef treble
+  g'4 <d' f!>
+  <<
+    {
+      \xLV #6
+      <
+      c!_\laissezVibrer
+      e^\laissezVibrer
+      >1
+    }
+    \\
+    {
+      s2
+      \xLV #6
+      <
+      c'!_\laissezVibrer
+      fis_\laissezVibrer
+      gis_\laissezVibrer
+      a^\laissezVibrer
+      >
+    }
+  >>
+  r2
+  \clef bass
+  <c,,, es ges as>
+  <<
+    {
+      <ces fes ases>1
+    }
+    \\
+    {
+      s2 <dis gis>
+    }
+  >>
+  <<
+    {
+      d'!1~ d!2 c~ c h~ h
+    }
+    \\
+    {
+      <dis, ais'> q q q q q q
+    }
+  >>
+  \clef treble
+  \xLV #6
+  <
+  f''_\laissezVibrer
+  b_\laissezVibrer
+  d!^\laissezVibrer
+  >
+  \repeat unfold 2 {
+    r2
+    \ottava #1
+    \set Staff.ottavation = #"8"
+    <c' fis a h>2
+    \ottava #0
+    r4 dis,, cis'8-> \xLV #6 g4.\laissezVibrer
+  }
+  r2\fermata r4 <c d b'> <b des f as>2 <b ces ges'> <c d f>1\fermata
+  \bar "|."
 }
-%%%%%%%%%%% LH %%%%%%%%%%%%
+
+%%%%%%%%%%% LH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 links = \relative {
   \accidentalStyle piano
   \clef bass
@@ -469,6 +558,8 @@ links = \relative {
   \override Score.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \time 14/8
+  \once\override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark \markup {\italic legatissimo}
   g,,16[ d' a'
   \change Staff = RH
   h d a' g]
@@ -651,6 +742,8 @@ links = \relative {
   \break
   \time 11/16
   \clef treble
+  \once\override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark \markup {\italic accelerando}
   %\override Score.BarLine.stencil = ##f
   \override Beam.breakable = ##t
   des16[ as' des
@@ -692,6 +785,8 @@ links = \relative {
   \top deses' heses \bot cis, f
   \top as ges \bot dis e
   \top ges f \bot c! dis]
+  \once\override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark \markup {\italic Prestissimo}
   \top ces'[ as \bot e f
   \top deses' heses \bot cis, f
   \top as ges \bot dis e
@@ -828,7 +923,7 @@ links = \relative {
   \bot c es \top e cis
   %@@@@@@@@@@@@@@
   \bot d f \top fis dis
-  \bot e g 
+  \bot e g
   %\time 1/8
   \top as f
   \bot fis a \top b g
@@ -851,7 +946,7 @@ links = \relative {
   \bot c es \top e cis
   %@@@@@@@@@@@@@@
   \bot d f \top fis dis
-  \bot e g 
+  \bot e g
   \time 5/4
   \top as f
   \bot fis a \top b g
@@ -978,7 +1073,8 @@ links = \relative {
     \normalNoteHeads
   }
   \autoBeamOn
-  d'4^> <d' gis a>
+  \once\override DynamicText.extra-offset = #'(0 . 1)
+  d'4^>^\f <d' gis a>
   \autoBeamOff
   \crossStaff
   \acciaccatura {
@@ -1014,42 +1110,77 @@ links = \relative {
         }
       >>
       <g' h dis>
-      \repeat unfold 2 {
-        R2
-        \clef treble
-        r4 r8
-        <<
-          {
-            <fis'_~ c'~> q2
-          }
-          \\
-          {
-            s4
-            \clef bass
-            <gis, h f'!>
-          }
-        >>
-        <<
-          {
-            \once \override Stem.length = #12
-            %\once \override Accidental.extra-offset = #'(1 . 0)
-            f,
-          }
-          \\
-          {
-            \voiceThree
-            \once \override NoteHead.X-offset = #0.8
-            \once \override Stem.rotation = #'(25 0 0)
-            \once \override Stem.extra-offset = #'(-0.25 . -0.2)
-            \once \override Stem.length = #9.5
-            \hide Flag
-            %\once \override Flag.stencil = ##f
-            \once \override Accidental.extra-offset = #'(2.7 . 0)
-            fis
-          }
-        >>
-        <g' h dis>
-      }
+      %\repeat unfold 2 {
+      \once\override DynamicText.extra-offset = #'(0 . 3)
+      R2\mp
+      \clef treble
+      r4 r8
+      <<
+        {
+          <fis'_~ c'~> q2
+        }
+        \\
+        {
+          s4
+          \clef bass
+          <gis, h f'!>
+        }
+      >>
+      <<
+        {
+          \once \override Stem.length = #12
+          %\once \override Accidental.extra-offset = #'(1 . 0)
+          f,
+        }
+        \\
+        {
+          \voiceThree
+          \once \override NoteHead.X-offset = #0.8
+          \once \override Stem.rotation = #'(25 0 0)
+          \once \override Stem.extra-offset = #'(-0.25 . -0.2)
+          \once \override Stem.length = #9.5
+          \hide Flag
+          %\once \override Flag.stencil = ##f
+          \once \override Accidental.extra-offset = #'(2.7 . 0)
+          fis
+        }
+      >>
+      <g' h dis>
+      %}
+      R2
+      \clef treble
+      r4 r8
+      <<
+        {
+          <fis'_~ c'~> q2
+        }
+        \\
+        {
+          s4
+          \clef bass
+          <gis, h f'!>
+        }
+      >>
+      <<
+        {
+          \once \override Stem.length = #12
+          %\once \override Accidental.extra-offset = #'(1 . 0)
+          f,
+        }
+        \\
+        {
+          \voiceThree
+          \once \override NoteHead.X-offset = #0.8
+          \once \override Stem.rotation = #'(25 0 0)
+          \once \override Stem.extra-offset = #'(-0.25 . -0.2)
+          \once \override Stem.length = #9.5
+          \hide Flag
+          %\once \override Flag.stencil = ##f
+          \once \override Accidental.extra-offset = #'(2.7 . 0)
+          fis
+        }
+      >>
+      <g' h dis>
       \break
       \repeat unfold 2 {
         <e, f!>4
@@ -1219,6 +1350,114 @@ links = \relative {
   >>
   r8 <e,, e'>( <es es'>4) r8 <his' his'>( <h h'>4)
   es8 heses' cis as' <e! e'!>2
+  <<
+    {
+      <d,, d'>2 <as' as'>
+    }
+    \\
+    {
+      h''4\rest <b, h'!> h'\rest <es, d'>
+    }
+  >>
+  <eis,, eis'>4 <es es'> <e e'> <gis gis'>
+  \bar "||"
+  \break
+  <<
+    {
+      c'1~ c
+    }
+    \\
+    {
+      \xLV #6 <ges, ges'>1_\laissezVibrer s
+    }
+  >>
+  h'1
+  <<
+    {
+      s1 s2 <fes' as>
+    }
+    \\
+    {
+      as,1~ as
+    }
+    \\
+    {
+      \voiceTwo
+      s1 \xLV #6 <d,, d'>_\laissezVibrer
+    }
+  >>
+  \clef treble
+  \xLV #6
+  <
+  cis'''_\laissezVibrer
+  gis'^\laissezVibrer
+  >1
+  r2
+  \clef bass
+  <g,,! g'!>
+  \xLV #6
+  <
+  des_\laissezVibrer
+  des'^\laissezVibrer
+  >1
+  h''1 b
+  <<
+    {
+      s1 s2
+      \xLV #6
+      <
+      dis_\laissezVibrer
+      ais'^\laissezVibrer
+      >
+    }
+    \\
+    {
+      g,1^~ \xLV #6 g^\laissezVibrer
+    }
+    \\
+    {
+      \voiceTwo
+      s1 \xLV #6 <e, e'>\laissezVibrer
+    }
+  >>
+  \repeat unfold 2 {
+    r2
+    \clef treble
+    gis''''2
+    \clef bass
+    <<
+      {
+        s2.
+        \xLV #6
+        <
+        b,,_\laissezVibrer
+        fis'^\laissezVibrer
+        >4
+      }
+      \\
+      {
+        d,2\rest \xLV #6 <as g'>\laissezVibrer
+      }
+      \\
+      {
+        \voiceTwo
+        \xLV #6 <f, f'>1\laissezVibrer
+      }
+    >>
+  }
+  r2\fermata
+  \clef treble
+  r4 <b'' f'> <ges ges'>2
+  <<
+    {
+      f'2~ f1\fermata
+    }
+    \\
+    {
+      es4 d!8 c! b1
+    }
+  >>
+  \bar "|."
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

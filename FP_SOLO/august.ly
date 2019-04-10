@@ -126,11 +126,12 @@ rechts = \relative {
   }
   \time 15/8
   es16 s h' s g s es! s d s8. c16 s h s8. s2
-  \change Staff = LH
+  \bot
+  \clef bass
   \times 8/9 {
     \stemDown
     es,,,32 g as c d
-    \change Staff = RH
+    \top
     es g as! h~\noBreak
   }
   \time 5/8
@@ -155,17 +156,17 @@ rechts = \relative {
     }
   >>
   <b! ges'>8
-  \change Staff = LH
+  \bot
   r8
   \once\override Beam.positions = #'(4 . 4.7)
   es,,!32 b'! ges'
-  \change Staff = RH
+  \top
   \clef treble
   as
   \tuplet 3/2 8 {
     b16 as' b b! as' b
   }
-  \override Beam #'breakable = ##t
+  \override Beam.breakable = ##t
   es
   g,32[ as! b! c] f,[ g as! b!] es,[ f g as!] d,[ es! f g] c,[ d es! f]
   g,[ as! b! c] f,[ g as! b!] es,[ f g as!] d,[ es! f g] c,[ d es! f]
@@ -565,7 +566,7 @@ links = \relative {
   h c es! g
   \change Staff = LH
   g,, c d g
-  \clef bass
+  %\clef bass
   \change Staff = RH
   as h c d
   \change Staff = LH
@@ -649,7 +650,6 @@ links = \relative {
   }
   \break
   \time 11/16
-  %\cadenzaOn
   \clef treble
   %\override Score.BarLine.stencil = ##f
   \override Beam.breakable = ##t
@@ -664,7 +664,6 @@ links = \relative {
     \top c b \bot fes ges
     \top b as \bot c, fes]
   }
-  %\bar ""
   \top des'[ b \bot f! ges
   \top eses' ces \bot des, ges
   \top b as \bot es f
@@ -677,14 +676,12 @@ links = \relative {
   \top des' ces \bot des, ges
   \top heses as \bot es fes
   \top as ges \bot c, es]
-  %\bar ""
   \repeat unfold 3 {
     \top c'[ a \bot e fis
     \top des' b \bot cis, fis
     \top a gis \bot dis e
     \top gis fis \bot c! dis]
   }
-  %\bar ""
   \repeat unfold 2 {
     \top ces'[ as \bot e f
     \top des' heses \bot cis, f
@@ -695,7 +692,6 @@ links = \relative {
   \top deses' heses \bot cis, f
   \top as ges \bot dis e
   \top ges f \bot c! dis]
-  %\bar ""
   \top ces'[ as \bot e f
   \top deses' heses \bot cis, f
   \top as ges \bot dis e
@@ -708,13 +704,11 @@ links = \relative {
     \top ges es \bot e g
     \top as f \bot fis a]
   }
-  %\bar ""
   \top b[ g \bot fis a
   \top as f \bot e g
   \top ges es \bot d f
   \top ges es \bot e g
   \top as f \bot fis a]
-  %\time 15/4
   \top b[ g \bot fis a
   \top as f \bot e g
   \top ges es \bot d f
@@ -725,8 +719,6 @@ links = \relative {
   \top d h \bot c es
   \top e cis \bot d f
   \top ges es \bot e g
-  %\bar ""
-  %\break
   \top as f \bot fis a
   \top b g \bot gis h
   \top c a \bot ais cis
@@ -737,18 +729,18 @@ links = \relative {
   \top d h \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f]
-  \time 1/8
+  \time 10/8
   \top fis[ dis \bot d f
   \top e cis \bot c es
   \top d h \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f
-  %\bar ""
-  %\break
+  \time 8/8
   \top fis dis \bot e g
   \top as f \bot fis a
   \top b g \bot gis h
   \top c a \bot b des]
+  \time 11/8
   \top d[ h \bot b des
   \top c a \bot gis h
   \top b g \bot fis a
@@ -760,8 +752,7 @@ links = \relative {
   \top as[ f \bot e g
   \top fis dis \bot d f
   \top e cis \bot c es
-  %\bar ""
-  %\break
+  \time 1/8
   \top d h \bot ais cis
   \top c a \bot gis h
   \top b g \bot fis a
@@ -775,7 +766,6 @@ links = \relative {
   \top e cis \bot c es
   \top e cis \bot d f
   \top ges es \bot e g]
-  %\bar ""
   \once\override Beam.positions = #'(-5 . -1.5)
   \top as[ f \bot e g
   \top ges es \bot d f
@@ -784,10 +774,11 @@ links = \relative {
   e cis
   \bot c es
   \top d h
+  \bot b des
+  \top c a
   \bot
   \clef bass
-  b des
-  \top c a \bot as ces
+  as ces
   \top b g \bot fis a
   \top b g \bot as ces
   \top c a \bot b des]
@@ -799,7 +790,6 @@ links = \relative {
   \top e cis \bot c es
   \top e cis \bot d f
   \top fis dis \bot e g]
-  %\bar ""
   \top as[ f \bot e g
   \top fis dis \bot d f
   \top e cis \bot c es
@@ -808,13 +798,14 @@ links = \relative {
   \top b g \bot fis a
   \top b g \bot gis h
   \top c a \bot ais cis]
+  \time 9/8
   \top d[ h \bot ais cis
   \top c a \bot gis h
   \top b g \bot fis a
   \top as f \bot e g
   \top fis dis]
-  %\bar ""
   %@@@@@@@@@@@@@@
+  \time 1/8
   \bot d[ f \top fis dis
   \bot e g \top as f
   \bot fis a \top b g
@@ -825,19 +816,21 @@ links = \relative {
   \bot d f \top fis dis
   \bot e g \top as f
   \bot fis a \top b g
-  \bot as ces] \top c[ a
-  \bot
+  \bot as ces]
   \clef treble
+  \time 4/4
+  \top c[ a
+  \bot
   b des
   \top
   \clef treble
   d h
   \bot c es \top e cis
-  %\bar ""
-  %\break
   %@@@@@@@@@@@@@@
   \bot d f \top fis dis
-  \bot e g \top as f
+  \bot e g 
+  %\time 1/8
+  \top as f
   \bot fis a \top b g
   \bot gis h \top c a
   \bot ais cis \top d h
@@ -856,30 +849,31 @@ links = \relative {
   \set Staff.ottavation = #"8"
   ais cis \top d h
   \bot c es \top e cis
-  %\bar ""
-  %\break
   %@@@@@@@@@@@@@@
   \bot d f \top fis dis
-  \bot e g \top as f
+  \bot e g 
+  \time 5/4
+  \top as f
   \bot fis a \top b g
   \bot gis h \top c a
   \bot ais cis \top d h
   \bot c es \top e cis
   \bot d f]
   %@@@@@@@@@@@@@@
+  \time 15/4
   \top fis[ dis \bot d f
   \top e cis \bot c es
   \top d h \bot cis ais
   \top c a \bot gis h
   \top b g \bot fis a
   \top as f \bot e g
-  %\bar ""
-  %\break
   %@@@@@@@@@@@@@@
+  %\time 1/8
   \top fis dis \bot d f
   \top e cis \bot c es
   \top d h \bot cis ais
   \top c a \bot gis h
+  %\time 5/4
   \top b g \bot fis a
   \top as f
   \ottava #0
@@ -889,12 +883,11 @@ links = \relative {
   \top fis dis \bot d f
   \top e cis \bot c es
   \top d h \bot cis ais
+  \time 1/8
   \top c a \bot gis h
   \top b g \bot fis a
   \top as f \bot e g
   \top fis dis \bot d f]
-  %\bar ""
-  %\break
   %@@@@@@@@@@@@@@
   \top
   \clef bass
@@ -921,11 +914,8 @@ links = \relative {
   \top ges e \bot es f
   %@@@@@@@@@@@@@@
   \top e d \bot des es
-  %\bar ""
-  %\break
   \top d c \bot h cis
   \top c b \bot a h
-  %\time 7/8
   \top b as \bot g a
   \top as ges \bot f g
   \top ges e \bot es f
@@ -935,23 +925,23 @@ links = \relative {
   \break
   \time 2/4
   \normalsize
-  \override TextScript.outside-staff-priority = ##f
-  \once\override TextScript.extra-offset = #'(2.2 . 17.9)
   \autoBeamOff
   \crossStaff <
   \tweak #'duration-log #1 f,
   \tweak #'duration-log #1 a
-  >4-\markup {
-    \override #'(filled . #t) \path #0.15 #blackPath
-  }
+  >4
   \autoBeamOn
   \ottava #0
+  \override TextScript.outside-staff-priority = ##f
+  \once\override TextScript.extra-offset = #'(2.2 . 17.9)
+  s8-\markup {
+    \override #'(filled . #t) \path #0.15 #blackPath
+  }
   \once\override TextScript.extra-offset = #'(-4.1 . 16.9)
-  s4-\markup {
+  s8-\markup {
     \path #0.15 #whitePath
   }
   s2.
-  %s1*3
   s2
   <e'' c' fis des'>2
   \time 5/8
@@ -974,7 +964,6 @@ links = \relative {
   \ottava #0
   \revert Score.BarLine.stencil
   \revert Score.SpanBar.stencil
-  %\cadenzaOff
   \bar "||"
   \time 2/4
   \autoBeamOff

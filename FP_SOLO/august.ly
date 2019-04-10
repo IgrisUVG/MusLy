@@ -37,6 +37,7 @@
     %\omit BarLine
     %\omit SpanBar
   }
+  %ragged-last = ##t
 }
 
 \include "myNoteHeads.ly"
@@ -51,14 +52,14 @@ xLV = #(define-music-function (parser location further) (number?) #{
 
 blackPath =
 #'((moveto 0 0)
-   (lineto 20 18)
-   (lineto 20 17)
+   (lineto 25 23)
+   (lineto 25 22)
    (lineto 0.5 -0.5)
    (closepath))
 whitePath =
 #'((moveto 0.6 0.5)
-   (lineto 20 18)
-   (lineto 20 16.7)
+   (lineto 25 23)
+   (lineto 25 21.8)
    (lineto 1.2 -0.2)
    (closepath))
 
@@ -222,21 +223,25 @@ rechts = \relative {
   \time 3/4
   \override TextScript.outside-staff-priority = ##f
   %s1*3
-  \once\override TextScript.extra-offset = #'(10.65 . 1)
+  \once\override TextScript.extra-offset = #'(11.3 . 5.1)
   s16-\markup {
     \musicglyph #"flags.d3"
   }
-  \once\override TextScript.extra-offset = #'(10.2 . 0.5)
+  \once\override TextScript.extra-offset = #'(10.4 . 4.5)
   s-\markup {
     \musicglyph #"flags.dgrace"
   }
   %\shape #'((-0.5 . -4.5) (-1 . -4) (-1 . -4) (-1 . 0)) Slur
-  \once\override TextScript.extra-offset = #'(9 . 5.3)
-  s8-\markup {
+  \once\override TextScript.extra-offset = #'(8.9 . 9.4)
+  s-\markup {
     \override #'(thickness . 1.5)
     \draw-line #'(0 . 7)
   }
-  s2
+  %\hideNotes
+  %\shape #'((5 . 0) (8 . 0) (12 . 0) (15 . -10)) Slur
+  %c''''_( c,2)
+  %\unHideNotes
+  s s2
   \time 2/4
   \bot
   <<
@@ -277,7 +282,7 @@ rechts = \relative {
   \bar "||"
   \break
   \time 2/4
-  \once\override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \once\override Score.RehearsalMark.extra-offset = #'(8 . 2)
   \mark \markup {\italic Allegretto}
   \slashedGrace {
     \myBigAccNoteHeadsFill
@@ -340,9 +345,13 @@ rechts = \relative {
   }
   R2*3
   \bar "||"
+  \once\override Score.RehearsalMark.extra-offset = #'(5 . 2)
+  \mark \markup {\italic Lento}
   \cadenzaOn
   r2
-  b8[( g! b, d e] c'8. des,,2)
+  b8[( g! b, d e] c'8. 
+  \once\override TextScript.extra-offset = #'(6 . -1)
+  des,,2)_\markup {\italic Nachklang}
   \teeny b''8[( g! b, d e] c'8.
   \xLV #6 des,,2)_\laissezVibrer
   \normalsize
@@ -350,6 +359,8 @@ rechts = \relative {
   \bar "||"
   \clef bass
   \time 4/4
+  \once\override Score.RehearsalMark.extra-offset = #'(5 . 1)
+  \mark \markup {\italic Grave}
   <<
     {
       \repeat unfold 4 {
@@ -550,6 +561,14 @@ rechts = \relative {
   \bar "|."
 }
 
+%%%%%%%% Dynamics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dinamika = {
+  s1*84 s4 s1*4\f s1\ff s1\f s2 s\mf s1*2 s2. s4-\markup {\italic dim.}
+  s2 s-\markup {\italic riten.} s1 s1*3\sf s1*3-\markup {\italic { poco dim.}}
+  s1*2\p s4 s2.-\markup {\italic { poco cresc.}} s1*2 s2 s\ff s1*2 s2. s8 s\>
+  s2. s4\! s1*10\pp
+}
+
 %%%%%%%%%%% LH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 links = \relative {
   \accidentalStyle piano
@@ -735,7 +754,7 @@ links = \relative {
   \tuplet 3/2 8 {
     des,16 as' des as! es' as
     des,! as'! des as! es' as
-    \change Staff = RH es \change Staff = LH f, as,!
+    \top es \bot f, as,!
     des,! as'! des! ges,! des'! ges
     des! as'! des! ges,! des'! ges
   }
@@ -1028,11 +1047,11 @@ links = \relative {
   \autoBeamOn
   \ottava #0
   \override TextScript.outside-staff-priority = ##f
-  \once\override TextScript.extra-offset = #'(2.2 . 17.9)
+  \once\override TextScript.extra-offset = #'(-5 . 22)
   s8-\markup {
     \override #'(filled . #t) \path #0.15 #blackPath
   }
-  \once\override TextScript.extra-offset = #'(-4.1 . 16.9)
+  \once\override TextScript.extra-offset = #'(-8.1 . 21)
   s8-\markup {
     \path #0.15 #whitePath
   }
@@ -1048,7 +1067,7 @@ links = \relative {
     {
       \once\override TextScript.extra-offset = #'(-1.5 . 7)
       s2_\markup {\sharp}
-      \once\override TextScript.extra-offset = #'(-6.5 . -1)
+      \once\override TextScript.extra-offset = #'(-8.8 . -1)
       s2_\markup {\flat}
     }
     \\
@@ -1158,7 +1177,8 @@ links = \relative {
         {
           s4
           \clef bass
-          <gis, h f'!>
+          \once\override TextScript.extra-offset = #'(0 . 2)
+          <gis, h f'!>^\markup {\italic dimin.}
         }
       >>
       <<
@@ -1182,21 +1202,49 @@ links = \relative {
       >>
       <g' h dis>
       \break
-      \repeat unfold 2 {
-        <e, f!>4
-        <<
-          {
-            d''4
-          }
-          \\
-          {
-            <fis, a d>
-          }
-        >>
-      }
+      %\repeat unfold 2 {
+      <e, f!>4\ppp
+      <<
+        {
+          d''4
+        }
+        \\
+        {
+          <fis, a d>
+        }
+      >>
+      %}
+      <e, f!>4
+      <<
+        {
+          d''4
+        }
+        \\
+        {
+          <fis, a d>
+        }
+      >>
       \bar "||"
       \cadenzaOn
-      <e d fis gis h>1\fermata
+      <<
+        {
+          \once\override TextScript.extra-offset = #'(-0.3 . -4.5)
+          \once\override Script.extra-offset = #'(0 . -4)
+          <d fis h>1-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }\fermata
+        }
+        \\
+        {
+          \once\override NoteColumn.force-hshift = #1.4
+          \once\override TextScript.extra-offset = #'(2.2 . 6)
+          <e gis>-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }
+        }
+      >>
       s s s8
       \cadenzaOff
       \bar "||"
@@ -1255,7 +1303,25 @@ links = \relative {
       }
       \bar "||"
       \cadenzaOn
-      <cis, d e f! a>1\fermata
+      <<
+        {
+          \once\override TextScript.extra-offset = #'(-0.3 . -7.4)
+          \once\override Script.extra-offset = #'(0 . -1)
+          <d f! a>1-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }_\fermata
+        }
+        \\
+        {
+          \once\override NoteColumn.force-hshift = #1.4
+          \once\override TextScript.extra-offset = #'(2.2 . 5.6)
+          <cis e>-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }
+        }
+      >>
       s s s8
       \cadenzaOff
       \bar "||"
@@ -1392,6 +1458,7 @@ links = \relative {
   cis'''_\laissezVibrer
   gis'^\laissezVibrer
   >1
+  \break
   r2
   \clef bass
   <g,,! g'!>
@@ -1420,6 +1487,7 @@ links = \relative {
       s1 \xLV #6 <e, e'>\laissezVibrer
     }
   >>
+  \break
   \repeat unfold 2 {
     r2
     \clef treble
@@ -1458,11 +1526,16 @@ links = \relative {
     }
   >>
   \bar "|."
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.Y-offset = #-12
+  \mark \markup {\small {27 11 94}}
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<
     \new Staff = "RH" \rechts
+    \new Dynamics \dinamika
     \new Staff = "LH" \links
   >>
 }

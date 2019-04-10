@@ -198,8 +198,28 @@ whitePath =
         \ottava #0
         \normalNoteHeads
       }
-      s4
-      \clef treble
+      s2
+      \time 4/4
+      %\clef treble
+      <<
+        {
+          \once\override TextScript.extra-offset = #'(-0.3 . -4.5)
+          \once\override Script.extra-offset = #'(0 . -4)
+          <d fis h>1-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }\fermata
+        }
+        \\
+        {
+          \once\override NoteColumn.force-hshift = #1.4
+          \once\override TextScript.extra-offset = #'(2.2 . 6)
+          <e gis>-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }
+        }
+      >>
     }
     \new Staff {
       \clef bass
@@ -220,7 +240,91 @@ whitePath =
         \normalNoteHeads
       }
       \autoBeamOn
-      d,4
+      d,4 s
+      <<
+        {
+          \once\override TextScript.extra-offset = #'(-0.3 . -7.4)
+          \once\override Script.extra-offset = #'(0 . -1)
+          <d, f,! a,>1-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }_\fermata
+        }
+        \\
+        {
+          \once\override NoteColumn.force-hshift = #1.4
+          \once\override TextScript.extra-offset = #'(2.2 . 4.6)
+          <cis, e,>-\markup {
+            \override #'(thickness . 1.5)
+            \draw-line #'(0 . 4.5)
+          }
+        }
+      >>
+    }
+  >>
+}
+
+fakeBassClef = {
+  \set Staff.clefGlyph = #"clefs.F"
+  \set Staff.clefPosition = #2
+  \set Staff.middleCPosition = #-6
+}
+fakeBassClefShift = {
+  % Change default prefatory item order so that clef is printed after barline
+  \override Score.BreakAlignment.break-align-orders =
+  #(make-vector 3 '(span-bar
+                    breathing-sign
+                    staff-bar
+                    clef
+                    key
+                    time-signature))
+  \set Staff.clefGlyph = #"clefs.F"
+  \set Staff.clefPosition = #-10
+  \set Staff.middleCPosition = #-8
+}
+
+\score {
+  \new PianoStaff <<
+    \new Staff \relative {
+      \clef treble
+      \time 2/4
+      r4
+      <<
+        {
+          \ottava #1
+          <f''' g f'>
+          \ottava #0
+        }
+        \\
+        {
+          r8 <fis,, c'>-\markup {
+            \musicglyph #"slur"
+          }
+        }
+        \\
+        {
+
+        }
+      >>
+    }
+    \new Staff \relative {
+      \clef treble
+      \time 2/4
+      r4
+      <<
+        {
+          %\ottava #1
+          <f'' a d e>
+        }
+        \\
+        {
+
+        }
+        \\
+        {
+
+        }
+      >>
     }
   >>
 }

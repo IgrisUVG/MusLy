@@ -33,7 +33,7 @@
     \Score
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
     \override BarNumber.break-visibility = ##(#t #t #t)
-    %\remove "Bar_number_engraver"
+    \remove "Bar_number_engraver"
     %\omit BarLine
     %\omit SpanBar
   }
@@ -71,7 +71,7 @@ rechts = \relative {
   \clef bass
   \override Staff.TimeSignature.stencil = ##f
   \override Score.BarLine.stencil = ##f
-  %\override Score.SpanBar.stencil = ##f
+  \override Score.SpanBar.stencil = ##f
   \time 14/8
   d4 s8.
   \change Staff = LH
@@ -307,6 +307,7 @@ rechts = \relative {
   <gis' h f'!>
   \repeat unfold 2 {
     R2
+    \break
     <<
       {
         r8
@@ -358,12 +359,14 @@ rechts = \relative {
       des4
     }
   >>
+  \break
   \clef treble
   \unset tupletSpannerDuration
   \override TupletNumber.transparent = ##f
   \times 2/3 {<c'' e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
   r4 \times 2/3 {<c, e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>2
   r r4 \times 2/3 {<c e g c>8 <h dis fis h> <a cis e a>} <ges b des ges>1
+  \break
   \clef bass
   <<
     {
@@ -463,7 +466,7 @@ links = \relative {
   \clef bass
   \override Staff.TimeSignature.stencil = ##f
   \override Score.BarLine.stencil = ##f
-  %\override Score.SpanBar.stencil = ##f
+  \override Score.SpanBar.stencil = ##f
   \time 14/8
   g,,16[ d' a'
   \change Staff = RH
@@ -734,7 +737,7 @@ links = \relative {
   \top d h \bot ais cis
   \top d h \bot c es
   \top e cis \bot d f]
-  \time 3/4
+  \time 1/8
   \top fis[ dis \bot d f
   \top e cis \bot c es
   \top d h \bot ais cis
@@ -922,13 +925,14 @@ links = \relative {
   %\break
   \top d c \bot h cis
   \top c b \bot a h
-  \time 7/8
+  %\time 7/8
   \top b as \bot g a
   \top as ges \bot f g
   \top ges e \bot es f
   %@@@@@@@@@@@@@@
   \top e d]
   \bot
+  \break
   \time 2/4
   \normalsize
   \override TextScript.outside-staff-priority = ##f
@@ -1057,6 +1061,7 @@ links = \relative {
         >>
         <g' h dis>
       }
+      \break
       \repeat unfold 2 {
         <e, f!>4
         <<

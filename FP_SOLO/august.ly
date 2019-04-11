@@ -552,7 +552,7 @@ rechts = \relative {
 
 %%%%%%%% Dynamics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 dinamika = {
-  s1*83 s4 s s1*4\f s1\ff s1\f s2 s\mf s1*2 s2. s4-\markup {\italic dim.}
+  s1*83 s4 s8 s1*4\f s1\ff s1\f s2 s\mf s1*2 s2. s4-\markup {\italic dim.}
   s2 s-\markup {\italic riten.} s1 s1*3\sf s1*3-\markup {\italic { poco dim.}}
   s1*2\p s4 s2.-\markup {\italic { poco cresc.}} s1*2 s2 s\ff s1*2 s2. s8 s\>
   s2. s4\! s1*10\pp

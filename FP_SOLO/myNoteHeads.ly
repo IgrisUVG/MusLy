@@ -181,6 +181,31 @@ glissParall =
    (cons 0 1.3125)
    (cons 2 -2.5))
 
+glissParallOne =
+#(ly:make-stencil (list 'embedded-ps
+                    "gsave
+      currentpoint translate
+      newpath
+      0.1 setlinewidth
+      0 0 moveto
+      -16.5 -20.2 lineto
+      -16 -20.75 lineto
+      0 -1.3 lineto
+      stroke
+      closepath
+      newpath
+      0.1 1 moveto
+      -17 -19.7 lineto
+      -16.51 -20.3 lineto
+      0 -0.3 lineto
+      fill
+      closepath
+     grestore" )
+   (cons 0 1.3125)
+   (cons 2 -2.5))
+
+glissNoteHeadsOne = \override NoteHead.stencil = \glissParallOne
+
 glissNoteHeads = \override NoteHead.stencil = \glissParall
 myNoteHeads = \override NoteHead.stencil = \parallelogram
 myFillNoteHeads = \override NoteHead.stencil = \parallelogramFill

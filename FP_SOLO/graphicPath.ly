@@ -31,6 +31,10 @@
 }
 
 \include "myNoteHeads.ly"
+
+top = \change Staff = "RH"
+bot = \change Staff = "LH"
+
 parallelogramZebraBig =
 #(ly:make-stencil (list 'embedded-ps
                     "gsave
@@ -325,6 +329,70 @@ fakeBassClefShift = {
 
         }
       >>
+    }
+  >>
+}
+
+glissParallOne =
+#(ly:make-stencil (list 'embedded-ps
+                    "gsave
+      currentpoint translate
+      newpath
+      0.1 setlinewidth
+      0 0 moveto
+      -14.5 -17.2 lineto
+      -14 -17.75 lineto
+      0 -1.3 lineto
+      stroke
+      closepath
+      newpath
+      0.1 1 moveto
+      -14.9 -16.7 lineto
+      -14.51 -17.3 lineto
+      0 -0.3 lineto
+      fill
+      closepath
+     grestore" )
+   (cons 0 1.3125)
+   (cons 2 -2.5))
+
+glissNoteHeadsOne = \override NoteHead.stencil = \glissParallOne
+
+\score {
+  \new PianoStaff <<
+    \new Staff = "RH" \relative {
+      \override Staff.TimeSignature.stencil = ##f
+      \override Score.BarLine.stencil = ##f
+      \override Score.SpanBar.stencil = ##f
+      s1
+      \time 2/4
+      \bot
+      \ottava #-1
+      cis,,4
+      \ottava #0
+      \top
+      \clef treble
+      s
+      s2 s s
+      \glissNoteHeadsOne
+      \slashedGrace {
+        \stemDown
+        \once\override Stem.length = #13
+        \override NoteHead.no-ledgers = ##t
+        \shape #'((0 . 3) (-1 . -0.5) (-0.5 . -0.5) (1 . 0)) Slur
+        e'''''8( s4
+        \revert NoteHead.no-ledgers
+        \stemNeutral
+      }
+      \normalNoteHeads
+      \bot
+      cis,,2)
+      \top
+    }
+    \new Staff = "LH" \relative {
+      \clef bass
+      s1
+      s2 s s s
     }
   >>
 }

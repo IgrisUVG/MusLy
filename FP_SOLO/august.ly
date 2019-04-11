@@ -213,36 +213,25 @@ rechts = \relative {
   %\cadenzaOn
   s1*50
   s1*3 s2. s16
-  \time 2/4
+  \time 3/8
   \normalsize
   \tweak #'duration-log #1
   cis,,,,4^\markup {\dynamic ff}
   \ottava #0
   \clef treble
-  s4
-  \time 3/4
-  \override TextScript.outside-staff-priority = ##f
-  %s1*3
-  \once\override TextScript.extra-offset = #'(11.3 . 5.1)
-  s16-\markup {
-    \musicglyph #"flags.d3"
-  }
-  \once\override TextScript.extra-offset = #'(10.4 . 4.5)
-  s-\markup {
-    \musicglyph #"flags.dgrace"
-  }
-  %\shape #'((-0.5 . -4.5) (-1 . -4) (-1 . -4) (-1 . 0)) Slur
-  \once\override TextScript.extra-offset = #'(8.9 . 9.4)
-  s-\markup {
-    \override #'(thickness . 1.5)
-    \draw-line #'(0 . 7)
-  }
-  %\hideNotes
-  %\shape #'((5 . 0) (8 . 0) (12 . 0) (15 . -10)) Slur
-  %c''''_( c,2)
-  %\unHideNotes
-  s s2
+  s8
   \time 2/4
+  \glissNoteHeadsOne
+  \slashedGrace {
+    \stemDown
+    \once\override Stem.length = #13
+    \override NoteHead.no-ledgers = ##t
+    %\shape #'((0 . -10) (-1 . -13.5) (-0.5 . -23.5) (1 . -23)) Slur
+    e'''''8
+    \revert NoteHead.no-ledgers
+    \stemNeutral
+  }
+  \normalNoteHeads
   \bot
   <<
     {
@@ -253,7 +242,7 @@ rechts = \relative {
       \once \override Stem.length = #9.2
       \hide Flag
       \once \override Accidental.extra-offset = #'(4.2 . 0)
-      \tweak #'duration-log #1 cis'''4
+      \tweak #'duration-log #1 cis,,4
     }
     \\
     {
@@ -349,7 +338,7 @@ rechts = \relative {
   \mark \markup {\italic Lento}
   \cadenzaOn
   r2
-  b8[( g! b, d e] c'8. 
+  b8[( g! b, d e] c'8.
   \once\override TextScript.extra-offset = #'(6 . -1)
   des,,2)_\markup {\italic Nachklang}
   \teeny b''8[( g! b, d e] c'8.
@@ -563,7 +552,7 @@ rechts = \relative {
 
 %%%%%%%% Dynamics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 dinamika = {
-  s1*84 s4 s1*4\f s1\ff s1\f s2 s\mf s1*2 s2. s4-\markup {\italic dim.}
+  s1*83 s4 s s1*4\f s1\ff s1\f s2 s\mf s1*2 s2. s4-\markup {\italic dim.}
   s2 s-\markup {\italic riten.} s1 s1*3\sf s1*3-\markup {\italic { poco dim.}}
   s1*2\p s4 s2.-\markup {\italic { poco cresc.}} s1*2 s2 s\ff s1*2 s2. s8 s\>
   s2. s4\! s1*10\pp
@@ -1037,7 +1026,7 @@ links = \relative {
   \top e d]
   \bot
   \break
-  \time 2/4
+  \time 3/8
   \normalsize
   \autoBeamOff
   \crossStaff <
@@ -1046,16 +1035,8 @@ links = \relative {
   >4
   \autoBeamOn
   \ottava #0
-  \override TextScript.outside-staff-priority = ##f
-  \once\override TextScript.extra-offset = #'(-5 . 22)
-  s8-\markup {
-    \override #'(filled . #t) \path #0.15 #blackPath
-  }
-  \once\override TextScript.extra-offset = #'(-8.1 . 21)
-  s8-\markup {
-    \path #0.15 #whitePath
-  }
-  s2.
+  s8
+  \time 2/4
   s2
   <e'' c' fis des'>2
   \time 5/8
@@ -1067,7 +1048,7 @@ links = \relative {
     {
       \once\override TextScript.extra-offset = #'(-1.5 . 7)
       s2_\markup {\sharp}
-      \once\override TextScript.extra-offset = #'(-8.8 . -1)
+      \once\override TextScript.extra-offset = #'(-9.8 . -1)
       s2_\markup {\flat}
     }
     \\

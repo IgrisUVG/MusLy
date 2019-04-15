@@ -138,7 +138,9 @@ guitarOne =
     \\
     {
       \override Fingering.staff-padding = #'()
-      \stemUp g'16^( d_0 g_0 a')\stemDown fis,( d g c') e,,( d g fis') d,( d g g')
+      \stemUp g'16^(-3 d_0 g_0 
+      \once\override Fingering.extra-offset = #'(1.3 . 2)
+      a')-4\stemDown fis,( d g c') e,,( d g fis') d,( d g g')
       c,,( d g e') h,( d g d') a,( d g cis)
       \hideNotes d,,16(\unHideNotes
       e'^1[ g d'^3])~

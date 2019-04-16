@@ -133,17 +133,25 @@ guitarOne =
   <<
     {
       \once \override StringNumber.extra-offset = #'(-0.5 . -2.8)
-      \stemDown g,4\5 \stemNeutral fis e d c h a <d, a'> s4
+      \stemDown g,4\5 \stemNeutral
+      \once\override Fingering.extra-offset = #' (-0.2 . 3)
+      fis_3 e d c h a <d, a'> s4
     }
     \\
     {
       \override Fingering.staff-padding = #'()
-      \stemUp g'16^(-3 d_0 g_0 
+      \stemUp g'16^(-3 d_0 g_0
       \once\override Fingering.extra-offset = #'(1.3 . 2)
-      a')-4\stemDown fis,( d g c') e,,( d g fis') d,( d g g')
-      c,,( d g e') h,( d g d') a,( d g cis)
+      a')-4\stemDown fis,( d g c') e,,( d g
+      \once\override Fingering.extra-offset = #' (-0.2 . 0)
+      fis'^3) d,( d g g')
+      c,,( d g
+      \once\override Fingering.extra-offset = #' (-0.2 . 0)
+      e'^0) h,( d g d') a,( d g cis)
       \hideNotes d,,16(\unHideNotes
-      e'^1[ g d'^3])~
+      e'^1[ g
+      \once\override Fingering.extra-offset = #' (-0.2 . 0)
+      d'^3])~
       \tag #'Part {
         d8[-\markup {
           \postscript #"1.4 4 moveto 1.9 1 rlineto stroke"
@@ -160,7 +168,9 @@ guitarOne =
     {
       s8. \stemDown
       \once \override StringNumber.extra-offset = #'(0.7 . -3.2)
-      a4\2 \stemUp c fis, g e d cis \hide Flag d16 fis4^2
+      a4\2 \stemUp
+      \once \override StringNumber.extra-offset = #'(-0.7 . -2.5)
+      c\1 fis, g e d cis \hide Flag d16 fis4^2
     }
   >>
   e'8\harmonic fis\harmonic[ e\harmonic] h\harmonic[

@@ -1113,4 +1113,18 @@ guitarMusic = \relative {
       gis,?4. c8
     }
   >>
+  <<
+    {
+      s4 <cis h' e>
+    }
+    \\
+    {
+      c'8\rest <d, b'>4.
+    }
+    \\
+    {
+      \voiceTwo
+      fis,2
+    }
+  >>
 }

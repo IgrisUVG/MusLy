@@ -1127,4 +1127,15 @@ guitarMusic = \relative {
       fis,2
     }
   >>
+  <<
+    {
+      \override TupletNumber.transparent = ##t
+      \override TupletBracket.bracket-visibility = ##f
+      r4 \times 2/3 {f''16_(\2 e-0 f} c8)\3
+    }
+    \\
+    {
+      <g, d'>2
+    }
+  >>
 }

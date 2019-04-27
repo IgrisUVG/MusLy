@@ -1135,7 +1135,8 @@ guitarMusic = \relative {
     }
     \\
     {
-      <g, d'>2
+      \once\override StringNumber.extra-offset = #'(0 . -4.3)
+      <g, d'\5>2\arpeggio
     }
   >>
 }

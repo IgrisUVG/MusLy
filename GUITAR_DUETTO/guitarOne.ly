@@ -465,5 +465,38 @@ guitarOne =
   >>
   \override TextScript.font-size = -2
   gis8 cis,16(^"XI" fis h fis')( dis8)
-  cis eis16( dis) h( gis) fis( dis) cis( a?) his8
+  cis eis16( dis) h( gis) fis( dis) cis( a?) his8 cis16 dis eis fis
+  <<
+    {
+      <his, gis'>8 s
+    }
+    \\
+    {
+      his16 dis eis^(\glissando fis)
+    }
+  >>
+   eis( dis) cis
+  \tag #'Part {
+    his-\markup {
+      \postscript #"0.7 4.3 moveto 2 0.7 rlineto stroke"
+    }
+  }
+  \tag #'Partitur {
+    his-\markup {
+      \postscript #"0.8 4.3 moveto 2 0.8 rlineto stroke"
+    }
+  }
+  dis8 fisis,!16( gis) ais his cis dis 
+  <gis, eis'>4 <eis dis'>8
+  <<
+    {
+      eis'[( dis])
+    }
+    \\
+    {
+      fis,4
+    }
+  >>
+  <cis ais'>8\noBeam <dis his'> <ais gis'>
+  <his ais'>
 }

@@ -37,7 +37,7 @@ ossia = \relative {
   r2 \break
   \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
-    h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+    h8-.-"I v." e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
     h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   }
   \alternative{
@@ -64,7 +64,7 @@ ossia = \relative {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \transpose e b, {
     \relative {
-      h'8-.-"III v. B-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h'8-.-"II v. B-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -80,7 +80,7 @@ ossia = \relative {
   \bar "||"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  h8-.-"IV v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+  h8-.-"III v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
   \modalTranspose e fis \diatonicScale {
@@ -99,7 +99,7 @@ ossia = \relative {
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%{
-  h8-.-"V v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+  h8-.-"IV v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
   \tag #'Ossia {
@@ -129,7 +129,7 @@ ossia = \relative {
   }
   \transpose e c {
     \relative {
-      h'8-.-"VI v. C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h'8-.-"V v. C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

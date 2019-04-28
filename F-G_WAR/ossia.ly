@@ -118,7 +118,7 @@ ossia = \relative {
   r r4 r2
   \transpose e c {
     \relative {
-      h'8-.-"C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h'8-.-"VI v. C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

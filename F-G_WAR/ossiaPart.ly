@@ -27,7 +27,7 @@
 \layout {
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \context {
     \Staff \RemoveEmptyStaves

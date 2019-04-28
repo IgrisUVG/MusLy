@@ -28,7 +28,7 @@
   \context {
     \Score
     \override StaffGrouper.staff-staff-spacing.basic-distance = #14
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \context {
     \Staff \RemoveEmptyStaves

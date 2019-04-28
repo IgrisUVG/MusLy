@@ -57,10 +57,11 @@ ossia = \relative {
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
   r2
-  %\break
   \bar "||"
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \tag #'Ossia {
+    \break
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \transpose e b, {
     \relative {
       h'8-.-"III v. B-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -73,10 +74,12 @@ ossia = \relative {
       cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
     }
   }
-  \break
+  \tag #'Ossia {
+    \pageBreak
+  }
   \bar "||"
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   h8-.-"IV v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
@@ -91,12 +94,17 @@ ossia = \relative {
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4 r2
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \tag #'Ossia {
+    \break
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%{
   h8-.-"V v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
+  \tag #'Ossia {
+    \break
+  }
   \transpose e as {
     \relative {
       h'8-.-"As-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -116,6 +124,9 @@ ossia = \relative {
   h'8.(-"E-dur" a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-.
   r r4 r2
+  \tag #'Ossia {
+    \break
+  }
   \transpose e c {
     \relative {
       h'8-.-"VI v. C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

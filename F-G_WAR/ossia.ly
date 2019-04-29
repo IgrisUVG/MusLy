@@ -5,6 +5,9 @@
 diatonicScale = \relative { e' fis gis a h cis dis }
 
 ossia = \relative {
+  \override Score.BarNumber.break-visibility = #end-of-line-invisible
+  \set Score.alternativeNumberingStyle = #'numbers-with-letters
+  \set Score.barNumberVisibility = #all-bar-numbers-visible
   \set Staff.fontSize = #-3
   \override Staff.StaffSymbol.staff-space = #(magstep -3)
   \override Staff.StaffSymbol.thickness = #(magstep -3)
@@ -29,12 +32,14 @@ ossia = \relative {
     }
   }
   fis-. dis-.
+  \set Score.currentBarNumber = #17
   e-. r
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
   r2 \break
+  \set Score.currentBarNumber = #1
   \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     h8-.-"I v." e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -51,6 +56,7 @@ ossia = \relative {
     }
   }
   fis-. dis-.
+  \set Score.currentBarNumber = #17
   e-. r
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
@@ -62,6 +68,7 @@ ossia = \relative {
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \set Score.currentBarNumber = #1
   \transpose e b, {
     \relative {
       h'8-.-"II v. B-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -78,7 +85,7 @@ ossia = \relative {
     \pageBreak
   }
   \bar "||"
-
+  \set Score.currentBarNumber = #1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   h8-.-"III v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
@@ -99,6 +106,7 @@ ossia = \relative {
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%{
+  \set Score.currentBarNumber = #1
   h8-.-"IV v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
@@ -127,6 +135,7 @@ ossia = \relative {
   \tag #'Ossia {
     \break
   }
+  \set Score.currentBarNumber = #1
   \transpose e c {
     \relative {
       h'8-.-"V v. C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

@@ -27,6 +27,7 @@
 \layout {
   \context {
     \Score
+    %\override BarNumber.break-visibility = ##(#t #t #t)
     %\remove "Bar_number_engraver"
   }
   \context {

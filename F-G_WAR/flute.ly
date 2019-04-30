@@ -263,4 +263,5 @@ fluteMusic = \new Voice \with {
   \break
   \mark \markup {\box 5}
   r g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
+  g g g g a'8-.
 }

@@ -145,8 +145,8 @@ ossia = \relative {
   h'8.(-"E-dur" a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-.
   r r4 r2
-  \bar "||"
   \tag #'Ossia {
+    \bar "||"
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,8 +172,8 @@ ossia = \relative {
   }
   h'8.(-"e-moll" a16 g8) e-. h-. r cis-. fis-. h8.( a16 g8) h-. e,-. r
   cis-. fis-. h8.( a16 g8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4 r2
-  \bar "||"
   \tag #'Ossia {
+    \bar "||"
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,8 +192,8 @@ ossia = \relative {
       cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
     }
   }
-  \bar "||"
   \tag #'Ossia {
+    \bar "||"
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,11 +208,11 @@ ossia = \relative {
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. fis-. dis-. e-. r
+      h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
+      cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
     }
   }
   h'8.(-"E-dur" a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
-  cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
-  h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
   \bar "|."
   %{%}

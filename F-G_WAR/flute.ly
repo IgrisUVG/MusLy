@@ -35,7 +35,8 @@ fluteMusic = \new Voice \with {
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
-  r8 a,16 h cis( dis) e fis \break
+  r8 a,16 h cis( dis) e fis
+  \break
   \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     gis( a) h cis dis( e) fis gis gis8( fis) dis,16( e) fis gis
@@ -62,6 +63,7 @@ fluteMusic = \new Voice \with {
   e\( fis gis\) h\( cis a\) cis dis fis8) e32( h a fis e8) r
   r a32( gis e cis h8) r
   \bar "||"
+  \break
   \tag #'pageBreack {
     %\pageBreak
   }
@@ -252,5 +254,7 @@ fluteMusic = \new Voice \with {
   r4 \times 4/5 {ais,,16(  h cis f gis} c8)-. g'-. \times 2/3 {fis16( gis fis} e8)-.
   r4 \times 4/5 {a,,16( cis dis e gis} c8)-. f-. \times 2/3 {h,16( cis h} ais8)-.
   r gis-. \times 2/3 {g16( gis g} f8)-. r \times 2/3 {e16( fis? e} h8)-. r
+  \bar "||"
+  \break
   r g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
 }

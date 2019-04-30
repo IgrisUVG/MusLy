@@ -1,7 +1,7 @@
 \version "2.18.0"
 
 \header {
-  title = "Koncert na klarnet i orkiestre"
+  title = "Koncert na klarnet i orkiestrę"
   composer = "Karol Kurpinski"
   arranger = "1823"
   meter = "Allegro"

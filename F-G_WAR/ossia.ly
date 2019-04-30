@@ -10,9 +10,11 @@ ossia = \relative {
     \set Score.alternativeNumberingStyle = #'numbers-with-letters
     \set Score.barNumberVisibility = #all-bar-numbers-visible
   }
-  \set Staff.fontSize = #-3
-  \override Staff.StaffSymbol.staff-space = #(magstep -3)
-  \override Staff.StaffSymbol.thickness = #(magstep -3)
+  \tag #'ossiaPart {
+    \set Staff.fontSize = #-3
+    \override Staff.StaffSymbol.staff-space = #(magstep -3)
+    \override Staff.StaffSymbol.thickness = #(magstep -3)
+  }
   \clef treble
   \key e \major
   \time 2/4
@@ -26,6 +28,7 @@ ossia = \relative {
   \alternative {
     {
       cis8) e-.
+      \noBreak
       \set Score.repeatCommands = #'((volta #f))
       dis-. h'-. gis8.( a16 e8) cis-.
     }
@@ -43,10 +46,11 @@ ossia = \relative {
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
   r2 \break
+  \mark \markup {\box 1}
   \set Score.currentBarNumber = #1
   \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
-    h8-.-"I v." e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+    h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
     h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   }
   \alternative{
@@ -73,13 +77,14 @@ ossia = \relative {
   \tag #'Ossia {
     \break
   }
+  \mark \markup {\box 2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \tag #'Ossia {
     \set Score.currentBarNumber = #1
   }
   \transpose e b, {
     \relative {
-      h'8-.-"II v. B-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h'8-.-"B-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -94,10 +99,11 @@ ossia = \relative {
     \pageBreak
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \mark \markup {\box 3}
   \tag #'Ossia {
     \set Score.currentBarNumber = #1
   }
-  h8-.-"III v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+  h8-.-"E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
   \modalTranspose e fis \diatonicScale {
@@ -117,10 +123,11 @@ ossia = \relative {
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%{
+  \mark \markup {\box 4}
   \tag #'Ossia {
     \set Score.currentBarNumber = #1
   }
-  h8-.-"IV v. E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+  h8-.-"E-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
   h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
   cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
   \tag #'Ossia {
@@ -150,12 +157,13 @@ ossia = \relative {
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \mark \markup {\box 5}
   \tag #'Ossia {
     \set Score.currentBarNumber = #1
   }
   \transpose e c {
     \relative {
-      h'8-.-"V v. C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h'8-.-"C-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
@@ -177,12 +185,13 @@ ossia = \relative {
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \mark \markup {\box 6}
   \tag #'Ossia {
     \set Score.currentBarNumber = #1
   }
   \transpose e b, {
     \relative {
-      h'8-.-"VI v. b-moll" e-. r g-. g( fis) r c-. h-. fis'-. r a-. a( g) r a-.
+      h'8-.-"b-moll" e-. r g-. g( fis) r c-. h-. fis'-. r a-. a( g) r a-.
       h-. e,-. a16( g fis e g8) h,-. e16( d c h
       c8) e-. dis-. h'-. g8.( a16 e8) c-.
       h8-. e-. r g-. g( fis) r c-. h-. fis'-. r a-. a( g) r a-.
@@ -197,12 +206,13 @@ ossia = \relative {
     \break
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \mark \markup {\box 7}
   \tag #'Ossia {
     \set Score.currentBarNumber = #1
   }
   \transpose e d' {
     \relative {
-      h8-.-"VII v. D-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
+      h8-.-"D-dur" e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
       h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
       cis8) e-. dis-. h'-. gis8.( a16 e8) cis-.
       h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.

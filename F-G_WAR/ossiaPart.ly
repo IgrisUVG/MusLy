@@ -40,6 +40,7 @@
 
 \score {
   
+  \removeWithTag #'ossiaPart
   \new Staff \ossia
   
 }

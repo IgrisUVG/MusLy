@@ -8,7 +8,7 @@ guitarMusic = \relative {
   \clef treble
   \key e \major
   \time 2/4
-  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \once\override Score.RehearsalMark.extra-offset = #'(4 . 2)
   \mark "Lustig"
   %\override Staff.TimeSignature #'stencil = ##f
   \override Fingering #'staff-padding = #'()
@@ -80,6 +80,7 @@ guitarMusic = \relative {
     }
   >>
   \FO #'0 #'-3.2 h16(-2 cis) dis e fis gis a h cis dis e(\2 fis) gis a
+  \mark \markup {\box 1}
   \repeat volta 2 {
     <e,, gis' h'>8 r <e' h' gis'> r <h dis' fis>4 r8 <fis' e' cis'>
     <dis fis' h> r <h fis'' dis'> r <e h' gis'>4 r8 <h a' fis'>
@@ -191,6 +192,7 @@ guitarMusic = \relative {
   h'16 cis dis e
   \bar "||"
   \break
+  \mark \markup {\box 2}
   %\key b \major
   \tag #'Partitur {
     \newSpacingSection
@@ -331,6 +333,7 @@ guitarMusic = \relative {
   a'16 b c d
   \bar "||"
   \break
+  \mark \markup {\box 3}
   \tag #'Partitur {
     \newSpacingSection
     \revert Score.SpacingSpanner.base-shortest-duration
@@ -707,6 +710,7 @@ guitarMusic = \relative {
     {
       h' s dis, s
       \bar "||" \break
+      \mark \markup {\box 4}
       gis, a
     }
     \\
@@ -1143,9 +1147,10 @@ guitarMusic = \relative {
   >>
   \bar "||"
   \break
+  \mark \markup {\box 5}
   <<
     {
-      c32 gis'' gis gis~ 
+      c32 gis'' gis gis~
       \set doubleSlurs = ##t
       \set glissandoMap = #'((0 . 0) (1 . 1))
       <e gis>8\glissando( <gis c>32) c c c d,8

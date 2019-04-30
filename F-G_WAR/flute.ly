@@ -13,8 +13,9 @@ fluteMusic = \new Voice \with {
   \clef treble
   \key e \major
   \time 2/4
-  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \once\override Score.RehearsalMark.extra-offset = #'(4 . 2)
   \mark "Lustig"
+  %\revert Score.RehearsalMark.extra-offset
   \repeat volta 2 {
     h8-. e-. r gis-. gis( fis) r cis-. h-. fis'-. r a-. a( gis) r a-.
     h-. e,-. a16( gis fis e gis8) h,-. e16( dis cis h
@@ -37,6 +38,7 @@ fluteMusic = \new Voice \with {
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
   r8 a,16 h cis( dis) e fis
   \break
+  \mark \markup {\box 1}
   \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     gis( a) h cis dis( e) fis gis gis8( fis) dis,16( e) fis gis
@@ -64,6 +66,7 @@ fluteMusic = \new Voice \with {
   r a32( gis e cis h8) r
   \bar "||"
   \break
+  \mark \markup {\box 2}
   \tag #'pageBreack {
     %\pageBreak
   }
@@ -82,6 +85,7 @@ fluteMusic = \new Voice \with {
   }
   \afterGrace d'\startTrillSpan {cis16(\stopTrillSpan d}
   \bar "||"
+  \mark \markup {\box 3}
   \override TupletNumber #'transparent = ##t
   \override TupletBracket #'bracket-visibility = ##f
   h'16-.) ais,( dis gis g h, f' e) \times 2/3 {gis16( a gis} fis8-.) e \acciaccatura h cis
@@ -198,6 +202,7 @@ fluteMusic = \new Voice \with {
     \unset Score.proportionalNotationDuration
   }
   \bar "||" \break
+  \mark \markup {\box 4}
   %\override Score.RehearsalMark.extra-offset = #'(4 . 2)
   %\mark "Meno mosso"
   \set subdivideBeams = ##f
@@ -256,5 +261,6 @@ fluteMusic = \new Voice \with {
   r gis-. \times 2/3 {g16( gis g} f8)-. r \times 2/3 {e16( fis? e} h8)-. r
   \bar "||"
   \break
+  \mark \markup {\box 5}
   r g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
 }

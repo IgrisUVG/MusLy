@@ -1136,7 +1136,18 @@ guitarMusic = \relative {
     \\
     {
       \once\override StringNumber.extra-offset = #'(0 . -4.3)
-      <g, d'\5>2\arpeggio
+      <g, d'\5>2\arpeggio%\glissando
+    }
+  >>
+  \break
+  <<
+    {
+      c32 gis'' gis gis~ <e gis>8(\glissando <gis c>32) c c c d,8
+      e'32 e e e~ <h e>8(\glissando <g c>32) c c c a,8
+    }
+    \\
+    {
+      c,4 s g' s
     }
   >>
 }

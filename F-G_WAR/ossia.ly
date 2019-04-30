@@ -163,6 +163,7 @@ ossia = \relative {
       cis8) e-. fis-. dis-. e-. r
     }
   }
+  %{
   \transpose e h {
     \relative {
       h'8.(-"H-dur" a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
@@ -214,4 +215,5 @@ ossia = \relative {
   h'8.( a16 gis8) e-. h-. r cis-. fis-. h8.( a16 gis8) h-. e,-. r
   cis-. fis-. h8.( a16 gis8) a-. h-. e,-. dis-. e-. fis-. dis-. e-. r r4
   \bar "|."
+  %}
 }

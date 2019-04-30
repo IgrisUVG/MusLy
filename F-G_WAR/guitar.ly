@@ -1154,7 +1154,7 @@ guitarMusic = \relative {
       \set doubleSlurs = ##t
       \set glissandoMap = #'((0 . 0) (1 . 1))
       <e gis>8\glissando( <gis c>32) c c c d,8
-      e'32 e e e~ <h e>8\glissando( <g c>32)
+      g,32 e'' e e~ <h e>8\glissando( <g c>32)
       \unset doubleSlurs
       \unset glissandoMap
       c c c a,8

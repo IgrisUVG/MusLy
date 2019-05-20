@@ -28,7 +28,7 @@
   \context {
     \Score
     proportionalNotationDuration = #(ly:make-moment 1/16)
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \context {
     \Staff \RemoveEmptyStaves

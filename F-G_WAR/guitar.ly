@@ -1175,7 +1175,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
-      h,,4. g'8
+      h,,4. gis'?8
     }
   >>
   <<

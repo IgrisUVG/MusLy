@@ -247,7 +247,7 @@ fluteMusic = \new Voice \with {
   \once\override TupletBracket.direction = #UP
   \times 2/3 {gis4 e8~ e) r8 fis(}
   \once\override TupletNumber.transparent = ##f
-  \times 2/3 {gis8 h e} cis16 a fis) f~( f gis8 h16~ 
+  \times 2/3 {gis8 h e} cis16 a fis) f~( f gis8 h16~
   \once\override TupletNumber.transparent = ##f
   \tuplet 3/2 4 {h8 g d cis) fis( e}
   \once\override TupletNumber.transparent = ##f
@@ -262,6 +262,9 @@ fluteMusic = \new Voice \with {
   \bar "||"
   \break
   \mark \markup {\box 5}
+  \set subdivideBeams = ##t
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(2 2 2 2)
   r g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
-  g g g g a'8-.
+  g g g g a'8-. c,,32 c c c h h h h gis''?8-. e,32 e e e
 }

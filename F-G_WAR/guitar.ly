@@ -1153,20 +1153,23 @@ guitarMusic = \relative {
       c32 gis'' gis gis~
       \set doubleSlurs = ##t
       \set glissandoMap = #'((0 . 0) (1 . 1))
-      <e gis>8\glissando( <gis c>32) c c c d,8
+      <e gis>8\glissando( <gis c>32) c c c~ <d, c'>8
       g,32 e'' e e~ <h e>8\glissando( <g c>32)
       \unset doubleSlurs
       \unset glissandoMap
-      c c c a,8
+      c c c~ <a, c'>8
     }
     \\
     {
-      c,4 s g' s
+      c,4 gis'' g, g'
     }
   >>
+  \tag #'Part {
+    \break
+  }
   <<
     {
-      r8 fis'32 d' d d~ <e, d'>8 s
+      r8 fis32 d' d d~ <e, d'>8 s
     }
     \\
     {

@@ -106,11 +106,12 @@ links = \relative {
     \clef bass
     h,
     \clef treble
-    r8 <d' a' d> q4 r r2
-    \clef bass
-    fis,4 r r2
-    \clef treble
-    <d' a' d>4 r r2
+    r8 <d' a' d> 
+    %q4 r r2
+    %\clef bass
+    %fis,4 r r2
+    %\clef treble
+    <d a' d>4 r r2
     \clef bass
     d,,1 cis h b
     \key es \minor

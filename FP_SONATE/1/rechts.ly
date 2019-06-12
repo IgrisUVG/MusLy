@@ -226,7 +226,7 @@ rechts = {
     \key d \major
     <<
       {
-        d'4\p g fis a
+        d'4 g fis a
         \makeOctaves #-1 {
           \once \override NoteColumn.force-hshift = #-.3
           e d fis d

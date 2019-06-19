@@ -263,7 +263,7 @@ guitarTwo = \relative{
       }
       \tag #'Partitur {
         c-\markup {
-          \postscript #"0.7 7.4 moveto 1.3 0.3 rlineto stroke"
+          \postscript #"0.7 5.3 moveto 2 0.3 rlineto stroke"
         }
       }
       d)

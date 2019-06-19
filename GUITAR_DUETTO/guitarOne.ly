@@ -475,7 +475,7 @@ guitarOne =
       his16 dis eis^(\glissando fis)
     }
   >>
-   eis( dis) cis
+  eis( dis) cis
   \tag #'Part {
     his-\markup {
       \postscript #"0.7 4.3 moveto 2 0.7 rlineto stroke"
@@ -486,7 +486,7 @@ guitarOne =
       \postscript #"0.8 4.3 moveto 2 0.8 rlineto stroke"
     }
   }
-  dis8 fisis,!16( gis) ais his cis dis 
+  dis8 fisis,!16( gis) ais his cis dis
   <gis, eis'>4 <eis dis'>8
   <<
     {
@@ -498,5 +498,22 @@ guitarOne =
     }
   >>
   <cis ais'>8\noBeam <dis his'> <ais gis'>
-  <his ais'>
+  <<
+    {
+      <his ais'>8 s
+    }
+    \\
+    {
+      his16 eis( fis) dis'
+    }
+  >>
+  s8 s s s s16 fis, his,16( a!)
+%%%%%%%%%%%%%%%%%%%%%%%%%
+  f8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
+  \stemDown g,
+  \set stringNumberOrientations = #'(left)
+  \override StringNumber.font-size = #'-7
+  <a''\harmonic\5 d\harmonic\4> \stemNeutral
+  \revert StringNumber.font-size
+  \unset stringNumberOrientations
 }

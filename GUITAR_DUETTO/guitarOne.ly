@@ -507,7 +507,7 @@ guitarOne =
       his16 eis^( fis) dis'
     }
   >>
-  eis( fis) eis\prall his cis ais h a gis fis his,16( a!)
+  eis( fis) eis\prall his cis ais h a( gis) fis his,16( a!)
 %%%%%%%%%%%%%%%%%%%%%%%%%
   f8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
   \stemDown g,
@@ -516,4 +516,8 @@ guitarOne =
   <a''\harmonic\5 d\harmonic\4> \stemNeutral
   \revert StringNumber.font-size
   \unset stringNumberOrientations
+  \repeat unfold 3 {
+    f,,8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
+    \stemDown g, <a''\harmonic d\harmonic> \stemNeutral
+  }
 }

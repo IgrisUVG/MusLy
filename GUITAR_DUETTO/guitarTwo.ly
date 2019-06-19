@@ -568,4 +568,5 @@ guitarTwo = \relative{
     \stemNeutral
     \ottava #0
   }
+  <f,, h c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'> <d d'>4
 }

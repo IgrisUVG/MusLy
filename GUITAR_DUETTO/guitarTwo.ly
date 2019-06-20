@@ -573,5 +573,6 @@ guitarTwo = \relative{
     \ottava #0
   }
   \once \override Fingering.extra-offset = #'(-0.8 . -4.8)
-  <f,, h-0 c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'> <d d'>4
+  <f,, h-0 c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'>
+  <d d'>4 <e e'> <f f'>
 }

@@ -541,8 +541,12 @@ guitarTwo = \relative{
   >>
   gis16( fis) e d
   \break
-  cis8[( gis' cis]) dis,[( gis dis'])(cis) ais(
-  gis[)( dis gis,]) eis[( ais eis'])
+  cis8-"IV"[( gis' cis]) 
+  \fretNumSpan "VI"
+  \textSpannerDown
+  \once \override TextSpanner.extra-offset = #'(-0.5 . 1.8)
+  dis,\startTextSpan[( gis dis'])(cis) ais(
+  gis[)( dis gis,])\stopTextSpan eis[( ais eis'])
   \tag #'Part {
     \once\override StringNumber.extra-offset = #'(0.3 . 7.9)
   }
@@ -568,5 +572,6 @@ guitarTwo = \relative{
     \stemNeutral
     \ottava #0
   }
-  <f,, h c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'> <d d'>4
+  \once \override Fingering.extra-offset = #'(-0.8 . -4.8)
+  <f,, h-0 c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'> <d d'>4
 }

@@ -345,9 +345,16 @@ guitarOne =
     {
       d16 f
       \once \override Fingering.extra-offset = #'(-0.5 . -1)
-      g^4-\markup {
-        \postscript #"0.9 5.9 moveto 2.9 0.4 rlineto stroke"
-      }^( as)
+      \tag #'Part {
+        g^4-\markup {
+          \postscript #"0.9 5.9 moveto 2.9 0.4 rlineto stroke"
+        }^( as)
+      }
+      \tag #'Partitur {
+        g^4-\markup {
+          \postscript #"0.9 5.9 moveto 2.9 0.4 rlineto stroke"
+        }^( as)
+      }
     }
   >>
   g( f) es
@@ -472,18 +479,29 @@ guitarOne =
     }
     \\
     {
-      his16 dis eis^(\glissando fis)
+      his16 dis
+      \once \override Fingering.extra-offset = #'(-0.5 . -1)
+      \tag #'Part {
+        eis^4-\markup {
+          \postscript #"0.7 5.1 moveto 1.5 0.5 rlineto stroke"
+        }^( fis)
+      }
+      \tag #'Partitur {
+        eis^4-\markup {
+          \postscript #"0.7 5.2 moveto 2.9 0.4 rlineto stroke"
+        }^( fis)
+      }
     }
   >>
   eis( dis) cis
   \tag #'Part {
     his-\markup {
-      \postscript #"0.7 4.3 moveto 2 0.7 rlineto stroke"
+      \postscript #"0.7 4.3 moveto 1.3 1 rlineto stroke"
     }
   }
   \tag #'Partitur {
     his-\markup {
-      \postscript #"0.8 4.3 moveto 2 0.8 rlineto stroke"
+      \postscript #"0.8 4.3 moveto 2.5 0.8 rlineto stroke"
     }
   }
   dis8 fisis,!16( gis) ais his cis dis
@@ -500,15 +518,26 @@ guitarOne =
   <cis ais'>8\noBeam <dis his'> <ais gis'>
   <<
     {
-      <his ais'>8 s
+      \override TextScript.font-size = -2
+      <his ais'>8^"III" s
     }
     \\
     {
       his16 eis^( fis) dis'
     }
   >>
-  eis( fis) eis\prall his cis ais his a( gis) fis his,16( a!)
-%%%%%%%%%%%%%%%%%%%%%%%%%
+  eis(\2 fis) eis\prall
+  \tag #'Part {
+    his\3-\markup {
+      \postscript #"0.6 3.7 moveto 4.8 -0.6 rlineto stroke"
+    }
+  }
+  \tag #'Partitur {
+    his\3-\markup {
+      \postscript #"0.7 3.7 moveto 5.1 -0.6 rlineto stroke"
+    }
+  }
+  cis ais his a( gis) fis his,16( a!)
   f8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
   \stemDown g,
   \set stringNumberOrientations = #'(left)

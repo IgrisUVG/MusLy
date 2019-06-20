@@ -507,7 +507,7 @@ guitarOne =
       his16 eis^( fis) dis'
     }
   >>
-  eis( fis) eis\prall his cis ais h a( gis) fis his,16( a!)
+  eis( fis) eis\prall his cis ais his a( gis) fis his,16( a!)
 %%%%%%%%%%%%%%%%%%%%%%%%%
   f8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
   \stemDown g,

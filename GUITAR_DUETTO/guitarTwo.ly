@@ -576,13 +576,16 @@ guitarTwo = \relative{
   <f,, h-0 c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'>
   <<
     {
-      <d d'>4 <e e'-0> <f f'>
+      \override TextScript.font-size = -2
+      <d d'>4 <e e'-0> <f f'^2>-"X"
     }
     \\
     {
       \override Fingering.staff-padding = #'()
       \override StringNumber.staff-padding = #'()
-      d16( g\4 g^0 g') e,( g g g'\2)
+      d16( g\4 g^0 g') e,( g g g'\2) f, g'^( a) c
     }
   >>
+  d\prall( c) b( a)
+  <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d d'> <c c'> <e e'> <f f'>4
 }

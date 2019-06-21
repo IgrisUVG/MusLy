@@ -587,5 +587,5 @@ guitarTwo = \relative{
     }
   >>
   d\prall( c) b( a)
-  <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d d'> <c c'> <e e'> <f f'>4
+  <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d f d'> <c g' c> <e a e'> <f f'>4
 }

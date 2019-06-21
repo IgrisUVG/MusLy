@@ -541,7 +541,7 @@ guitarTwo = \relative{
   >>
   gis16( fis) e d
   \break
-  cis8-"IV"[( gis' cis]) 
+  cis8-"IV"[( gis' cis])
   \fretNumSpan "VI"
   \textSpannerDown
   \once \override TextSpanner.extra-offset = #'(-0.5 . 1.8)
@@ -574,5 +574,15 @@ guitarTwo = \relative{
   }
   \once \override Fingering.extra-offset = #'(-0.8 . -4.8)
   <f,, h-0 c a'>4-> <g g'>8<a a'>[(<g g'>]) <d d'><e e'><c c'>
-  <d d'>4 <e e'> <f f'>
+  <<
+    {
+      <d d'>4 <e e'-0> <f f'>
+    }
+    \\
+    {
+      \override Fingering.staff-padding = #'()
+      \override StringNumber.staff-padding = #'()
+      d16( g\4 g^0 g') e,( g g g'\2)
+    }
+  >>
 }

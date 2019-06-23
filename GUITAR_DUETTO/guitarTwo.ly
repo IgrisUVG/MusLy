@@ -586,6 +586,8 @@ guitarTwo = \relative{
       d16( g\4 g^0 g') e,( g g g'\2) f, g'^( a) c
     }
   >>
+  \once \override Slur.outside-staff-priority = #500
+  %\once \override Script.script-priority = #-100
   d\prall( c) b( a)
   <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d f d'> <c g' c> <e a e'> <f f'>4
 }

@@ -534,7 +534,7 @@ guitarOne =
   }
   \tag #'Partitur {
     his\3-\markup {
-      \postscript #"0.7 3.7 moveto 5.1 -0.6 rlineto stroke"
+      \postscript #"1.4 3.6 moveto 5.1 -0.5 rlineto stroke"
     }
   }
   cis ais his a( gis) fis his,16( a!)

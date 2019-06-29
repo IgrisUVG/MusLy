@@ -592,5 +592,5 @@ guitarTwo = \relative{
   \once \override Script.extra-offset = #'(0 . -0.8)
   \shape #'((0 . 0) (0.2 . 0) (0.2 . -0.3) (0 . -0.8)) Slur
   d\prall( c) b( a)
-  <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d f d'> <c g' c> <e a e'> <f f'>4
+  <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d f d'> <c g' c> <e a e'> <f c' f>4
 }

@@ -289,7 +289,7 @@ guitarMusic = \relative {
     \\
     {
       <d,, b'>4 s8 f s f s f
-      <b, fis''> <fis'? d'> g, <f' cis'?> <fis,? b' es> r
+      <b, f''> <fis'? d'> g, <f' cis'?> <fis,? b' es> r
     }
   >>
   <<

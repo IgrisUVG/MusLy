@@ -3,7 +3,7 @@
 \language "deutsch"
 
 \header {
-	title = "CC"
+  title = "CC"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -15,7 +15,7 @@
   top-system-spacing.basic-distance = 20
   system-system-spacing.basic-distance = 20
   last-bottom-spacing.basic-distance = 20
-  
+
   %two-sided = ##t
   %inner-margin = 25
   %outer-margin = 15
@@ -36,21 +36,24 @@ global ={
   \mark \markup {\fontsize #-2 {Allegro non moto}}
 }
 ersteStimme = \relative c' {
-	\clef "treble_8" 
+  \clef "treble_8"
   r4 f( e) h-. es! \times 2/3 {d8( es d} h4-.) b'! ges( f) a-. des,-. g( fis) r c
   r des'-> f,( e) c'-. a,( as) g'-. \times 2/3 {h,8( c h} fis4-.) r f a( b) d'-. es,-.
   h-. e( f) c'-.
   r f,( e) h-. es-. \times 2/3 {d8( es d} h4-.) b'! ges( f) a-. des,-. g( fis) r c
-  r2 d'4( cis) ges,,-. \times 2/3 {h''8( c h} b4-.) e-. g,( as) r 
+  r2 d'4( cis) ges,,-. \times 2/3 {h''8( c h} b4-.) e-. g,( as) r
   \once\override Slur.direction = #DOWN
   \once\override Slur.positions = #'(4.5 . 5.5)
   \acciaccatura d8-\markup {
-  	\postscript #"0.5 -1.6 moveto 2.3 0.8 rlineto stroke"
+    \postscript #"0.5 -1.6 moveto 2.3 0.8 rlineto stroke"
   } f4-.
   r cis,( d) es'-. r e-. d,( es!) des'-. g,( fis) c'-. \times 2/3 {gis8( a gis} f4) e,,-. h'''-.
   es,( d) r b'!-. \times 2/3 {fis,8( g fis} f4) a-. des'-. g,,( fis) r c''
   r a,-"P3"( as) d'-. b,,-. \times 2/3 {h''8( c h} es,4) g'-.
-  \times 2/3 {gis,8(a gis}  e4-.) r c'-. ges,, \times 2/3{des''8( e! des} c4)-"P7" h-.
+  \times 2/3 {gis,8(a gis}  e4-.) r c'-.
+  \once \override NoteColumn.force-hshift = #1.6
+  \once \override Accidental.extra-offset = #'(2.5 . 0)
+  ges,,! \times 2/3{des''8( e! des} c4)-"P7" h-.
   fis-. b'( a) f'-. r des-. r e,16( f e es as,4) d'-. \times 2/3 {g,8( as g} es4)-"RI1"
   h'-. r e,-. b'-. \times 2/3 {d,8( es! d} f4-.) des-. r a'( as) r \times 2/3 {c8( des c}
   g4) fis'-. r c,-.-"P7" r h'-. fis-. \times 2/3 {b8( ces b} a4-.) f!-. cis'-"RI5"( c-.)
@@ -67,7 +70,7 @@ ersteStimme = \relative c' {
   r g,-. r \times 2/3 {c8( des c} as4)
 }
 zweiteStimme = \relative {
-	\repeat unfold 4 {
+  \repeat unfold 4 {
     g,4 r des' r a r ges r b r d r es r h r
     g r des' r a r ges r b r d r es r h r
     g r des' r a r ges r b r d r es r h r c r as'2 \glissando
@@ -79,22 +82,22 @@ zweiteStimme = \relative {
 
 \score {
   \new Staff \with {
-  	midiInstrument = #"acoustic guitar (nylon)"
+    midiInstrument = #"acoustic guitar (nylon)"
     instrumentName = "Gitarre"
   }
   {
-  	\global
-  	<<
-			{
-				\transpose c e 
-				\ersteStimme
-			}
-			\\
-			{
-				\transpose c e 
-				\zweiteStimme
-			}
-		>>
+    \global
+    <<
+      {
+        \transpose c e
+        \ersteStimme
+      }
+      \\
+      {
+        \transpose c e
+        \zweiteStimme
+      }
+    >>
   }
   %{
   \layout{}

@@ -50,6 +50,7 @@
 \include "VIK/vik5.ly"
 %%%% KIV
 \include "Humor.ly"
+\include "Piece.ly"
 
 \book {
   \paper {
@@ -307,4 +308,21 @@
     }
   }
   %}
+%%%%%%%%%%%%%%%%%%%%% HUMOR %%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+
+    \piece
+
+    \header {
+      title = "N"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Score
+        \remove "Bar_number_engraver"
+      }
+    }
+  }
 }

@@ -267,5 +267,5 @@ fluteMusic = \new Voice \with {
   \set beatStructure = #'(2 2 2 2)
   r g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
   g g g g a'8-. c,,32 c c c h h h h gis''?8-. e,32 e e e r8 f32 f f f
-  r8 c32 c c c
+  b'8-. c,32 c c c
 }

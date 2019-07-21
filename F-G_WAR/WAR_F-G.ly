@@ -63,8 +63,8 @@
     \guitarMusic
     %\new Dynamics \hSheet
 
-    \removeWithTag #'Ossia
-    \new Staff \ossia
+    %\removeWithTag #'Ossia
+    %\new Staff \ossia
 
   >>
 }

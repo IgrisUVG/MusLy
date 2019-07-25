@@ -22,6 +22,8 @@ fluteMusic = \relative {
   \afterGrace a {gis16[\stopTrillSpan a]}
   e'4.( d8 f4) b cis1~(
   %\break
-  cis d4) r r8 gis,( b, es,) c2( d'
-  a'1)
+  cis d4.) r8 r gis,( b, es,)
+  \shape #'((-1 . -0.7) (-0.5 . 0.7) (0 . 0) (0 . 0)) Slur
+  c2( d'
+  a'2)
 }

@@ -25,5 +25,11 @@ fluteMusic = \relative {
   cis d4.) r8 r gis,( b, es,)
   \shape #'((-1 . -0.7) (-0.5 . 0.7) (0 . 0) (0 . 0)) Slur
   c2( d'
-  a'2)
+  a'2~ \tuplet 3/2 4 {a8) b( a b fis cis' a b a} b16 a f d'
+  \tuplet 6/4 {cis16 a b a e a}
+  \set subdivideBeams = ##t
+  \set baseMoment = #(ly:make-moment 1 8)
+  \set beatStructure = #'(2 2 2 2)
+  b32 a es a b a gis a)
+  e'4
 }

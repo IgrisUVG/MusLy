@@ -31,5 +31,5 @@ fluteMusic = \relative {
   \set baseMoment = #(ly:make-moment 1 8)
   \set beatStructure = #'(2 2 2 2)
   b32 a es a b a gis a)
-  e'4
+  e'4( d es4.)
 }

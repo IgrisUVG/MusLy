@@ -37,5 +37,8 @@ guitarMusic = \relative {
   >>
   d,4_( <a' a''> <g' e'> fis) d,4_( <a' a''> <fis' e'> d')
   d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' cis''> <h' cis> ais~)
-  <b, \parenthesize \tweak font-size #-2 ais'>4_( <f' c''> <f' b> c)
+  \override TextScript.font-size = -2
+  <b, \parenthesize \tweak font-size #-2 ais'>4^"IX"_( <f' c''> <f' b> \acciaccatura b,8 c4)
+  f,,_( <c' gis''> <g'!_\4 h-0> c\3)
+  
 }

@@ -40,5 +40,15 @@ guitarMusic = \relative {
   \override TextScript.font-size = -2
   <b, \parenthesize \tweak font-size #-2 ais'>4^"IX"_( <f' c''> <f' b> \acciaccatura b,8 c4)
   f,,_( <c' gis''> <g'!_\4 h-0> c\3)
-  
+  <<
+    {
+      \stemDown
+      r8 b'( cis, fis,)
+    }
+    \\
+    {
+      \stemUp
+      gis,2
+    }
+  >>
 }

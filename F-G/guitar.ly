@@ -19,7 +19,7 @@ guitarMusic = \relative {
       d,4_( <b' e'-0> <eis cis'> a\glissando)
       \set fingeringOrientations = #'(right)
       \override Fingering.extra-offset = #'(-0.3 . 0.3)
-      d4( \stemDown <a,-0 e''!-0> 
+      d4( \stemDown <a,-0 e''!-0>
       \set stringNumberOrientations = #'(right)
       \override StringNumber.extra-offset = #'(-0.4 . 0)
       <b'\4 a'\2>2)
@@ -39,16 +39,24 @@ guitarMusic = \relative {
   d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' cis''> <h' cis> ais~)
   \override TextScript.font-size = -2
   <b, \parenthesize \tweak font-size #-2 ais'>4^"IX"_( <f' c''> <f' b> \acciaccatura b,8 c4)
-  f,,_( <c' gis''> <g'!_\4 h-0> c\3)
+  f,,_( <c' gis''>
+  \once \override Fingering.extra-offset = #'(2 . 1)
+  \once \override StringNumber.extra-offset = #'(0 . 1.9)
+  <g'!_\4 h-0>
+  \once \override StringNumber.extra-offset = #'(0 . -1.2)
+  c\3)
   <<
     {
       \stemDown
-      r8 b'( cis, fis,) r cis''( fis, h,)
+      r8 b'( cis, fis,) r cis''( fis, h,) r4 <g' e'>
     }
     \\
     {
       \stemUp
-      gis,2 a
+      gis,,2 a \acciaccatura b8-\markup {
+        \postscript #"0.7 0.3 moveto 1.6 0.8 rlineto stroke"
+      } d2
     }
   >>
+  <a e'' d'>2
 }

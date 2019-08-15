@@ -43,12 +43,12 @@ guitarMusic = \relative {
   <<
     {
       \stemDown
-      r8 b'( cis, fis,)
+      r8 b'( cis, fis,) r cis''( fis, h,)
     }
     \\
     {
       \stemUp
-      gis,2
+      gis,2 a
     }
   >>
 }

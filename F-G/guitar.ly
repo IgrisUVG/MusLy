@@ -48,15 +48,18 @@ guitarMusic = \relative {
   <<
     {
       \stemDown
-      r8 b'( cis, fis,) r cis''( fis, h,) r4 <g' e'>
+      r8 b'( cis, fis,) r cis''( fis, h,) r4 <g' e'> s
+     \stemUp
+     fis,
     }
     \\
     {
       \stemUp
-      gis,,2 a \acciaccatura b8-\markup {
+      gis,2 a \acciaccatura b8-\markup {
         \postscript #"0.7 0.3 moveto 1.6 0.8 rlineto stroke"
       } d2
+      \stemDown
+      <gis, e'' d'>2
     }
   >>
-  <a e'' d'>2
 }

@@ -40,11 +40,11 @@ guitarMusic = \relative {
   \override TextScript.font-size = -2
   <b, \parenthesize \tweak font-size #-2 ais'>4^"IX"_( <f' c''> <f' b> \acciaccatura b,8 c4)
   f,,_( <c' gis''>
-  \once \override Fingering.extra-offset = #'(2 . 1)
-  \once \override StringNumber.extra-offset = #'(0 . 1.9)
-  <g'!_\4 h-0>
-  \once \override StringNumber.extra-offset = #'(0 . -1.2)
-  c\3)
+  \once \override Fingering.extra-offset = #'(3.2 . 1.1)
+  \once \override StringNumber.extra-offset = #'(1.3 . 2)
+  <g'!_\4 h-0 c>2)
+  %\once \override StringNumber.extra-offset = #'(0 . -1.2)
+  %c\3)
   <<
     {
       \stemDown

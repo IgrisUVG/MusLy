@@ -33,5 +33,5 @@ fluteMusic = \relative {
   b32 a es a b a gis a)
   \set subdivideBeams = ##f
   e'4( d es~ es16) g( h, e, dis2 cis8) gis' dis' eis c2. ~ c8 g,(
-  d' e h4.) b'8( c, f,) cis2 eis'
+  d' e h4.) b'8( c, f,) cis?2 eis'
 }

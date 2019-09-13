@@ -65,4 +65,27 @@ guitarMusic = \relative {
       <gis, e'' d'>2
     }
   >>
+  \time 3/4
+  <<
+    {
+      s4 d''\3( cis\4)
+      \repeat unfold 3 {s4 d( cis)}
+      s4 e( dis)
+    }
+    \\
+    {
+      e8\rest fis, d' fis, cis' fis,
+      \mergeDifferentlyHeadedOn
+      \mergeDifferentlyDottedOn
+      g' fis, d' fis, cis' fis,
+      e' fis, d' fis, cis' fis,
+      e' fis, d' fis, cis' fis,
+      e'8\rest gis, e' gis, dis' gis,
+    }
+    \\
+    {
+      \voiceOne
+      h,2. g'' <e gis> q cis,
+    }
+  >>
 }

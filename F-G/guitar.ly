@@ -71,6 +71,7 @@ guitarMusic = \relative {
       s4 d''\3( cis\4)
       \repeat unfold 3 {s4 d( cis)}
       s4 e( dis)
+      s4 e( dis)
     }
     \\
     {
@@ -81,11 +82,12 @@ guitarMusic = \relative {
       e' fis, d' fis, cis' fis,
       e' fis, d' fis, cis' fis,
       e'8\rest gis, e' gis, dis' gis,
+      e'8\rest gis, e' gis, dis' gis,
     }
     \\
     {
       \voiceOne
-      h,2. g'' <e gis> q cis,
+      h,2. g'' <e gis> q cis, f,
     }
   >>
 }

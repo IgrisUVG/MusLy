@@ -72,10 +72,11 @@ guitarMusic = \relative {
       \repeat unfold 3 {s4 d( cis)}
       s4 e( dis)
       s4 e( dis)
+      r16 as' b h g'( fis f8) d16( cis c8)
     }
     \\
     {
-      e8\rest fis, d' fis, cis' fis,
+      e,8\rest fis, d' fis, cis' fis,
       \mergeDifferentlyHeadedOn
       \mergeDifferentlyDottedOn
       g' fis, d' fis, cis' fis,
@@ -83,11 +84,16 @@ guitarMusic = \relative {
       e' fis, d' fis, cis' fis,
       e'8\rest gis, e' gis, dis' gis,
       e'8\rest gis, e' gis, dis' gis,
+      s4
+      \once \override StringNumber.extra-offset = #'(1 . -1.4)
+      <h cis\4>-\markup {
+        \postscript #"1.5 4.5 moveto 5.6 -0.8 rlineto stroke"
+      } <g a>
     }
     \\
     {
       \voiceOne
-      h,2. g'' <e gis> q cis, f,
+      h,2. g'' <e gis> q cis, f, d
     }
   >>
 }

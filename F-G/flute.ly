@@ -37,5 +37,5 @@ fluteMusic = \relative {
   \time 3/4
   c4) fis,( a cis,4.) d8\noBeam( e a fis2.)
   r16 a,( h his gis' g fis8) dis16( d cis8~
-  cis4) gis'( h dis,4.) e8\noBeam( fis h g2)
+  cis4) gis'( h dis,4.) e8\noBeam( fis h g2) r4
 }

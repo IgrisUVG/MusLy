@@ -97,4 +97,24 @@ guitarMusic = \relative {
       h,2. g'' <e gis> q cis, f, d h'2 s4
     }
   >>
+  <<
+    {
+      d'4. es8\noBeam f b
+      
+    }
+    \\
+    {
+      s4 g, s
+    }
+    \\
+    {
+      \voiceOne
+      g8\rest f4. fis4
+    }
+    \\
+    {
+      \voiceTwo
+      b,2 as4
+    }
+  >>
 }

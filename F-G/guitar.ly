@@ -109,7 +109,9 @@ guitarMusic = \relative {
     \\
     {
       \voiceOne
-      g8\rest f4. fis4
+      g8\rest f4. 
+      \once \override NoteColumn.force-hshift = #0.2
+      fis4
     }
     \\
     {

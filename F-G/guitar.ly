@@ -104,13 +104,14 @@ guitarMusic = \relative {
     }
     \\
     {
-      s4 g, s
+      s4 g,2
     }
     \\
     {
       \voiceOne
       g8\rest f4. 
-      \once \override NoteColumn.force-hshift = #0.2
+      %\once \override NoteColumn.force-hshift = #0.2
+      \once \override Stem.length = #5
       fis4
     }
     \\
@@ -119,4 +120,19 @@ guitarMusic = \relative {
       b,2 as4
     }
   >>
+  <<
+    {
+      <e g' fis'>2.
+    }
+    \\
+    {
+      s2 cis''4
+    }
+    \\
+    {
+      \voiceTwo
+      s4 dis,2
+    }
+  >>
+  
 }

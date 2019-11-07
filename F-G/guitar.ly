@@ -68,14 +68,23 @@ guitarMusic = \relative {
   \time 3/4
   <<
     {
-      s4 d''\3( cis\4)
+      s4
+      \once \override StringNumber.extra-offset = #'(-.5 . -2)
+      d''\3(
+      \once \override StringNumber.extra-offset = #'(-.5 . -1.5)
+      cis\4)
       \repeat unfold 3 {s4 d( cis)}
       s4 e( dis)
       s4 e( dis)
-      r16 as' b h g'( fis f8) d16( cis c8)~ c4 g b
+      r16
+      \once \override StringNumber.extra-offset = #'(-.5 . -3.5)
+      as'\2 b h g'( fis f8) d16( cis c8)~ c4 g-2-\markup {
+        \postscript #"1.5 -1 moveto 3.5 0.9 rlineto stroke"
+      } b-2
     }
     \\
     {
+      \override Fingering.staff-padding = #'()
       e,8\rest fis, d' fis, cis' fis,
       \mergeDifferentlyHeadedOn
       \mergeDifferentlyDottedOn
@@ -89,18 +98,20 @@ guitarMusic = \relative {
       <h cis\4>-\markup {
         \postscript #"1.5 4.5 moveto 5.6 -0.8 rlineto stroke"
       } <g a>
-      s c cis
+      s c-4 cis-1
     }
     \\
     {
       \voiceOne
-      h,2. g'' <e gis> q cis, f, d h'2 s4
+      h,2. g'' <e gis> q cis, f, d
+      \once \override Fingering.extra-offset = #'(0 . -5.3)
+      h'2-3_\6 s4
     }
   >>
   <<
     {
       d'4. es8\noBeam f b
-      
+
     }
     \\
     {
@@ -109,7 +120,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceOne
-      g8\rest f4. 
+      g8\rest f4.
       %\once \override NoteColumn.force-hshift = #0.2
       \once \override Stem.length = #5
       fis4
@@ -117,7 +128,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
-      b,2 as4
+      b,2_\5 as4
     }
   >>
   <<
@@ -134,5 +145,5 @@ guitarMusic = \relative {
       s4 dis,2
     }
   >>
-  
+
 }

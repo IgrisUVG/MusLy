@@ -137,7 +137,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      s2 cis''4
+      s2 cis''4-\markup {
+        \postscript #"1.7 4.3 moveto 4.7 1.7 rlineto stroke"
+      }
     }
     \\
     {
@@ -145,5 +147,14 @@ guitarMusic = \relative {
       s4 dis,2
     }
   >>
-
+  <<
+    {
+      a''2.\2
+    }
+    \\
+    {
+      d,,?4( <g e'> fis_\5)
+    }
+  >>
+  \time 4/4
 }

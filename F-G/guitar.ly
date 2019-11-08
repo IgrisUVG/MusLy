@@ -128,6 +128,7 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
+      \once \override StringNumber.extra-offset = #'(.5 . 2)
       b,2_\5 as4
     }
   >>
@@ -149,11 +150,14 @@ guitarMusic = \relative {
   >>
   <<
     {
+      \once \override StringNumber.extra-offset = #'(-.5 . -2)
       a''2.\2
     }
     \\
     {
-      d,,?4( <g e'> fis_\5)
+      d,,?4( <g e'> 
+      \once \override StringNumber.extra-offset = #'(.5 . 2.5)
+      fis_\5)
     }
   >>
   \time 4/4

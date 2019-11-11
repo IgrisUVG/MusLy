@@ -16,11 +16,11 @@
   markup-system-spacing.basic-distance = #10
   system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #25
-  
+
   two-sided = ##t
   inner-margin = 20
   outer-margin = 15
-  
+
   footnote-padding = 8
   footnote-footer-padding = 7
 }
@@ -37,7 +37,7 @@
 \include "footnote.ly"
 
 \score {
-  \new StaffGroup<<
+  \new StaffGroup <<
     \time 6/8
 
     \new Staff \with {

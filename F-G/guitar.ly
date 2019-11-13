@@ -78,10 +78,17 @@ guitarMusic = \relative {
       s4 e( dis)
       r16
       \once \override StringNumber.extra-offset = #'(-.5 . -3.5)
-      as'\2 b h g'( fis f8) d16( cis c8)~ c4 
-      g-2-\markup {
-        \postscript #"1.5 -1 moveto 3.5 0.9 rlineto stroke"
-      }      
+      as'\2 b h g'( fis f8) d16( cis c8)~ c4
+      \tag #'Part {
+        g-2-\markup {
+          \postscript #"1.4 -1 moveto 1.9 0.9 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        g-2-\markup {
+          \postscript #"1.5 -1 moveto 3.3 0.9 rlineto stroke"
+        }
+      }
       b-2
     }
     \\
@@ -140,8 +147,15 @@ guitarMusic = \relative {
     }
     \\
     {
-      s2 cis''4-\markup {
-        \postscript #"1.7 4.3 moveto 4.7 1.7 rlineto stroke"
+      \tag #'Part {
+        s2 cis''4-\markup {
+          \postscript #"1.6 4.1 moveto 3.9 2 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+        s2 cis4-\markup {
+          \postscript #"1.6 4 moveto 6.2 2 rlineto stroke"
+        }
       }
     }
     \\
@@ -163,19 +177,19 @@ guitarMusic = \relative {
     }
   >>
   \time 4/4
-  d,4_( <a' a''> <fis' e'> d'-4)
-  d,,4_( <b' a''> <g'-0 d'> fis) fis,4_( <cis' cis''> <h'-0 cis> ais)
+  d,4_( <a' a''> <fis' e'> d')
+  d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' cis''> <h' cis> ais)
   d,,4_( <a' a''> <g' e'> fis) d,4_( <a' a''> <fis' e'> d')
-  d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' his''> <a' eis'> g-0)
+  d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' his''> <a' eis'> g)
   <<
     {
-      d,4_( <b' e'-0> <eis cis'> a\glissando)
+      d,4_( <b' e'> <eis cis'> a\glissando)
       \set fingeringOrientations = #'(right)
       \override Fingering.extra-offset = #'(-0.3 . 0.3)
-      d4( \stemDown <a,-0 e''!-0>
+      d4( \stemDown <a, e''!>
       \set stringNumberOrientations = #'(right)
       \override StringNumber.extra-offset = #'(-0.4 . 0)
-      <b'\4 a'\2>2)
+      <b' a'>2)
     }
     \\
     {

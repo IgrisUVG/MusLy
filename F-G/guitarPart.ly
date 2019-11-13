@@ -38,5 +38,6 @@
       { \circle 6"= D" }
     }
   }
+  \removeWithTag #'Partitur
   \guitarMusic
 }

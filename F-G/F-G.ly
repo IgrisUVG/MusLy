@@ -53,6 +53,7 @@
         }
       }
     }
+    \removeWithTag #'Part
     \guitarMusic
   >>
 }

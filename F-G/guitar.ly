@@ -65,6 +65,7 @@ guitarMusic = \relative {
       <gis, e'' d'>2
     }
   >>
+  \bar "||"
   \time 3/4
   <<
     {
@@ -176,6 +177,7 @@ guitarMusic = \relative {
       fis_\5)
     }
   >>
+  \bar "||"
   \time 4/4
   d,4_( <a' a''> <fis' e'> d')
   d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' cis''> <h' cis> ais)

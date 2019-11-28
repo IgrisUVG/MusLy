@@ -803,9 +803,12 @@ schauspiel = \relative {
 }
 
 schauspielDynamics = {
-  s1*8 s1
+  s2\mp s2 s2-\markup {
+    poco a poco cresc.
+  }
+  s1*2 s4 s2\f s4\sp s4 s2.\mp s1*2 s2 s2
   \cadenzaOn
-  s1 s2 s2 s1 s4
+  s2\p s1 s2 s2 s1 s4
   \cadenzaOff
   \repeat volta 3 {
     \override TextScript.extra-offset = #'(-4.5 . 2.5)
@@ -824,15 +827,15 @@ schauspielDynamics = {
       s2
     }
   }
-  s2*2\f s2*2\p s2\f s4 s8\> s16. s32\! 
+  s2*2\f s2*2\p s2\f s4 s8\> s16. s32\!
   \once\override DynamicText.extra-offset = #'(-3.5 . 4)
   s2*6\mf s4 s8
   \once\override Hairpin.extra-offset = #'(1 . 10)
   s16.\< s32\!
   \once\override DynamicText.extra-offset = #'(-2.5 . 1)
-  s2\f s8 
+  s2\f s8
   \once\override Hairpin.extra-offset = #'(0.5 . 1)
-  s8\> s8 s16. 
+  s8\> s8 s16.
   \once\override DynamicText.extra-offset = #'(0.5 . 1)
   s32\mf s2 s4
   s4\> s2*2\p

@@ -303,7 +303,7 @@ schauspiel = \relative {
       \\
       {
         \shape #'((0 . -6.5) (-1.5 . -3) (-0.5 . 0) (0 . 0)) Slur
-        e'16^( cis, e8) cis'16 d,,8.
+        e'16^( cis, e8) cis'16 \xLV #7 d,,8.\laissezVibrer
       }
       \\
       {
@@ -803,11 +803,24 @@ schauspiel = \relative {
 }
 
 schauspielDynamics = {
-  s2\mp s2 s2-\markup {
+  \once\override DynamicText.extra-offset = #'(0 . 4.5)
+  s2\mp 
+  \once\override TextScript.extra-offset = #'(4.5 . 3.5)
+  s2-\markup {
     poco a poco cresc.
-  }
-  s1*2 s4 s2\f s4\sp s4 s2.\mp s1*2 s2 s2
+  } s2 s1*2 s4 s2\f s4\sp s4 s4\mp
+  \once\override TextScript.extra-offset = #'(0 . 3.5)
+  s2-\markup {cresc.} s2.
+  \once\override DynamicText.extra-offset = #'(-2.3 . 3)
+  s4\f s4.
+  \once\override Hairpin.extra-offset = #'(0 . 2)
+  s\> s4\!
+  \once\override DynamicText.extra-offset = #'(0 . 5.7)
+  s2\mf
+  \once\override Hairpin.extra-offset = #'(-1 . 6)
+  s2\>
   \cadenzaOn
+  \once\override DynamicText.extra-offset = #'(-2 . 6)
   s2\p s1 s2 s2 s1 s4
   \cadenzaOff
   \repeat volta 3 {

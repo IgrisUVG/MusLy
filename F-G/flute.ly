@@ -40,5 +40,8 @@ fluteMusic = \relative {
   r16 a,( h his gis' g fis8) dis16( d cis8~
   cis4) gis'( h dis,4.) e8\noBeam( fis h g2) r8 c,(
   gis e dis) a'[( e cis] f4.) as8\noBeam b es as4. cis8( dis, gis,)
-  eis2
+  eis2 fis16( h cis g'
+  \bar "||"
+  \time 4/4
+  ais f c h a' e ais, a h' dis, a gis e d e d)
 }

@@ -26,6 +26,7 @@ footnot = \relative {
   \concat {
     "*" \hspace #1.5
     \score {
+      \transpose b c'
       \footnot
 
       \layout {

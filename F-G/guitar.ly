@@ -79,11 +79,17 @@ guitarMusic = \relative {
       s4 e( dis)
       r16
       \once \override StringNumber.extra-offset = #'(-.5 . -3.5)
+      as'\2 b h g'( fis f8) d16( cis c8)~ c4
+      \tag #'Part {
+        g-2-\markup {
+          \postscript #"1.4 -1 moveto 1.9 0.9 rlineto stroke"
+        }
       }
-      as'\2 b h g'( fis f8) d16( cis c8)~ c4 
-      g-2-\markup {
-        \postscript #"1.5 -1 moveto 3.5 0.9 rlineto stroke"
-      }      
+      \tag #'Partitur {
+        g-2-\markup {
+          \postscript #"1.5 -1 moveto 3.3 0.9 rlineto stroke"
+        }
+      }
       b-2
     }
     \\

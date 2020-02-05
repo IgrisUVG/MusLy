@@ -43,5 +43,6 @@ fluteMusic = \relative {
   eis2 fis16( h cis g'
   \bar "||"
   \time 4/4
-  ais f c h a' e ais, a h' dis, a gis e d e d)
+  ais f c h a' e ais, a h' dis, a gis e d e d
+  e d e d es d es d es d es d) es gis b e!
 }

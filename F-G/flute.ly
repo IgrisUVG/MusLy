@@ -44,5 +44,15 @@ fluteMusic = \relative {
   \bar "||"
   \time 4/4
   ais f c h a' e ais, a h' dis, a gis e d e d
-  \tuplet 6/4 {e d e d e d} es32 d es d es d es d es d es d es d cis d) es16 gis b e!
+  \tuplet 6/4 {e d e d e d}
+  \set subdivideBeams = ##t
+  es32 d es d es d es d es d es d es d cis d)
+  \set subdivideBeams = ##f
+  es16( gis b e!
+  gis e b a g' dis gis, g a' d, g, fis eis dis eis dis
+  \tuplet 6/4 {f es f es f es}
+  \set subdivideBeams = ##t
+  \repeat unfold 7 {e32 es} d es)
+  \set subdivideBeams = ##f
+  \tuplet 5/4 {e16 a h fis' gis}
 }

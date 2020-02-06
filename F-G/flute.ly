@@ -8,6 +8,7 @@ fluteMusic = \relative {
   \time 4/4
   \override Staff.TimeSignature.stencil = ##f
   \override TupletNumber.transparent = ##t
+  \override TupletBracket.stencil = ##f
   \override TrillSpanner.bound-details.left.text = \markup{
     \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat
   }
@@ -54,5 +55,10 @@ fluteMusic = \relative {
   \set subdivideBeams = ##t
   \repeat unfold 7 {e32 es} d es)
   \set subdivideBeams = ##f
-  \tuplet 5/4 {e16 a h fis' gis}
+  \tuplet 5/4 {e16( a h fis' gis} \tuplet 5/4 {b a b fis cis'}
+  \tuplet 6/4 {a b a b a f}
+  \tuplet 7/4 {d' cis a b a e a}
+  \set subdivideBeams = ##t
+  b32 a es a b a gis a)
+  \tuplet 5/4 {e'4( h' e,) d-- gis,--}
 }

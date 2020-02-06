@@ -44,5 +44,5 @@ fluteMusic = \relative {
   \bar "||"
   \time 4/4
   ais f c h a' e ais, a h' dis, a gis e d e d
-  e d e d es d es d es d es d) es gis b e!
+  \tuplet 6/4 {e d e d e d} es32 d es d es d es d es d es d es d cis d) es16 gis b e!
 }

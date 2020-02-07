@@ -55,10 +55,10 @@ fluteMusic = \relative {
   \set subdivideBeams = ##t
   \repeat unfold 7 {e32 es} d es)
   \set subdivideBeams = ##f
-  \tuplet 5/4 {e16( a h fis' gis} \tuplet 5/4 {b a b fis cis'}
+  \tuplet 5/4 4 {e16( a h fis' gis b a b fis cis'}
   \tuplet 6/4 {a b a b a f}
   \tuplet 7/4 {d' cis a b a e a}
   \set subdivideBeams = ##t
   b32 a es a b a gis a)
-  \tuplet 5/4 {e'4( h' e,) d-- a--} \tuplet 5/4 {his,( gis' dis' eis cis)}
+  \tuplet 5/4 1 {e'4( h' e,) d-- a-- his,( gis' dis' eis cis)}
 }

@@ -60,5 +60,5 @@ fluteMusic = \relative {
   \tuplet 7/4 {d' cis a b a e a}
   \set subdivideBeams = ##t
   b32 a es a b a gis a)
-  \tuplet 5/4 {e'4( h' e,) d-- gis,--}
+  \tuplet 5/4 {e'4( h' e,) d-- a--} \tuplet 5/4 {his,( gis' dis' eis cis)}
 }

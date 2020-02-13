@@ -176,9 +176,11 @@ rechts = \relative {
   >>
   \bar "||"
   \set baseMoment = #(ly:make-moment 1 8)
-  \set subdivideBeams = ##t
+  %\set subdivideBeams = ##t
   r16 <ces fes>(<as c f><c des ges><ces es as><f b><fes ges ces><ges as des>
-  <f b! es>2)\change Staff = LH
+  <f b! es>2)
+  \set subdivideBeams = ##t
+  \change Staff = LH
   \shape #'((0 . -5.5) (2 . 3) (0 . 2) (0 . 0)) Slur
   as,,,32( es' b' c es, as b c \change Staff = RH es \change Staff = LH as,
   \change Staff = RH des f as b es as b2) \change Staff = LH \stemUp

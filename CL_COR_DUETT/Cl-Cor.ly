@@ -20,9 +20,6 @@
   two-sided = ##t
   inner-margin = 20
   outer-margin = 15
-
-  footnote-padding = 8
-  footnote-footer-padding = 7
 }
 
 \layout {
@@ -33,6 +30,7 @@
 }
 
 \include "clarinet.ly"
+\include "dynamic.ly"
 \include "corno.ly"
 
 \score {
@@ -48,6 +46,10 @@
     }
     \transpose b c'
     \clarinetMusic
+    
+    \new Dynamics {
+      \dynamic
+    }
 
     \new Staff \with {
       instrumentName = \markup {

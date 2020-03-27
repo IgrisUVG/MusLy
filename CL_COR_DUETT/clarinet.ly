@@ -4,11 +4,9 @@
 
 clarinetMusic = \relative {
   \time 3/4
-  %\key c \minor
   d4( e h' ges f8 fes es4~ es) c'8( des) r4
   \bar "||"
   \time 4/4
-  %\key b \minor
   \repeat unfold 10 {b4 c f c}
   \repeat unfold 2 {heses des ges des}
   heses ces'( ges' fes des) des,( ges des
@@ -18,7 +16,6 @@ clarinetMusic = \relative {
   ges''8( f c b) des( b g d!) ges'( f e d) des( b a ges) c( as e) des'( a f) d'( b
   ges) g( as) a-. b-. h-. c4-.->
   \bar "||"
-  %\key b \major
   \tuplet 3/2 2 {
     \repeat unfold 6 {f,,4-. cis'-. d,-. cis'-.}
     f,-. as( c d ges f es ces)
@@ -31,7 +28,6 @@ clarinetMusic = \relative {
   \tuplet 3/2 2 {\acciaccatura es''8 fes8-. r d,,4-. c''( ces ges) as( g f) ges'(}
   e4) as,,-- as-- as-- d,8-- r c'2.\fermata
   \bar "||"
-  %\key b \minor
   \tuplet 3/2 4 {
     des8( c des) f( des f) ges( f ges) as( b des)
     f( c des)-\markup {\italic sim}
@@ -46,7 +42,6 @@ clarinetMusic = \relative {
     f des as ges f as) des( f as) es( f as
     b) des( f) es( des as) f( des as) es'( des f,)
   }
-  %\key b \major
   \tuplet 3/2 4 {
     es'( d! b f d f b d f g f) b,(
     d f b c) f,( d c b f es d b
@@ -55,32 +50,45 @@ clarinetMusic = \relative {
     g) d( f b, d b f d b d b f)
     d( f a d f a d f a d) f,( e    
   }
-  %\key d \minor
   \tuplet 3/2 4 {
     g f d a) e'( d f e a, f) b( a
     des, e f b a c des e f b a c
   }
-  %\key b \minor
   \tuplet 3/2 4 {
     des) es( des b ges des b ges des ces b ges)
     as( ges as des as des ges des ges as ges as
     des as des ges des ges as ges as des as des)
   }
-  %\key d \minor
   \tuplet 3/2 4 {
     d!( a! f e d f, f' e cis g' f d
     cis a e f g a his cis f g a his
   }
-  %\key a \major
   \tuplet 3/2 4 {
     cis h e,) a( gis h,) fis'( e gis,)  h( gis e)
   }
   \bar "||"
-  %\key b \major
   \repeat unfold 4 {r8 g,( d' es g c g es)}
-  %\key f \major
   \repeat unfold 3 {r8 g,( e' g d' c g e)}
   r8 g,( c e g c d e g)\noBeam g,,( d' e g c e g
   c)\noBeam as,,( es' as  ces es as ces
-  d)\noBeam d,,,( g a d g a d g)\noBeam es,, b' f' g b es g
+  d)\noBeam d,,,( g a d g a d g)\noBeam es,,( b' f' g b es g
+  \bar "||"
+  h-.)\noBeam d,,-. d-. d-. d2:8
+  \bar ".|:"
+  d2:8 d2:8
+  \bar ":|."
+  d8 d d
+  \repeat unfold 4 {\acciaccatura {b'16 e} a8-.->\noBeam d,, d} d
+  \repeat unfold 5 {\acciaccatura {b'16 e} a8-.->\noBeam d,, d} d
+  \repeat unfold 3 {\acciaccatura {b'16 e} a8-.->\noBeam d,, d}
+  \acciaccatura {b'16 e} a8-.->\noBeam d,,\noBeam d'->~ d2
+  \acciaccatura dis8 e-. h4.~ h2 d8( e f) f f f( e d)
+  d( fis4.~ fis8)\glissando h-^ d,,-.[ d-.] d2:8 d2:8
+  d8-. d-. d-. d---> d-. d-. e---> d-.
+  f---> e4---> a8---> d,-. d-. e---> d--->
+  d-. d-. d-. d---> d-. d-. fis---> e--->
+  fis---> a---> d,-. d-. d-. h'---> a---> fis--->
+  e---> d-. d-. d-. d-. d-. e---> d-.
+  fis---> a---> fis---> h->~ h d,-. d-. fis-.
+  h,-.->
 }

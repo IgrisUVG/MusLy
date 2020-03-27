@@ -21,5 +21,6 @@ dynamic = {
   \tuplet 3/2 2 {s4 s2.\< s2\> s s4\sf s2 s4\>}
   s2 s4\! s\ff s2 s\mf s s\> s4 s2.\pp s1
   s1*22 s4 s2.-\markup {poco dim.} s1 s\p s s4
-  s2.-\markup {poco a poco cresc.} s1*4 s1\< s\f
+  s2.-\markup {poco a poco cresc.} s1*4 s1\< s1*4\f
+  s8 s4\sp s8-\markup {sempre stacc.} s2 s1 s\p
 }

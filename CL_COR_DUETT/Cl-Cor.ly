@@ -44,6 +44,7 @@
         }
       }
     }
+    \removeWithTag #'Part
     \transpose b c'
     \clarinetMusic
     
@@ -59,7 +60,7 @@
         }
       }
     }
-    %\removeWithTag #'Part
+    \removeWithTag #'Part
     \transpose f c'
     \cornoMusic
   >>

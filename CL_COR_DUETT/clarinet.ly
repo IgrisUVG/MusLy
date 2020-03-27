@@ -7,7 +7,10 @@ clarinetMusic = \relative {
   d4( e h' ges f8 fes es4~ es) c'8( des) r4
   \bar "||"
   \time 4/4
-  \repeat unfold 10 {b4 c f c}
+  b4
+  \once\override TextScript.extra-offset = #'(-1 . 0)
+  c-\markup {\italic legato} f c
+  \repeat unfold 9 {b4 c f c}
   \repeat unfold 2 {heses des ges des}
   heses ces'( ges' fes des) des,( ges des
   heses) ces'( ges' fes des) ces( des fes)
@@ -16,6 +19,7 @@ clarinetMusic = \relative {
   ges''8( f c b) des( b g d!) ges'( f e d) des( b a ges) c( as e) des'( a f) d'( b
   ges) g( as) a-. b-. h-. c4-.->
   \bar "||"
+  \tag #'Part {\pageBreak}
   \tuplet 3/2 2 {
     \repeat unfold 6 {f,,4-. cis'-. d,-. cis'-.}
     f,-. as( c d ges f es ces)
@@ -73,6 +77,8 @@ clarinetMusic = \relative {
   c)\noBeam as,,( es' as  ces es as ces
   d)\noBeam d,,,( g a d g a d g)\noBeam es,,( b' f' g b es g
   \bar "||"
+  \break
+  \tag #'Part {\break}
   h-.)\noBeam d,,-. d-. d-. d2:8
   \bar ".|:"
   d2:8 d2:8

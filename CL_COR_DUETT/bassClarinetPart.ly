@@ -4,7 +4,7 @@
 
 \header {
   title = "Cl&Cor"
-  instrument = "Clarinet"
+  instrument = "BassCl in B"
   %meter = "Lustig"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -35,7 +35,7 @@
   }
 }
 
-\include "clarinet.ly"
+\include "corno.ly"
 \include "dynamic.ly"
 
 \score {
@@ -43,12 +43,13 @@
 
     \new Staff {
       %\removeWithTag #'Partitur
-      \transpose b c'
-      \clarinetMusic
+      \transpose b, c'
+      \cornoMusic
     }
     
     \new Dynamics
-    \removeWithTag #'Bass
+    \removeWithTag #'Partitur
+    \removeWithTag #'Part
     \dynamic
 
     %\new Staff \ossia

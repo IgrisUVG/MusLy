@@ -49,6 +49,7 @@
     
     \new Dynamics
     \removeWithTag #'Partitur
+    \removeWithTag #'Bass
     \dynamic
 
     %\new Staff \ossia

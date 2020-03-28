@@ -3,17 +3,18 @@
 \language "deutsch"
 
 dynamic = {
-  \once\override DynamicText.extra-offset = #'(-3 . 3)
+  \tag #'Bass {\override TextScript.extra-offset = #'(0 . 1.5)}
+  \tag #'Part {\once\override DynamicText.extra-offset = #'(-3 . 3)}
   s2.\f s s4 
   \tag #'Partitur {\once\override DynamicText.extra-offset = #'(0 . 3)}
   \tag #'Part {\once\override DynamicText.extra-offset = #'(-0.5 . 2.5)}
   s2\sf
-  \once\override DynamicText.extra-offset = #'(-2.5 . 3)
+  \tag #'Part {\once\override DynamicText.extra-offset = #'(-2.5 . 3)}
   s4\p s2. s1*11 s4 s2.-\markup {cresc.} s1*3
   s1*3\f s4 s2.\> s s4\! s1*3\mp s4 s2.\> s s4\! s1\p
   s2 s-\markup {poco cresc.} s1*3 s2. s4\< s1 s2 s4\! s\sf
   s2\f
-  \once\override TextScript.extra-offset = #'(0 . 1.5)
+  \tag #'Part {\once\override TextScript.extra-offset = #'(0 . 1.5)}
   s-\markup {morendo} s1*3
   \tuplet 3/2 2 {s4\p s2.\< s2\> s s4\sf} s2\> s
   \tuplet 3/2 2 {s4 s2\p} s1

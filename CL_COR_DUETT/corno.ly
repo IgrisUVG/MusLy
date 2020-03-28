@@ -32,7 +32,7 @@ cornoMusic = \relative {
   }
   c4) g-- g-- g-- r h,2.\fermata
   \bar "||"
-  b1~( b4 des b' es ges1 e!) c~ c r2 b'4( as~ as2 ges~ ges f~ f) b4( as
+  b!1~( b4 des b' es ges1 e!) c~ c r2 b'4( as~ as2 ges~ ges f~ f) b4( as
   g2 d) f( c) r4 d,( b' f' g1 ges) des~ des~ des2 des4-- a--
   ges2( des') ces1~ ces~ ces~ ces2 ces4 g e2 h'
   \bar "||"

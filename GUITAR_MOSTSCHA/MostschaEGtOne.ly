@@ -12,17 +12,18 @@ EGtOne = \relative {
   \bar ".|:"
   \tema
   \bar ":|."
-  \break
+  \tag #'Part {\break}
   \repeat unfold 2 {
     <e, h'>8 q r4 r2 <e h'>8 q r4 \acciaccatura e'8 \glissando fis2
   }
   %<e, h'>8 q r4 r2 <e h'>8 q r4 \acciaccatura e'8 \glissando fis2
-  \break
+  \tag #'Part {\break}
+  \bar ".|:"
   r8.
   \override Stem #'(details lengths) = #'(5)
   <<
     {
-      \once \override Stem #'length = #22
+      \once \override Stem #'length = #20
       \displaceHeads #'(0 0 0 1 -1)
       <\parenthesize cis g' h e f>16
     }
@@ -42,7 +43,7 @@ EGtOne = \relative {
   r4 r16
   <<
     {
-      \once \override Stem #'length = #22
+      \once \override Stem #'length = #20
       \displaceHeads #'(0 0 0 1 -1)
       <\parenthesize cis, g' h! e f>16
     }
@@ -65,14 +66,15 @@ EGtOne = \relative {
   \grace { <a g'>16\glissando }
   \unHideNotes
   <cis b'>8 r r4
+  \bar ":|."
   R1 e'8 b f h,!( c4) <h'! f'!>->
   \bar "||"
-  \break
+  \tag #'Part {\break}
   \repeat unfold 4 {
     \repeat unfold 2 {
       dis,,16( e) g a b cis d dis e8-> r <g b>-> r
     }
-    \break
+    \tag #'Part {\break}
   }
   \repeat unfold 2 {
     <e,, h'>8 q r4 <e'' e'>2 <e,, h'>8 q r4 \acciaccatura e'8 \glissando fis2

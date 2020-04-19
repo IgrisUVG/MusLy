@@ -36,6 +36,7 @@
     instrumentName = "Bass"
   }
   {
+    \removeWithTag #'Partitur
     \Bass
   }
 }

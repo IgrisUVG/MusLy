@@ -9,6 +9,8 @@ EGtFour = \relative {
   \clef "treble_8"
   \time 4/4
   \override Staff.TimeSignature.stencil = ##f
+  \compressFullBarRests
+  %\override MultiMeasureRest.expand-limit = #2
   \bar ".|:"
   r4 r r8
   \ottava #1
@@ -17,6 +19,7 @@ EGtFour = \relative {
   R1
   \bar ":|."
   R1*3 r4 r8 dis,,16 e dis d h b a g fis f
+  \bar ".|:"
   r4 r r8
   \ottava #1
   <b'' d g>16 q q q q q
@@ -26,9 +29,10 @@ EGtFour = \relative {
   \grace { <a, d g d'>16\glissando }
   \unHideNotes
   <c fis b f'!> 8 r r4
+  \bar ":|."
   R1 e8 b f e->~ e4 fis->
   \bar "||"
-  \break
+  \tag #'Part {\break}
   r2. h!4 e8~ <e g h>-> r4 <d g b>16->[ r8 <des f b>16->] r4
   \repeat unfold 3 {
     \override Stem #'(details lengths) = #'(5)

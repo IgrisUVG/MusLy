@@ -4,11 +4,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing #'basic-distance = #30
+  top-markup-spacing #'basic-distance = #5
+  markup-system-spacing #'basic-distance = #30
+  system-system-spacing #'basic-distance = #30
+  last-bottom-spacing #'basic-distance = #30
   two-sided = ##t
   inner-margin = 25
   outer-margin = 15
@@ -40,30 +40,34 @@
   \new StaffGroup
   <<
     \new Staff \with {
-      instrumentName = "E.Gt."
+      instrumentName = "E.Gt.I"
     }
     {
+      \removeWithTag #'Part
       \EGtOne
     }
 
     \new Staff \with {
-      instrumentName = "E.Gt."
+      instrumentName = "E.Gt.II"
     }
     {
+      \removeWithTag #'Part
       \EGtTwo
     }
 
     \new Staff \with {
-      instrumentName = "E.Gt."
+      instrumentName = "E.Gt.III"
     }
     {
+      \removeWithTag #'Part
       \EGtThree
     }
 
     \new Staff \with {
-      instrumentName = "E.Gt."
+      instrumentName = "E.Gt.IIII"
     }
     {
+      \removeWithTag #'Part
       \EGtFour
     }
 
@@ -71,6 +75,7 @@
       instrumentName = "Bass"
     }
     {
+      \removeWithTag #'Part
       \Bass
     }
   >>

@@ -12,26 +12,26 @@ EGtThree = \relative {
   \bar ".|:"
   \tema
   \bar ":|."
-  \break
+  \tag #'Part {\break}
   <e, h'>8 q r8. <b' f' c'>16~ q8. \deadNotesOn q16 \deadNotesOff 
   \afterGrace des4\glissando {\stemDown \hideNotes a16}\unHideNotes
   <e h'>8 q r4 r2
   <e h'>8 q r8. <b' f' c'>16~ q8. \deadNotesOn q16 \deadNotesOff
   \afterGrace des4\glissando {\stemDown \hideNotes a16}\unHideNotes
   <e h'>8 q r8 dis'16 e dis d h b a g fis f
-  \break
+  \tag #'Part {\break}
   \bar ".|:"
   \tema
   \bar ":|."
-  \break
+  \tag #'Part {\break}
   b8 f' c'\noBeam h!4 e,8 b'4 e'8 b f h,!->~ h4 g'->
   \bar "||"
-  \break
-  \repeat unfold 4 {\tema \break}
+  \tag #'Part {\break}
+  \repeat unfold 4 {\tema \tag #'Part {\break}}
   <e,, h'>8 q r8. <b' f' c'>16~ q8. \deadNotesOn q16 \deadNotesOff
   \afterGrace des4\glissando {\stemDown \hideNotes a16}\unHideNotes
   <e h'>8 q r8. cis''16( c2)
-  \break
+  \tag #'Part {\break}
   <e,, h'>8 q r8. <b' f' c'>16~ q8. \deadNotesOn q16 \deadNotesOff
   \afterGrace des4\glissando {\stemDown \hideNotes a16}\unHideNotes
   <e h'>8 q r8 dis'16 e dis d h b a g fis f

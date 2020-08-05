@@ -593,5 +593,6 @@ guitarTwo = \relative{
   \shape #'((0 . 0) (0.2 . 0) (0.2 . -0.3) (0 . -0.8)) Slur
   d\prall( c) b( a)
   <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d f d'> <c g' c> <e a e'>
-  <f c' f>8\noBeam e,,16( f) g c d(\glissando f)
+  <f c' f>8\noBeam e,,16( f) g c d(\glissando f~)<f g d'>\glissando<a~ e'~>
+  <f a e'> c'\glissando d~ <d e a> <g c>8
 }

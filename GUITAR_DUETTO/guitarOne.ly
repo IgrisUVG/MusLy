@@ -558,5 +558,9 @@ guitarOne =
     }
   >>
   <h gis'>8\noBeam <cis ais'> <gis fis'>
-  <ais gis'>
+  <ais gis'> fis''16( e) cis( h) gis( fis) dis( h) ais( gis) fis( dis) cis( ais)
+  \repeat unfold 4 {
+    g8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
+    \stemDown a, <e''\harmonic a\harmonic> \stemNeutral
+  }
 }

@@ -547,4 +547,16 @@ guitarOne =
   \unset stringNumberOrientations
   f,,8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
   \stemDown g, <a''\harmonic d\harmonic> \stemNeutral
+  <fis dis'>4<dis cis'>8
+  <<
+    {
+      dis'[( cis])
+    }
+    \\
+    {
+      e,4
+    }
+  >>
+  <h gis'>8\noBeam <cis ais'> <gis fis'>
+  <ais gis'>
 }

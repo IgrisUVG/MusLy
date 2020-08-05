@@ -593,6 +593,27 @@ guitarTwo = \relative{
   \shape #'((0 . 0) (0.2 . 0) (0.2 . -0.3) (0 . -0.8)) Slur
   d\prall( c) b( a)
   <g, g'>4 <a a'>8 <g g'>[( <a a'>]) <d f d'> <c g' c> <e a e'>
-  <f c' f>8\noBeam e,,16( f) g c d(\glissando f~)<f g d'>\glissando<a~ e'~>
-  <f a e'> c'\glissando d~ <d e a> <g c>8
+  <f c' f>8\noBeam e,,16( f)
+  <<
+    {
+      g16 c d_(\glissando f_~
+      \stemDown
+      f8) f16 c'\glissando d8
+    }
+    \\
+    {
+      s4
+      \stemUp
+      <g, d'>16\glissando<a e'>8 s16 d <e a> <g c>8
+    }
+  >>
+  h,,8[( fis' h]) cis,[( fis cis'])(h )gis(
+  fis[)( cis fis,]) gis'[( dis gis,]) cis
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  \set stringNumberOrientations = #'(left)
+  \override StringNumber.font-size = #'-7
+  <h'''\harmonic\3 dis\harmonic\2>
+  \stemNeutral
+  \ottava #0
 }

@@ -616,4 +616,11 @@ guitarTwo = \relative{
   <h'''\harmonic\3 dis\harmonic\2>
   \stemNeutral
   \ottava #0
+  h,,,8[( fis' h]) cis,[( fis cis'])(h )gis(
+  fis[)( cis fis,]) gis'[( dis gis,]) cis
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  <h'''\harmonic dis\harmonic>
+  \stemNeutral
+  \ottava #0
 }

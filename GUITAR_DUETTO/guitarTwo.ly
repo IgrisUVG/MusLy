@@ -596,25 +596,60 @@ guitarTwo = \relative{
   <f c' f>8\noBeam e,,16( f)
   <<
     {
-      g16 c d_(\glissando f_~
+      g16 
+      \textSpannerDown
+      \stringNumSpan "5"
+      c\startTextSpan d_(-\markup {
+        \postscript #"0.8 -5.8 moveto 2.4 0.8 rlineto stroke"
+      } f-4_~
       \stemDown
-      f8) f16 c'\glissando d8
+      f8) f16\stopTextSpan c'-\markup {
+        \postscript #"0.8 -1.2 moveto 2 0.5 rlineto stroke"
+      } d8
     }
     \\
     {
       s4
       \stemUp
-      <g, d'>16\glissando<a e'>8 s16 d <e a> <g c>8
+      <g, d'>16-\markup {
+        \postscript #"0.8 5.9 moveto 2.7 0.6 rlineto stroke"
+      } <a e'>8 s16 d <e a>-\markup {
+        \postscript #"0.8 3.2 moveto 2 0.8 rlineto stroke"
+      } <g c>8
     }
   >>
-  h,,8[( fis' h]) cis,[( fis cis'])(h )gis(
-  fis[)( cis fis,]) gis'[( dis gis,]) cis
-  \ottava #1
-  \set Staff.ottavation = #"8"
-  \set stringNumberOrientations = #'(left)
-  \override StringNumber.font-size = #'-7
-  <h'''\harmonic\3 dis\harmonic\2>
+  h,,8\6[( fis' h]) cis,\5[( fis cis'])(h )gis(
+  fis[)( cis fis,]) gis'[( dis gis,]) %cis
+  %<h'''\harmonic\3 dis\harmonic\2>
+  <<
+    {
+      \stemDown
+      cis
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      %\set stringNumberOrientations = #'(left)
+      \override StringNumber.font-size = #'-7
+      %\once \override Stem #'length = #20
+      %\displaceHeads #'(0 0 0 1 -1)
+      \once \override Accidental.extra-offset = #'(0.2 . 0)
+      d'''!\harmonic\3
+    }
+    \\
+    {
+      s
+      %\voiceThree
+      \override StringNumber.font-size = #'-7
+      \once \override NoteHead.X-offset = #2
+      \once \override Stem.rotation = #'(155 0 0)
+      \once \override Stem.extra-offset = #'(1.1 . 0.5)
+      \once \override Stem.length = #10.5
+      \hide Flag
+      %\once \override Flag.stencil = ##f
+      \once \override Accidental.extra-offset = #'(3.4 . 0)
+      dis\harmonic\2
+    }
+  >>
   \stemNeutral
   \ottava #0
-  
+
 }

@@ -618,7 +618,7 @@ guitarTwo = \relative{
       } <g c>8
     }
   >>
-  h,,8\6[( fis' h]) cis,\5[( fis cis'])(h )gis(
+  h,,8\6[( fis' h]) cis,\5[(^"IV" fis cis'])(h )gis(
   fis[)( cis fis,]) gis'[( dis gis,]) %cis
   %<h'''\harmonic\3 dis\harmonic\2>
   <<

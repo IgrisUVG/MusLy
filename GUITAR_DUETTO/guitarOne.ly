@@ -558,7 +558,10 @@ guitarOne =
     }
   >>
   <h gis'>8\noBeam <cis ais'> <gis fis'>
-  <ais gis'> fis''16( e) cis( h) gis( fis) dis( h) ais( gis) fis( dis) cis( ais)
+  <ais gis'> fis''16( e) cis(\2 h) gis(\3 fis)
+  \textSpannerUp
+  \stringNumSpan "4"
+  dis(\startTextSpan h) ais( gis)\stopTextSpan fis(\5 dis) cis(\6 ais)
   \repeat unfold 4 {
     g8[( d' g]) a,[( d a'])(g) e( d[)( a' d]) h,[( e h'])
     \stemDown a, <e''\harmonic a\harmonic> \stemNeutral

@@ -599,9 +599,9 @@ guitarTwo = \relative{
       g16 
       \textSpannerDown
       \stringNumSpan "5"
-      c\startTextSpan d_(-\markup {
-        \postscript #"0.8 -5.8 moveto 2.4 0.8 rlineto stroke"
-      } f-4_~
+      c\startTextSpan d-4_(-\markup {
+        \postscript #"0.8 -7.4 moveto 2.4 0.8 rlineto stroke"
+      } f_~
       \stemDown
       f8) f16\stopTextSpan c'-\markup {
         \postscript #"0.8 -1.2 moveto 2 0.5 rlineto stroke"

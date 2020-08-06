@@ -651,5 +651,6 @@ guitarTwo = \relative{
   >>
   \stemNeutral
   \ottava #0
-  <g,,, c! d fis cis'>4-> h'' a fis8 d e4
+  <g,,, c! d fis cis'>4->^"VI" <d h' d g d' h'>^"XII" <d a' d a' d a'>
+  <e fis''>8 <fis d''> <a e''>4
 }

@@ -596,7 +596,7 @@ guitarTwo = \relative{
   <f c' f>8\noBeam e,,16( f)
   <<
     {
-      g16 
+      g16
       \textSpannerDown
       \stringNumSpan "5"
       c\startTextSpan d-4_(-\markup {
@@ -651,5 +651,5 @@ guitarTwo = \relative{
   >>
   \stemNeutral
   \ottava #0
-
+  <g,,, c! d fis cis'>4-> h'' a fis8 d e4
 }

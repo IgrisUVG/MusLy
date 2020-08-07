@@ -618,13 +618,16 @@ guitarTwo = \relative{
       } <g c>8
     }
   >>
+  \override Fingering.staff-padding = #'()
+  \override StringNumber.staff-padding = #'()
   h,,8\6[( fis' h]) cis,\5[(^"IV" fis cis'])(h )gis(
-  fis[)( cis fis,]) gis'[( dis gis,]) %cis
+  fis[)( cis fis,]) gis'[( dis_3 gis,]) %cis
   %<h'''\harmonic\3 dis\harmonic\2>
   <<
     {
+      \override Fingering.staff-padding = #'()
       \stemDown
-      cis
+      cis-3
       \ottava #1
       \set Staff.ottavation = #"8"
       %\set stringNumberOrientations = #'(left)
@@ -656,5 +659,11 @@ guitarTwo = \relative{
   <d_0\4 h'\5 g'\3 d'\2 h'\1> <d a' d a' d a'>^"XII"
   <e fis''>8 <fis d''>
   <a fis' h e>8\noBeam a''16( e) c( h) a( g)
-  fis d( e\glissando fis) cis(\glissando h) a(\glissando g)
+  fis d( e-\markup {
+    \postscript #"0.8 4.8 moveto 2 0.5 rlineto stroke"
+  } fis) cis(-\markup {
+    \postscript #"0.6 2.2 moveto 2 -0.5 rlineto stroke"
+  } h) a(-\markup {
+    \postscript #"0.6 1.2 moveto 2 -0.5 rlineto stroke"
+  } g)
 }

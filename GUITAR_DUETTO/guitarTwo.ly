@@ -651,7 +651,9 @@ guitarTwo = \relative{
   >>
   \stemNeutral
   \ottava #0
-  <g,,, c! d fis cis'>4->^"VI" <d h' d g d' h'>^"XII" <d a' d a' d a'>
+  <g,,, c! d fis cis'>4->^"VI"
+  \set stringNumberOrientations = #'(left)
+  <d_0\4 h'\5 g'\3 d'\2 h'\1> <d a' d a' d a'>^"XII"
   <e fis''>8 <fis d''>
   <a fis' h e>8\noBeam a''16( e) c( h) a( g)
   fis d( e\glissando fis) cis(\glissando h) a(\glissando g)

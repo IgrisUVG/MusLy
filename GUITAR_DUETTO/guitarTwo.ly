@@ -657,8 +657,8 @@ guitarTwo = \relative{
   <g,,, c! d fis cis'>4->^"VI"
   \set stringNumberOrientations = #'(left)
   <d_0\4 h'\5 g'\3 d'\2 h'\1> <d a' d a' d a'>^"XII"
-  <e fis''>8 <fis d''>
-  <a fis' h e>8\noBeam a''16( e) c( h) a( g)
+  <e d' a' fis'>8 <fis b g' d'>
+  <a fis' h? e>8\noBeam a''16( e) c( h) a( g)
   fis d( e-\markup {
     \postscript #"0.8 4.8 moveto 2 0.5 rlineto stroke"
   } fis) cis(-\markup {

@@ -662,8 +662,8 @@ guitarTwo = \relative{
   fis d( e-\markup {
     \postscript #"0.8 4.8 moveto 2 0.5 rlineto stroke"
   } fis) cis(-\markup {
-    \postscript #"0.6 2.2 moveto 2 -0.5 rlineto stroke"
-  } h) a(-\markup {
-    \postscript #"0.6 1.2 moveto 2 -0.5 rlineto stroke"
-  } g)
+    \postscript #"1 5 moveto 2.2 -0.5 rlineto stroke"
+  } h) b(-\markup {
+    \postscript #"1 4.8 moveto 2.4 -0.5 rlineto stroke"
+  } as)
 }

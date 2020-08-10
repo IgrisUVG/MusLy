@@ -542,12 +542,12 @@ guitarOne =
   \stemDown g,
   \set stringNumberOrientations = #'(left)
   \override StringNumber.font-size = #'-7
-  <a''\harmonic\5 d\harmonic\4> \stemNeutral
+  <d'''\harmonic\4 g\harmonic\3> \stemNeutral
   \revert StringNumber.font-size
   \unset stringNumberOrientations
-  f,,8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
-  \stemDown g, <a''\harmonic d\harmonic> \stemNeutral
-  <fis dis'>4<dis cis'>8
+  f,,,8[( c' f]) g,[( c g'])(f) d( c[)( g' c]) a,[( d a'])
+  \stemDown g, <d'''\harmonic g\harmonic> \stemNeutral
+  <fis, dis'>4<dis cis'>8
   <<
     {
       dis'[( cis])

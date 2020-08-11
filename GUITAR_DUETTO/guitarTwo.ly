@@ -666,4 +666,15 @@ guitarTwo = \relative{
   } h) b(-\markup {
     \postscript #"1 4.8 moveto 2.4 -0.5 rlineto stroke"
   } as)
+  <g h g' d'>4<a' c>8
+  <<
+    {
+      d8[( c])
+    }
+    \\
+    {
+      e,4
+    }
+  >>
+  <d g>8\noBeam <c a'><h h'>
 }

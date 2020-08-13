@@ -658,14 +658,21 @@ guitarTwo = \relative{
   \set stringNumberOrientations = #'(left)
   <d_0\4 h'\5 g'\3 d'\2 h'\1> <d a' d a' d a'>^"XII"
   <e d' a' fis'>8 <fis b g' d'>
-  <a fis' h? e>8\noBeam a''16( e) c( h) a( g)
-  fis d( e-\markup {
+  <a fis' h? e>8\noBeam
+  \shape #'((-0.3 . 0.3) (0 . 0.5) (0 . 0.5) (0.5 . 0.3)) PhrasingSlur
+  \fretNumSpan "XII"
+  \textSpannerDown
+  a''16\startTextSpan\(( e) c( h) a( g)\)\stopTextSpan
+  fis^"VII" d( e-\markup {
     \postscript #"0.8 4.8 moveto 2 0.5 rlineto stroke"
-  } fis) cis(-\markup {
+  } fis)
+  \stringNumSpan "4"
+  \textSpannerUp
+  cis\startTextSpan(-\markup {
     \postscript #"1 5 moveto 2.2 -0.5 rlineto stroke"
   } h) b(-\markup {
     \postscript #"1 4.8 moveto 2.4 -0.5 rlineto stroke"
-  } as)
+  } as)\stopTextSpan
   <g h g' d'>4<a' c>8
   <<
     {
@@ -676,5 +683,5 @@ guitarTwo = \relative{
       e,4
     }
   >>
-  <d g>8\noBeam <c a'><h h'>
+  <d h' e>8\noBeam <c g' d'><h a' g'>
 }

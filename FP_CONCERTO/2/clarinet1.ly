@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
-\include "base.ly"
+
+%\include "base.ly"
+
 clarinetOneMusic = \relative e'' {
   \base
   \override MultiMeasureRest #'expand-limit = #3
@@ -15,4 +19,5 @@ clarinetOneMusic = \relative e'' {
   %\override Stem.neutral-direction = #up
   \repeat unfold 4 {a b!} h!1~ h \repeat unfold 4 {<f c'>4<fis cis'>}
   \repeat unfold 8 {<gis dis'><a e'>} \repeat unfold 8 {<b f'><h fis'>}
+  \repeat unfold 8 {<c g'><cis gis'>} \repeat unfold 8 {<d a'><es b'>}
 }

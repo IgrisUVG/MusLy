@@ -37,4 +37,8 @@ vniTwoMusic = \relative e' {
     \repeat unfold 2 {fis16( g)}
     \repeat unfold 2 {e( eis)}
   }
+  \repeat unfold 8 {
+    \repeat unfold 2 {f16( fis)}
+    \repeat unfold 2 {dis( e)}
+  }
 }

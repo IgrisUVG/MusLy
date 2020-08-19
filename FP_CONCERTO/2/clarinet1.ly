@@ -7,7 +7,7 @@
 
 clarinetOneMusic = \relative e'' {
   \base
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   a2( fis4 cis e d cis a cis h a e~ e) d2( e4~ e d2 e4) R1*8
   d'1~ d d~ d cis( d) e(\( d)~ d d'~ d\) R1*11
   r2^"solo" des,(^~ des!1^~ des!2 c) r es,(~ es!4 d'2.~ d2 e fis2. f4)

@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -12,11 +13,11 @@
 #(set-global-staff-size 16)
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #28
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #28
+  last-bottom-spacing.basic-distance = #15
   two-sided = ##t
   inner-margin = 20
   outer-margin = 10

@@ -8,7 +8,7 @@
 vleMusic = \relative e' {
   \base
   \clef alto
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   R1*5
   <<
     {

@@ -11,7 +11,7 @@ rechts = {
   \time 4/4
   %\override DynamicLineSpanner.staff-padding = #3
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   R1*5
   \relative d'' {
     a1~ a2 d e a fis1~ fis2 d fis cis fis1 g

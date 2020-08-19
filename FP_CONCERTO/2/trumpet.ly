@@ -1,9 +1,13 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
-\include "base.ly"
+
+%\include "base.ly"
+
 trumpetMusic = \relative e'' {
   \base
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   R1*27 h!1->\>~ h\! R1*54
   <<
     {

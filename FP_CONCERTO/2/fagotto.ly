@@ -5,7 +5,7 @@
 
 fagottoMusic = \relative e {
   \base
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   \clef bass
   \repeat unfold 3 {d2( d')} d1( a) R1*12
   cis2.\( d4 h2. d4 fis,2. a4 e1~\)_( e d_~ d) R1*43

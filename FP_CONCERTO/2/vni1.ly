@@ -7,7 +7,7 @@
 
 vniOneMusic = \relative es'' {
   \base
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   R1*5
   <<
     {

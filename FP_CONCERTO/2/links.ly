@@ -1,12 +1,16 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "makeOctaves.ly"
+
 links = {
   \clef bass
   \key d \major
   \time 4/4
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #3
+  \override MultiMeasureRest.expand-limit = #3
   R1*5
   d,4 a, fis e a d' cis' a d, a, fis e a d' cis' g
   <<

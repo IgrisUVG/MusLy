@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "base.ly"
+
 vniOneMusic = \relative es'' {
   \base
   \override MultiMeasureRest #'expand-limit = #3
@@ -39,5 +43,9 @@ vniOneMusic = \relative es'' {
   \repeat unfold 8 {
     \repeat unfold 2 {<d b'>16(<cis a'>)}
     \repeat unfold 2 {<h gis'>(<c g'>)}
+  }
+  \repeat unfold 8 {
+    \repeat unfold 2 {<cis a'>16(<h gis'>)}
+    \repeat unfold 2 {<a g'>(<ais fis'>)}
   }
 }

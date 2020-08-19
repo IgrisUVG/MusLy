@@ -42,8 +42,7 @@ links = {
   <d, d>2. <fis, fis>4<e, e>1<cis, cis>2.<d, d>4~ q2.<g,, g,>4~
   q2 <fis,, fis,>4<f,, f,><e,, e,>2.<d,, d,>4~ q2. b,4(
   d fis gis b c' d' <e' fis'>2)
-  %{
-  R1*53
+  R1*68
   d,4 a, fis g a e'
   \clef treble
   <<
@@ -84,5 +83,4 @@ links = {
     }
   >>
   <a d'>4
-  %}
 }

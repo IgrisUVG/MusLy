@@ -20,4 +20,5 @@ clarinetOneMusic = \relative e'' {
   \repeat unfold 4 {a b!} h!1~ h \repeat unfold 4 {<f c'>4<fis cis'>}
   \repeat unfold 8 {<gis dis'><a e'>} \repeat unfold 8 {<b f'><h fis'>}
   \repeat unfold 8 {<c g'><cis gis'>} \repeat unfold 8 {<d a'><es b'>}
+  <e! h'!><fis cis'> \repeat unfold 7 {<e h'><fis cis'>}
 }

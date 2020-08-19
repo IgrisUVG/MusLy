@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "base.ly"
+
 vleMusic = \relative e' {
   \base
   \clef alto
@@ -21,5 +25,5 @@ vleMusic = \relative e' {
   c,~( c4 h'2.~ h2 cis es2. d4) R1 r4 c2->( h4) b2->( e,4) r
   r2 as~( as!1^~
   \once \override TieColumn #'tie-configuration = #'((6.0 . 1))
-  as!2 g) fis1~ fis~ fis
+  as!2 g) fis1~ fis~ fis fis~ fis~ fis
 }

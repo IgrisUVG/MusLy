@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 cornoOneMusic = \relative e' {
   \base
   \override MultiMeasureRest #'expand-limit = #3
@@ -9,4 +12,6 @@ cornoOneMusic = \relative e' {
   R1*4 es1-> R1*54
   \clef treble
   b''1->~( b!2 a)
+  R1*16
+  <d,, fis>1~ q~ q
 }

@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "base.ly"
+
 vniTwoMusic = \relative e' {
   \base
   \override MultiMeasureRest #'expand-limit = #3
@@ -40,5 +44,11 @@ vniTwoMusic = \relative e' {
   \repeat unfold 8 {
     \repeat unfold 2 {f16( fis)}
     \repeat unfold 2 {dis( e)}
+  }
+  \repeat unfold 2 {e16( f)}
+  d!( e) d( e)
+  \repeat unfold 7 {
+    \repeat unfold 2 {e16( f)}
+    \repeat unfold 2 {d( e)}
   }
 }

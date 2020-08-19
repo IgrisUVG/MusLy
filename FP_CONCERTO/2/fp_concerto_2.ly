@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -60,7 +61,7 @@
       shortInstrumentName = #"F-p"
       fontSize = #1
       \override StaffSymbol.staff-space = #(magstep 1)
-      %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+      \override StaffGrouper.staff-staff-spacing.basic-distance = #15
       \consists #Span_stem_engraver
     }
     <<

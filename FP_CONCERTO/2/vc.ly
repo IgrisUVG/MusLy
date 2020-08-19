@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "base.ly"
+
 vcMusic = \relative e {
   \base
   \clef bass
@@ -12,4 +16,5 @@ vcMusic = \relative e {
   r4 c2->( h4) b2->( e,4) r r2 as~( as!1^~
   \once \override TieColumn #'tie-configuration = #'((5.0 . 1))
   as!2 g) fis1~ fis~ fis
+  r2 e~( e1~ e2 d) r fis,~( fis4 e'2.~ e2 h' fis'2. e4)
 }

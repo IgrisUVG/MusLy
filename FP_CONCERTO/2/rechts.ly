@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "makeOctaves.ly"
+
 rechts = {
   \clef treble
   \key d \major
@@ -45,14 +49,14 @@ rechts = {
     q <d g a d>) fis2~( fis4 g) e2~( e4 d) d2
     \override TextSpanner.bound-details.right.padding = #0
     \override TextSpanner.bound-details.left.padding = #0
+    R1*68
     %{
-    R1*53
     \tuplet 3/2 2 {
       fis,4 a d e cis a fis' h, d g e a
       \override TupletNumber #'transparent = ##t
       \override TupletBracket #'bracket-visibility = ##f
       fis a, e' d a g fis d' e a, cis a'
-      fis h, cis fis h d, 
+      fis h, cis fis h d,
       <<
         {
           \voiceTwo

@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \include "base.ly"
+
 fluteMusic = \relative e' {
   \base
   \override MultiMeasureRest #'expand-limit = #3
@@ -17,5 +21,5 @@ fluteMusic = \relative e' {
   \repeat unfold 4 {b! h!} c1~ c! gis'->~ gis!
   d!4^\markup{\italic legato} cis! \repeat unfold 7 {d! cis!}
   \repeat unfold 8 {es!4 d} e!4 dis \repeat unfold 7 {e4 dis}
-  \repeat unfold 8 {f4 e}
+  \repeat unfold 8 {f4 e} fis!4 eis \repeat unfold 7 {fis4 eis}
 }

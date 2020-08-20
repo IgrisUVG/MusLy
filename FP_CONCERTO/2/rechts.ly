@@ -50,11 +50,15 @@ rechts = {
     \override TextSpanner.bound-details.right.padding = #0
     \override TextSpanner.bound-details.left.padding = #0
     R1*68
-    %{
+    \set subdivideBeams = ##t
+    %\set tupletSpannerDuration = #(ly:make-moment 1 4)
+    \set baseMoment = #(ly:make-moment 1 6)
+    %\set beatStructure = #'(4 4 4)
     \tuplet 3/2 2 {
-      fis,4 a d e cis a fis' h, d g e a
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      fis,16[ e' a d, a fis' h e, d a' g' fis]
+      \override TupletNumber.transparent = ##t
+      \override TupletBracket.bracket-visibility = ##f
+      e,4 cis a fis' h, d g e a
       fis a, e' d a g fis d' e a, cis a'
       fis h, cis fis h d,
       <<
@@ -71,6 +75,5 @@ rechts = {
       >>
       a' fis e d a h g' d e a h %fis
     }
-    %}
   }
 }

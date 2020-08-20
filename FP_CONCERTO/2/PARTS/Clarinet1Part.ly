@@ -3,7 +3,7 @@
 
 \language "deutsch"
 
-\include "../base.ly"
+%\include "../base.ly"
 
 \header {
   title = ""
@@ -11,6 +11,8 @@
   composer = "I. G."
   tagline = ##f
 }
+
+#(ly:set-option 'relative-includes #t)
 
 \paper {
   #(set-paper-size "a4")

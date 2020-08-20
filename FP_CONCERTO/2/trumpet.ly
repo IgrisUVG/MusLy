@@ -3,7 +3,7 @@
 
 \language "deutsch"
 
-%\include "base.ly"
+\include "base.ly"
 
 trumpetMusic = \relative e'' {
   \base

@@ -10,6 +10,8 @@
   tagline = ##f
 }
 
+#(ly:set-option 'relative-includes #t)
+
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #25

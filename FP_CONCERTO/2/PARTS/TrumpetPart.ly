@@ -10,6 +10,8 @@
   tagline = ##f
 }
 
+#(ly:set-option 'relative-includes #t)
+
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
@@ -30,12 +32,13 @@
 }
 
 \include "..\trumpet.ly"
-\include "..\base.ly"
+%\include "..\base.ly"
+
 \score {
   \new Staff \with {
     instrumentName = \markup {
       \center-column {
-       "Clarinet"
+       "Trumpet"
         \line { "in B" \smaller \flat }
       }
     }

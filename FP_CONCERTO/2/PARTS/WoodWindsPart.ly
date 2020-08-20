@@ -9,8 +9,10 @@
   composer = "I. G."
   tagline = ##f
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
+
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #15

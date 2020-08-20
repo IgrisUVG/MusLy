@@ -3,7 +3,7 @@
 
 \language "deutsch"
 
-%\include "base.ly"
+\include "base.ly"
 
 clarinetOneMusic = \relative e'' {
   \base

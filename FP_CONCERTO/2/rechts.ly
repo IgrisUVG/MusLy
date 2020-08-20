@@ -58,7 +58,8 @@ rechts = {
       fis,16[ e' a d, a fis' h e, d a' g' fis]
       \override TupletNumber.transparent = ##t
       \override TupletBracket.bracket-visibility = ##f
-      e,4 cis a fis' h, d g e a
+      e,[ d' a' h, cis, a' g' fis, a, g' fis' a,]
+      h,4 d g e a
       fis a, e' d a g fis d' e a, cis a'
       fis h, cis fis h d,
       <<

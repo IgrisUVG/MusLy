@@ -22,4 +22,5 @@ fluteMusic = \relative e' {
   d!4^\markup{\italic legato} cis! \repeat unfold 7 {d! cis!}
   \repeat unfold 8 {es!4 d} e!4 dis \repeat unfold 7 {e4 dis}
   \repeat unfold 8 {f4 e} fis!4 eis \repeat unfold 7 {fis4 eis}
+  \repeat unfold 6 {g4 fis}
 }

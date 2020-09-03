@@ -51,4 +51,8 @@ vniTwoMusic = \relative e' {
     \repeat unfold 2 {e16( f)}
     \repeat unfold 2 {d( e)}
   }
+  \repeat unfold 6 {
+    \repeat unfold 2 {d16( e)}
+    \repeat unfold 2 {cis( d)}
+  }
 }

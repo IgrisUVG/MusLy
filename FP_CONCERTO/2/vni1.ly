@@ -48,4 +48,8 @@ vniOneMusic = \relative es'' {
     \repeat unfold 2 {<cis a'>16(<h gis'>)}
     \repeat unfold 2 {<a g'>(<ais fis'>)}
   }
+  \repeat unfold 6 {
+    \repeat unfold 2 {<h gis'>16(<a g'>)}
+    \repeat unfold 2 {<gis fis'>(<a e'>)}
+  }
 }

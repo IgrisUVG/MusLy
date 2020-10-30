@@ -63,8 +63,10 @@ rechts = {
       a,[ a' fis' g, cis, gis' e' a, a, fis' d' e,]
       a,[ g' d' fis, e cis' g' h, d, b' fis' a,]
       cis,[ gis' e' g, h, fis' d' f, b, e cis' es,]
-      d4 e a, cis a'
-      fis h, cis fis h d,
+      d4 e a,
+      cis4 a' fis
+      h,4 cis fis
+      h4 d,
       <<
         {
           \voiceTwo

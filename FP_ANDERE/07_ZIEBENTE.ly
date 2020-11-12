@@ -375,8 +375,8 @@ rechts = \relative {
       \set baseMoment = #(ly:make-moment 1 4)
       c8<as as'><c c'><f f'><ces' ces'>4<as ces des g>8.<f f'>16
       <es es'>4 s r16 b'-.( g-. es-. b-. g-. es-. b-.)
-      \override Rest.extra-offset = #'(0 . 3)
-      r c''-.( as-. es-.)
+      %\override Rest.extra-offset = #'(0 . 3)
+      d''\rest c-.( as-. es-.)
     }
     \\
     {

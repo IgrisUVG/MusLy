@@ -77,12 +77,170 @@ stringNumSpan =
 global = {
   %\key d \major
   \time 2/4
+  \override Staff.TimeSignature.stencil = ##f
 }
 
-classicalGuitar = \relative c' {
+classicalGuitar = \relative c {
   \global
-  \compressFullBarRests
-
+  %\compressFullBarRests
+  \partial 8 <cis d'>8
+  \bar ".|:"
+  <<
+    {
+      <g' fis'>4. b'8-\markup {
+        \postscript #"1.5 -1 moveto 3.5 1 rlineto stroke"
+      }
+      <fis, a' cis>4 r8 c''-\markup {
+        \postscript #"1.4 -1.4 moveto 2.8 -0.5 rlineto stroke"
+      }
+    }
+    \\
+    {
+      r8 a,, b4 r8 gis'-\markup {
+        \postscript #"1.3 4.4 moveto 3.5 1 rlineto stroke"
+      }
+      <f g c!>4
+    }
+  >>
+  \time 5/8
+  <<
+    {
+      \stemDown a'16(\noBeam \stemUp f8.)
+    }
+    \\
+    {
+      s16 b,\rest e8
+    }
+    \\
+    {
+      \voiceTwo
+      s8. b16-\markup {
+        \postscript #"1.4 4.4 moveto 1.3 -1 rlineto stroke"
+      }
+    }
+    \\
+    {
+      \voiceTwo
+      b,4
+    }
+  >>
+  <<
+    {
+      f'8 r16 d'-\markup {
+        \postscript #"1.4 -1.3 moveto 2.8 -0.5 rlineto stroke"
+      }
+    }
+    \\
+    {
+      h,16( cis)-\markup {
+        \postscript #"0.7 5.3 moveto 2 1 rlineto stroke"
+      } e8
+    }
+  >>
+  <ais, h'>8
+  \time 2/4
+  <<
+    {
+      <e' dis'>4. <h g''>8-\markup {
+        \postscript #"1.5 -1 moveto 2.8 1 rlineto stroke"
+      }
+    }
+    \\
+    {
+      r8 fis g4
+    }
+  >>
+  <<
+    {
+      h''!4 s8 <h,, fis''>
+    }
+    \\
+    {
+      h'8\rest <d g>-\markup {
+        \postscript #"1 7 moveto 2.2 -1 rlineto stroke"
+      }-\markup {
+        \postscript #"0.4 4.4 moveto 2.3 -1.1 rlineto stroke"
+      }
+      <h e>4-\markup {
+        \postscript #"1.5 5 moveto 4.8 1 rlineto stroke"
+      }
+    }
+    \\
+    {
+      \voiceTwo
+      b,4 s
+    }
+  >>
+  <<
+    {
+      \stemDown
+      g''16( e) d-\markup {
+        \postscript #"1.4 -1.4 moveto 2.8 -0.5 rlineto stroke"
+      } h~
+      \stemUp
+      h4
+      \stemDown
+      r8 a'-\markup {
+        \postscript #"1.5 -1 moveto 3.5 1 rlineto stroke"
+      } <b,, d''>4
+    }
+    \\
+    {
+      s4 s8 <f' e'>
+      \stemUp
+      <g d'>4 s
+    }
+    \\
+    {
+      \voiceTwo
+      s4 <c,~ g''^~> q s8 <es' g>
+    }
+  >>
+  <<
+    {
+      \stemDown
+      fis'4 s8 <e, fis>
+    }
+    \\
+    {
+      g,16\rest h'^( e, cis)-\markup {
+        \postscript #"1 7 moveto 2.2 -1 rlineto stroke"
+      }
+      \stemUp
+      gis4
+    }
+    \\
+    {
+      \voiceTwo
+      \stemUp
+      e,4
+      \stemDown
+      a
+    }
+  >>
+  <<
+    {
+      \stemDown
+      <c h''>4 r8 <g'' a>
+    }
+    \\
+    {
+      s16 d g, gis <d a'>4
+    }
+  >>
+  <<
+    {
+      \stemDown
+      <c h''>4 r8 <dis' g>
+    }
+    \\
+    {
+      s16 d g, f-\markup {
+        \postscript #"1 7 moveto 2.2 -1 rlineto stroke"
+      } <cis e>4
+    }
+  >>
+  \bar ":|."
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

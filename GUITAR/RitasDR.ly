@@ -96,8 +96,10 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      r8 a,, b4 r8 gis'-\markup {
-        \postscript #"1.3 4.4 moveto 3.5 1 rlineto stroke"
+      r8 a,, b4
+      \override Score.BarLine.stencil = ##f
+      r8 gis'-\markup {
+        \postscript #"1.4 4.2 moveto 4.2 1 rlineto stroke"
       }
       <f g c!>4
     }
@@ -109,7 +111,7 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      s16 b,\rest e8
+      s16 b,\rest e8\noBeam
     }
     \\
     {
@@ -126,14 +128,14 @@ classicalGuitar = \relative c {
   >>
   <<
     {
-      f'8 r16 d'-\markup {
+      f'8\noBeam r16 d'-\markup {
         \postscript #"1.4 -1.3 moveto 2.8 -0.5 rlineto stroke"
       }
     }
     \\
     {
       h,16( cis)-\markup {
-        \postscript #"0.7 5.3 moveto 2 1 rlineto stroke"
+        \postscript #"0.7 5.5 moveto 2 1 rlineto stroke"
       } e8
     }
   >>
@@ -157,12 +159,12 @@ classicalGuitar = \relative c {
     \\
     {
       h'8\rest <d g>-\markup {
-        \postscript #"1 7 moveto 2.2 -1 rlineto stroke"
+        \postscript #"1 6.3 moveto 2.7 -1 rlineto stroke"
       }-\markup {
-        \postscript #"0.4 4.4 moveto 2.3 -1.1 rlineto stroke"
+        \postscript #"0.6 3.7 moveto 2.8 -1.1 rlineto stroke"
       }
       <h e>4-\markup {
-        \postscript #"1.5 5 moveto 4.8 1 rlineto stroke"
+        \postscript #"1.5 5.5 moveto 4.8 1 rlineto stroke"
       }
     }
     \\
@@ -175,13 +177,13 @@ classicalGuitar = \relative c {
     {
       \stemDown
       g''16( e) d-\markup {
-        \postscript #"1.4 -1.4 moveto 2.8 -0.5 rlineto stroke"
+        \postscript #"1.2 -0.8 moveto 2 -1 rlineto stroke"
       } h~
       \stemUp
       h4
       \stemDown
       r8 a'-\markup {
-        \postscript #"1.5 -1 moveto 3.5 1 rlineto stroke"
+        \postscript #"0.8 -0.2 moveto 3.3 1.5 rlineto stroke"
       } <b,, d''>4
     }
     \\
@@ -204,7 +206,7 @@ classicalGuitar = \relative c {
     \\
     {
       g,16\rest h'^( e, cis)-\markup {
-        \postscript #"1 7 moveto 2.2 -1 rlineto stroke"
+        \postscript #"1.5 4 moveto 2.2 -1 rlineto stroke"
       }
       \stemUp
       gis4
@@ -236,10 +238,11 @@ classicalGuitar = \relative c {
     \\
     {
       s16 d g, f-\markup {
-        \postscript #"1 7 moveto 2.2 -1 rlineto stroke"
+        \postscript #"1 4.2 moveto 3.5 -0.5 rlineto stroke"
       } <cis e>4
     }
   >>
+  \revert Score.BarLine.stencil
   \bar ":|."
 }
 

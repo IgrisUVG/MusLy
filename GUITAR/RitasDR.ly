@@ -141,6 +141,7 @@ classicalGuitar = \relative c {
   >>
   <ais, h'>8
   \time 2/4
+  \break
   <<
     {
       <e' dis'>4. <h g''>8-\markup {
@@ -198,6 +199,7 @@ classicalGuitar = \relative c {
       s4 <c,~ g''^~> q s8 <es' g>
     }
   >>
+  \break
   <<
     {
       \stemDown

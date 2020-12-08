@@ -3,7 +3,7 @@
 \language "deutsch"
 
 \header {
-  title = "201205"
+  title = "R"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }

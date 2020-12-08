@@ -100,7 +100,7 @@ classicalGuitar = \relative c {
     \\
     {
       r8 a,, b4
-      \override Score.BarLine.stencil = ##f
+      %\override Score.BarLine.stencil = ##f
       r8 gis'-\markup {
         \postscript #"1.4 4.2 moveto 4.2 1 rlineto stroke"
       }
@@ -248,7 +248,7 @@ classicalGuitar = \relative c {
       } <cis e>4
     }
   >>
-  \revert Score.BarLine.stencil
+  %\revert Score.BarLine.stencil
   \bar ":|."
 }
 

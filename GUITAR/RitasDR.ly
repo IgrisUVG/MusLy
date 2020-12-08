@@ -211,7 +211,7 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      g,16\rest h'^( e, cis)-\markup {
+      s16 h'^( e, cis)-\markup {
         \postscript #"1.5 4 moveto 2.2 -1 rlineto stroke"
       }
       \stemUp

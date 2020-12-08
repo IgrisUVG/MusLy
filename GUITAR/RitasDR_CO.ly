@@ -86,8 +86,10 @@ global = {
 classicalGuitar = \relative c {
   \global
   %\compressFullBarRests
-  \partial 8 <cis d'>8
-  \bar ".|:"
+  %\partial 8 
+  \cadenzaOn
+  <cis d'>8
+  \bar ".|:"\noBreak
   <<
     {
       <g' fis'>4. b'8-\markup {
@@ -100,7 +102,7 @@ classicalGuitar = \relative c {
     \\
     {
       r8 a,, b4
-      \override Score.BarLine.stencil = ##f
+      %\override Score.BarLine.stencil = ##f
       r8 gis'-\markup {
         \postscript #"1.4 4.2 moveto 4.2 1 rlineto stroke"
       }
@@ -138,13 +140,14 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      h,16( cis)-\markup {
+      h,16([ cis)]-\markup {
         \postscript #"0.7 5.5 moveto 2 1 rlineto stroke"
       } e8
     }
   >>
   <ais, h'>8
   \time 2/4
+  \bar ""
   \break
   <<
     {
@@ -181,9 +184,9 @@ classicalGuitar = \relative c {
   <<
     {
       \stemDown
-      g''16( e) d-\markup {
+      g''16[( e) d-\markup {
         \postscript #"1.2 -0.8 moveto 2 -1 rlineto stroke"
-      } h~
+      } h]~
       \stemUp
       h4
       \stemDown
@@ -203,6 +206,7 @@ classicalGuitar = \relative c {
       s4 <c,~ g''^~> q s8 <es' g>
     }
   >>
+  \bar ""
   \break
   <<
     {
@@ -211,7 +215,7 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      g,16\rest h'^( e, cis)-\markup {
+      g,16\rest h'^([ e, cis)]-\markup {
         \postscript #"1.5 4 moveto 2.2 -1 rlineto stroke"
       }
       \stemUp
@@ -233,7 +237,7 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      s16 d g, gis <d a'>4
+      s16 d[ g, gis] <d a'>4
     }
   >>
   <<
@@ -243,12 +247,12 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      s16 d g, f-\markup {
+      s16 d[ g, f]-\markup {
         \postscript #"1 4.2 moveto 3.5 -0.5 rlineto stroke"
       } <cis e>4
     }
   >>
-  \revert Score.BarLine.stencil
+  %\revert Score.BarLine.stencil
   \bar ":|."
 }
 

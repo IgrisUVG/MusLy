@@ -104,7 +104,7 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      h,16([ cis)]-\markup {
+      h,16([ cis!)]-\markup {
         \postscript #"1.5 5 moveto 2.5 1 rlineto stroke"
       } e8
     }
@@ -164,7 +164,7 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      s4 s8 <f' e'>
+      s4 s8 <f'! e'>
       \stemUp
       <g d'>4 s
     }
@@ -182,7 +182,7 @@ classicalGuitar = \relative c {
   <<
     {
       \stemDown
-      fis'4 s8 <e, fis>
+      fis'4 s8 <e, fis!>
     }
     \\
     {
@@ -200,7 +200,7 @@ classicalGuitar = \relative c {
     {
       \voiceTwo
       \stemUp
-      e,4
+      e,!4
       \stemDown
       a
     }

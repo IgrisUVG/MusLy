@@ -16,10 +16,7 @@
   system-system-spacing.basic-distance = 25
   score-system-spacing.basic-distance = 28
   last-bottom-spacing.basic-distance = 20
-
-  %two-sided = ##t
-  %inner-margin = 25
-  %outer-margin = 15
+  
   left-margin = 15
   right-margin = 15
 }
@@ -38,17 +35,9 @@
 
 \include "noteHeads.ly"
 
-
-global = {
-  %\key d \major
+classicalGuitar = \relative c {
   \time 2/4
   \override Staff.TimeSignature.stencil = ##f
-}
-
-classicalGuitar = \relative c {
-  \global
-  %\compressFullBarRests
-  %\partial 8
   \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
   \cadenzaOn
@@ -71,7 +60,6 @@ classicalGuitar = \relative c {
       r8 a,,-0
       \once \override StringNumber.extra-offset = #'(.6 . 2.5)
       b4_\6
-      %\override Score.BarLine.stencil = ##f
       r8 gis'\4-\markup {
         \postscript #"1.4 4.2 moveto 5.8 1 rlineto stroke"
       }
@@ -181,7 +169,6 @@ classicalGuitar = \relative c {
       s4
       \once \override NoteColumn.force-hshift = #1.3
       <c,~ g''^~>
-      %\once \override NoteColumn.force-hshift = #1.3
       q s8 <es' g>
     }
   >>
@@ -250,7 +237,6 @@ classicalGuitar = \relative c {
       } <cis e>4
     }
   >>
-  %\revert Score.BarLine.stencil
   \bar ":|."
 }
 

@@ -209,7 +209,7 @@ classicalGuitar = \relative c {
     {
       \stemDown
       \set stringNumberOrientations = #'(left)
-      <c\6 h''\2>4 r8 <g'' a>
+      <c\6 h''\2>4 r8 <g''! a>
     }
     \\
     {

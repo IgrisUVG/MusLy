@@ -38,44 +38,6 @@
 
 \include "noteHeads.ly"
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#(define RH rightHandFinger)
-
-xLV = #(define-music-function (parser location further) (number?) #{
-  \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
-  \once \override LaissezVibrerTie.details.note-head-gap = #(/
-                                                             further -2)
-  \once \override LaissezVibrerTie.extra-offset = #(cons (/
-                                                          further 2) 0)
-         #})
-
-stringNumberSpanner =
-#(define-music-function (parser location StringNumber) (string?)
-   #{
-     \override TextSpanner.font-size = #-5
-     \override TextSpanner.dash-fraction = #0.3
-     \override TextSpanner.dash-period = #1.5
-     \override TextSpanner.bound-details.right.arrow = ##t
-     \override TextSpanner.arrow-width = #0.2
-     \override TextSpanner.arrow-length = #0.7
-     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
-   #})
-
-stringNumSpan =
-#(define-music-function (parser location StringNumber) (string?)
-   #{
-     \override TextSpanner.font-size = #-5
-     \override TextSpanner.dash-fraction = #0.3
-     \override TextSpanner.dash-period = #1.5
-     %\override TextSpanner.bound-details.right.arrow = ##t
-     %\override TextSpanner.arrow-width = #0.2
-     %\override TextSpanner.arrow-length = #0.7
-     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
-   #})
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 global = {
   %\key d \major
@@ -86,28 +48,37 @@ global = {
 classicalGuitar = \relative c {
   \global
   %\compressFullBarRests
-  %\partial 8 
+  %\partial 8
+  \override Fingering.staff-padding = #'()
+  \override StringNumber.staff-padding = #'()
   \cadenzaOn
   <cis d'>8
   \bar ".|:"\noBreak
   <<
     {
+      \override StringNumber.staff-padding = #'()
       <g' fis'>4. b'8-\markup {
-        \postscript #"1.5 -1 moveto 4.8 0.5 rlineto stroke"
+        \postscript #"1.5 -1 moveto 4.2 0.5 rlineto stroke"
       }
-      <fis, a' cis>4 r8 c''-\markup {
-        \postscript #"1.4 -1.4 moveto 2.8 -0.5 rlineto stroke"
+      <fis, a' cis>4 r8 c''_\2-\markup {
+        \postscript #"1.4 -1.4 moveto 4 -0.5 rlineto stroke"
       }
     }
     \\
     {
-      r8 a,, b4
+      \override Fingering.staff-padding = #'()
+      \override StringNumber.staff-padding = #'()
+      r8 a,,-0
+      \once \override StringNumber.extra-offset = #'(.6 . 2.5)
+      b4_\6
       %\override Score.BarLine.stencil = ##f
-      r8 gis'-\markup {
-        \postscript #"1.4 4.2 moveto 4.2 1 rlineto stroke"
+      r8 gis'\4-\markup {
+        \postscript #"1.4 4.2 moveto 5.8 1 rlineto stroke"
       }
+      \once \override Fingering.extra-offset = #'(-.4 . .4)
+      \once \override StringNumber.extra-offset = #'(.5 . 2.5)
       \displaceHeads #'(1 -1 0)
-      <f g c!>4
+      <f_\6 g_0 c!>4
     }
   >>
   \time 5/8
@@ -121,9 +92,10 @@ classicalGuitar = \relative c {
     }
     \\
     {
+      \override Fingering.staff-padding = #'()
       \voiceTwo
-      s8. b16-\markup {
-        \postscript #"1.4 4.4 moveto 1.3 -1 rlineto stroke"
+      s8. b16^2-\markup {
+        \postscript #"1.4 4.4 moveto 2 -1.5 rlineto stroke"
       }
     }
     \\
@@ -135,13 +107,13 @@ classicalGuitar = \relative c {
   <<
     {
       f'8\noBeam r16 d'-\markup {
-        \postscript #"1.4 -1.3 moveto 2.8 -0.5 rlineto stroke"
+        \postscript #"1.5 -1.3 moveto 2.2 -0.8 rlineto stroke"
       }
     }
     \\
     {
       h,16([ cis)]-\markup {
-        \postscript #"0.7 5.5 moveto 2 1 rlineto stroke"
+        \postscript #"1.5 5 moveto 2.5 1 rlineto stroke"
       } e8
     }
   >>
@@ -151,8 +123,9 @@ classicalGuitar = \relative c {
   \break
   <<
     {
-      <e' dis'>4. <h g''>8-\markup {
-        \postscript #"1.5 -1 moveto 2.8 1 rlineto stroke"
+      \override TextScript.font-size = -2
+      <e' dis'>4.-"II" <h g''>8-\markup {
+        \postscript #"1.5 -1 moveto 4.8 1 rlineto stroke"
       }
     }
     \\
@@ -162,36 +135,38 @@ classicalGuitar = \relative c {
   >>
   <<
     {
-      h''!4 s8 <h,, fis''>
+      h''!4 s8 <h,, fis''>-"II"
     }
     \\
     {
       h'8\rest <d g>-\markup {
-        \postscript #"1 6.3 moveto 2.7 -1 rlineto stroke"
+        \postscript #"1.5 5.5 moveto 4.7 -1 rlineto stroke"
       }-\markup {
-        \postscript #"0.6 3.7 moveto 2.8 -1.1 rlineto stroke"
+        \postscript #"1.5 4.6 moveto 4.7 -1 rlineto stroke"
       }
       <h e>4-\markup {
-        \postscript #"1.5 5.5 moveto 4.8 1 rlineto stroke"
+        \postscript #"1.5 5.3 moveto 9.2 1 rlineto stroke"
       }
     }
     \\
     {
       \voiceTwo
-      b,4 s
+      \once \override StringNumber.extra-offset = #'(.6 . 2.5)
+      b,4_\6 s
     }
   >>
   <<
     {
       \stemDown
-      g''16[( e) d-\markup {
-        \postscript #"1.2 -0.8 moveto 2 -1 rlineto stroke"
+      g''16[( e) d_\3-\markup {
+        \postscript #"1.5 -1 moveto 2.3 -1 rlineto stroke"
       } h]~
       \stemUp
       h4
       \stemDown
+      \once \override Rest.extra-offset = #'(0 . -1.5)
       r8 a'-\markup {
-        \postscript #"0.8 -0.2 moveto 3.3 1.5 rlineto stroke"
+        \postscript #"1.5 -0.6 moveto 4.8 1 rlineto stroke"
       } <b,, d''>4
     }
     \\
@@ -203,7 +178,11 @@ classicalGuitar = \relative c {
     \\
     {
       \voiceTwo
-      s4 <c,~ g''^~> q s8 <es' g>
+      s4
+      \once \override NoteColumn.force-hshift = #1.3
+      <c,~ g''^~>
+      %\once \override NoteColumn.force-hshift = #1.3
+      q s8 <es' g>
     }
   >>
   \bar ""
@@ -215,8 +194,12 @@ classicalGuitar = \relative c {
     }
     \\
     {
-      s16 h'^([ e, cis)]-\markup {
-        \postscript #"1.5 4 moveto 2.2 -1 rlineto stroke"
+      \hideNotes
+      r16
+      \unHideNotes
+      \set stemLeftBeamCount = #2
+      h'^([ e, cis\4)]-\markup {
+        \postscript #"1.5 4 moveto 3.5 -1 rlineto stroke"
       }
       \stemUp
       gis4
@@ -233,22 +216,37 @@ classicalGuitar = \relative c {
   <<
     {
       \stemDown
-      <c h''>4 r8 <g'' a>
+      \set stringNumberOrientations = #'(left)
+      <c\6 h''\2>4 r8 <g'' a>
     }
     \\
     {
-      s16 d[ g, gis] <d a'>4
+      \override Fingering.staff-padding = #'()
+      \override StringNumber.staff-padding = #'()
+      \hideNotes
+      r16
+      \unHideNotes
+      \set stemLeftBeamCount = #2
+      d[\4 g,^0 gis]\5
+      \override TextScript.font-size = -2
+      \once \override TextScript.extra-offset = #'(-.3 . 1.3)
+      <d a'>4^"V"
     }
   >>
   <<
     {
       \stemDown
-      <c h''>4 r8 <dis' g>
+      \once \override TextScript.extra-offset = #'(-.8 . 0)
+      <c h''>4-"VIII" r8 <dis' g>
     }
     \\
     {
-      s16 d[ g, f]-\markup {
-        \postscript #"1 4.2 moveto 3.5 -0.5 rlineto stroke"
+      \hideNotes
+      r16
+      \unHideNotes
+      \set stemLeftBeamCount = #2
+      d[ g, f]-\markup {
+        \postscript #"1.5 4.2 moveto 3.2 -1 rlineto stroke"
       } <cis e>4
     }
   >>

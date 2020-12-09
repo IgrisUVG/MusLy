@@ -41,12 +41,14 @@ classicalGuitar = \relative c {
   \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
   \cadenzaOn
-  <cis d'>8
+  \set stringNumberOrientations = #'(right)
+  <cis\5 d'\3>8
   \bar ".|:"\noBreak
   <<
     {
       \override StringNumber.staff-padding = #'()
-      <g' fis'>4. b'8-\markup {
+      \once \override StringNumber.extra-offset = #'(-.6 . -2.3)
+      <g' fis'\2>4. b'8-\markup {
         \postscript #"1.5 -1 moveto 4.2 0.5 rlineto stroke"
       }
       <fis, a' cis>4 r8 c''_\2-\markup {

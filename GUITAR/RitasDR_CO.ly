@@ -182,7 +182,11 @@ classicalGuitar = \relative c {
   <<
     {
       \stemDown
-      fis'4 s8 <e, fis!>
+      fis'4 s8 
+      \once \override StringNumber.extra-offset = #'(.3 . -1.3)
+      <e,-0 fis!\2>-\markup {
+        \postscript #"1.5 -4 moveto 5.3 1 rlineto stroke"
+      }
     }
     \\
     {
@@ -209,7 +213,7 @@ classicalGuitar = \relative c {
     {
       \stemDown
       \set stringNumberOrientations = #'(left)
-      <c\6 h''\2>4 r8 <g''! a>
+      <c\6 h''>4 r8 <g''! a>
     }
     \\
     {

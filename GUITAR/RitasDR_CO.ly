@@ -112,6 +112,7 @@ classicalGuitar = \relative c {
   <<
     {
       \override TextScript.font-size = -2
+      \once \override TextScript.extra-offset = #'(-.3 . 1)
       <e' dis'>4.-"II" <h g''>8-\markup {
         \postscript #"1.5 -1 moveto 4.8 1 rlineto stroke"
       }

@@ -74,7 +74,9 @@ classicalGuitar = \relative c {
   \time 5/8
   <<
     {
-      \stemDown a'16(\noBeam \stemUp f8.)
+      \override TextScript.font-size = -2
+      \once \override TextScript.extra-offset = #'(-.3 . 0)
+      \stemDown a'16-"VI"(\noBeam \stemUp f8.)
     }
     \\
     {
@@ -91,7 +93,7 @@ classicalGuitar = \relative c {
     \\
     {
       \voiceTwo
-      b,4
+      b,!4
     }
   >>
   <<

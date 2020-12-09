@@ -193,6 +193,7 @@ classicalGuitar = \relative c {
       \hideNotes
       r16
       \unHideNotes
+      \once\override Beam.positions = #'(-2.2 . -3.4)
       \set stemLeftBeamCount = #2
       h'^([ e, cis\4)]-\markup {
         \postscript #"1.5 4 moveto 3.5 -1 rlineto stroke"

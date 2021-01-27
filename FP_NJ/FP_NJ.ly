@@ -121,6 +121,15 @@ bas = \relative c {
 \book {
   \paper {
     print-all-headers = ##t
+    scoreTitleMarkup = \markup {
+      \fill-line {
+        %\null
+        \override #'(font-name . "GothicG")
+        \fontsize #6
+        \bold
+        \fromproperty #'header:title
+      }
+    }
   }
   \header {
     composer = "I. G."
@@ -138,13 +147,13 @@ bas = \relative c {
       }
     >>
     \header {
-      title = "I"
+      title = "A"
       composer = ##f
     }
     \layout {
       \context {
         \Score
-        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
         \remove "Bar_number_engraver"
       }
     }
@@ -161,13 +170,13 @@ bas = \relative c {
       }
     >>
     \header {
-      title = "II"
+      title = "B"
       composer = ##f
     }
     \layout {
       \context {
         \Score
-        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
         \remove "Bar_number_engraver"
       }
     }
@@ -183,13 +192,13 @@ bas = \relative c {
       }
     >>
     \header {
-      title = "III"
+      title = "C"
       composer = ##f
     }
     \layout {
       \context {
         \Score
-        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
         \remove "Bar_number_engraver"
       }
     }
@@ -205,13 +214,13 @@ bas = \relative c {
       }
     >>
     \header {
-      title = "IIII"
+      title = "D"
       composer = ##f
     }
     \layout {
       \context {
         \Score
-        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
         \remove "Bar_number_engraver"
       }
     }

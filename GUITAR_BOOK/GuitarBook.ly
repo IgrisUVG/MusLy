@@ -51,6 +51,7 @@
 %%%% KIV
 \include "Humor.ly"
 \include "Piece.ly"
+\include "Rita.ly"
 
 \book {
   \paper {
@@ -319,6 +320,29 @@
       composer = ##f
     }
     \layout {
+      \context {
+        \Score
+        \remove "Bar_number_engraver"
+      }
+    }
+  }
+  \pageBreak
+%%%%%%%%%%%%%%%%%%%%%%% R %%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+
+    \rita
+
+    \header {
+      title = "R"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Voice
+        \override Glissando.thickness = #1.5
+        \override Glissando.gap = #0.1
+      }
       \context {
         \Score
         \remove "Bar_number_engraver"

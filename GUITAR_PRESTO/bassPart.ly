@@ -36,6 +36,6 @@
     instrumentName = "Bass"
   }
   \bass
-  %\new Dynamics \dynamic
+  \new Dynamics \dynamic
   >>
 }

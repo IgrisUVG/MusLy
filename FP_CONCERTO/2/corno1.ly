@@ -17,4 +17,5 @@ cornoOneMusic = \relative e' {
   b''1->~( b!2 a)
   R1*16
   <d,, fis>1~ q~ q
+  <a' cis>
 }

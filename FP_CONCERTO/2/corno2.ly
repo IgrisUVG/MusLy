@@ -11,4 +11,5 @@ cornoTwoMusic = \relative e {
   R1 b'->\>~ b!\! R1*56 es1->^~( es!2 d)
   R1*16
   <a, e'>1~ q~ q
+  <g d'>
 }

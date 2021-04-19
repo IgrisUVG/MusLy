@@ -18,4 +18,5 @@ trumpetMusic = \relative e'' {
       h!1~( h!2 b)
     }
   >>
+  R1*19 <d e fis>1
 }

@@ -37,7 +37,7 @@ trumpetMusic = \relative es'' {
   \repeat unfold 3 {r4 \times 2/3 {<f f'>8. q16 q8}}
   \times 2/3 {<f f'>8. q16 q8} \times 2/3 {<f f'>8. q16 q8}
   es'4..-> es,16-> es2-> g-> as-> g4.-> f8-> c'4..-> f16-> f2->~ f
-  b,->~ b des4..-> b16-> b2-> es4..-> ces16-> es2-> des4..-> b16->
+  b,->~ b des4..-> b16-> b2->_"! не des" es4..-> ces16-> es2-> des4..-> b16->
   \times 2/3 {des4-> ces-> b->} ges4..-> ces16-> b4->( as)
   \times 2/3 {des4-> ces-> b->} ges'2->~ ges8[ des---> b---> ges--->]
   f2->~ f ges->~ ges es4-> r4 R2*4

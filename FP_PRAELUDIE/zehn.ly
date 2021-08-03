@@ -109,6 +109,7 @@ rechtsZehn = {
     \change Staff = LH f4
     r \clef bass <b,,,, b'>2\change Staff = RH
     <e' c'>2<c a'>4<a f'> r2\bar "||"
+    \break
     \key a \minor
     \clef treble
     \set Staff.printKeyCancellation = ##f
@@ -177,7 +178,9 @@ linksZehn = {
     r d f d d' d, f d
     r b d b b' b, d b
     \tuplet 6/4 4 {
-      as16d f b f d b c b as g f
+      as16d f b f d
+      \override TupletNumber.stencil = ##f
+      b c b as g f
       es( b' es g b es)
       d,,( g g' b d f)
       c,,( g' es' g c es)
@@ -221,7 +224,9 @@ linksZehn = {
     <f, d'>2)
     \time 3/4
     \clef bass \change Staff = LH
-    <a,, a'>2<e e'>4<d d'> r2\key a \minor
+    <a,, a'>2<e e'>4<d d'> r2
+    \break
+    \key a \minor
     a'''4<c e> q e, <gis h d> q a4<c e> q h <dis fis a> q
     e,,-><e' gis h> q gis,-><e' gis h> q h-><e gis h> q d-><e gis h> q
     c <a' e'> q h, <gis' d' e> q a, <c' e> q d, <f a d> q

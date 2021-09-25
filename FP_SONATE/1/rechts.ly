@@ -138,7 +138,9 @@ rechts = {
       {
         des1( ces4) r r2 as2( ces4) r ces2( es4) r es1( des4) r r2 b2( des4) r des2( f4) r
         \makeOctaves #1 {\stemDown f,2( es des ces b as ges1)}
-        \stemUp f'2( es des ces b as \stemNeutral \acciaccatura {es8[ f]} ges4_.)
+        \stemUp f'2( es des ces b as \stemNeutral 
+        \once \override Slur #'direction = #DOWN
+        \acciaccatura {es8[ f]} ges4_.)
       }
       \\
       {

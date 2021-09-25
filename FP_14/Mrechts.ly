@@ -25,6 +25,8 @@ bot = \change Staff = "LH"
 rechtsEins = \relative {
   \clef treble
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Waltz"
   <g' e'>4(<fis dis'><f e'><es d'!>2.<e! c'>2<f h>4<g c>2.)
   <g d'>4(<f cis'><e d'><es f'>2<fes es'>4<f! es'>2<fis d'>4<g es'>2.)
   es'4<des g><c b'><b as'><c g'> r a8( ais h c cis dis)
@@ -56,6 +58,8 @@ rechtsZwei = \relative {
   \clef treble
   \time 4/4
   \key a \major
+  \override Score.RehearsalMark.extra-offset = #'(2 . 2)
+  \mark "Dolce"
   <a' cis>4(<gis e'><c a'><h gis'><c a'>2<a fis'>4<fis d'>)
   <d h'>(<es d'><b' g'><a fis'><g g'>2) r
   <<
@@ -94,6 +98,8 @@ rechtsDrei = \relative {
   \clef treble
   \time 2/4
   \key fis \minor
+  \override Score.RehearsalMark.extra-offset = #'(3 . 2)
+  \mark "Marcia"
   fis'8 fis16 fis <cis fis>8<his fis'><cis fis><his gis'>
   <<
     {
@@ -149,6 +155,8 @@ dynamicDrei = {
 rechtsFier = \relative {
   \clef treble
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(5 . 2)
+  \mark "Grawe"
   \override Slur.positions = #'(1 . 1)
   c''2.( a'4 gis2. gis,4 h2. g'!4 fis2. c4 f!1 e dis~ dis) \break
   a'( e b' dis, d! a' g2) r \break

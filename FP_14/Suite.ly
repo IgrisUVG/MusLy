@@ -48,7 +48,7 @@
     >>
     \header {
       title = ##f
-      meter = "Waltz"
+      %meter = "Waltz"
       composer = ##f
       breakbefore = ##t
     }
@@ -70,7 +70,7 @@
     >>
     \header {
       title = ##f
-      meter = "Dolce"
+      %meter = "Dolce"
       composer = ##f
     }
     \layout {
@@ -91,7 +91,7 @@
     >>
     \header {
       title = ##f
-      meter = "Marcia"
+      %meter = "Marcia"
       composer = ##f
     }
     \layout {
@@ -112,7 +112,7 @@
     >>
     \header {
       title = ##f
-      meter = "Grawe"
+      %meter = "Grawe"
       composer = ##f
     }
     \layout {

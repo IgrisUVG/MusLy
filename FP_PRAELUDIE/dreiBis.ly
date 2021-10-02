@@ -125,7 +125,7 @@ voiceA = \relative {
   \revert Beam.positions
   \change Staff = LH
   ges,,,64 b des ges as b des ges
-  \override Beam.positions = #'(8 . 10)
+  \override Beam.positions = #'(7 . 10)
   as b
   \change Staff = RH
   des ges as b des ges

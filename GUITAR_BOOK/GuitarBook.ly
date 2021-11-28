@@ -52,6 +52,7 @@
 \include "Humor.ly"
 \include "Piece.ly"
 \include "Rita.ly"
+\include "Rita2.ly"
 
 \book {
   \paper {
@@ -335,6 +336,28 @@
 
     \header {
       title = "R"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Voice
+        \override Glissando.thickness = #1.5
+        \override Glissando.gap = #0.1
+      }
+      \context {
+        \Score
+        \remove "Bar_number_engraver"
+      }
+    }
+  }
+%%%%%%%%%%%%%%%%%%%%%% R2 %%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+
+    \ritaZwei
+
+    \header {
+      title = "R bis"
       composer = ##f
     }
     \layout {

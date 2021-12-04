@@ -44,6 +44,17 @@ ritaZwei = \relative c' {
       h,4 s8 f'4 s8 c!4 s8 ces4 s8 es4 s8
     }
   >>
+  \time 4/4
+  <as, b'>8 <f' c'>
+  <<
+    {
+      r8 b'
+    }
+    \\
+    {
+      <es,, g d'>4
+    }
+  >>
 
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT

@@ -48,11 +48,26 @@ ritaZwei = \relative c' {
   <as, b'>8 <f' c'>
   <<
     {
-      r8 b'
+      r8 b' s <a, f'> g'4
     }
     \\
     {
-      <es,, g d'>4
+      <es, g d'>4 <d a''> r8 e'
+    }
+  >>
+  \time 15/8
+  <<
+    {
+      c'4 s8
+    }
+    \\
+    {
+      h,8\rest <f d'> <des' f>
+    }
+    \\
+    {
+      \voiceTwo
+      b,4
     }
   >>
 

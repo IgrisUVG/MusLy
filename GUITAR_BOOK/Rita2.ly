@@ -82,13 +82,13 @@ ritaZwei = \relative c' {
   <g, a'>8 <e h''>
   <<
     {
-      r8 a''
+      r8 a''\harmonic
     }
     \\
     {      
       % Варианты
-      %<f,, g' c>4
-      <fis,, cis''>4
+      <f,, g' c>4
+      %<fis,, cis''>4
     }
   >>
 

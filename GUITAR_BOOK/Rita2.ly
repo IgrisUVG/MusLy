@@ -64,18 +64,31 @@ ritaZwei = \relative c' {
       \stemDown
       b( a) f\glissando
       \stemUp
-      g4 s8 a_\1( g_\2 d_\3) ges4 s8
+      g4 s8 a_\1( g_\2 d_\3) fis4 s8
     }
     \\
     {
       h,8\rest <f d'> <des' f>
       s4. h8\rest <fis! d'> <fis d'>
-      s4. c'8\rest <g b> q
+      s4. h8\rest <g b> q
     }
     \\
     {
       \voiceTwo
       b,4 s8 e4 s8 h4 s8 b4 s8 d4 s8
+    }
+  >>
+  \time 4/4
+  <g, a'>8 <e h''>
+  <<
+    {
+      r8 a''
+    }
+    \\
+    {      
+      % Варианты
+      %<f,, g' c>4
+      <fis,, cis''>4
     }
   >>
 

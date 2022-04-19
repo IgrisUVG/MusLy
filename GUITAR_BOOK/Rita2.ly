@@ -79,15 +79,25 @@ ritaZwei = \relative c' {
     }
   >>
   \time 4/4
-  <g, a'>8 <e h''>
+  <g a>8 <e h'>
   <<
     {
-      r8 a''\harmonic
+      s8 a~ <g, a'> <e h''>
+    }
+    \\
+    {
+      <fis' cis'>4 s
+    }
+  >>  
+  %<g, a'>8 <e h''>
+  <<
+    {
+      r8 a'\harmonic\4
     }
     \\
     {      
       % Варианты
-      <f,, g' c>4
+      <f,,! g' c>4
       %<fis,, cis''>4
     }
   >>

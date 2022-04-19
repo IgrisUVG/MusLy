@@ -79,10 +79,10 @@ ritaZwei = \relative c' {
     }
   >>
   \time 4/4
-  <g a>8 <e h'>
+  <gis? a>8 <e h'>
   <<
     {
-      s8 a~ <g, a'> <e h''>
+      s8 a~ <g,!? a'> <e h''>
     }
     \\
     {

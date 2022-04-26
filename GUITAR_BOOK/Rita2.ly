@@ -109,8 +109,8 @@ ritaZwei = \relative c' {
     {
       h'''8\harmonic e\harmonic h\harmonic r
       %Варианты
-      h\harmonic
-      %a\harmonic
+      %h\harmonic
+      a\harmonic
     }
     \\
     {

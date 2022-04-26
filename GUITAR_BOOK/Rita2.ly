@@ -78,11 +78,11 @@ ritaZwei = \relative c' {
       b,4 s8 e4 s8 h4 s8 b4 s8 d4 s8
     }
   >>
-  \time 4/4
-  <gis? a>8 <e h'>
+  \time 5/4
+  <f a>8 <e h'>
   <<
     {
-      s8 a~ <g,!? a'> <e h''>
+      s8 a~ <g, a'> <e h''>
     }
     \\
     {
@@ -93,12 +93,46 @@ ritaZwei = \relative c' {
   <<
     {
       r8 a'\harmonic\4
+      r8 g\harmonic
     }
     \\
     {      
       % Варианты
       <f,,! g' c>4
       %<fis,, cis''>4
+      <g c d'>
+    }
+  >>
+  \time 3/4
+  <e h' gis'>8
+  <<
+    {
+      h'''8\harmonic e\harmonic h\harmonic r
+      %Варианты
+      h\harmonic
+      %a\harmonic
+    }
+    \\
+    {
+      <fis,, a'>[ <gis h'> <a cis'>] <h fis'> 
+      %Варианты
+      %<gis dis' gis>
+      <g d' g>
+      
+    }
+  >>
+  \time 4/4
+  <c d'>8 <a e''>
+  <<
+    {
+      %варианты
+      r8 dis''
+      %r8 d''
+      %r8 d''\harmonic
+    }
+    \\
+    {
+      <h,, fis''>4
     }
   >>
 

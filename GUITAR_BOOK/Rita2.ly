@@ -110,14 +110,15 @@ ritaZwei = \relative c' {
       h'''8\harmonic e\harmonic h\harmonic r
       %Варианты
       %h\harmonic
-      a\harmonic
+      %a\harmonic
+      ais\harmonic
     }
     \\
     {
       <fis,, a'>[ <gis h'> <a cis'>] <h fis'> 
       %Варианты
-      %<gis dis' gis>
-      <g d' g>
+      <gis dis' gis>
+      %<g d' g>
       
     }
   >>
@@ -126,7 +127,7 @@ ritaZwei = \relative c' {
   <<
     {
       %варианты
-      r8 dis''
+      r8 dis''\harmonic
       %r8 d''
       %r8 d''\harmonic
     }

@@ -88,7 +88,7 @@ ritaZwei = \relative c' {
     {
       <fis' cis'>4 s
     }
-  >>  
+  >>
   %<g, a'>8 <e h''>
   <<
     {
@@ -96,7 +96,7 @@ ritaZwei = \relative c' {
       r8 g\harmonic
     }
     \\
-    {      
+    {
       % Варианты
       <f,,! g' c>4
       %<fis,, cis''>4
@@ -111,15 +111,21 @@ ritaZwei = \relative c' {
       %Варианты
       %h\harmonic
       %a\harmonic
-      ais\harmonic
+      %\override TextScript.extra-offset = #'(-1 . -2)
+      b\harmonic%^"*"
     }
     \\
     {
-      <fis,, a'>[ <gis h'> <a cis'>] <h fis'> 
+      <fis,, a'>[ <gis h'> <a cis'>] <h fis'>
       %Варианты
-      <gis dis' gis>
+      \once \override TextScript.extra-offset = #'(0.7 . 1.7)
+      <as es' as>_\markup \column {
+        \with-color #darkred \box \vspace #0.5
+        \teeny
+        "Катин аккорд"
+      }
       %<g d' g>
-      
+
     }
   >>
   \time 4/4
@@ -138,8 +144,8 @@ ritaZwei = \relative c' {
   >>
 
   \bar "|."
-  \override Score.RehearsalMark.self-alignment-X = #RIGHT
-  \override Score.RehearsalMark.direction = #DOWN
-  \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXI - XII - V"}}
+  %\override Score.RehearsalMark.self-alignment-X = #RIGHT
+  %\override Score.RehearsalMark.direction = #DOWN
+  %\override Score.RehearsalMark.extra-offset = #'(0 . -5)
+  %\mark \markup {\teeny{\char ##x00A9 "MMXXI - XII - V"}}
 }

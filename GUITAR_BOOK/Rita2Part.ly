@@ -22,7 +22,12 @@
   %outer-margin = 15
   left-margin = 15
   right-margin = 15
+  
+  %footnote-padding = 8
+  %footnote-footer-padding = 7
 }
+
+%\include "footnote.ly"
 
 \layout {
   \context {

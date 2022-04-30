@@ -136,10 +136,16 @@ ritaZwei = \relative c' {
       r8 dis''\harmonic
       %r8 d''
       %r8 d''\harmonic
+      fis\harmonic
     }
     \\
     {
-      <h,, fis''>4
+      s4. <ais,, h'>8 eis'4
+    }
+    \\
+    {
+      \voiceTwo
+      <h, fis''>4 cis h''8\rest gis
     }
   >>
 

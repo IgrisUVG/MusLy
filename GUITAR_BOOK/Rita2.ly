@@ -119,11 +119,11 @@ ritaZwei = \relative c' {
       <fis,, a'>[ <gis h'> <a cis'>] <h fis'>
       %Варианты
       \once \override TextScript.extra-offset = #'(0.7 . 1.7)
-      <as es' as>_\markup \column {
+      <as es' as>%{_\markup \column {
         \with-color #darkred \box \vspace #0.5
         \teeny
         "Катин аккорд"
-      }
+      }%}
       %<g d' g>
 
     }

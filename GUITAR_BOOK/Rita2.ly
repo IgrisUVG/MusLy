@@ -92,7 +92,9 @@ ritaZwei = \relative c' {
   %<g, a'>8 <e h''>
   <<
     {
-      r8 a'\harmonic\4
+      r8
+      \once \override StringNumber.extra-offset = #'(-.6 . -2.5)
+      a'\harmonic\4
       r8 g\harmonic
     }
     \\
@@ -112,7 +114,7 @@ ritaZwei = \relative c' {
       %h\harmonic
       %a\harmonic
       \override TextScript.extra-offset = #'(-.5 . -2)
-      b\harmonic^"*"
+      b^"*"
     }
     \\
     {
@@ -134,10 +136,11 @@ ritaZwei = \relative c' {
   <<
     {
       %варианты
-      r8 dis''\harmonic
+      r8 dis''
       %r8 d''
       %r8 d''\harmonic
-      fis\harmonic
+      \once \override StringNumber.extra-offset = #'(-.6 . -2)
+      fis\harmonic\2
     }
     \\
     {

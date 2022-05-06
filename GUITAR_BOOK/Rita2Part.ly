@@ -30,8 +30,8 @@
   left-margin = 15
   right-margin = 15
 
-  %footnote-padding = 8
-  %footnote-footer-padding = 7
+  footnote-padding = 4
+  footnote-footer-padding = 7
 }
 
 %\include "footnote.ly"

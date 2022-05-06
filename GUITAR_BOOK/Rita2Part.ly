@@ -8,6 +8,13 @@
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
+\markup {
+  \null
+  \footnote
+  \null
+  \concat { "*" \hspace #.3 "Катин аккорд" }
+}
+
 \paper {
   %#(set-paper-size "a4")
   top-markup-spacing.basic-distance = 15
@@ -22,7 +29,7 @@
   %outer-margin = 15
   left-margin = 15
   right-margin = 15
-  
+
   %footnote-padding = 8
   %footnote-footer-padding = 7
 }

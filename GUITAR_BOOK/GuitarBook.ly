@@ -63,7 +63,7 @@
     %composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
-  \markup { \vspace #1 }
+  %\markup { \vspace #1 }
 %%%%%%%%%%%%%%%%%%%%%%% AN %%%%%%%%%%%%%%%%%%%%%%
   %{
   \score {
@@ -360,6 +360,14 @@
       title = "R bis"
       composer = ##f
     }
+    %{
+\markup {
+  \null
+  \footnote
+  \null
+  \concat { "*" \hspace #.3 "Катин аккорд" }
+}
+    %}
     \layout {
       \context {
         \Voice

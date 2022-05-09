@@ -14,7 +14,9 @@ ritaZwei = \relative c' {
   <<
     {
       r8 h''\harmonic
-      s <ais, fis'>\glissando gis'4
+      s <ais, fis'>-\markup {
+        \postscript #".8 -1.8 moveto 4.5 .3 rlineto stroke"
+      } gis'4
     }
     \\
     {
@@ -28,7 +30,9 @@ ritaZwei = \relative c' {
       \override StringNumber.staff-padding = #'()
       cis'4 s8
       \stemDown
-      h( ais) fis\glissando
+      h( ais) fis-\markup {
+        \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
+      }
       \stemUp
       gis4 s8 b_\1( as_\2 es_\3) g4 s8
     }
@@ -62,7 +66,9 @@ ritaZwei = \relative c' {
       \override StringNumber.staff-padding = #'()
       c'4 s8
       \stemDown
-      b( a) f\glissando
+      b( a) f-\markup {
+        \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
+      }
       \stemUp
       g4 s8 a_\1( g_\2 d_\3) fis4 s8
     }

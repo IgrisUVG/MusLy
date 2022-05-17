@@ -158,6 +158,24 @@ ritaZwei = \relative c' {
       <h, fis''>4 cis h''8\rest gis
     }
   >>
+  \time 15/8
+  <<
+    {
+      d'?4 s8
+      \stemDown
+      cis( c) gis
+    }
+    \\
+    {
+      h,8\rest <fis a'> <a f'!>
+      s4.
+    }
+    \\
+    {
+      \voiceTwo
+      e,4 s8 a4 s8
+    }
+  >>
 
   \bar "|."
   %\override Score.RehearsalMark.self-alignment-X = #RIGHT

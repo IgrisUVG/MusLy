@@ -172,7 +172,7 @@ ritaZwei = \relative c' {
     \\
     {
       h,8\rest <fis a'> <a f'!>
-      s4. h8\rest <g d'> q
+      s4. h8\rest <g! d'> <g d'>
     }
     \\
     {

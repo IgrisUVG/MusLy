@@ -146,7 +146,7 @@ ritaZwei = \relative c' {
       %r8 d''
       %r8 d''\harmonic
       \once \override StringNumber.extra-offset = #'(-.6 . -2)
-      fis\harmonic\2
+      fis4\harmonic\2
     }
     \\
     {

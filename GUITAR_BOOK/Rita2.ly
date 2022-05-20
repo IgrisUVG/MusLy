@@ -10,6 +10,7 @@ ritaZwei = \relative c' {
   \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
   \once \override StringNumber.extra-offset = #'(-.6 . -4.8)
+  \once \override Fingering.extra-offset = #'(-.6 . -1)
   <a h'-4\2>8 <fis cis''>
   <<
     {
@@ -155,7 +156,10 @@ ritaZwei = \relative c' {
     \\
     {
       \voiceTwo
-      <h, fis''>4 cis h''8\rest gis
+      <h, fis''>4
+      \once \override Fingering.extra-offset = #'(.2 . .3)
+      \once \override StringNumber.extra-offset = #'(.5 . .8)
+      cis-3_\6 h''8\rest gis
     }
   >>
   \time 15/8

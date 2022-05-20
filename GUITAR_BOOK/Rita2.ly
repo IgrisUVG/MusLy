@@ -167,18 +167,20 @@ ritaZwei = \relative c' {
         \postscript #"1.3 -2.3 moveto 3.5 -1.4 rlineto stroke"
       } gis
       \stemUp
-      a4 s8 h( b) f
+      a4 s8 h( b) f-\markup {
+        \postscript #".5 -5.2 moveto 3.5 .5 rlineto stroke"
+      } g4
     }
     \\
     {
       h,8\rest <fis a'> <a f'!>
       s4. h8\rest <g! d'> <g d'>
-      s4. 
+      s4. h8\rest <d f> q
     }
     \\
     {
       \voiceTwo
-      e,4 s8 a4 s8 fis4 s8 as4 s8
+      e,,4 s8 a4 s8 fis4 s8 as4 s8 b4 s8
     }
   >>
 

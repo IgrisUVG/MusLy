@@ -168,7 +168,7 @@ rechts = \relative {
   <f as d f>16.)[ c'32(] d e f g
   \once\override Beam.positions = #'(-1.5 . 0)
   as b h c des d es e
-  <d, as' c f>8->) r16. <c, d f as c>32( <ces es f as ces>4)
+  <d, as' c f>8->) r16 <c, d f as c>( <ces es f as ces>4)
   r16 <b ges' b>( <c as' c> <des a' des>
   <c as' c>) <g des' g>( <as d as'><b e b'>
   <as d as'>8) r r16 <f' d' f>( <g e' g> <as f' as>
@@ -229,16 +229,16 @@ links = \relative {
   <b,, b'> r16 g'( <g' b des e>8) <f,, f'>
   <ges ges'>8. des''16_( <as' b des fes>8) c,,_(
   <f, f'>8.) <as as'>16( <g g'>8 <ges ges'>
-  <f f'>8)_> r16. <c' c'>32( <des! des'!>8) g(
-  c,)-. r16. g'32(
+  <f f'>8)_> r16 <c' c'>( <des! des'!>8) g(
+  c,)-. r16 g'(
   %\stemDown
   <c e b'>8) c,(
   %\stemUp
-  <f, f'>)-. r16. c''32(
+  <f, f'>)-. r16 c''(
   %\stemDown
   <f as d>8) c,(
   %\stemUp
-  <g g'>)-. r16. c'32_(
+  <g g'>)-. r16 c'_(
   %\stemNeutral
   <g' b des e>8) c,,_(
   <f, f'>)-. r
@@ -251,7 +251,8 @@ links = \relative {
 dynamic = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##t
-  s16. s32\< s4. s2*4\sf s4. s16. s32\p s2*3 s2\sf\< s2*3\ff
+  s16. s32\< s4. s2*4\sf s4. s16. s32\p s2*3 s2\sf\<
+  s2*2\ff s8 s4.\mf s8 s\> s s\p s2*3
 }
 
 %%%%%%%%%%%%%%%%%%%%%%

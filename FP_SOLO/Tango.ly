@@ -73,8 +73,8 @@ rechts = \relative {
   %\override Score.SpacingSpanner.strict-note-spacing = ##t
   %\set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
   %\set Staff.printKeyCancellation = ##f
-  r16. c''32( d e f g as b h c des d es e
-  <d, as' c f>8->)
+  r16. c''32(\noBeam d e f g as b h c des d es e
+  <d, as' c f>8->) r16. <c, d f as c>32( <ces es f as ces>4)
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -83,14 +83,14 @@ links = \relative {
   \key f \minor
   \time 2/4
   %\set Staff.printKeyCancellation = ##f
-  R2 <f,, f'>8_>
+  R2 <f,, f'>8_> r16. <c' c'>32( <des! des'!>4)
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
   \override DynamicTextSpanner.style = #'none
-  \override Hairpin.to-barline = ##f
-  
+  \override Hairpin.to-barline = ##t
+  s16. s32\< s4. s2*4\sf
 }
 
 %%%%%%%%%%%%%%%%%%%%%%

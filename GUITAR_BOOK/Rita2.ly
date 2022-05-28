@@ -187,6 +187,22 @@ ritaZwei = \relative c' {
       e,,4 s8 a4 s8 fis4 s8 as4 s8 b4 s8
     }
   >>
+  \time 4/4
+  <e fis'>8 <cis gis''>
+  <<
+    {
+      \override TextScript.font-size = -2
+      \override TextScript.extra-offset = #'(-1.5 . -2)
+      r8 fis''\harmonic-"VII"
+      %s <ais, fis'>-\markup {
+      %  \postscript #".8 -1.8 moveto 4.5 .3 rlineto stroke"
+      %} gis'4
+    }
+    \\
+    {
+      <dis,, ais''>4 %<dis' ais''> r8 eis'
+    }
+  >>
 
   \bar "|."
   %\override Score.RehearsalMark.self-alignment-X = #RIGHT

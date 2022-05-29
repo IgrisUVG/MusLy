@@ -188,19 +188,22 @@ ritaZwei = \relative c' {
     }
   >>
   \time 4/4
-  <e fis'>8 <cis gis''>
+
   <<
     {
-      \override TextScript.font-size = -2
-      \override TextScript.extra-offset = #'(-1.5 . -2)
-      r8 fis''\harmonic-"VII"
+      s4
+      \override TextScript.font-size = -5
+      \override TextScript.extra-offset = #'(-1 . -2)
+      r8 fis'''\harmonic-"VII"
       %s <ais, fis'>-\markup {
       %  \postscript #".8 -1.8 moveto 4.5 .3 rlineto stroke"
       %} gis'4
     }
     \\
     {
-      <dis,, ais''>4 %<dis' ais''> r8 eis'
+      \textSpannerDown
+      \stringNumSpan "5"
+      <e,, fis'>8\startTextSpan <cis gis''> <dis ais''>4\stopTextSpan %<dis' ais''> r8 eis'
     }
   >>
 

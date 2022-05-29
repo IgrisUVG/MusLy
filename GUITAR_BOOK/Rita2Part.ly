@@ -34,8 +34,6 @@
   footnote-footer-padding = 7
 }
 
-%\include "footnote.ly"
-
 \layout {
   \context {
     \Voice
@@ -50,6 +48,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include "guitarScript.ly"
 \include "Rita2.ly"
+%\include "footnote.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {

@@ -173,7 +173,7 @@ rechts = \relative {
   <c as' c>) <g des' g>( <as d as'><b e b'>
   <as d as'>8) r r16 <f' d' f>( <g e' g> <as f' as>
   <g e' g>8) r r16 <e cis' e>( <f d' f> <g e' g>
-  <f d' f>8) r <f' as c f>->
+  <f d' f>8) r <f' as c f>-> r16 c,
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -249,10 +249,13 @@ links = \relative {
 
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
-  \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##t
+  \override DynamicTextSpanner.style = #'none
   s16. s32\< s4. s2*4\sf s4. s16. s32\p s2*3 s2\sf\<
-  s2*2\ff s8 s4.\mf s8 s\> s s\p s2*3
+  s2*2\ff s8 s4.\mf s8 s\> s s\p s2*3 s2\sf s2*2\dim
+  s16. s32\< s4. s2*4\sf s4. s16
+  \once \override DynamicText.extra-offset = #'(-1 . -.5)
+  s\mf
 }
 
 %%%%%%%%%%%%%%%%%%%%%%

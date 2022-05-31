@@ -188,22 +188,48 @@ ritaZwei = \relative c' {
     }
   >>
   \time 4/4
-
   <<
     {
+      \override StringNumber.staff-padding = #'()
       s4
       \override TextScript.font-size = -5
       \override TextScript.extra-offset = #'(-1 . -2)
       r8 fis'''\harmonic-"VII"
-      %s <ais, fis'>-\markup {
-      %  \postscript #".8 -1.8 moveto 4.5 .3 rlineto stroke"
-      %} gis'4
+      %s <ais, fis'> gis'4
+      r16 f( e8~ e16) b as_\3 g
     }
     \\
     {
+      \override StringNumber.staff-padding = #'()
+      s2 s8. des'16( c_\2)-\markup {
+        \postscript #".6 6 moveto 3 -.6 rlineto stroke"
+      } b8 s16
+    }
+    \\
+    {
+      \voiceTwo
       \textSpannerDown
       \stringNumSpan "5"
-      <e,, fis'>8\startTextSpan <cis gis''> <dis ais''>4\stopTextSpan %<dis' ais''> r8 eis'
+      <e,, fis'>8
+      \startTextSpan
+      <cis gis''> <dis ais''>4
+      \stopTextSpan
+      a!4
+    }
+  >>
+  \time 15/8
+  <<
+    {
+      fis''4
+    }
+    \\
+    {
+      
+    }
+    \\
+    {
+      \voiceTwo
+      gis,,
     }
   >>
 

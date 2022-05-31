@@ -173,7 +173,34 @@ rechts = \relative {
   <c as' c>) <g des' g>( <as d as'><b e b'>
   <as d as'>8) r r16 <f' d' f>( <g e' g> <as f' as>
   <g e' g>8) r r16 <e cis' e>( <f d' f> <g e' g>
-  <f d' f>8) r <f' as c f>-> r16 c,
+  <f d' f>8) r <f' as c f>-> r16 c,~
+  \bar "||"
+  \mark \markup { \box \bold 3 }
+  <c des as'>8.
+  \shape #'((0 . 1.2) (0 . 2.5) (.5 . 1.5) (-.3 . 0)) Slur
+  <des ges>16^(
+  <<
+    {
+      f8 ges
+    }
+    \\
+    {
+      eses4
+    }
+  >>
+  <b c as'>8.)
+  \shape #'((0 . 1.2) (0 . 2.5) (0 . 1.5) (-1.2 . -2.2)) Slur
+  e16^(
+  <<
+    {
+      f8 as
+    }
+    \\
+    {
+      des,4
+    }
+  >>
+  <b des ases'>8. <ces ges'>16 <des f>8) r
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -245,6 +272,10 @@ links = \relative {
   \clef treble
   <f''' as c d>-> r
   \clef bass
+  \bar "||"
+  <des,, as' f'>8. <des' as'>16( <ges b>8) des,(
+  as8.) as'16( <es' as>8) des,(
+  <ges, ges'>8.) <ges' des' ges>16 <ges des' as'>8
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

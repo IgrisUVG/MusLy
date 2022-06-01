@@ -224,12 +224,12 @@ ritaZwei = \relative c' {
     }
     \\
     {
-      
+      a,8\rest <dis, ais'> <a' cis>
     }
     \\
     {
       \voiceTwo
-      gis,,
+      gis,4 s8
     }
   >>
 

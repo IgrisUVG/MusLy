@@ -220,16 +220,23 @@ ritaZwei = \relative c' {
   \time 15/8
   <<
     {
-      fis''4
+      ges''4 s8
+      \stemDown
+      ges( f) des%-\markup {
+      %  \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
+      %}
+      \stemUp
+      es4 s8
     }
     \\
     {
-      a,8\rest <dis, ais'> <a' cis>
+      h8\rest <es, b'> <heses' des> s4.
+      a8\rest <d,! b'> <d b'>
     }
     \\
     {
       \voiceTwo
-      gis,4 s8
+      as4 s8 c4 s8 g!4 s8
     }
   >>
 

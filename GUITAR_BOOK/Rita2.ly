@@ -222,21 +222,24 @@ ritaZwei = \relative c' {
     {
       ges''4 s8
       \stemDown
-      ges( f) des%-\markup {
-      %  \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
-      %}
+      \override TextScript.font-size = -2
+      \override TextScript.extra-offset = #'(-.5 . 0)
+      ges(-"II" f) des-\markup {
+        \postscript #"1 -2.7 moveto 3.5 .4 rlineto stroke"
+      }
       \stemUp
-      es4 s8
+      es4 s8 f_\1( es_\2 b_\3) d4 s8
     }
     \\
     {
       h8\rest <es, b'> <heses' des> s4.
       a8\rest <d,! b'> <d b'>
+      s4. h8\rest <es ges> q
     }
     \\
     {
       \voiceTwo
-      as4 s8 c4 s8 g!4 s8
+      as,4 s8 c4 s8 g!4 s8 ges4 s8 b4 s8
     }
   >>
 

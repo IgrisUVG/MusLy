@@ -234,7 +234,7 @@ ritaZwei = \relative c' {
     {
       h8\rest <es, b'> <heses' des> s4.
       a8\rest <d,! b'> <d b'>
-      s4. h8\rest <es ges> q
+      s4. g8\rest <es ges> q
     }
     \\
     {

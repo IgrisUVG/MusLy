@@ -202,7 +202,7 @@ ritaZwei = \relative c' {
     {
       \override StringNumber.staff-padding = #'()
       s2 s8. des'16( c_\2)-\markup {
-        \postscript #".6 6 moveto 3 -.6 rlineto stroke"
+        \postscript #".9 6.1 moveto 3 -.6 rlineto stroke"
       } b8 s16
     }
     \\
@@ -225,7 +225,7 @@ ritaZwei = \relative c' {
       \override TextScript.font-size = -2
       \override TextScript.extra-offset = #'(-.5 . 0)
       ges(-"II" f) des-\markup {
-        \postscript #"1 -2.7 moveto 3.5 .4 rlineto stroke"
+        \postscript #"1.3 -2.3 moveto 3.7 .4 rlineto stroke"
       }
       \stemUp
       es4 s8 f_\1( es_\2 b_\3) d4 s8

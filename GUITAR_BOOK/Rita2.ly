@@ -9,9 +9,15 @@ ritaZwei = \relative c' {
   \override Staff.TimeSignature.stencil = ##f
   \override Fingering.staff-padding = #'()
   \override StringNumber.staff-padding = #'()
-  \once \override StringNumber.extra-offset = #'(-.6 . -4.8)
-  \once \override Fingering.extra-offset = #'(-.6 . -1)
-  <a h'-4\2>8 <fis cis''>
+  %\once \override StringNumber.extra-offset = #'(-.6 . -4.8)
+  \once \override Fingering.extra-offset = #'(-.6 . -3.3)
+  \stringNumSpan "3"
+  \once \override TextSpanner.extra-offset = #'(-.6 . -3.6)
+  \once \override TextSpanner.bound-details.right.X = #23.5
+  <a h'-4>8
+  \startTextSpan
+  <fis cis''>
+  \stopTextSpan
   <<
     {
       r8 h''\harmonic
@@ -210,6 +216,8 @@ ritaZwei = \relative c' {
       \voiceTwo
       \textSpannerDown
       \stringNumSpan "5"
+      \once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
+      \once \override TextSpanner.bound-details.right.X = #22
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4

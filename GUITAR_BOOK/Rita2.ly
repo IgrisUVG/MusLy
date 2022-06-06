@@ -230,10 +230,10 @@ ritaZwei = \relative c' {
     {
       ges''4 s8
       \stemDown
-      \override TextScript.font-size = -2
-      \override TextScript.extra-offset = #'(-.5 . 0)
-      ges(-"II" f) des-\markup {
-        \postscript #"1.3 -2.3 moveto 3.7 .4 rlineto stroke"
+      %\override TextScript.font-size = -2
+      %\override TextScript.extra-offset = #'(-.5 . 0)
+      ges( f) des-\markup {
+        \postscript #"1.5 -.3 moveto 3.7 .4 rlineto stroke"
       }
       \stemUp
       es4 s8 f_\1( es_\2 b_\3) d4 s8
@@ -247,7 +247,9 @@ ritaZwei = \relative c' {
     \\
     {
       \voiceTwo
-      as,4 s8 c4 s8 g!4 s8 ges4 s8 b4 s8
+      as,4 s8
+      \once \override StringNumber.extra-offset = #'(.7 . 2.5)
+      c4_\5 s8 g!4 s8 ges4 s8 b4 s8
     }
   >>
 

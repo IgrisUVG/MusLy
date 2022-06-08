@@ -7,14 +7,14 @@
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
-
+%{
 \markup {
   \null
   \footnote
   \null
   \concat { "*" \hspace #.3 "Катин аккорд" }
 }
-
+%}
 \paper {
   %#(set-paper-size "a4")
   top-markup-spacing.basic-distance = 15

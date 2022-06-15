@@ -191,7 +191,9 @@ ritaZwei = \relative c' {
     \\
     {
       \voiceTwo
-      e,,4 s8 a4 s8 fis4 s8 as4 s8 b4 s8
+      e,,4 s8
+      \once \override NoteColumn.force-hshift = #.3
+      a4 s8 fis4 s8 as4 s8 b4 s8
     }
   >>
   \time 4/4

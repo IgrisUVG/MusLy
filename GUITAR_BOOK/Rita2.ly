@@ -184,7 +184,8 @@ ritaZwei = \relative c' {
     \\
     {
       h,8\rest <fis a'> <a f'!>
-      s4. h8\rest <g! d'> <g d'>
+      \once \override StringNumber.extra-offset = #'(1.3 . 3.7)
+      a4.\harmonic_\4 h8\rest <g! d'> <g d'>
       s4. h8\rest <d f> q
     }
     \\

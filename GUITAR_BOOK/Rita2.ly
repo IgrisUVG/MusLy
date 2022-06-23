@@ -255,6 +255,19 @@ ritaZwei = \relative c' {
       c4_\5 s8 g!4 s8 ges4 s8 b4 s8
     }
   >>
+  \time 4/4
+  <<
+    {
+      <b' es>8 d c <a e'>4
+    }
+    \\
+    {
+      \once \override NoteColumn.force-hshift = #1.2
+      <f g'>8. <d a''>
+      \once \override NoteColumn.force-hshift = #1.3
+      <e\harmonic h''\harmonic>4
+    }
+  >>
 
   \bar "|."
   %\override Score.RehearsalMark.self-alignment-X = #RIGHT

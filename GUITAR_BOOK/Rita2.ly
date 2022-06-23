@@ -258,7 +258,11 @@ ritaZwei = \relative c' {
   \time 4/4
   <<
     {
-      <b' es>8 d c <a e'>4
+      %<b' es>8 d c <a e'>4
+      % Вариант
+      <b' es>8 d c
+      \once \override TextScript.extra-offset = #'(.1 . 1)
+      <a f'>4^\markup \fontsize #1.5 {\sharp}
     }
     \\
     {

@@ -183,8 +183,9 @@ ritaZwei = \relative c' {
     }
     \\
     {
+      \set harmonicDots = ##t
       h,8\rest <fis a'> <a f'!>
-      \once \override StringNumber.extra-offset = #'(1.3 . 3.7)
+      \once \override StringNumber.extra-offset = #'(1.3 . 3.5)
       a4.\harmonic_\4 h8\rest <g! d'> <g d'>
       s4. h8\rest <d f> q
     }
@@ -255,21 +256,22 @@ ritaZwei = \relative c' {
       c4_\5 s8 g!4 s8 ges4 s8 b4 s8
     }
   >>
-  \time 4/4
+  %\time 4/4
   <<
     {
+      \set harmonicDots = ##t
       %<b' es>8 d c <a e'>4
       % Вариант
       <b' es>8 d c
-      \once \override TextScript.extra-offset = #'(.1 . 1)
-      <a f'>4^\markup \fontsize #1.5 {\sharp}
+      %\once \override TextScript.extra-offset = #'(.1 . 1)
+      <a\harmonic fis'>8. <cis e>
     }
     \\
     {
       \once \override NoteColumn.force-hshift = #1.2
-      <f g'>8. <d a''>
+      <f, g'>8. <d a''>
       \once \override NoteColumn.force-hshift = #1.3
-      <e\harmonic h''\harmonic>4
+      <e!\harmonic h''!\harmonic>4
     }
   >>
 

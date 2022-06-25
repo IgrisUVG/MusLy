@@ -220,8 +220,8 @@ ritaZwei = \relative c' {
       \voiceTwo
       \textSpannerDown
       \stringNumSpan "5"
-      \once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
-      \once \override TextSpanner.bound-details.right.X = #22
+      %\once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
+      %\once \override TextSpanner.bound-details.right.X = #22
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4
@@ -260,18 +260,17 @@ ritaZwei = \relative c' {
   <<
     {
       \set harmonicDots = ##t
-      %<b' es>8 d c <a e'>4
-      % Вариант
-      <b' es>8 d c
-      %\once \override TextScript.extra-offset = #'(.1 . 1)
-      <a\harmonic fis'>8. <cis e>
+      <b' es>8 d c <a\harmonic fis'>8. <cis e>
+      <es d'>8 <des c'> <h a'> <c h'>8. gis
     }
     \\
     {
       \once \override NoteColumn.force-hshift = #1.2
-      <f, g'>8. <d a''>
+      <f g'>8. <d a''>
       \once \override NoteColumn.force-hshift = #1.3
-      <e!\harmonic h''!\harmonic>4
+      <e!\harmonic h''!\harmonic>4. <b f''>
+      \once \override NoteColumn.force-hshift = #1.3
+      <cis e'>
     }
   >>
 

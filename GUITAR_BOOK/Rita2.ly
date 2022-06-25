@@ -263,7 +263,7 @@ ritaZwei = \relative c' {
       \set harmonicDots = ##t
       <b' es>8 d c <a\harmonic fis'>8. <cis e>
       <es d'>8 <des c'> <h a'> <c h'>8. gis-\markup {
-        \postscript #"1.3 -4.5 moveto 3.5 -1 rlineto stroke"
+        \postscript #"2.5 -4.5 moveto 8 -1.5 rlineto stroke"
       }
     }
     \\

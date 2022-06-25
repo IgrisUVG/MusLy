@@ -225,8 +225,9 @@ ritaZwei = \relative c' {
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4
-      \stopTextSpan
+      %\stopTextSpan
       a!4
+      \stopTextSpan
     }
   >>
   \time 15/8
@@ -256,12 +257,14 @@ ritaZwei = \relative c' {
       c4_\5 s8 g!4 s8 ges4 s8 b4 s8
     }
   >>
-  %\time 4/4
+  \time 12/8
   <<
     {
       \set harmonicDots = ##t
       <b' es>8 d c <a\harmonic fis'>8. <cis e>
-      <es d'>8 <des c'> <h a'> <c h'>8. gis
+      <es d'>8 <des c'> <h a'> <c h'>8. gis-\markup {
+        \postscript #"1.3 -4.5 moveto 3.5 -1 rlineto stroke"
+      }
     }
     \\
     {
@@ -271,6 +274,29 @@ ritaZwei = \relative c' {
       <e!\harmonic h''!\harmonic>4. <b f''>
       \once \override NoteColumn.force-hshift = #1.3
       <cis e'>
+    }
+  >>
+  \time 4/4
+  <es f'>8 <c g''>
+  <<
+    {
+      r8 fis''\harmonic
+      s h,4.
+    }
+    \\
+    {
+      s4. d,4_( c8)
+    }
+    \\
+    {
+      s2 f!4
+    }
+    \\
+    {
+      \voiceTwo
+      <d, a''>4-\markup {
+        \postscript #"2 8.8 moveto 6.5 2.5 rlineto stroke"
+      } <a e'''>2
     }
   >>
 

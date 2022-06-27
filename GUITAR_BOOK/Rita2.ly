@@ -220,8 +220,8 @@ ritaZwei = \relative c' {
       \voiceTwo
       \textSpannerDown
       \stringNumSpan "5"
-      %\once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
-      %\once \override TextSpanner.bound-details.right.X = #22
+      \once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
+      \once \override TextSpanner.bound-details.right.X = #22.5
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4

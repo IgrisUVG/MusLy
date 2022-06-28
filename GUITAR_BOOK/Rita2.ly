@@ -268,7 +268,7 @@ ritaZwei = \relative c' {
       <es d'>8 <des c'> <h a'>
       \once \override Dots.extra-offset = #'(-1.3 . 0)
       <c h'?>8. gis-\markup {
-        \postscript #"2.5 -4.5 moveto 8 -1.5 rlineto stroke"
+        \postscript #"2.3 -4.5 moveto 6.3 -1.2 rlineto stroke"
       }
     }
     \\
@@ -300,8 +300,28 @@ ritaZwei = \relative c' {
     {
       \voiceTwo
       <d, a''>4-\markup {
-        \postscript #"2 8.8 moveto 6.5 2.5 rlineto stroke"
+        \postscript #"1.8 9 moveto 5 2 rlineto stroke"
       } <a e'''>2
+    }
+  >>
+  \time 15/8
+  <<
+    {
+      g'''4\harmonic
+    }
+    \\
+    {
+      h,,8\rest <h a'>
+      %Вариант
+      %<ges as'>
+      %<es as>
+      <d as'>
+    }
+    \\
+    {
+      \voiceTwo
+      %f,4
+      f,,4
     }
   >>
 

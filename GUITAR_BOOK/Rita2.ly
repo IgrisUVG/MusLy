@@ -261,17 +261,22 @@ ritaZwei = \relative c' {
   <<
     {
       \set harmonicDots = ##t
-      <b' es>8 d c <a\harmonic fis'>8. <cis e>
-      <es d'>8 <des c'> <h a'> <c h'>8. gis-\markup {
+      \once\override Beam.positions = #'(5 . 4.5)
+      <b' es>8 d c
+      \once \override Dots.extra-offset = #'(-1.3 . 0)
+      <a\harmonic fis'>8. <cis e>
+      <es d'>8 <des c'> <h a'>
+      \once \override Dots.extra-offset = #'(-1.3 . 0)
+      <c h'?>8. gis-\markup {
         \postscript #"2.5 -4.5 moveto 8 -1.5 rlineto stroke"
       }
     }
     \\
     {
       \once \override NoteColumn.force-hshift = #1.2
-      <f g'>8. <d a''>
+      <f g'>8. \dotsUp <d a''>
       \once \override NoteColumn.force-hshift = #1.3
-      <e!\harmonic h''!\harmonic>4. <b f''>
+      <e!\harmonic h''!\harmonic>4. \dotsUp <b f''>
       \once \override NoteColumn.force-hshift = #1.3
       <cis e'>
     }

@@ -102,7 +102,6 @@ ritaZwei = \relative c' {
       <fis' cis'>4 s
     }
   >>
-  %<g, a'>8 <e h''>
   <<
     {
       r8
@@ -112,46 +111,30 @@ ritaZwei = \relative c' {
     }
     \\
     {
-      % Варианты
-      <f,,! g' c>4
-      %<fis,, cis''>4
-      <g c d'>
+      <f,,! g' c>4 <g c d'>
     }
   >>
   \time 3/4
   <e h' gis'>8
   <<
     {
-      h'''8\harmonic e\harmonic h\harmonic r
-      %Варианты
-      %h\harmonic
-      %a\harmonic
-      \override TextScript.extra-offset = #'(-.5 . -2)
-      b^"*"
+      h'''8\harmonic e\harmonic h\harmonic
+      %\once \override Score.FootnoteItem.annotation-line = ##f
+      %\footnote "*" #'(3 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
+      r b
     }
     \\
     {
       <fis,, a'>[ <gis h'> <a cis'>] <h fis'>
-      %Варианты
       \once \override TextScript.extra-offset = #'(0.7 . 1.7)
       <as es' as>
-      %{_\markup \column {
-        \with-color #darkred \box \vspace #0.5
-        \teeny
-        "Катин аккорд"
-      }%}
-      %<g d' g>
-
     }
   >>
   \time 4/4
   <c d'>8 <a e''>
   <<
     {
-      %варианты
       r8 dis''
-      %r8 d''
-      %r8 d''\harmonic
       \once \override StringNumber.extra-offset = #'(-.6 . -2)
       fis4\harmonic\2
     }
@@ -225,7 +208,6 @@ ritaZwei = \relative c' {
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4
-      %\stopTextSpan
       a!4
       \stopTextSpan
     }
@@ -235,8 +217,6 @@ ritaZwei = \relative c' {
     {
       ges''4 s8
       \stemDown
-      %\override TextScript.font-size = -2
-      %\override TextScript.extra-offset = #'(-.5 . 0)
       ges( f) des-\markup {
         \postscript #"1.5 -.3 moveto 3.7 .4 rlineto stroke"
       }
@@ -264,6 +244,7 @@ ritaZwei = \relative c' {
       \once\override Beam.positions = #'(5 . 4.5)
       <b' es>8 d c
       \once \override Dots.extra-offset = #'(-1.3 . 0)
+      %\once \override Accidental.extra-offset = #'(1 . 0)
       <a\harmonic fis'>8. <cis e>
       <es d'>8 <des c'> <h a'>
       \once \override Dots.extra-offset = #'(-1.3 . 0)
@@ -275,9 +256,11 @@ ritaZwei = \relative c' {
     {
       \once \override NoteColumn.force-hshift = #1.2
       <f g'>8. \dotsUp <d a''>
-      \once \override NoteColumn.force-hshift = #1.3
+      \once \override NoteColumn.force-hshift = #1.2
+      %\once \override Accidental.extra-offset = #'(.7 . 0)
       <e!\harmonic h''!\harmonic>4. \dotsUp <b f''>
       \once \override NoteColumn.force-hshift = #1.3
+      %\once \override Accidental.extra-offset = #'(1 . 0)
       <cis e'>
     }
   >>
@@ -299,7 +282,9 @@ ritaZwei = \relative c' {
     \\
     {
       \voiceTwo
-      <d, a''>4-\markup {
+      \once \override Script.extra-offset = #'(.3 . 1.5)
+      \once \override Script.font-size = 0.5
+      <d,\open a''>4-\markup {
         \postscript #"1.8 9 moveto 5 2 rlineto stroke"
       } <a e'''>2
     }
@@ -307,21 +292,21 @@ ritaZwei = \relative c' {
   \time 15/8
   <<
     {
-      g'''4\harmonic
+      \stemDown
+      \once \override Stem.length = #9
+      \once \override StringNumber.extra-offset = #'(-.7 . -.5)
+      g'''4\harmonic\3 s8 <b, f'>( <g e'>) <d c'>
     }
     \\
     {
-      h,,8\rest <h a'>
-      %Вариант
-      %<ges as'>
-      %<es as>
-      <d as'>
+      h8\rest <h a'> <d, as''-3\2>-\markup {
+        \postscript #"-3 7.5 moveto 2.6 1.2 rlineto stroke"
+      }
     }
     \\
     {
       \voiceTwo
-      %f,4
-      f,,4
+      f,4 s8 c'4 s8
     }
   >>
 

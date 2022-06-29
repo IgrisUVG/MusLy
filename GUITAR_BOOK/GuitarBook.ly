@@ -20,7 +20,7 @@
 
   footnote-padding = 8
   footnote-footer-padding = 7
-  footnote-separator-markup = \markup \null
+  %footnote-separator-markup = \markup \null
 }
 
 \layout {
@@ -359,15 +359,7 @@
     \header {
       title = "R bis"
       composer = ##f
-    }
-    %{
-\markup {
-  \null
-  \footnote
-  \null
-  \concat { "*" \hspace #.3 "Катин аккорд" }
-}
-    %}
+    }    
     \layout {
       \context {
         \Voice

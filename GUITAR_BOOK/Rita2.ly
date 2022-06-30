@@ -296,17 +296,34 @@ ritaZwei = \relative c' {
       \once \override Stem.length = #9
       \once \override StringNumber.extra-offset = #'(-.7 . -.5)
       g'''4\harmonic\3 s8 <b, f'>( <g e'>) <d c'>
+      \stemUp
+      <c a'>4.
     }
     \\
     {
       h8\rest <h a'> <d, as''-3\2>-\markup {
         \postscript #"-3 7.5 moveto 2.6 1.2 rlineto stroke"
       }
+      s4. f8\rest
+      %Вариант
+      %g4
+      g'4\harmonic\3
+    }
+    \\
+    {
+      s2. s4
+      %Вариант
+      %f8
+      \override StringNumber.staff-padding = #'()
+      f8\harmonic _\5
     }
     \\
     {
       \voiceTwo
-      f,4 s8 c'4 s8
+      \dotsUp
+      %f,4.
+      f,,4.
+      c' b
     }
   >>
 

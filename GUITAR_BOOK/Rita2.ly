@@ -119,15 +119,13 @@ ritaZwei = \relative c' {
   <<
     {
       h'''8\harmonic e\harmonic h\harmonic
-      %\once \override Score.FootnoteItem.annotation-line = ##f
-      %\footnote "*" #'(3 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
+      \once \override Score.FootnoteItem.annotation-line = ##f
+      \footnote "*" #'(3 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
       r b
     }
     \\
     {
-      <fis,, a'>[ <gis h'> <a cis'>] <h fis'>
-      \once \override TextScript.extra-offset = #'(0.7 . 1.7)
-      <as es' as>
+      <fis,, a'>[ <gis h'> <a cis'>] <h fis'> <as es' as>
     }
   >>
   \time 4/4
@@ -186,8 +184,9 @@ ritaZwei = \relative c' {
       \override StringNumber.staff-padding = #'()
       s4
       \override TextScript.font-size = -5
-      \override TextScript.extra-offset = #'(-1 . -2)
-      r8 fis'''\harmonic-"VII"
+      r8
+      \once \override TextScript.extra-offset = #'(-1 . -2)
+      fis'''\harmonic-"VII"
       %s <ais, fis'> gis'4
       r16 f( e8~ e16) b as_\3 g
     }
@@ -249,7 +248,7 @@ ritaZwei = \relative c' {
       <es d'>8 <des c'> <h a'>
       \once \override Dots.extra-offset = #'(-1.3 . 0)
       <c h'?>8. gis-\markup {
-        \postscript #"2.3 -4.5 moveto 6.3 -1.2 rlineto stroke"
+        \postscript #"1.3 -6.5 moveto 3 -.8 rlineto stroke"
       }
     }
     \\
@@ -268,8 +267,9 @@ ritaZwei = \relative c' {
   <es f'>8 <c g''>
   <<
     {
+      \override TextScript.font-size = -3
       r8 fis''\harmonic
-      s h,4.
+      s h,4.-"X"
     }
     \\
     {
@@ -285,7 +285,7 @@ ritaZwei = \relative c' {
       \once \override Script.extra-offset = #'(.3 . 1.5)
       \once \override Script.font-size = 0.5
       <d,\open a''>4-\markup {
-        \postscript #"1.8 9 moveto 5 2 rlineto stroke"
+        \postscript #"1.9 9.9 moveto 5.5 1.8 rlineto stroke"
       } <a e'''>2
     }
   >>
@@ -294,42 +294,46 @@ ritaZwei = \relative c' {
     {
       \stemDown
       \once \override Stem.length = #9
-      \once \override StringNumber.extra-offset = #'(-.7 . -.5)
-      g'''4\harmonic\3 s8 <b, f'>( <g e'>) <d c'>
+      \once \override StringNumber.extra-offset = #'(-1.2 . -.5)
+      \override TextScript.font-size = -5
+      \once \override TextScript.extra-offset = #'(.5 . -2.3)
+      g'''4\harmonic\3-"XXV" s8 <b, f'>( <g e'>) <d c'>
       \stemUp
-      <c a'>4.
+      <c a'>4. 
+      \once\override Beam.positions = #'(5 . 4.5)
+      d8 <c e> <a d>
+      %Вариант
+      %<c f>4
+      <cis fis>4
+      s8
     }
     \\
     {
       h8\rest <h a'> <d, as''-3\2>-\markup {
         \postscript #"-3 7.5 moveto 2.6 1.2 rlineto stroke"
       }
-      s4. f8\rest
-      %Вариант
-      %g4
-      g'4\harmonic\3
+      s4. f8\rest g'4\harmonic\3
     }
     \\
     {
       s2. s4
-      %Вариант
-      %f8
       \override StringNumber.staff-padding = #'()
-      f8\harmonic _\5
+      f8\harmonic _\5 s4.
     }
     \\
     {
       \voiceTwo
       \dotsUp
-      %f,4.
-      f,,4.
-      c' b
+      f,,4. c' b <h g''>4 g8
+      %Вариант
+      %as4
+      gis4
     }
   >>
 
   \bar "|."
-  %\override Score.RehearsalMark.self-alignment-X = #RIGHT
-  %\override Score.RehearsalMark.direction = #DOWN
-  %\override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  %\mark \markup {\teeny{\char ##x00A9 "MMXXI - XII - V"}}
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -5)
+  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - I"}}
 }

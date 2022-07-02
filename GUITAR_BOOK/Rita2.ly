@@ -303,9 +303,8 @@ ritaZwei = \relative c' {
       \once\override Beam.positions = #'(5 . 4.5)
       d8 <c e> <a d>
       %Вариант
-      %<c f>4
-      <cis fis>4
-      s8
+      <h_~ e>4.
+      %<cis fis>4
     }
     \\
     {
@@ -318,16 +317,38 @@ ritaZwei = \relative c' {
     {
       s2. s4
       \override StringNumber.staff-padding = #'()
-      f8\harmonic _\5 s4.
+      f8\harmonic _\5 s4. e,8\rest <h' cis> <a c>
     }
     \\
     {
       \voiceTwo
       \dotsUp
-      f,,4. c' b <h g''>4 g8
+      f,4. c' b <h g''>4 g8
       %Вариант
-      %as4
-      gis4
+      a4.
+      %gis4
+    }
+  >>
+  \time 4/4
+  <<
+    {
+      \voiceFour
+      \once \override NoteColumn.force-hshift = #1.5
+      h'?8
+      \once \override NoteColumn.force-hshift = #1.3
+      b
+      \once \override NoteColumn.force-hshift = #1.5
+      as4
+    }
+    \\
+    {
+      \voiceOne
+      <as b'>8 <f c''> <g d''>4
+    }
+    \\
+    {
+      \voiceTwo
+      s4. fis''8\harmonic
     }
   >>
 

@@ -303,6 +303,7 @@ ritaZwei = \relative c' {
       \once\override Beam.positions = #'(5 . 4.5)
       d8 <c e> <a d>
       %Вариант
+      \shape #'((.4 . .8) (1 . 0) (1 . 0) (1.2 . .6)) Tie
       <h_~ e>4.
       %<cis fis>4
     }

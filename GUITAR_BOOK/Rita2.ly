@@ -12,8 +12,8 @@ ritaZwei = \relative c' {
   %\once \override StringNumber.extra-offset = #'(-.6 . -4.8)
   \once \override Fingering.extra-offset = #'(-.6 . -3.3)
   \stringNumSpan "3"
-  \once \override TextSpanner.extra-offset = #'(-.6 . -3.6)
-  \once \override TextSpanner.bound-details.right.X = #23.5
+  \once \override TextSpanner.extra-offset = #'(-.5 . -1.5)
+  \once \override TextSpanner.bound-details.right.X = #22.2
   <a h'-4>8
   \startTextSpan
   <fis cis''>
@@ -202,8 +202,8 @@ ritaZwei = \relative c' {
       \voiceTwo
       \textSpannerDown
       \stringNumSpan "5"
-      %\once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
-      %\once \override TextSpanner.bound-details.right.X = #22.5
+      \once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
+      \once \override TextSpanner.bound-details.right.X = #84.7
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4
@@ -339,17 +339,22 @@ ritaZwei = \relative c' {
       \once \override NoteColumn.force-hshift = #1.3
       b
       \once \override NoteColumn.force-hshift = #1.5
-      as4
+      as4 h,! r8 cis'
     }
     \\
     {
       \voiceOne
-      <as b'>8 <f c''> <g d''>4
+      <as b'>8 <f c''> <g d''>4 s8 <ais d>-\markup {
+        \postscript #".9 -2.1 moveto 4 .8 rlineto stroke"
+      } f'!4
     }
     \\
     {
       \voiceTwo
-      s4. fis''8\harmonic
+      \set harmonicDots = ##t
+      s4.
+      \once \override Stem.length = #9
+      fis'4.\harmonic
     }
   >>
 
@@ -357,5 +362,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - I"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - V"}}
 }

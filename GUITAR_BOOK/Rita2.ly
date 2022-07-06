@@ -186,6 +186,7 @@ ritaZwei = \relative c' {
       \override TextScript.font-size = -5
       r8
       \once \override TextScript.extra-offset = #'(-1 . -2)
+      \once \override Accidental.extra-offset = #'(.4 . 0)
       fis'''\harmonic-"VII"
       %s <ais, fis'> gis'4
       r16 f( e8~ e16) b as_\3 g

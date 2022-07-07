@@ -10,8 +10,8 @@
 
 \paper {
   %#(set-paper-size "a4")
-  top-markup-spacing.basic-distance = 10 %15
-  markup-system-spacing.basic-distance = 15 %25
+  top-markup-spacing.basic-distance = 10
+  markup-system-spacing.basic-distance = 23
   top-system-spacing.basic-distance = 25
   system-system-spacing.basic-distance = 23
   %score-system-spacing.basic-distance = 28
@@ -44,7 +44,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% ШПАРГАЛКА %%%%%%%%%%%%%%%
-%{%}
+%{
 \markup {
   \null
   \footnote
@@ -74,7 +74,6 @@
       indent = 0
     }
   }
-  %}
 }
 %{%}
 \score {

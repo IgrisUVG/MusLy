@@ -38,7 +38,7 @@ ritaZwei = \relative c' {
       cis'4 s8
       \stemDown
       h( ais) fis-\markup {
-        \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
+        \postscript #"1 -2.4 moveto 3 .4 rlineto stroke"
       }
       \stemUp
       gis4 s8 b_\1( as_\2 es_\3) g4 s8
@@ -55,6 +55,7 @@ ritaZwei = \relative c' {
       h,4 s8 f'4 s8 c!4 s8 ces4 s8 es4 s8
     }
   >>
+  \break
   \time 4/4
   <as, b'>8 <f' c'>
   <<
@@ -91,6 +92,7 @@ ritaZwei = \relative c' {
       b,4 s8 e4 s8 h4 s8 b4 s8 d4 s8
     }
   >>
+  \break
   \time 5/4
   <f a>8 <e h'>
   <<
@@ -300,13 +302,11 @@ ritaZwei = \relative c' {
       \once \override TextScript.extra-offset = #'(.5 . -2.3)
       g'''4\harmonic\3-"XXV" s8 <b, f'>( <g e'>) <d c'>
       \stemUp
-      <c a'>4. 
+      <c a'>4.
       \once\override Beam.positions = #'(5 . 4.5)
       d8 <c e> <a d>
-      %Вариант
-      \shape #'((.4 . .8) (1 . 0) (1 . 0) (1.2 . .6)) Tie
+      %\shape #'((.4 . .8) (1 . 0) (1 . 0) (1.2 . .6)) Tie
       <h_~ e>4.
-      %<cis fis>4
     }
     \\
     {
@@ -325,10 +325,7 @@ ritaZwei = \relative c' {
     {
       \voiceTwo
       \dotsUp
-      f,4. c' b <h g''>4 g8
-      %Вариант
-      a4.
-      %gis4
+      f,4. c' b <h g''>4 g8 a4.
     }
   >>
   \time 4/4
@@ -340,7 +337,9 @@ ritaZwei = \relative c' {
       \once \override NoteColumn.force-hshift = #1.3
       b
       \once \override NoteColumn.force-hshift = #1.5
-      as4 h,! r8 cis'
+      as4
+      \once \override Fingering.extra-offset = #'(.3 . 0)
+      h,!-2 r8 cis'
     }
     \\
     {
@@ -358,10 +357,34 @@ ritaZwei = \relative c' {
       fis'4.\harmonic
     }
   >>
+  \time 15/8
+  <<
+    {
+      \override Fingering.staff-padding = #'()
+      \override StringNumber.staff-padding = #'()
+      a,4 s8
+      \stemDown
+      g( fis) d-\markup {
+        \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
+      }
+      \stemUp
+      e4 s8 fis_\1( e_\2 h_\3) dis4 s8
+    }
+    \\
+    {
+      h8\rest <d, h'> <b' d>
+      s4. a8\rest <dis, h'> q s4. g8\rest <e g> q
+    }
+    \\
+    {
+      \voiceTwo
+      g,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
+    }
+  >>
 
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - V"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - VII"}}
 }

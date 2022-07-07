@@ -18,7 +18,7 @@
   inner-margin = 20
   outer-margin = 13
 
-  footnote-padding = 8
+  footnote-padding = 4
   footnote-footer-padding = 7
   %footnote-separator-markup = \markup \null
 }

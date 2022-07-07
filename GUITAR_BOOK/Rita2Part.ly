@@ -10,8 +10,8 @@
 
 \paper {
   %#(set-paper-size "a4")
-  top-markup-spacing.basic-distance = 15
-  markup-system-spacing.basic-distance = 25
+  top-markup-spacing.basic-distance = 10 %15
+  markup-system-spacing.basic-distance = 15 %25
   top-system-spacing.basic-distance = 25
   system-system-spacing.basic-distance = 23
   %score-system-spacing.basic-distance = 28
@@ -43,6 +43,40 @@
 \include "Rita2.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% ШПАРГАЛКА %%%%%%%%%%%%%%%
+%{%}
+\markup {
+  \null
+  \footnote
+  \null
+  \score {
+    \transpose h g {
+      \relative {
+        \time 9/4
+        \magnifyStaff #(magstep -2)
+        \override Staff.TimeSignature.stencil = ##f
+        \omit Score.BarLine
+        \omit Voice.Stem
+        \omit Voice.Beam
+        h'8 cis dis h' ais fis gis eis cis'4
+        \undo \omit Voice.Stem
+        \undo \omit Voice.Beam
+        \times 2/3 {h8 ais fis}
+        \omit Voice.Stem
+        gis4
+        \undo \omit Voice.Stem
+        \times 2/3 {b8 as es}
+        \omit Voice.Stem
+        g4
+      }
+    }
+    \layout {
+      indent = 0
+    }
+  }
+  %}
+}
+%{%}
 \score {
   \new Staff \with {
     instrumentName = "Guitar"

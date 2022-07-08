@@ -122,7 +122,7 @@ ritaZwei = \relative c' {
     {
       h'''8\harmonic e\harmonic h\harmonic
       %\once \override Score.FootnoteItem.annotation-line = ##f
-      %\footnote "*" #'(3 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
+      %\footnote "*" #'(3.8 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
       r b
     }
     \\
@@ -206,7 +206,12 @@ ritaZwei = \relative c' {
       \textSpannerDown
       \stringNumSpan "5"
       \once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
-      \once \override TextSpanner.bound-details.right.X = #84.7
+      \tag #'Part {
+      \once \override TextSpanner.bound-details.right.X = #81
+      }
+      \tag #'Book {
+        \once \override TextSpanner.bound-details.right.X = #79.5
+      }
       <e,, fis'>8
       \startTextSpan
       <cis gis''> <dis ais''>4

@@ -353,7 +353,8 @@
 %%%%%%%%%%%%%%%%%%%%%% R2 %%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff
-
+    
+    \removeWithTag #'Part
     \ritaZwei
 
     \header {

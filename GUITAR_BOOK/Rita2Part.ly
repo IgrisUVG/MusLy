@@ -80,5 +80,6 @@
   \new Staff \with {
     instrumentName = "Guitar"
   }
+  \removeWithTag #'Book
   \ritaZwei
 }

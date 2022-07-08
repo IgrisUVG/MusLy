@@ -207,7 +207,7 @@ ritaZwei = \relative c' {
       \stringNumSpan "5"
       \once \override TextSpanner.extra-offset = #'(-.5 . 1.6)
       \tag #'Part {
-      \once \override TextSpanner.bound-details.right.X = #81
+        \once \override TextSpanner.bound-details.right.X = #81
       }
       \tag #'Book {
         \once \override TextSpanner.bound-details.right.X = #79.5

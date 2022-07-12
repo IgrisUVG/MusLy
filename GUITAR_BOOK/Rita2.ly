@@ -373,17 +373,19 @@ ritaZwei = \relative c' {
         \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
       }
       \stemUp
-      e4 s8 fis_\1( e_\2 h_\3) dis4 s8
+      e4 s8 fis_\1( e_\2 h_\3) dis4 s8 c'4 s8 b_( a) f
     }
     \\
     {
-      h8\rest <d, h'> <b' d>
+      h,8\rest <d, h'> <b' d>
       s4. a8\rest <dis, h'> q s4. g8\rest <e g> q
+      es'^( d) a s4.
     }
     \\
     {
       \voiceTwo
       g,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
+      b4 s8 <e! h'!>4 s8
     }
   >>
 
@@ -391,5 +393,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - VII"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - XII"}}
 }

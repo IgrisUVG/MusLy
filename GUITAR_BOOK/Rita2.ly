@@ -121,8 +121,8 @@ ritaZwei = \relative c' {
   <<
     {
       h'''8\harmonic e\harmonic h\harmonic
-      %\once \override Score.FootnoteItem.annotation-line = ##f
-      %\footnote "*" #'(3.8 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
+      \once \override Score.FootnoteItem.annotation-line = ##f
+      \footnote "*" #'(3.8 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
       r b
     }
     \\
@@ -310,7 +310,7 @@ ritaZwei = \relative c' {
       <c a'>4.
       \once\override Beam.positions = #'(5 . 4.5)
       d8 <c e> <a d>
-      %\shape #'((.4 . .8) (1 . 0) (1 . 0) (1.2 . .6)) Tie
+      \shape #'((.4 . .8) (1 . 0) (1 . 0) (1.2 . .6)) Tie
       <h_~ e>4.
     }
     \\

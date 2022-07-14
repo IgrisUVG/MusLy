@@ -225,7 +225,7 @@ ritaZwei = \relative c' {
       ges''4 s8
       \stemDown
       ges( f) des-\markup {
-        \postscript #"1.5 -.3 moveto 3.7 .4 rlineto stroke"
+        \postscript #"1 -2.2 moveto 3 .4 rlineto stroke"
       }
       \stemUp
       es4 s8 f_\1( es_\2 b_\3) d4 s8
@@ -293,7 +293,7 @@ ritaZwei = \relative c' {
       \once \override Script.extra-offset = #'(.3 . 1.5)
       \once \override Script.font-size = 0.5
       <d,\open a''>4-\markup {
-        \postscript #"1.9 9.9 moveto 5.5 1.8 rlineto stroke"
+        \postscript #"1.7 9.9 moveto 3.2 1.3 rlineto stroke"
       } <a e'''>2
     }
   >>
@@ -370,7 +370,7 @@ ritaZwei = \relative c' {
       a,4 s8
       \stemDown
       g( fis) d-\markup {
-        \postscript #"1 -1.7 moveto 3.5 .4 rlineto stroke"
+        \postscript #"1 -2.2 moveto 3.5 .4 rlineto stroke"
       }
       \stemUp
       e4 s8 fis_\1( e_\2 h_\3) dis4 s8 c'4 s8 b_( a) f
@@ -393,5 +393,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - XII"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - XIII"}}
 }

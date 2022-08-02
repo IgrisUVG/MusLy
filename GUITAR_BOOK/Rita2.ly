@@ -121,8 +121,8 @@ ritaZwei = \relative c' {
   <<
     {
       h'''8\harmonic e\harmonic h\harmonic
-      \once \override Score.FootnoteItem.annotation-line = ##f
-      \footnote "*" #'(3.8 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
+      %\once \override Score.FootnoteItem.annotation-line = ##f
+      %\footnote "*" #'(3.8 . 2) \markup { "*" \hspace #.3 "Катин аккорд" }
       r b
     }
     \\

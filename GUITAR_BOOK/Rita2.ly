@@ -97,7 +97,7 @@ ritaZwei = \relative c' {
   <f a>8 <e h'>
   <<
     {
-      s8 a~ <g, a'> <e h''>
+      s8 a_~ <g, a'> <e h''>
     }
     \\
     {

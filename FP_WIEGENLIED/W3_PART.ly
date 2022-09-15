@@ -3,7 +3,7 @@
 \language "deutsch"
 
 \header {
-  title = "Wiegenlied"
+  title = "Wiegenlied № 3"
   %meter = "Allegro"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}

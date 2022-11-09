@@ -26,6 +26,7 @@ viezehnteRH = \relative {
   \omit TupletNumber
   \tuplet 6/4 4 {
     c'16 f, as, f' c' f, b, f' c' f, h, f' c' f, c f c' f, d! f c' f, e! f
+    c' f, as, f' c' f, a, f' c' f, e f
   }
   %\bar "|."
 }
@@ -45,7 +46,9 @@ viezehnteLH = \relative {
   \partial 2
   <<
     {
-      f'2
+      \omit TupletNumber
+      \omit TupletBracket
+      \tuplet 6/4 4 {r8 f'4~} f4
     }
     \\
     {
@@ -63,5 +66,21 @@ viezehnteLH = \relative {
       s8 des4
     }
   >>
-   
+  <<
+    {
+      \omit TupletNumber
+      \tuplet 6/4 4 {
+        s4 <gis h>8
+      }
+    }
+    \\
+    {
+      \omit TupletNumber
+      \omit TupletBracket
+      \tuplet 6/4 4 {
+        r8 e4
+      }
+    }
+  >>
+
 }

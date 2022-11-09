@@ -334,7 +334,7 @@
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \viezehnteRH
-      \new Dynamics = "Dynamics_pf" \dynamicDrzehn
+      \new Dynamics = "Dynamics_pf" \dynamicVierzehn
       \new Staff = "LH" \viezehnteLH
     >>
     \header {

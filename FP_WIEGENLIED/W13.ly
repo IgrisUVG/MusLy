@@ -483,6 +483,6 @@ dreizehnteLH = \relative {
 dynamicDrzehn = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
-  s1*31\p
+  s1*31\pp
 }
 %%%%%%%%%%%%%%%%%%%%%%

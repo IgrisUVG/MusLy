@@ -42,6 +42,7 @@
 \include "W11.ly"
 \include "W12.ly"
 \include "W13.ly"
+\include "W14.ly"
 
 \book {
   \paper {
@@ -317,6 +318,27 @@
     >>
     \header {
       title = "Wiegenlied № 13"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Score
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        \remove "Bar_number_engraver"
+        %proportionalNotationDuration = #(ly:make-moment 1/8)
+      }
+    }
+  }
+  \pageBreak
+  %%%%%%%%%%%%%%%%%% FIERZEHNTE %%%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff <<
+      \new Staff = "RH" \viezehnteRH
+      \new Dynamics = "Dynamics_pf" \dynamicDrzehn
+      \new Staff = "LH" \viezehnteLH
+    >>
+    \header {
+      title = "Wiegenlied № 14"
       composer = ##f
     }
     \layout {

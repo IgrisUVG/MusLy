@@ -336,6 +336,7 @@
       \new Staff = "RH" \viezehnteRH
       \new Dynamics = "Dynamics_pf" \dynamicVierzehn
       \new Staff = "LH" \viezehnteLH
+      \new Staff = "B" \viezehnteBass
     >>
     \header {
       title = "Wiegenlied № 14"

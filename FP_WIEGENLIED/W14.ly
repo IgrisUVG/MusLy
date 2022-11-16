@@ -40,9 +40,8 @@ viezehnteRH = \relative {
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-    \repeat unfold 3 {c'''16 f, as, f'}
-    \repeat unfold 4 {c' f, b, f'}
-    c' f, h, f' c' f, c f c' f, d! f c' f, e! f
+    \repeat unfold 5 {c'''16 f, as, f'}
+    c' f, b, f' c' f, h, f' c' f, c f c' f, d! f c' f, e! f
   }
   %\bar "|."
   
@@ -63,7 +62,7 @@ viezehnteLH = \relative {
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  r4 f'4
+  r4 f'2. s8 g! a! b c4 g es des
 }
 
 viezehnteBass = \relative {
@@ -72,5 +71,7 @@ viezehnteBass = \relative {
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  des,,1
+  \ottava #-1
+  \set Staff.ottavation = #"8"
+  des,,1 ges,
 }

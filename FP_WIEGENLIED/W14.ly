@@ -63,7 +63,7 @@ viezehnteLH = \relative {
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  r8 f'4
+  r4 f'4
 }
 
 viezehnteBass = \relative {
@@ -72,5 +72,5 @@ viezehnteBass = \relative {
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  des,1
+  des,,1
 }

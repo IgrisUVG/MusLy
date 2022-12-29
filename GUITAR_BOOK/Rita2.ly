@@ -373,7 +373,9 @@ ritaZwei = \relative c' {
         \postscript #"1 -2.2 moveto 3.5 .4 rlineto stroke"
       }
       \stemUp
-      e4 s8 fis_\1( e_\2 h_\3) dis4 s8 c'4 s8 b_( a) f g4 s8
+      e4 s8 fis_\1( e_\2 h_\3) dis4 s8 c'4 s8 b_( a) f-\markup {
+        \postscript #"1 -4.6 moveto 3 .4 rlineto stroke"
+      } g4 s8
     }
     \\
     {

@@ -32,6 +32,8 @@ circle =
        (ly:stencil-extent note X)
        (ly:stencil-extent note Y))))
 
+#(ly:font-config-add-font "gothicg_.ttf")
+
 sopranoErste = \relative c'' {
   \clef treble
   \key g \major
@@ -147,7 +149,7 @@ bas = \relative c {
       }
     >>
     \header {
-      title = "A"
+      title =  "A"
       composer = ##f
     }
     \layout {

@@ -373,15 +373,27 @@ ritaZwei = \relative c' {
         \postscript #"1 -2.2 moveto 3.5 .4 rlineto stroke"
       }
       \stemUp
-      e4 s8 fis_\1( e_\2 h_\3) dis4 s8 c'4 s8 b_( a) f-\markup {
+      e4 s8 fis_\1( e_\2 h_\3)
+      \once \override StringNumber.extra-offset = #'(-.7 . -2)
+      dis4\3 s8 c'4 s8 b_(-4-\markup {
+        \postscript #"1.4 -1.2 moveto 2.3 -.3 rlineto stroke"
+      } a)-4 f-\markup {
         \postscript #"1 -4.6 moveto 3 .4 rlineto stroke"
-      } g4 s8
+      }
+      \override TextScript.font-size = -3
+      g4-"X" s8
     }
     \\
     {
       h,8\rest <d, h'> <b' d>
       s4. a8\rest <dis, h'> q s4. g8\rest <e g> q
-      es'^( d) a s4. b8\rest <as c> q
+      \npad
+      \override Fingering.extra-offset = #'(.2 . 3.2)
+      es'^(-3-\markup {
+        \postscript #"1.4 6.2 moveto 2.7 -.4 rlineto stroke"
+      } d)-3 a\4-\markup {
+        \postscript #"1 4 moveto 3 .4 rlineto stroke"
+      } s4. b8\rest <as c> q
     }
     \\
     {
@@ -395,5 +407,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXII - VII - XIII"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - II - VI"}}
 }

@@ -399,7 +399,7 @@ ritaZwei = \relative c' {
     {
       \voiceTwo
       g,,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
-      b4 s8 <e! h'!>4 s8 d4 s8 <c_\6 g'>4 s8
+      b4 s8 <e! h'!>4 s8 d4 s8 \SO #.5 #2.3 <c_\6 g'>4 s8
     }
   >>
 

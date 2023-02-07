@@ -381,7 +381,7 @@ ritaZwei = \relative c' {
         \postscript #"1 -4.6 moveto 3 .4 rlineto stroke"
       }
       \override TextScript.font-size = -3
-      g4-"X" s8 h\(_\1 a(_\2 fis)\) 
+      g4-"X" s8 h\(_\1 a(_\2 fis)\) gis4 s8
     }
     \\
     {
@@ -393,13 +393,13 @@ ritaZwei = \relative c' {
         \postscript #"1.4 6.2 moveto 2.7 -.4 rlineto stroke"
       } d)-3 a\4-\markup {
         \postscript #"1 4 moveto 3 .4 rlineto stroke"
-      } s4. b8\rest <as c> q s4 d8
+      } s4. b8\rest <as c> q s4 d8 h\rest <fis c'> q
     }
     \\
     {
       \voiceTwo
-      g,,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
-      b4 s8 <e! h'!>4 s8 d4 s8 \SO #.5 #2.3 <c_\6 g'>4 s8
+      g,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
+      b4 s8 <e! h'!>4 s8 d4 s8 \SO #.6 #2.3 <c_\6 g'>4 s8 a4 s8
     }
   >>
 

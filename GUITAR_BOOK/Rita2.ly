@@ -402,6 +402,8 @@ ritaZwei = \relative c' {
       b4 s8 <e! h'!>4 s8 d4 s8 \SO #.6 #2.3 <c_\6 g'>4 s8 a4 s8
     }
   >>
+  \time 4/4
+  <g a' a'>8 <e h''>
 
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT

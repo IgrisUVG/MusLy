@@ -403,8 +403,19 @@ ritaZwei = \relative c' {
     }
   >>
   \time 4/4
-  <g a' a'>8 <e h''>
-
+  <<
+    {
+      a''4
+    }
+    \\
+    {
+      \stemUp
+      <g,, a'>8 <e h''>
+      \stemDown
+      <fis cis''>4
+    }
+  >>
+  
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN

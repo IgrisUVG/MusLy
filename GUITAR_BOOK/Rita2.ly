@@ -4,6 +4,26 @@
 
 \include "noteHeads.ly"
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+slurBetweenText =
+#(define-music-function (parser location leftText rightText) (markup? markup?)  
+    #{
+        \once \override Slur.stencil =
+        #(lambda (grob)
+            (ly:stencil-combine-at-edge
+                (ly:stencil-combine-at-edge
+                    (ly:stencil-aligned-to (grob-interpret-markup grob leftText) Y CENTER)
+                    X RIGHT
+                    (ly:stencil-aligned-to (ly:slur::print grob) Y CENTER)
+                0)
+                X RIGHT
+                (ly:stencil-aligned-to (grob-interpret-markup grob rightText) Y CENTER)
+             0))
+   #})
+
+parenthesizedSlur = \slurBetweenText \markup{\larger\larger "("} \markup{\larger\larger ")"}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 ritaZwei = \relative c' {
   \time 4/4
   \override Staff.TimeSignature.stencil = ##f
@@ -433,7 +453,13 @@ ritaZwei = \relative c' {
     \\
     {
       h,16\rest g^(\open a_\4 cis?_\3 h e)
-      d\rest b8( as) s16
+      d\rest
+      %\parenthesizedSlur
+      \override TextScript.font-size = -2
+      \once \override TextScript.extra-offset = #'(-.6 . 1.7)
+      b8(-"("
+      \once \override TextScript.extra-offset = #'(.2 . 1.5)
+      as)-")" s16
     }
     \\
     {

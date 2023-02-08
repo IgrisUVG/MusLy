@@ -376,12 +376,12 @@ ritaZwei = \relative c' {
       e4 s8 fis_\1( e_\2 h_\3)
       \once \override StringNumber.extra-offset = #'(-.7 . -2)
       dis4\3 s8 c'4 s8 b_(-4-\markup {
-        \postscript #"1.4 -1.2 moveto 2.3 -.3 rlineto stroke"
+        \postscript #"1.3 -1.2 moveto 1.8 -.3 rlineto stroke"
       } a)-4 f-\markup {
-        \postscript #"1 -4.6 moveto 3 .4 rlineto stroke"
+        \postscript #"1 -4.6 moveto 2.7 .4 rlineto stroke"
       }
       \override TextScript.font-size = -3
-      g4-"X" s8 h\(_\1 a(_\2 fis)\) gis4 s8
+      g4-"X" s8 h\(_\1 a(_\2 fis)\) gis4-"IV" s8
     }
     \\
     {
@@ -390,7 +390,7 @@ ritaZwei = \relative c' {
       \npad
       \override Fingering.extra-offset = #'(.2 . 3.2)
       es'^(-3-\markup {
-        \postscript #"1.4 6.2 moveto 2.7 -.4 rlineto stroke"
+        \postscript #"1.4 6.2 moveto 2 -.4 rlineto stroke"
       } d)-3 a\4-\markup {
         \postscript #"1 4 moveto 3 .4 rlineto stroke"
       } s4. b8\rest <as c> q s4 d8 h\rest <fis c'> q
@@ -402,17 +402,43 @@ ritaZwei = \relative c' {
       b4 s8 <e! h'!>4 s8 d4 s8 \SO #.6 #2.3 <c_\6 g'>4 s8 a4 s8
     }
   >>
+  \break
   \time 4/4
   <<
     {
-      a''4. a'8\harmonic
+      a''4.
+      \stemDown
+      \once \override Stem.length = #9
+      \once \override StringNumber.extra-offset = #'(-1.2 . -.5)
+      \override TextScript.font-size = -5
+      \once \override TextScript.extra-offset = #'(.5 . -2.3)
+      a'8\harmonic\1-"XVII"
+      s <gis,, eis''?\harmonic>-\markup {
+        \postscript #".8 -1.8 moveto 4.5 .3 rlineto stroke"
+      } fis''4\harmonic
     }
     \\
     {
       \stemUp
       <g,,, a'>8 <e h''>
       \stemDown
-      <fis cis''>4
+      <fis cis''>4 <cis' gis'''\harmonic> r8 dis''\harmonic
+    }
+  >>
+  \time 15/8
+  <<
+    {
+      h4 s8 a( g) e! fis4 s8
+    }
+    \\
+    {
+      h,16\rest g^(\open a_\4 cis?_\3 h e)
+      d\rest b8( as) s16
+    }
+    \\
+    {
+      \voiceTwo
+      a,4 s8 es'4 s8 b4 s8
     }
   >>
   

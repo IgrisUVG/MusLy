@@ -405,12 +405,12 @@ ritaZwei = \relative c' {
   \time 4/4
   <<
     {
-      a''4
+      a''4. a'8\harmonic
     }
     \\
     {
       \stemUp
-      <g,, a'>8 <e h''>
+      <g,,, a'>8 <e h''>
       \stemDown
       <fis cis''>4
     }

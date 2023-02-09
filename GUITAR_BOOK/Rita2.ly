@@ -452,7 +452,7 @@ ritaZwei = \relative c' {
     }
     \\
     {
-      h,16\rest g^(\open a_\4 cis?_\3 h e)
+      h,16\rest gis^( a_\4 cis?_\3 h e)
       d\rest
       %\parenthesizedSlur
       \override TextScript.font-size = -2

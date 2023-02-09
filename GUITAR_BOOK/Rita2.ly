@@ -4,26 +4,6 @@
 
 \include "noteHeads.ly"
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-slurBetweenText =
-#(define-music-function (parser location leftText rightText) (markup? markup?)  
-    #{
-        \once \override Slur.stencil =
-        #(lambda (grob)
-            (ly:stencil-combine-at-edge
-                (ly:stencil-combine-at-edge
-                    (ly:stencil-aligned-to (grob-interpret-markup grob leftText) Y CENTER)
-                    X RIGHT
-                    (ly:stencil-aligned-to (ly:slur::print grob) Y CENTER)
-                0)
-                X RIGHT
-                (ly:stencil-aligned-to (grob-interpret-markup grob rightText) Y CENTER)
-             0))
-   #})
-
-parenthesizedSlur = \slurBetweenText \markup{\larger\larger "("} \markup{\larger\larger ")"}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 ritaZwei = \relative c' {
   \time 4/4
   \override Staff.TimeSignature.stencil = ##f
@@ -434,7 +414,7 @@ ritaZwei = \relative c' {
       \once \override TextScript.extra-offset = #'(.5 . -2.3)
       a'8\harmonic\1-"XVII"
       s <gis,, eis''?\harmonic>-\markup {
-        \postscript #".8 -1.8 moveto 4.5 .3 rlineto stroke"
+        \postscript #".6 -.6 moveto 3 .4 rlineto stroke"
       } fis''4\harmonic
     }
     \\
@@ -448,23 +428,34 @@ ritaZwei = \relative c' {
   \time 15/8
   <<
     {
-      h4 s8 a( g) e! fis4 s8
+      \override TextScript.font-size = -3
+      h4 s8 a(-"VI" g) e! fis4 s8 as( ges) d! f4 s8
     }
     \\
     {
-      h,16\rest gis^\(^( a_\4) c_\3 h e\)
+      h,16\rest
+      \shape #'((-0.2 . 0.3) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
+      gis^\(^( a_\4) c_\3 h e\)
       d\rest
-      %\parenthesizedSlur
       \override TextScript.font-size = -2
       \once \override TextScript.extra-offset = #'(-.6 . 1.7)
       b8(-"("
       \once \override TextScript.extra-offset = #'(.2 . 1.5)
       as)-")" s16
+      b\rest a g f!-\markup {
+        \postscript #".9 5.2 moveto 2 -.9 rlineto stroke"
+      } d c
+      b'\rest
+      \once \override TextScript.extra-offset = #'(-.6 . 1.7)
+      ces,(-"("
+      \once \override TextScript.extra-offset = #'(.2 . 1.5)
+      des)-")" ases' b as
+      b\rest es,( f) as des es
     }
     \\
     {
       \voiceTwo
-      a,4 s8 es'4 s8 b4 s8
+      a,,4 s8 es'4 s8 b4 s8 ges4 s8 des'4 s8
     }
   >>
   
@@ -472,5 +463,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - II - VI"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - II - IX"}}
 }

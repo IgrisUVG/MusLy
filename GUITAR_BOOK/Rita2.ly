@@ -375,7 +375,22 @@ ritaZwei = \relative c' {
       \stemUp
       e4 s8 fis_\1( e_\2 h_\3)
       \once \override StringNumber.extra-offset = #'(-.7 . -2)
-      dis4\3 s8 c'4 s8 b_(-4-\markup {
+      dis4\3 s8
+    }
+    \\
+    {
+      h8\rest <d, h'> <b' d>
+      s4. a8\rest <dis, h'> q s4. g8\rest <e g> q
+    }
+    \\
+    {
+      \voiceTwo
+      g,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
+    }
+  >>
+  <<
+    {
+      c''4 s8 b_(-4-\markup {
         \postscript #"1.3 -1.2 moveto 1.8 -.3 rlineto stroke"
       } a)-4 f-\markup {
         \postscript #"1 -4.6 moveto 2.7 .4 rlineto stroke"
@@ -385,11 +400,9 @@ ritaZwei = \relative c' {
     }
     \\
     {
-      h,8\rest <d, h'> <b' d>
-      s4. a8\rest <dis, h'> q s4. g8\rest <e g> q
       \npad
       \override Fingering.extra-offset = #'(.2 . 3.2)
-      es'^(-3-\markup {
+      es^(-3-\markup {
         \postscript #"1.4 6.2 moveto 2 -.4 rlineto stroke"
       } d)-3 a\4-\markup {
         \postscript #"1 4 moveto 3 .4 rlineto stroke"
@@ -398,8 +411,7 @@ ritaZwei = \relative c' {
     \\
     {
       \voiceTwo
-      g,4 s8 cis4 s8 gis4 s8 g4 s8 h4 s8
-      b4 s8 <e! h'!>4 s8 d4 s8 \SO #.6 #2.3 <c_\6 g'>4 s8 a4 s8
+      b,4 s8 <e! h'!>4 s8 d4 s8 \SO #.6 #2.3 <c_\6 g'>4 s8 a4 s8
     }
   >>
   \break
@@ -449,7 +461,7 @@ ritaZwei = \relative c' {
       \once \override TextScript.extra-offset = #'(-.6 . 1.7)
       ces,(-"("
       \once \override TextScript.extra-offset = #'(.2 . 1.5)
-      des)-")" ases' b as
+      des)-")" ases' heses( ces)
       b\rest es,( f) as des es
     }
     \\

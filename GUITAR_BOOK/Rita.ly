@@ -119,6 +119,7 @@ rita = \relative c' {
   >>
   <<
     {
+      \override Fingering.staff-padding = #'()
       \stemDown
       g''16[( e) d_\3-4-\markup {
         \postscript #"1.5 -2.5 moveto 2.3 -1 rlineto stroke"

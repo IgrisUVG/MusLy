@@ -421,10 +421,9 @@ ritaZwei = \relative c' {
       a''4.
       \stemDown
       \once \override Stem.length = #9
-      \once \override StringNumber.extra-offset = #'(-1.2 . -.5)
       \override TextScript.font-size = -5
-      \once \override TextScript.extra-offset = #'(.5 . -2.3)
-      a'8\harmonic\1-"XVII"
+      \once \override TextScript.extra-offset = #'(-.8 . -.2)
+      a'8\harmonic-"XVII"
       s <gis,, eis''?\harmonic>-\markup {
         \postscript #".6 -.6 moveto 3 .4 rlineto stroke"
       } fis''4\harmonic
@@ -454,9 +453,10 @@ ritaZwei = \relative c' {
       b8(-"("
       \once \override TextScript.extra-offset = #'(.2 . 1.5)
       as)-")" s16
-      b\rest a g f!-\markup {
-        \postscript #".9 5.2 moveto 2 -.9 rlineto stroke"
-      } d c
+      \override Script.staff-padding = #'()
+      b\rest a g^\open f!^(-\markup {
+        \postscript #"1 5 moveto 1.6 -.9 rlineto stroke"
+      } d c)
       b'\rest
       \once \override TextScript.extra-offset = #'(-.6 . 1.7)
       ces,(-"("
@@ -475,5 +475,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - II - IX"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - II - X"}}
 }

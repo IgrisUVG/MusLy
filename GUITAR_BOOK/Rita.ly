@@ -120,8 +120,8 @@ rita = \relative c' {
   <<
     {
       \stemDown
-      g''16[( e) d_\3-\markup {
-        \postscript #"1.5 -1 moveto 2.3 -1 rlineto stroke"
+      g''16[( e) d_\3-4-\markup {
+        \postscript #"1.5 -2.5 moveto 2.3 -1 rlineto stroke"
       } h]~
       \stemUp
       h4

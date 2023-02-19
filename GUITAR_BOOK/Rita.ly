@@ -205,7 +205,9 @@ rita = \relative c' {
     {
       \stemDown
       \once \override TextScript.extra-offset = #'(-.8 . 0)
-      <c h''>4-"VIII" r8 <dis' g>
+      <c h''>4-"VIII" r8 <dis' g>-\markup {
+        \postscript #"1.6 -2.3 moveto 4.8 1 rlineto stroke"
+      }
     }
     \\
     {
@@ -217,7 +219,7 @@ rita = \relative c' {
         \postscript #"1.5 4.2 moveto 3.2 -1 rlineto stroke"
       }
       \once \override TextScript.extra-offset = #'(-.9 . 1.2)
-      <cis e>4^"VII"
+      <cis e>4^"II"
     }
   >>
   \bar ":|."

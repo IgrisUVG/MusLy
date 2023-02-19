@@ -198,7 +198,7 @@ rita = \relative c' {
       d[\4 g,^0 gis]\5
       \override TextScript.font-size = -2
       \once \override TextScript.extra-offset = #'(-.3 . 1.3)
-      <d a'>4^"V"
+      <d a'>4^"X"
     }
   >>
   <<
@@ -215,7 +215,9 @@ rita = \relative c' {
       \set stemLeftBeamCount = #2
       d[ g, f]-\markup {
         \postscript #"1.5 4.2 moveto 3.2 -1 rlineto stroke"
-      } <cis e>4
+      }
+      \once \override TextScript.extra-offset = #'(-.9 . 1.2)
+      <cis e>4^"VII"
     }
   >>
   \bar ":|."

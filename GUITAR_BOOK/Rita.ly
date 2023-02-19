@@ -218,7 +218,7 @@ rita = \relative c' {
       d[ g, f]-\markup {
         \postscript #"1.5 4.2 moveto 3.2 -1 rlineto stroke"
       }
-      \once \override TextScript.extra-offset = #'(-.9 . 1.2)
+      \once \override TextScript.extra-offset = #'(-.5 . 1.1)
       <cis e>4^"II"
     }
   >>

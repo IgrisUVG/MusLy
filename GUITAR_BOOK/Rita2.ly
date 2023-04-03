@@ -470,6 +470,28 @@ ritaZwei = \relative c' {
       a,,4 s8 es'4 s8 b4 s8 ges4 s8 des'4 s8
     }
   >>
+  \break
+  \time 4/4
+  <<
+    {
+      \override NoteColumn.force-hshift = #-.23
+      as''8 f
+      \override NoteColumn.force-hshift = #-.75
+      \once \override Stem.length = #7
+      d!
+      \revert NoteColumn.force-hshift
+    }
+    \\
+    {
+      \voiceOne
+      as8 b c
+    }
+    \\
+    {
+      \voiceTwo
+      ges,16( des') <es ges>( as) f( g)
+    }
+  >>
   
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT

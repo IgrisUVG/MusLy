@@ -351,16 +351,17 @@
     }
   }
 %%%%%%%%%%%%%%%%%%%%%% R2 %%%%%%%%%%%%%%%%%%%%%%%
+
   \score {
     \new Staff
-    
+
     \removeWithTag #'Part
     \ritaZwei
 
     \header {
       title = "R bis"
       composer = ##f
-    }    
+    }
     \layout {
       \context {
         \Voice
@@ -371,6 +372,7 @@
         \Score
         \remove "Bar_number_engraver"
       }
+      ragged-last = ##t
     }
   }
 }

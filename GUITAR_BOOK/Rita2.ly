@@ -497,5 +497,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - II - X"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - IV - IV"}}
 }

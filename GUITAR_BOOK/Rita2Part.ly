@@ -37,6 +37,7 @@
     \Score
     \remove "Bar_number_engraver"
   }
+  ragged-last = ##t
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include "guitarScript.ly"

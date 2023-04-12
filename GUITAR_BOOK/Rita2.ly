@@ -472,10 +472,11 @@ ritaZwei = \relative c' {
   >>
   \break
   \time 4/4
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
   <<
     {
       \override NoteColumn.force-hshift = #-.23
-      as''8 f
+      as''8 f\2
       \override NoteColumn.force-hshift = #-.75
       \once \override Stem.length = #7
       d!
@@ -487,12 +488,21 @@ ritaZwei = \relative c' {
       \voiceOne
       as,8 b c
       \stemDown
-      c,_~\noBeam c2
+      \once \override StringNumber.extra-offset = #'(.5 . 1)
+      c,_~_\6\noBeam c2
     }
     \\
     {
       \voiceTwo
-      ges16( des') <es ges>( as) f( g^~)
+      ges16( des')-\markup {
+        \postscript #"1.2 4.8 moveto 4 .4 rlineto stroke"
+      } <es ges>(-\markup {
+        \postscript #"1.5 6.3 moveto 1.5 .3 rlineto stroke"
+      } as) 
+      \once \override Fingering.extra-offset = #'(-1.2 . 4.2)
+      f-2(-\markup {
+        \postscript #".8 6.6 moveto 2.8 .4 rlineto stroke"
+      } g^~)
       \stemUp
       g8^~\noBeam g2
     }
@@ -501,6 +511,6 @@ ritaZwei = \relative c' {
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
-  \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - IV - XI"}}
+  \override Score.RehearsalMark.extra-offset = #'(44.5 . 1)
+  \mark \markup {\teeny{"MMXXIII - IV - XI"}}
 }

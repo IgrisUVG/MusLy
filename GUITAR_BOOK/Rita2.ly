@@ -480,16 +480,21 @@ ritaZwei = \relative c' {
       \once \override Stem.length = #7
       d!
       \revert NoteColumn.force-hshift
+      <h'_~\harmonic e~\harmonic>\noBeam <h\harmonic e\harmonic>2
     }
     \\
     {
       \voiceOne
-      as8 b c
+      as,8 b c
+      \stemDown
+      c,_~\noBeam c2
     }
     \\
     {
       \voiceTwo
-      ges,16( des') <es ges>( as) f( g)
+      ges16( des') <es ges>( as) f( g^~)
+      \stemUp
+      g8^~\noBeam g2
     }
   >>
   
@@ -497,5 +502,5 @@ ritaZwei = \relative c' {
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
   \override Score.RehearsalMark.extra-offset = #'(0 . -5)
-  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - IV - IV"}}
+  \mark \markup {\teeny{\char ##x00A9 "MMXXIII - IV - XI"}}
 }

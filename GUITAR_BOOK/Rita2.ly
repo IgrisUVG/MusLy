@@ -462,12 +462,12 @@ ritaZwei = \relative c' {
       ces,(-"("
       \once \override TextScript.extra-offset = #'(.2 . 1.5)
       des)-")" ases' heses( ces)
-      b\rest es,( f) as des es
+      b\rest es,?^( f) as des^( es)
     }
     \\
     {
       \voiceTwo
-      a,,4 s8 es'4 s8 b4 s8 ges4 s8 des'4 s8
+      a,,4 s8 es'4 s8 b4 s8 ges4 s8 des'!4 s8
     }
   >>
   \break

@@ -348,6 +348,6 @@ rechts = {
     h' a gis a g fis e d
     fis e dis e g cis, fis eis
     fis h, e! dis e b d cis
-    d a cis his cis g h a
+    d a cis his cis g h a d
   }
 }

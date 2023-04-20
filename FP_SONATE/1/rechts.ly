@@ -344,10 +344,10 @@ rechts = {
       }
     >>
     <cis' eis><his dis><fisis cis'><gis h><e b'><fis a><d as'><es g>\noBeam
-    fis eis fis h e, d e
-    h' a gis a g fis e d
-    fis e dis e g cis, fis eis
-    fis h, e! dis e b d cis
-    d a cis his cis g h a d
+    des' c des fis h, a h
+    fis' e dis e d cis h a
+    cis h ais h d gis, cis his
+    cis fis, h! ais h f a gis
+    a e as g as d, fis e a
   }
 }

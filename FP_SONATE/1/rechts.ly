@@ -355,6 +355,7 @@ rechts = {
       }
       {
         b a as g f e dis
+        d' c h ais h a eis fis
       }
     >>
   }

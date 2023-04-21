@@ -344,10 +344,18 @@ rechts = {
       }
     >>
     <cis' eis><his dis><fisis cis'><gis h><e b'><fis a><d as'><es g>\noBeam
-    des' c des fis h, a h
-    fis' e dis e d cis h a
-    cis h ais h d gis, cis his
-    cis fis, h! ais h f a gis
-    a e as g as d, fis e a
+    \new Voice <<
+      {
+        des' c des fis h, a h
+        fis' e dis e d cis h a
+        cis h ais h d gis, cis his
+        cis fis, h! ais h f a gis
+        a e as g as d, fis e
+        a
+      }
+      {
+        b a as g f e dis
+      }
+    >>
   }
 }

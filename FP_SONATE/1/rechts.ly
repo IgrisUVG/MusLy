@@ -348,7 +348,7 @@ rechts = {
       {
         des' c des fis h, a h
         fis' e dis e d cis h a
-        cis h ais h d gis, cis his
+        cis! h ais h d gis, cis! his
         cis fis, h! ais h f a gis
         a e as g as d, fis e
         a
@@ -356,6 +356,10 @@ rechts = {
       {
         b a as g f e dis
         d' c h ais h a eis fis
+        fisis gis fisis eis
+        e cis d fis
+        f d es fis
+        e
       }
     >>
   }

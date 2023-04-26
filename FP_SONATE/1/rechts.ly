@@ -358,8 +358,8 @@ rechts = {
         d' c h ais h a eis fis
         fisis gis fisis eis
         e cis d fis
-        f d es fis
-        e
+        eis cisis dis fis
+        e cis dis eis
       }
     >>
   }

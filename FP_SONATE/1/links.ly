@@ -245,6 +245,7 @@ links = \relative {
   r4 \makeOctaves #-1 {g'( fis4. c8 h'4 b2.)}
   a,!8 gis' d es c' fis, a g f h, b e! g, gis' d a b d h f fis cis' es, e'! f, d' cis gis c h,! a' es'
   e,! d' b h c' cis, gis' d es b' e, f g, gis' d cis c' d, es a as fis, c' g'
-  cis, gis' c, h cis' b, fis' f, h a as f' gis c, cis d' es h b e, c' fis, h, es
+  cis, gis' c, h cis' b, fis' f, h a as f' as c, cis d' es h b e, c' fis, h, es
   d cis b h' f e' cis d, es' e, a b d, e' b g d' ais h gis cis, a' b d,
+  \key es \minor
 }

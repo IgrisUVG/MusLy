@@ -351,16 +351,28 @@ rechts = {
         cis! h ais h d gis, cis! his
         cis fis, h! ais h f a gis
         a e as g as d, fis e
-        a
       }
       {
-        b a as g f e dis
+        b' a as g f e dis
         d' c h ais h a eis fis
         fisis gis fisis eis
         e cis d fis
         eis cisis dis fis
         e cis dis eis
+        fis cis d dis
+        f b, c cis
       }
     >>
+    <<
+      {
+        a'4-. r as-. r g-. r fis-. r f-. r e-. r es-. r d-. r
+      }
+      \\
+      {
+        d4-. e-. f-. h,-. a-. c-. dis-. gis,-.
+        g-. a-. b-. e,-. f-. g-. as-. d,-.
+      }
+    >>
+    \key es \minor
   }
 }

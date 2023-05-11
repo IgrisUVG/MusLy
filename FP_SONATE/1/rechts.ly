@@ -53,7 +53,8 @@ rechts = {
       \\
       {
         \voiceTwo
-        s1. ges'4.( ces,8 es,2) b''4.( des,8 <b, f'>2) as''4.( as,8 cis,2) g''4.( a,8)
+        s1. ges'4.( ces,8 es,2) b''4.( des,8
+        <b, f'>2) as''4.( as,8 cis,2) g''4.( a,8)
       }
     >>
     \bar "||"
@@ -76,7 +77,8 @@ rechts = {
         \change Staff = LH \stemUp
         \once\override NoteColumn.ignore-collision = ##t
         a
-        \change Staff = RH \stemDown d cis fis d e e fis g d e fis g fis eis fis e d cis d s2
+        \change Staff = RH \stemDown d cis fis d e e fis g d e fis
+        g fis eis fis e d cis d s2
       }
     >>
     \set tupletSpannerDuration = #(ly:make-moment 2 4)
@@ -84,8 +86,10 @@ rechts = {
       a'4 e h' fis' a, d
       \override TupletNumber #'transparent = ##t
       \override TupletBracket #'bracket-visibility = ##f
-      g h, g' a d, a' a d, a' ais d, ais' ais d, ais' h d, h' h d, h' c d, c' c d, c'
-      cis! d, cis' cis d, cis' d d, d' d d, d' d d, d' <d e> e, <d' e>
+      g h, g' a d, a' a d, a' ais d, ais' ais d, ais'
+      h d, h' h d, h' c d, c' c d, c'
+      cis! d, cis' cis d, cis'
+      d d, d' d d, d' d d, d' <d e> e, <d' e>
       <d fis> fis, <d' fis><d g> g, <d' g>
     }
     <a d a'>2
@@ -94,7 +98,8 @@ rechts = {
     < h d h'><cis e cis'><e fis e'>
     \ottava #0
     \makeOctaves #1 {
-      g,8 fis eis fis h e, d e h' a gis a g fis e d fis e dis e g cis, fis eis fis h, e! dis
+      g,8 fis eis fis h e, d e h' a gis a g fis e d
+      fis e dis e g cis, fis eis fis h, e! dis
       e b d cis d a cis his cis g h a
     }
     \set tupletSpannerDuration = #(ly:make-moment 2 4)
@@ -123,7 +128,8 @@ rechts = {
     \ottava #0
     %  }
     %}
-    g fis d a e' d a fis d' a g e h' a fis d g fis d a e' d a fis d' cis b fis ces' b fis cis
+    g fis d a e' d a fis d' a g e h' a fis d
+    g fis d a e' d a fis d' cis b fis ces' b fis cis
     \bar "||"
     \key es \minor
     \stemUp as' des, ces
@@ -136,7 +142,8 @@ rechts = {
     ges2( b4) r b2( des4) r
     <<
       {
-        des1( ces4) r r2 as2( ces4) r ces2( es4) r es1( des4) r r2 b2( des4) r des2( f4) r
+        des1( ces4) r r2 as2( ces4) r ces2( es4) r es1( des4) r r2
+        b2( des4) r des2( f4) r
         \makeOctaves #1 {\stemDown f,2( es des ces b as ges1)}
         \stemUp f'2( es des ces b as \stemNeutral
         \once \override Slur #'direction = #DOWN
@@ -144,17 +151,23 @@ rechts = {
       }
       \\
       {
-        ces2( es4) r es2( ges4) r ges1( f4) r r2 des2( f4) r f2( as4) r as1( ges4) r r2
+        ces2( es4) r es2( ges4) r ges1( f4) r r2
+        des2( f4) r f2( as4) r as1( ges4) r r2
         s1*3 r4 des as' ges
-        f8 b, es, b' es ces es, ces' des as es as ces ges des ges b ges es ges as f des f s4
+        f8 b, es, b' es ces es, ces'
+        des as es as ces ges des ges
+        b ges es ges as f des f s4
       }
     >>
     \stemNeutral
     ges ges8( f es f ges4-.)\acciaccatura g8 as4 as8( ges f ges
     as4-.)\acciaccatura a8 b4 b8( as ges as b4-.) ces4.-> es8 des ces
-    ces( b) ges' b, b( as) des as b2-. b8( as ges as b4-.) \acciaccatura b8 ces4 ces8( b as b
-    ces4-.) \acciaccatura c8 des4 des8( ces b ces des4-.) \acciaccatura d8 es4 es8( des ces des
-    es-.) es'-. des-. ces-. b-. as-. ges-. f-. es-. des-. c-. des-. es-. f-. ges-. as-.
+    ces( b) ges' b, b( as) des as b2-. b8( as ges as
+    b4-.) \acciaccatura b8 ces4 ces8( b as b
+    ces4-.) \acciaccatura c8 des4 des8( ces b ces
+    des4-.) \acciaccatura d8 es4 es8( des ces des
+    es-.) es'-. des-. ces-. b-. as-. ges-. f-.
+    es-. des-. c-. des-. es-. f-. ges-. as-.
     b-. as-. b-. ces-. des4-. des,-. ges1-. R
     <<
       {
@@ -173,15 +186,20 @@ rechts = {
   <<
     {
       \relative{
-        as''2( ces4) r ces2( d4) r des1( c4-.) r b-. r heses-. r as-. r ases-. r ges-. r
+        as''2( ces4) r ces2( d4) r des1( c4-.) r b-. r
+        heses-. r as-. r ases-. r ges-. r
         f-. r fes-. r es-. r eses-. r
       }
     }
     \\
     {
       \relative{
-        g'2 r8 f' heses, fes' b,2 r8 as' des, g c,4.( ges'8 d4-.) es-. des-. es-. fes-. b,-.
-        as-. ces-. d-. g,-. ges-. as-. heses-. es,-. e-. ges-. ases-. des,-. d-. e-. f-. c-.
+        g'2 r8 f' heses, fes' b,2 r8 as' des, g c,4.( ges'8 d4-.) es-.
+        des-. es-. fes-. b,-.
+        as-. ces-. d-. g,-.
+        ges-. as-. heses-. es,-.
+        e-. ges-. ases-. des,-.
+        d-. e-. f-. c-.
       }
     }
   >>
@@ -212,18 +230,30 @@ rechts = {
     \repeat unfold 4 {f'8 des} ges! es \repeat unfold 3 {ges es}
     \ottava #1
     \set Staff.ottavation = #"8"
-    \repeat unfold 4 {g e} \repeat unfold 4 {a ges} \repeat unfold 4 {b g} \repeat unfold 4 {ces as}
-    \repeat unfold 4 {c a} \repeat unfold 4 {des b} \repeat unfold 4 {d h} \repeat unfold 4 {es c}
-    \repeat unfold 4 {e des} \repeat unfold 4 {f d} \repeat unfold 4 {ges es}
+    \repeat unfold 4 {g e} \repeat unfold 4 {a ges}
+    \repeat unfold 4 {b g} \repeat unfold 4 {ces as}
+    \repeat unfold 4 {c a} \repeat unfold 4 {des b}
+    \repeat unfold 4 {d h} \repeat unfold 4 {es c}
+    \repeat unfold 4 {e des} \repeat unfold 4 {f d}
+    \repeat unfold 4 {ges es}
     g ges, c ces f, fes' b, des g, ges c des, as' eses fes b,
     \ottava #0
-    fes' es, f ces' heses es c ges des' g, as fes' es, d' ges, f des' ges, c, f as b ces es,
-    ces! b' eses,des ases' ges f,! c' ces! f ges, g as heses' es, e
-    f as,( des as' b) c,( f c' des) f,( c' f) es,( as des es)
-    \repeat unfold 2 {des,( ges b des) ces,( des ges ces) b,( des ges b) ces,( des ges ces)}
-    des,( ges b des) ces,( des ges ces) b,( des ges b) as,( des es as) ges,( b des ges) f,( b des f)
-    fes,( as des fes) es,( as b es) des,( ges b des) ces,( des f ces') b,( es ges b) a,( des f a)
-    g,( des' fes g) ges,( c es ges) f,( as d f) r( b, des e) r a, c es f a, ces e
+    fes' es, f ces' heses es c ges
+    des' g, as fes' es, d' ges, f
+    des' ges, c, f as b ces es,
+    ces! b' eses,des ases' ges f,! c'
+    ces! f ges, g as heses' es, e
+    f as,( des as' b) c,( f c'
+    des) f,( c' f) es,( as des es)
+    \repeat unfold 2 {
+      des,( ges b des) ces,( des ges ces)
+      b,( des ges b) ces,( des ges ces)
+    }
+    des,( ges b des) ces,( des ges ces) b,( des ges b) as,( des es as)
+    ges,( b des ges) f,( b des f) fes,( as des fes) es,( as b es)
+    des,( ges b des) ces,( des f ces') b,( es ges b) a,( des f a)
+    g,( des' fes g) ges,( c es ges) f,( as d f) r( b, des e)
+    r a, c es f a, ces e
     \bar "||"
     \key d \major
     <<
@@ -247,12 +277,14 @@ rechts = {
         \once \override NoteColumn.force-hshift = #1.3
         cis a
         \once \override NoteColumn.force-hshift = #1.3
-        h a g a fis h a h g a fis a a' a, e h' h' h, fis a a' a, g a a' a, fis a a' a, g a
+        h a g a fis h a h g a fis a a' a, e h' h' h,
+        fis a a' a, g a a' a,fis a a' a, g a
         \once \override NoteColumn.force-hshift = #1.3
         a' a,
       }
     >>
-    <fis d'> e g a <d e> a <cis fis> a' <h, d> fis <a cis> fis' <g, cis> d <a' h> d
+    <fis d'> e g a <d e> a <cis fis> a'
+    <h, d> fis <a cis> fis' <g, cis> d <a' h> d
     <<
       {
         a2 a d4 s2. d'4 g fis a e d fis d cis d fis e
@@ -265,8 +297,9 @@ rechts = {
           fis g a h cis d e fis g a h cis d a fis g' a, e
           \override TupletNumber #'transparent = ##t
           \override TupletBracket #'bracket-visibility = ##f
-          fis' a, d, a'' cis, e, e' a, d, d' a d, fis' a, cis, d' fis, h, cis' d, g, d'' g, h,
-          fis'' a, cis, e' g, d
+          fis' a, d, a'' cis, e,
+          e' a, d, d' a d, fis' a, cis, d' fis, h,
+          cis' d, g, d'' g, h, fis'' a, cis, e' g, d
         }
       }
     >>
@@ -277,10 +310,11 @@ rechts = {
       \set Staff.ottavation = #"8"
       d g h d a e a e h
       \ottava #0
-      a d, e fis a, d e h d e g h a d, e fis a, d e h d e g h cis d, fis g a d h h, d g h d
-      fis, a, h d e a e a, h cis d e
+      a d, e fis a, d e h d e g h a d, e fis a, d e h d e g h
+      cis d, fis g a d h h, d g h d fis, a, h d e a e a, h cis d e
     }
-    d2( fis4) r fis2( a4) r a1( g4) r fis2( e d cis d fis1 e2--) r d-- r cis-- r h-- r R1
+    d2( fis4) r fis2( a4) r a1( g4) r fis2( e d cis d fis1 e2--) r
+    d-- r cis-- r h-- r R1
     \bar "||"
     \key es \minor
     <<
@@ -288,12 +322,12 @@ rechts = {
         ces'2( d4) r d2( f4) r
         \shape #'((0 . -2) (0 . 0) (0 . 0) (0 . 0)) Slur
         fes1( es4-.) r des-. r c-. r ces-. r b-. r heses-. r as-. r g-. r
-        ges-. r f!-. r fes-. r es-. r d-. r des-. r c-. r ces-. r b-. r heses-. r as-. r ases-. r
+        ges-. r f!-. r fes-. r es-. r d-. r des-. r
+        c-. r ces-. r b-. r heses-. r as-. r ases-. r
         d2\rest \repeat unfold 5 {c( ces b)}
         c( h
         \bar "||" \key d \major
-        b) c( h b)
-        cis!( c h) cis( c h)
+        b) c( h b) cis!( c h) cis( c h)
         d( fis4) r fis2( a4) r a!1( g4) r fis2
       }
       \\
@@ -301,8 +335,10 @@ rechts = {
         b,2 r8 as' c, g' des2 r8 ces' fes, b
         \shape #'((0 . 1) (0 . 0) (0 . 0) (0 . 0)) Slur
         es,4.( heses'8 f4-.) as-. fes-. ges-. g-. des-.
-        ces-. d-. f-. b,-. heses-. ces-. c-. ges-. g-. heses-. b-. fes-. f!-. g-. as-. d,-.
-        es-. f!-. ges-. d-. es-. f-. ges-. ces,-. des-. es-. f-. b,-. ces-. des-. es-. as,!-.
+        ces-. d-. f-. b,-. heses-. ces-. c-. ges-.
+        g-. heses-. b-. fes-. f!-. g-. as-. d,-.
+        es-. f!-. ges-. d-. es-. f-. ges-. ces,-.
+        des-. es-. f-. b,-. ces-. des-. es-. as,!-.
         a-. b-. des-. f!-.
         \repeat unfold 20 {ges8 es}
         \repeat unfold 12 {as fes}

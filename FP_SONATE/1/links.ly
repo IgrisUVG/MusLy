@@ -116,30 +116,37 @@ links = \relative {
   d,,1 cis h b
   \key es \minor
   as ges~ ges
-  ces8 ges' des' ges, b, ges' des' ges, b, f' des' f, as, ges' des' ges, ges, es' ces' es,
-  ces as' es' as, b, ges' es' ges, as,f' es' f, ges, ges' des' ges, des as' f' as,
-  ces, as' es' as, b, ges' es' ges, as, f' des' f, des b' f' b, ces, as' f' as, b, ges' f' ges,
+  ces8 ges' des' ges, b, ges' des' ges, b, f' des' f, as, ges' des' ges,
+  ges, es' ces' es, ces as' es' as, b, ges' es' ges, as,f' es' f,
+  ges, ges' des' ges, des as' f' as, ces, as' es' as, b, ges' es' ges,
+  as, f' des' f, des b' f' b, ces, as' f' as, b, ges' f' ges,
   as, as' es' as, ces, as' f' as, b, ges' ges' ges, as, f' des' f,
-  ges, es' b' es, as, es' ces' es, b es c' es, ces! es des' es, c es es' es, des ces'! f ces
-  es, b' ges' b, f ces' b' ces, ges2 <as ges'><b f'><ces es><c as'><des ces'>
+  ges, es' b' es, as, es' ces' es, b es c' es, ces! es des' es,
+  c es es' es, des ces'! f ces es, b' ges' b, f ces' b' ces,
+  ges2 <as ges'><b f'><ces es><c as'><des ces'>
   es4-. r <des as'>-. q-. b r <es b'>-. q-. ces-. r <es c'>-. q-.
   des-. r <es ces'> r <des ges> r <des ces'> r
-  ges,8-. f-. ges-. as-. b-. ces-. des-. as-. ces( b-.) es-. as,-. des( ces-.) f-. des-.
-  es( des-.) es-. f-. ges-. f-. es-. des-. ces-. b-. as-. ges-. f-. es-. des-. ces-.
+  ges,8-. f-. ges-. as-. b-. ces-. des-. as-.
+  ces( b-.) es-. as,-. des( ces-.) f-. des-.
+  es( des-.) es-. f-. ges-. f-. es-. des-.
+  ces-. b-. as-. ges-. f-. es-. des-. ces-.
   b4-. ges ges8( f es f ges4-.)\acciaccatura g8 as4 as8( ges f ges
   as4-.)\acciaccatura a8 b4 b8( as ges as b4-.) \repeat unfold 11 {b''8 ges}
   \repeat unfold 4 {b as} \repeat unfold 2 {b ges} \repeat unfold 2 {ces ges}
-  \repeat unfold 2 {des' ges,} \repeat unfold 2 {d' ges,} \repeat unfold 4 {es' ges,}
-  \repeat unfold 2 {d' ges,} \repeat unfold 2 {des' ges,} \repeat unfold 2 {c ges}
+  \repeat unfold 2 {des' ges,} \repeat unfold 2 {d' ges,}
+  \repeat unfold 4 {es' ges,} \repeat unfold 2 {d' ges,}
+  \repeat unfold 2 {des' ges,} \repeat unfold 2 {c ges}
   \repeat unfold 2 {ces ges} \repeat unfold 2 {b ges} b! ges b ges
   \repeat unfold 4 {a f} \repeat unfold 4 {g es} f! des \repeat unfold 3 {f des}
-  \repeat unfold 4 {es ces} \repeat unfold 4 {d b} des! heses c as ces ases b ges
-  a f as fes g es ges eses
+  \repeat unfold 4 {es ces} \repeat unfold 4 {d b}
+  des! heses c as ces ases b ges a f as fes g es ges eses
   f ges, c ces d, as'ges g a es' fes b, g' ges, c f fes c es a as des, ces' b,
-  a' c, des ges d es' f, ces b' c, fes es d, des' ges, c ces fes, b heses g' ges, c des
-  d, c' ces f, ges as' eses g, des' ges, d' es des,! fes' as, a'
-  as des as' des,, as' des f g, as as, des as' des as' f f, ges des' b' as ges f es des
-  c des b des ges, des' des, des' f, des' es, des' des, b' f b ges b des f ges as b c
+  a' c, des ges d es' f, ces b' c, fes es d, des' ges, c
+  ces fes, b heses g' ges, c des d, c' ces f, ges as' eses g,
+  des' ges, d' es des,! fes' as, a'
+  as des as' des,, as' des f g, as as, des as' des as' f f,
+  ges des' b' as ges f es des c des b des ges, des' des, des'
+  f, des' es, des' des, b' f b ges b des f ges as b c
   <<
     {
       <as des es>4 s
@@ -180,20 +187,25 @@ links = \relative {
   <b, f' b>1 R
   <<
     {
-      r4 \stemDown f'''4( e4. g,8 \stemUp b4 a2) r4 r eses'4( des4. e,8 g4 ges2) r4
-      r des'4( c4. es,8 ges4 f2) r4 r es ges2 f1 eses des ces b heses ases ges
+      r4 \stemDown f'''4( e4. g,8 \stemUp b4 a2) r4
+      r eses'4( des4. e,8 g4 ges2) r4
+      r des'4( c4. es,8 ges4 f2) r4 r es ges2
+      f1 eses des ces b heses ases ges
     }
     \\
     {
-      s1 r4 es'( des4. ges,8 c4 des) r2 r4 c( b4. es,8 a4 b) r2 r4 des( ces4. e,8
-      b'4 ces) r e, g2( ges) f( fes) es( eses) des( c) ces( b) heses( as) ases( ges) f( fes)
+      s1 r4 es'( des4. ges,8 c4 des) r2
+      r4 c( b4. es,8 a4 b) r2 r4 des( ces4. e,8 b'4 ces) r e,
+      g2( ges) f( fes) es( eses) des( c) ces( b) heses( as) ases( ges) f( fes)
     }
   >>
   \makeOctaves #-1 {
-    f'!2( as4) r as2( ces4) r b1( heses4-.) r as-. r ases-. r ges-. r f-. r fes-. r es-> r eses-> r
+    f'!2( as4) r as2( ces4) r b1(
+    heses4-.) r as-. r ases-. r ges-. r f-. r fes-. r es-> r eses-> r
     des2-^( f4) r f2( as4) r as1( ges4-.) r des'-. r
   }
-  b1( as4-.) r des-. r \makeOctaves #-1 {as1( ges4-.) r des'-. r b1( as4-.) r} es'-. r
+  b1( as4-.) r des-. r
+  \makeOctaves #-1 {as1( ges4-.) r des'-. r b1( as4-.) r} es'-. r
   \makeOctaves #-1 {ces1( b4-.) r} f'-. r des1_( ces4-.) r e8 g4.
   <<
     {
@@ -225,14 +237,18 @@ links = \relative {
     }
   >>
   r4 \makeOctaves #-1 {cis2_( d a fis g} <h,, d'><g' h> a1)
-  d,8 a' fis' fis, h fis' d' h, cis a' fis' cis, d a' fis' d, e h' g h d, h' g h cis, a' e' a, d, a' e' a,
-  e a e' a, fis a e' a, g a e' a, h a e' a, cis a e' a, g' a, e' a, d a' fis a cis, a' fis a
-  h, fis' d fis a, fis' d fis g, d' h d fis, d' h d e, h' g' fis e d cis h a g fis e d cis h a
+  d,8 a' fis' fis, h fis' d' h, cis a' fis' cis, d a' fis' d,
+  e h' g h d, h' g h cis, a' e' a, d, a' e' a,
+  e a e' a, fis a e' a, g a e' a, h a e' a, cis a e' a, g' a, e' a,
+  d a' fis a cis, a' fis a h, fis' d fis a, fis' d fis g, d' h d fis, d' h d
+  e, h' g' fis e d cis h a g fis e d cis h a
   \key es \minor
-  as heses, es d f, ces' heses b c ges' g des b' heses, es as g es ges c ces fes, d' des,
-  c' es, fes heses f ges' as, d, des' es, g ges f,! fes' heses, es d g, des'! c b' heses, es fes
-  f, es' d as a ces' f,! b,! fes' heses, f' ges fes, g' ces, c' ges as heses c, heses f' fes es,
-  d ges g des' f, ces' ges' d es fes g ges, c des, fes es' eses, des' as ases es' des, ases' b
+  as heses, es d f, ces' heses b c ges' g des b' heses, es as
+  g es ges c ces fes, d' des, c' es, fes heses f ges' as, d,
+  des' es, g ges f,! fes' heses, es d g, des'! c b' heses, es fes
+  f, es' d as a ces' f,! b,! fes' heses, f' ges fes, g' ces, c'
+  ges as heses c, heses f' fes es, d ges g des' f, ces' ges' d
+  es fes g ges, c des, fes es' eses, des' as ases es' des, ases' b
   es, g ges heses\> fes' as, ases \xLV #6 es'\!\laissezVibrer
   R1*4
   r4 \makeOctaves #-1 {b'( a4. c,8 es4 d2.)} <des' fes ges ases ces>1 <b,, b'>
@@ -243,9 +259,10 @@ links = \relative {
   } <d' e fis g a b>1 <a,,! a'!>
   r4 \makeOctaves #-1 {h''( b4. cis,8 a'4 es2.)} <es' g as b>1 <d,, d'>
   r4 \makeOctaves #-1 {g'( fis4. c8 h'4 b2.)}
-  a,!8 gis' d es c' fis, a g f h, b e! g, gis' d a b d h f fis cis' es, e'! f, d' cis gis c h,! a' es'
-  e,! d' b h c' cis, gis' d es b' e, f g, gis' d cis c' d, es a as fis, c' g'
-  cis, gis' c, h cis' b, fis' f, h a as f' as c, cis d' es h b e, c' fis, h, es
-  d cis b h' f e' cis d, es' e, a b d, e' b g d' ais h gis cis, a' b d,
+  a,!8 gis' d es c' fis, a g f h, b e! g, gis' d a b d h f fis cis' es, e'!
+  f, d' cis gis c h,! a' es' e,! d' b h c' cis, gis' d es b' e, f g, gis' d cis
+  c' d, es a as fis, c' g' cis, gis' c, h cis' b, fis' f, h a as f' as c, cis d'
+  es h b e, c' fis, h, es d cis b h' f e' cis d, es' e, a b d, e' b g
+  d' ais h gis cis, a' b d,
   \key es \minor
 }

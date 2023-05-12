@@ -395,7 +395,7 @@ rechts = {
         e cis d fis
         eis cisis dis fis
         e cis dis eis
-        fis cis d dis
+        fis cis d es
         f b, c cis
       }
     >>

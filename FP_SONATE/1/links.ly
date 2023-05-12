@@ -264,5 +264,8 @@ links = \relative {
   c' d, es a as fis, c' g' cis, gis' c, h cis' b, fis' f, h a as f' as c, cis d'
   es h b e, c' fis, h, es d cis b h' f e' cis d, es' e, a b d, e' b g
   d' ais h gis cis, a' b d,
+  \time 3/8
+  r4.
+  \time 4/4
   \key es \minor
 }

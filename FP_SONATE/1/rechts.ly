@@ -409,6 +409,9 @@ rechts = {
         g-. a-. b-. e,-. f-. g-. as-. d,-.
       }
     >>
+    \time 3/8
+    r4.
+    \time 4/4
     \key es \minor
   }
 }

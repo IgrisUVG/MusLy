@@ -411,6 +411,7 @@ rechts = {
     >>
     \time 3/8
     r4.
+    \break
     \time 4/4
     \key es \minor
   }

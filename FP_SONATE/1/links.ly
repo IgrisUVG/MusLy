@@ -266,6 +266,7 @@ links = \relative {
   d' ais h gis cis, a' b d,
   \time 3/8
   r4.
+  \break
   \time 4/4
   \key es \minor
 }

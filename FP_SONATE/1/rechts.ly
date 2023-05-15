@@ -401,15 +401,25 @@ rechts = {
     >>
     <<
       {
-        a'4-. r as-. r g-. r fis-. r f-. r e-. r es-. r d-. r
+        a'4-. r as-. r g-. r fis-. r f-. r e-. r
       }
       \\
       {
         d4-. e-. f-. h,-. a-. c-. dis-. gis,-.
-        g-. a-. b-. e,-. f-. g-. as-. d,-.
+        g-. a-. b-. e,-.
       }
     >>
-    \time 3/8
+    \override Score.TimeSignature.stencil = ##f
+    \time 11/8
+    <<
+      {
+        es'-. r d-. r
+      }
+      \\
+      {
+        f,-. g-. as-. d,-.
+      }
+    >>
     r4.
     \break
     \time 4/4

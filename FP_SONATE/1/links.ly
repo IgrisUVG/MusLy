@@ -263,10 +263,12 @@ links = \relative {
   f, d' cis gis c h,! a' es' e,! d' b h c' cis, gis' d es b' e, f g, gis' d cis
   c' d, es a as fis, c' g' cis, gis' c, h cis' b, fis' f, h a as f' as c, cis d'
   es h b e, c' fis, h, es d cis b h' f e' cis d, es' e, a b d, e' b g
-  d' ais h gis cis, a' b d,
-  \time 3/8
+  \override Score.TimeSignature.stencil = ##f
+  \time 11/8
+  d'[ ais h gis] cis,[ a' b d,]
   r4.
   \break
   \time 4/4
   \key es \minor
+  <es, es'>1
 }

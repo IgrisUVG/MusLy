@@ -270,5 +270,5 @@ links = \relative {
   \break
   \time 4/4
   \key es \minor
-  <es, es'>1
+  <es, es'>1 <des des'> <ces' ces'>
 }

@@ -424,5 +424,14 @@ rechts = {
     \break
     \time 4/4
     \key es \minor
+    <<
+      {
+        <as' as'>2
+      }
+      \\
+      {
+
+      }
+    >>
   }
 }

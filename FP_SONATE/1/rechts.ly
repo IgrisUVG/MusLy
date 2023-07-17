@@ -426,7 +426,9 @@ rechts = {
     \key es \minor
     <<
       {
-        <as' as'>2
+        <as' as'>2( <b b'>4) r <b b'>2( <des des'>4) r <des des'>1(
+        <c c'>2) <b b'> <as as'> <ges ges'> <f f'> <ges ges'>
+        <b b'>1( <as as'>)
       }
       \\
       {

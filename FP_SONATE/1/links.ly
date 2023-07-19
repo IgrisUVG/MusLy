@@ -272,11 +272,29 @@ links = \relative {
   \key es \minor
   <<
     {
-
+      \shape #'((0.5 . -7.5) (0 . 0) (0 . 0) (0 . 0)) Slur
+      r8( ces' b b ' 
+      \stemDown
+      as as' ges4)
+      \stemUp
+      \shape #'((0.3 . -6) (-2 . 1) (0 . 0) (0 . 0)) Slur
+      r8( b,, as as'
+      \stemDown
+      ges es' f4)
+      \stemUp
+      \shape #'((0.5 . -3) (0 . 0) (0 . 0) (0 . 0)) Slur
+      r8( ges,, b des
+      \stemDown
+      f as es'4)
+      \stemUp
+      \shape #'((0.5 . -4) (0 . 0) (0 . 0) (0 . 0)) Slur
+      r8( es,, b' f'
+      \stemDown
+      as b des es)
     }
     \\
     {
-      <es, es'>1 <des des'> <ces' ces'> <as as'> <f f'> <ges ges'>
+      <es,,, es'>1 <des des'> <ces' ces'> <as as'> <f f'> <ges ges'>
     }
   >>
 }

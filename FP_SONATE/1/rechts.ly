@@ -24,7 +24,7 @@ rechts = {
     >>
     r <f as>-. r <es b'>-. r r2
     <es ces'>(<as des><b es><ges ges'><des b'>4-.) r r2 <des as'>4-. r r2 R1
-%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%
     %\repeat volta 3 {
     <ces des ges>2(<b es b'>4-.) r <des f b>2(<b ges'as des>4-.) r
     <es ges des'>1(<des as' ces>4) r <d g b> r <deses ges! heses> r <es b' des> r
@@ -426,13 +426,15 @@ rechts = {
     \key es \minor
     <<
       {
+        \stemDown
         <as' as'>2( <b b'>4) r <b b'>2( <des des'>4) r <des des'>1(
         <c c'>2) <b b'> <as as'> <ges ges'> <f f'> <ges ges'>
         <b b'>1( <as as'>)
       }
       \\
       {
-
+        s8 fes' c des s f des es s ges des f s as es f
+        s b ges as es f g as s f des es s es c des
       }
     >>
   }

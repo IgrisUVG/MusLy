@@ -22,7 +22,7 @@ links = \relative {
   des( c) b c des es e( f ges as f ges as b  ces as des c des es des ces b as
   ges4-.) r <des as'>-. r <es ges>-. r r2
   <ges des'>(<f ces'><es ges><c as' b><des ges>4-.) r r2 f4-. r r2 R1
-  %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
   ces8 des es f ges( f ges) as b( a b) as ges( f) es-. des-.
   ces-. b-. as-. ges-. f-. es-. des-. ces-. b-. a-. b-. ces-. c-. des-. d-. es-.
   e-. f-. ges g as a b ces c des d es e f ges( g as a b ces c des es f)
@@ -273,7 +273,7 @@ links = \relative {
   <<
     {
       \shape #'((0.5 . -7.5) (0 . 0) (0 . 0) (0 . 0)) Slur
-      r8( ces' b b ' 
+      r8( ces' b b '
       \stemDown
       as as' ges4)
       \stemUp
@@ -291,10 +291,36 @@ links = \relative {
       r8( es,, b' f'
       \stemDown
       as b des es)
+      r8( c, g' as b c des es)
+      \stemUp
+      r8( des,, as' es'
+      \stemDown
+      f ges as b)
     }
     \\
     {
       <es,,, es'>1 <des des'> <ces' ces'> <as as'> <f f'> <ges ges'>
+    }
+  >>
+  <<
+    {
+      s8 ges'( des' as' es ges b f')
+      \change Staff = RH
+      \stemDown
+      \once \override NoteColumn.force-hshift = #.7
+      ges2
+      \change Staff = LH
+      f8 f, as c
+    }
+    \\
+    {
+      \stemUp
+      s1 s8 as,( es' b') s2
+    }
+    \\
+    {
+      \voiceTwo
+      <ces,, ces' ges' des'>1 <des des'>
     }
   >>
 }

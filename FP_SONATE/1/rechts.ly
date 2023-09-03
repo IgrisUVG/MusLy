@@ -435,6 +435,9 @@ rechts = {
       {
         s8 fes' c des s f des es s ges des f s as es f
         s b ges as es f g as s f des es s es c des
+        s f c des s f b, c s des as b s f' as, des
+        s as' des, f ges ces, des es
+        s ges des es f c des as
       }
     >>
   }

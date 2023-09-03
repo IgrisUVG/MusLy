@@ -304,11 +304,11 @@ links = \relative {
   >>
   <<
     {
-      s8 ges'( des' as' es ges b f')
+      s8 ges'( des' as' es ges b f')\once\showStaffSwitch
       \change Staff = RH
       \stemDown
       \once \override NoteColumn.force-hshift = #.7
-      ges2
+      ges2\once\showStaffSwitch
       \change Staff = LH
       f8 f, as c
     }

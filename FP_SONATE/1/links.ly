@@ -291,8 +291,10 @@ links = \relative {
       r8( es,, b' f'
       \stemDown
       as b des es)
+      \shape #'((0.5 . -4) (0 . 0) (0 . 0) (0 . 0)) Slur
       r8( c, g' as b c des es)
       \stemUp
+      \shape #'((0.5 . -4) (0 . 0) (0 . 0) (0 . 0)) Slur
       r8( des,, as' es'
       \stemDown
       f ges as b)
@@ -304,23 +306,36 @@ links = \relative {
   >>
   <<
     {
-      s8 ges'( des' as' es ges b f')\once\showStaffSwitch
+      s8 ges'_( des' as' es ges b f')\once\showStaffSwitch
       \change Staff = RH
       \stemDown
       \once \override NoteColumn.force-hshift = #.7
       ges2\once\showStaffSwitch
       \change Staff = LH
-      f8 f, as c
+      f8 f,( as c)
     }
     \\
     {
       \stemUp
-      s1 s8 as,( es' b') s2
+      s1
+      \shape #'((-3 . -2.5) (0 . -1.5) (0 . 0) (0 . 0)) Slur
+      s8( as, es' b') s2
     }
     \\
     {
       \voiceTwo
       <ces,, ces' ges' des'>1 <des des'>
+    }
+  >>
+  <<
+    {
+      \stemDown
+      \shape #'((-2 . -1.5) (0 . 0.5) (0 . 0) (0 . 0)) Slur
+      s8( f' c' <f, des'>)
+    }
+    \\
+    {
+      <b,, b'>2
     }
   >>
 }

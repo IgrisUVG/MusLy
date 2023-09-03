@@ -440,5 +440,19 @@ rechts = {
         s ges des es f c des as
       }
     >>
+    <<
+      {
+        des,8[ r <b' ges'> <as f'>]
+      }
+      \\
+      {
+        des,2
+      }
+      \\
+      {
+        \voiceTwo
+        s8 <b f'>4
+      }
+    >>
   }
 }

@@ -22,7 +22,7 @@ links = \relative {
   des( c) b c des es e( f ges as f ges as b  ces as des c des es des ces b as
   ges4-.) r <des as'>-. r <es ges>-. r r2
   <ges des'>(<f ces'><es ges><c as' b><des ges>4-.) r r2 f4-. r r2 R1
-%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%
   ces8 des es f ges( f ges) as b( a b) as ges( f) es-. des-.
   ces-. b-. as-. ges-. f-. es-. des-. ces-. b-. a-. b-. ces-. c-. des-. d-. es-.
   e-. f-. ges g as a b ces c des d es e f ges( g as a b ces c des es f)

@@ -33,10 +33,15 @@
 }
 
 \include "../EtudMMXXII.ly"
+\include "../EtudMMXXII_sheme.ly"
 
 \score {
   \new PianoStaff <<
     \new Staff = "RH" \rechtsMMXXII
     \new Staff = "LH" \linksMMXXII
   >>
+}
+
+\score {
+  \new Staff \shemeMMXXII
 }

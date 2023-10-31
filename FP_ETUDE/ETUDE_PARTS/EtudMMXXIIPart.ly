@@ -44,4 +44,14 @@
 
 \score {
   \new Staff \shemeMMXXII
+  %{\layout {
+    ragged-right = ##f
+    indent = 0%\in
+    \context {
+      \Staff
+      \remove "Time_signature_engraver"
+      %\remove "Clef_engraver"
+      %\remove "Bar_engraver"
+    }
+  }%}
 }

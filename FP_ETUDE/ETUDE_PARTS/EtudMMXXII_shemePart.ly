@@ -53,5 +53,10 @@
       \remove "Clef_engraver"
       %\remove "Bar_engraver"
     }
+    \context {
+      \Score
+      \remove "System_start_delimiter_engraver"
+      \omit SystemStartBar
+    }
   }
 }

@@ -60,3 +60,65 @@
     }
   }
 }
+\score {
+  \new PianoStaff <<
+    \new Staff = "RH" \relative {
+      \clef treble
+      \key as \major
+      \time 9/8
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      es''''8 as, c, f b des
+      \override Beam.stencil = ##f
+      c
+      \override Stem.stencil = ##f
+      \override Flag.stencil = ##f
+      f, as,
+      \ottava #0
+      \time 4/4
+      s4 s
+      \once \override NoteHead.X-offset = #1
+      gis8 \circleN g fis
+      \once \override NoteHead.X-offset = #.2
+      \circleN f
+      \once \override NoteHead.X-offset = #.3
+      c
+      \once \override NoteHead.X-offset = #.5
+      \circleN h
+    }
+    \new Staff = "LH" \relative {
+      \clef bass
+      \time 9/8
+      \ottava #-1
+      \set Staff.ottavation = #"8"
+      a,,,8 es' cis' b, e es' d \set stemRightBeamCount = #1 e,!
+      \ottava #0
+      s
+      \time 4/4
+      \override Staff.Clef.stencil = ##f
+      \override Stem.stencil = ##f
+      \override Flag.stencil = ##f
+      \override Beam.stencil = ##f
+      \clef treble
+      s4 s
+      \once \override NoteHead.X-offset = #1
+      g''''!8 \circleN gis f!
+      \once \override NoteHead.X-offset = #.2
+      \circleN fis
+      \once \override NoteHead.X-offset = #.3
+      h,!
+      \once \override NoteHead.X-offset = #.5
+      \circleN c!
+    }
+  >>
+  \layout {
+    ragged-right = ##t
+    indent = 0
+    \context {
+      \Staff
+      \remove "Time_signature_engraver"
+      %\remove "Clef_engraver"
+      \remove "Bar_engraver"
+    }
+  }
+}

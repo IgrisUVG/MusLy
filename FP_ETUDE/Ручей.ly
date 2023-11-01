@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -11,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #25
   two-sided = ##t
   inner-margin = 20
   outer-margin = 15
@@ -33,7 +34,7 @@ upper = \relative c'' {
   \clef treble
   \key c \major
   \time 12/16
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \override DynamicLineSpanner.staff-padding = #3
   c16\p( b) f'( es) es d b'( as) ges( f) b,( as)
   <g c>_\markup { \italic { cresc. poco } }(
@@ -76,6 +77,9 @@ upper = \relative c'' {
   \ottava #0
   \time 4/4
   r4\pp^\markup{\raise #2 {Lento}} h,\(
+  \override Score.SpacingSpanner.strict-grace-spacing = ##t
+  %\set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
+  \once\override Score.GraceSpacing.spacing-increment = #1.3
   \grace {
     \stemDown
     ais16^( fisis gis e dis cisis cis)\)
@@ -152,7 +156,9 @@ upper = \relative c'' {
   d16[ g, ais! fis! h e,] a[    d,32 
   \tweak #'duration-log #1 a    cis'!16  fis,! fis'! a,]
   d16[ g, a    fis! h e,]
-  a'[  d, g a, fis' h,] e_\markup {\italic {diminuendo}}[ g, d' h fis! b] a[ d, g a, fis'! h,!]
+  a'[  d, g a, fis' h,] e_\markup {\italic {diminuendo}}
+  [ g, d' h fis! b]
+  a[ d, g a, fis'! h,!]
   \stemUp
   e[
   \change Staff = "lower"
@@ -167,7 +173,7 @@ lower = \relative c {
   \clef treble
   \key c \major
   \time 12/16
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
 
   r8 r  c''16( b) des( c) b( as) ges( f)
   f( es) des( c) <ces ges'>( <b f'>)
@@ -198,6 +204,7 @@ lower = \relative c {
   d g f b c f es a b d es g f4\break
   \time 4/4
   \clef bass
+  \override Score.SpacingSpanner.strict-note-spacing = ##t
   cis,,,8( <gis' dis'> <cis e> <dis ais'>)
   e,,( h' <fis' gis> c')
   <<

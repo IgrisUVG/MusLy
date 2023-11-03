@@ -36,7 +36,7 @@ upper = \relative c'' {
   \time 12/16
   \override Staff.TimeSignature.stencil = ##f
   \override DynamicLineSpanner.staff-padding = #3
-  c16\p( b) f'( es) es d b'( as) ges( f) b,( as)
+  c16\p( b) f'( es) es( d) b'( as) ges( f) b,( as)
   <g c>_\markup { \italic { cresc. poco } }(
   <f b>) <as f'>( <ges es'>) <ces es>( <b d>)
   <c b'>( <b as'>) <b ges'>( <as f'>) <f b>( <es as>)
@@ -161,13 +161,17 @@ upper = \relative c'' {
         \once \override Stem.X-offset = #.5
         \once \override Accidental.X-offset = #.5
         f d
-        \once \override NoteHead.X-offset = #.4
-        \once \override Stem.X-offset = #.4
-        \once \override Accidental.X-offset = #.4
-        es c
+        \once \override NoteHead.X-offset = #.3
+        \once \override Stem.X-offset = #.3
+        \once \override Accidental.X-offset = #.3
+        es
+        \once \override NoteHead.X-offset = #-.3
+        \once \override Stem.X-offset = #-.3
+        \once \override Accidental.X-offset = #-.3
+        c
       }
       \stemNeutral
-      h4..) fis16 b1\)
+      h!4..) fis16 b1\)
     }
     \\
     {s1 s4 e,8 f e[ f] e[ f]}

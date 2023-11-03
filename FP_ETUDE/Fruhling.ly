@@ -240,7 +240,7 @@ rechts = \relative {
     }
     \\
     {
-      <e, c'>8<f b> g4 f es des c des c2~ c8 r
+      <e, c'>8<f b> g4 f es! des c des c2~ c8 r
     }
   >>
   r2

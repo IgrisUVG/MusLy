@@ -26,7 +26,7 @@
   \context {
     \Score
     \remove "Bar_number_engraver"
-    %\override SpacingSpanner.strict-grace-spacing = ##t
+    \override SpacingSpanner.strict-grace-spacing = ##t
     \override StaffGrouper.staff-staff-spacing.basic-distance = #16
   }
 }
@@ -76,21 +76,39 @@ upper = \relative c'' {
   a! c d g f a b es <g, a d>4
   \ottava #0
   \time 4/4
-  r4\pp^\markup{\raise #2 {Lento}} h,\(
-  \override Score.SpacingSpanner.strict-grace-spacing = ##t
-  %\set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
-  \once\override Score.GraceSpacing.spacing-increment = #1.3
-  \grace {
-    \stemDown
-    ais16^( fisis gis e dis cisis cis)\)
-  }
+  r4\pp^\markup{\raise #2 {Lento}}
   <<
     {
+      \stemDown
+      h,\(
+      %\set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
+      \once\override Score.GraceSpacing.spacing-increment = #1.2
+      \grace
+      {
+        ais16^( fisis
+        \once \override NoteHead.X-offset = #.3
+        \once \override Stem.X-offset = #.3
+        \once \override Accidental.X-offset = #.3
+        gis
+        \once \override NoteHead.X-offset = #-.2
+        \once \override Stem.X-offset = #-.2
+        \once \override Accidental.X-offset = #-.2
+        e dis
+        \once \override NoteHead.X-offset = #.3
+        \once \override Stem.X-offset = #.3
+        \once \override Accidental.X-offset = #.3
+        cisis
+        \once \override NoteHead.X-offset = #1
+        \once \override Stem.X-offset = #1
+        \once \override Accidental.extra-offset = #'(.2 . 0)
+        cis)\)
+      }
+      \stemUp
       g4..( dis16 ais'1)
     }
     \\
     {
-      s2 r4 cis,8 d cis[ d] cis[ d]
+      s2. r4 cis,8 d cis[ d] cis[ d]
     }
   >>
   \time 3/4
@@ -124,8 +142,29 @@ upper = \relative c'' {
       \override DynamicLineSpanner.staff-padding = #3
       \stemDown
       c'2\spp^\markup{\raise #2 {Lento}}\(
+      \once\override Score.GraceSpacing.spacing-increment = #1.1
       \grace {
-        h16^(c ais h a g fis f d es c
+        h16^(c
+        \once \override NoteHead.X-offset = #.4
+        \once \override Stem.X-offset = #.4
+        \once \override Accidental.X-offset = #.4
+        ais h
+        \once \override NoteHead.X-offset = #.4
+        \once \override Stem.X-offset = #.4
+        \once \override Accidental.X-offset = #.4
+        a g
+        \once \override NoteHead.X-offset = #.3
+        \once \override Stem.X-offset = #.3
+        \once \override Accidental.X-offset = #.3
+        fis
+        \once \override NoteHead.X-offset = #.5
+        \once \override Stem.X-offset = #.5
+        \once \override Accidental.X-offset = #.5
+        f d
+        \once \override NoteHead.X-offset = #.4
+        \once \override Stem.X-offset = #.4
+        \once \override Accidental.X-offset = #.4
+        es c
       }
       \stemNeutral
       h4..) fis16 b1\)
@@ -134,7 +173,8 @@ upper = \relative c'' {
     {s1 s4 e,8 f e[ f] e[ f]}
   >>
   \time 3/4
-  <e a> r <fis h> r <eis cis'> r \bar "||"
+  <e a> r <fis h> r <eis cis'> r
+  \bar "||"
   \cadenzaOn
   \override Beam #'breakable = ##t
   d'16\mf ^\markup{\raise #2 {Moderato}}[
@@ -205,7 +245,13 @@ lower = \relative c {
   \time 4/4
   \clef bass
   \override Score.SpacingSpanner.strict-note-spacing = ##t
-  cis,,,8( <gis' dis'> <cis e> <dis ais'>)
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
+  cis,,,8( <gis' dis'>
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1/64)
+  <cis e> <dis ais'>)
+  \revert Score.SpacingSpanner.strict-note-spacing
+  %\set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
+  \unset Score.proportionalNotationDuration
   e,,( h' <fis' gis> c')
   <<
     {
@@ -220,6 +266,7 @@ lower = \relative c {
       s2. h,4
     }
   >>
+  \unset Score.proportionalNotationDuration
   \time 3/4
   <ais fis' ais>8 r <as es' b'> r <fis h e> r\break
   f16_( c' e g c4) c,,16( e a e' a h c f)
@@ -228,7 +275,16 @@ lower = \relative c {
   \set Staff.ottavation = #"8"
   cis h eis, cis a4)\break
   \ottava #0
-  ges'8( <des'' as'>[ <ges es'> <des' ges>])
+  \override Score.SpacingSpanner.strict-note-spacing = ##t
+  %\set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
+  ges'8(
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1/32)
+  <des'' as'>[
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1/64)
+  <ges es'> <des' ges>])
+  \revert Score.SpacingSpanner.strict-note-spacing
+  %\set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
+  \unset Score.proportionalNotationDuration
   b,,( <des' a'>[ <f ges'> <des' f>])
   <<
     {
@@ -243,7 +299,9 @@ lower = \relative c {
       s2. g4
     }
   >>
-  <fis d'>8 r <e g dis'> r ais r\break
+  %\unset Score.proportionalNotationDuration
+  <fis d'>8 r <e g dis'> r ais r
+  \break
   \cadenzaOn
   \override Beam #'breakable = ##t
   r2

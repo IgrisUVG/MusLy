@@ -32,7 +32,7 @@
   \context {
     \Staff
     \remove "Time_signature_engraver"
-    \remove "Clef_engraver"
+    %\remove "Clef_engraver"
   }
   \context{
     \Score
@@ -57,15 +57,38 @@ bot = \change Staff = "LH"
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
-  \time 4/4
-
+  %\time 7/8
+  %\compoundMeter #'((3 8) (2 4))
+  \compoundMeter #'((3 4 8))
+  \partial 4.
+  as'8 g4
+  cis4.~
+  \stemUp
+  cis8 e es h
+  <<
+    {
+      \once \override Stem.stencil = ##f
+      fis'2
+    }
+    \\
+    {
+      s4. s4 \tuplet 3/2 {d8 cis gis}
+    }
+  >>
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
   \clef bass
-  \time 4/4
-
+  %\time 7/8
+  \compoundMeter #'((3 4 8))
+  \partial 4.
+  r4 s8
+  fis,8_( cis' gis'
+  \stemDown
+  \top a'2) \bot
+  \stemNeutral
+  d,,,8_( a' <g' a> <h d>2)
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

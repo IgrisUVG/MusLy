@@ -89,6 +89,9 @@ links = \relative {
   \top a'2) \bot
   \stemNeutral
   d,,,8_( a' <g' a> <h d>2)
+  gis,8( dis' ais' cis2)
+  f,,8_( c' g' c2)
+  d,,8_( a' e' <a h e>2)
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

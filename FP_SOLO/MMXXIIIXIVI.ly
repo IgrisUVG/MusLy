@@ -68,14 +68,50 @@ rechts = \relative {
   cis4.~
   \stemUp
   cis8 e es h
+  \mergeDifferentlyHeadedOn
   <<
     {
       \once \override Stem.stencil = ##f
-      fis'2
+      fis'2 s4.
+      \override Dots.dot-count = #0
+      \tweak #'duration-log #1
+      h, g!8 b a es
+      \once \override Stem.stencil = ##f
+      \override Dots.dot-count = #0
+      \tweak #'duration-log #1
+      as4. h!8 e es b
     }
     \\
     {
       s4. s4 \tuplet 3/2 {d8 cis gis}
+      r4 s8 g4 s
+      s s8 h2
+    }
+  >>
+  \stemDown
+  f'4 s8 r4 \tuplet 3/2 {cis8 c g}
+  \compoundMeter #'((2 4 8))
+  <<
+    {
+      \once \override Stem.stencil = ##f
+      \override Dots.dot-count = #0
+      fis2.
+      
+    }
+    \\
+    {
+      s2 \tuplet 3/2 {d'8 cis gis}
+    }
+  >>
+  \compoundMeter #'((3 2 3 2 8))
+  <<
+    {
+      \stemDown
+      <g c>2 s8 <a c>2 s8
+    }
+    \\
+    {
+      s4. r8 f s4. r8 d
     }
   >>
 }
@@ -87,14 +123,26 @@ links = \relative {
   \compoundMeter #'((3 4 8))
   \partial 4.
   r4 s8
+  \shape #'((0 . 0) (0 . -.5) (.5 . -3) (.5 . 3)) Slur
   fis,8_( cis' gis'
   \stemDown
   \top a'2) \bot
   \stemNeutral
-  d,,,8_( a' <g' a> <h d>2)
-  gis,8( dis' ais' cis2)
+  \shape #'((0 . 0) (0 . -.5) (.5 . -2) (1 . 0)) Slur
+  d,,,8_( a' <g' a> <h d>4) s
+  gis,8( dis' ais' cis4) s
+  \shape #'((0 . 0) (0 . -.5) (.5 . -2) (.9 . 0)) Slur
   f,,8_( c' g' c2)
-  d,,8_( a' e' <a h e>2)
+  \shape #'((0 . 0) (0 . -.5) (.5 . -2) (1 . 0)) Slur
+  d,,8_( a' e' <a h e>4) s
+  \compoundMeter #'((2 4 8))
+  \shape #'((0 . 0) (0 . -.5) (.5 . -2) (.9 . 0)) Slur
+  g,8_( d' <a' h>4) s
+  \compoundMeter #'((3 2 3 2 8))
+  \shape #'((0 . 0) (0 . -.5) (.5 . -2) (.9 . -.2)) Slur
+  f,8_( c' g' <a d>4)
+  \shape #'((0 . 0) (0 . -.5) (.5 . -2) (.9 . -.2)) Slur
+  f,8_( c' g' <h e>4)
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

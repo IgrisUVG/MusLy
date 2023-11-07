@@ -62,6 +62,9 @@ rechts = \relative {
   \compoundMeter #'((3 4 8))
   \partial 4.
   as'8 g4
+  \once \override Stem.stencil = ##f
+  \override Dots.dot-count = #0
+  \tweak #'duration-log #1
   cis4.~
   \stemUp
   cis8 e es h

@@ -176,11 +176,11 @@ rechts = {
   \break
   <<
     {
-      es'!1 s g' f''!2~ f''1
+      es'!1 s g' s2 f''!2~ f''1
     }
     \\
     {
-      s1 gis e'2
+      s1 gis s e'2
     }
     \\
     {

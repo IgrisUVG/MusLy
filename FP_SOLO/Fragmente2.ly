@@ -12,11 +12,11 @@
 #(set-default-paper-size "a4" 'landscape)
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
 }
@@ -41,10 +41,10 @@ top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
 xLV = #(define-music-function (parser location further) (number?) #{
-  \once \override LaissezVibrerTie  #'X-extent = #'(0 . 0)
-  \once \override LaissezVibrerTie  #'details #'note-head-gap = #(/
+  \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
+  \once \override LaissezVibrerTie.details.note-head-gap = #(/
                                                                   further -2)
-  \once \override LaissezVibrerTie  #'extra-offset = #(cons (/
+  \once \override LaissezVibrerTie.extra-offset = #(cons (/
                                                              further 2) 0)
          #})
 

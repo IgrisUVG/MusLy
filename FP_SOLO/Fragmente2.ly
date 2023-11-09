@@ -30,7 +30,7 @@
   }
   \context{
     \Score
-    \override StaffGrouper.staff-staff-spacing.basic-distance = #15
+    %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
     \remove "Bar_number_engraver"
   }
 }
@@ -218,6 +218,10 @@ rechts = \relative {
   \repeat tremolo 12 {b32 g}
   \repeat tremolo 12 {h32 g}
   \repeat tremolo 12 {h32 fis}
+  \repeat tremolo 6 {d'32 g,}
+  \bar ""
+  \break
+  \repeat tremolo 12 {es'32 g,}
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -478,10 +482,10 @@ links = \relative {
   es8-.)\noBeam des8.-- f,16( ges b
   \stemUp
   ces8-.)\noBeam b8.--
-  \clef bass
+  %\clef bass
   \stemNeutral
   des,16( ces b as ces b as ges8-.)\noBeam
-  \clef treble
+  %\clef treble
   <ges' b ges'>-.
   \cadenzaOn
   r2\fermata\sustainOn
@@ -507,13 +511,45 @@ links = \relative {
   <b as'> <g' b>]
   <<
     {
-      es'4 d8 d4 cis8 cis4 h
+      es'4 d8 d4 cis8 cis4 h8 h4 a8 a[ g]
     }
     \\
     {
-      
+      f4. e d c b!4
     }
   >>
+  \clef bass
+  b,,8
+  <<
+    {
+      es8[ <b' g'> <es b'>]
+    }
+    \\
+    {
+      <
+      \tweak #'duration-log #1
+      es,,
+      \tweak #'duration-log #1
+      es'
+      >4.
+    }
+  >>
+  \clef treble
+  <g'' es'>8[ <b g'> <es b'>]
+  \stemDown
+  <f g b f'>[ <es g b es> <d g b d>]
+  \stemNeutral
+  <<
+    {
+      <c es as c>4 s8
+    }
+    \\
+    {
+      c8[ <as b es as> <es as c es>]
+    }
+  >>
+  \clef bass
+  <c es as c>8[ <as b es as> <es as c es>] <as, as'>1.
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

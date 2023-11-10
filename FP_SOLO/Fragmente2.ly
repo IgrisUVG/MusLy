@@ -58,6 +58,52 @@ circle =
        (ly:stencil-extent note X)
        (ly:stencil-extent note Y))))
 
+%% Cautionary pedal mark after a line break:
+cautionPed = \markup {
+  \normal-text
+  \with-dimensions #'(0 . 6) #'(0 . 1.8)
+  \concat {
+    "("
+    \musicglyph #"pedal.Ped"
+    \musicglyph #"pedal.."
+    ")"
+  }
+}
+
+ped = \markup {
+  \concat {
+    \musicglyph #"pedal.Ped"
+    \musicglyph #"pedal.."
+    \hspace #0.95
+  }
+}
+
+%% Span:
+sustainSpanOn =
+#(define-event-function (parser location)()
+   #{
+     \tweak bound-details
+     #`((left . ((Y . 0)
+                 (padding . -1.7)
+                 (attach-dir . ,LEFT)
+                 (stencil-align-dir-y . -1)
+                 (text . ,ped)))
+        (left-broken . ((attach-dir . ,RIGHT)
+                        (text . ,cautionPed)
+                        (padding . 0)))
+        (right . ((Y . 0)
+                  (attach-dir . ,LEFT)
+                  (text . ,(markup #:draw-line (cons 0 1)))))
+        (right-broken . ((padding . -0.2)
+                         (text . #f))))
+     \tweak padding #1.2
+     \tweak direction #-1
+     \tweak style #'line
+     \startTextSpan
+   #})
+
+sustainSpanOff = \stopTextSpan
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
@@ -68,7 +114,7 @@ rechts = \relative {
   \bar ".|:"
   \ottava #1
   \set Staff.ottavation = #"8"
-  h'''\mp d, g a,
+  h''' d, g a,
   \bar ":|."
   \ottava #0
   \ottava #1
@@ -93,7 +139,7 @@ rechts = \relative {
   h''4 e, g c, d g, a d,
   h'' d, g a,
   \bar ".|:"
-  h'-\markup {\italic rit.} d, g a,
+  h' d, g a,
   \bar ":|."
   \cadenzaOn
   \xLV #5 h'1\laissezVibrer
@@ -167,11 +213,11 @@ rechts = \relative {
   c16[ b] s8
   \bar ""
   \break
-  b16[ as] s8
-  as16[ es] s8
-  es16[ d] s8  
+  b!16[ as!] s8
+  as16[ es!] s8
+  es16[ d] s8
   d16[ c] s8
-  c16[ b] s8  
+  c16[ b] s8
   b16[ as] s8
   as16[ es] s8
   es16[ d] s8
@@ -180,8 +226,8 @@ rechts = \relative {
   c16[ b] s8
   \bar ""
   \break
-  b16[ as] s8
-  as16[ es] s8
+  b!16[ as!] s8
+  as16[ es!] s8
   es16[ d] s8
   d16[ c] s8
   c16[ b] s8
@@ -190,14 +236,14 @@ rechts = \relative {
   \top
   \bar "|"
   \time 4/4
-  r1\pp
+  r1
   \omit Score.BarLine
   \omit Score.SpanBar
   \break
   \time 8/4
   ges'''16( f ges as b ges as b
   ces8-.)\noBeam b8.-- as16( b des
-  es8-.)  
+  es8-.)
   \undo \omit Score.BarLine
   \undo \omit Score.SpanBar
   des4-- <as ces>8
@@ -209,7 +255,8 @@ rechts = \relative {
   \noBreak
   \cadenzaOn
   %\time 2/4
-  \repeat tremolo 8 {b32\fermata\pp g\fermata}
+  \override Beam.positions = #'(-1 . -1.5)
+  \repeat tremolo 8 {b32\fermata g\fermata}
   \bar ""
   \break
   %\omit Score.BarLine
@@ -217,10 +264,12 @@ rechts = \relative {
   %\time 6/8
   \repeat tremolo 12 {b32 g}
   \repeat tremolo 12 {h32 g}
+  \once \override Beam.positions = #'(-1 . -2)
   \repeat tremolo 12 {h32 fis}
   \repeat tremolo 6 {d'32 g,}
   \bar ""
   \break
+  \once \override Beam.positions = #'(0 . -2)
   \repeat tremolo 12 {es'32 g,}
   \repeat tremolo 6 {d'32 g,}
   \repeat tremolo 6 {d'32 as}
@@ -233,13 +282,15 @@ rechts = \relative {
   }
   \bar ""
   \break
-  \repeat tremolo 12 {c32\p as}
+  \repeat tremolo 12 {c32 as}
   \repeat tremolo 6 {h32 gis}
   \repeat tremolo 12 {dis'32 gis,}
-  \repeat tremolo 24 {e'32\ppp gis,}
+  \override Beam.positions = #'(0 . -1)
+  \repeat tremolo 24 {e'32 gis,}
   \bar ""
   \break
   \repeat tremolo 16 {e'32 gis,} s4
+  \revert Beam.positions
   \repeat tremolo 8 {
     <gis e'>32\fermata
     \bot
@@ -271,7 +322,7 @@ links = \relative {
     }
     \\
     {
-      <ces,, des>4~ <ces! des!>1~ <ces des>
+      <ces,,~ des^~>4 <ces!~ des!^~>1 <ces des>
     }
   >>
   es1~ es4 ces es des
@@ -279,7 +330,7 @@ links = \relative {
     {
       s2.
       \stemDown
-      <b''_~ es_~ f~ g~>4\ff q1
+      <b''_~ es_~ f~ g~>4 q1
     }
     \\
     {
@@ -482,7 +533,7 @@ links = \relative {
   s8 es16[ d]
   s8 d16[ c]
   s8 c16[ b]
-  s8 b16[ as]
+  s8 b16[ as!]
   s8 as16[ es]
   s8 es16[ d]
   s8 d16[ c]
@@ -492,7 +543,7 @@ links = \relative {
   s8 as16[ es]
   s8 es16[ d]
   s8 d16[ c]
-  s8 c16[ b]
+  s8 c16[ b!]
   s8 b16[ as]
   s8 as16[ es]
   \cadenzaOff
@@ -541,7 +592,11 @@ links = \relative {
     }
     \\
     {
-      f4. e d c b!4
+      f4.\sustainOn
+      e\sustainOn
+      d\sustainOn
+      c\sustainOn
+      b!4\sustainOn
     }
   >>
   \clef bass
@@ -557,13 +612,13 @@ links = \relative {
       es,,
       \tweak #'duration-log #1
       es'
-      >4.
+      >4.\sustainOn
     }
   >>
   \clef treble
   <g'' es'>8[ <b g'> <es b'>]
   \stemDown
-  <f g b f'>[ <es g b es> <d g b d>]
+  <f g b f'>[\sustainOn <es g b es> <d g b d>]
   \stemNeutral
   <<
     {
@@ -571,7 +626,7 @@ links = \relative {
     }
     \\
     {
-      c8[ <as b es as> <es as c es>]
+      c8[\sustainOn <as b es as> <es as c es>]
     }
   >>
   \clef bass
@@ -594,7 +649,8 @@ links = \relative {
       f,,
       \tweak #'duration-log #1
       f'
-      >4 s8   }
+      >4\sustainOn s8
+    }
   >>
   \clef treble
   <as'' d>8[ <c as'> <g' c>]
@@ -605,7 +661,7 @@ links = \relative {
     \\
     {
       \dotsUp
-      <gis h>4. <fisis ais>
+      <gis h>4.\sustainOn <fisis ais>\sustainOn
     }
   >>
   <<
@@ -621,7 +677,7 @@ links = \relative {
     \\
     {
       \voiceTwo
-      fis4 e8
+      fis4\sustainOn e8
     }
   >>
   \clef bass
@@ -637,15 +693,52 @@ links = \relative {
   ais'8[ fis gis e']
   \clef treble
   dis[ h cis h']
-  
   ais[ fis gis e']
   dis[ h cis h']
-  ais[ fis] s2 s1
+  ais[ fis] s2 s1\sustainOn
+}
+
+%%%%%%%%%%%%D%%%%%%%%%%%%
+dynamic = {
+  \override Hairpin.to-barline = ##t
+  \override DynamicTextSpanner.style = #'none
+  s1\mp s1*2 s1-\markup {\italic{poco cres}} s1*4 s1\f
+  \once \override DynamicText.extra-offset = #'(-2.5 . -12)
+  s1*23\ff
+  s1-\markup {\italic rit.}
+  \cadenzaOn
+  s1 s s s
+  \cadenzaOff
+  s s
+  \time 5/4
+  s2 s2.
+  \cadenzaOn
+  s2
+  \once \override TextScript.extra-offset = #'(0 . 10)
+  s1*7-\markup {\italic {ad lib}} s4
+  \once \override TextScript.extra-offset = #'(0 . 10.5)
+  s1*5-\markup {\italic {ad lib}}
+  \once \override TextScript.extra-offset = #'(-1.5 . 3)
+  s2-\markup {\italic{dimin}}
+  \once \override TextScript.extra-offset = #'(-1 . 8)
+  s4-\markup {\italic rit.}
+  \time 4/4
+  s1\pp
+  \time 8/4
+  s1*2
+  s2\pp s2
+  s1-\markup {\italic{poco cres}} s1. s2.
+  \once \override TextScript.extra-offset = #'(5 . 0)
+  s1.-\markup {\italic{dimin}}
+  s4.\p s1.-\markup {\italic{dimin}} s1*3\ppp
+  \once \override TextScript.extra-offset = #'(0 . 4)
+  s2-\markup {\italic{dim}} s1
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<
     \new Staff = "RH" \rechts
+    \new Dynamics = "DYN" \dynamic
     \new Staff = "LH" \links
   >>
 }

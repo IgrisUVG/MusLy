@@ -14,7 +14,7 @@
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
-  system-system-spacing.basic-distance = #28
+  system-system-spacing.basic-distance = #25
   last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
@@ -23,7 +23,7 @@
 \layout {
   indent = 0
   %ragged-right = ##t
-  ragged-last = ##t
+  %ragged-last = ##t
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -222,6 +222,32 @@ rechts = \relative {
   \bar ""
   \break
   \repeat tremolo 12 {es'32 g,}
+  \repeat tremolo 6 {d'32 g,}
+  \repeat tremolo 6 {d'32 as}
+  \repeat tremolo 6 {c32 as}
+  \repeat tremolo 12 {
+    \once \override Dots.dot-count = #0
+    c32\fermata
+    \once \override Dots.dot-count = #0
+    as\fermata
+  }
+  \bar ""
+  \break
+  \repeat tremolo 12 {c32\p as}
+  \repeat tremolo 6 {h32 gis}
+  \repeat tremolo 12 {dis'32 gis,}
+  \repeat tremolo 24 {e'32\ppp gis,}
+  \bar ""
+  \break
+  \repeat tremolo 16 {e'32 gis,} s4
+  \repeat tremolo 8 {
+    <gis e'>32\fermata
+    \bot
+    \stemDown
+    <ais! dis>\fermata
+  }
+  \top
+  <e gis e'>1\fermata
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -549,7 +575,72 @@ links = \relative {
     }
   >>
   \clef bass
-  <c es as c>8[ <as b es as> <es as c es>] <as, as'>1.
+  <c es as c>8[ <as b es as> <es as c es>]
+  \once \override Stem.stencil = ##f
+  <
+  \tweak #'duration-log #0
+  as,
+  \tweak #'duration-log #0
+  as'
+  >2.\fermata
+  <<
+    {
+      f'8[ <c' as'> <e c'>]
+    }
+    \\
+    {
+      <
+      \tweak #'duration-log #1
+      f,,
+      \tweak #'duration-log #1
+      f'
+      >4 s8   }
+  >>
+  \clef treble
+  <as'' d>8[ <c as'> <g' c>]
+  <<
+    {
+      eis'4 dis8 dis4 cis8
+    }
+    \\
+    {
+      \dotsUp
+      <gis h>4. <fisis ais>
+    }
+  >>
+  <<
+    {
+      cis'4 h8
+    }
+    \\
+    {
+      \dotsUp
+      \once \override NoteColumn.force-hshift = #-.6
+      gis4.
+    }
+    \\
+    {
+      \voiceTwo
+      fis4 e8
+    }
+  >>
+  \clef bass
+  <<
+    {
+      e,,8[ h' e h']
+    }
+    \\
+    {
+      e,,2
+    }
+  >>
+  ais'8[ fis gis e']
+  \clef treble
+  dis[ h cis h']
+  
+  ais[ fis gis e']
+  dis[ h cis h']
+  ais[ fis] s2 s1
 }
 %%%%%%%%%%%%%%%%%%%%%%
 \score {

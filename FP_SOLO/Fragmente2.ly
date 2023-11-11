@@ -505,8 +505,16 @@ links = \relative {
   \cadenzaOff
   \bar "|" \noBreak
   \stemNeutral
-  es16\sustainOn b'! es! f
-  es16 b'! es! f
+  <<
+    {
+      es16\sustainOn b'! es! f
+    }
+    \\
+    {
+      es,4
+    }
+  >>
+  es'16 b'! es! f
   <<
     {
       as,,16 es' f b

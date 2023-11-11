@@ -47,17 +47,6 @@ xLV = #(define-music-function (parser location further) (number?) #{
                                                           further 2) 0)
          #})
 
-circle =
-\once \override NoteHead.stencil =
-#(lambda (grob)
-   (let* ((note (ly:note-head::print grob))
-          (combo-stencil (ly:stencil-add
-                          note
-                          (circle-stencil note 0.1 0.5))))
-     (ly:make-stencil (ly:stencil-expr combo-stencil)
-       (ly:stencil-extent note X)
-       (ly:stencil-extent note Y))))
-
 %% Cautionary pedal mark after a line break:
 cautionPed = \markup {
   \normal-text
@@ -200,9 +189,9 @@ rechts = \relative {
   c,16[ g' as c]
   as[ es' f b]
   c,16[ g' as c]
-  as[ es' f \circle as]
   \ottava #1
   \set Staff.ottavation = #"8"
+  as[ es' f b]  
   c,16[ g' as c]
   \stemUp
   b[ as] s8

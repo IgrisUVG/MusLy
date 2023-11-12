@@ -37,8 +37,7 @@
 %%%%%%%%%%% LH %%%%%%%%%%%%
 \include "links.ly"
 %%%%%%%%%%%%D%%%%%%%%%%%%%%
-dynamic = {
-  \override Hairpin.to-barline = ##f
+\include "dynamic.ly"
   
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%

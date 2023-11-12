@@ -52,46 +52,47 @@ vikVierte = \relative {
       \set baseMoment = #(ly:make-moment 1/8)
       \set beatStructure = #'(2 2 2 2)
       \override TupletNumber.stencil = ##f
-      \tuplet 10/8 4 {
+      %\tuplet 10/8 4 {
         \override Fingering.staff-padding = #'()
         \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
         \textSpannerUp
         \stringNumberSpanner "2"
         \once\override TextScript.font-size = 2
         %\once\override TextScript.extra-offset = #'(0 . 0)
-        d32^"*" a'''\RH #2 \startTextSpan a\RH #4 a\RH #3 a\RH #2
-        fis,\stopTextSpan a' a a a g, a' a a a a, a' a a a
-        e, fis' fis fis
+        d32^"*" a'''\RH #4 \startTextSpan a\RH #3 a\RH #2
+        fis,\stopTextSpan a' a a g, a' a a a, a' a a
+        e, fis' fis
         \override TextScript.font-size = -5
         \once\override TextScript.extra-offset = #'(0.7 . -6.3)
         fis-\markup {\circle\bold 6}
         \once\override TextScript.extra-offset = #'(-1.8 . -7.3)
-        a,\harmonic-"VII" fis' fis fis fis
-        g, fis' fis fis fis d, fis' fis fis fis
+        a,\harmonic-"VII" fis' fis fis
+        g, fis' fis fis d, fis' fis fis
         \stringNumberSpanner "1"
-        a,, e''\startTextSpan e e e e,\stopTextSpan e' e e e a, e' e e e d e e e e
-        h e e e e cis e e e e g, h' h h h a,, h'' h h h
-        d,,, a''' a a a fis, a' a a a g, a' a a a a, a' a a a
-        e, fis' fis fis fis a,\harmonic fis' fis fis fis
-        g, fis' fis fis fis d, fis' fis fis fis
+        a,, e''\startTextSpan e e e,\stopTextSpan e' e e a, e' e e d e e e
+        h e e e cis e e e g, h' h h a,, h'' h h
+        d,,, a''' a a fis, a' a a g, a' a a a, a' a a
+        e, fis' fis fis a,\harmonic fis' fis fis
+        g, fis' fis fis d, fis' fis fis
         \pageBreak
-        a,, e'' e e e e, e' e e e a, e' e e e d e e e e
-        h e e e e cis e e e e g, h' h h h a,, h'' h h h
-        d,,, d'' d d d h, d' d d d fis, a' a a a g, a' a a a
+        a,, e'' e e e, e' e e a, e' e e d e e e
+        h e e e cis e e e g, h' h h a,, h'' h h
+        d,,, d'' d d h, d' d d fis, a' a a g, a' a a
         \override TextScript.font-size = -2
-        g,,-"V" cis'' cis cis cis d,, cis'' cis cis cis
-        a, cis' cis cis cis d, h' h h h
-        a,,-"II" fis'' fis fis fis d, fis' fis fis fis
-        a, fis' fis fis fis e a_4 a a a
-        d, e e e e a, e' e e e e, e' e e e a,, e'' e e e
-        d,, a'''_4 a a a a,, a'' a a a fis, d'_1 d d d g, d' d d d
-        b, a'' a a a g, a' a a a d, e e e e e, e' e e e
-        d,-"II" fis' fis fis fis e fis fis fis fis
-        d fis fis fis fis a, fis' fis fis fis
-        c, g'' g g g e, g' g g g g, g' g g g c, g' g g g
+        g,,-"V" cis'' cis cis d,, cis'' cis cis
+        a, cis' cis cis d, h' h h
+        a,,-"II" fis'' fis fis d, fis' fis fis
+        a, fis' fis fis e a_4 a a
+        d, e e e a, e' e e e, e' e e a,, e'' e e
+        d,, a'''_4 a a a,, a'' a a fis, d'_1 d d g, d' d d
+        b, a'' a a g, a' a a d, e e e e, e' e e
+        d,-"II" fis' fis fis e fis fis fis
+        d fis fis fis a, fis' fis fis
+        c, g'' g g e, g' g g g, g' g g c, g' g g
+        \break
         \override Fingering.extra-offset = #'(-1.2 . 1.8)
-        d a'_4 a a a g, h'_4 h h h fis, h' h h h e,, cis''_4 cis cis cis
-      }
+        d a'_4 a a g, h'_4 h h fis, h' h h e,, cis''_4 cis cis
+      %}
       \set stringNumberOrientations = #'(left)
       \revert TextScript.font-size
       d4_4-\markup{\italic rit.} d,\3

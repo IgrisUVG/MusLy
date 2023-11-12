@@ -205,7 +205,11 @@
               \set beatStructure = #'(2 2 2 2)
               \override Fingering.staff-padding = #'()
               \override StrokeFinger.extra-offset = #'(-1.5 . -1.5)
-              d32 a'''\RH #4 a\RH #3 a\RH #2 fis, a' a a s
+              \override TupletNumber.stencil = ##f
+              \tuplet 10/8 4 {
+                d32 a'''\RH #2 a\RH #4 a\RH #3 a\RH #2 fis, a' a a a
+              }
+              s
             }
             \\
             {

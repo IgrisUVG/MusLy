@@ -3,10 +3,11 @@
 \language "deutsch"
 
 \header {
-  title = ""
+  title = "Presto"
+  instrument = "Guitar I"
   meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
@@ -34,11 +35,11 @@
 
 \score {
   <<
-    \new Staff \with {
-      instrumentName = "Guitar I"
-    }{
+    \new Staff %\with {
+      %instrumentName = "Guitar I"
+    %}{
       \guitarOne
-    }
+    %}
     \new Dynamics \dynamic
   >>
 }

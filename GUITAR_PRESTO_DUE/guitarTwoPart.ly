@@ -3,10 +3,11 @@
 \language "deutsch"
 
 \header {
-  title = ""
+  title = "Presto"
+  instrument = "Guitar II"
   meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
@@ -14,7 +15,7 @@
   top-system-spacing #'basic-distance = #25
   top-markup-spacing #'basic-distance = #8
   markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #24
+  system-system-spacing #'basic-distance = #22
   last-bottom-spacing #'basic-distance = #25
   two-sided = ##t
   inner-margin = 25
@@ -27,15 +28,16 @@
     \remove "Bar_number_engraver"
   }
 }
+
 \include "global.ly"
 \include "dynamic.ly"
 \include "stringNumberSpanner.ly"
 \include "guitarTwo.ly"
 \score {
   <<
-    \new Staff \with {
-      instrumentName = "Guitar II"
-    }
+    \new Staff %\with {
+      %instrumentName = "Guitar II"
+    %}
     \guitarTwo
     \new Dynamics \dynamic
   >>

@@ -1,10 +1,19 @@
-guitarOne = 
+\version "2.19.15"
+
+\language "deutsch"
+
+#(define RH rightHandFinger)
+
+guitarOne =
 \relative
 {
   \global
-  \override TextScript.self-alignment-X = #CENTER
+  %\override TextScript.self-alignment-X = #CENTER
+  \clef "treble_8"
+  \override TextScript.extra-offset = #'(-.3 . 1)
   \textLengthOn
-  <e' h' gis'>8^"VII" e'16^"IV"( fis) gis a
+  \override TextScript.font-size = -2
+  <e h' gis'>8^"II" e'16^"IV"( fis) gis a
   <<
     {
       h8 h h fis
@@ -13,7 +22,7 @@ guitarOne =
     {
       h,4 e8 h
     }
-  >>  
+  >>
   dis16( e) fis gis
   <<
     {
@@ -24,11 +33,13 @@ guitarOne =
       e4 dis8 cis
     }
   >>
-  cis16^"VI"( dis) e fis 
-  \once \override StringNumber.self-alignment-X = #RIGHT
+  cis16^"VI"( dis) e fis
   \override StringNumber.staff-padding = #'()
-  <h,\4 gis'\2>8 <a, cis' a'><h a' fis'><e, gis' e'> r8 h''\4 h,4.\6
-  <e h' gis'>8 e'16( fis) gis a
+  \once \override StringNumber.self-alignment-X = #RIGHT
+  <h,\4 gis'\2>8 <a, cis' a'><h a' fis'><e, gis' e'> r8 h''\4
+  \once \override StringNumber.extra-offset = #'(.5 . .5)
+  h,4._\6
+  <e h' gis'>8^"VII" e'16( fis) gis a
   <<
     {
       h8 h h fis
@@ -37,7 +48,7 @@ guitarOne =
     {
       h,4 e8 h
     }
-  >>  
+  >>
   dis16( e) fis gis
   <<
     {
@@ -49,13 +60,43 @@ guitarOne =
     }
   >>
   cis16( dis) e fis <h, gis'>8 <a, cis' a'><h a' fis'>
-  <<{ e'4. s}\\{<e,, gis'>8 s4 dis''4.}>>
-  cis <<{r4 eis8}\\{h4.}>><ais fis'>8 h'16( ais) h8 <h, gis'>^"IX" h'16( ais) h8
-  <ais, fis'>^"VII" h'16( ais) h8 <gis, e'> a'16( gis) a8
-  <fis h><fis dis'> q q4 <dis h'>8 
   <<
     {
-      fis'4 ais,8 h
+      e'4. s
+    }
+    \\
+    {
+      <e,, gis'>8 s4 dis''4.
+    }
+  >>
+  cis
+  <<
+    {
+      \override StringNumber.staff-padding = #'()
+      r4
+      \once \override StringNumber.extra-offset = #'(-.7 . -2)
+      eis8\2
+    }
+    \\
+    {
+      \override StringNumber.staff-padding = #'()
+      \once \override StringNumber.extra-offset = #'(.7 . 2.7)
+      h4._\4
+    }
+  >>
+  <ais fis'>8 h'16(\2 ais) h8 <h, gis'>^"IX" h'16( ais) h8
+  <ais, fis'>^"VII" h'16( ais)
+  \once \override StringNumber.extra-offset = #'(2.5 . -2.5)
+  h8\3
+  \once \override StringNumber.extra-offset = #'(-1.7 . -4.3)
+  <gis,\5 e'> a'16( gis) a8
+  <fis h><fis dis'> q q4
+  \once \override StringNumber.extra-offset = #'(-1.7 . -4.3)
+  <dis\4 h'>8
+  <<
+    {
+      \once \override StringNumber.extra-offset = #'(-6 . -5)
+      fis'4\2 ais,8 h
     }
     \\
     {
@@ -63,7 +104,7 @@ guitarOne =
     }
   >>
   r4
-  <e, h' gis'>8 e'16( fis) gis a
+  <e, h' gis'>8^"II" e'16( fis) gis a
   <<
     {
       h8 h h fis
@@ -72,7 +113,7 @@ guitarOne =
     {
       h,4 e8 h
     }
-  >>  
+  >>
   dis16( e) fis gis
   <<
     {
@@ -83,8 +124,11 @@ guitarOne =
       e4 dis8 cis
     }
   >>
-  cis16( dis) e fis gis a h cis dis e h e, a e gis e a e gis e fis e
-  e^"VII" h' fis h gis h <<{s8 h16 s8.}\\{a16 h h h a h}>>
+  cis16( dis) e fis gis a-4-\markup {
+    \postscript #"1.5 6 moveto 1.3 .4 rlineto stroke"
+  } h-4 cis dis e
+  h\2_\RH #1 e,-0 a e gis e a e gis e fis\3 e
+  e\3^"VII" h'\1 fis\2 h gis h <<{s8 h16 s8.}\\{a16 h h h a h}>>
   gis h fis h e, h' dis, h' e, h' fis h  e, h' a h gis h fis h e, h' dis, h'
   e, gis h gis fis h e, fis h fis dis h' e, h' a h gis h fis h e, h' dis, h'
   e, gis h gis fis h e, fis h fis dis h' e,8 <h gis' e'><h fis' dis'><h e gis e'>4 r8
@@ -114,14 +158,14 @@ guitarOne =
   \break
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup { a tempo}
-  
+
   \override Staff.Clef #'break-visibility = #begin-of-line-visible
   %\override Staff.Clef #'explicitClefVisibility = #begin-of-line-visible
   \override Staff.TimeSignature #'break-visibility = #begin-of-line-visible
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible % this will do the job with the time signatures
   \override Staff.KeyCancellation #'break-visibility = #all-invisible
   \override Staff.KeyCancellation #'explicitKeySignatureVisibility = #all-invisible
-  
+
   \key e \minor
   <e, h' g'>8 e'16( fis) g a
   <<

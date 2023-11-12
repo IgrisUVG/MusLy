@@ -2,7 +2,8 @@ guitarTwo =
 \relative
 {
   \global
-  <e gis' e'>8 h'' <h, a' fis'><e h' gis'><e a fis'><e h' gis'><e h' cis><e h' fis'><e a dis>
+  \clef "treble_8"
+  <e, gis' e'>8 h'' <h, a' fis'><e h' gis'><e a fis'><e h' gis'><e h' cis><e h' fis'><e a dis>
   <h h' e><h h'><h h'>
   <<
     {

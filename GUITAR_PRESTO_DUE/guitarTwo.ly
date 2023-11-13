@@ -1,7 +1,9 @@
 guitarTwo = 
 \relative
 {
-  \global
+  \key e \major
+  \time 6/8
+  \compressFullBarRests
   \clef "treble_8"
   <e, gis' e'>8 h'' <h, a' fis'><e h' gis'><e a fis'><e h' gis'><e h' cis><e h' fis'><e a dis>
   <h h' e><h h'><h h'>

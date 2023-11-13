@@ -7,7 +7,9 @@
 guitarOne =
 \relative
 {
-  \global
+  \key e \major
+  \time 6/8
+  \compressFullBarRests
   %\override TextScript.self-alignment-X = #CENTER
   \clef "treble_8"
   \override TextScript.extra-offset = #'(-.3 . 1)
@@ -90,13 +92,14 @@ guitarOne =
   h8\3
   \once \override StringNumber.extra-offset = #'(-1.7 . -4.3)
   <gis,\5 e'> a'16( gis) a8
-  <fis h><fis dis'> q q4
+  <fis h><fis dis'> q
+  \once \override StringNumber.extra-offset = #'(3.5 . -2)
+  <fis dis'\2>4
   \once \override StringNumber.extra-offset = #'(-1.7 . -4.3)
   <dis\4 h'>8
   <<
     {
-      \once \override StringNumber.extra-offset = #'(-6 . -5)
-      fis'4\2 ais,8 h
+      fis'4 ais,8 h
     }
     \\
     {
@@ -128,12 +131,32 @@ guitarOne =
     \postscript #"1.5 6 moveto 1.3 .4 rlineto stroke"
   } h-4 cis dis e
   h\2_\RH #1 e,-0 a e gis e a e gis e fis\3 e
-  e\3^"VII" h'\1 fis\2 h gis h <<{s8 h16 s8.}\\{a16 h h h a h}>>
-  gis h fis h e, h' dis, h' e, h' fis h  e, h' a h gis h fis h e, h' dis, h'
-  e, gis h gis fis h e, fis h fis dis h' e, h' a h gis h fis h e, h' dis, h'
-  e, gis h gis fis h e, fis h fis dis h' e,8 <h gis' e'><h fis' dis'><h e gis e'>4 r8
+  e\3^"VII" h'\1 fis\2 h gis h <<
+    {
+      s8 h16 s8.
+    }
+    \\
+    {
+      a16 h h h a h
+    }
+  >>
+  gis h fis h e, h' dis, h' e, h' fis h
+  e, h' a h gis h fis h e, h' dis, h'
+  e, gis h gis fis h e, fis h fis dis h'
+  e, h' a h gis h fis h e, h' dis, h'
+  e, gis h gis fis h e, fis h fis dis h'
+  e,8 <h gis' e'><h fis' dis'><h e gis e'>4
+  \bar "!"
+  \tag #'Part {
+    \once \override TextScript.extra-offset = #'(0 . -1)
+    \once \override TextScript.font-size = 0.5
+    r8_\markup {\italic Fine}
+  }
+  \tag #'Partitur {r8}
   \bar "||"
+  \tag  #'Part {\break}
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \once \override Score.RehearsalMark.font-size = -0.5
   \mark \markup {meno mosso}
   <<
     {

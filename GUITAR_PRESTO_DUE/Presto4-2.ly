@@ -5,7 +5,7 @@
 \header {
   title = "Presto"
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
@@ -23,6 +23,7 @@
 }
 
 \layout {
+  %indent =  1\cm
   \context {
     \Score
     \remove "Bar_number_engraver"
@@ -49,6 +50,7 @@
     \new Staff \with {
       instrumentName = "Guitar II"
     }
+    \removeWithTag #'Part
     \guitarTwo
 
   >>

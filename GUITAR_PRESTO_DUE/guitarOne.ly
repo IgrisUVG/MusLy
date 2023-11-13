@@ -2,7 +2,21 @@
 
 \language "deutsch"
 
+%%%%%%%%% SCRIPTS %%%%%%%%%
 #(define RH rightHandFinger)
+
+stringNumSpan =
+#(define-music-function (parser location StringNumber) (string?)
+   #{
+     \override TextSpanner.font-size = #-5
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1.5
+     %\override TextSpanner.bound-details.right.arrow = ##t
+     %\override TextSpanner.arrow-width = #0.2
+     %\override TextSpanner.arrow-length = #0.7
+     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
+   #})
 
 guitarOne =
 \relative
@@ -155,16 +169,21 @@ guitarOne =
   \tag #'Partitur {r8}
   \bar "||"
   \tag  #'Part {\break}
-  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
-  \once \override Score.RehearsalMark.font-size = -0.5
+  %\once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \once \override Score.RehearsalMark.extra-offset = #'(7 . 1)
+  %\once \override Score.RehearsalMark.font-size = 0.5
   \mark \markup {meno mosso}
   <<
     {
-      h'4. cis e a,4 r8 a,4 cis8 fis,4 a8 gis4.
+      \override Fingering.staff-padding = #'()
+      h'4. cis e a,4 r8 a,4-2 cis8-3 fis,4-4 a8-2 gis4.-3
     }
     \\
     {
-      e'4. e h r4 gis8 fis,4. h e,
+      \override Fingering.staff-padding = #'()
+      e'4. e
+      \once \override StringNumber.extra-offset = #'(.6 . 2.5)
+      h_\4 r4 gis8^2 fis,4.-1 h e,
     }
   >>
   r4. <e'' a><a, cis'><dis h'>
@@ -174,40 +193,85 @@ guitarOne =
     }
     \\
     {
-      <cis gis'>4 s8 h,4. h cis4 \stemUp fis,8
+      \override StringNumber.staff-padding = #'()
+      <cis gis'>4 s8 h,4.-2^\6 h cis4 \stemUp fis,8
     }
   >>
-  e4 r8 r16 e'-.^"VI" fis-. gis-. a-. h-. cis-. dis-. e-. fis-. gis-. a-.\breathe
+  e4 r8
+  r16 e'-.^"VI" fis-. gis-. a-. h-.
+  cis-. dis-. e-. fis-. gis-.
+  \override BreathingSign.extra-offset = #'(1 . 1)
+  a-. \breathe
   \break
-  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  %\once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \once \override Score.RehearsalMark.extra-offset = #'(7 . 1)
+  %\once \override Score.RehearsalMark.font-size = -0.2
   \mark \markup { a tempo}
 
-  \override Staff.Clef #'break-visibility = #begin-of-line-visible
+  \override Staff.Clef.break-visibility = #begin-of-line-visible
   %\override Staff.Clef #'explicitClefVisibility = #begin-of-line-visible
-  \override Staff.TimeSignature #'break-visibility = #begin-of-line-visible
+  \override Staff.TimeSignature.break-visibility = #begin-of-line-visible
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible % this will do the job with the time signatures
-  \override Staff.KeyCancellation #'break-visibility = #all-invisible
-  \override Staff.KeyCancellation #'explicitKeySignatureVisibility = #all-invisible
+  \override Staff.KeyCancellation.break-visibility = #all-invisible
+  \override Staff.KeyCancellation.explicitKeySignatureVisibility = #all-invisible
 
   \key e \minor
-  <e, h' g'>8 e'16( fis) g a
+  <e, h' g'>8^"VII" e'16( fis) g a
   <<
     {
       h8 h h h16( c) h a g fis g8. fis16 e8 r8. h'16 e8
     }
     \\
     {
-      g,,4. a h8( c) h a4 g8
+      \override Fingering.staff-padding = #'()
+      g,,4.-0
+      \once \override StringNumber.extra-offset = #'(.6 . 2.8)
+      a_\4
+      \once \override StringNumber.extra-offset = #'(.6 . 5.5)
+      h8(_\3-1-\markup {
+        \postscript #"1.2 3.2 moveto 2.3 .4 rlineto stroke"
+      } c)-1 h a4 g8
     }
   >>
-  \repeat unfold 3 {<h, a' fis'>8}  \repeat unfold 6 {<e, h'' g' e'>}
-  \repeat unfold 6 {<h' a' g' dis'>} \repeat unfold 6 {<c a' e' c'>}
-  \repeat unfold 3 {<h a' e' h'>} \repeat unfold 3 {<h g' e' h'>}
-  \repeat unfold 6 {<h fis' e' h'>} \repeat unfold 6 {<h fis' dis' a'>}
-  e16(fis) g a h fis( g) a h c ais( h) cis dis e fis g8 c,16^"V" h'( a) g fis e
-  c' dis,( e) fis g a d, c'( h) a g fis d' e,( fis) g a h c a fis c' d, c'(
-  h) d, e fis g a h^"V" g e h' c, h'( a) c, d e fis g a fis dis a' h, a'(
-  g) h,( cis) dis e fis g8 e16( fis) g a h8-. h-. h-. h16( c) h a g fis
-  g( a) g fis e dis e8 <g h e> q q4. r
+  <h, a' fis'>8^"VII"
+  \repeat unfold 2 {<h a' fis'>8}
+  \repeat unfold 6 {<e, h'' g' e'>}
+  \repeat unfold 6 {<h' a' g' dis'>}
+  \repeat unfold 6 {<c a' e' c'>}
+  \repeat unfold 3 {<h a' e' h'>}
+  \repeat unfold 3 {<h g' e' h'>}
+  \repeat unfold 6 {<h fis' e' h'>}
+  \repeat unfold 6 {<h fis' dis' a'>}
+  \override Fingering.staff-padding = #'()
+  \stringNumSpan "5"
+  e16(\startTextSpan fis) g\stopTextSpan
+  \stringNumSpan "4"
+  a\startTextSpan h fis( g) a\stopTextSpan
+  \stringNumSpan "3"
+  h\startTextSpan c ais( h)
+  cis\stopTextSpan
+  \once \override StringNumber.extra-offset = #'(0 . 1)
+  dis\2 e fis g8 c,16^"V" h'( a) g fis e
+  c'-4 dis,(-2\3 e) fis g a d,^"VII" c'( h) a g fis
+  d' e,(-1 fis) g a h c^"VIII" a fis c' d,^"VII" c'(
+  h) d, e fis g a h g e h' c,^"V" h'(
+  a) c, d e fis g a fis dis a' h,-0 a'(
+  g) h,( cis) dis e fis g8
+  \once \override StringNumber.extra-offset = #'(-1 . -.5)
+  e16(\2 fis) g a
+  h8-. h-. h-. h16( c) h a g fis
+  \once \override StringNumber.extra-offset = #'(-1.2 . -1)
+  g(\2 a) g fis e dis e8 <g h e> q q4.
+  \tag #'Part {
+    \once \override TextScript.extra-offset = #'(0 . -1)
+    \once \override TextScript.font-size = 0.5
+    r4._\markup {
+      \column {
+        \italic D.C.
+        \line {\italic {al fine}}
+      }
+    }
+  }
+  \tag #'Partitur {r4.}
   \bar "|."
 }

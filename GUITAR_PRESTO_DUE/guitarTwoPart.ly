@@ -25,7 +25,7 @@
 }
 
 \layout {
-  indent = 0
+  indent = 1\cm
   \context {
     \Score
     \remove "Bar_number_engraver"
@@ -34,7 +34,7 @@
 
 %\include "global.ly"
 \include "dynamic.ly"
-\include "stringNumberSpanner.ly"
+%\include "stringNumberSpanner.ly"
 \include "guitarTwo.ly"
 \score {
   <<
@@ -43,6 +43,6 @@
     %}
     \removeWithTag  #'Partitur
     \guitarTwo
-    \new Dynamics \removeWithTag  #'Part \dynamic
+    \new Dynamics \removeWithTag  #'(Part PartII) \dynamic
   >>
 }

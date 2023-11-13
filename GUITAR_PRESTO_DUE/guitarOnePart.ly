@@ -25,7 +25,7 @@
 }
 
 \layout {
-  indent = 0
+  indent =  1\cm
   \context {
     \Score
     \remove "Bar_number_engraver"
@@ -41,7 +41,7 @@
     \new Staff %\with {
     %instrumentName = "Guitar I"
     %}{
-    \removeWithTag  #'Partitur
+    \removeWithTag #'Partitur
     \guitarOne
     %}
     \new Dynamics

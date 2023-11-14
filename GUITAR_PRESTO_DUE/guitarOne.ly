@@ -162,7 +162,8 @@ guitarOne =
   e,8 <h gis' e'><h fis' dis'><h e gis e'>4
   \bar "!"
   \tag #'Part {
-    \once \override TextScript.extra-offset = #'(0 . -1)
+    \once \override TextScript.self-alignment-X = #CENTER
+    \once \override TextScript.extra-offset = #'(1 . -1)
     \once \override TextScript.font-size = 0.5
     r8_\markup {\italic Fine}
   }
@@ -263,7 +264,8 @@ guitarOne =
   \once \override StringNumber.extra-offset = #'(-1.2 . -1)
   g(\2 a) g fis e dis e8 <g h e> q q4.
   \tag #'Part {
-    \once \override TextScript.extra-offset = #'(0 . -1)
+    \once \override TextScript.self-alignment-X = #CENTER
+    \once \override TextScript.extra-offset = #'(3 . -1)
     \once \override TextScript.font-size = 0.5
     r4._\markup {
       \column {

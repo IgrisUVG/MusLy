@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #22
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -45,7 +45,7 @@
     \guitarOne
     %}
     \new Dynamics
-    \removeWithTag #'Partitur
+    \removeWithTag #'(Partitur PartII)
     \dynamic
   >>
 }

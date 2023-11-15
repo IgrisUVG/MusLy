@@ -5,7 +5,7 @@
 \header {
   title = "V."
   meter = ""
-  composer = ""
+  composer = "I. G"
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 

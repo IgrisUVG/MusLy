@@ -4,10 +4,10 @@
 \language "deutsch"
 
 \header {
-  title = ""
-  meter = ""
+  title = "Corno sonate"
+  %meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 #(ly:set-option 'relative-includes #t)
 %#(set-global-staff-size 18)
@@ -15,11 +15,11 @@
   %#(set-paper-size "a4")
   indent = 1.5\cm  % space for instrumentName
   %short-indent = 1.5\cm  % space for shortInstrumentName
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #26
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #26
+  last-bottom-spacing.basic-distance = #25
   two-sided = ##t
   inner-margin = 20
   outer-margin = 15
@@ -36,6 +36,7 @@
 \score {
   <<
     \new Staff = "Staff_hornI" \with {
+      \magnifyStaff #5/7
       instrumentName = \markup {
         \right-column {
           "Corno"

@@ -4,13 +4,13 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #10
-  markup-system-spacing #'basic-distance = #5
-  score-markup-spacing #'basic-distance = #20
-  system-system-spacing #'basic-distance = #25
-  score-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #5
+  score-markup-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #25
+  score-system-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
   %ragged-last-bottom = ##f
   %left-margin = 15
   %right-margin = 15

@@ -9,9 +9,11 @@
   markup-system-spacing #'basic-distance = #15
   system-system-spacing #'basic-distance = #15
   last-bottom-spacing #'basic-distance = #15
-  two-sided = ##t
-  inner-margin = 25
-  outer-margin = 15
+  left-margin = 15
+  right-margin = 15
+  %two-sided = ##t
+  %inner-margin = 25
+  %outer-margin = 15
 }
 
 \layout {
@@ -22,9 +24,10 @@
 }
 
 \header{
-  title = ""
+  title = "El."
+  subtitle = "Guitar III"
   composer = "I. G"
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \include "noteHeads.ly"
@@ -32,10 +35,5 @@
 \include "MostschaEGtThree.ly"
 
 \score {
-  \new Staff \with {
-    instrumentName = "E.Gt.III"
-  }
-  {
-    \EGtThree
-  }
+  \new Staff \EGtThree
 }

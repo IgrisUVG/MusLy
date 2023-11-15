@@ -19,14 +19,18 @@ bass =
   \repeat unfold 6 {e,4.} e8 r gis' fis r a
   gis a16( gis) fis e fis( e) dis cis h8 e r gis fis r h, gis a h e,4 r8
   \bar "||"
+  \break
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup {\circle 6 meno mosso}
   h'4. a e' cis4 r8 fis,4. h e, r a2. gis4. cis4 r8 h4. h cis~ cis4 r8 h4. h
   \bar "||"
+  \break
   \key e \minor
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup {\circle 7 T-po I}
-  e,8 e e e e16( fis) g a h8 h h c16( h) a g fis g a h cis dis e fis g4 fis8 e2. h 
+  e,8 e e e e16( fis) g a h8 h h c16( h) a g fis g a h cis dis e fis g4 fis8
+  e2. h
+  \tag #'Part {\break}
   \mark \markup {\circle 8}
   a g fis e4. r r4 h'8 e,4 r8 h'4. e8 r4 e8 r4 e8 r4 h8 r4 e,8 r4
   \bar "||"
@@ -36,6 +40,7 @@ bass =
   \repeat unfold 3 {cis8} \repeat unfold 3 {gis}
   a( gis) cis gis fis h c a h e,4 r8
   \bar "||"
+  \break
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup {\circle 10 meno mosso}
   h'4. a e' cis fis, h e,8 h' e gis e h a cis e a e cis gis h dis cis gis' e

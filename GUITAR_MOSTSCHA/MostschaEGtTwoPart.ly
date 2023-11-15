@@ -4,14 +4,16 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #15
-  system-system-spacing #'basic-distance = #15
-  last-bottom-spacing #'basic-distance = #15
-  two-sided = ##t
-  inner-margin = 25
-  outer-margin = 15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #15
+  system-system-spacing.basic-distance = #15
+  last-bottom-spacing.basic-distance = #15
+  left-margin = 15
+  right-margin = 15
+  %two-sided = ##t
+  %inner-margin = 25
+  %outer-margin = 15
 }
 
 \layout {
@@ -22,9 +24,10 @@
 }
 
 \header{
-  title = ""
+  title = "El."
+  subtitle = "Guitar II"
   composer = "I. G"
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \include "noteHeads.ly"
@@ -32,10 +35,5 @@
 \include "MostschaEGtTwo.ly"
 
 \score {
-  \new Staff \with {
-    instrumentName = "E.Gt.II"
-  }
-  {
-    \EGtTwo
-  }
+  \new Staff \EGtTwo
 }

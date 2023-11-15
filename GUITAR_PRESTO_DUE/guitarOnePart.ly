@@ -4,7 +4,7 @@
 
 \header {
   title = "Presto"
-  instrument = "Guitar I"
+  subtitle = "Guitar I"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}

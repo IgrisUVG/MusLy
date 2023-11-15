@@ -6,9 +6,9 @@ cornoOneMusic = \relative e' {
   \override MultiMeasureRest #'expand-limit = #3
   R1*4 r4. e8-- h'2-> cis8-- d-- fis-- f-- c-- e--
   b4~-> b2 ces-> des-> g->~ g\fermata r4 fis--
-  b,1->^~  b!2.~ \times 2/3 {b8 b-> b->} b!1->^~
-  b! R1*4 dis2.-- e,4( dis'1--) d!2( as) d,2.( f8 c' h2 fis des1~) des!2 es4 fis, f'!
-  g2.~ g1~ g4 d-- g-- c-- d2.-> f,4-- d'1-> c-> g-> R1
+  b,1->^~  b!2.~ \times 2/3 {b8 b-> b->} b!1->^~ b! R1*4
+  dis2.-- e,4( dis'1--) d!2( as) d,2.( f8 c' h2 fis des1~) des!2 es4 fis,
+  f'! g2.~ g1~ g4 d-- g-- c-- d2.-> f,4-- d'1-> c-> g-> R1
   r4 f( as des es1) as->\tuplet 3/2 4 {es8( g d es b es as, es' g, as c f,} b1)
   dis,2.( fisis4 h1->) fis!-> dis2.( fis4 eis1) h'-> h,~ h2 cis es-> fis4-> g->
   h-> fis'-> \times 2/3 {g4-> f-> es->} r4 es,--

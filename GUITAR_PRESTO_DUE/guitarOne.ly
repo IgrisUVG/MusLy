@@ -214,7 +214,7 @@ guitarOne =
   \override Staff.TimeSignature.break-visibility = #begin-of-line-visible
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible % this will do the job with the time signatures
   \override Staff.KeyCancellation.break-visibility = #all-invisible
-  \override Staff.KeyCancellation.explicitKeySignatureVisibility = #all-invisible
+  %\override Staff.KeyCancellation.explicitKeySignatureVisibility = #all-invisible
 
   \key e \minor
   <e, h' g'>8^"VII" e'16( fis) g a

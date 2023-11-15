@@ -192,7 +192,7 @@ guitarTwo = \relative {
   \override Staff.TimeSignature #'break-visibility = #begin-of-line-visible
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible % this will do the job with the time signatures
   \override Staff.KeyCancellation #'break-visibility = #all-invisible
-  \override Staff.KeyCancellation #'explicitKeySignatureVisibility = #all-invisible
+  %\override Staff.KeyCancellation #'explicitKeySignatureVisibility = #all-invisible
 
   \key e \minor
   <e, g' e'>8 e e e e16( fis) g a h8 h h c16( h) a g fis g
@@ -265,7 +265,9 @@ guitarTwoCoda = \relative {
     {
       e,4. e e s e4 gis8 fis r
       \once \override StringNumber.extra-offset = #'(.5 . 1.4)
-      h_\6 gis a
+      h_\6 gis
+      \once \override Fingering.extra-offset = #'(.3 . 2.5)
+      a-0
       \once \override Fingering.extra-offset = #'(.3 . 2.5)
       h_2 e,4.
     }

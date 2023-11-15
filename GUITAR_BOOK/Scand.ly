@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -91,8 +92,8 @@ scand = {
   \clef treble
   \key d \major
   \time 4/4
-  \override Staff.TimeSignature #'stencil = ##f
-  \override Score.RehearsalMark.extra-offset = #'(0 . 3)
+  \override Staff.TimeSignature.stencil = ##f
+  \override Score.RehearsalMark.extra-offset = #'(7 . 3)
   \mark \markup {\fontsize #-2 {Von Langsam bis Rasch}}
   <<
     \override NoteColumn.ignore-collision = ##t

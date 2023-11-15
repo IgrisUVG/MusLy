@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 7
   \context {
     \PianoStaff
     \consists #Span_stem_engraver

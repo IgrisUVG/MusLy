@@ -11,18 +11,19 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #10
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #25
-  %score-system-spacing #'basic-distance = #40
-  %score-markup-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
-  left-margin = 15
-  right-margin = 15
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #25
+  %score-system-spacing.basic-distance = #40
+  %score-markup-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
+  left-margin = 10
+  right-margin = 13
 }
 
 \layout {
+  indent = 5
   \context {
     \Score
     \remove "Bar_number_engraver"
@@ -34,7 +35,7 @@
 RH = \relative {
   \clef treble
   \key g \minor
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   g'4 d'
   <<
     {
@@ -89,7 +90,7 @@ RH = \relative {
 LH = \relative {
   \clef bass
   \key g \minor
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   es,,8 d'' a' f' c4 ces
   es,,,8 es'' b' g' e,,,4 f
   g8 fis'' b es g,,, f'' b d

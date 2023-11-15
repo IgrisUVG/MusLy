@@ -8,11 +8,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #15
-  system-system-spacing #'basic-distance = #12
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #15
+  system-system-spacing.basic-distance = #12
+  last-bottom-spacing.basic-distance = #15
 }
 
 \layout {

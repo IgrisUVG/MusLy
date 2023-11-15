@@ -222,13 +222,13 @@ guitarANclear = \relative {
       \mergeDifferentlyDottedOn
       \override StrokeFinger.staff-padding = #'()
       \slurDown
-      e,16 fis' g b( a) dis, e d'!( c) eis, e'!( d)
+      e,16 fis' g b( a) dis, e d'!( c) f, e'!( d)
       f( e) cis h d b a c( h) g( a) fis e, fis' g b( a) dis,
       e e'( d) g, f'( e) b c'( b) e, a( g)
     }
     \\
     {
-      e,,4. <c' e>8.[ <cis eis>] d4.\break <dis a'>8.[ dis,] e4.
+      e,,4. <c' e>8.[ <cis f>] d4.\break <dis a'>8.[ dis,] e4.
       <cis' e>8.[ <dis g>] <e h'>[ <a e'>]
     }
   >>

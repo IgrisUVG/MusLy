@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 \header {
   title = ""
   meter = ""
@@ -8,14 +11,14 @@
 }
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  %top-markup-spacing #'basic-distance = #8
-  %markup-markup-spacing #'basic-distance = #25
-  %markup-system-spacing #'basic-distance = #15
-  %score-markup-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #15
-  score-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  %top-markup-spacing.basic-distance = #8
+  %markup-markup-spacing.basic-distance = #25
+  %markup-system-spacing.basic-distance = #15
+  %score-markup-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #15
+  score-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #25
   two-sided = ##t
   inner-margin = 25
   outer-margin = 15
@@ -102,7 +105,7 @@
       {
         \voiceTwo
         \dotsUp
-        s2.*2 e2. s a, d a cis d h 
+        s2.*2 e2. s a, d a cis d h
         \stemUp e, \stemDown s fis h s2.*2
         a2. r e'2. s a, d a cis d gis, cis s
         \stemUp fis, \stemDown gis cis fis, h e,

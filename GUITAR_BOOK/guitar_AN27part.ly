@@ -52,6 +52,6 @@
     }
   }
   %\guitarAN
-  \guitarANnew
-  %\guitarANclear
+  %\guitarANnew
+  \guitarANclear
 }

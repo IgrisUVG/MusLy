@@ -20,11 +20,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #16
-  system-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #16
+  system-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #25
   %two-sided = ##t
   %inner-margin = 25
   %outer-margin = 15
@@ -49,11 +49,11 @@ stringNumberSpanner =
 global = {
   %\key d \major
   %\time 4/4
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
 }
 
 classicalGuitar = \relative c {
-  \override Fingering #'staff-padding = #'()
+  \override Fingering.staff-padding = #'()
   \textSpannerDown
   %%%%%%%%%% До мажор
   \cadenzaOn

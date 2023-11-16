@@ -14,14 +14,14 @@
   %#(set-paper-size "a4")
   indent = 1.5\cm  % space for instrumentName
   %short-indent = 1.5\cm  % space for shortInstrumentName
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #26
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #26
+  last-bottom-spacing.basic-distance = #15
   two-sided = ##t
   inner-margin = 20
-  outer-margin = 10
+  outer-margin = 15
 }
 
 \layout {

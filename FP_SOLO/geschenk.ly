@@ -5,18 +5,19 @@
 
 \header {
   title = "Aschenputtel"
-  meter = "Allegro"
+  %meter = "Allegro"
   composer = "I. G."
   tagline = ##f
 }
 
+%#(set-global-staff-size 18)
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #30
-  system-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #30
+  system-system-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -33,13 +34,15 @@
 }
 
 global = {
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 6/8
   \key e \major
 }
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
   \partial 4
@@ -62,10 +65,15 @@ rechts = \relative {
     }
     \\
     {
-      \override TupletNumber #'transparent = ##t
+      \omit TupletNumber
       \tuplet 37/24 {
-        his16. fisis,32^( gis ais his cis dis eis fisis gis ais his cis dis eis fisis gis ais his
-        eis, ais fisis gis disis eis hisis cis ais gis eis fisis ais gis eis fisis
+        his16.
+        %\tiny
+        fisis,32^( gis ais his cis dis eis fisis
+        gis ais his cis dis eis fisis
+        gis ais his eis, ais fisis gis disis eis hisis
+        cis ais gis eis fisis ais gis eis fisis
+        %\normalsize
       }
       c16) gis' a h c a gis a cis h f dis
     }
@@ -87,8 +95,8 @@ rechts = \relative {
       e,16 g a f g d \stemUp e c d c g8 \stemDown
       h16 cis fis gis64 e fis gis a h cis dis e fis gis a
       \stemUp
-      \override TrillSpanner #'(bound-details right padding) = #1
-      \once \override TrillSpanner #'extra-offset = #'(0 . 10)
+      \override TrillSpanner.bound-details.right padding = #1
+      \once \override TrillSpanner.extra-offset = #'(0 . 10)
       gis4.^~\startTrillSpan \stemDown gis64\stopTrillSpan h^( ais fis cis' e dis
       \ottava #1
       \set Staff.ottavation = #"8"

@@ -34,5 +34,6 @@
 }
 \include "../fagotto.ly"
 \score {
+  \new Staff
   \fagottoMusic
 }

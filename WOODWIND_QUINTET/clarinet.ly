@@ -1,5 +1,7 @@
 \version "2.19.15"
+
 \language "deutsch"
+
 clarinettoMusicErste = \relative {
   \time 6/4
   \key b \major
@@ -17,7 +19,7 @@ clarinettoMusicErste = \relative {
   f,,,2\startTrillSpan r16\stopTrillSpan \times 2/3{c'32( b a)}
   r16 \times 2/3 {e'32( d cis)} r4 r16 \times 2/3 {f32( es d)} r8
   r16 \times 2/3 {des32( ces b)} r8 \times 2/3 {des32( ces b)}
-  r16 r8 r4 r1 a4.( c8 d c a4. f8\noBeam des' c 
+  r16 r8 r4 r1 a4.( c8 d c a4. f8\noBeam des' c
   as4) \times 2/3 {f8( as4~} as4 c2) des'32( c as e c e as b
   c4.) r8 r4 c,2 r4 es2~_( \times 2/3 {es8 f as} es'2.)
   \set subdivideBeams = ##f
@@ -27,32 +29,32 @@ clarinettoMusicErste = \relative {
   fis8( f4 e8 es d
   \override TupletBracket.bracket-visibility = ##f
   \tuplet 3/2 16 {
-    e32 a, \set stemRightBeamCount = #2 d 
-    \set stemLeftBeamCount = #2 e d e 
-    \override TupletNumber #'transparent = ##t
-    a e \set stemRightBeamCount = #2 a 
-    \set stemLeftBeamCount = #2 d a d e d \set stemRightBeamCount = #2 a 
-    \set stemLeftBeamCount = #2 d a e a e \set stemRightBeamCount = #2 d 
+    e32 a, \set stemRightBeamCount = #2 d
+    \set stemLeftBeamCount = #2 e d e
+    \omit TupletNumber
+    a e \set stemRightBeamCount = #2 a
+    \set stemLeftBeamCount = #2 d a d e d \set stemRightBeamCount = #2 a
+    \set stemLeftBeamCount = #2 d a e a e \set stemRightBeamCount = #2 d
     \set stemLeftBeamCount = #2 e d a
   }
   as4) r4 cis32( es fis a cis es fis a cis es fis es cis a fis es
-  cis a fis) f( as des c as) fis( a des es des c a c) 
+  cis a fis) f( as des c as) fis( a des es des c a c)
   \override TrillSpanner #'(bound-details right padding) = #1.5
   des4~\startTrillSpan des!2( cis)\startTrillSpan
   cis4.(\stopTrillSpan\glissando c'!8)
   d1 r2 e,,2.( c4 h e, es!4) r r2 r4 des'8( es)
   f2.( des4 c f,) e32( g a c d e g a c d a' g e f fis g
   a c d c g c d c e8) r r g,,4. r16 g8.~ g1 r4
-  \override TupletNumber #'transparent = ##f
   r \times 4/5 {r16[ c,( des es fis]} g1) g1.
   \bar "|."
 }
+
 clarinettoMusicZweite = \relative {
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   %\once\override Score.RehearsalMark.extra-offset = #'(15 . 0)
   %\mark\markup { \text \small {Wiederholen viermal \italic { ad lib. } }}
-  R1*4 \bar ":|." 
+  R1*4 \bar ":|."
   r2 fis h fis~ fis4 fis-- h-- fis'->~ fis h,2-> d4->~ d1~ d2 r
   r4 fis,2-> h4->~ h fis2.~ fis4 fis-- h-- fis'->~ fis2 h,-> d1->~ d~ d~ d
   R1*12
@@ -73,15 +75,15 @@ clarinettoMusicZweite = \relative {
   r2 as,( ges ces,~ ces2. fes4 des' ces~ ces8) b( ces des
   es fes ges as b ces des es fes ces des as ges4 des ces b es,2~
   es) d4( c b1 ces c!2) g~ g1~ g2
-  \repeat unfold 11 {f2( g c g') f,( g c f)} f,( g c g') f,~ 
+  \repeat unfold 11 {f2( g c g') f,( g c f)} f,( g c g') f,~
   f fis h fis~ fis4 fis-- h-- fis'->~ fis h,2-> d4->~ d1~ d
   d4-- d-- d-- d-- f'-- f-- f-- f^\markup {\italic sim.}
   \repeat unfold 5 {f! f f f} f f f f\fermata
   \bar "|."
-  
+
 }
 clarinettoDynamicZweite = {
   s1*4
   s4 s4\f s2 s s\< s4\sf s2.\p s s4\p s1\> s4 s2.\!
-  s1 s4 s2.\< s4\sf s2.\p s1 s2\p s2\> s1 s s\!	
+  s1 s4 s2.\< s4\sf s2.\p s1 s2\p s2\> s1 s s\!
 }

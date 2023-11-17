@@ -5,18 +5,17 @@
 
 \header {
   title = "***"
-  meter = "Lento"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #20
-  markup-system-spacing #'basic-distance = #40
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #20
+  markup-system-spacing.basic-distance = #40
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -25,6 +24,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -69,6 +69,8 @@ rechts = \relative {
   %\override Score.SpacingSpanner.strict-note-spacing = ##t
   \set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
   %\set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark.extra-offset = #'(0 . 3)
+  \mark "Lento"
   a'2. fis a e cis'! h gis! g f ges f f des f as f
   cis h' a <fis h> a fis d fis a fis d d e cis
   a'4. <gis' cis>8<fis h><e gis><d fis>2. d, d 

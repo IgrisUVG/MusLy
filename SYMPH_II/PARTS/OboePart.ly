@@ -34,5 +34,6 @@
 }
 \include "..\oboe.ly"
 \score {
+  \new Staff
   \oboeMusic
 }

@@ -44,6 +44,7 @@
     \PianoStaff
     \consists #Span_stem_engraver
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "flute.ly"

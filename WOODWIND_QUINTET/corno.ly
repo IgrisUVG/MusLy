@@ -1,11 +1,13 @@
 \version "2.19.15"
+
 \language "deutsch"
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 cornoMusicErste = \relative {
   \time 6/4
   \key b \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1 4)
   \set Timing.beatStructure = #'(1 1 1 1 1 1)
@@ -27,11 +29,12 @@ cornoMusicErste = \relative {
   c,2.~ c h'1.
   \bar "|."
 }
+
 cornoMusicErsteInF = \relative {
   \time 6/4
   \key f \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1 4)
   \set Timing.beatStructure = #'(1 1 1 1 1 1)
@@ -47,20 +50,20 @@ cornoMusicErsteInF = \relative {
   r16 c''32( h) r8 r4 r2. r8 es,16( fis
   \times 2/3 {c8) d( es} g,8 as) r4 c( es f e!1)
   \tag #'HornClefChangesInC {
-  	\clef treble
+    \clef treble
   }
   r32 g'16.~ g[ g32]~ g[ es16.]~ es[ es32]
   \tag #'HornClefChangesInC {
-  	\clef bass
+    \clef bass
   }
   R1.*3
-  r2. h,2 r4 c4. r8 r1 r1. 
+  r2. h,2 r4 c4. r8 r1 r1.
   \tag #'HornClefChangesInC {
     \clef treble
   }
   c'1.~ c2 r1 dis4 e c h16 r8. r4
   \tag #'HornClefChangesInC {
-  	\clef bass
+    \clef bass
   }
   es,
   r1 r4 es, r2 r4 r32 e'8.. gis4.( g8) a1 r2
@@ -78,10 +81,11 @@ cornoMusicErsteInF = \relative {
   g,2.~ g fis'1.
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 cornoMusicZweite = \relative {
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   %\once\override Score.RehearsalMark.extra-offset = #'(15 . 0)
   %\mark\markup { \text \small {Wiederholen viermal \italic { ad lib. } }}
   R1*4 \bar ":|."
@@ -120,15 +124,16 @@ cornoMusicZweite = \relative {
   fis2 a~ a1~ a\fermata
   \bar "|."
 }
+
 cornoMusicZweiteInF = \relative {
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   %\once\override Score.RehearsalMark.extra-offset = #'(15 . 0)
   %\mark\markup { \text \small {Wiederholen viermal \italic { ad lib. } }}
   R1*4 \bar ":|."
   r2 fis' cis' fis,~ fis4 fis-- cis'-- fis->~ fis cis2-> e4->~ e1~ e2 r
-  r4 fis,2-> cis'4->~ cis fis,2.~ fis4 fis-- cis'-- fis->~ fis2 cis-> e1->~ e~ e~ e
-  R1*12 b1~ b~ b
+  r4 fis,2-> cis'4->~ cis fis,2.~ fis4 fis-- cis'-- fis->~ fis2 cis->
+  e1->~ e~ e~ e R1*12 b1~ b~ b
   \tag #'HornClefChanges {
     \clef "bass^8"
     \set Staff.clefTransposition = #0
@@ -143,18 +148,18 @@ cornoMusicZweiteInF = \relative {
     \set Staff.clefTransposition = #0
   }
   \tag #'HornClefChangesInC {
-  	\clef bass
+    \clef bass
   }
   g,,~ g~ g
   \tag #'HornClefChangesInC {
-  	\clef treble
+    \clef treble
   }
   \tag #'HornClefChanges {
     \clef treble
   }
   d''4( b'2.~ b1~ b)
   \tag #'HornClefChangesInC {
-  	\clef bass
+    \clef bass
   }
   \tag #'HornClefChanges {
     \clef "bass^8"
@@ -162,15 +167,15 @@ cornoMusicZweiteInF = \relative {
   }
   ges,,1~ ges
   \tag #'HornClefChangesInC {
-  	\clef treble
+    \clef treble
   }
   \tag #'HornClefChanges {
     \clef treble
   }
   f''1~ f~ f c'2( h b1) ges~ ges2 r r c, g' c,~ c4 c-- g'-- c--~
   c g2 b4~ b1~ b2 r
-   \tag #'HornClefChangesInC {
-  	\clef bass
+  \tag #'HornClefChangesInC {
+    \clef bass
   }
   \tag #'HornClefChanges {
     \clef "bass^8"
@@ -184,36 +189,38 @@ cornoMusicZweiteInF = \relative {
   }
   fisis1~( fisis2 gis ais1) cis,2( fis eis1)
   e!->~ e~ e~ e~ e~ e e->~( e~ e~ e~ e~ e~ e~ e2 es c) r
-   \tag #'HornClefChangesInC {
-  	\clef treble
+  \tag #'HornClefChangesInC {
+    \clef treble
   }
-  d'( c f,2. b4 g' f2.~ f2) d( c 
-   \tag #'HornClefChangesInC {
-  	\clef bass
+  d'( c f,2. b4 g' f2.~ f2) d( c
+  \tag #'HornClefChangesInC {
+    \clef bass
   }
   f, ces as) R1
   \tag #'HornClefChangesInC {
-  	\clef treble
+    \clef treble
   }
   es''2( des
   ges,1) as d2( c f,2. b4 g' f2.~ f2 as,
   es'1~ es~ es~ es~ es~ es~ es~ es) R1*13
   \tag #'HornClefChangesInC {
-  	\clef bass
+    \clef bass
   }
   r2 c, g' c,~ c4 c g' c~ c g2 b4~ b1~ b R1
   r4 c,2 g'4~ g c,2.~ c4 c g' c~ c2 g b1~ b R1*3
   r2 g,2~( g4 g d' g~ g1~ g4) g8( f e g, d'4) c1( h)
-  b8( d \times 2/3 {f8 c' b} fis2~ fis) d4( a' g2) 
-   \tag #'HornClefChangesInC {
-  	\clef treble
+  b8( d \times 2/3 {f8 c' b} fis2~ fis) d4( a' g2)
+  \tag #'HornClefChangesInC {
+    \clef treble
   }
   c8( g e' d~
-  d2.) g4~ g1~ g r2 fis, cis' fis,~ fis4 fis-- cis'-- fis->~ fis cis2-> e4->~
-  e1~ e e,4-- e-- e-- e-- R1 fis2 cis' fis,2. fis4 cis' fis2.
+  d2.) g4~ g1~ g r2 fis, cis' fis,~ fis4 fis-- cis'-- fis->~
+  fis cis2-> e4->~ e1~ e e,4-- e-- e-- e-- R1
+  fis2 cis' fis,2. fis4 cis' fis2.
   cis2 e~ e1~ e\fermata
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 cornoDynamicZweite = {
   s1*4

@@ -1,11 +1,13 @@
 \version "2.19.15"
+
 \language "deutsch"
+
 fagottoMusicErste = \relative {
   \clef bass
   \time 6/4
   \key b \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1 4)
   \set Timing.beatStructure = #'(1 1 1 1 1 1)
@@ -30,10 +32,11 @@ fagottoMusicErste = \relative {
   c es fis a) b2~ b2. c,1.
   \bar "|."
 }
+
 fagottoMusicZweite = \relative {
   \clef bass
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   %\set Score.proportionalNotationDuration = #(ly:make-moment 1/4)
   \once\override Score.RehearsalMark.extra-offset = #'(15 . 0)
   \mark\markup { \text \small {Wiederholen viermal \italic { ad lib. } }}
@@ -59,6 +62,7 @@ fagottoMusicZweite = \relative {
   h! fis'2. h,!2 f'!~ f1~ f\fermata
   \bar "|."
 }
+
 fagottoDynamicZweite = {
   \override Hairpin.extra-offset = #'(0 . 7)
   \override DynamicText.extra-offset = #'(0 . 7)

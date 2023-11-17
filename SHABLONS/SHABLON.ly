@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \header {
   dedication = "posw"
@@ -36,7 +37,7 @@ classicalGuitar = \relative c' {
   \global
   \compressFullBarRests
   R1*16
-  
+
 }
 
 \score {

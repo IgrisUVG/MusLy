@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #28
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver

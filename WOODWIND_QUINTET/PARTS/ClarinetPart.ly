@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -28,6 +29,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"
@@ -41,10 +43,10 @@
     %\new Dynamics \dynamic
   >>
   \header {
-  	title = ##f
-  	subtitle = ##f
-  	meter = "Adagio"
-  	composer = ##f
+    title = ##f
+    subtitle = ##f
+    meter = \markup {\fontsize #2 "Adagio"}
+    composer = ##f
   }
 }
 \score {
@@ -53,15 +55,15 @@
     \new Dynamics \clarinettoDynamicZweite
   >>
   \header {
-  	title = ##f
-  	subtitle = ##f
-  	meter = "Allegro"
-  	composer = ##f
+    title = ##f
+    subtitle = ##f
+    meter = \markup {\fontsize #2 "Allegro"}
+    composer = ##f
   }
   \layout {
-		\context {
-			\Staff
-			
-		}
-	}
+    \context {
+      \Staff
+
+    }
+  }
 }

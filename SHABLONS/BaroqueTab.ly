@@ -16,7 +16,7 @@
 %#(set-global-staff-size 20)
 \score {
   \new TabStaff{
-  	\hide Score.SystemStartBar
+    \hide Score.SystemStartBar
     \repeat unfold 8 { s1 \break }
   }
   \layout {

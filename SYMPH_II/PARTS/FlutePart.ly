@@ -34,5 +34,6 @@
 }
 \include "..\flute.ly"
 \score {
+  \new Staff
   \fluteMusic
 }

@@ -41,7 +41,7 @@ global = {
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
-  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \override Score.RehearsalMark.extra-offset = #'(0 . 2)
   \mark "Allegro"
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn

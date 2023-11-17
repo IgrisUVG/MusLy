@@ -1,10 +1,12 @@
 \version "2.19.15"
+
 \language "deutsch"
+
 fluteMusicErste = \relative {
   \time 6/4
   \key b \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1 4)
   \set Timing.beatStructure = #'(1 1 1 1 1 1)
@@ -30,9 +32,10 @@ fluteMusicErste = \relative {
   \times 8/11 {r32[ e,( f fis g gis a b h c cis]} d2) c1.
   \bar "|."
 }
+
 fluteMusicZweite = \relative {
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   %\once\override Score.RehearsalMark.extra-offset = #'(15 . 0)
   %\mark\markup { \text \small {Wiederholen viermal \italic { ad lib. } }}
   R1*4 \bar ":|." R1*10
@@ -62,6 +65,7 @@ fluteMusicZweite = \relative {
   \repeat unfold 20 {d4} g,,! g g g \repeat unfold 27 {b'} b\fermata
   \bar "|."
 }
+
 fluteDynamicZweite = {
   s1*4
 }

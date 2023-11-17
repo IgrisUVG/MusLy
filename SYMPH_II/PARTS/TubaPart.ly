@@ -34,7 +34,6 @@
 }
 \include "..\tuba.ly"
 \score {
-  \new Staff = "Staff_basso" {
+  \new Staff
     \tubaMusic
-  }
 }

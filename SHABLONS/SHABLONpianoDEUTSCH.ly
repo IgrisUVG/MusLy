@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -40,18 +40,19 @@
 makeOctaves =
 #(define-music-function (parser location arg mus)
    (integer? ly:music?)
-   #{<<  \withMusicProperty #'to-relative-callback
-         #(lambda (m p)
-            (let ((mu (ly:music-property m 'element)))
-              (ly:music-transpose mu (ly:make-pitch (- arg) 0 0))
-              (ly:make-music-relative! mu p)
-              (ly:music-transpose mu (ly:make-pitch arg 0 0)))
-            p)
-         \transpose c' $(ly:make-pitch arg 0 0) $mus
-         $mus
+   #{<<
+     \withMusicProperty #'to-relative-callback
+     #(lambda (m p)
+        (let ((mu (ly:music-property m 'element)))
+          (ly:music-transpose mu (ly:make-pitch (- arg) 0 0))
+          (ly:make-music-relative! mu p)
+          (ly:music-transpose mu (ly:make-pitch arg 0 0)))
+        p)
+     \transpose c' $(ly:make-pitch arg 0 0) $mus
+     $mus
      >>
    #})
-pocoCr = 
+pocoCr =
 #(make-music 'CrescendoEvent
    'span-type 'text
    'span-text "poco cresc.")
@@ -69,11 +70,11 @@ bot = \change Staff = "LH"
 rechts = \relative {
   \clef treble
   \key c \major
-  \time 4/4  
+  \time 4/4
   %\override Score.SpacingSpanner.strict-note-spacing = ##t
   %\set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
   %\set Staff.printKeyCancellation = ##f
-  
+
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -82,14 +83,14 @@ links = \relative {
   \key c \major
   \time 4/4
   %\set Staff.printKeyCancellation = ##f
-  
+
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
-  
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%

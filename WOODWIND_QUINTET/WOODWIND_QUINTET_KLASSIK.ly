@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -8,33 +9,38 @@
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 18)
 \paper {
   %#(set-paper-size "a4")
   indent = 1.5\cm  % space for instrumentName
   %short-indent = 1.0\cm  % space for shortInstrumentName
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #8
-  markup-markup-spacing #'basic-distance = #15
-  score-markup-spacing #'basic-distance = #20
-  markup-system-spacing #'basic-distance = #5
-  score-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #22
-  last-bottom-spacing #'basic-distance = #20
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #8
+  markup-markup-spacing.basic-distance = #15
+  score-markup-spacing.basic-distance = #20
+  markup-system-spacing.basic-distance = #5
+  score-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #22
+  last-bottom-spacing.basic-distance = #20
   two-sided = ##t
-  inner-margin = 20
+  inner-margin = 18
   outer-margin = 12
   print-all-headers = ##t
 }
+
 \layout {
   %\context { \RemoveEmptyStaffContext }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
+
 \include "flute.ly"
 \include "oboe.ly"
 \include "clarinet.ly"
 \include "corno.ly"
 \include "fagotto.ly"
+
 \score {
   \new StaffGroup
   <<
@@ -85,7 +91,7 @@
   \header {
     title = ##f
     subtitle = ##f
-    meter = "Adagio"
+    meter = \markup {\fontsize #3 "Adagio"}
     composer = ##f
   }
 }
@@ -139,7 +145,10 @@
   \header {
     title = ##f
     subtitle = ##f
-    meter = "Allegro"
+    meter = \markup {\fontsize #3 "Allegro"}
     composer = ##f
+  }
+  \layout {
+    indent = 5
   }
 }

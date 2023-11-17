@@ -35,5 +35,6 @@
 }
 \include "../timpani.ly"
 \score {
+  \new Staff
   \timpMusic
 }

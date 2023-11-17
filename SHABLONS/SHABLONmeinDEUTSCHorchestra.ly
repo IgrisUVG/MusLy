@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -9,29 +10,36 @@
   tagline = ##f%\markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 16)
 \paper {
   indent = 3.0\cm  % space for instrumentName
   short-indent = 1.5\cm  % space for shortInstrumentName
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #25
   two-sided = ##t
   inner-margin = 25
   outer-margin = 15
 }
 
+
+\layout {
+  \context {
+    \Score
+    \remove "Bar_number_engraver"
+  }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
+}
+
 fluteMusic = \relative c' { \key g \major g'1 b }
 % Pitches as written on a manuscript for Clarinet in A
 % are transposed to concert pitch.
-clarinetMusic = \transpose c' a
-\relative c'' { \key b \major b1 d }
+clarinetMusic = \transpose c' a \relative c'' { \key b \major b1 d }
 trumpetMusic = \relative c { \key g \major g''1 b }
 % Key signature is often omitted for horns
-hornMusic = \transpose c' f
-\relative c { d'1 fis }
+hornMusic = \transpose c' f \relative c { d'1 fis }
 percussionMusic = \relative c { \key g \major g1 b }
 sopranoMusic = \relative c'' { \key g \major g'1 b }
 sopranoLyrics = \lyricmode { Lyr -- ics }
@@ -51,7 +59,8 @@ bassMusic = \relative c { \clef "bass_8" \key g \major g,1 b }
 
 \score {
   <<
-    \new StaffGroup = "StaffGroup_woodwinds" <<
+    \new StaffGroup = "StaffGroup_woodwinds"
+    <<
       \new Staff = "Staff_flute" {
         \set Staff.instrumentName = #"Flute"
         % shortInstrumentName, midiInstrument, etc.
@@ -69,7 +78,8 @@ bassMusic = \relative c { \clef "bass_8" \key g \major g,1 b }
         \transpose b c' \clarinetMusic
       }
     >>
-    \new StaffGroup = "StaffGroup_brass" <<
+    \new StaffGroup = "StaffGroup_brass"
+    <<
       \new Staff = "Staff_hornI" {
         \set Staff.instrumentName = #"Horn in F"
         \transposition f
@@ -80,7 +90,8 @@ bassMusic = \relative c { \clef "bass_8" \key g \major g,1 b }
         \trumpetMusic
       }
     >>
-    \new RhythmicStaff = "RhythmicStaff_percussion" <<
+    \new RhythmicStaff = "RhythmicStaff_percussion"
+    <<
       \set RhythmicStaff.instrumentName = #"Percussion"
       \percussionMusic
     >>
@@ -89,8 +100,12 @@ bassMusic = \relative c { \clef "bass_8" \key g \major g,1 b }
       \new Staff { \pianoRHMusic }
       \new Staff { \pianoLHMusic }
     >>
-    \new StaffGroup = "StaffGroup_strings" <<
-      \new GrandStaff = "GrandStaff_violins" <<
+    \new StaffGroup = "StaffGroup_strings"
+    <<
+      \new GrandStaff = "GrandStaff_violins" \with {
+        systemStartDelimiter = #'SystemStartSquare
+      }
+      <<
         \new Staff = "Staff_violinI" {
           \set Staff.instrumentName = #"Violin I"
           \violinIMusic
@@ -114,10 +129,4 @@ bassMusic = \relative c { \clef "bass_8" \key g \major g,1 b }
       }
     >>
   >>
-  \layout {
-    \context {
-      \Score
-      \remove "Bar_number_engraver"
-    }
-  }
 }

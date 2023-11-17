@@ -1,10 +1,12 @@
 \version "2.19.15"
+
 \language "deutsch"
+
 oboeMusicErste = \relative {
   \time 6/4
   \key b \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1 4)
   \set Timing.beatStructure = #'(1 1 1 1 1 1)
@@ -30,9 +32,10 @@ oboeMusicErste = \relative {
   r2 \times 4/5 {r16[ a( b c d]} es2.) e1.
   \bar "|."
 }
+
 oboeMusicZweite = \relative {
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   %\once\override Score.RehearsalMark.extra-offset = #'(15 . 0)
   %\mark\markup { \text \small {Wiederholen viermal \italic { ad lib. } }}
   R1*4 \bar ":|." R1*26
@@ -57,6 +60,7 @@ oboeMusicZweite = \relative {
   \repeat unfold 27 {es'} es\fermata
   \bar "|."
 }
+
 oboeDynamicZweite = {
   s1*4
 }

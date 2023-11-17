@@ -41,6 +41,7 @@
     %\consists "Timing_translator"
     %\consists "Default_bar_line_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "../flute.ly"

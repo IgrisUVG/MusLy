@@ -28,7 +28,7 @@
 \layout {
   \context {
     %\RemoveEmptyStaffContext
-  }  
+  }
   \context {
     \Score
     %\remove "Timing_translator"
@@ -40,50 +40,53 @@
     %\consists "Timing_translator"
     %\consists "Default_bar_line_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
+
 \include "../vni1.ly"
 \include "../vni2.ly"
 \include "../vle.ly"
 \include "../vc.ly"
 \include "../cb.ly"
+
 \score {
   \new StaffGroup = "StaffGroup_strings" <<
-      \new StaffGroup = "GrandStaff_violins" \with {
-        systemStartDelimiter = #'SystemStartSquare
-      }
-      <<
-        \new Staff = "Staff_violinI" {
-          \set Staff.instrumentName = #"Violini I"
-          \set Staff.shortInstrumentName = #"V-ni I"
-          \vniOneMusic
-        }
-
-        \new Staff = "Staff_violinII" {
-          \set Staff.instrumentName = #"Violini II"
-          \set Staff.shortInstrumentName = #"V-ni II"
-          \vniTwoMusic
-        }
-      >>
-      \new Staff = "Staff_viola" {
-        \set Staff.instrumentName = #"Viole"
-        \set Staff.shortInstrumentName = #"V-le"
-        \vleMusic
+    \new StaffGroup = "GrandStaff_violins" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_violinI" {
+        \set Staff.instrumentName = #"Violini I"
+        \set Staff.shortInstrumentName = #"V-ni I"
+        \vniOneMusic
       }
 
-      \new StaffGroup = "GrandStaff_bassi" \with {
-        systemStartDelimiter = #'SystemStartSquare
+      \new Staff = "Staff_violinII" {
+        \set Staff.instrumentName = #"Violini II"
+        \set Staff.shortInstrumentName = #"V-ni II"
+        \vniTwoMusic
       }
-      <<
-        \new Staff = "Staff_cello" {
-          \set Staff.instrumentName = #"Violoncelli"
-          \set Staff.shortInstrumentName = #"Vc"
-          \vcMusic
-        }
-        \new Staff = "Staff_bass" {
-          \set Staff.instrumentName = #"Contrabassi"
-          \set Staff.shortInstrumentName = #"Cb"
-          \cbMusic
-        }
-      >>
     >>
+    \new Staff = "Staff_viola" {
+      \set Staff.instrumentName = #"Viole"
+      \set Staff.shortInstrumentName = #"V-le"
+      \vleMusic
+    }
+
+    \new StaffGroup = "GrandStaff_bassi" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_cello" {
+        \set Staff.instrumentName = #"Violoncelli"
+        \set Staff.shortInstrumentName = #"Vc"
+        \vcMusic
+      }
+      \new Staff = "Staff_bass" {
+        \set Staff.instrumentName = #"Contrabassi"
+        \set Staff.shortInstrumentName = #"Cb"
+        \cbMusic
+      }
+    >>
+  >>
 }

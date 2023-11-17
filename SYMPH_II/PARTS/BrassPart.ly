@@ -40,7 +40,9 @@
     %\consists "Timing_translator"
     %\consists "Default_bar_line_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
+
 \include "../trumpet1.ly"
 \include "../trumpet2.ly"
 \include "../corno1.ly"
@@ -48,6 +50,7 @@
 \include "../trombon1.ly"
 \include "../trombon2.ly"
 \include "../tuba.ly"
+
 \score {
   \new StaffGroup = "StaffGroup_brass" <<
     \new StaffGroup = "GrandStaff_trombi" \with {

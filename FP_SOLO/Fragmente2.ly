@@ -10,7 +10,7 @@
 
 #(set-default-paper-size "a4" 'landscape)
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26

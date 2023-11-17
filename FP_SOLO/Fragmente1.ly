@@ -14,12 +14,12 @@
 
 #(set-default-paper-size "a4" 'landscape)
 \paper {
-  #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #25
-  top-markup-spacing.basic-distance = #8
-  markup-system-spacing.basic-distance = #26
+  %#(set-paper-size "a4")
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #15
   system-system-spacing.basic-distance = #20
-  last-bottom-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #20
   left-margin = 15
   right-margin = 15
 }

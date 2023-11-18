@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -21,7 +22,7 @@ rechtsDrei = {
   r <<
     {
       s4 s8 <e' e''>
-      \override NoteColumn #'force-hshift = #-1.3
+      \override NoteColumn.force-hshift = #-1.3
       s4 <e'' a''> <a'' d'''> s <d''' f'''> <h'' e'''>
       s \stemDown <e'' a'' cis'''>^( <fis'' a'' d'''>)
     }
@@ -34,7 +35,7 @@ rechtsDrei = {
     }
   >>
   r4 <f'' a'' dis'''>4^(
-  \once \override Score.RehearsalMark #'extra-offset = #'( 6 . -3 )
+  \once \override Score.RehearsalMark.extra-offset = #'( 6 . -3 )
   %\once \override Score.RehearsalMark #'font-size = #1
   \mark \markup { \musicglyph #"scripts.coda" }
   <gis'' c''' e'''>)
@@ -49,7 +50,7 @@ rechtsDrei = {
   \set subdivideBeams = ##t
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
   \set baseMoment = #(ly:make-moment 1 8)
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletBracket
   e''' e'''' \times 2/3 {cis''''16 a''' f'''} e'''32 cis''' a'' f'' e''8 r2 R2.
   r4 <e'' a'' cis'''>( <fis'' a'' d'''>)
   r <<
@@ -101,9 +102,9 @@ rechtsDrei = {
       #(define afterGraceFraction (cons 15 16))
       \afterGrace s2. {
         %\shape #'(
-         %          (( 0 . 0) (0.5 . -0.5) (1 . -1) (2 . -1))
-          %         ((0 . -1) (0.5 . -0.5) (0 . 0) (0 . 0))
-           %        ) Slur
+        %          (( 0 . 0) (0.5 . -0.5) (1 . -1) (2 . -1))
+        %         ((0 . -1) (0.5 . -0.5) (0 . 0) (0 . 0))
+        %        ) Slur
         dis''''16[_( e'''']
       }
       \hideNotes
@@ -189,34 +190,34 @@ rechtsDrei = {
 dynamicDrei = {
   \override Hairpin.to-barline = ##f
   \override Hairpin.minimum-length = #10
-  \once \override DynamicText #'extra-offset = #'(-3 . -3)
+  \once \override DynamicText.extra-offset = #'(-3 . -3)
   s2.*6\pp
-  \override DynamicText #'extra-offset = #'(0 . -2)
-  \override Hairpin #'extra-offset = #'(0 . -2)
+  \override DynamicText.extra-offset = #'(0 . -2)
+  \override Hairpin.extra-offset = #'(0 . -2)
   \override TextScript.extra-offset = #'(0 . -1)
   s4. s4.\< s4\! s2\> s4 s2\pp s2\ppp s8 s\mp s4. s4.\< s4\! s2\> s4 s2\pp s2.
   s16
-  \override DynamicText #'extra-offset = #'(0 . -0.5)
-  \override Hairpin #'extra-offset = #'(0 . -0.5)
+  \override DynamicText.extra-offset = #'(0 . -0.5)
+  \override Hairpin.extra-offset = #'(0 . -0.5)
   s8.\sf s4 s\> s2 s8 s8\pp s2.*3 s2 s8
-  \override DynamicText #'extra-offset = #'(0 . -2)
-  \override Hairpin #'extra-offset = #'(0 . -2)
+  \override DynamicText.extra-offset = #'(0 . -2)
+  \override Hairpin.extra-offset = #'(0 . -2)
   s\ppp s4. s\< s\!s\> s8 s8\ppp s2
   s2.*3 s2.\< s4\mf s2-\markup {\italic {poco cresc}} s2.*3 s2\ff s4\> s2\! s4\<
   s2.\! s\> s4.\mf s-\markup {\italic dim} s s\ppp\< s2.\p
   s2.-\markup {\italic {poco dim}} s2 s4\ppp s2. s4^\markup {\italic {poco cresc}}
   s1 s4 s4\ff s4*9-\markup {\italic {poco dim}}
-  \override DynamicText #'extra-offset = #'(0 . 0.5)
-  \override Hairpin #'extra-offset = #'(0 . 0.5)
+  \override DynamicText.extra-offset = #'(0 . 0.5)
+  \override Hairpin.extra-offset = #'(0 . 0.5)
   \override TextScript.extra-offset = #'(0 . 0.5)
   s2.*2\pp
   s2 s4-\markup {\italic {poco cresc}} s2.*3 s4.\f s-\markup {\italic cresc} s2.
   s2.*11\ff s2
-  \once\override DynamicText #'extra-offset = #'(0 . -3)
+  \once\override DynamicText.extra-offset = #'(0 . -3)
   s4\fff s2.
-  \once\override DynamicText #'extra-offset = #'(0 . 0)
+  \once\override DynamicText.extra-offset = #'(0 . 0)
   s8.\sf
-  \once\override DynamicText #'extra-offset = #'(0 . -0.5)
+  \once\override DynamicText.extra-offset = #'(0 . -0.5)
   s16\pp s2
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -229,22 +230,22 @@ voiceA = \relative e {
         }
         \\
         {
-          \override NoteColumn #'force-hshift = #1.3
+          \override NoteColumn.force-hshift = #1.3
           s4 <a' cis>2 <fis a>4
         }
       >>
     }
     \times 3/4 { << { r <cis cis'> <c c'> <h h'> } \\ { s4 <f' a>2 <e gis>4 } >>  }
   }
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletNumber
+  \omit TupletBracket
   \repeat unfold 18 {
     \times 3/4 { <<   { r4 <e e'> <es es'> <d d'> }  \\  { s4 <a' cis>2 <fis a>4 } >> }
     \times 3/4 { << { r <cis cis'> <c c'> <h h'> } \\ { s4 <f' a>2 <e gis>4 } >>  }
   }
   s2.* 27 s4
-  \override TupletNumber #'transparent = ##f
-  \override TupletBracket #'bracket-visibility = ##t
+  \omit TupletNumber
+  \omit TupletBracket
   \times 3/4 {
     <<
       {
@@ -252,7 +253,7 @@ voiceA = \relative e {
       }
       \\
       {
-        \override NoteColumn #'force-hshift = #1.3
+        \override NoteColumn.force-hshift = #1.3
         s4 <a' cis>2 <fis a>4
       }
     >>

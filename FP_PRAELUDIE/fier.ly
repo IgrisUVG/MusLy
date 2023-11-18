@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -35,8 +36,8 @@ rechtsFier = \relative {
   \time 3/4
   r16. f''32\noBeam d16.c32 a16. f32~
   f8\noBeam a16.[ as32]~
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletNumber
+  \omit TupletBracket
   \times 2/3 {
     as16 f d!
   }
@@ -122,8 +123,8 @@ rechtsFier = \relative {
   >>
   <c f a>2\arpeggio<c e f a>\arpeggio<c es ges h>2.\arpeggio
   c'16[ d]
-  \override TupletNumber #'transparent = ##f
-  \override TupletBracket #'bracket-visibility = ##f
+  %\override TupletNumber #'transparent = ##f
+  %\override TupletBracket #'bracket-visibility = ##f
   \times 2/3 {f16 es d}
   c4 f,16 f' d c b4 d16 c as f
   e4 b16 des es e d4 d16 e g a
@@ -154,8 +155,8 @@ rechtsFier = \relative {
   \time 3/4
   r16. f''32\noBeam d16.c32 a16. f32~
   f8\noBeam a16.[ as32]~
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  %\override TupletNumber #'transparent = ##t
+  %\override TupletBracket #'bracket-visibility = ##f
   \times 2/3 {
     as16 f d!
   }
@@ -224,8 +225,8 @@ linksFier = \relative {
   f8[
   \stemNeutral
   <a' es'>]<b d><a es'><b d>\noBeam
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletNumber
+  \omit TupletBracket
   \times 2/3 {
     <f c'>16<f as h d><f b des>
   }
@@ -336,8 +337,8 @@ linksFier = \relative {
   f8[
   \stemNeutral
   <a' es'>]<b d><a es'><b d>\noBeam
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  %\override TupletNumber #'transparent = ##t
+  %\override TupletBracket #'bracket-visibility = ##f
   \times 2/3 {
     <f c'>16<f as h d><f b des>
   }

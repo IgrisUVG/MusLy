@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -34,8 +35,8 @@ rechtsFunf = \relative b' {
   \time 3/2
   \tuplet 3/2 4{
     \change Staff = LH b8[ \change Staff = RH es! f] b es f
-    \override TupletNumber #'transparent = ##t
-    \override TupletBracket #'bracket-visibility = ##f
+    \omit TupletNumber
+    \omit TupletBracket
     \change Staff = LH ces,8[ \change Staff = RH es ges] b es ges
     \change Staff = LH as,,8[ \change Staff = RH es' f] b des f
   }
@@ -55,8 +56,10 @@ rechtsFunf = \relative b' {
   <des' des'>4 \stemUp <es es'>8 <e e'> <f f'> <ges ges'>4.
   \once \omit Staff.TimeSignature
   \time 6/4
-  \override Staff.NoteCollision.prefer-dotted-right = ##f
-  <b b'>8 <g g'>4. s2. c,,16 d g c
+  %\override Staff.NoteCollision.prefer-dotted-right = ##f
+  <b b'>8
+  \once \override NoteColumn.force-hshift = #-1.2
+  <g g'>4. s2. c,,16 d g c
   \stemNeutral
   \once \omit Staff.TimeSignature
   \time 9/4
@@ -636,7 +639,7 @@ dynamicFunf = {
   s1\mp s4 \repeat unfold 7 {s1 s4} s1
   \repeat unfold 4 {s1 s4} s1\pp s4 s1 s4
   s1\f s2\> s2\p s1*2 s1\f s2 s2\> s4 s2.\mp s2 s2\>
-  s4. s16 s32 
+  s4. s16 s32
   \once\override DynamicText.extra-offset = #'(0.5 . 0)
   s\pp s2 s2 s8\cresc s8\! s4 s1*2 s1*3\mf
   s16\dim s8.\! s2. s1 s2. s4\pp s1\sf s1\sf
@@ -649,7 +652,7 @@ dynamicFunf = {
   s2.\pp s2 s4\pocoCr s2.*4\! s4\ff s4\mf s s\mp s s\pp
   s1\p s4. s8\< s2 s2*3\mf s2\< s2\mf s4 s16 s8\dim s16\!
   \once\override DynamicText.extra-offset = #'(0.2 . 1)
-  s1\pp s4 s8\dim s\! s2*3 
+  s1\pp s4 s8\dim s\! s2*3
   \once\override DynamicText.extra-offset = #'(0.5 . 0)
   s1*2\ppp
 }

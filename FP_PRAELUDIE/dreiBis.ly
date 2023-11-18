@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -14,7 +15,7 @@ voiceA = \relative {
   h a8.~ a4 s16*3
   \stemNeutral
   a,16 cis! f cis! r h cis! e f g a~
-  \override Beam #'breakable = ##t
+  \override Beam.breakable = ##t
   a4~ a32
   \ottava #1
   \set Staff.ottavation = #"8"
@@ -321,12 +322,12 @@ voiceA = \relative {
     {
       \key a \major
 
-      \override Staff.Clef #'break-visibility = #begin-of-line-visible
-      \override Staff.Clef #'explicitClefVisibility = #begin-of-line-visible
-      \override Staff.TimeSignature #'break-visibility = #begin-of-line-visible
+      \override Staff.Clef.break-visibility = #begin-of-line-visible
+      \override Staff.Clef.explicitClefVisibility = #begin-of-line-visible
+      \override Staff.TimeSignature.break-visibility = #begin-of-line-visible
       \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
-      \override Staff.KeyCancellation #'break-visibility = #all-invisible
-      \override Staff.KeyCancellation #'explicitKeySignatureVisibility = #all-invisible
+      \override Staff.KeyCancellation.break-visibility = #all-invisible
+      %\override Staff.KeyCancellation.explicitKeySignatureVisibility = #all-invisible
 
       r4 r16
       \ottava #1
@@ -451,7 +452,7 @@ linksDreiBis = \relative {
   f a f
   %\clef bass
   c! f,)] e_>([ h' gis'!)]
-  %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
   \repeat unfold 2 {
     a,,32( cis e a
     \clef treble
@@ -664,7 +665,8 @@ linksDreiBis = \relative {
     {
       \repeat unfold 2 {
         s2 r16
-        \override Flag.style = #'no-flag
+        \omit Flag
+        %\override Flag.style = #'no-flag
         \set Staff.ottavation = #"8"
         \once \override Staff.OttavaBracket.direction = #DOWN
         \set Voice.middleCPosition = #(+ 6 7)
@@ -673,7 +675,7 @@ linksDreiBis = \relative {
         \unset Voice.middleCPosition
         s16
         s2 r16
-        \override Flag.style = #'no-flag
+        %\override Flag.style = #'no-flag
         \set Staff.ottavation = #"8"
         \once \override Staff.OttavaBracket.direction = #DOWN
         \set Voice.middleCPosition = #(+ 6 7)
@@ -685,7 +687,7 @@ linksDreiBis = \relative {
       \repeat unfold 2 {s8*11}
       \repeat unfold 3 {
         s2 r16
-        \override Flag.style = #'no-flag
+        %\override Flag.style = #'no-flag
         \set Staff.ottavation = #"8"
         \once \override Staff.OttavaBracket.direction = #DOWN
         \set Voice.middleCPosition = #(+ 6 7)
@@ -694,7 +696,7 @@ linksDreiBis = \relative {
         \unset Voice.middleCPosition
         s16
         s2 r16
-        \override Flag.style = #'no-flag
+        %\override Flag.style = #'no-flag
         \set Staff.ottavation = #"8"
         \once \override Staff.OttavaBracket.direction = #DOWN
         \set Voice.middleCPosition = #(+ 6 7)

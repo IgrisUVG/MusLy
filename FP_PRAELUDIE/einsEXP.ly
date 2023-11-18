@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -158,7 +159,7 @@ rechtsEins = {
   s2
   %\change Staff = LH
   \stemUp
-  \override Flag #'transparent = ##t
+  \omit Flag
   s8 des'''4^>^(-\tweak self-alignment-X #1
   -\tweak Y-offset #ly:self-alignment-interface::y-aligned-on-self
   -\tweak self-alignment-Y #-13 ^\finger \lhMark
@@ -180,7 +181,7 @@ rechtsEins = {
   %\change Staff = RH
 %%%%%%%%%%% Часть третья - правая рука %%%%%%%%%%%%%%
   \time 4/4
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \override Score.RehearsalMark.extra-offset = #'(4 . 1)
   \mark "meno mosso"
   <<

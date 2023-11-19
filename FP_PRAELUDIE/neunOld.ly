@@ -3,7 +3,7 @@
 \language "deutsch"
 
 %%%%%%%%%%% RH %%%%%%%%%%%%
-rechtsNeun = \relative {
+rechtsNeun = {
   \clef treble
   \key f \major
   \time 3/8
@@ -14,99 +14,99 @@ rechtsNeun = \relative {
   \times 2/3 {
     \stemUp f'16[
     \change Staff = LH
-    b,
+    b
     \change Staff = RH
-    c]
+    c']
     \stemNeutral
-    <f f'>[ b c]
-    <f f'>[ b c]
+    <f' f''>[ b' c'']
+    <f'' f'''>[ b'' c''']
     \omit TupletNumber
     \omit TupletBracket
     \ottava #1
     \set Staff.ottavation = #"8"
-    <f f'>[ b c]
+    <f''' f''''>[ b''' c'''']
     \ottava #0
-    <f,, f'>[ b c]
-    <f,, f'>[ b c]
-    \stemUp f,16[
+    <f'' f'''>[ b'' c''']
+    <f' f''>[ b' c'']
+    \stemUp f'16[
     \change Staff = LH
-    b,
+    b
     \change Staff = RH
-    c]
-    fis16[
+    c']
+    fis'16[
     \change Staff = LH
-    b,
+    b
     \change Staff = RH
-    c]
+    c']
   }%%%%%%%%%
   \stemNeutral
-  <d' d'>8
+  <d'' d'''>8
   \times 2/3 {
-    \stemUp <d, g>16[
+    \stemUp <d' g'>16[
     \change Staff = LH
     b
     \change Staff = RH
-    e]
+    e']
     \stemNeutral
-    <g d' g>[ b e]
-    <g d' g>[ b e]
+    <g' d'' g''>[ b' e'']
+    <g'' d''' g'''>[ b'' e''']
     \ottava #1
     \set Staff.ottavation = #"8"
-    <g d' g>[ b e]
+    <g''' d'''' g''''>[ b''' e'''']
     \ottava #0
-    <g,, d' g>[ b e]
-    <g,, d' g>[ b e]
+    <g'' d''' g'''>[ b'' e''']
+    <g' d'' g''>[ b' e'']
     \stemUp
-    <d, g>16[
+    <d' g'>16[
     \change Staff = LH
     b
     \change Staff = RH
-    e]
+    e']
     \change Staff = RH
-    a16[ d, e]
+    a'16[ d' e']
   }%%%%%%%%%
   s8
   \times 2/3 {
-    <b'>16[ d, fis]
+    <b'>16[	d' fis']
     \stemNeutral
-    <b b'>[ d fis]
-    <b b'>[ d fis]
-    <b,, b'>[ d fis]
-    <b,>[ d, fis]
+    <b' b''>[ d'' fis'']
+    <b'' b'''>[ d''' fis''']
+    <b' b''>[ d'' fis'']
+    <b'>[ d' fis']
   }%%%%%%%%%
-  s16. c32[ <f c'>16] s8. s4.
-  s16. s64 g\noBeam <c g'>16\noBeam s8.
-  s4 c8( b4 c8 b4 a8 g4 e'8~ e4 \stemUp b8 \stemNeutral g4 d8 b)
-  d32[ b d fis] d'[ b d fis]
-  d'[ b d fis] s4
+  s16. c'32[ <f' c''>16] s8. s4.
+  s16. s64 g'\noBeam <c'' g''>16\noBeam s8.
+  s4 c''8( b'4 c''8 b'4 a'8 g'4 e''8~ e''4 \stemUp b'8 \stemNeutral g'4 d'8 b)
+  d'32[ b d' fis'] d''[ b' d'' fis'']
+  d'''[ b'' d''' fis'''] s4
   \times 2/3 {
-    b,,16[ es, f] as[ es f] b[ es, f]
-    <ces ces'>[ es f] <des des'>[ es as] <ces, ces'>[ es f]
-    <b, b'>[ es f]
-    <b b'>[ es f]
-    <b b'>[ es f]
+    b'16[ es' f'] as'[ es' f'] b'[ es' f']
+    <ces' ces''>[ es' f'] <des' des''>[ es' as'] <ces' ces''>[ es' f']
+    <b b'>[ es' f']
+    <b' b''>[ es'' f'']
+    <b'' b'''>[ es''' f''']
     \ottava #1
     \set Staff.ottavation = #"8"
-    <b b'>[ es f]
+    <b''' b''''>[ es'''' f'''']
     \ottava #0
-    <b,, b'>[ es f]
-    <b,, b'>[ es f]
-    b,[ es, f]
+    <b'' b'''>[ es''' f''']
+    <b' b''>[ es'' f'']
+    b'[ es' f']
     \change Staff = LH
     \stemUp
-    <as,, as'>[ des es]
+    <as, as>[ des es]
     \change Staff = RH
     \stemNeutral
-    as'[ des, eses]
-    <ges ges'>[ ces des]
-    <ges ges'>[ ces deses]
+    as'[ des' eses']
+    <ges' ges''>[ ces'' des'']
+    <ges'' ges'''>[ ces''' deses''']
     \ottava #1
     \set Staff.ottavation = #"8"
-    <f f'>[ b c!]
+    <f''' f''''>[ b''' c''''!]
     \ottava #0
-    <f,, f'>[ b c]
-    <f,, f'>[ b c]
-    f,[ b c] \bar ":|."
+    <f'' f'''>[ b'' c''']
+    <f' f''>[ b' c'']
+    f'[ b c'] \bar ":|."
   }
   s8
   \times 2/3 {

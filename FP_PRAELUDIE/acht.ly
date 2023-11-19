@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -24,7 +25,7 @@ rechtsAcht = \relative e'' {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1 8)
       \set beatStructure = #'(2 2 2 2)
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletBracket
       \stemDown
       \tuplet 3/2 8 {d16( e d c-> d c} h32 a g fis
       \once \omit Staff.TimeSignature
@@ -80,7 +81,7 @@ rechtsAcht = \relative e'' {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1 8)
       \set beatStructure = #'(2 2 2 2)
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletBracket
       \tuplet 3/2 8 {h'16 g' d e g h,}
     }
     \\
@@ -166,7 +167,7 @@ linksAcht = \relative e {
   \set baseMoment = #(ly:make-moment 1 8)
   \set beatStructure = #'(2 2 2 2)
   %\override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletBracket
   \partial 4 h'4(
   %\override Staff.TimeSignature.stencil = ##f
   \once \omit Staff.TimeSignature
@@ -182,7 +183,7 @@ linksAcht = \relative e {
       \set subdivideBeams = ##t
       \set baseMoment = #(ly:make-moment 1 8)
       \set beatStructure = #'(2 2 2 2)
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletBracket
       \stemDown
       \tuplet 3/2 8 {d16( e d c-> d c} h32 a g fis
       \once \omit Staff.TimeSignature

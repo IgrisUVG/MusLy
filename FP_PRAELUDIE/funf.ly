@@ -59,6 +59,7 @@ rechtsFunf = \relative b' {
   %\override Staff.NoteCollision.prefer-dotted-right = ##f
   <b b'>8
   \once \override NoteColumn.force-hshift = #-1.2
+  \once \override Dots.extra-offset = #'(.5 . 0)
   <g g'>4. s2. c,,16 d g c
   \stemNeutral
   \once \omit Staff.TimeSignature

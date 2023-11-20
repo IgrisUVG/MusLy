@@ -5,17 +5,18 @@
 
 #(set-default-paper-size "a4" 'landscape)
 \paper {
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #20
-  system-system-spacing #'basic-distance = #18
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #18
+  last-bottom-spacing.basic-distance = #25
   two-sided = ##t
   inner-margin = 15
   outer-margin = 25
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -52,9 +53,9 @@
     title = "***"
     %composer = "I. G."
     meter = ##f
-    tagline = ##f%\markup {\char ##x00A9 "Ilja Grischunin"}
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
-  %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff
     <<
@@ -98,7 +99,7 @@
       \new Staff = "LH" \secondoLHseiteDrei
     >>
     \header {
-    	title = ##f
+      title = ##f
       tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
     }
     \layout {
@@ -115,7 +116,7 @@
       \new Staff = "LH" \primoLHseiteVier
     >>
     \header {
-    	title = ##f
+      title = ##f
       tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
     }
     \layout {
@@ -125,25 +126,25 @@
   }
   \pageBreak
   \markuplist {
-  	\fill-line { 
-			\column {
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\hspace #1
-				\line { 
-					*** 
-				}
-			}
-		}
-	}
-  \pageBreak  
+    \fill-line {
+      \column {
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \hspace #1
+        \line {
+          ***
+        }
+      }
+    }
+  }
+  \pageBreak
 }

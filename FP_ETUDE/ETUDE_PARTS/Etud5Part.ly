@@ -12,11 +12,11 @@
 \paper {
   #(set-paper-size "a4")
   annotate-spacing = ##f
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #10
-  markup-system-spacing #'basic-distance = #30
-  system-system-spacing #'basic-distance = #26
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #30
+  system-system-spacing.basic-distance = #26
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -44,7 +45,7 @@
 \score {
   \new PianoStaff
   <<
-    \new Staff = "RH" <<\globalFive \rechtsFive>>    
+    \new Staff = "RH" <<\globalFive \rechtsFive>>
     \new Dynamics = "Dynamics_pf" \dynamicFive
     \new Staff = "LH" <<\globalFive \linksFive>>
   >>

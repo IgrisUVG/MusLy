@@ -4,7 +4,7 @@
 \language "deutsch"
 
 globalSchau = {
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   \key e \minor
 }
@@ -15,31 +15,37 @@ rechtsSchau = \relative {
   \clef treble
   \override Fingering.staff-padding = #'()
   \partial 4
-  <e'' fis \tweak font-size #-2 g>4( <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
+  <e'' fis \tweak font-size #-2 g>4(
+  <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   \repeat unfold 2 {
-    r2 <e fis \tweak font-size #-2 g>4( <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
+    r2 <e fis \tweak font-size #-2 g>4(
+    <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   }
   r2 <e fis \tweak font-size #-2 g>4(
   \break
   <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   \repeat unfold 8 {
-    r2 <e fis \tweak font-size #-2 g>4( <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
+    r2 <e fis \tweak font-size #-2 g>4(
+    <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   }
   \change Staff = LH
   \repeat unfold 8 {
-    r2 <e fis \tweak font-size #-2 g>4( <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
+    r2 <e fis \tweak font-size #-2 g>4(
+    <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   }
   \clef bass
   r4
   \change Staff = RH
-  r8 <d e a>4.<a d e><d e g><d fis a><d g h><e a d>2<es g es'>4<f f'>2<es b' es>4<f a f'>2
-  <e fis \tweak font-size #-2 g>4( <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
+  r8 <d e a>4.<a d e><d e g><d fis a><d g h><e a d>2<es g es'>4
+  <f f'>2<es b' es>4<f a f'>2
+  <e fis \tweak font-size #-2 g>4(
+  <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   \repeat unfold 7 {
-    r2 <e fis \tweak font-size #-2 g>4( <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
+    r2 <e fis \tweak font-size #-2 g>4(
+    <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   }
   \bar ".|:"
   r2 <e fis \tweak font-size #-2 g>4(
-
   <dis e \tweak font-size #-2 a \tweak font-size #-2 b>-.) r2
   \bar ":|."
 }
@@ -91,14 +97,15 @@ linksSchau = \relative {
   \set Staff.ottavation = #"8"
   h-1 e f-1 fis g a h!-5 a g fis f e-3
   \repeat unfold 3 {dis e f fis g a h! a g fis f e}
-  cis e f fis g a h! a g fis f e c e f fis g a h! a g fis f e h e-2 f a-5 g fis
-  f e-1 dis-4 d cis c-1 h-2 e-4 dis d-1 cis-3 c h-1
-  e fis g-1 h c
+  cis e f fis g a h! a g fis f e c e f fis g a h! a g fis f e 
+  h e-2 f a-5 g fis f e-1 dis-4 d cis c-1 h-2 e-4 dis d-1 cis-3 c 
+  h-1 e fis g-1 h c
   \break
   e4
   \ottava #0
   \change Staff = LH
-  d,,,,,8[ a' e'] d[ e a d] e,[ a d e] a,[ d e a,] e'[ d a e] d'[ a e d] a'[ e d a] e'[ d a d,] e'[ a, d,]
+  d,,,,,8[ a' e'] d[ e a d] e,[ a d e] a,[ d e a,] e'[ 
+  d a e] d'[ a e d] a'[ e d a] e'[ d a d,] e'[ a, d,]
   <e, e'>8 fis' h e <fis a> <g f'>
   \clef treble
   <<

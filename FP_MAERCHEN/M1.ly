@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context{
     \Score
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #13

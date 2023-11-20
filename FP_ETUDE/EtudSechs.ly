@@ -4,6 +4,7 @@
 \language "deutsch"
 
 %%%%%%%%% SCRIPTS %%%%%%%%%
+
 makeOctaves =
 #(define-music-function (parser location arg mus)
    (integer? ly:music?)
@@ -90,13 +91,13 @@ slashII = {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 globalSechs = {
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key a \major
   \time 8/4
 }
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechtsSechs = \relative {
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key a \major
   \time 8/4
   \clef treble
@@ -105,13 +106,17 @@ rechtsSechs = \relative {
   %\override Score.SpacingSpanner.strict-note-spacing = ##t
   %\set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
   %\set Staff.printKeyCancellation = ##f
-  \acciaccatura {\slashI fis''16 gis} <d e a>2-- e4-.
+  \acciaccatura {\slashI fis''16 gis} 
+  %\displaceHeads #'(1 -1 0 0)
+  <d e a>2-- e4-.
   \times 2/3 {cis8( dis cis} h4-.)
   \times 2/3 {h8( cis h} a4-.)
   \acciaccatura dis,8 e4-.
   \acciaccatura {\slashII fis'16 gis} <cis, a'>4-.
+  %\displaceHeads #'(1 -1 0 0)
   <a h e>-. \times 2/3 {cis8( d! cis} h4-.)
   \times 2/3 {a8( h gis} e4-.)\acciaccatura h'8 a4-.
+  %\displaceHeads #'(1 -1 0 0)
   <h' cis e a>-^
   <<
     {
@@ -155,6 +160,7 @@ rechtsSechs = \relative {
   >>
   \times 2/3 {fis'8( gis fis} e4-.) h'
   \times 2/3 {dis,8( e dis} cis4)<dis' gis h dis>->(
+  %\displaceHeads #'(1 -1 0 0)
   <e fis h e>-^) cis-.\times 2/3 {gis8( a gis}
   e4-.) fis-. h-. r2
   <<
@@ -226,8 +232,8 @@ rechtsSechs = \relative {
   e'8[-\markup {\italic legato} a,
   d
   -\tweak X-offset #-1
-  -\tweak Y-offset #4.5 
-  -5 
+  -\tweak Y-offset #4.5
+  -5
   cis] a[ e h'-5 a]
   fis-2 gis a h cis d
   \tuplet 3/2 4 {
@@ -288,7 +294,9 @@ linksSechs = \relative {
   \time 4/4
   \set Staff.pedalSustainStyle = #'mixed
   \repeat unfold 10 {
-    a'8\sustainOn <h' cis e>16 fis,~\sustainOff fis8 e--
+    a'8\sustainOn 
+    %\displaceHeads #'(1 -1 0)
+    <h' cis e>16 fis,~\sustainOff fis8 e--
     r8. <fis' a>16( <gis h>8-.) <e d'>-.
   }
   \bar "||"

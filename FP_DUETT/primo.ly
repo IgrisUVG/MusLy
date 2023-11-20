@@ -29,10 +29,10 @@ top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
 xLV = #(define-music-function (parser location further) (number?) #{ 
-  \once \override LaissezVibrerTie  #'X-extent = #'(0 . 0) 
-  \once \override LaissezVibrerTie  #'details #'note-head-gap = #(/ 
+  \once \override LaissezVibrerTie.X-extent = #'(0 . 0) 
+  \once \override LaissezVibrerTie.details.note-head-gap = #(/ 
                                                                   further -2) 
-  \once \override LaissezVibrerTie  #'extra-offset = #(cons (/ 
+  \once \override LaissezVibrerTie.extra-offset = #(cons (/ 
                                                              further 2) 0) 
          #}) 
 
@@ -41,7 +41,7 @@ primoRH = \relative {
   \time 4/4
   %\key es \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \partial 2
   g''2 b, ces as' g f es ces' ges g!1 R1
   \break
@@ -49,7 +49,7 @@ primoRH = \relative {
   \set Staff.ottavation = #"8"
   as'1 ges2 \times 2/3 {b4 as ges} des2 
   \times 2/3 {es4 des' b~}
-  b1 h! h2~ \times 2/3 {h4 g' fis} ces1\laissezVibrer s
+  b1 h! h2~ \times 2/3 {h4 g' fis} \xLV #4 ces1\laissezVibrer s
   \break
   cis2. a4 cis2. cis4 d2 h a g d1 e
   ges'16 es des c b as ges f es des c des f es b ges as4. b' as4 

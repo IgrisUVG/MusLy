@@ -4,19 +4,19 @@
 \language "deutsch"
 
 \header {
-  title = "Märchen"
-  subtitle = "№ 3"
+  title = "Frühling"
+  %meter = "Andante"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #20
-  top-markup-spacing.basic-distance = #8
-  markup-system-spacing.basic-distance = #15
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #30
   system-system-spacing.basic-distance = #25
-  last-bottom-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -34,18 +34,29 @@
     \Score
     \override StaffGrouper.staff-staff-spacing.basic-distance = #13
     \remove "Bar_number_engraver"
+    %\omit SpanBar
+  }
+  \context {
+    \Staff
+    %\omit BarLine
+    \omit TimeSignature
   }
 }
 
-%%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
-\include "Mrechts.ly"
-\include "Mlinks.ly"
+%%%%%%%%% SCRIPTS %%%%%%%%%
+top = \change Staff = "RH"
+bot = \change Staff = "LH"
+
+%%%%%%%%% INCLUDE %%%%%%%%%
+\include "../Fruhling.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
+
   \new PianoStaff <<
-    \new Staff = "RH" \rechtsDrei
-    %\new Dynamics = "Dynamics_pf" \dynamicEins
-    \new Staff = "LH" \linksDrei
+    \new Staff = "RH" \rechtsFruhling
+    \new Dynamics = "DYN" \dynamicFruhling
+    \new Staff = "LH" \linksFruhling
   >>
+
 }

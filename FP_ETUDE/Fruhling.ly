@@ -3,45 +3,6 @@
 
 \language "deutsch"
 
-\header {
-  title = "Frühling"
-  %meter = "Andante"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
-
-\paper {
-  #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #25
-  top-markup-spacing.basic-distance = #15
-  markup-system-spacing.basic-distance = #30
-  system-system-spacing.basic-distance = #25
-  last-bottom-spacing.basic-distance = #25
-  left-margin = 15
-  right-margin = 15
-  %two-sided = ##t
-  %inner-margin = 25
-  %outer-margin = 15
-}
-
-\layout {
-  \context {
-    \PianoStaff
-    \consists #Span_stem_engraver
-  }
-  \context{
-    \Score
-    \override StaffGrouper.staff-staff-spacing.basic-distance = #13
-    \remove "Bar_number_engraver"
-    %\omit SpanBar
-  }
-  \context {
-    \Staff
-    %\omit BarLine
-    \omit TimeSignature
-  }
-}
-
 %%%%%%%%% SCRIPTS %%%%%%%%%
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
@@ -50,7 +11,7 @@ bot = \change Staff = "LH"
 
 
 %%%%%%%%%%% RH %%%%%%%%%%%%
-rechts = \relative {
+rechtsFruhling = \relative {
   \clef treble
   \key gis \minor
   \time 2/4
@@ -250,7 +211,7 @@ rechts = \relative {
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
-links = \relative {
+linksFruhling = \relative {
   \clef bass
   \key gis \minor
   \time 2/4
@@ -392,19 +353,8 @@ links = \relative {
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%
-dynamic = {
+dynamicFruhling = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%
-\score {
-
-  \new PianoStaff <<
-    \new Staff = "RH" \rechts
-    \new Dynamics = "DYN" \dynamic
-    \new Staff = "LH" \links
-  >>
 
 }

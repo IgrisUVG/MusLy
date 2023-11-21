@@ -19,6 +19,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -39,7 +40,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   \markup { \vspace #1 }
-  %%%%%%%%%%%%%%%%%%%%% ERSTE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% ERSTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \rechtsEins
@@ -61,7 +62,7 @@
     }
   }
   %\pageBreak
-  %%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \rechtsZwei
@@ -81,8 +82,8 @@
       }
     }
   }
-  %\pageBreak
-  %%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
+  \pageBreak
+%%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \rechtsDrei
@@ -102,8 +103,8 @@
       }
     }
   }
-  %\pageBreak
-  %%%%%%%%%%%%%%%%%%%%% FIERTE %%%%%%%%%%%%%%%%%%%
+  \pageBreak
+%%%%%%%%%%%%%%%%%%%%% FIERTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \rechtsFier
@@ -122,5 +123,5 @@
         \remove "Bar_number_engraver"
       }
     }
-  }  
+  }
 }

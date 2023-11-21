@@ -11,7 +11,7 @@ guitarMusic = \relative {
   \once\override Score.RehearsalMark.extra-offset = #'(4 . 2)
   \mark "Lustig"
   %\override Staff.TimeSignature #'stencil = ##f
-  \override Fingering #'staff-padding = #'()
+  \override Fingering.staff-padding = #'()
   \override Score.VoltaBracketSpanner.Y-offset = 7
   \repeat volta 2 {
     e8 r <gis' h e> r h, r <fis' h dis> r
@@ -547,7 +547,8 @@ guitarMusic = \relative {
     \\
     {
       \voiceTwo
-      <a, c'>4 <\tweak Accidental.extra-offset #'(2.5 . 0) cis! gis'?> <fis, h fis' cis'>
+      <a, c'>4 <\tweak Accidental.extra-offset #'(2.5 . 0) cis! gis'?>
+      <fis, h fis' cis'>
     }
   >>
   d''16( e) fis( gis)
@@ -715,8 +716,8 @@ guitarMusic = \relative {
     }
     \\
     {
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       \tuplet 3/2 8 {
         \set subdivideBeams = ##t
         \set baseMoment = #(ly:make-moment 1/8)
@@ -773,7 +774,7 @@ guitarMusic = \relative {
   >>
   <<
     {
-      \override Fingering #'staff-padding = #'()
+      \override Fingering.staff-padding = #'()
       e''8 dis fis gis fis e
       \once\override Beam.positions = #'(4.5 . 4.5)
       dis d
@@ -782,9 +783,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      \override Fingering #'staff-padding = #'()
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \override Fingering.staff-padding = #'()
+      \omit TupletNumber
+      \omit TupletBracket
       \tuplet 3/2 8 {
         \set subdivideBeams = ##t
         \set baseMoment = #(ly:make-moment 1/8)
@@ -825,8 +826,8 @@ guitarMusic = \relative {
   <<
     {
       e'8
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       \tuplet 3/2 8 {
         \set subdivideBeams = ##t
         \set baseMoment = #(ly:make-moment 1/8)
@@ -858,9 +859,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      \override Fingering #'staff-padding = #'()
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \override Fingering.staff-padding = #'()
+      \omit TupletNumber
+      \omit TupletBracket
       \tuplet 3/2 8 {
         \set subdivideBeams = ##t
         \set baseMoment = #(ly:make-moment 1/8)
@@ -1133,8 +1134,8 @@ guitarMusic = \relative {
   >>
   <<
     {
-      \override TupletNumber.transparent = ##t
-      \override TupletBracket.bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       r4 \times 2/3 {f''16_(\2 e-0 f} c8)\3
     }
     \\

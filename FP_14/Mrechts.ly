@@ -46,13 +46,16 @@ rechtsEins = \relative {
   r2
   \bar "|."
 }
+
 dynamicEins = {
   \override Hairpin.to-barline = ##f
   s2\mf s4\< s4. s4.\! s2.\> s\! s2 s4\< s2 s4\! s4. s4.\> s4 s2\!
   s2\f\< s4 s2.\> s4\p
   \override TextScript.extra-offset = #'(0 . 1)
-  s2-\markup {\italic {poco cresc}} s2.*2 s8\f s8\p s2-\markup {\italic dolce} s2.*3
+  s2-\markup {\italic {poco cresc}} s2.*2 
+  s8\f s8\p s2-\markup {\italic dolce} s2.*3
 }
+
 %%%%%%%%%%%%%%%%%%%%%% ZWEI %%%%%%%%%%%%%%%%%%%%%%
 rechtsZwei = \relative {
   \clef treble
@@ -71,7 +74,8 @@ rechtsZwei = \relative {
       <a, fis'>2<ais f'><gis h><fis ais><eis' gis><e g><dis fis><cis e>
     }
   >>
-  <his dis gis>4<h d g><ais cis fis><a c f><gis h e><g b es><fis a d><eis gis cis>
+  <his dis gis>4<h d g><ais cis fis><a c f>
+  <gis h e><g b es><fis a d><eis gis cis>
   <e! gis cis>2<dis a' c><d! gis h>1
   cis'4(<h e><cis a'><d gis><dis a'>2<h fis'>4<a dis>)
   <<
@@ -85,6 +89,7 @@ rechtsZwei = \relative {
   >>
   \bar "|."
 }
+
 dynamicZwei = {
   \override Hairpin.to-barline = ##f
   \once\override TextScript.extra-offset = #'(-6 . 2.5)
@@ -93,6 +98,7 @@ dynamicZwei = {
   s1\ff s1*2-\markup {\italic dim} s1\pp
   s2.\p s4\< s2. s4\! s2. s4\> s1 s\p
 }
+
 %%%%%%%%%%%%%%%%%%%%%% DREI %%%%%%%%%%%%%%%%%%%%%%
 rechtsDrei = \relative {
   \clef treble
@@ -139,18 +145,21 @@ rechtsDrei = \relative {
     }
   >>
   <gis fis'><g eis'>)<fis ais>4(<eis h'><e cis'>2)<fis h dis>4-^<e ais cis>-^
-  <eis gis eis'>-^ r <his fis'>-^<cis eis>-^<cis fis>-^<d f>-.<cis fis>-.<cis eis>-.
+  <eis gis eis'>-^ r <his fis'>-^<cis eis>-^<cis fis>-^<d f>-.
+  <cis fis>-.<cis eis>-.
   a'8 cis16( his cis8) cis->~ cis fis eis16( fis gis8) a his,4 cis8->~
   cis fis cis cis->~ cis cis4-> cis8->~ cis \acciaccatura cisis dis eis4-.
   <a, fis'>-^ r
   \bar "|."
 }
+
 dynamicDrei = {
   \override TextScript.extra-offset = #'(0 . 1)
   s2\f s2*4-\markup {\italic cresc} s4\ff s\sp s2 s4.\mf
   s8-\markup {\italic {poco cresc}} s2*4 s4 s\ff
   s2*4\sp s2*4\sf s2*2\sp s4 s-\markup {\italic {poco cresc}} s2*4 s2\ff
 }
+
 %%%%%%%%%%%%%%%%%%%%%% FIER %%%%%%%%%%%%%%%%%%%%%%
 rechtsFier = \relative {
   \clef treble
@@ -175,6 +184,7 @@ rechtsFier = \relative {
   <a e'>1~ q2 r
   \bar "|."
 }
+
 dynamicFier = {
   \override Hairpin.to-barline = ##f
   \override DynamicTextSpanner.style = #'none

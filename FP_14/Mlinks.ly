@@ -29,6 +29,7 @@ linksEins = \relative {
   f( e dis d c h a-.) r r2 R2. r4 a h c r2
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%% ZWEI %%%%%%%%%%%%%%%%%%%%%%
 linksZwei = \relative {
   \clef bass
@@ -59,6 +60,7 @@ linksZwei = \relative {
   >>
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%% DREI %%%%%%%%%%%%%%%%%%%%%%
 linksDrei = \relative {
   \clef bass
@@ -69,7 +71,8 @@ linksDrei = \relative {
   \repeat unfold 2 {<eis gis>8<eis fisis>}
   <gis, dis' gis>8-><gis dis' fisis>-><gis dis' fis>4-^
   <cis gis'>-.<cis h'>-.<fis, fis'>-^<g' h>-.<fis a>-.<g h>-.
-  \repeat unfold 5 {<fis a cis fis>-.<g h cis eis>-.}<fis a cis fis>-.<gis h d! f>
+  \repeat unfold 5 {<fis a cis fis>-.<g h cis eis>-.}
+  <fis a cis fis>-.<gis h d! f>
   <fis ais cis fis>-.<gis h cis eis>-.<a h e!>-.<g h cis eis>-.
   <fis ais cis>-.<gis! h cis>-.<fis ais cis fis>-.<gis cis e>-.
   <gis dis'>-^<fis ais>-^<cis h'>-^ r <dis a'>-^<eis h'>-^<fis ais>-^<gis h>-.
@@ -77,6 +80,7 @@ linksDrei = \relative {
   <fis a cis fis><g h cis g'><fis cis' fis>-^ r
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%% FIER %%%%%%%%%%%%%%%%%%%%%%
 linksFier = \relative {
   \clef bass

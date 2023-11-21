@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     proportionalNotationDuration = #(ly:make-moment 1/16)

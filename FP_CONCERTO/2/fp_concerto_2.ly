@@ -7,8 +7,9 @@
   title = "II"
   meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
 \paper {
@@ -22,12 +23,14 @@
   system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #15
   two-sided = ##t
-  inner-margin = 20
+  inner-margin = 15
   outer-margin = 10
 }
+
 \layout {
   \context { \RemoveEmptyStaffContext }
 }
+
 %%%%%%%%%%%%%%%%%%
 \include "rechts.ly"
 \include "dynamicPiano.ly"
@@ -53,6 +56,7 @@
 \include "vle.ly"
 \include "vc.ly"
 \include "cb.ly"
+
 %%%%%%%%%%%%%%%%%%
 \score {
   <<
@@ -61,7 +65,7 @@
       shortInstrumentName = #"F-p"
       fontSize = #1
       \override StaffSymbol.staff-space = #(magstep 1)
-      \override StaffGrouper.staff-staff-spacing.basic-distance = #15
+      %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
       \consists #Span_stem_engraver
     }
     <<

@@ -31,8 +31,10 @@ rechtsFive = \relative {
   fis[-. gis-. a]-. his[-. a-. gis]-. <eis fis>4->
   \bar ":|."\break <his' cis>4-.-^ q-.-^ q-.-^ r
   \bar ".|:"
-  his,8[-. cis-. d]-. eis[-. fis-. gis]-. a[-. gis]-. fis[-.eis-. d]-. fis[-. eis-. d]-.<his cis>4->
-  his8[-. cis-. d]-. eis[-. fis-. gis]-. a[-. gis]-. fis[-.eis-. d]-. cis[-. d-. eis]-.<eis fis>4->
+  his,8[-. cis-. d]-. eis[-. fis-. gis]-. a[-. gis]-.
+  fis[-.eis-. d]-. fis[-. eis-. d]-.<his cis>4->
+  his8[-. cis-. d]-. eis[-. fis-. gis]-. a[-. gis]-.
+  fis[-.eis-. d]-. cis[-. d-. eis]-.<eis fis>4->
   \bar ":|.|:"
   \clef bass
   \repeat unfold 2 {<eis, fis>8[-. fis-. fis]-.} <eis fis>[-. fis]-.
@@ -56,9 +58,11 @@ rechtsFive = \relative {
   cis'8[-> d-. eis]-. fis[-> eis-. d]-. <fisis gis>4-^
   cis8[-> d-. eis]-. fis![-> eis-. d]-. <his cis>4-^
   \bar ":|.|:"\break
-  his,8[-> cis-. d]-. eis[-> fis-. gis]-. a[-> gis]-. fis[-> eis-. d]-. fis[-> eis-. d]-.<his cis>4-^
-  his8[-> cis-. d]-. eis[-> fis-. gis]-. a[-> gis]-. fis[-> eis-. d]-. cis[-> d-. eis]-.
-  \once \override Score.RehearsalMark #'extra-offset = #'( 4.5 . 0.5 )
+  his,8[-> cis-. d]-. eis[-> fis-. gis]-. a[-> gis]-.
+  fis[-> eis-. d]-. fis[-> eis-. d]-.<his cis>4-^
+  his8[-> cis-. d]-. eis[-> fis-. gis]-. a[-> gis]-.
+  fis[-> eis-. d]-. cis[-> d-. eis]-.
+  \once \override Score.RehearsalMark.extra-offset = #'( 4.5 . 0.5 )
   \mark \markup { \musicglyph #"scripts.coda" }
   <eis fis>4-^
   %\break
@@ -76,8 +80,10 @@ rechtsFive = \relative {
   cis8[-! d-. eis]-. fis![-! eis-. d]-. <his cis>4-!
   fis8[-! gis-. a]-. his[-! a-. gis]-. <his cis>[-! fis]-.
   fis[-! gis-. a]-. his[-! a-. gis]-. <eis fis>4-!
-  his8[-! cis d] eis[-! fis gis] a[-! gis!] fis[-! eis d] fis[-! eis d] <his cis>4-!
-  his8[-! cis d] eis[-! fis gis] a[-! gis!] fis[-! eis d] cis[-! d eis] <eis fis>4-!
+  his8[-! cis d] eis[-! fis gis] a[-! gis!]
+  fis[-! eis d] fis[-! eis d] <his cis>4-!
+  his8[-! cis d] eis[-! fis gis] a[-! gis!]
+  fis[-! eis d] cis[-! d eis] <eis fis>4-!
   \cadenzaOn
   \stopStaff
   s4
@@ -91,7 +97,10 @@ rechtsFive = \relative {
   %\override Score.Clef.break-align-anchor = #5
   %\override Score.Clef.break-align-anchor-alignment = #5
   \skip 16
-  \clef bass <cis, cis'>4.-!\clef treble <cis'' e fis g>8-!~ q4 <h d e f>4*3/4-! r2
+  \clef bass
+  <cis, cis'>4.-!
+  \clef treble
+  <cis'' e fis g>8-!~ q4 <h d e f>4*3/4-! r2
   \bar "|."
 }
 %%%%%%%% DYNAMIC %%%%%%%%%%
@@ -269,7 +278,7 @@ linksFive = \relative {
   <h' d e f>8-!~ q4<cis e fis g>-!
   <fis,, cis'>4.-! <d' fisis gis>8-!~ q4 <fis cis'>-!
   \bar ":|."
-  \once \override Score.RehearsalMark #'font-size = #0.4
+  \once \override Score.RehearsalMark.font-size = #0.4
   \mark \markup { \small \musicglyph #"scripts.segno" }
   \cadenzaOn
   \stopStaff
@@ -277,5 +286,9 @@ linksFive = \relative {
   \startStaff
   \cadenzaOff
   \skip 16
-  <fis,, fis'>4.-! \clef treble <cis''' e fis g>8-!~ q4 <h d e f>4*3/4-!\clef bass <fis,,! fis'!>4 r
+  <fis,, fis'>4.-!
+  \clef treble
+  <cis''' e fis g>8-!~ q4 <h d e f>4*3/4-!
+  \clef bass
+  <fis,,! fis'!>4 r
 }

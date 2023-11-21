@@ -54,9 +54,9 @@ rechtsTwo = \relative {
   }
   <<
     {
-      fis'4\( a!8 g fis e 
+      fis'4\( a!8 g fis e
       \shape #'((-0.2 . 0) (-0.5 . 0) (-0.5 . 0) (-1.2 . 0)) Slur
-      e4_( 
+      e4_(
       %\once\override Script.extra-offset = #'(0 . 0.8)
       d8_\prall _>) c~ c4\)
     }
@@ -118,7 +118,8 @@ rechtsTwo = \relative {
   \set PianoStaff.connectArpeggios = ##t
   <h dis fis h>2.\arpeggio
   <g h e g>4<d' g d'><h e g h>8<c e g c><d fis a d>4<e a e'><fis h d fis>
-  <g c es g><c, es g c>8<d g d'><es as c es>4<ges b d ges><f b d f>8<es b' es><d g b d>4
+  <g c es g><c, es g c>8<d g d'><es as c es>4
+  <ges b d ges><f b d f>8<es b' es><d g b d>4
   \set Staff.beatStructure = #'(3 3)
   <c e! a c>8 <c e a c> q <a c f a> q q <g d' g> q q <e g h e> q q
   \set Staff.beatStructure = #'(6)
@@ -149,7 +150,7 @@ rechtsTwo = \relative {
     }
   >>
   \bar "|."
-  \stopStaff
+  \tag #'fullPart {\stopStaff}
 }
 
 %%%%%%%% DYNAMIC %%%%%%%%%%
@@ -246,7 +247,10 @@ linksTwo = \relative {
   a,,! <e''! a! c><e a c> f,, <f'' a c> q g,, <d'' g c> q e,, <e'' g h> q
   <e, h' e>2.
   cis'8( gis' cis) a,( e' a) h,( fis' h) gis,( dis' gis)
-  <e, e'>(<h' g'><e h'>)<c, c'>(<g' e'><c g'>)<d, d'>(<a' g'><d a'>)<h, h'>(<fis'd'><h fis'>)
-  \stopStaff
-  s4-\markup { Attacca }
+  <e, e'>(<h' g'><e h'>)<c, c'>(<g' e'><c g'>)
+  <d, d'>(<a' g'><d a'>)<h, h'>(<fis'd'><h fis'>)
+  \tag #'fullPart {
+    \stopStaff
+    s4-\markup { Attacca }
+  }
 }

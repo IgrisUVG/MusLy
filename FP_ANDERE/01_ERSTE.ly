@@ -48,7 +48,7 @@
   \score {
     \new PianoStaff <<
       \new Staff = "RH" << \global \rechtsOne >>
-      \new Dynamics = "Dynamics_pf" \dynamicOne
+      \new Dynamics = "Dynamics_pf" \removeWithTag #'Part \dynamicOne
       \new Staff = "LH" << \global \linksOne >>
     >>
     \header {

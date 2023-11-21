@@ -45,19 +45,25 @@ rechtsOne = \relative {
   }
   r16 e( ais g h ais a fis dis h ais h c e dis h g2) ais16( a g f fis dis fis a
   ais c dis h e g fis f fis e dis h ais g f e dis2) e16( g ais c dis f g h
-  ais c, fis f h, dis d ais fis! g dis f ais g a ais c h dis e f fis g a ais c dis c h ais a fis
-  g f e c dis d ais g f fis g ais g h c dis e g f c dis h d fis g ais g a fis e dis f
-  ais e a g fis g a h c ais g f e dis h ais a! g fis f g fis g a)
-  g( ais h e f g ais h e f g ais h a f dis c h a f dis c h a)
-  g( ais h e f g ais h e f g ais h a f dis c h a f dis c h ais)
+  ais c, fis f h, dis d ais fis! g dis f ais g a ais
+  c h dis e f fis g a ais c dis c h ais a fis
+  g f e c dis d ais g f fis g ais g h c dis
+  e g f c dis h d fis g ais g a fis e dis f
+  ais e a g fis g a h c ais g f e dis h ais
+  a! g fis f g fis g a) g( ais h e f g ais h
+  e f g ais h a f dis c h a f dis c h a)
+  g( ais h e f g ais h e f g ais h a f dis
+  c h a f dis c h ais)
   <e g h>8-><e g ais>-><dis f a h>-><f a h e>->
   <g ais h fis'!>-><ais h e g>-><a h dis fis>-><f a h dis>->
   <e g h>-><e g ais>-><dis f a h>-><f a h e>->
   <ais h e g>-^<h e g h>-^<ais dis f ais>4-^<h d fis ais h>-^<c e ais h c>-^
   <c dis a'! h c>1-^
-  h8--[ ais-- h-- e-- fis-- g-- fis-- dis--] h--[ ais-- h-- e-- g-- h--] ais4--
+  h8--[ ais-- h-- e-- fis-- g-- fis-- dis--]
+  h--[ ais-- h-- e-- g-- h--] ais4--
   \makeOctaves #-1 {
-    e8--[ dis-- e-- fis-- g-- h-- ais-- fis--] e--[ dis-> e-> g-> h-^ d!-^] cis4-^
+    e8--[ dis-- e-- fis-- g-- h-- ais-- fis--]
+    e--[ dis-> e-> g-> h-^ d!-^] cis4-^
   }
   <h, e g ais>4-^<g, g'>-><h' c dis a'>-^<eis,, eis'>-^
   <<
@@ -69,7 +75,8 @@ rechtsOne = \relative {
     }
     \\
     {
-      h,8--[ ais-- h-- e-- fis-- g-- fis-- dis--] h--[ ais-- h-- e-- g-- h--] ais4--
+      h,8--[ ais-- h-- e-- fis-- g-- fis-- dis--]
+      h--[ ais-- h-- e-- g-- h--] ais4--
     }
   >>
   e8[_( dis e fis g h ais fis] e[ dis e g h d!] cis4)
@@ -86,7 +93,9 @@ dynamicOne = {
   s1*2\sf
   \once \override DynamicText.extra-offset = #'(-3 . 6)
   s1*4\ff s1*3\mf
-  s2 s8 s8-\markup {\italic cresc} s4s1*2 s1*6\f s2. s4\< s1*2 s1\fff s1*5\f
+  s2 s8 s8-\markup {\italic cresc} s4s1*2 s1*6\f s2. s4\< s1*2
+  \tag #'Part {\pageBreak}
+  s1\fff s1*5\f
   s2 s2-\markup {\italic dim} s1 s4\p s2. s1 s4\sf s2.\ff
 }
 
@@ -122,7 +131,8 @@ linksOne = \relative {
     }
   >>
   \makeOctaves #-1 {
-    e-> dis-> d-> cis-> c-> h-> ais-> a-> gis-> g-> fis-> f-> e-> dis-> d-> cis->
+    e-> dis-> d-> cis-> c-> h-> ais-> a->
+    gis-> g-> fis-> f-> e-> dis-> d-> cis->
     c-> h-> ais-> a-> as'4-^ g8-^ fis-^ f1-^
   }
   \repeat unfold 6 {

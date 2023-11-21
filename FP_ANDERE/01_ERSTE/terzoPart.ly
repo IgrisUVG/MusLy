@@ -4,13 +4,14 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
+  page-count = #3
+  top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #5
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #20
-  %score-system-spacing #'basic-distance = #20
-  %score-markup-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #20
+  markup-system-spacing.basic-distance = #28
+  system-system-spacing.basic-distance = #21
+  %score-system-spacing.basic-distance = #20
+  %score-markup-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #28
   %left-margin = 15
   %right-margin = 15
   two-sided = ##t
@@ -26,6 +27,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -36,12 +38,12 @@
 \include "global.ly"
 \include "terzo.ly"
 
-%%%%%%%%%%%%%%%%%%%%% ERSTE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<
-    \new Staff = "RH" << \global \rechtsThree >>
+    \new Staff = "RH" << \global \removeWithTag #'fullPart \rechtsThree >>
     \new Dynamics = "Dynamics_pf" \dynamicThree
-    \new Staff = "LH" << \global \linksThree >>
+    \new Staff = "LH" << \global \removeWithTag #'fullPart \linksThree >>
   >>
   \layout {
     \context {
@@ -49,6 +51,6 @@
       \override StaffGrouper.staff-staff-spacing.basic-distance = #12
       \remove "Bar_number_engraver"
     }
-    ragged-last = ##t
+    %ragged-last = ##t
   }
 }

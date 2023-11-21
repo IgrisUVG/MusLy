@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -11,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #28
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #28
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -315,7 +317,7 @@ rechts = \relative {
     {
       \set baseMoment = #(ly:make-moment 1 8)
       \set subdivideBeams = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletBracket
       \override Slur.positions = #'(3.5 . 0)
       as4~( \times 2/3 {as16 b c} des32 es f ges as8[ ges])
     }
@@ -323,20 +325,20 @@ rechts = \relative {
     {
       \tuplet 6/4 4 {
         as,16<des, f> q q q q
-        \override TupletNumber #'transparent = ##t
+        \omit TupletNumber
         as' <des, f><des f ges><des f as> q q
         as'' <des,, ges heses> q q q q
       }
     }
   >>
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
   \set baseMoment = #(ly:make-moment 1 4)
   \times 4/6 {<es ges ces>16 q q q q q}
   <<
     {
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       des'4~ \times 2/3 {des16 es( as,} b8~
       \times 2/3 {
         b16)
@@ -355,7 +357,7 @@ rechts = \relative {
     }
     \\
     {
-      \override TupletNumber #'transparent = ##t
+      \omit TupletNumber
       \tuplet 6/4 4 {
         des'16<des, ges> q q q q des' q q q q q
         b <b, f'> q q q q ges' <c, es> q q q q
@@ -395,10 +397,10 @@ links = \relative {
   ges,( des' as' b~ b) <as des>8 des,,16_~
   \set baseMoment = #(ly:make-moment 1 8)
   \set subdivideBeams = ##t
-  \override Beam #'breakable = ##t
+  \override Beam.breakable = ##t
   des
   \clef treble
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletBracket
   \shape #'(
              ((0 . 0) (0 . 11) (-2 . 4) (0 . 2))
              ((0 . 2) (0 . 0) (0 . 0) (0 . 0))
@@ -527,7 +529,7 @@ links = \relative {
       c,!2
     }
   >>
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   <<
     {
       c'16 <g' a> d <f as> es <b' es><as d f><b des es>
@@ -549,7 +551,7 @@ links = \relative {
     }
   >>
   \set baseMoment = #(ly:make-moment 1 1)
-  \override Beam #'breakable = ##t
+  \override Beam.breakable = ##t
   fis e \stemDown ges16 ges' des b \stemNeutral as8 des4 as8
   des,16 r32 as-.[_( des-. f-.] as-.[ des-. f-. as-.] b16--) r16.
   as,,32-.[_(d-. g-.] \stemDown h-.[ d-. e-. g-.] b16--) r8
@@ -586,7 +588,7 @@ links = \relative {
       }
       \set baseMoment = #(ly:make-moment 1 8)
       \set subdivideBeams = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletBracket
       s2 \times 2/3 {r16 des'( fes} es16.) des32(
       \stemUp
       ces heses as ges f es des ces

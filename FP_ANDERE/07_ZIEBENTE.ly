@@ -1,4 +1,5 @@
-\version "2.19.11"
+\version "2.19.15"
+%\version "2.19.11"
 
 \language "deutsch"
 
@@ -11,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -34,6 +35,7 @@
     \remove "Bar_number_engraver"
   }
 }
+
 %%%%%%%%% SCRIPTS %%%%%%%%%
 makeOctaves =
 #(define-music-function (parser location arg mus)
@@ -146,7 +148,8 @@ rechts = \relative {
   >>
   <<
     {
-      f'4.( es8 as2) f4.( es8 des2~ des16) es( des c b8 es4) des8~ des16( es, as c
+      f'4.( es8 as2) f4.( es8 des2~ des16) es( des c
+      b8 es4) des8~ des16( es, as c
       es4) des~ des16( es fes ges) c,8( b~ b16) d, as'( g)
     }
     \\
@@ -252,13 +255,17 @@ rechts = \relative {
     \\
     {
       s4
-      \set stemRightBeamCount = #1 c16[ s32 b8] s32 s16. g'8 \set stemLeftBeamCount = #1 f32~
+      \set stemRightBeamCount = #1 c16[ s32 b8] s32 s16. g'8
+      \set stemLeftBeamCount = #1 f32~
       \once \override NoteColumn.force-hshift = #0.25
-      \set stemRightBeamCount = #1 f16[ s32 as8] s32 s f8[ \set stemLeftBeamCount = #1 b,16] s32
+      \set stemRightBeamCount = #1 f16[ s32 as8] s32 s f8[
+      \set stemLeftBeamCount = #1 b,16] s32
       e8[ s32 heses'16] s32 s g8 \set stemLeftBeamCount = #1 f16 s32
-      \set stemRightBeamCount = #1 c16[ s32 b8] s32 s16. g'8 \set stemLeftBeamCount = #1 f32~
+      \set stemRightBeamCount = #1 c16[ s32 b8] s32 s16. g'8
+      \set stemLeftBeamCount = #1 f32~
       \once \override NoteColumn.force-hshift = #0.25
-      \set stemRightBeamCount = #1 f16[ s32 as8] s32 s f8[ \set stemLeftBeamCount = #1 b,16] s32
+      \set stemRightBeamCount = #1 f16[ s32 as8] s32 s f8[
+      \set stemLeftBeamCount = #1 b,16] s32
       e8[ s32 heses'16] s32 s g8 \set stemLeftBeamCount = #1 f16 s32
       s16. g8 \set stemLeftBeamCount = #1 f32
     }
@@ -300,13 +307,16 @@ rechts = \relative {
     {
       gis'4
       \once\override Beam.positions = #'(-4 . -5)
-      h8[ s16 a16] gis4 gis8[ s16 fis16] s4 cis' s \stemUp gis' \stemDown fis e
+      h8[ s16 a16] gis4 gis8[ s16 fis16] s4 cis' s
+      \stemUp gis' \stemDown fis e
     }
     \\
     {
       \voiceTwo
-      s16. fis,8 \set stemLeftBeamCount = #1 e32 s16 e[ d s32 \set stemLeftBeamCount = #2 cis]
-      s16. fis8 \set stemLeftBeamCount = #1 e32 s16 cis[ h s32 \set stemLeftBeamCount = #2 a]
+      s16. fis,8 \set stemLeftBeamCount = #1 e32 s16 e[ d s32
+      \set stemLeftBeamCount = #2 cis]
+      s16. fis8 \set stemLeftBeamCount = #1 e32 s16 cis[ h s32
+      \set stemLeftBeamCount = #2 a]
       e'8[ s16 dis] s32 \set stemRightBeamCount = #1 a'16[ s32 gis8]
       \stemUp
       h8[ s16 ais] s32 \set stemRightBeamCount = #1 e'16[ s32 dis8]
@@ -318,7 +328,8 @@ rechts = \relative {
       \voiceTwo
       s8 a,16 gis s32
       \once\override Beam.positions = #'(-3.4 . -3.7)
-      cis16 h s16. s8 a16 gis s4 s s8 s32 dis'16 \set stemLeftBeamCount = #2 cis32
+      cis16 h s16. s8 a16 gis s4 s s8 s32 dis'16
+      \set stemLeftBeamCount = #2 cis32
       \stemUp
       s4 s8 s32 ais'16 \set stemLeftBeamCount = #2 gis32
       \stemDown
@@ -490,14 +501,16 @@ rechts = \relative {
     \\
     {
       \set baseMoment = #(ly:make-moment 1 4)
-      \repeat unfold 2 {g,16 g' es c} \repeat unfold 2 {g g' es ces} ges ges' es ces
+      \repeat unfold 2 {g,16 g' es c}
+      \repeat unfold 2 {g g' es ces} ges ges' es ces
       \stemUp
       \repeat unfold 3 {ges ges' es ces}
     }
   >>
   ges ges' es ces ges es' ces ges
   \clef bass
-  es ces' ges es ces ges' es ces ges8-. r r4 \clef treble r <ges''' ges'>8 r
+  es ces' ges es ces ges' es ces ges8-. r r4
+  \clef treble r <ges''' ges'>8 r
   <<
     {
       es4 g f2 es4 as g2 f es des c <as ces>4<g heses>8 as~ as2
@@ -515,6 +528,7 @@ rechts = \relative {
   >>
   \bar "|."
 }
+
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
   \clef bass
@@ -560,7 +574,8 @@ links = \relative {
       des,,2
     }
   >>
-  <es' b'>4<b' g'>(<c as'>) as, <des, des'>4.<c c'>8<ces ces'>4<fes' d'><es es'> r
+  <es' b'>4<b' g'>(<c as'>) as,
+  <des, des'>4.<c c'>8<ces ces'>4<fes' d'><es es'> r
   c8
   \clef treble
   <d' f><e g><as, f'><h e>
@@ -633,14 +648,19 @@ links = \relative {
     \\
     {
       \voiceOne
-      s4 s16 es'' b' as s ges f8 s16 ces heses8 s16 b'8 as s32 g8 \set stemLeftBeamCount = #1 f32
+      s4 s16 es'' b' as s ges f8 s16 ces heses8 s16 b'8 as s32 g8
+      \set stemLeftBeamCount = #1 f32
       s4 s16 es b' as s ges f8 s16 ces heses8 s16 b'8 as
-      \set stemRightBeamCount = #1 b16[ s32 \set stemLeftBeamCount = #1 a16] s32
+      \set stemRightBeamCount = #1 b16[ s32
+      \set stemLeftBeamCount = #1 a16] s32
       s16. cis16 h \set stemRightBeamCount = #1 fis[ s32 e8] s16
       s16. cis'16 h fis8\noBeam s32
-      \set stemRightBeamCount = #1 gis16[ s32 \set stemLeftBeamCount = #1 fis]
-      s4 s16. \set stemRightBeamCount = #1 fis16[ s32 \set stemLeftBeamCount = #1 e16]
-      s4 s16. \set stemRightBeamCount = #1 cis'16[ s32 \set stemLeftBeamCount = #1 h16]
+      \set stemRightBeamCount = #1 gis16[ s32
+      \set stemLeftBeamCount = #1 fis]
+      s4 s16. \set stemRightBeamCount = #1 fis16[ s32
+      \set stemLeftBeamCount = #1 e16]
+      s4 s16. \set stemRightBeamCount = #1 cis'16[ s32
+      \set stemLeftBeamCount = #1 h16]
     }
     \\
     {
@@ -675,7 +695,8 @@ links = \relative {
     {
       \voiceOne
       s16. cis8 \set stemLeftBeamCount = #1 h32 s16
-      \set stemRightBeamCount = #1 fis16[ s32 \set stemLeftBeamCount = #1 e16] s32
+      \set stemRightBeamCount = #1 fis16[ s32
+      \set stemLeftBeamCount = #1 e16] s32
     }
     \\
     {

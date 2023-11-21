@@ -11,11 +11,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +24,7 @@
 }
 
 \layout {
+  indent = 10
   \context { \RemoveEmptyStaffContext }
   \context {
     \GrandStaff
@@ -35,6 +36,16 @@
     \remove "Bar_number_engraver"
   }
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+xLV = #(define-music-function (parser location further) (number?) #{
+  \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
+  \once \override LaissezVibrerTie.details.note-head-gap = #(/
+                                                               further -2)
+  \once \override LaissezVibrerTie.extra-offset = #(cons (/
+                                                          further 2) 0)
+         #})
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 global = {
   \time 3/4
@@ -168,8 +179,8 @@ loopL = \relative {
         R2.*4\bar "||" <as,, as'>2.~( q <d, d'>~ q)\break
         \clef treble
         r8 e''''4 f b,8~ b f'4 gis b,8~ b8 e4 f b,8~ b f'4 gis
-        \once \override LaissezVibrerTie  #'extra-offset = #'(0.5 . 0.2)
-        b,8\laissezVibrer%~
+        \once \override LaissezVibrerTie.extra-offset = #'(0.6 . 0.2)
+        \xLV #2 b,8\laissezVibrer%~
         <<
           {
             \stemDown

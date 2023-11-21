@@ -1,13 +1,16 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
 \header {
-  title = "I"
+  title = "Klavierkonzert"
+  subtitle = "Satz I"
   meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
 \paper {
@@ -21,12 +24,16 @@
   system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #15
   two-sided = ##t
-  inner-margin = 20
+  inner-margin = 15
   outer-margin = 10
 }
+
 \layout {
   \context { \RemoveEmptyStaffContext }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override Staff.shortInstrumentName.self-alignment-X = #RIGHT
 }
+
 %%%%%%%%%%%%%%%%%%
 \include "rechts.ly"
 
@@ -52,6 +59,7 @@
 \include "vle.ly"
 \include "vc.ly"
 \include "cb.ly"
+
 %%%%%%%%%%%%%%%%%%
 \score {
   <<
@@ -64,8 +72,9 @@
       \consists #Span_stem_engraver
     }
     <<
+      \removeWithTag #'Part
       \new Staff = "RH" \rechts
-      
+
       \new Staff = "LH" \links
     >>
     \new StaffGroup = "StaffGroup_woodwinds" <<
@@ -74,7 +83,7 @@
         \set Staff.shortInstrumentName = #"Fl"
         \fluteMusic
       }
-      
+
       \new Staff = "Staff_oboe" {
         \set Staff.instrumentName = #"Oboe"
         \set Staff.shortInstrumentName = #"Ob"
@@ -100,7 +109,7 @@
           \transpose b c'
           \clarinetOneMusic
         }
-        
+
         \new Staff = "Staff_clarinet2" {
           \transpose b c'
           \clarinetTwoMusic
@@ -119,7 +128,7 @@
         \transpose b c'
         \trumpetMusic
       }
-      
+
       \new StaffGroup = "GrandStaff_corni" \with {
         instrumentName = \markup {
           \right-column {
@@ -137,11 +146,11 @@
       }
       <<
         \new Staff = "Staff_hornI" {
-          \transpose f c' 
+          \transpose f c'
           \cornoOneMusic
         }
         \new Staff = "Staff_horn2" {
-          \transpose f c' 
+          \transpose f c'
           \cornoTwoMusic
         }
       >>
@@ -164,7 +173,7 @@
         \new Staff = "Staff_trombon" {
           \trombonMusic
         }
-        
+
         \new Staff = "Staff_tuba" {
           \tubaMusic
         }
@@ -180,7 +189,7 @@
           \set Staff.shortInstrumentName = #"V-ni I"
           \vniOneMusic
         }
-        
+
         \new Staff = "Staff_violinII" {
           \set Staff.instrumentName = #"Violini II"
           \set Staff.shortInstrumentName = #"V-ni II"
@@ -192,7 +201,7 @@
         \set Staff.shortInstrumentName = #"V-le"
         \vleMusic
       }
-      
+
       \new StaffGroup = "GrandStaff_bassi" \with {
         systemStartDelimiter = #'SystemStartSquare
       }

@@ -4,21 +4,22 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
+  top-system-spacing.basic-distance = #20
   top-markup-spacing.basic-distance = #10
-  markup-system-spacing #'basic-distance = #15
-  system-system-spacing #'basic-distance = #20
-  score-system-spacing #'basic-distance = #20
-  score-markup-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #20
-  %left-margin = 15
-  %right-margin = 15
-  two-sided = ##t
-  inner-margin = 20
-  outer-margin = 15
+  markup-system-spacing.basic-distance = #15
+  system-system-spacing.basic-distance = #20
+  score-system-spacing.basic-distance = #20
+  score-markup-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #20
+  left-margin = 15
+  right-margin = 15
+  %two-sided = ##t
+  %inner-margin = 20
+  %outer-margin = 15
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -84,6 +85,7 @@
       %ragged-last = ##t
     }
   }
+  \pageBreak
 %%%%%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -104,6 +106,7 @@
       %ragged-last = ##t
     }
   }
+  \pageBreak
 %%%%%%%%%%%%%%%%%%%%% FIERTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<

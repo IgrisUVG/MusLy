@@ -4,8 +4,9 @@
 \language "deutsch"
 
 \header {
-  title = "II"
-  subtitle = "Piano"
+  title = "Klavierkonzert"
+  subtitle = "Satz II"
+  subsubtitle = "Piano"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}

@@ -21,6 +21,7 @@
     \Score
     \remove "Bar_number_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \header{
@@ -40,21 +41,18 @@
   \new StaffGroup
   <<
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "Guitar I"
     }
     \removeWithTag #'Part
     \guitarOne
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "Guitar II"
     }
     \removeWithTag #'Part
     \guitarTwo
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "Guitar III"
     }
     \removeWithTag #'Part
@@ -63,7 +61,6 @@
     \new Dynamics \dynamic
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "Bass"
     }
     \removeWithTag #'Part

@@ -1,21 +1,22 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
 \header {
   title = \markup { \fontsize #4 "8" }
-  meter = "Lento"
+  %meter = "Lento"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -34,6 +36,7 @@
     \remove "Bar_number_engraver"
   }
 }
+
 %%%%%%%%% SCRIPTS %%%%%%%%%
 makeOctaves =
 #(define-music-function (parser location arg mus)
@@ -54,12 +57,15 @@ pocoCr =
 #(make-music 'CrescendoEvent
    'span-type 'text
    'span-text "poco cresc.")
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
   \key c \major
   \time 4/2
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lento"
+  \override Staff.TimeSignature.stencil = ##f
   <h des g>2<c f!>
   <<
     {
@@ -287,7 +293,7 @@ links = \relative {
   \clef bass
   \key c \major
   \time 4/2
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \makeOctaves #-1 {
     fis2 g
   }
@@ -458,6 +464,7 @@ links = \relative {
   ais\breve b,4 r <h,! fis' d'>2<es es'>1
   \bar "|."
 }
+
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
   \override DynamicTextSpanner.style = #'none
@@ -474,6 +481,7 @@ dynamic = {
   \once\override DynamicText.extra-offset = #'(0 . .5)
   s2\pp s1.\ff
 }
+
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<

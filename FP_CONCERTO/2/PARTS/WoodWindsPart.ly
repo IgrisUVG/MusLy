@@ -4,10 +4,12 @@
 \language "deutsch"
 
 \header {
-  title = ""
+  title = "Klavierkonzert"
+  subtitle = "Satz II"
+  subsubtitle = "Wood"
   meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 #(ly:set-option 'relative-includes #t)
@@ -15,14 +17,14 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #15
+  top-system-spacing.basic-distance = #20
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
   system-system-spacing.basic-distance = #28
-  last-bottom-spacing.basic-distance = #15
+  last-bottom-spacing.basic-distance = #20
   two-sided = ##t
   inner-margin = 20
-  outer-margin = 10
+  outer-margin = 15
 }
 
 \layout {
@@ -30,13 +32,16 @@
     \Score
     %\remove "Bar_number_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
+
 \include "..\dynamicWoodwind.ly"
 \include "..\flute.ly"
 \include "..\oboe.ly"
 \include "..\clarinet1.ly"
 \include "..\clarinet2.ly"
 \include "..\fagotto.ly"
+
 \score {
   \new StaffGroup = "StaffGroup_woodwinds" <<
     \new Staff = "Staff_flute" {
@@ -61,7 +66,7 @@
       \new Staff = "Staff_clarinet1" {
         %\transpose b c'
         \clarinetOneMusic
-      }      
+      }
       \new Dynamics \dynamicClarinet
       \new Staff = "Staff_clarinet2" {
         %\transpose b c'

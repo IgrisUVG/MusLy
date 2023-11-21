@@ -4,7 +4,8 @@
 \language "deutsch"
 
 \header {
-  title = "II"
+  title = "Klavierkonzert"
+  subtitle = "Satz II"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -29,6 +30,8 @@
 
 \layout {
   \context { \RemoveEmptyStaffContext }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override Staff.shortInstrumentName.self-alignment-X = #RIGHT
 }
 
 %%%%%%%%%%%%%%%%%%

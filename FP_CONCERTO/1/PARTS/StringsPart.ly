@@ -3,20 +3,23 @@
 \language "deutsch"
 
 \header {
-  title = ""
+  title = "Klavierkonzert"
+  subtitle = "Satz I"
+  subsubtitle = "Strings"
   meter = ""
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #28
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #28
+  last-bottom-spacing.basic-distance = #15
   two-sided = ##t
   inner-margin = 20
   outer-margin = 10
@@ -27,7 +30,9 @@
     \Score
     %\remove "Bar_number_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
+
 \include "..\vni1.ly"
 \include "..\vni2.ly"
 \include "..\vle.ly"

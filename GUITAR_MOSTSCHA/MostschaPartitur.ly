@@ -24,6 +24,7 @@
     \Score
     \remove "Bar_number_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \header{
@@ -45,7 +46,6 @@
   \new StaffGroup
   <<
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "E.Gt.I"
     }
     {
@@ -54,7 +54,6 @@
     }
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "E.Gt.II"
     }
     {
@@ -63,7 +62,6 @@
     }
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "E.Gt.III"
     }
     {
@@ -72,7 +70,6 @@
     }
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "E.Gt.IIII"
     }
     {
@@ -81,7 +78,6 @@
     }
 
     \new Staff \with {
-      \override InstrumentName.self-alignment-X = #RIGHT
       instrumentName = "Bass"
     }
     {

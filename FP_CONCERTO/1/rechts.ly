@@ -7,6 +7,7 @@ rechts = {
   \time 2/4
   \override DynamicLineSpanner.staff-padding = #3
   \change Staff = LH
+  \tag #'Part {\shape #'((0 . -6.5) (5 . 3) (3 . 1) (0 . 0)) Slur}
   es,,32^( b,, ges,
   \change Staff = RH
   \stemUp

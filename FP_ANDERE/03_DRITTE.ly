@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -11,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #30
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #30
+  top-system-spacing.basic-distance = #30
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #30
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -48,8 +50,8 @@ rechts = \relative {
     }
     \\
     {
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       \set baseMoment = #(ly:make-moment 1 8)
       \set subdivideBeams = ##t
       \times 2/3 {
@@ -72,8 +74,8 @@ rechts = \relative {
     }
     \\
     {
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       \set baseMoment = #(ly:make-moment 1 8)
       \set subdivideBeams = ##t
       \times 2/3 {
@@ -90,7 +92,7 @@ rechts = \relative {
     }
     \\
     {
-      \override Beam #'breakable = ##t
+      \override Beam.breakable = ##t
       <e, g>8.<d~ f^~>16 q8<b~ es^~> q16<a d>8.
       r16 b'^( g f es d c b
       \stemUp
@@ -142,8 +144,8 @@ links = \relative {
   \clef treble
   r16 <as''' ces><ges b><f a><e gis>4
   \clef bass
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletNumber
+  \omit TupletBracket
   \set baseMoment = #(ly:make-moment 1 8)
   \set subdivideBeams = ##t
   \times 2/3 { d,,16 a' fis' }
@@ -178,7 +180,7 @@ links = \relative {
   b e f gis a d r f_( cis8 c16 b8 a16 g8 f16 d
   es g f es d c
   \clef bass
-  \override Beam #'breakable = ##t
+  \override Beam.breakable = ##t
   b g f es c b a[ c d es f g] f[ g b a es f
   g] ges[ f fes es b d] c[ f b, es e
   f] d[ es e f] es[ c] d[ des c b] es[

@@ -1,21 +1,22 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
 \header {
   title = \markup { \fontsize #4 "9" }
-  meter = "Lento grave"
+  %meter = "Lento grave"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -34,16 +36,20 @@
     \remove "Bar_number_engraver"
   }
 }
+
 %%%%%%%%% SCRIPTS %%%%%%%%%
 pocoCr =
 #(make-music 'CrescendoEvent
    'span-type 'text
    'span-text "p o c o   a   p o c o   c r e s c.")
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef bass
   \key f \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lento grave"
   \override Score.SpacingSpanner.strict-note-spacing = ##t
   \set Score.proportionalNotationDuration = #(ly:make-moment 1/16)
   r8 as4 as as as8~ as\noBeam
@@ -92,7 +98,7 @@ rechts = \relative {
   es,,,,32 d es d~ \tweak #'duration-log #1 d4
   \ottava #0
   \clef treble
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletBracket
   \times 8/13 {r32[ g'''( as a b h c des c h b a as)]}
   r2 b8( <e as>)->
   \clef bass
@@ -111,6 +117,7 @@ rechts = \relative {
   <a h eses as!>1-^
   \bar "|."
 }
+
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
   \clef bass
@@ -134,12 +141,14 @@ links = \relative {
   \ottava #0
   \bar "|."
 }
+
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
   s1*8\p s1*12\pocoCr s1\ff
 }
+
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<

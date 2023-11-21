@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -11,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #30
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #30
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -34,6 +36,7 @@
     \remove "Bar_number_engraver"
   }
 }
+
 %%%%%%%%% SCRIPTS %%%%%%%%%
 makeOctaves =
 #(define-music-function (parser location arg mus)
@@ -53,6 +56,7 @@ makeOctaves =
 motifEins = \relative {c'''4( c, <fis as>2)}
 motifZwei = \relative {c'''4( c, <ges' as>2)}
 motifDrei = \relative {c'''4( c, <fis gis>2)}
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
@@ -107,6 +111,7 @@ rechts = \relative {
   r r2
   \bar "|."
 }
+
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
   \clef bass
@@ -170,6 +175,7 @@ links = \relative {
   >>
   <e g! c>4 r r2
 }
+
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
   \override Hairpin.to-barline = ##f
@@ -192,6 +198,7 @@ dynamic = {
   \once\override DynamicText.extra-offset = #'(-3 . -4)
   s8\fff s2. s1*8\mp
 }
+
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<

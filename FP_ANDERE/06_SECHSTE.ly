@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -11,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #10
-  markup-system-spacing #'basic-distance = #20
-  system-system-spacing #'basic-distance = #25
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -24,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -41,7 +43,7 @@ rechts = \relative {
   \clef treble
   \key b \major
   \time 3/4
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletBracket
   <<
     {
       f''2.~( f8 es4. d4 cis2) r4
@@ -82,7 +84,7 @@ links = \relative {
   \clef bass
   \key b \major
   \time 3/4
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletBracket
   b,,8 g'''( f d f, b,
   c,) es''( b g es c
   d,) es''( d b as d,
@@ -114,14 +116,14 @@ links = \relative {
       s <d f as><g, d' es>
       s <es' as b><g, es' g>
       s <b d f><f c' d>
-      \override TupletNumber #'transparent = ##t
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       s \tuplet 3/2 4 {r8 <b c d g>4 r8 <d, g a b d>4}
       <f g a c>2.
     }
     \\
     {
-      \override TupletBracket #'bracket-visibility = ##f
+      \omit TupletBracket
       es,8 g''( es d b es,
       c)[ g''( es c \times 2/3 {b g c,]}
       as) f''( es c g es

@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #25
-  system-system-spacing #'basic-distance = #23
-  last-bottom-spacing #'basic-distance = #25
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #23
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -35,6 +36,7 @@
     \remove "Bar_number_engraver"
   }
 }
+
 %%%%%%%%% SCRIPTS %%%%%%%%%
 makeOctaves =
 #(define-music-function (parser location arg mus)
@@ -59,6 +61,7 @@ pocoDim =
 #(make-music 'CrescendoEvent
    'span-type 'text
    'span-text "poco dimin.")
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
@@ -111,6 +114,7 @@ rechts = \relative {
   <as ges'>_\fermata
   \bar "|."
 }
+
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
   \clef bass
@@ -184,12 +188,14 @@ links = \relative {
   s1-\fermata
   \bar "|."
 }
+
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
 
 }
+
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new PianoStaff <<

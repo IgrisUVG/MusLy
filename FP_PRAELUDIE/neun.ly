@@ -106,34 +106,34 @@ rechtsNeun = \relative {
     \ottava #0
     <f,, f'>[ b c]
     <f,, f'>[ b c]
-    f,[ b c] \bar ":|."
+    f,[ b, c] \bar ":|."
   }
   s8
   \times 2/3 {
-    \stemUp f'16[
+    \stemUp f16[
     \change Staff = LH
-    b
+    b,
     \change Staff = RH
-    c']
+    c]
     \stemNeutral
-    <f' f''>[ b' c'']
-    <f'' f'''>[ b'' c''']
+    <f f'>[ b c]
+    <f f'>[ b c]
     \ottava #1
     \set Staff.ottavation = #"8"
-    <f''' f''''>[ b''' c'''']
+    <f f'>[ b c]
     \ottava #0
-    <f'' f'''>[ b'' c''']
-    <f' f''>[ b' c'']
-    \stemUp f'16[
+    <f,, f'>[ b c]
+    <f,, f'>[ b c]
+    \stemUp f,16[
     \change Staff = LH
-    b
+    b,
     \change Staff = RH
-    c']
-    fis'16[
+    c]
+    fis16[
     \change Staff = LH
-    b
+    b,
     \change Staff = RH
-    c']
+    c]
   }%%%%%%%%%
   \stemNeutral
   \set subdivideBeams = ##t
@@ -141,89 +141,89 @@ rechtsNeun = \relative {
   \set beatStructure = #'(4 4 4 4)
   \change Staff = LH
   \times 2/3 {
-    g32 c'
+    g32 c
     \change Staff = RH
-    d'
+    d
   }
-  g'64 c'' d'' f''
+  g64 c d f
   \set baseMoment = #(ly:make-moment 1 8)
   \set beatStructure = #'(2 2 2 2)
-  g''16[ f''32 es''] c''[ b' g' f']
+  g16[ f32 es] c[ b g f]
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1 16)
   \set beatStructure = #'(4 4 4 4)
   \change Staff = LH
-  \times 2/3 {g32 c' d'}
+  \times 2/3 {g,32 c d}
   \change Staff = RH
-  g'64 c'' d'' f''
+  g64 c d f
   \set baseMoment = #(ly:make-moment 1 8)
   \set beatStructure = #'(2 2 2 2)
-  g''16[ f''32 es''] d''[ c'' b' c'']
-  d''[ f'' c'' d''] a'[ c'' g' a'] f'[ g' d' f']
+  g16[ f32 es] d[ c b c]
+  d[ f c d] a[ c g a] f[ g d f]
   \set baseMoment = #(ly:make-moment 1 16)
   \set beatStructure = #'(4 4 4 4)
   \change Staff = LH
-  \times 2/3 {f,32 c f g c' \change Staff = RH f' }
+  \times 2/3 {f,,32 c' f g c \change Staff = RH f }
   \set baseMoment = #(ly:make-moment 1 8)
   \set beatStructure = #'(2 2 2 2)
-  a'32[ c'' d'' f''] c''[ d'' a' c'']
-  g'[ a' f' g'] d'[ f' c' d']
+  a32[ c d f] c[ d a c]
+  g[ a f g] d[ f c d]
   \set baseMoment = #(ly:make-moment 1 16)
   \set beatStructure = #'(4 4 4 4)
   \change Staff = LH
   \stemUp
-  \times 2/3 {d,32 a, d e a d' }
-  \change Staff = RH
-  \set baseMoment = #(ly:make-moment 1 8)
-  \set beatStructure = #'(2 2 2 2)
-  \stemNeutral
-  f'32[ a' h' d''] a'[ h' f' a']
-  e'[ f' d' e'] c'16 s16
-  \set baseMoment = #(ly:make-moment 1 16)
-  \set beatStructure = #'(4 4 4 4)
-  \times 2/3 {c''32 f'' g'' c''' f''' g'''}
-  <c''' f''' g''' c''''>8\noBeam
-  \set baseMoment = #(ly:make-moment 1 8)
-  \set beatStructure = #'(2 2 2 2)
-  f''32[ g'' c'' d''] a'[ c'' g' a'] f'[ g' d' f']
-  \set baseMoment = #(ly:make-moment 1 16)
-  \set beatStructure = #'(4 4 4 4)
-  \change Staff = LH
-  \times 2/3 {f,32 c f g c' \change Staff = RH f' }
-  \set baseMoment = #(ly:make-moment 1 8)
-  \set beatStructure = #'(2 2 2 2)
-  a'32[ c'' d'' f''] c''[ d'' a' c'']
-  g'[ a' f' g'] d'[ f' c' d']
-  \set baseMoment = #(ly:make-moment 1 16)
-  \set beatStructure = #'(4 4 4 4)
-  \change Staff = LH
-  \stemUp
-  \times 2/3 {d,32 a, d e a d' }
+  \times 2/3 {d,,32 a' d e a d }
   \change Staff = RH
   \set baseMoment = #(ly:make-moment 1 8)
   \set beatStructure = #'(2 2 2 2)
   \stemNeutral
-  f'32[ a' h' d''] a'[ h' f' a']
-  e'[ f' d' e'] s8 <c'' g''>16[ f''32 e'']
+  f32[ a h d] a[ h f a]
+  e[ f d e] c16 s16
+  \set baseMoment = #(ly:make-moment 1 16)
+  \set beatStructure = #'(4 4 4 4)
+  \times 2/3 {c'32 f g c f g}
+  <c, f g c>8\noBeam
+  \set baseMoment = #(ly:make-moment 1 8)
+  \set beatStructure = #'(2 2 2 2)
+  f,32[ g c d] a[ c g a] f[ g d f]
+  \set baseMoment = #(ly:make-moment 1 16)
+  \set beatStructure = #'(4 4 4 4)
+  \change Staff = LH
+  \times 2/3 {f,,32 c' f g c \change Staff = RH f }
+  \set baseMoment = #(ly:make-moment 1 8)
+  \set beatStructure = #'(2 2 2 2)
+  a32[ c d f] c[ d a c]
+  g[ a f g] d[ f c d]
+  \set baseMoment = #(ly:make-moment 1 16)
+  \set beatStructure = #'(4 4 4 4)
+  \change Staff = LH
   \stemUp
-  c''[ g' f'64 e' c' \change Staff = LH g]
+  \times 2/3 {d,,32 a' d e a d }
+  \change Staff = RH
+  \set baseMoment = #(ly:make-moment 1 8)
+  \set beatStructure = #'(2 2 2 2)
+  \stemNeutral
+  f32[ a h d] a[ h f a] e[ f d e]
+  s8 <c g'>16[ f32 e]
+  \stemUp
+  c[ g f64 e c \change Staff = LH g]
   \change Staff = RH s8
   \stemNeutral
   \times 2/3 {
-    b'16[ es' f'] <b' b''>[ es'' f'']
+    b'16[ es, f] <b b'>[ es f]
     \ottava #1
     \set Staff.ottavation = #"8"
-    <b'' b'''>[ es''' f''']
-    <as'' as'''>[ es''' f''']
-    <b'' b'''>[ es''' f''']
-    <ces''' ces''''>[ es''' f''']
-    <des''' des''''>[ es''' as''']
-    <ces''' ces''''>[ es''' f''']
-    <b'' b'''>[ es''' f''']
-    <ges'' ges'''>[ ces''' des''']
-    <f'' f'''>[ b'' c''']
+    <b b'>[ es f]
+    <as, as'>[ es' f]
+    <b, b'>[ es f]
+    <ces ces'>[ es f]
+    <des des'>[ es as]
+    <ces, ces'>[ es f]
+    <b, b'>[ es f]
+    <ges, ges'>[ ces des]
+    <f, f'>[ b c]
   }
-  <f''' b''' c'''' f''''>4.
+  <f b c f>4.
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN

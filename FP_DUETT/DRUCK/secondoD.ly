@@ -31,13 +31,13 @@ pocoDim =
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
-ignore = \override NoteColumn #'ignore-collision = ##t
+ignore = \override NoteColumn.ignore-collision = ##t
 
 xLV = #(define-music-function (parser location further) (number?) #{ 
-  \once \override LaissezVibrerTie  #'X-extent = #'(0 . 0) 
-  \once \override LaissezVibrerTie  #'details #'note-head-gap = #(/ 
+  \once \override LaissezVibrerTie.X-extent = #'(0 . 0) 
+  \once \override LaissezVibrerTie.details.note-head-gap = #(/ 
                                                                   further -2) 
-  \once \override LaissezVibrerTie  #'extra-offset = #(cons (/ 
+  \once \override LaissezVibrerTie.extra-offset = #(cons (/ 
                                                              further 2) 0) 
          #}) 
 

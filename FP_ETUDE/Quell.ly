@@ -3,34 +3,7 @@
 
 \language "deutsch"
 
-\header {
-  title = "Ручей (Этюд)"
-  composer = "I. G."
-  tagline = ##f
-}
-
-\paper {
-  #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #20
-  top-markup-spacing.basic-distance = #8
-  markup-system-spacing.basic-distance = #25
-  system-system-spacing.basic-distance = #30
-  last-bottom-spacing.basic-distance = #25
-  two-sided = ##t
-  inner-margin = 20
-  outer-margin = 15
-}
-
-\layout {
-  indent = 10
-  \context {
-    \Score
-    \remove "Bar_number_engraver"
-    \override SpacingSpanner.strict-grace-spacing = ##t
-    \override StaffGrouper.staff-staff-spacing.basic-distance = #16
-  }
-}
-upper = \relative c'' {
+rechtsQuell = \relative c'' {
   \clef treble
   \key c \major
   \time 12/16
@@ -215,7 +188,7 @@ upper = \relative c'' {
   h fis! b] a[ d, g a, fis'! h,!] e[ g, d' h fis! b] <d, d,>1^\ppp \fermata \bar "|."
 }
 
-lower = \relative c {
+linksQuell = \relative c {
   \clef treble
   \key c \major
   \time 12/16
@@ -332,15 +305,4 @@ lower = \relative c {
   e''16[ h d g, a fis]\bar "" h[ e, g d fis a,]
   d,\breve*1/2->\bar""
   s1*2
-}
-
-\score {
-  \new PianoStaff
-  \with {
-    midiInstrument = "acoustic grand"
-  }
-  <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
 }

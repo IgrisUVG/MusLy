@@ -58,13 +58,13 @@ secondoRH = \relative {
   \break
   R1*4
   \clef treble
-  r2 b''\laissezVibrer R1 ges,\laissezVibrer R1
+  r2 \xLV #4 b''\laissezVibrer R1 \xLV #4 ges,\laissezVibrer R1
   \break  
   R
   \clef bass
-  r2 cis,,4 d des2 heses'\laissezVibrer
+  r2 cis,,4 d des2 \xLV #4 heses'\laissezVibrer
   \clef treble
-  r2 d''2 c b d1 f,2 c'4 b dis1\laissezVibrer
+  r2 d''2 c b d1 f,2 c'4 b \xLV #4 dis1\laissezVibrer
   \pageBreak
   R1*3
   \cadenzaOn
@@ -126,9 +126,9 @@ secondoLH = \relative {
   \makeOctaves #-1 { f,2 es } as
   \makeOctaves #1 {e r R1 ces g c,4 g' ges2\laissezVibrer} 
   R1*17 r2
-  \makeOctaves #1 {fis4 d des2 c\laissezVibrer}
+  \makeOctaves #1 {fis4 d des2 \xLV #4 c\laissezVibrer}
   \clef treble
-  r2 b''''' a g f1 b,2 es4 f gis1\laissezVibrer R1*3
+  r2 b''''' a g f1 b,2 es4 f \xLV #4 gis1\laissezVibrer R1*3
   \clef bass
   \cadenzaOn
   \makeOctaves #-1 {e,,,2\fermata}

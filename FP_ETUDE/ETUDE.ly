@@ -4,13 +4,13 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #5
-  system-system-spacing #'basic-distance = #17
-  score-system-spacing #'basic-distance = #20
-  score-markup-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #5
+  system-system-spacing.basic-distance = #17
+  score-system-spacing.basic-distance = #20
+  score-markup-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #15
   %ragged-last-bottom = ##f
   %left-margin = 15
   %right-margin = 15
@@ -20,6 +20,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -37,6 +38,8 @@
 \include "EtudSechs.ly"
 \include "schaukel.ly"
 \include "schneesturm.ly"
+\include "Fruhling.ly"
+\include "Quell.ly"
 \include "EtudHdur.ly"
 \include "EtudCesGes.ly"
 
@@ -50,6 +53,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   \markup { \vspace #1 }
+
 %%%%%%%%%%%%%%%%%%%%% ERSTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -71,6 +75,7 @@
     }
   }
   \pageBreak
+
 %%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -91,6 +96,7 @@
     }
   }
   \pageBreak
+
 %%%%%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -112,6 +118,7 @@
     }
   }
   %\pageBreak
+
 %%%%%%%%%%%%%%%%%%%%% VIERTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -132,6 +139,7 @@
     }
   }
   \pageBreak
+
 %%%%%%%%%%%%%%%%%%%%% FUNFTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -153,6 +161,7 @@
     }
   }
   \pageBreak
+
 %%%%%%%%%%%%%%%%%%%% SECHSTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -182,6 +191,7 @@
     }
   }
   \pageBreak
+
 %%%%%%%%%%%%%%%%%%% SCHAUKEL %%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -204,6 +214,7 @@
     }
   }
   \pageBreak
+
 %%%%%%%%%%%%%%%% SCHNEESTURM %%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -226,6 +237,56 @@
     }
   }
   \pageBreak
+
+%%%%%%%%%%%%%%%%%%% FRUHLING %%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff <<
+      \new Staff = "RH" \rechtsFruhling
+      \new Dynamics = "DYN" \dynamicFruhling
+      \new Staff = "LH" \linksFruhling
+    >>
+    \header {
+      title = "Frühling"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Score
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+        \remove "Bar_number_engraver"
+        %proportionalNotationDuration = #(ly:make-moment 1/8)
+      }
+      \context {
+        \Staff
+        %\omit BarLine
+        \omit TimeSignature
+      }
+      %ragged-last = ##t
+    }
+  }
+  %\pageBreak
+
+%%%%%%%%%%%%%%%%%%%% Quell %%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff <<
+      \new Staff = "upper" \rechtsQuell
+      \new Staff = "lower" \linksQuell
+    >>
+    \header {
+      title = "Ручей (Этюд)"
+      composer = ##f
+    }
+    \layout {
+      \context {
+        \Score
+        \remove "Bar_number_engraver"
+        \override SpacingSpanner.strict-grace-spacing = ##t
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #13
+      }
+    }
+  }
+  \pageBreak
+
 %%%%%%%%%%%%%%%%%%%% H-DUR %%%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
@@ -248,6 +309,7 @@
     }
   }
   %\pageBreak
+
 %%%%%%%%%%%%%%%% CES-GES-DUR %%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<

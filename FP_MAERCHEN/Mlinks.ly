@@ -133,6 +133,7 @@ linksEins = \relative {
   %\stopStaff
   %s-\markup { (Вечерняя) }
 }
+
 %%%%%%%%%%%%%%%%%%%%%% ZWEI %%%%%%%%%%%%%%%%%%%%%%
 linksZwei = \relative {
   \clef bass
@@ -229,6 +230,7 @@ linksZwei = \relative {
   %\stopStaff
   %s-\markup { (Дурацкая) }
 }
+
 %%%%%%%%%%%%%%%%%%%%%% DREI %%%%%%%%%%%%%%%%%%%%%%
 ersteVoice = \relative {
   h'8 g16( a h8-.) g-. a16( d c h <a c><g h><f a><e g>
@@ -331,6 +333,7 @@ linksDrei = \relative {
   %\stopStaff
   %s-\markup { (Старая) }
 }
+
 %%%%%%%%%%%%%%%%%%%%%% VIER %%%%%%%%%%%%%%%%%%%%%%
 bommm = \relative {
   \repeat unfold 7 {<fis, cis'>1} \repeat unfold 5 {<fis, cis'>}

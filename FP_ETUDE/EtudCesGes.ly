@@ -8,8 +8,8 @@ rechtsCesGes = \relative {
   \key ges \major
   \time 7/4
   \override Staff.TimeSignature.stencil = ##f
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletNumber
+  \omit TupletBracket
   \tuplet 6/4 4 {
     \ottava #1
     \set Staff.ottavation = #"8"
@@ -22,7 +22,7 @@ rechtsCesGes = \relative {
     es fes ges as b ces
     \ottava #2
     \set Staff.ottavation = #"15"
-    des es fes ges as b 
+    des es fes ges as b
     ces es, ges ces, es ges,
     \ottava #1
     \set Staff.ottavation = #"8"
@@ -32,28 +32,28 @@ rechtsCesGes = \relative {
     ces es, ges8 as16 b ces des es f! ges as
     \ottava #1
     \set Staff.ottavation = #"8"
-    b ces des es f ges as b ces des es f 
+    b ces des es f ges as b ces des es f
     ges b, es ges, b es,\bar ""\break
     ges b, es
     \ottava #0
     ges, b es,
     ges b, es ges, b es,
     ges es ces' ges es' ces
-    ges' es ces' ges 
+    ges' es ces' ges
     \ottava #1
     \set Staff.ottavation = #"8"
     es' ces
-    ges' es ces' ges 
+    ges' es ces' ges
     \ottava #2
     \set Staff.ottavation = #"15"
-    es' ces \bar ""\break    
+    es' ces \bar ""\break
     ges' es ces' b as ges
-    fes es des 
+    fes es des
     \ottava #1
     \set Staff.ottavation = #"8"
-    ces b as ges fes es des 
+    ces b as ges fes es des
     \ottava #0
-    ces b as ges fes es des ces 
+    ces b as ges fes es des ces
     b as ges fes <ces' es>-> ges\bar ""\break
     as b c d es f ges as b
     \ottava #1
@@ -69,11 +69,11 @@ rechtsCesGes = \relative {
     \ottava #0
     es, ges b, es ges, b
     fes ces' as fes' ces as'
-    fes ces' as 
+    fes ces' as
     \ottava #1
     \set Staff.ottavation = #"8"
     fes' ces as'
-    fes ces' as 
+    fes ces' as
     \ottava #2
     \set Staff.ottavation = #"15"
     fes' ces as' ges f es des ces b
@@ -104,8 +104,8 @@ linksCesGes = \relative {
   \key ges \major
   \time 7/4
   \override Staff.TimeSignature.stencil = ##f
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = ##f
+  \omit TupletNumber
+  \omit TupletBracket
   \tuplet 6/4 4 {
     ces,16 des es fes ges as b ces des es fes ges as b ces
     \clef treble
@@ -118,7 +118,7 @@ linksCesGes = \relative {
     \ottava #0
     f! ges as b ces des es f ges as b ces des es f ces es ges,
     ces es, ges ces, es ges,
-    ces es, ges 
+    ces es, ges
     \ottava #-1
     \set Staff.ottavation = #"8"
     ces, es ges,
@@ -128,7 +128,7 @@ linksCesGes = \relative {
     ges' es ces' ges es' ces
     ges' b, es ges, b es,
     ges b, es ges, b es,
-    ges 
+    ges
     \ottava #-1
     \set Staff.ottavation = #"8"
     b, es ges, b es, ges b, es b c d es f! ges as b c
@@ -137,7 +137,7 @@ linksCesGes = \relative {
     ces b as ges fes es des ces b as ges fes
     \ottava #-1
     \set Staff.ottavation = #"8"
-    es des ces b as ges 
+    es des ces b as ges
     fes ces' as
     \ottava #0
     fes' ces as'
@@ -145,12 +145,12 @@ linksCesGes = \relative {
     fes ces' as fes' ces as'
     es ges b, es ges, b
     es, ges b, es ges, b
-    es, ges b, es 
+    es, ges b, es
     \ottava #-1
     \set Staff.ottavation = #"8"
     ges, b es, ges b, fes' es des ces des es fes ges as
     \ottava #0
-    b ces des es fes ges as b ces des es fes 
+    b ces des es fes ges as b ces des es fes
     ges as b as ges f es des ces b as ges f es des
     \ottava #-1
     \set Staff.ottavation = #"8"

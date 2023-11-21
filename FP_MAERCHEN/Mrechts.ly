@@ -125,6 +125,7 @@ rechtsEins = \relative {
   <f h><e c'>~ q2
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%% ZWEI %%%%%%%%%%%%%%%%%%%%%%
 rechtsZwei = \relative {
   \clef treble
@@ -239,6 +240,7 @@ rechtsZwei = \relative {
   <as f'>2 r4
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%% DREI %%%%%%%%%%%%%%%%%%%%%%
 rechtsDrei = \relative {
   \clef treble
@@ -322,6 +324,7 @@ rechtsDrei = \relative {
   r8
   \bar "|."
 }
+
 %%%%%%%%%%%%%%%%%%%%%% VIER %%%%%%%%%%%%%%%%%%%%%%
 rechtsVier = \relative {
   \clef treble

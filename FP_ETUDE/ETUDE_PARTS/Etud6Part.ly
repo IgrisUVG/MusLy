@@ -11,11 +11,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #20
-  top-markup-spacing #'basic-distance = #10
-  markup-system-spacing #'basic-distance = #20
-  system-system-spacing #'basic-distance = #16
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #16
+  last-bottom-spacing.basic-distance = #15
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -26,6 +26,7 @@
 gmult = #1.5
 
 \layout {
+  indent = 10
   \context {
     \PianoStaff
     \consists #Span_stem_engraver
@@ -44,6 +45,7 @@ gmult = #1.5
   }
 }
 
+%\include "../noteHeadsOpposite.ly"
 \include "../EtudSechs.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%

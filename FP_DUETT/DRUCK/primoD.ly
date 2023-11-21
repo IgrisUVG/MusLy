@@ -29,20 +29,20 @@ pocoDim =
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
-xLV = #(define-music-function (parser location further) (number?) #{ 
-  \once \override LaissezVibrerTie  #'X-extent = #'(0 . 0) 
-  \once \override LaissezVibrerTie  #'details #'note-head-gap = #(/ 
-                                                                  further -2) 
-  \once \override LaissezVibrerTie  #'extra-offset = #(cons (/ 
-                                                             further 2) 0) 
-         #}) 
+xLV = #(define-music-function (parser location further) (number?) #{
+  \once \override LaissezVibrerTie.X-extent = #'(0 . 0)
+  \once \override LaissezVibrerTie.details.note-head-gap = #(/
+                                                               further -2)
+  \once \override LaissezVibrerTie.extra-offset = #(cons (/
+                                                          further 2) 0)
+         #})
 
 %%%%%%%%%%% RH %%%%%%%%%%%%
 primoRHseiteZwei = \relative {
   \time 4/4
   %\key es \major
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \partial 2
   g''2 b, ces as' g f es ces' ges g!1 R1
   \break

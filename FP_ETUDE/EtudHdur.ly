@@ -95,7 +95,8 @@ rechtsHdur = \relative {
   \ottava #0
   <<
     {
-      ais2 fisis ais gis fis dis fis e dis his dis cis h fisis ais gis dis4 eis
+      ais2 fisis ais gis fis dis fis e dis his
+      dis cis h fisis ais gis dis4 eis
     }
     \\
     {
@@ -145,14 +146,15 @@ rechtsHdur = \relative {
   dis fis h dis
   fis dis h fis
   \ottava #0
-  dis h fis dis h fis dis h \bot fis dis h fis \top dis''1-> s1*4 
-  \bot fis1-> \top s1*3 \bot fis1-> \top dis-> s gis-> s fis-> s cis-> s dis->
+  dis h fis dis h fis dis h \bot fis dis h fis \top dis''1-> s1*4
+  \bot fis1-> \top s1*3 \bot fis1-> \top dis-> s
+  gis-> s fis-> s cis-> s dis->
   \bot \clef treble
   dis''16-> cis h ais gis fis e dis h'-> ais gis fis e dis cis h
   \bar ""\break
   fis'-> e dis cis h ais gis fis h-> ais gis fis e dis cis h
   \clef bass
-  ais gis fis e dis cis h ais gis fis e dis 
+  ais gis fis e dis cis h ais gis fis e dis
   \ottava #-1
   \set Staff.ottavation = #"8"
   cis h ais gis
@@ -171,7 +173,7 @@ linksHdur = \relative {
   \clef bass
   \key h \major
   \override Staff.TimeSignature.stencil = ##f
-  \override Fingering #'staff-padding = #'()
+  \override Fingering.staff-padding = #'()
   R1 \bar ".|:" R1 \bar ":|." r2 fis h,4 fis' cis'
   \clef treble
   <<
@@ -334,7 +336,7 @@ linksHdur = \relative {
   \ottava #0
   e dis gis, e dis gis, e dis \bot gis, e dis gis,
   \tweak #'duration-log #0
-  cis,-> fis ais e' fis ais \top e' fis ais e' fis ais 
+  cis,-> fis ais e' fis ais \top e' fis ais e' fis ais
   \ottava #1
   \set Staff.ottavation = #"8"
   e' fis ais e'

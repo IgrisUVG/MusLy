@@ -11,7 +11,7 @@ rechtsFour = \relative {
   \override Score.RehearsalMark.extra-offset = #'(4 . 2)
   \mark "Lento"
   \set Staff.beatStructure = #'( 4)
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \override DynamicLineSpanner.staff-padding = #3
   <<
     {
@@ -68,7 +68,8 @@ rechtsFour = \relative {
     }
   >>
   \stemUp
-  a4 e c a g d'2. R2. fis4 gis e' cis2.^~ cis!2 cis4 dis eis cis his2 cis4 dis eis fis gis2.
+  a4 e c a g d'2. R2. fis4 gis e' cis2.^~ cis!2 cis4 dis eis cis
+  his2 cis4 dis eis fis gis2.
   \small
   \repeat unfold 2 {fis4 s d16 cis8.}
   <<
@@ -127,13 +128,14 @@ linksFour = \relative {
   \key c \major
   \time 12/16
   \set Timing.beatStructure = #'(2 4 3 3)
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   <<
     {
       \repeat unfold 2 {
         \small
         \stemDown
-        \change Staff = "RH" f'16[ e] f \change Staff = "LH" f,, b c' f, b
+        \change Staff = "RH" f'16[ e] f
+        \change Staff = "LH" f,, b c' f, b
         \change Staff = "RH"
         c' \change Staff = "LH" b,, f' d'
       }
@@ -146,7 +148,9 @@ linksFour = \relative {
         c' \change Staff = "LH" b,, f' d'
       }
       \stemDown
-      \change Staff = "RH" e16[ dis] \once\showStaffSwitch \change Staff = "LH" e gis,, e' c' gis e'
+      \change Staff = "RH" e16[ dis]
+      \once \showStaffSwitch
+      \change Staff = "LH" e gis,, e' c' gis e'
       \change Staff = "RH"
       \once \override NoteColumn.force-hshift = #0.2
       c' \change Staff = "LH" h,,! gis' d'!
@@ -178,36 +182,75 @@ linksFour = \relative {
       \change Staff = "RH"
       %\once \override NoteColumn.force-hshift = #0.1
       ais' \change Staff = "LH" dis,, his' eis
-      \change Staff = "RH" dis16[ cisis] dis \change Staff = "LH" gis,, dis' ais' gis dis'
+      \change Staff = "RH" dis16[ cisis] dis
+      \change Staff = "LH" gis,, dis' ais' gis dis'
       \change Staff = "RH"
       %\once \override NoteColumn.force-hshift = #0.1
-      ais' \change Staff = "LH" dis,, his' \once \tiny \parenthesize eis
+      ais' \change Staff = "LH" dis,, his'
+      \once \tiny \parenthesize eis
       \set Timing.beatStructure = #'(4 2 3 3)
       \repeat unfold 3 {
-        d,! a'! b \change Staff = "RH" c! \change Staff = "LH" \stemUp f,, d'
-        \stemDown b f' c' b \change Staff = "RH" <f' e'><c' d>\change Staff = "LH"
+        d,! a'! b
+        \change Staff = "RH" c!
+        \change Staff = "LH"\stemUp f,, d'
+        \stemDown b f' c' b
+        \change Staff = "RH" <f' e'><c' d>
+        \change Staff = "LH"
       }
-      e,, gis b \change Staff = "RH" c \change Staff = "LH" \stemUp gis, e'
-      \stemDown c gis' d' c \change Staff = "RH" <gis' e'><h! d>\change Staff = "LH"
-      e,, gis b \change Staff = "RH" c \change Staff = "LH" \stemUp gis, e'
-      \stemDown c gis' d' c \change Staff = "RH" gis' <h! d>\change Staff = "LH"
-      e,, a h! \change Staff = "RH" e \change Staff = "LH" \stemUp e,, cis'
-      \stemDown a e' h' a \change Staff = "RH" <e' d'><h' cis>\change Staff = "LH"
-      e,, a h \change Staff = "RH" e \change Staff = "LH" \stemUp e,, cis'
-      \stemDown a e' h' a \change Staff = "RH" <e' d'><h' cis>\change Staff = "LH"
-      eis,, a h \change Staff = "RH" eis \change Staff = "LH" \stemUp eis,, cis'
-      \stemDown a eis' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
-      eis,, a h! \change Staff = "RH" eis \change Staff = "LH" \stemUp eis,, cis'
-      \stemDown a eis' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
-      eis,, a h \change Staff = "RH" eis \change Staff = "LH" \stemUp eis,, cis'
-      \stemDown a eis' h' a \change Staff = "RH" <eis' dis'><h' cis>\change Staff = "LH"
-      fis, cis' \change Staff = "RH" d e \change Staff = "LH" \stemUp a,, fis'
-      \stemDown d[ a' e'] \change Staff = "RH" d a' e' \change Staff = "LH"
+      e,, gis b
+      \change Staff = "RH" c
+      \change Staff = "LH"
+      \stemUp gis, e'
+      \stemDown c gis' d' c
+      \change Staff = "RH" <gis' e'><h! d>
+      \change Staff = "LH" e,, gis b
+      \change Staff = "RH" c
+      \change Staff = "LH"
+      \stemUp gis, e'
+      \stemDown c gis' d' c
+      \change Staff = "RH" gis' <h! d>
+      \change Staff = "LH" e,, a h!
+      \change Staff = "RH" e
+      \change Staff = "LH" \stemUp e,, cis'
+      \stemDown a e' h' a
+      \change Staff = "RH" <e' d'><h' cis>
+      \change Staff = "LH" e,, a h
+      \change Staff = "RH" e
+      \change Staff = "LH"
+      \stemUp e,, cis'
+      \stemDown a e' h' a
+      \change Staff = "RH" <e' d'><h' cis>
+      \change Staff = "LH" eis,, a h
+      \change Staff = "RH" eis
+      \change Staff = "LH"
+      \stemUp eis,, cis'
+      \stemDown a eis' h' a
+      \change Staff = "RH" <eis' dis'><h' cis>
+      \change Staff = "LH" eis,, a h!
+      \change Staff = "RH" eis
+      \change Staff = "LH"
+      \stemUp eis,, cis'
+      \stemDown a eis' h' a
+      \change Staff = "RH" <eis' dis'><h' cis>
+      \change Staff = "LH" eis,, a h
+      \change Staff = "RH" eis
+      \change Staff = "LH"
+      \stemUp eis,, cis'
+      \stemDown a eis' h' a
+      \change Staff = "RH" <eis' dis'><h' cis>
+      \change Staff = "LH" fis, cis'
+      \change Staff = "RH" d e
+      \change Staff = "LH"
+      \stemUp a,, fis'
+      \stemDown d[ a' e']
+      \change Staff = "RH" d a' e'
+      \change Staff = "LH"
       \set Timing.beatStructure = #'(2 4 3 3)
       \repeat unfold 2 {
-        \change Staff = "RH" <f,! fis'>16[ e] f \change Staff = "LH" f,, b h'! f b
-        \change Staff = "RH"
-        h'! \change Staff = "LH" h,, fis' e'
+        \change Staff = "RH" <f,! fis'>16[ e] f
+        \change Staff = "LH" f,, b h'! f b
+        \change Staff = "RH" h'!
+        \change Staff = "LH" h,, fis' e'
       }
       \set Timing.beatStructure = #'(4 4 4)
       \change Staff = "LH" e,, g'

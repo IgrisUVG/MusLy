@@ -12,19 +12,20 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #30
-  top-markup-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #30
-  system-system-spacing #'basic-distance = #29
-  last-bottom-spacing #'basic-distance = #30
+  top-system-spacing.basic-distance = #30
+  top-markup-spacing.basic-distance = #15
+  markup-system-spacing.basic-distance = #30
+  system-system-spacing.basic-distance = #29
+  last-bottom-spacing.basic-distance = #30
   %left-margin = 15
   %right-margin = 15
   two-sided = ##t
-  inner-margin = 25
+  inner-margin = 20
   outer-margin = 15
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     \remove "Bar_number_engraver"

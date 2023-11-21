@@ -1,3 +1,7 @@
+\version "2.19.15"
+
+\language "deutsch"
+
 globalTwo = {
   \key d \major
   \time 3/4
@@ -57,7 +61,8 @@ rechtsTwo = \relative {
     \\
     {
       \small
-      h8 ais h cis d e d cis ais h fisis gis gisis ais c h ais h c h a gis g f fis! gis a ais h gis
+      h8 ais h cis d e d cis ais h fisis gis gisis ais c h ais h
+      c h a gis g f fis! gis a ais h gis
       f e dis e his cis d e fis g fis \showStaffSwitch e
       \change Staff = LH
       \stemUp
@@ -66,9 +71,9 @@ rechtsTwo = \relative {
     }
   >>
   \shape #'(
-                 ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-                 ((0 . 2.2) (0.5 . 1.5) (0 . 1) (0 . 0.5))
-                 ) Slur
+             ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
+             ((0 . 2.2) (0.5 . 1.5) (0 . 1) (0 . 0.5))
+             ) Slur
   \normalsize
   b''4.( g8 e cis c2 b4 as2 g4 g2) as8( b c d es f g as b4)
   \once \override Script.script-priority = #100
@@ -87,30 +92,81 @@ rechtsTwo = \relative {
     \\
     {
       s2.*3 s4 <c f> q s <c e> q s <cis! es> q
-      fis16 eis fis g a b c e, a cis,! fis d g b, c e fis g a d cis h g a h a fis g eis fis
-      e! f e dis cis g c b a b c d e fis g a h a cis a g e cis h
+      fis16 eis fis g a b
+      c e, a cis,! fis d
+      g b, c e fis g a
+      d cis h g a
+      h a fis g eis fis
+      e! f e dis cis g
+      c b a b c d
+      e fis g a h a
+      cis a g e cis h
       \stemUp
       b a g e d fis
       \stemDown
-      g a h! d e g fis eis fis g a b c e, a cis,! fis a, d8^>
-      cis16 d e fis d fis a d fis e
+      g a h! d e g
+      fis eis fis g a b
+      c e, a cis,! fis a,
+      d8^> cis16 d e fis
+      d fis a d fis e
     }
   >>
   \normalsize
-  e16-> d his cis gis a eis fis dis e his cis gis a h d fis a h cis e cis ais fis g fis e d cis h
-  ais h cis d e gis h a cis e d cis h a g fis e d d g, b d fis g d'8->
-  a16 e' fis, d' d, a' a, fis' fis, d' e, cis' g a g' cis, a' e cis' g e' h fis' a, d fis, a d, fis a, d fis, h a
-  g e' h g' d h' g e' h g' h d, e a cis, g' a, fis' fis, d' d, a' a, fis' fis, d' d, a' a, fis'
-  cis e h' dis a e' d! fis, h fis' g, cis a h g' b, d a' d cis h e, a g as ges cis, f es as\break
+  e16-> d his cis gis a
+  eis fis dis e his cis
+  gis a h d fis a
+  h cis e cis ais fis
+  g fis e d cis h
+  ais h cis d e gis
+  h a cis e d cis
+  h a g fis e d
+  d g, b d fis g
+  d'8-> a16 e' fis, d'
+  d, a' a, fis' fis, d'
+  e, cis' g a g' cis,
+  a' e cis' g e' h
+  fis' a, d fis, a d,
+  fis a, d fis, h a
+  g e' h g' d h'
+  g e' h g' h d,
+  e a cis, g' a, fis'
+  fis, d' d, a' a, fis'
+  fis, d' d, a' a, fis'
+  cis e h' dis a e'
+  d! fis, h fis' g, cis
+  a h g' b, d a'
+  d cis h e, a g
+  as ges cis, f es as\break
   \bar "||"
   %\once \override Slur.positions = #'(0 . -2)
-  fis a, <d, fis> h'' e, <d a' cis> <cis b' d> e a cis <d h e> d cis fis, <gis, h> h' e, <d fis h d>
-  eis' h <eis, gis cis> fis' <g, h d> a' ais <e, fis cis'> e' fis <fis, ais e'> h dis f, <g, h> h' <f, g dis'> h
-  <gis h e> d'! fis h <h, d gis> cis' e b <cis, e> g' <e b' cis> d' e <cis, e ais> d cis' <ais, cis e g> fis'
-  a! es <f, a> d' <a cis f> h' e <cis, g' b> e a <e g d'> cis' <d, fis a d> g cis, fis <fis, a e'> d
-  a fis' eis fis a d cis ais h c cis d e dis e g fis f e d! cis a fis c' h! as f b g e
-  r fis' f cis e dis d gis, a es' g, cis c fis, d' cis d dis e es d des f e es fis f e g fis
-  f e es d cis c h b a as g fis f e es d cis c \clef bass h b a as g fis f8 r4\bar "|."
+  fis a, <d, fis> h'' e, <d a' cis> 
+  <cis b' d> e a cis <d h e> d 
+  cis fis, <gis, h> h' e, <d fis h d>
+  eis' h <eis, gis cis> fis' <g, h d> a' 
+  ais <e, fis cis'> e' fis <fis, ais e'> h 
+  dis f, <g, h> h' <f, g dis'> h
+  <gis h e> d'! fis h <h, d gis> cis' 
+  e b <cis, e> g' <e b' cis> d' 
+  e <cis, e ais> d cis' <ais, cis e g> fis'
+  a! es <f, a> d' <a cis f> h' 
+  e <cis, g' b> e a <e g d'> cis'
+  <d, fis a d> g cis, fis <fis, a e'> d
+  a fis' eis fis a d 
+  cis ais h c cis d 
+  e dis e g fis f 
+  e d! cis a fis c' 
+  h! as f b g e
+  r fis' f cis e dis 
+  d gis, a es' g, cis 
+  c fis, d' cis d dis 
+  e es d des f e 
+  es fis f e g fis
+  f e es d cis c 
+  h b a as g fis 
+  f e es d cis c
+  \clef bass
+  h b a as g fis f8 r4
+  \bar "|."
 }
 %%%%%%%% DYNAMIC %%%%%%%%%%
 dynamicTwo = {
@@ -157,14 +213,19 @@ linksTwo = \relative {
         }
       >>
       \small
-      r4 dis( e) r eis( fis) r g( fis) r cis'( d) r his( cis) r eis,( fis) r h( ais)
+      r4 dis( e) r eis( fis) r g( fis) r cis'( d)
+      r his( cis) r eis,( fis) r h( ais)
     }
   >>
   \clef bass
   \stemNeutral
   \small
-  h,,4 <ais'' d fis><h d fis> cis,, <h'' eis gis><a h eis> ais,, <c'' e! fis> <c e fis>
-  g,, <h'' dis f> q fis,, <gis'' h d! fis!><gis h d fis> cis,, <e' g! ais><e g ais>
+  h,,4 <ais'' d fis><h d fis> 
+  cis,, <h'' eis gis><a h eis> 
+  ais,, <c'' e! fis> <c e fis>
+  g,, <h'' dis f> q 
+  fis,, <gis'' h d! fis!><gis h d fis> 
+  cis,, <e' g! ais><e g ais>
   fis,, <e'' fis ais c> q
   \clef treble
   \stemDown
@@ -206,14 +267,20 @@ linksTwo = \relative {
   >>
   \stemNeutral
   \normalsize
-  d,8 <a' b d>8. e16 a,8 <g' e'>8. g,16 des'8 <g b e>8. g,16 e'8 <g cis e>8. a16 d,8 <gis d' fis>8. a,16
-  e8 <h'' e g>8. h,16 es,8 <g' cis! es>8. <es>16 a,8 <a' d>8. fis,16 a,8 <g'' a cis>8. e,16 g,8 <a'' b d>8. e,16
-  e'8 <a d e>8. a,16 d8 <a' b d>8.  e16 a,8 <g' cis! e>8. g,16 fis8 <a' d fis>8. a,16 d8 <a' d fis>8. e16
-  a,8 <a' cis g'>8. e16 a,8 <a' cis f g>8. a,16 d8 <a' d fis>8. a,16 fis8 <ais' e' fis>8. cis,16
-  h8 <d' fis>8. fis,16 h,8 <gis' d' e>8. e,16 a8 <g'! cis e>8. e16 h8 <fis' h d>8. d16 g,8 <b' d>8. g16
-  d8 <fis a d> e, fis <fis' a d> q e <g cis e> fis, g <a' cis e> q fis <a d fis> g, a <fis' a d> q
-  g <h d> a, h <g' h d> q cis, <a' e' g> q d, <a' d fis> q r <d,fis> q cis <gis' h cis>8. a,16 e'8 <g! h d>8. h,16
-  a8 <g' d' es>8. g,16 e8 <g' cis e!>8. a,16 es8 <b'' es f>8. ges16
+  d,8 <a' b d>8. e16 a,8 <g' e'>8. g,16 des'8 <g b e>8. g,16 
+  e'8 <g cis e>8. a16 d,8 <gis d' fis>8. a,16 e8 <h'' e g>8. h,16 
+  es,8 <g' cis! es>8. <es>16 a,8 <a' d>8. fis,16 a,8 <g'' a cis>8. e,16 
+  g,8 <a'' b d>8. e,16 e'8 <a d e>8. a,16 d8 <a' b d>8.  e16 
+  a,8 <g' cis! e>8. g,16 fis8 <a' d fis>8. a,16 d8 <a' d fis>8. e16
+  a,8 <a' cis g'>8. e16 a,8 <a' cis f g>8. a,16 d8 <a' d fis>8. a,16 
+  fis8 <ais' e' fis>8. cis,16 h8 <d' fis>8. fis,16 h,8 <gis' d' e>8. e,16 
+  a8 <g'! cis e>8. e16 h8 <fis' h d>8. d16 g,8 <b' d>8. g16
+  d8 <fis a d> e, fis <fis' a d> q e <g cis e> fis, 
+  g <a' cis e> q fis <a d fis> g, a <fis' a d> q
+  g <h d> a, h <g' h d> q cis, <a' e' g> q 
+  d, <a' d fis> q r <d,fis> q cis <gis' h cis>8. a,16 
+  e'8 <g! h d>8. h,16 a8 <g' d' es>8. g,16 e8 <g' cis e!>8. a,16 
+  es8 <b'' es f>8. ges16
   d, <fis' a> gis, a d fis
   g, <a'b d> a, b d fis
   h,,! <fis'' h! d> fis, h d gis
@@ -229,9 +296,10 @@ linksTwo = \relative {
   d,,8 <g''! a d><e fis h><d fis a><a d fis><g h e>
   <<
     {
-      r <e' g a> r <fis gis h> r4 <fis a b>8 r <e g b><fis a d> r <e gis cis> r <f as c><f as ces>
+      r <e' g a> r <fis gis h> r4 <fis a b>8 r <e g b>
+      <fis a d> r <e gis cis> r <f as c><f as ces>
       a4 gis8~ gis a
-      \once \override Accidental #'extra-offset = #'(1 . 0)
+      \once \override Accidental.extra-offset = #'(1 . 0)
       dis,~ dis! f4 h,4. b~ \hideNotes b
     }
     \\
@@ -239,10 +307,10 @@ linksTwo = \relative {
       <d, d'>4<cis cis'>8~ q <d d'><gis, gis'>~ q <b b'>4<e, e'>4.<es es'>
       <e'' g>8<dis fis><d f><cis e><c es>
       \once \override NoteColumn.force-hshift = #1.7
-      \once \override Accidental #'extra-offset = #'(2.5 . 0)
+      \once \override Accidental.extra-offset = #'(2.5 . 0)
       <h d!><b cis><a c><gis h>
       \once \override NoteColumn.force-hshift = #2
-      \once \override Accidental #'extra-offset = #'(2.6 . 0)
+      \once \override Accidental.extra-offset = #'(2.6 . 0)
       <g b><fis a><f as><e g><es ges><d f>
       \stemUp
       <cis e b'><c es a><h d as'><b des g><a c fis><gis h f'><g! b e>8 r4

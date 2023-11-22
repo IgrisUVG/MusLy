@@ -265,7 +265,15 @@ fluteMusic = \new Voice \with {
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(2 2 2 2)
-  r g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
-  g g g g a'8-. c,,32 c c c h h h h gis''?8-. e,32 e e e r8 f32 f f f
-  b'8-. c,,32 c c c
+  %\tag  #'Partitur {
+    r8 g32 g g g r8 fis'32 fis fis fis r8 d32 d d d r8 gis?32 gis gis gis
+    g g g g a'8-. c,,32 c c c h h h h gis''?8-. e,32 e e e r8 f32 f f f
+    b'8-. c,,32 c c c
+  %}
+  %{\tag #'Part {
+    %\override Flag.stencil = #flat-flag
+    r8 g8:32 r8 fis'8:32 r8 d8:32 r8 gis?8:32
+    g8:32 a'8-. c,,8:32 h8:32 gis''?8-. e,8:32 r8 f8:32
+    b'8-. c,,8:32
+  }%}
 }

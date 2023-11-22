@@ -9,8 +9,8 @@
 footnot = \relative {
   \key d \major
   \magnifyStaff #(magstep -2)
-  \override Staff.TimeSignature #'stencil = ##f
-  \override TupletNumber #'transparent = ##t
+  \omit Staff.TimeSignature
+  \omit TupletNumber
   a'2~( \tuplet 3/2 4 {a8 b a b a b a b a}
   b16 a b a \tuplet 6/4{b a b a b a}
   \set subdivideBeams = ##t

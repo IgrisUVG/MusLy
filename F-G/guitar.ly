@@ -9,7 +9,7 @@ guitarMusic = \relative {
   \clef treble
   \key d \major
   \time 4/4
-  \override Staff.TimeSignature.stencil = ##f
+  \omit Staff.TimeSignature
   \override Fingering.staff-padding = #'()
   \set fingeringOrientations = #'(left)
   d4_( <a' a''-3> <g'-0 e'-2> fis-1) d,4_( <a' a''> <fis' e'> d'-4)
@@ -40,7 +40,8 @@ guitarMusic = \relative {
   d,4_( <a' a''> <g' e'> fis) d,4_( <a' a''> <fis' e'> d')
   d,,4_( <b' a''> <g' d'> fis) fis,4_( <cis' cis''> <h' cis> ais~)
   \override TextScript.font-size = -2
-  <b, \parenthesize \tweak font-size #-2 ais'>4^"IX"_( <f' c''> <f' b> \acciaccatura b,8 c4)
+  <b, \parenthesize \tweak font-size #-2 ais'>4^"IX"_( <f' c''>
+  <f' b> \acciaccatura b,8 c4)
   f,,_( <c' gis''>
   \once \override Fingering.extra-offset = #'(6 . 1)
   \once \override StringNumber.extra-offset = #'(1.3 . 2)
@@ -186,16 +187,12 @@ guitarMusic = \relative {
   <<
     {
       d,4_( <b' e'> <eis cis'> a\glissando)
-      \set fingeringOrientations = #'(right)
-      \override Fingering.extra-offset = #'(-0.3 . 0.3)
       d4( \stemDown <a, e''!>
-      \set stringNumberOrientations = #'(right)
-      \override StringNumber.extra-offset = #'(-0.4 . 0)
       <b' a'>2)
     }
     \\
     {
-      s1 <d, d'>4 s2.
+      s1 <d,, d'>4 s2.
     }
   >>
 }

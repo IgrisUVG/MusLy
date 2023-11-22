@@ -6,11 +6,21 @@ fluteMusic = \relative {
   \clef treble
   \key d \major
   \time 4/4
-  \override Staff.TimeSignature.stencil = ##f
-  \override TupletNumber.transparent = ##t
-  \override TupletBracket.stencil = ##f
-  \override TrillSpanner.bound-details.left.text = \markup{
-    \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat
+  \omit Staff.TimeSignature
+  \omit TupletNumber
+  \omit TupletBracket
+  %\override Staff.TimeSignature.stencil = ##f
+  %\override TupletNumber.transparent = ##t
+  %\override TupletBracket.stencil = ##f
+  \tag #'Fl {
+    \override TrillSpanner.bound-details.left.text = \markup{
+      \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat
+    }
+  }
+  \tag #'Cl {
+    \override TrillSpanner.bound-details.left.text = \markup{
+      \musicglyph #"scripts.trill" \raise #1.65 \teeny  \natural
+    }
   }
   \override TextScript.extra-offset = #'(-1 . -2)
   a'1~\startTrillSpan^"*"

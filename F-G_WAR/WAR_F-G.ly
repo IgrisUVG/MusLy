@@ -34,6 +34,7 @@
     \Staff \RemoveEmptyStaves
     \override VerticalAxisGroup.remove-first = ##t
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "flute.ly"

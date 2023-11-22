@@ -7,7 +7,7 @@ cornoMusic = \relative {
   g4 c fis es a,2~ a4 b8( f) r4
   \bar "||"
   \time 4/4
-  b,1(~ b4 des b' es g1 ges) des~ des r2 c'4( b~ b2 a~ a) c4( b~
+  b,1_(~ b4 des b' es g1 ges) des~ des r2 c'4( b~ b2 a~ a) c4( b~
   b2 a) as1~ as4 fes( heses as fes2 es heses4) fes'( heses as
   fes2 es heses4) es( f heses ges1)
   r4 b,,-- es-- es'~ es2-- as,~ as1-- b--

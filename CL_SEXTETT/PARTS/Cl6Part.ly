@@ -5,9 +5,8 @@
 
 \header {
   title = "***"
-  subtitle = "Clarinett"
-  subsubtitle = "in B"
-  instrument = "6"
+  subtitle = "Clarinett in B"
+  subsubtitle = "VI"
   %meter = "Grave"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -15,11 +14,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #5
-  markup-system-spacing #'basic-distance = #35
-  system-system-spacing #'basic-distance = #18
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #30
+  system-system-spacing.basic-distance = #18
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -28,6 +27,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"
@@ -38,7 +38,9 @@
     \override Stem.neutral-direction = #'()
   }
 }
+
 \include "..\clarinet6.ly"
+
 \score {
   \clarinetSechsMusic
 }

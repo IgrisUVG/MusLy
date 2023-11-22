@@ -5,9 +5,9 @@
 
 clarinetSechsMusic = \relative {
   \clef treble
-  \override Staff.TimeSignature #'stencil = ##f
+  \omit Staff.TimeSignature
   \compressFullBarRests
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   R1*2 a'2\f( d, g4\> fis e d~ d c2 e4\! d1)
   e2\p( a, e1 fis)\breathe
   \bar "||"

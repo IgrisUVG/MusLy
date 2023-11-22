@@ -5,7 +5,7 @@
 
 clarinetEinsMusic = \relative {
   \clef treble
-  \override Staff.TimeSignature.stencil = ##f
+  \omit Staff.TimeSignature
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
   ges''4( f8) r es4( d8) r c4-- ges'-- h,( b8) r a4.( b8) e,4.( g8)

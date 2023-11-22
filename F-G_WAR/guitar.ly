@@ -726,13 +726,13 @@ guitarMusic = \relative {
         \once\override Slur.positions = #'(3.3 . 2.8)
         \tag #'Part {
           fis^(-\markup {
-            \postscript #"0.7 7.5 moveto 2.3 -0.5 rlineto stroke"
+            \postscript #"0.8 5.4 moveto 2.3 -0.5 rlineto stroke"
           }
           e)
         }
         \tag #'Partitur {
           fis^(-\markup {
-            \postscript #"0.7 7.5 moveto 3 -0.5 rlineto stroke"
+            \postscript #"0.8 5.4 moveto 2.8 -0.5 rlineto stroke"
           }
           e)
         }
@@ -740,13 +740,13 @@ guitarMusic = \relative {
         \once\override Slur.positions = #'(1.4 . 0.8)
         \tag #'Part {
           h^(-\markup {
-            \postscript #"0.8 7.3 moveto 2.3 -0.5 rlineto stroke"
+            \postscript #"0.9 5.3 moveto 2.3 -0.5 rlineto stroke"
           }
           a)
         }
         \tag #'Partitur {
           h^(-\markup {
-            \postscript #"0.7 7.5 moveto 3 -0.5 rlineto stroke"
+            \postscript #"0.8 5.4 moveto 2.8 -0.5 rlineto stroke"
           }
           a)
         }

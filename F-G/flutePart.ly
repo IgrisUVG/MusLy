@@ -40,5 +40,6 @@
 
 \score {
   \new Staff
+  \removeWithTag #'Cl
   \fluteMusic
 }

@@ -3,7 +3,7 @@
 
 \language "deutsch"
 
-clarinetFierMusic = \relative {
+clarinetVierMusic = \relative {
   \clef treble
   \omit Staff.TimeSignature
   \compressFullBarRests

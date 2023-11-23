@@ -41,35 +41,74 @@
 \include "clarinet5.ly"
 \include "clarinet6.ly"
 
+eZComb = {
+  \partcombine
+  \clarinetEinsMusic
+  \clarinetZweiMusic
+}
+
+dVComb = {
+  \partcombine
+  \clarinetDreiMusic
+  \clarinetVierMusic
+}
+
+fSComb = {
+  \partcombine
+  \clarinetFunfMusic
+  \clarinetSechsMusic
+}
+
+eZDComb = {
+  \partcombine
+  \eZComb
+  \clarinetDreiMusic
+}
+
+vFSComb = {
+  \partcombine
+  \clarinetVierMusic
+  \fSComb
+}
+
 \score {
-  \new StaffGroup = "GrandStaff_clarinetto"
+  \new StaffGroup
   <<
-    \new Staff = "Staff_clarinet1" {
-      \transpose c' b
-      \clarinetEinsMusic
+    \new Staff {
+      %\transpose c' b
+      \eZComb
     }
-
-    \new Staff = "Staff_clarinet2" {
-      \transpose c' b
-      \clarinetZweiMusic
+    \new Staff {
+      %\transpose c' b
+      \dVComb
     }
-    \new Staff = "Staff_clarinet3" {
-      \transpose c' b
-      \clarinetDreiMusic
-    }
-
-    \new Staff = "Staff_clarinet4" {
-      \transpose c' b
-      \clarinetVierMusic
-    }
-    \new Staff = "Staff_clarinet5" {
-      \transpose c' b
-      \clarinetFunfMusic
-    }
-
-    \new Staff = "Staff_clarinet6" {
-      \transpose c' b
-      \clarinetSechsMusic
+    \new Staff {
+      %\transpose c' b
+      \fSComb
     }
   >>
+}
+\pageBreak
+
+\score {
+  \new StaffGroup
+  <<
+    \new Staff {
+      %\transpose c' b
+      \eZDComb
+    }
+    \new Staff {
+      %\transpose c' b
+      \vFSComb
+    }
+  >>
+}
+\pageBreak
+
+\score {
+  \new Staff {
+    \partcombine
+    \vFSComb
+    \eZDComb
+  }
 }

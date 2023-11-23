@@ -55,3 +55,11 @@ oneTwoComb = {
     }
   >>
 }
+
+\score {
+  \new Staff {
+    \partcombine
+    \oneTwoComb
+    \clarinetDreiMusic
+  }
+}

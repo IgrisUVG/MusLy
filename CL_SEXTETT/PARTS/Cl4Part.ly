@@ -41,5 +41,5 @@
 \include "..\clarinet4.ly"
 
 \score {
-  \clarinetFierMusic
+  \clarinetVierMusic
 }

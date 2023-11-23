@@ -6,6 +6,7 @@
 clarinetZweiMusic = \relative {
   \clef treble
   \omit Staff.TimeSignature
+  \hide Voice.Rest
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
   R1 d''( g, c2 h a g~ g fis g) e~( e1~ e2 fis

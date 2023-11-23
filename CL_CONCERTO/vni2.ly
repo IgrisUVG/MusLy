@@ -7,7 +7,7 @@
 vniTwoMusic = \relative {
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   R2.*6 <des'' as'>2.~ q r <c g'>~ <c g'~><ces g'> R2.*13
   <e, h' f'>2. q <es c' ges'><es c' f>
@@ -46,7 +46,7 @@ vniTwoMusic = \relative {
       \voiceTwo
       s2.*2 s2 s8 \once \hide Stem \parenthesize <a,, c>8\glissando
       s2.*2
-      \once \override Accidental #'extra-offset = #'(1 . 0)
+      \once \override Accidental.extra-offset = #'(1 . 0)
       \stemDown <ces' f>2 s4
     }
   >>
@@ -54,10 +54,10 @@ vniTwoMusic = \relative {
   <<
     {
       \voiceThree
-      \once \override NoteHead #'X-offset = #1.7
+      \once \override NoteHead.X-offset = #1.7
       \hide Flag
       \hide Stem
-      \once \override Accidental #'extra-offset = #'(5.7 . 0)
+      \once \override Accidental.extra-offset = #'(5.7 . 0)
       fes4\glissando s4. s2. s2 s8.. \hideNotes b,,32
     }
     \\
@@ -65,7 +65,7 @@ vniTwoMusic = \relative {
       \displaceHeads #'(0 0 0 1 -1)
       \hide Flag
       \hide Stem
-      \once \override Accidental #'extra-offset = #'(0.6 . 0)
+      \once \override Accidental.extra-offset = #'(0.6 . 0)
       <e' f ges>4:32\glissando s4. s2. s2 s8.. \hideNotes g,,32
     }
   >>

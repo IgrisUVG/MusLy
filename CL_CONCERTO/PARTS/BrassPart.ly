@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -15,11 +16,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing #'basic-distance = #25
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #8
-  system-system-spacing #'basic-distance = #28
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #8
+  system-system-spacing.basic-distance = #28
+  last-bottom-spacing.basic-distance = #15
   two-sided = ##t
   inner-margin = 20
   outer-margin = 15
@@ -30,16 +31,19 @@
     \Score
     %\remove "Bar_number_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
+
 \include "../trumpet.ly"
 \include "../corno1.ly"
 \include "../corno2.ly"
 \include "../trombon.ly"
 \include "../tuba.ly"
+
 \score {
   \new StaffGroup = "StaffGroup_brass" <<
     \new Staff = "Staff_trumpet" {
-      \set Staff.instrumentName = #"Tr in  B"
+      \set Staff.instrumentName = #"Trombi in  B"
       %\transpose b c'
       \trumpetMusic
     }
@@ -54,11 +58,11 @@
     }
     <<
       \new Staff = "Staff_hornI" {
-        %\transpose f c' 
+        %\transpose f c'
         \cornoOneMusic
       }
       \new Staff = "Staff_horn2" {
-        %\transpose f c' 
+        %\transpose f c'
         \cornoTwoMusic
       }
     >>

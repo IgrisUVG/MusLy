@@ -7,7 +7,7 @@ vcMusic = \relative es {
   \clef bass
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <b es>2.~ q~ q R2.*6 <g c g'>2.~ q <as des f> R2.*13
   <e' f>2. q <es ges><e f> R2.*3
@@ -68,18 +68,18 @@ vcMusic = \relative es {
   <<
     {
       \voiceThree
-      \once \override NoteHead #'X-offset = #1.7
-      \once \override Stem #'rotation = #'(-43 0 0)
-      \once \override Stem #'extra-offset = #'(-0.5 . -2.7)
-      \once \override Stem #'length = #6
+      \once \override NoteHead.X-offset = #1.7
+      \once \override Stem.rotation = #'(-43 0 0)
+      \once \override Stem.extra-offset = #'(-0.5 . -2.7)
+      \once \override Stem.length = #6
       \hide Flag
       %\once \override Flag.stencil = ##f
-      \once \override Accidental #'extra-offset = #'(3.7 . 0)
+      \once \override Accidental.extra-offset = #'(3.7 . 0)
       h
     }
     \\
     {
-      \once \override Stem #'length = #15
+      \once \override Stem.length = #15
       %\displaceHeads #'(0 0 0 1 -1)
       <b c e f ges>^>:32
     }

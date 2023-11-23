@@ -6,7 +6,7 @@
 clarinetOneMusic = \relative es'' {
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <es g>2.~ q~ q R2.*6 es2.~ es des R2.*5 f2.~ f~ f~ f~ f~ f~ f~ f~ f~ f
   <es ges>2( <d f>4 <cis e>2.)

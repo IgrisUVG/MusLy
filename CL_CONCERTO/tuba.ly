@@ -22,7 +22,7 @@ tubaMusic = \relative {
   \clef "bass_8"
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <es,, es'>2.~ q~ q R2.*6 <c g'>2.~( <c g'^~><des g>) R2.*12
   r4 as''2~ as2.~ as a2( b4 h2.) R2.*2 r2 g4( ges2.~ ges)

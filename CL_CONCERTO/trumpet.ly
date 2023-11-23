@@ -21,7 +21,7 @@ makeOctaves =
 trumpetMusic = \relative es' {
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <es g b>2.~ q~ q R2.*6 <es g c>2.~( q <f as des>) R2.*10  f'2.~ f~ f~ f~ f
   <c ges'>2( <d f>4 <cis e>2.) r2.

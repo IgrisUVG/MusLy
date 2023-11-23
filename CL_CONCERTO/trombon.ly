@@ -7,7 +7,7 @@ trombonMusic = \relative es {
   \clef bass
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <g, b g'>2.~ q~ q R2.*6 <c g' c>2.~( q <des as' ces>) R2.*11
   <<

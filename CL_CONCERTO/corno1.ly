@@ -6,7 +6,7 @@
 cornoOneMusic = \relative es' {
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   es2.~ es~ es heses~ heses~ heses R2.*3 <c es>2.~( q <ces f>) R2.*9  e2.~ e~ e~ e~ e~ e
   es2( e4 f2.) r2. r2 <b, g'>4~ <b~ g'>2.<b ges'>~ q

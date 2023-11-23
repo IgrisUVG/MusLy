@@ -9,7 +9,7 @@ vleMusic = \relative es {
   \clef alto
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <es g b>2.~ q~ q R2.*6 <es' g>2.~ <es g~><des g> R2.*13 h2. h c c R2.*2
   r2 <b,~ es~ g ces~>4 <b es ges ces>2.~ q R2.*7 <b' d>2.~ q8 r r2 r2.

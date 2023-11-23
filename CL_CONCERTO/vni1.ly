@@ -6,7 +6,7 @@
 vniOneMusic = \relative {
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   R2.*6 <des''' f>2.~ q r <c es g>~ q <as des f> R2.*13 
   <e, h' f'>2. q <es c' ges'><es c' f>

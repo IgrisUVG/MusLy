@@ -4,10 +4,11 @@
 \language "deutsch"
 
 clarinetBassMusic = \relative {
-  \clef bass
+  \tag #'inC {\clef bass}
+  \tag #'inB {\clef treble}
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   b2.~ b~ b R2.*6 g2.~ g as R2.*7 f'2.~ f~ f~ f~ f~ f~ f~ f R2.*3
   r4 g,2~( g2. ges~ ges) R2.*9 r4. fis~ fis2. as2 ges4 fes2 es4~ es es2~ es r4

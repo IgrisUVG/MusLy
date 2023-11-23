@@ -1,4 +1,5 @@
-\version "2.18.2"
+\version "2.19.15"
+%\version "2.18.2"
 
 \language "deutsch"
 
@@ -27,7 +28,7 @@
 \layout {
   \context {
     \RemoveEmptyStaffContext
-  }  
+  }
   \context {
     \Score
     \remove "Timing_translator"
@@ -68,7 +69,7 @@
 \score {
   <<
     \new Staff = "Staff_clarinet_Solo" {
-    	\set Staff.midiInstrument = #"clarinet"
+      \set Staff.midiInstrument = #"clarinet"
       \set Staff.instrumentName = \markup {
         \right-column {
           "Clarinetto Solo"
@@ -90,14 +91,14 @@
     }
     \new StaffGroup = "StaffGroup_woodwinds" <<
       \new Staff = "Staff_flute" {
-      	\set Staff.midiInstrument = #"flute"
+        \set Staff.midiInstrument = #"flute"
         \set Staff.instrumentName = #"2 Flauti"
         \set Staff.shortInstrumentName = #"Fl"
         \fluteMusic
       }
-      
+
       \new Staff = "Staff_oboe" {
-      	\set Staff.midiInstrument = #"oboe"
+        \set Staff.midiInstrument = #"oboe"
         \set Staff.instrumentName = #"2 Oboi"
         \set Staff.shortInstrumentName = #"Ob"
         \oboeMusic
@@ -119,19 +120,19 @@
       }
       <<
         \new Staff = "Staff_clarinet1" {
-        	\set Staff.midiInstrument = #"clarinet"
+          \set Staff.midiInstrument = #"clarinet"
           %\transpose b c'
           \clarinetOneMusic
         }
-        
+
         \new Staff = "Staff_clarinet2" {
-        	\set Staff.midiInstrument = #"clarinet"
+          \set Staff.midiInstrument = #"clarinet"
           %\transpose b c'
           \clarinetTwoMusic
         }
       >>
       \new Staff = "Staff_clarinetA" {
-      	\set Staff.midiInstrument = #"clarinet"
+        \set Staff.midiInstrument = #"clarinet"
         \set Staff.instrumentName = \markup {
           \right-column {
             "Clarinetto"
@@ -148,7 +149,7 @@
         \clarinetInAMusic
       }
       \new Staff = "Staff_ClarinetBass" {
-      	\set Staff.midiInstrument = #"clarinet"
+        \set Staff.midiInstrument = #"clarinet"
         \set Staff.instrumentName = \markup {
           \right-column {
             "Clarinetto basso"
@@ -162,10 +163,11 @@
           }
         }
         %\transpose b, c'
+        \removeWithTag #'inB
         \clarinetBassMusic
       }
       \new Staff = "Staff_fagotto" {
-      	\set Staff.midiInstrument = #"bassoon"
+        \set Staff.midiInstrument = #"bassoon"
         \set Staff.instrumentName = #"Fagotti"
         \set Staff.shortInstrumentName = #"Fag"
         \fagottoMusic
@@ -173,13 +175,13 @@
     >>
     \new StaffGroup = "StaffGroup_brass" <<
       \new Staff = "Staff_trumpet" {
-      	\set Staff.midiInstrument = #"trumpet"
+        \set Staff.midiInstrument = #"trumpet"
         \set Staff.instrumentName = #"4 Trombi in  B"
         \set Staff.shortInstrumentName = #"Tr in  B"
         %\transpose b c'
         \trumpetMusic
       }
-      
+
       \new StaffGroup = "GrandStaff_corni" \with {
         instrumentName = \markup {
           \right-column {
@@ -197,13 +199,13 @@
       }
       <<
         \new Staff = "Staff_hornI" {
-        	\set Staff.midiInstrument = #"french horn"
-          %\transpose f c' 
+          \set Staff.midiInstrument = #"french horn"
+          %\transpose f c'
           \cornoOneMusic
         }
         \new Staff = "Staff_horn2" {
-        	\set Staff.midiInstrument = #"french horn"
-          %\transpose f c' 
+          \set Staff.midiInstrument = #"french horn"
+          %\transpose f c'
           \cornoTwoMusic
         }
       >>
@@ -224,12 +226,12 @@
       }
       <<
         \new Staff = "Staff_trombon" {
-        	\set Staff.midiInstrument = #"trombone"
+          \set Staff.midiInstrument = #"trombone"
           \trombonMusic
         }
-        
+
         \new Staff = "Staff_tuba" {
-        	\set Staff.midiInstrument = #"tuba"
+          \set Staff.midiInstrument = #"tuba"
           \tubaMusic
         }
       >>
@@ -240,38 +242,38 @@
       }
       <<
         \new Staff = "Staff_violinI" {
-        	\set Staff.midiInstrument = #"string ensemble 1"
+          \set Staff.midiInstrument = #"string ensemble 1"
           \set Staff.instrumentName = #"Violini I"
           \set Staff.shortInstrumentName = #"V-ni I"
           \vniOneMusic
         }
-        
+
         \new Staff = "Staff_violinII" {
-        	\set Staff.midiInstrument = #"string ensemble 1"
+          \set Staff.midiInstrument = #"string ensemble 1"
           \set Staff.instrumentName = #"Violini II"
           \set Staff.shortInstrumentName = #"V-ni II"
           \vniTwoMusic
         }
       >>
       \new Staff = "Staff_viola" {
-      	\set Staff.midiInstrument = #"string ensemble 1"
+        \set Staff.midiInstrument = #"string ensemble 1"
         \set Staff.instrumentName = #"Viole"
         \set Staff.shortInstrumentName = #"V-le"
         \vleMusic
       }
-      
+
       \new StaffGroup = "GrandStaff_bassi" \with {
         systemStartDelimiter = #'SystemStartSquare
       }
       <<
         \new Staff = "Staff_cello" {
-        	\set Staff.midiInstrument = #"string ensemble 1"
+          \set Staff.midiInstrument = #"string ensemble 1"
           \set Staff.instrumentName = #"Violoncelli"
           \set Staff.shortInstrumentName = #"Vc"
           \vcMusic
         }
         \new Staff = "Staff_bass" {
-        	\set Staff.midiInstrument = #"string ensemble 1"
+          \set Staff.midiInstrument = #"string ensemble 1"
           \set Staff.instrumentName = #"Contrabassi"
           \set Staff.shortInstrumentName = #"Cb"
           \cbMusic

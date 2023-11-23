@@ -26,6 +26,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"

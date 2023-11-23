@@ -7,7 +7,7 @@ fagottoMusic = \relative es {
   \clef bass
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   es2.~ es~ es R2.*6 es2.~ es f R2.*6 f'2.~ f~ f~ f~ f~ f~ f~ f~ f R2.*3
   r2 es,4~ es2.~ es~ es R2.*7 fis,2.~ fis8 r r2 r2 d'4~ d2. es es~ es4 des2( ces) r4

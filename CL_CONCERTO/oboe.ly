@@ -6,7 +6,7 @@
 oboeMusic = \relative es'' {
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   <b es>2.~ q~ q R2.*6 <g' c>2.~ q <as ces> R2.*6 f2.~ f~ f~ f~ f~ f~ f~ f~ f
   R2.*2 r4 g,2~( g2.~ g ges~ ges) R2.*7 <b' d>2.~ q8 r r2 r2. r2 <fis d'>4~ q2.

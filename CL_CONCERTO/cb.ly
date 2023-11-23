@@ -1,4 +1,5 @@
-\version "2.18.2"
+\version "2.19.15"
+%\version "2.18.2"
 
 \language "deutsch"
 
@@ -21,7 +22,7 @@ cbMusic = \relative {
   \clef "bass_8"
   \time 3/4
   \key es \major
-  \override MultiMeasureRest #'expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   \makeOctaves #1  {
     es,,2.~ es~ es R2.*6 c2.~ c ces R2.*13 as'2. as a g c,~( c ces~ ces~ ces) R2.*7 fis2.(

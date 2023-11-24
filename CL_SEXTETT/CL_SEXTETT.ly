@@ -45,30 +45,30 @@
   \new StaffGroup = "GrandStaff_clarinetto"
   <<
     \new Staff = "Staff_clarinet1" {
-      \transpose c' b
+      %\transpose c' b
       \clarinetEinsMusic
     }
 
     \new Staff = "Staff_clarinet2" {
-      \transpose c' b
+      %\transpose c' b
       \clarinetZweiMusic
     }
     \new Staff = "Staff_clarinet3" {
-      \transpose c' b
+      %\transpose c' b
       \clarinetDreiMusic
     }
 
     \new Staff = "Staff_clarinet4" {
-      \transpose c' b
+      %\transpose c' b
       \clarinetVierMusic
     }
     \new Staff = "Staff_clarinet5" {
-      \transpose c' b
+      %\transpose c' b
       \clarinetFunfMusic
     }
 
     \new Staff = "Staff_clarinet6" {
-      \transpose c' b
+      %\transpose c' b
       \clarinetSechsMusic
     }
   >>

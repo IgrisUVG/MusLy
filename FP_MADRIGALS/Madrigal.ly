@@ -3,7 +3,15 @@
 \language "deutsch"
 
 \header {
-  title = "Madrigals"
+  %title = "Madrigals"
+  title = \markup {
+    \fill-line {
+      \override #'(font-name . "GothicG")
+      \fontsize #4
+      \bold
+      "Madrigals"
+    }
+  }
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -33,6 +41,8 @@
     \remove "Bar_number_engraver"
   }
 }
+
+#(ly:font-config-add-font "gothicg_.ttf")
 
 %%%%%%%%%%%%%%%%%%%%%%% RH %%%%%%%%%%%%%%%%%%%%%%%
 rechts = \relative {

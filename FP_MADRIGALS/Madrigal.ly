@@ -310,11 +310,11 @@ links = \relative {
   <gis,,, e'>\fermata r
   <<
     {
-      cis''
+      cis''1
     }
     \\
     {
-      fis, dis
+      fis,2 dis
     }
   >>
   < gis dis'>2<h fis'>

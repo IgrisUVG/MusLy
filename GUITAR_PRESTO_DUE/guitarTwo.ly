@@ -18,6 +18,57 @@ stringNumSpan =
      \override TextSpanner.bound-details.left.text = \markup { \circle \number #StringNumber }
    #})
 
+guitarTwoCoda = \relative {
+  \key e \major
+  \tag #'Part {\time 6/8}
+  \override Staff.TimeSignature.stencil = ##f
+  \compressFullBarRests
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
+  \clef "treble_8"
+  \override TextScript.extra-offset = #'(-.3 . 1)
+  \textLengthOn
+  \override TextScript.font-size = -2
+  \override StringNumber.staff-padding = #'()
+  \override Fingering.staff-padding = #'()
+  <<
+    {
+      \override TextScript.font-size = -2
+      gis8^"I" e16_( fis) gis a h8 h h fis dis16_( e) fis gis a8_( gis) h
+      e, cis16_(^"IV" dis) e fis gis8_( a) fis
+    }
+    \\
+    {
+      e,4. e e e e e
+    }
+  >>
+  \tag #'Part {\break}
+  <<
+    {
+      e'8^"I" h gis' fis^"II" h, a' gis a16_( gis) fis e fis_( e) dis cis h8
+      e^"II" h  gis' fis^"II" h, a'\4
+      \revert TextScript.font-size
+      \once \override TextScript.extra-offset = #'(0 . 1)
+      gis^\markup { \italic rit }
+      h16(
+      \once \override Fingering.extra-offset = #'(0 . 4)
+      a)_1
+      \once \override Fingering.extra-offset = #'(0 . 3.6)
+      gis_1 fis e4
+    }
+    \\
+    {
+      e,4. e e s e4 gis8 fis r
+      \once \override StringNumber.extra-offset = #'(.5 . 1.4)
+      h_\6 gis
+      \once \override Fingering.extra-offset = #'(.3 . 2.5)
+      a-0
+      \once \override Fingering.extra-offset = #'(.3 . 2.5)
+      h_2 e,4
+    }
+  >>
+  \tag #'Part {\bar "|."}
+}
+
 guitarTwo = \relative {
   \key e \major
   \time 6/8
@@ -99,20 +150,45 @@ guitarTwo = \relative {
   }
   \tag #'Partitur {a8_\4}
   \tag #'Part {\break}
-  <<
-    {
-      \override TextScript.font-size = -2
-      gis8^"VI" e16_( fis) gis a h8 h h fis dis16_( e) fis gis a8_( gis) h
-      e, cis16_(^"IV" dis) e fis gis8_( a) fis
-    }
-    \\
-    {
-      e,4. e e e e e
-    }
-  >>
-  \tag #'Part {\break}
-  <e e'\5>8^"VI" h'_\6 gis' fis h, a' gis a16( gis) fis e fis( e) dis cis h8
-  e h  gis' fis h, a' gis h16( a) gis fis e4 \bar "!"
+  \tag #'Part {
+    <<
+      {
+        \override TextScript.font-size = -2
+        gis8^"VI" e16_( fis) gis a h8 h h fis dis16_( e) fis gis a8_( gis) h
+        e, cis16_(^"IV" dis) e fis gis8_( a) fis
+      }
+      \\
+      {
+        e,4. e e e e e
+      }
+    >>
+    \tag #'Part {\break}
+    <e e'\5>8^"VI" h'_\6 gis' fis h, a' gis a16( gis) fis e fis( e) dis cis h8
+    e h  gis' fis h, a' gis h16( a) gis fis e4 \bar "!"
+  }
+  \tag #'Ossia {
+    <<
+      {
+        <<
+          {
+            \override TextScript.font-size = -2
+            gis8^"VI" e16_( fis) gis a h8 h h fis dis16_( e) fis gis a8_( gis) h
+            e, cis16_(^"IV" dis) e fis gis8_( a) fis
+          }
+          \\
+          {
+            e,4. e e e e e
+          }
+        >>
+        \tag #'Part {\break}
+        <e e'\5>8^"VI" h'_\6 gis' fis h, a' gis a16( gis) fis e fis( e) dis cis h8
+        e h  gis' fis h, a' gis h16( a) gis fis e4 \bar "!"
+      }
+      \new Staff {
+        \guitarTwoCoda
+      }
+    >>
+  }
   \tag #'Part {\break}
   \tag #'Part {
     \once \override Score.RehearsalMark.extra-offset = #'(10 . 0)
@@ -223,54 +299,4 @@ guitarTwo = \relative {
   }
   \tag #'Partitur {r4.}
   \bar "||"
-}
-
-guitarTwoCoda = \relative {
-  \key e \major
-  \time 6/8
-  \override Staff.TimeSignature.stencil = ##f
-  \compressFullBarRests
-  \clef "treble_8"
-  \override TextScript.extra-offset = #'(-.3 . 1)
-  \textLengthOn
-  \override TextScript.font-size = -2
-  \override StringNumber.staff-padding = #'()
-  \override Fingering.staff-padding = #'()
-  <<
-    {
-      \override TextScript.font-size = -2
-      gis8^"I" e16_( fis) gis a h8 h h fis dis16_( e) fis gis a8_( gis) h
-      e, cis16_(^"IV" dis) e fis gis8_( a) fis
-    }
-    \\
-    {
-      e,4. e e e e e
-    }
-  >>
-  \tag #'Part {\break}
-  <<
-    {
-      e'8^"I" h gis' fis^"II" h, a' gis a16_( gis) fis e fis_( e) dis cis h8
-      e^"II" h  gis' fis^"II" h, a'\4
-      \revert TextScript.font-size
-      \once \override TextScript.extra-offset = #'(0 . 1)
-      gis^\markup { \italic rit }
-      h16(
-      \once \override Fingering.extra-offset = #'(0 . 4)
-      a)_1
-      \once \override Fingering.extra-offset = #'(0 . 3.6)
-      gis_1 fis e4.
-    }
-    \\
-    {
-      e,4. e e s e4 gis8 fis r
-      \once \override StringNumber.extra-offset = #'(.5 . 1.4)
-      h_\6 gis
-      \once \override Fingering.extra-offset = #'(.3 . 2.5)
-      a-0
-      \once \override Fingering.extra-offset = #'(.3 . 2.5)
-      h_2 e,4.
-    }
-  >>
-  \bar "|."
 }

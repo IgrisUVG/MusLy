@@ -25,6 +25,7 @@ guitarOne =
   \time 6/8
   \compressFullBarRests
   %\override TextScript.self-alignment-X = #CENTER
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \clef "treble_8"
   \override TextScript.extra-offset = #'(-.3 . 1)
   \textLengthOn

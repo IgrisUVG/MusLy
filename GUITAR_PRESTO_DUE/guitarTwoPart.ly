@@ -42,7 +42,7 @@
     \new Staff %\with {
     %instrumentName = "Guitar II"
     %}
-    \removeWithTag  #'Partitur
+    \removeWithTag  #'(Partitur Ossia)
     \guitarTwo
     \new Dynamics \removeWithTag  #'(Part PartI) \dynamic
   >>

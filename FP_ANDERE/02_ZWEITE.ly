@@ -96,8 +96,8 @@ loopL = \relative {
         r8 f4 e8 f!8. dis16 cis4 b' as g!
         \set tupletSpannerDuration = #(ly:make-moment 1 8)
         \times 2/3 {
-          \override TupletNumber #'transparent = ##t
-          \override TupletBracket #'bracket-visibility = ##f
+          \override TupletNumber.transparent = ##t
+          \override TupletBracket.bracket-visibility = ##f
           r16 b, es r a, f' r d! g r e g
           r d a' r d, g r c, g' r h, f' r b, f' r as, f'
           r g, c r e, g r g a r a c r e, a r c e
@@ -226,8 +226,8 @@ loopL = \relative {
             dis2 d4~ d des2
             \set tupletSpannerDuration = #(ly:make-moment 1 8)
             \times 2/3 {
-              \override TupletNumber #'transparent = ##t
-              \override TupletBracket #'bracket-visibility = ##f
+              \override TupletNumber.transparent = ##t
+              \override TupletBracket.bracket-visibility = ##f
               \override Rest.staff-position = #0
               r16 es ges r des ges r c, ges' r ces, ges' r ces, f r ces fes
               r a,! d! r a e'! r a, d r a d r a c r fis, h
@@ -385,8 +385,8 @@ loopL = \relative {
             \set tupletSpannerDuration = #(ly:make-moment 1 8)
             \times 2/3 {
               <gis b>16 f'! gis r e g
-              \override TupletNumber #'transparent = ##t
-              \override TupletBracket #'bracket-visibility = ##f
+              \override TupletNumber.transparent = ##t
+              \override TupletBracket.bracket-visibility = ##f
               r_\markup {\italic sim}
               d f r a, e' r fis h! r d, f
               r e gis r f d' r f, gis r e g r d f r d e

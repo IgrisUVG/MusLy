@@ -44,7 +44,7 @@
     %}
     \removeWithTag  #'(Partitur Ossia)
     \guitarTwo
-    \new Dynamics \removeWithTag  #'(Part PartI) \dynamic
+    \new Dynamics \removeWithTag  #'(Partitur Part PartI) \dynamic
   >>
 }
 
@@ -53,7 +53,7 @@
     \new Staff \with {
     instrumentName = "Coda"
     }
-    %\removeWithTag  #'Partitur
+    \removeWithTag  #'Ossia
     \guitarTwoCoda
     %\new Dynamics \removeWithTag  #'(Part PartI) \dynamic
   >>

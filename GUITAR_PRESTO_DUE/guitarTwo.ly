@@ -53,7 +53,11 @@ guitarTwoCoda = \relative {
       \once \override Fingering.extra-offset = #'(0 . 4)
       a)_1
       \once \override Fingering.extra-offset = #'(0 . 3.6)
-      gis_1 fis e4
+      gis_1 fis \tag #'Part {e4.}
+      \tag #'Ossia {
+        \once \override TextScript.extra-offset = #'(2 . 1)
+        e4-"Fine"
+      }
     }
     \\
     {
@@ -63,7 +67,10 @@ guitarTwoCoda = \relative {
       \once \override Fingering.extra-offset = #'(.3 . 2.5)
       a-0
       \once \override Fingering.extra-offset = #'(.3 . 2.5)
-      h_2 e,4
+      h_2 \tag #'Part {e,4.}
+      \tag #'Ossia {
+        e4
+      }
     }
   >>
   \tag #'Part {\bar "|."}
@@ -182,7 +189,9 @@ guitarTwo = \relative {
         >>
         \tag #'Part {\break}
         <e e'\5>8^"VI" h'_\6 gis' fis h, a' gis a16( gis) fis e fis( e) dis cis h8
-        e h  gis' fis h, a' gis h16( a) gis fis e4 \bar "!"
+        e h  gis' fis h, a' gis h16( a) gis fis e4
+        \once \override Staff.BarLine.allow-span-bar = ##f
+        \bar "!"
       }
       \new Staff {
         \guitarTwoCoda
@@ -286,10 +295,13 @@ guitarTwo = \relative {
   e4 g8 h16 e d c h a g8 e16( fis) g a h8-. h-. h-.
   h16( c) h a g fis g8 e h e,4.
   \tag #'Part {
-    %\once \override TextScript.self-alignment-X = #CENTER
-    \once \override TextScript.extra-offset = #'(1 . -1)
-    \once \override TextScript.font-size = 0.5
-    r4._\markup {
+    r4.
+    \bar "||"
+    \override Score.RehearsalMark.font-size = 0.5
+    \override Score.RehearsalMark.self-alignment-X = #RIGHT
+    \override Score.RehearsalMark.direction = #DOWN
+    \override Score.RehearsalMark.extra-offset = #'(.5 . -1)
+    \mark \markup {
       \column {
         \italic D.C.
         \line {\italic {al fine}}
@@ -297,6 +309,18 @@ guitarTwo = \relative {
       }
     }
   }
-  \tag #'Partitur {r4.}
-  \bar "||"
+  \tag #'Partitur {
+    r4.
+    \bar "||"
+    \override Score.RehearsalMark.font-size = 0.5
+    \override Score.RehearsalMark.self-alignment-X = #RIGHT
+    \override Score.RehearsalMark.direction = #DOWN
+    \override Score.RehearsalMark.extra-offset = #'(.5 . -1)
+    \mark \markup {
+      \column {
+        \line {\italic {Da capo}}
+        \line {\italic {al Fine}}
+      }
+    }
+  }
 }

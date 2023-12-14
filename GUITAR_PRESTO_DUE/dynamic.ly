@@ -19,7 +19,7 @@ dynamic = {
   \tag #'PartII {\override DynamicText.extra-offset = #'(0 . 2)}
   s8\pp s4
   \tag #'PartI {
-    s8 s16 
+    s8 s16
     \override DynamicText.extra-offset = #'(0 . 2)
     s8.\p s8
     \once \override Hairpin.extra-offset = #'(0 . 2)

@@ -11,7 +11,10 @@ dynamic = {
   \once \override TextScript.extra-offset = #'(0 . 10)
   s8\ff^\markup { \italic rit }
   s2
-  \tag #'Partitur {s8\mp s2.*5 s8.}
+  \tag #'Partitur {
+    \tag #'PartI {\once \override DynamicText.extra-offset = #'(.7 . 0)}
+    s8\mp s2.*5 s8.
+  }
   \tag #'Part { s8 s8\mp s2.*5 s16} s16
   s2 s8
   \tag #'PartII {\once \override Hairpin.extra-offset = #'(0 . 2)}

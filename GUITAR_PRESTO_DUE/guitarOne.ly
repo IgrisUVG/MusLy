@@ -161,7 +161,7 @@ guitarOne =
   e, h' a h gis h fis h e, h' dis, h'
   e, gis h gis fis h e, fis h fis dis h'
   e,8 <h gis' e'><h fis' dis'><h e gis e'>4
-  \bar "!"
+  \tag #'Partitur {\bar "!"}
   \tag #'Part {
     \once \override TextScript.self-alignment-X = #CENTER
     \once \override TextScript.extra-offset = #'(1 . -1)

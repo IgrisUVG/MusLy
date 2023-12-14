@@ -44,7 +44,7 @@
     %}
     \removeWithTag  #'(Partitur Ossia)
     \guitarTwo
-    \new Dynamics \removeWithTag  #'(Partitur Part PartI) \dynamic
+    \new Dynamics \removeWithTag  #'(Part PartI) \dynamic
   >>
 }
 

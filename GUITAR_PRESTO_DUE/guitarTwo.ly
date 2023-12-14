@@ -193,8 +193,15 @@ guitarTwo = \relative {
         \once \override Staff.BarLine.allow-span-bar = ##f
         \bar "!"
       }
-      \new Staff {
-        \guitarTwoCoda
+      \\
+      {
+        \new Staff = "Ossia" \with {
+          systemStartDelimiter = #'SystemStartSquare
+          fontSize = #-2
+        }
+        {
+          \guitarTwoCoda
+        }
       }
     >>
   }
@@ -272,12 +279,12 @@ guitarTwo = \relative {
   %\once \override Score.RehearsalMark.font-size = -0.2
   \mark \markup { a tempo}
 
-  \override Staff.Clef #'break-visibility = #begin-of-line-visible
-  %\override Staff.Clef #'explicitClefVisibility = #begin-of-line-visible
-  \override Staff.TimeSignature #'break-visibility = #begin-of-line-visible
+  \override Staff.Clef.break-visibility = #begin-of-line-visible
+  %\override Staff.Clef.explicitClefVisibility = #begin-of-line-visible
+  \override Staff.TimeSignature.break-visibility = #begin-of-line-visible
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible % this will do the job with the time signatures
-  \override Staff.KeyCancellation #'break-visibility = #all-invisible
-  %\override Staff.KeyCancellation #'explicitKeySignatureVisibility = #all-invisible
+  \override Staff.KeyCancellation.break-visibility = #all-invisible
+  %\override Staff.KeyCancellation.explicitKeySignatureVisibility = #all-invisible
 
   \key e \minor
   <e, g' e'>8 e e e e16( fis) g a h8 h h c16( h) a g fis g

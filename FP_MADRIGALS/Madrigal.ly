@@ -150,7 +150,9 @@ rechts = \relative {
     \\
     {
       \voiceTwo
-      fis1-> eis->\once\showStaffSwitch
+      fis1-> 
+      \override Voice.VoiceFollower.Y-extent = #'(-1 . 1)
+      eis->\showStaffSwitch
       \change Staff = LH
       ais,^>
       \change Staff = RH
@@ -307,6 +309,7 @@ links = \relative {
   \clef treble
   <h' gis'>2-> <e gis ais>->
   \clef bass
+  %\once \override Script.extra-offset = #'(0 . -1)
   <gis,,, e'>\fermata r
   <<
     {
@@ -342,12 +345,12 @@ links = \relative {
 dynamic = {
   s1*5\pp s1\< s\mf s1*2\> s1\ppp s1*4\pp s1\> s1*8\ff
   s1*3\p s4 s2.\> s1\pp
-  \override DynamicText.extra-offset = #'(0 . -1.6)
+  \once \override DynamicText.extra-offset = #'(0 . -1)
   s\f s1*3\pp s4
   \once \override Hairpin.extra-offset = #'(0 . -1.6)
-  s2.\> s1 s\ppp
-  \revert DynamicText.extra-offset
-  s1*5\p
+  s2.\> s1 
+  \once \override DynamicText.extra-offset = #'(0 . -1)
+  s\ppp s1*5\p
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%% S %%%%%%%%%%%%%%%%%%%%%%%

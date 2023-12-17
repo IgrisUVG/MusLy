@@ -44,7 +44,7 @@ ersteStimme = \relative {
   \bot d
   d8 e16 fis g4 g 
   \stemDown
-  \top a h2 \bot r
+  \top a h2 s2
 }
 zweiteStimme = \relative {
   \set Timing.beamExceptions = #'()

@@ -56,7 +56,7 @@
     \layout {
       \context {
         \Score
-        \override StaffGrouper.staff-staff-spacing.basic-distance = #11
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #15
         \remove "Bar_number_engraver"
       }
     }
@@ -76,7 +76,7 @@
     \layout {
       \context {
         \Score
-        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #15
         \remove "Bar_number_engraver"
       }
     }

@@ -11,6 +11,7 @@
 }
 
 \paper {
+  #(include-special-characters)
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #5
@@ -113,6 +114,10 @@ rechts = \relative {
   as1^\shape #'((0 . 0.5) (2 . 2) (-3 . 2) (0 . 0.5))~
   <as ges'>_\fermata
   \bar "|."
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -1)
+  \mark \markup {\fontsize #-2 {&glqq;Вокализ&elqq;}}
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%

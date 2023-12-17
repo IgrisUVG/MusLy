@@ -11,6 +11,7 @@
 }
 
 \paper {
+  #(include-special-characters)
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #15
@@ -463,6 +464,10 @@ links = \relative {
   b ces des es e fis g a
   ais\breve b,4 r <h,! fis' d'>2<es es'>1
   \bar "|."
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -2)
+  \mark \markup {\fontsize #-2 {&glqq;Berge&elqq;}}
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

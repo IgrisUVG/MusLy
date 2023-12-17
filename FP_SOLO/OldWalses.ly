@@ -5,7 +5,7 @@
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
-  top-markup-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #5
   markup-system-spacing.basic-distance = #30
   system-system-spacing.basic-distance = #20
   score-system-spacing.basic-distance = #35
@@ -97,6 +97,10 @@ rechtsOne = \relative {
     }
   >>
   \bar "|."
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -5)
+  \mark \markup {\small {"26/IX 89"}}
 
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -236,7 +240,10 @@ rechtsTwo = \relative {
     }
   >>
   \bar "|."
-
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -5)
+  \mark \markup {\small {"7.11.89"}}
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 linksTwo = \relative {
@@ -309,7 +316,6 @@ linksTwo = \relative {
     \ottava #0
   }
   r2
-
 }
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamicTwo = {

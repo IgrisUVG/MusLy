@@ -11,6 +11,7 @@
 }
 
 \paper {
+  #(include-special-characters)
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #15
@@ -140,6 +141,10 @@ links = \relative {
   <f c' f>1-^
   \ottava #0
   \bar "|."
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -1)
+  \mark \markup {\fontsize #-2 {&glqq;Когда жо будет дождь?&elqq;}}
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

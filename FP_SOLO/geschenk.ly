@@ -13,11 +13,11 @@
 %#(set-global-staff-size 18)
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #25
-  top-markup-spacing.basic-distance = #15
-  markup-system-spacing.basic-distance = #30
-  system-system-spacing.basic-distance = #25
-  last-bottom-spacing.basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #5
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #20
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -28,10 +28,14 @@
 \layout {
   \context {
     \Score
-    \override StaffGrouper.staff-staff-spacing.basic-distance = #15
+    \override StaffGrouper.staff-staff-spacing.basic-distance = #13
     %\remove "Bar_number_engraver"
   }
 }
+
+%%%%%%%%% SCRIPTS %%%%%%%%%
+top = \change Staff = "RH"
+bot = \change Staff = "LH"
 
 global = {
   \override Staff.TimeSignature.stencil = ##f
@@ -256,7 +260,32 @@ rechts = \relative {
   <d d'>16
   \set stemLeftBeamCount = #1
   <c c'><b b'><a a'>
-  \stemUp<a a'>8^(<g g'>16) s8.
+  \stemUp<a a'>8^(<g g'>16) s8. s4.
+  \bar "||"
+  \break
+  \stemNeutral
+  g'4.~ 
+  \stemUp
+  g8 c h 
+  \break
+  \stemDown
+  a4
+  \stemUp
+  g8^~ g c h
+  \break
+  \stemDown
+  g2.
+  \break
+  s
+  \break
+  s
+  \break
+  s2 
+  \stemUp
+  <a cis a'>8 <gis h gis'>
+  \stemDown
+  <e gis e'>2.
+  \bar "|."
 }
 %%%%%%%% DYNAMIC %%%%%%%%%%
 dynamic = {
@@ -438,6 +467,52 @@ links = \relative {
       g,16_( a32 b c d es f g fis g16) r4.
     }
   >>
+  \bar "||"
+  \break  
+  <<
+    {
+      \set subdivideBeams = ##t
+      \set baseMoment = #(ly:make-moment 1/8)
+      \set beatStructure = #'(2 2 2)
+      r32
+      \once\override Beam.positions = #'(6 . 7)
+      d, a' h g \top d' \bot h 
+      \stemDown
+      \top e d a' g h d a e' h 
+      \once\override Beam.positions = #'(-5 . -7)
+      d g, h d, g \bot h, \top d
+      \stemUp
+      \bot a
+      g d a' g 
+      \stemDown
+      \top d' h g' d h' a d c h a d, g
+      \stemUp
+      \bot h, d g, h d, g h, d
+      r32
+      \once\override Beam.positions = #'(6 . 7)
+      dis! a' h g
+      \stemDown
+      \top dis'! h g' dis a' g h dis! a fis' h, 
+      \once\override Beam.positions = #'(-5 . -7)
+      dis g, h dis, g h, dis a
+      \bot g dis a' g \top dis' h g' dis
+      h' a dis c h a dis, g
+      \bot h, dis g, h dis, g h, dis
+      \stemUp
+      c gis'! a
+      \stemDown
+      \top e' c fis e a gis c a e' h gis' e c'
+      fis, e' a, fis' h, a' gis h,
+      e a, c fis, gis c, e a,
+      h dis gis, h fis a e gis
+      c, e \bot a, c fis, a h, dis
+    }
+    \\
+    {
+      g,2. s g s c s
+    }
+  >>
+  <e, h' e>
 }
 
 \score {

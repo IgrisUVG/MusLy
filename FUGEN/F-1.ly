@@ -7,6 +7,8 @@ top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
 ersteStimme = \relative {
+  %\override TextScript.font-size = 2
+  \override TextScript.font-name = "GothicG"
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
@@ -30,13 +32,15 @@ ersteStimme = \relative {
   \bar "|."
 }
 zweiteStimme = \relative {
+  %\override TextScript.font-size = 2
+  \override TextScript.font-name = "GothicG"
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
   \voiceTwo
   R1 r2
   \stemUp
-  d'8 a'16 h
+  d'8^"T" a'16 h
   \stemDown
   cis8 e
   d fis16 e d cis h a cis8 e16 d cis h a gis
@@ -78,18 +82,20 @@ zweiteStimme = \relative {
   cis8 e16 d cis h a g a8 fis g a
   d,2 r
 }
-dritteStimme = \relative {  
+dritteStimme = \relative {
+  %\override TextScript.font-size = 2
+  \override TextScript.font-name = "GothicG"
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
   \stemDown
-  \top a8 d16 e fis8 a g h16 a g fis e d
+  \top a8-"T" d16 e fis8 a g h16 a g fis e d
   fis8 a16 g fis e d cis
-  d h e d
+  d-"P" h e d
   \stemNeutral
   \bot cis h a gis
   a fis d' cis h a gis fis gis e cis' h a gis fis e
-  fis d h' a g! fis e d e cis a' g fis e d cis
+  fis^"I" d h' a g! fis e d e cis a' g fis e d cis
   d e a g fis e d cis d4 a'
   d,8 fis fis,4 h8 e16 fis g8 h,
   \stemDown

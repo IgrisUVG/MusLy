@@ -42,7 +42,7 @@
       \fill-line {
         \override #'(font-name . "GothicG")
         \fontsize #12
-        \bold
+        %\bold
         "Fugen"
       }
     }

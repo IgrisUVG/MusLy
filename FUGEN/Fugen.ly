@@ -58,7 +58,7 @@
       \new Staff = "LH" \ersteLH
     >>
     \header {
-      title = "№ 1"
+      title = "1"
       composer = ##f
       breakbefore = ##t
     }
@@ -79,7 +79,7 @@
       \new Staff = "LH" \zweiteLH
     >>
     \header {
-      title = "№ 2"
+      title = "2"
       composer = ##f
     }
     \layout {
@@ -99,13 +99,13 @@
       \new Staff = "LH" \dritteLH
     >>
     \header {
-      title = "№ 3"
+      title = "3"
       composer = ##f
     }
     \layout {
       \context {
         \Score
-        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #15
         \remove "Bar_number_engraver"
       }
     }

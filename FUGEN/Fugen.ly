@@ -26,6 +26,8 @@
   }
 }
 
+#(ly:font-config-add-font "gothicg_.ttf")
+
 %%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
 \include "F-1.ly"
 \include "F-2.ly"
@@ -36,12 +38,19 @@
     print-all-headers = ##t
   }
   \header {
-    title = \markup { \fontsize #8 "Fugen" }
+    title = \markup {
+      \fill-line {
+        \override #'(font-name . "GothicG")
+        \fontsize #12
+        \bold
+        "Fugen"
+      }
+    }
     %composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   \markup { \vspace #1 }
-  %%%%%%%%%%%%%%%%%%%%% ERSTE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% ERSTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \ersteRH
@@ -62,7 +71,7 @@
     }
   }
   \pageBreak
-  %%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \zweiteRH
@@ -82,7 +91,7 @@
     }
   }
   \pageBreak
-  %%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
   \score {
     \new PianoStaff <<
       \new Staff = "RH" \dritteRH
@@ -121,6 +130,6 @@
         \remove "Bar_number_engraver"
       }
     }
-  } 
+  }
   %}
 }

@@ -8,20 +8,20 @@ bot = \change Staff = "LH"
 
 ersteStimme = \relative {
   %\override TextScript.font-size = 2
-  \override TextScript.font-name = "GothicG"
+  %\override TextScript.font-name = "GothicG"
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
   \voiceOne
   R1*4
   \stemUp
-  a'8 d16 e fis8 a g h16 a g fis e d
+  a'8-"T" d16 e fis8 a g h16 a g fis e d
   fis8 a16 g fis e d cis d h g' fis e d cis h
   cis a fis' e d cis h a h g e' d cis h a g
   a fis d' cis h a g fis g e cis' h a g fis e
-  fis8 h16 cis d8 fis e g16 fis e d cis h
+  fis8-"T" h16 cis d8 fis e g16 fis e d cis h
   d8 fis16 e d c h a h8 r r4 R1
-  e,8 h'4 a8 h d4 g,8 a cis4 fis,8 g d'4 cis8
+  e,8-"P" h'4 a8 h d4 g,8 a cis4 fis,8 g d'4 cis8
   d\noBeam h16 cis d8 fis e a,16 h cis8 e
   d g,16 a h8 d cis fis,16 g a8 cis
   h e,16 fis g8 h a d,16 e fis8 a
@@ -33,7 +33,7 @@ ersteStimme = \relative {
 }
 zweiteStimme = \relative {
   %\override TextScript.font-size = 2
-  \override TextScript.font-name = "GothicG"
+  %\override TextScript.font-name = "GothicG"
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
@@ -64,13 +64,13 @@ zweiteStimme = \relative {
   d e fis h a4 a a fis g16 a d c h a g fis
   g e c' h a g fis e fis d h' a g fis e d
   \stemUp
-  \bot g,8
+  \bot g,8^"T"
   \stemDown
   \top d'16 e fis8 a e h'16 a g fis e d
   fis8 a16 g fis e d cis d8 h' a e
   d16
   \stemUp
-  \bot h g' fis
+  \bot h^"I" g' fis
   \stemNeutral
   e d cis h cis a fis' e d cis h a
   h g e' d cis h a g a fis d' cis h a g fis
@@ -78,13 +78,13 @@ zweiteStimme = \relative {
   e cis a' g fis e d cis d8\noBeam g' a
   \stemDown
   \top d~ d4 a g8 h a e
-  d a'16 h cis8 e d fis16 e d cis h a
+  d-"T" a'16 h cis8 e d fis16 e d cis h a
   cis8 e16 d cis h a g a8 fis g a
   d,2 r
 }
 dritteStimme = \relative {
   %\override TextScript.font-size = 2
-  \override TextScript.font-name = "GothicG"
+  %\override TextScript.font-name = "GothicG"
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
@@ -97,13 +97,13 @@ dritteStimme = \relative {
   a fis d' cis h a gis fis gis e cis' h a gis fis e
   fis^"I" d h' a g! fis e d e cis a' g fis e d cis
   d e a g fis e d cis d4 a'
-  d,8 fis fis,4 h8 e16 fis g8 h,
+  d,8 fis fis,4 h8^"I" e16 fis g8 h,
   \stemDown
   a d16 e fis8 a, g cis16 d e8 g,
   fis h16 cis d8 fis,
   \stemNeutral
   e g a a,
-  d r r4 d''4 e fis d d,8 g16 a h8 d
+  d r r4 d''4 e fis d d,8-"T" g16 a h8 d
   c e16 d c h a g h8 d16 c h a g fis
   g e a g fis e d cis! d h g' fis e d cis h
   cis a fis' e d cis h a h g e' d cis h a g
@@ -112,7 +112,7 @@ dritteStimme = \relative {
   \top a''4 a16 h g8 g4 g16 a
   fis8 fis4 fis16 g e8 e4 e16 fis
   d8 d4 d16 e cis8 cis4 cis16 d
-  h8 h4 h16 cis a8\noBeam
+  h8 h4 h16 cis a8\noBeam-"T"
   \bot
   \clef treble
   d16 e fis8 a
@@ -121,7 +121,7 @@ dritteStimme = \relative {
   d h e d
   \clef bass
   cis h a g a fis d' cis h a g fis
-  g e cis' h a g fis e fis e d8 h cis
+  g e cis' h a g fis e fis e d8^"K" h cis
   d2 r
 }
 
@@ -149,4 +149,8 @@ ersteLH = \relative {
   \key d \major
   %\new Voice= "dritteStimme" \relative {  }
   \new Voice= "dritteStimme" \dritteStimme
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -1)
+  \mark \markup {\small {"3.27"}}
 }

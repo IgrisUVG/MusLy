@@ -93,4 +93,8 @@ dritteLH = \relative {
   \clef bass
   \key c \major
   \new Voice= "dritteStimme" \dritteStimme
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -1)
+  \mark \markup {\small {"4.3"}}
 }

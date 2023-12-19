@@ -11,8 +11,8 @@ ersteStimme = \relative {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
   \voiceOne
-  d''8 g4 e16 h c8 c c e d a a c h16 c h a h a g a
-  h d c h c a h c d h c d e fis g fis
+  d''8_"T" g4 e16 h c8 c c e d a a c h16 c h a h a g a
+  h_"P" d c h c a h c d h c d e fis g fis
   e d c h c a h c d h a g a c h a h4 a2 g4~ g fis g fis
   g fis f e8 d d16 g f e f d e f g e f g a h c h
   a g f e f d e f g e d c d f e d
@@ -88,7 +88,7 @@ dritteStimme = \relative {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
-  R1*2 g8 d'4 h16 fis g8 g g h a e e g fis16 g fis e fis e d e
+  R1*2 g8^"T" d'4 h16 fis g8 g g h a e e g fis16 g fis e fis e d e
   fis g fis e fis d e fis g e fis g a h c h
   a g fis e f d e fis g e d c d fis e d
   \stemDown
@@ -143,4 +143,8 @@ zweiteLH = \relative {
   \clef bass
   \key g \major
   \new Voice= "dritteStimme" \dritteStimme
+  \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \override Score.RehearsalMark.direction = #DOWN
+  \override Score.RehearsalMark.extra-offset = #'(0 . -1)
+  \mark \markup {\small {"3.28"}}
 }

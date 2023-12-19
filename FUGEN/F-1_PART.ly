@@ -25,16 +25,18 @@
 }
 
 \layout {
-  indent = 7
+  %indent = 7
   \context {
     \Score
     \remove "Bar_number_engraver"
     %\override StaffGrouper.staff-staff-spacing.padding = #0
     \override StaffGrouper.staff-staff-spacing.basic-distance = #15
   }
+  \override TextScript.font-name = "Rediviva"
 }
 
-#(ly:font-config-add-font "gothicg_.ttf")
+#(ly:font-config-add-font "fonts/Rediviva.ttf")
+#(ly:font-config-add-font "fonts/TheuerdankFraktur.ttf")
 
 %%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
 \include "F-1.ly"

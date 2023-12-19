@@ -26,7 +26,8 @@
   }
 }
 
-#(ly:font-config-add-font "gothicg_.ttf")
+#(ly:font-config-add-font "fonts/Rediviva.ttf")
+#(ly:font-config-add-font "fonts/TheuerdankFraktur.ttf")
 
 %%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
 \include "F-1.ly"
@@ -40,8 +41,8 @@
   \header {
     title = \markup {
       \fill-line {
-        \override #'(font-name . "GothicG")
-        \fontsize #12
+        \override #'(font-name . "Theuerdank Fraktur")
+        \fontsize #18
         %\bold
         "Fugen"
       }
@@ -68,6 +69,7 @@
         \override StaffGrouper.staff-staff-spacing.basic-distance = #15
         \remove "Bar_number_engraver"
       }
+      \override TextScript.font-name = "Rediviva"
     }
   }
   \pageBreak
@@ -88,6 +90,7 @@
         \override StaffGrouper.staff-staff-spacing.basic-distance = #15
         \remove "Bar_number_engraver"
       }
+      \override TextScript.font-name = "Rediviva"
     }
   }
   \pageBreak
@@ -108,6 +111,7 @@
         \override StaffGrouper.staff-staff-spacing.basic-distance = #15
         \remove "Bar_number_engraver"
       }
+      \override TextScript.font-name = "Rediviva"
     }
   }
   %\pageBreak

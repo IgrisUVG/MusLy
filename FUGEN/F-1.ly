@@ -13,7 +13,7 @@ ersteStimme = \relative {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
   \voiceOne
-  R1*4
+  R1 s R1*2
   \stemUp
   a'8-"T" d16 e fis8 a g h16 a g fis e d
   fis8 a16 g fis e d cis d h g' fis e d cis h
@@ -21,7 +21,7 @@ ersteStimme = \relative {
   a fis d' cis h a g fis g e cis' h a g fis e
   fis8-"T" h16 cis d8 fis e g16 fis e d cis h
   d8 fis16 e d c h a h8 r r4 R1
-  e,8-"P" h'4 a8 h d4 g,8 a cis4 fis,8 g d'4 cis8
+  e,8-\markup{\concat {P \sub 2}} h'4 a8 h d4 g,8 a cis4 fis,8 g d'4 cis8
   d\noBeam h16 cis d8 fis e a,16 h cis8 e
   d g,16 a h8 d cis fis,16 g a8 cis
   h e,16 fis g8 h a d,16 e fis8 a
@@ -38,7 +38,7 @@ zweiteStimme = \relative {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
   \voiceTwo
-  R1 r2
+  s1 r2
   \stemUp
   d'8^"T" a'16 h
   \stemDown
@@ -64,13 +64,15 @@ zweiteStimme = \relative {
   d e fis h a4 a a fis g16 a d c h a g fis
   g e c' h a g fis e fis d h' a g fis e d
   \stemUp
+  \once \override TextScript.extra-offset = #'(-.5 . 0)
   \bot g,8^"T"
   \stemDown
   \top d'16 e fis8 a e h'16 a g fis e d
   fis8 a16 g fis e d cis d8 h' a e
   d16
   \stemUp
-  \bot h^"I" g' fis
+  \once \override TextScript.extra-offset = #'(-.3 . 4)
+  \bot h^\markup{\concat {I \super 3}} g' fis
   \stemNeutral
   e d cis h cis a fis' e d cis h a
   h g e' d cis h a g a fis d' cis h a g fis
@@ -91,13 +93,16 @@ dritteStimme = \relative {
   \stemDown
   \top a8-"T" d16 e fis8 a g h16 a g fis e d
   fis8 a16 g fis e d cis
-  d-"P" h e d
+  d-\markup{\concat {P \sub 1}} h e d
   \stemNeutral
   \bot cis h a gis
   a fis d' cis h a gis fis gis e cis' h a gis fis e
-  fis^"I" d h' a g! fis e d e cis a' g fis e d cis
+  \once \override TextScript.extra-offset = #'(0 . 2)
+  fis^\markup{\concat {I \super 1}} d h' a g! fis e d e cis a' g fis e d cis
   d e a g fis e d cis d4 a'
-  d,8 fis fis,4 h8^"I" e16 fis g8 h,
+  d,8 fis fis,4
+  \once \override TextScript.extra-offset = #'(0 . 2)
+  h8^\markup{\concat {I \super 2}} e16 fis g8 h,
   \stemDown
   a d16 e fis8 a, g cis16 d e8 g,
   fis h16 cis d8 fis,
@@ -121,7 +126,9 @@ dritteStimme = \relative {
   d h e d
   \clef bass
   cis h a g a fis d' cis h a g fis
-  g e cis' h a g fis e fis e d8^"K" h cis
+  g e cis' h a g fis e fis e 
+  \once \override TextScript.extra-offset = #'(0 . 2)
+  d8^"K" h cis
   d2 r
 }
 

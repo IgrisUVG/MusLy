@@ -285,10 +285,10 @@ guitarMusic = \relative {
         }
       }
       \tag #'Partitur {f8-3}      
-      b r d d_( c) r g-2 f c' r es es_( d) r es
-      f b, es16_( d) c b d8 f, b16_( a) g f
+      b r d d_( c) r g-2 f c' r es es_( d) r es-4
+      f b,-2 es16_(-4 d)-2 c-1 b-4 d8-4 f,-3 b16_( a) g f-3
       \override TextScript.extra-offset = #'(-0.5 . 0)
-      g8^\markup{\teeny VIII} b c a
+      g8^\markup{\teeny VIII} b-4 c-3 a-4
     }
     \\
     {
@@ -299,17 +299,17 @@ guitarMusic = \relative {
       f^3 es^1 
       \once\override Fingering.extra-offset = #'(.2 . 5.5)
       c-4 e,?^1 a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r
-      b,8 b'16\rest g'
-      f d b fis? d4 cis'?8 g fis c' h!4 b8 g e c
+      b,8 b'16\rest g'^3
+      f^4 d^1 b-1 fis?-2 d4-1 cis'?8-3 g-3 fis-1 c'-2 h!4-2 b8 g-2 e-1 c-2
     }
   >>
   <<
     {
-      b''4
+      b''4^\markup{\teeny VIII}
     }
     \\
     {
-      e,16\rest f c\glissando^( b)
+      e,16\rest f^3 c^2^( b)
     }
     \\
     {
@@ -317,16 +317,16 @@ guitarMusic = \relative {
       f4
     }
   >>
-  a16 g f es
+  a16-4( g) f es-2
   <<
     {
-      a'_( g) f_( es) <cis, cis'>16_( <d d'>) r8
+      a'_(-3 g) f_(-3 es) <cis, cis'>16_( <d d'>) r8
       <h h'>16_( <c c'>) r8 <a a'>16_( <b b'>) r16 es''
       d8 f b, r g c
     }
     \\
     {
-      <d,, b'>4 s8 f s f s f
+      <d,,_2 b'>4 s8 f s f s f
       <b, f''> <fis'? d'> g, <f' cis'?> <fis,? b' es> r
     }
   >>

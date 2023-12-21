@@ -4,7 +4,7 @@
 
 \header {
   title = "F&G War."
-  instrument = "Flute"
+  subtitle = "Flute"
   %meter = "Lustig"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -13,10 +13,10 @@
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #20
-  top-markup-spacing.basic-distance = #5
-  markup-system-spacing.basic-distance = #8
+  top-markup-spacing.basic-distance = #3
+  markup-system-spacing.basic-distance = #22
   system-system-spacing.basic-distance = #18
-  last-bottom-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #15
   left-margin = 20
   right-margin = 20
   %two-sided = ##t
@@ -25,6 +25,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"

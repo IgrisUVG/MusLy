@@ -208,10 +208,15 @@ guitarMusic = \relative {
       c-2) r
       \once\override StringNumber.extra-offset = #'(-0.6 . -3)
       g\2 f c' r es es_( d) s es
-      f b, es16_( d) c b d8 f, b16_(^\markup{\teeny VIII} a) g
+      f b, es16_( d) c b d8 f,
+      \override TextScript.extra-offset = #'(-0.5 . 0)
+      b16_(^\markup{\teeny VIII} a) g
       \once\override Fingering.extra-offset = #'(0 . -3.2)
       f-4
-      g8-3 b-4 a f'
+      \once\override Fingering.extra-offset = #'(0 . -3.3)
+      g8-3
+      \once\override Fingering.extra-offset = #'(0 . -2.8)
+      b-4 a f'
     }
     \\
     {
@@ -222,6 +227,7 @@ guitarMusic = \relative {
       \acciaccatura {\slashI es'16[ a, c,]}
       \stemDown
       f,8 r
+      \once\override Fingering.extra-offset = #'(-1.2 . 3)
       a-0 r <c' es> r b,4
       %\once\override Slur.direction = #DOWN
       \shape #'((0.3 . 0.3) (0 . -0.3) (0.6 . -0.2) (1 . 0.2)) Slur
@@ -229,7 +235,11 @@ guitarMusic = \relative {
       \acciaccatura {\slashIII b'16[ a' d]}
       \stemDown
       g8^. h,,\rest
-      as4 g-0 fis? f es8-1 c'-2 f, d'
+      as4 g-0 fis? f
+      \once\override Fingering.extra-offset = #'(0 . 2.3)
+      es8-1
+      \once\override Fingering.extra-offset = #'(0 . 3.2)
+      c'-2 f, d'
     }
   >>
   <<
@@ -248,7 +258,18 @@ guitarMusic = \relative {
   >>
   <<
     {
-      b''8 g
+      b''8^\markup{\teeny VI}
+      \once\override Fingering.extra-offset = #'(0 . -2.7)
+      \tag #'Part {
+      g-3-\markup {
+          \postscript #"2.2 -3.9 moveto 3.2 -0.4 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {
+      g-3-\markup {
+          \postscript #"2.1 -3.8 moveto 9.5 -0.3 rlineto stroke"
+        }
+      }
     }
     \\
     {
@@ -257,14 +278,26 @@ guitarMusic = \relative {
   >>
   <<
     {
-      f'8 b r d d_( c) r g f c' r es es_( d) r es
+      \once\override Fingering.extra-offset = #'(0 . -3.5)
+      \tag #'Part {
+        f'8-3-\markup {
+          \postscript #"-1.5 -4.2 moveto 2 -0.2 rlineto stroke"
+        }
+      }
+      \tag #'Partitur {f8-3}      
+      b r d d_( c) r g-2 f c' r es es_( d) r es
       f b, es16_( d) c b d8 f, b16_( a) g f
       g8 b c a
     }
     \\
     {
-      b,,8 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'
-      f es c e,? a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r
+      \override Fingering.staff-padding = #'()
+      \once\override Fingering.extra-offset = #'(0 . 5)
+      b,,8-2 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'^4
+      \once\override Fingering.extra-offset = #'(.3 . -.2)
+      f^3 es^1 
+      \once\override Fingering.extra-offset = #'(.2 . 5.5)
+      c-4 e,?^1 a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r
       b,8 b'16\rest g'
       f d b fis? d4 cis'?8 g fis c' h!4 b8 g e c
     }

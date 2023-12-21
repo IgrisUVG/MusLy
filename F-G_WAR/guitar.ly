@@ -287,7 +287,8 @@ guitarMusic = \relative {
       \tag #'Partitur {f8-3}      
       b r d d_( c) r g-2 f c' r es es_( d) r es
       f b, es16_( d) c b d8 f, b16_( a) g f
-      g8 b c a
+      \override TextScript.extra-offset = #'(-0.5 . 0)
+      g8^\markup{\teeny VIII} b c a
     }
     \\
     {

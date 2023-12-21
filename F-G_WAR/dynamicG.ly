@@ -24,7 +24,9 @@ dynamic = {
   \once\override Hairpin.extra-offset = #'(1 . 2)
   s2*3\>
   \once\override DynamicText.extra-offset = #'(-3 . 2.5)
-  s2*8\mp s2*7\mf s2*15\f s8 s4.\> s2 s2*4\! s4 s\> s2 s2\! s2*4
+  s2*8\mp 
+  \once\override DynamicText.extra-offset = #'(-3 . 2.5)
+  s2*7\mf s2*15\f s8 s4.\> s2 s2*4\! s4 s\> s2 s2\! s2*4
   s4
   \once\override Hairpin.extra-offset = #'(0 . 2)
   s\< s2 s4 s\! s2*7 s16 s\> s4. s2*7\! s2\< s2*2\f

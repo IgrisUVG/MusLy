@@ -295,7 +295,7 @@ guitarMusic = \relative {
       \override Fingering.staff-padding = #'()
       \once\override Fingering.extra-offset = #'(0 . 5)
       b,,8-2 r \stemUp \acciaccatura <a' cis> \stemDown <b d> r f8 r16 a'^4
-      \once\override Fingering.extra-offset = #'(.3 . -.2)
+      \once\override Fingering.extra-offset = #'(.3 . -2.8)
       f^3 es^1 
       \once\override Fingering.extra-offset = #'(.2 . 5.5)
       c-4 e,?^1 a,8 r \stemUp \acciaccatura <h' d> \stemDown <c es> r

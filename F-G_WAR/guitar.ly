@@ -201,31 +201,35 @@ guitarMusic = \relative {
   <<
     {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3.5)
-      f8\2 b r d d_( c) r
+      f8\2
+      \once\override Fingering.extra-offset = #'(0 . -3)
+      b-3 r d-4 d_(
+      \once\override Fingering.extra-offset = #'(0 . -2.5)
+      c-2) r
       \once\override StringNumber.extra-offset = #'(-0.6 . -3)
       g\2 f c' r es es_( d) s es
-      f b, es16_( d) c b d8 f, b16_( a) g
+      f b, es16_( d) c b d8 f, b16_(^\markup{\teeny VIII} a) g
       \once\override Fingering.extra-offset = #'(0 . -3.2)
       f-4
-      g8 b a f'
+      g8-3 b-4 a f'
     }
     \\
     {
-      b,,,8 r <b' d> r f4
+      b,,,8 r <b' d> r f4-1
       %\once\override Slur.direction = #DOWN
       \once\override Slur.positions = #'(1 . -4)
       \stemUp
       \acciaccatura {\slashI es'16[ a, c,]}
       \stemDown
       f,8 r
-      a r <c' es> r b,4
+      a-0 r <c' es> r b,4
       %\once\override Slur.direction = #DOWN
       \shape #'((0.3 . 0.3) (0 . -0.3) (0.6 . -0.2) (1 . 0.2)) Slur
       \stemUp
       \acciaccatura {\slashIII b'16[ a' d]}
       \stemDown
       g8^. h,,\rest
-      as4 g-0 fis? f es8 c' f, d'
+      as4 g-0 fis? f es8-1 c'-2 f, d'
     }
   >>
   <<

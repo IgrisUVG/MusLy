@@ -346,29 +346,29 @@ guitarMusic = \relative {
   >>
   <<
     {
-      f'''8 b, a b c a
+      f'''8-4 b,-4 a b c^\markup{\teeny VIII} a-3
     }
     \\
     {
-      g16 es c g <es b'>4 <f g'>
+      g16-2 es-3 c-2 g-1 <es b'>4 <f g'-4>
     }
   >>
   <<
     {
-      b'8 s
+      b'8-3 s
     }
     \\
     {
-      d,16 e? fis?^( g)
+      d,16-4 e?-1 fis?^( g)
     }
     \\
     {
       \voiceTwo
       \once \override NoteColumn.force-hshift = #0.3
-      g,8 s
+      g,8-2 s
     }
   >>
-  a'16 b c d
+  a'16-2 b c d
   \bar "||"
   \break
   \mark \markup {\box 3}

@@ -286,29 +286,29 @@ guitarMusic = \relative {
       }
       \tag #'Partitur {f8-3}
       b r d d_( c) r g-2 f c' r es es_( d) r es-4
-      f 
+      f
       \once\override Fingering.extra-offset = #'(0 . -3.3)
-      b,-2 
+      b,-2
       \once\override Fingering.extra-offset = #'(0 . -2.7)
-      es16_(-4 
+      es16_(-4
       \once\override Fingering.extra-offset = #'(0 . -3)
-      d)-2 
+      d)-2
       \once\override Fingering.extra-offset = #'(0 . -3.3)
-      c-1 
+      c-1
       \once\override Fingering.extra-offset = #'(0 . -3.4)
-      b-4 
+      b-4
       \once\override Fingering.extra-offset = #'(0 . -2.3)
-      d8-4 
+      d8-4
       \once\override Fingering.extra-offset = #'(0 . -3.3)
-      f,-3 b16_( a) g 
+      f,-3 b16_( a) g
       \once\override Fingering.extra-offset = #'(0 . -3.3)
       f-3
       \override TextScript.extra-offset = #'(-0.5 . 0)
-      g8^\markup{\teeny VIII} 
+      g8^\markup{\teeny VIII}
       \once\override Fingering.extra-offset = #'(0 . -3)
-      b-4 
+      b-4
       \once\override Fingering.extra-offset = #'(0 . -2.6)
-      c-3 
+      c-3
       \once\override Fingering.extra-offset = #'(0 . -2.8)
       a-4
     }
@@ -327,17 +327,17 @@ guitarMusic = \relative {
       \once\override Fingering.extra-offset = #'(.2 . 4.3)
       b-1 fis?^2 d4-1
       \once\override Fingering.extra-offset = #'(0 . 6)
-      cis'?8-3 
+      cis'?8-3
       \once\override Fingering.extra-offset = #'(.2 . 5.5)
-      g-3 
+      g-3
       \once\override Fingering.extra-offset = #'(.2 . 5.4)
-      fis-1 
+      fis-1
       \once\override Fingering.extra-offset = #'(.2 . 3.3)
-      c'-2 h!4-2 b8 
+      c'-2 h!4-2 b8
       \once\override Fingering.extra-offset = #'(.2 . 5.5)
-      g-2 
+      g-2
       \once\override Fingering.extra-offset = #'(.2 . 5.5)
-      e-1 
+      e-1
       \once\override Fingering.extra-offset = #'(.2 . 5.5)
       c-2
     }
@@ -357,7 +357,7 @@ guitarMusic = \relative {
     }
   >>
   \once\override Fingering.extra-offset = #'(0 . -3.3)
-  a16-4( g) f 
+  a16-4( g) f
   \once\override Fingering.extra-offset = #'(0 . -3.3)
   es-2
   <<
@@ -395,20 +395,20 @@ guitarMusic = \relative {
       \once\override Fingering.extra-offset = #'(0 . -2.2)
       f'''8-4
       \once\override Fingering.extra-offset = #'(0 . -3)
-      b,-4 a b 
+      b,-4 a b
       \override TextScript.extra-offset = #'(-0.5 . 0)
-      c^\markup{\teeny VIII} 
+      c^\markup{\teeny VIII}
       \once\override Fingering.extra-offset = #'(0 . -2.7)
       a-3
     }
     \\
     {
       \once\override Fingering.extra-offset = #'(.2 . 4.5)
-      g16-2 
+      g16-2
       \once\override Fingering.extra-offset = #'(.2 . 4.2)
       es-3
       \once\override Fingering.extra-offset = #'(.2 . 4)
-      c-2 
+      c-2
       \once\override Fingering.extra-offset = #'(0 . 5.7)
       g-1 <es b'>4
       \once\override Fingering.extra-offset = #'(1.5 . -1.3)
@@ -452,11 +452,11 @@ guitarMusic = \relative {
   <<
     {
 
-      s8 r16 dis_([ e) gis]
+      s8 r16 dis_([^\markup{\teeny I} e) gis]
     }
     \\
     {
-      r8 s e
+      r8 s e-3
     }
     \\
     {
@@ -470,7 +470,7 @@ guitarMusic = \relative {
       \acciaccatura e'8-\markup {
         \postscript #"0.5 -5.3 moveto 2.3 0.5 rlineto stroke"
       }
-      fis16 gis_( a) cis
+      fis16 gis_(^\markup{\teeny VI} a) cis
       \once\override Slur.positions = #'(2.5 . 3.5)
       \acciaccatura a8-\markup {
         \postscript #"0.5 -3.8 moveto 2.3 0.5 rlineto stroke"

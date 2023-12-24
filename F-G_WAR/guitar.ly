@@ -475,16 +475,16 @@ guitarMusic = \relative {
       \acciaccatura a8-\markup {
         \postscript #"0.5 -3.8 moveto 2.3 0.5 rlineto stroke"
       }
-      h16 cis_( dis) fis
+      h16 cis_(^\markup{\teeny VI} dis) fis-2
       \once\override Slur.positions = #'(2.5 . 3.5)
       \acciaccatura dis8-\markup {
         \postscript #"0.5 -2.3 moveto 2.3 0.5 rlineto stroke"
       }
-      e16 fis( gis) h
+      e16 fis(^\markup{\teeny VII} gis) h
     }
     \\
     {
-      s8 a, s dis s gis
+      s8 a,-3 s dis s gis-4
     }
   >>
   <<
@@ -499,7 +499,7 @@ guitarMusic = \relative {
   <<
     {
 
-      s8 r16 eis_([ fis) h]
+      s8 r16 eis_([-1 fis)-3 h]-4
     }
     \\
     {
@@ -507,7 +507,7 @@ guitarMusic = \relative {
     }
     \\
     {
-      <dis c'>8\glissando gis, s
+      <dis c'\4>8\glissando gis, s
     }
   >>
   <<
@@ -517,24 +517,24 @@ guitarMusic = \relative {
       \acciaccatura fis'8-\markup {
         \postscript #"0.5 -4.8 moveto 2.3 0.5 rlineto stroke"
       }
-      gis16 his( cis) dis
+      gis16-3 his(-2 cis)-4 dis-1
       \once\override Slur.positions = #'(2.5 . 3.5)
       \acciaccatura g,8-\markup {
         \postscript #"0.5 -4.3 moveto 2.3 0.5 rlineto stroke"
       }
-      a16 cis( dis) gis
+      a16-2 cis(-1 dis)-3 gis-4
       \once\override Slur.positions = #'(2.5 . 3.5)
       \tag #'Part {
         \acciaccatura a,8-\markup {
           \postscript #"0.5 -7 moveto 3.2 0.9 rlineto stroke"
         }
-        c16 e( fis) a
+        c16-2 e(-1 fis)-4 a-3
       }
       \tag #'Partitur {
         \acciaccatura a,8-\markup {
           \postscript #"0.5 -3.8 moveto 3.2 0.8 rlineto stroke"
         }
-        c16 e( fis) a
+        c16-2 e(-1 fis)-4 a-3
       }
     }
     \\
@@ -589,12 +589,12 @@ guitarMusic = \relative {
   <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r
   \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
   <cis gis' e'?\2> r
-  <h' cis fis> r eis, r <cis' gis' cis> r fis, r <cis' fis a> r
+  <h'-4 cis-1 fis-2\2> r eis,-3 r <cis' gis' cis>^\markup{\teeny IX} r fis, r <cis' fis a> r
   <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
   <h d' fis> r <cis gis' e'> r
   <<
     {
-      cis'4 h as
+      cis'4\3 h\4 as
     }
     \\
     {
@@ -608,7 +608,7 @@ guitarMusic = \relative {
       \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
       g''\2 e!2^0
       \revert NoteColumn.force-hshift
-      des4
+      des4-4
     }
     \\
     {
@@ -616,12 +616,12 @@ guitarMusic = \relative {
       %\tweak Accidental.extra-offset #'(0.5 . 0)
       c8 b4 as
       \once\override NoteColumn.force-hshift = #0.8
-      f
+      f-1
     }
     \\
     {
       \voiceTwo
-      <des as'>8 <as es'>4 h! es
+      <des as'>8 <as es'>4 h! es-3
     }
   >>
   r8
@@ -693,7 +693,7 @@ guitarMusic = \relative {
     }
   >>
   <h'' e>8 <h,, a' fis'> <a'' h>\noBeam
-  <a,, f' h e>
+  <a,, f'-2 h-3 e-4>
   <<
     {
       s8

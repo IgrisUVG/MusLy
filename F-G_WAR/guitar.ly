@@ -539,7 +539,7 @@ guitarMusic = \relative {
         \acciaccatura a,8-\markup {
           \postscript #"0.5 -7 moveto 3.2 0.9 rlineto stroke"
         }
-        \once\override Fingering.extra-offset = #'(-2.7 . 0)
+        \once\override Fingering.extra-offset = #'(-2.9 . 0)
         c16_2 e(_1 fis) a_3
       }
       \tag #'Partitur {
@@ -605,6 +605,7 @@ guitarMusic = \relative {
   <fis, cis' gis'> r \acciaccatura h' <eis, ais cis> r
   \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
   <cis gis' e'?\2> r
+  \set fingeringOrientations = #'(right right down)
   <h'-4 cis-1 fis-2\2> r eis,-3 r
   \override TextScript.extra-offset = #'(-0.5 . .5)
   <cis' gis' cis>^\markup{\teeny IX} r fis, r <cis' fis a> r
@@ -612,7 +613,10 @@ guitarMusic = \relative {
   <h d' fis> r <cis gis' e'> r
   <<
     {
-      cis'4\3 h\4 as
+      \once \override StringNumber.extra-offset = #'(-0.6 . -2.8)
+      cis'4\3
+      \once \override StringNumber.extra-offset = #'(-0.6 . -3)
+      h\4 as
     }
     \\
     {
@@ -633,6 +637,7 @@ guitarMusic = \relative {
       \voiceOne
       %\tweak Accidental.extra-offset #'(0.5 . 0)
       c8 b4 as
+      \once\override Fingering.extra-offset = #'(0 . -3.2)
       \once\override NoteColumn.force-hshift = #0.8
       f-1
     }

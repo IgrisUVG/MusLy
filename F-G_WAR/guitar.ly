@@ -539,14 +539,15 @@ guitarMusic = \relative {
         \acciaccatura a,8-\markup {
           \postscript #"0.5 -7 moveto 3.2 0.9 rlineto stroke"
         }
-        \once\override Fingering.extra-offset = #'(-2.9 . 0)
+        \once\override Fingering.extra-offset = #'(-3.3 . -.2)
         c16_2 e(_1 fis) a_3
       }
       \tag #'Partitur {
         \acciaccatura a,8-\markup {
           \postscript #"0.5 -3.8 moveto 3.2 0.8 rlineto stroke"
         }
-        c16-2 e(-1 fis)-4 a-3
+        \once\override Fingering.extra-offset = #'(-3.6 . -.2)
+        c16_2 e(_1 fis) a_3
       }
     }
     \\

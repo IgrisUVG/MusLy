@@ -52,7 +52,7 @@ guitarMusic = \relative {
     \\
     {
       s4. <cis, a' e' a>8
-      \override TextScript.extra-offset = #'(-0.5 . 6)
+      \once \override TextScript.extra-offset = #'(-0.5 . 6)
       h4-\markup{\teeny VII} \FO #'0.2 #'0.2 a-0
     }
   >>
@@ -68,7 +68,7 @@ guitarMusic = \relative {
   >>
   h'8 <cis, e'> r <h a' e' a>^\markup{\teeny V}
   r <h gis' e' h'>^\markup{\teeny V}
-  \override TextScript.extra-offset = #'(-0.5 . -1)
+  \once \override TextScript.extra-offset = #'(-0.5 . -1)
   r <h fis' dis' fis>^\markup{\teeny II}
   <<
     {
@@ -158,7 +158,7 @@ guitarMusic = \relative {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3)
       gis8.(\1 fis16)
       e8 s h' s a s
-      \override TextScript.extra-offset = #'(-0.5 . -2)
+      \once \override TextScript.extra-offset = #'(-0.5 . -2)
       gis8.(^\markup{\teeny II} fis16)
       e8 s s4
       \set stringNumberOrientations = #'(left)
@@ -209,7 +209,7 @@ guitarMusic = \relative {
       \once\override StringNumber.extra-offset = #'(-0.6 . -3)
       g\2 f c' r es es_( d) s es
       f b, es16_( d) c b d8 f,
-      \override TextScript.extra-offset = #'(-0.5 . 0)
+      \once \override TextScript.extra-offset = #'(-0.5 . 0)
       b16_(^\markup{\teeny VIII} a) g
       \once\override Fingering.extra-offset = #'(0 . -3.2)
       f-4
@@ -303,7 +303,7 @@ guitarMusic = \relative {
       f,-3 b16_( a) g
       \once\override Fingering.extra-offset = #'(0 . -3.3)
       f-3
-      \override TextScript.extra-offset = #'(-0.5 . 0)
+      \once \override TextScript.extra-offset = #'(-0.5 . 0)
       g8^\markup{\teeny VIII}
       \once\override Fingering.extra-offset = #'(0 . -3)
       b-4
@@ -396,7 +396,7 @@ guitarMusic = \relative {
       f'''8-4
       \once\override Fingering.extra-offset = #'(0 . -3)
       b,-4 a b
-      \override TextScript.extra-offset = #'(-0.5 . 0)
+      \once \override TextScript.extra-offset = #'(-0.5 . 0)
       c^\markup{\teeny VIII}
       \once\override Fingering.extra-offset = #'(0 . -2.7)
       a-3
@@ -608,7 +608,7 @@ guitarMusic = \relative {
   <cis gis' e'?\2> r
   \set fingeringOrientations = #'(right down)
   <h'-4 cis-1 fis-2\2> r eis,-3 r
-  \override TextScript.extra-offset = #'(-0.5 . .5)
+  \once \override TextScript.extra-offset = #'(-0.5 . .5)
   <cis' gis' cis>^\markup{\teeny IX} r fis, r <cis' fis a> r
   <a, cis' fis> r <dis fis' h> <e h' gis'> <fis cis' a'> r <d a' fis'> r
   <h d' fis> r <cis gis' e'> r
@@ -725,6 +725,7 @@ guitarMusic = \relative {
       \once\override Slur.positions = #'(0 . 1)
       %\shape #'((0 . 0) (0.8 . 0.5) (0 . 0) (0 . 0)) Slur
       h''8.( a16 \stemDown
+      \once \override TextScript.extra-offset = #'(-.5 . -.5)
       <
       \tweak AccidentalPlacement.right-padding #-1
       \tweak Accidental.extra-offset #'(1 . 0)
@@ -733,7 +734,7 @@ guitarMusic = \relative {
       cis'!
       \tweak Accidental.extra-offset #'(-0.7 . 0)
       dis! gis
-      >8)
+      >8)^\markup{\teeny VIII}
     }
     \\
     {
@@ -745,8 +746,11 @@ guitarMusic = \relative {
     }
   >>
   <cis'' eis>8
+  \once \override TextScript.extra-offset = #'(0 . -1.6)
   \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
-  <a,, h' e!\3> <h'' dis>\noBeam
+  <a,, h' e!\3>^\markup{\teeny IX}
+  \set fingeringOrientations = #'(right)
+  <h''-4 dis-3>\noBeam
   <cis,, ais' fis'>
   <<
     {

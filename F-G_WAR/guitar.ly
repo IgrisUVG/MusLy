@@ -752,7 +752,8 @@ guitarMusic = \relative {
   <a,, h' e!\3>^\markup{\teeny IX}
   \set fingeringOrientations = #'(right)
   <h''-4 dis-3>\noBeam
-  <cis,,-2\6 ais'-1 fis'-4>
+  \set fingeringOrientations = #'(up right)
+  <cis,,_\6-2 ais'-1 fis'-4>
   <<
     {
       s8

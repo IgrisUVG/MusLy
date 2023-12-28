@@ -617,7 +617,7 @@ guitarMusic = \relative {
       \once \override StringNumber.extra-offset = #'(-0.6 . -2.8)
       cis'4\3
       \once \override StringNumber.extra-offset = #'(-0.6 . -3)
-      h\4 as
+      h\3 as
     }
     \\
     {
@@ -752,7 +752,7 @@ guitarMusic = \relative {
   <a,, h' e!\3>^\markup{\teeny IX}
   \set fingeringOrientations = #'(right)
   <h''-4 dis-3>\noBeam
-  <cis,, ais' fis'>
+  <cis,,-2\6 ais'-1 fis'-4>
   <<
     {
       s8

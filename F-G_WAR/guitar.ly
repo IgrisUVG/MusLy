@@ -639,7 +639,7 @@ guitarMusic = \relative {
       \override Fingering.staff-padding = #'()
       %\tweak Accidental.extra-offset #'(0.5 . 0)
       c8 b4 as-2
-      \once\override Fingering.extra-offset = #'(0 . -3.2)
+      \once\override Fingering.extra-offset = #'(0 . -.2)
       \once\override NoteColumn.force-hshift = #0.8
       f-1
     }

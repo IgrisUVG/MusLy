@@ -652,7 +652,8 @@ guitarMusic = \relative {
   r8
   <<
     {
-      fis'
+      \once\override StringNumber.extra-offset = #'(-0.6 . -2.8)
+      fis'\2
     }
     \\
     {

@@ -348,7 +348,11 @@ guitarMusic = \relative {
     }
     \\
     {
-      e,16\rest f^3 c^2^( b)
+      e,16\rest 
+      \once \override TextScript.extra-offset = #'(-0.5 . 2)
+      f^3_3_"(" c^2^(_2-\markup {
+          \postscript #"1.2 0.8 moveto 1.8 -0.3 rlineto stroke"
+        } b)_2
     }
     \\
     {
@@ -356,10 +360,26 @@ guitarMusic = \relative {
       f4
     }
   >>
-  \once\override Fingering.extra-offset = #'(0 . -3.3)
-  a16-4( g) f
-  \once\override Fingering.extra-offset = #'(0 . -3.3)
-  es-2
+  <<
+    {
+      \once\override Fingering.extra-offset = #'(0 . -3.3)
+      a16-4_( g) f
+      \once\override Fingering.extra-offset = #'(0 . -3.3)
+      es-2
+    }
+    \\
+    {
+      \once \override Fingering.extra-offset = #'(0 . -1.5)
+      s16-1
+      \once \override Fingering.extra-offset = #'(0 . -2)
+      s-4
+      \once \override Fingering.extra-offset = #'(0 . -2.3)
+      s-1
+      \once \override Fingering.extra-offset = #'(0 . -2.5)
+      \once \override TextScript.extra-offset = #'(1 . .3)
+      s-4-")"
+    }
+  >>
   <<
     {
       \once\override Fingering.extra-offset = #'(0 . -2.8)
@@ -457,7 +477,7 @@ guitarMusic = \relative {
     \\
     {
       \override Fingering.staff-padding = #'()
-      r8 s 
+      r8 s
       \once\override Fingering.extra-offset = #'(0 . -.2)
       e^3
     }
@@ -489,9 +509,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      s8 
+      s8
       \once\override Fingering.extra-offset = #'(0 . -.2)
-      a,^3 s dis s 
+      a,^3 s dis s
       \once\override Fingering.extra-offset = #'(0 . -.2)
       gis^4
     }
@@ -552,9 +572,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      s8 
+      s8
       \once\override Fingering.extra-offset = #'(0 . -.2)
-      cis,^4 s dis^3 s 
+      cis,^4 s dis^3 s
       \once\override Fingering.extra-offset = #'(0 . -.2)
       fis^4
     }

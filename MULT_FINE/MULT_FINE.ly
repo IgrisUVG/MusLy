@@ -10,7 +10,7 @@
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
-#(set-global-staff-size 16)
+%#(set-global-staff-size 16)
 \paper {
   indent = 3.0\cm  % space for instrumentName
   short-indent = 1.5\cm  % space for shortInstrumentName
@@ -19,16 +19,18 @@
   markup-system-spacing.basic-distance = #26
   system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #25
-  two-sided = ##t
-  inner-margin = 25
-  outer-margin = 15
+  left-margin = 20
+  right-margin = 20
+  %two-sided = ##t
+  %inner-margin = 20
+  %outer-margin = 15
 }
 
 
 \layout {
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }

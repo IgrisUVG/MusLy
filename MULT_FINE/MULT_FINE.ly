@@ -33,15 +33,14 @@
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
-fluteMusic = \relative c' { \key g \major g'1 b }
-clarinetMusic = \transpose c' a \relative c'' { \key b \major b1 d }
-violinIMusic = \relative c' { \key g \major g'1 b }
-violinIIMusic = \relative c' { \key g \major g'1 b }
-celloMusic = \relative c { \clef bass \key g \major g1 b }
+\include "flute.ly"
+\include "clarinet.ly"
+\include "cello.ly"
+\include "archi.ly"
 
 \score {
   <<
-    \new StaffGroup = "StaffGroup_woodwinds"
+    \new StaffGroup
     <<
       \new Staff = "Staff_flute" {
         \set Staff.instrumentName = #"Flute"
@@ -59,7 +58,7 @@ celloMusic = \relative c { \clef bass \key g \major g1 b }
         % Print music for a B-flat clarinet
         \transpose b c' \clarinetMusic
       }
-      \new Staff = "Staff_viola" {
+      \new Staff = "Staff_cello" {
         \set Staff.instrumentName = #"Cello"
         \celloMusic
       }
@@ -68,12 +67,12 @@ celloMusic = \relative c { \clef bass \key g \major g1 b }
       }
       <<
         \new Staff = "Staff_violinI" {
-          \set Staff.instrumentName = #"Violin I"
-          \violinIMusic
+          \set Staff.instrumentName = #"Archi I"
+          \archiIMusic
         }
         \new Staff = "Staff_violinII" {
-          \set Staff.instrumentName = #"Violin II"
-          \violinIIMusic
+          \set Staff.instrumentName = #"Archi II"
+          \archiIIMusic
         }
       >>
     >>

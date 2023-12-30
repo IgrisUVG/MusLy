@@ -262,7 +262,7 @@ guitarMusic = \relative {
       \once\override Fingering.extra-offset = #'(0 . -2.7)
       \tag #'Part {
         g-3-\markup {
-          \postscript #"2.2 -3.9 moveto 3.2 -0.4 rlineto stroke"
+          \postscript #"1.7 -3.9 moveto 3.2 -0.4 rlineto stroke"
         }
       }
       \tag #'Partitur {
@@ -281,7 +281,7 @@ guitarMusic = \relative {
       \once\override Fingering.extra-offset = #'(0 . -3.5)
       \tag #'Part {
         f'8-3-\markup {
-          \postscript #"-1.5 -4.2 moveto 2 -0.2 rlineto stroke"
+          \postscript #"-2 -4.2 moveto 2 -0.2 rlineto stroke"
         }
       }
       \tag #'Partitur {f8-3}

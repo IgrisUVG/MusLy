@@ -13,7 +13,7 @@
 %#(set-global-staff-size 16)
 \paper {
   indent = 3.0\cm  % space for instrumentName
-  short-indent = 1.5\cm  % space for shortInstrumentName
+  %short-indent = 1.5\cm  % space for shortInstrumentName
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26

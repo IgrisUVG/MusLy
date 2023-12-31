@@ -25,6 +25,7 @@ archiIMusic = \relative {
   \time 4/4
   a r2.
   \time 3/4
+  r2.
   r4 fis d' e r2 R2.*3
   %%%%%%%%%%%%%%%%%%%
   r4 a, <e' g><d fis> r a <g h> r2 a4 r2
@@ -39,6 +40,7 @@ archiIMusic = \relative {
   \time 4/4
   a r2.
   \time 3/4
+  r2.
   r4 fis d' e r2 R2.*3
 }
 
@@ -60,6 +62,7 @@ archiIIMusic = \relative {
   \time 4/4
   a4 r2.
   \time 3/4
+  r2.
   h4 r2 b4 r2 r2. a4 r2 r a4
   %%%%%%%%%%%%%%%%%%%
   \repeat unfold 3 {d4 r2 r4 d a g r2 cis4 r2}
@@ -70,5 +73,6 @@ archiIIMusic = \relative {
   \time 4/4
   a4 r2.
   \time 3/4
+  r2.
   h4 r2 b4 r2 r2. a4 r2 r a4
 }

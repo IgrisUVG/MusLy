@@ -4,7 +4,7 @@
 
 \header {
   title = "Fine"
-  instrument = "Flute"
+  subtitle = "Flute"
   %meter = "Lustig"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -28,7 +28,7 @@
   indent = 10
   \context {
     \Score
-    %\remove "Bar_number_engraver"
+    \remove "Bar_number_engraver"
   }
   \context {
     %\Staff \RemoveEmptyStaves

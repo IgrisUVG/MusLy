@@ -19,8 +19,8 @@
   markup-system-spacing.basic-distance = #26
   system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #25
-  left-margin = 20
-  right-margin = 20
+  left-margin = 15
+  right-margin = 15
   %two-sided = ##t
   %inner-margin = 20
   %outer-margin = 15
@@ -30,7 +30,7 @@
 \layout {
   \context {
     \Score
-    %\remove "Bar_number_engraver"
+    \remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
@@ -53,11 +53,6 @@
       \new Staff = "Staff_clarinet" {
         \set Staff.instrumentName =
         \markup { \concat { "Clarinet in B" \flat } }
-        % Declare that written Middle C in the music
-        %  to follow sounds a concert B flat, for
-        %  output using sounded pitches such as MIDI.
-        \transposition b
-        % Print music for a B-flat clarinet
         \transpose b c' \clarinetMusic
       }
       \new Staff = "Staff_cello" {

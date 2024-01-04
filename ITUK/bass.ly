@@ -4,5 +4,6 @@
 
 
 bass = \relative {
+  \clef "bass_8"
 
 }

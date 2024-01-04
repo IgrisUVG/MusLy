@@ -32,6 +32,7 @@
   \override Staff.TimeSignature.stencil = ##f
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
   \override PianoStaff.InstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "tenor.ly"
@@ -50,21 +51,27 @@ pianoPart = \new PianoStaff \with {
   \new Staff = "RH" \with {
   } \rightPiano
   \new Staff = "LH" \with {
-  } { \clef bass \leftPiano }
+  } \leftPiano
 >>
 
-organPart = \new PianoStaff \with {
+organPart = \new StaffGroup \with {
+  systemStartDelimiter = #'SystemStartSquare
   instrumentName = "Organ"
 } <<
+\new PianoStaff 
+<<
   \new Staff = "RH" \with {
   } \rightOrgan
   \new Staff = "LH" \with {
-  } { \clef bass \leftOrgan }
+  } \leftOrgan
+>>
+\new Staff = "PF" \with {
+  } \fusOrgan
 >>
 
 bassPart = \new Staff \with {
   instrumentName = "Bass"
-} { \clef "bass_8" \bass }
+} \bass
 
 drumsPart = \new DrumStaff \with {
   instrumentName = "Drums"

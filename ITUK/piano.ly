@@ -65,7 +65,7 @@ slashII = {
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% RH %%%%%%%%%%%%%%%%%%%%%%%%%
 rightPiano = \relative {
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
@@ -180,7 +180,7 @@ rightPiano = \relative {
     }
     \\
     {
-      s4 eis,8. fis16 d!4 
+      s4 eis,8. fis16 d!4
       \once \override Rest.extra-offset = #'(1.5 . 4)
       r8 es e eis
     }
@@ -196,8 +196,61 @@ rightPiano = \relative {
     }
   >>
   <gis cis>8 <fis h>
+  \key a \minor
+  %\bar ".|:"
+  \repeat volta 3 {
+    <<
+      {
+        s4
+        <c' d>16 h g a~ a8. s16
+        <c d>16 h g a~
+      }
+      \\
+      {
+        \stemUp
+        <e a>8. <d g>16~
+        \stemDown
+        q8 e16 f e8. <d g>16~
+        q8 e16 f
+      }
+    >>
+  }
+  \alternative {
+    {
+      <<
+        {
+          a8. s16
+          <cis d>16 h g a~ a8. s16
+          <cis d>16 h g a
+        }
+        \\
+        {
+          cis,8. <e gis>16~ q8 e16 fis
+          cis8. <e gis>16~ q8 e16 fis
+        }
+      >>
+    }
+    {
+      <<
+        {
+          s4
+          <c' des>16 h! as f~ f8. s16
+          <c' des>16 h! as f
+        }
+        \\
+        {
+          \stemUp
+          <c as'>8. <es as>16~
+          \stemDown
+          q8 e16 es c8. <es as>16~
+          q8 e16 es
+        }
+      >>
+    }
+  }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%% LH %%%%%%%%%%%%%%%%%%%%%%%%%
 leftPiano = \relative {
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
@@ -251,7 +304,7 @@ leftPiano = \relative {
   \grace {s8}
   <<
     {
-      fis,4 
+      fis,4
       \once \override Flag.stencil = ##f
       gis8 s16 a4 s16 s4 fis' s
     }
@@ -286,10 +339,10 @@ leftPiano = \relative {
   h16 a gis d
   <<
     {
-      fis,4 
+      fis,4
       \once \override Flag.stencil = ##f
       gis8 s16 ais4 s16 g4 cis
-      
+
     }
     \\
     {
@@ -300,7 +353,7 @@ leftPiano = \relative {
   \time 4/4
   <<
     {
-      fis,,4 
+      fis,,4
       \once \override Flag.stencil = ##f
       gis8 s16 a4 d' s16
     }
@@ -310,4 +363,30 @@ leftPiano = \relative {
       fis' h cis <a d> h16 fis e h
     }
   >>
+  \key a \minor
+  %\bar ".|:"
+  \repeat volta 3 {
+    a16 e' h' a~ a g8 e16
+    a,16 e' h' a~ a g8 a,16
+  }
+  \alternative {
+    {
+      <<
+        {
+          \repeat unfold 2 {s4 h'8 s}
+        }
+        \\
+        {
+          fis,16 cis' gis' <a h>~ a gis8 d16
+          fis,16 cis' gis' <a h>~ a gis8 h,16
+        }
+      >>
+    }
+    {
+      f16 c' g' <as b>~ q as8 c,16
+      \set Score.repeatCommands = #'((volta #f))
+      f,16 c' g' <as b>~ q as8 c,16
+    }
+  }
+  %\bar ":|."
 }

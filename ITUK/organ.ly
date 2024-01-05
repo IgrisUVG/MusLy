@@ -6,9 +6,11 @@
 rightOrgan = \relative {
 
 }
+
 leftOrgan = \relative {
   \clef "bass"
 }
+
 fusOrgan = \relative {
   \clef "bass"
 

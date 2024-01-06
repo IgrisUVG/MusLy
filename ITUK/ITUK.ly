@@ -36,7 +36,7 @@
 }
 
 \include "tenor.ly"
-\include "piano.ly"
+\include "pianoP.ly"
 \include "organ.ly"
 \include "bass.ly"
 \include "drums.ly"
@@ -49,9 +49,9 @@ pianoPart = \new PianoStaff \with {
   instrumentName = "Piano"
 } <<
   \new Staff = "RH" \with {
-  } \rightPiano
+  } \rightPianoP
   \new Staff = "LH" \with {
-  } \leftPiano
+  } \leftPianoP
 >>
 
 organPart = \new StaffGroup \with {
@@ -61,12 +61,12 @@ organPart = \new StaffGroup \with {
 \new PianoStaff 
 <<
   \new Staff = "RH" \with {
-  } \rightOrgan
+  } \rightOrganP
   \new Staff = "LH" \with {
-  } \leftOrgan
+  } \leftOrganP
 >>
 \new Staff = "PF" \with {
-  } \fusOrgan
+  } \fusOrganP
 >>
 
 bassPart = \new Staff \with {

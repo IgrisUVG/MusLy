@@ -11,6 +11,11 @@ rightOrgan = \relative {
     {<e a e'>1}
   }
 }
+rightOrganP = \relative {
+  \key d \minor
+  \repeat unfold 4 {<f'' a d>1 <e a e'>}
+}
+
 
 leftOrgan = \relative {
   \key d \minor
@@ -19,6 +24,10 @@ leftOrgan = \relative {
     {<e a>1}
     {<e a>1}
   }
+}
+leftOrganP = \relative {
+  \key d \minor
+  \repeat unfold 4 {<e' a>1 <e a>}
 }
 
 fusOrgan = \relative {
@@ -29,4 +38,9 @@ fusOrgan = \relative {
     {cis1}
     {cis1}
   }
+}
+fusOrganP = \relative {
+  \key d \minor
+  \clef "bass"
+  \repeat unfold 4 {d1 cis}
 }

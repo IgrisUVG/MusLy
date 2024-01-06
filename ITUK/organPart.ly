@@ -49,7 +49,7 @@ dynamic = {
     \new PianoStaff
     <<
       \new Staff = "RH" \with {
-      } \rightOrgan
+      } \removeWithTag #'Partitur \rightOrgan
       \new Staff = "LH" \with {
       } \leftOrgan
     >>

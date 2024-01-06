@@ -5,5 +5,6 @@
 
 bass = \relative {
   \clef "bass_8"
+  \key d \minor
 
 }

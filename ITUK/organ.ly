@@ -44,4 +44,6 @@ fusOrgan = \relative {
   \tag #'Partitur {
     \repeat unfold 4 {d1 cis}
   }
+  e2 fis fis g c, d e1
+  e2 fis fis g c, d e4
 }

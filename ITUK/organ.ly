@@ -2,45 +2,46 @@
 
 \language "deutsch"
 
-
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
 rightOrgan = \relative {
   \key d \minor
-  \repeat volta 4 {<f'' a d>1}
-  \alternative {
-    {<e a e'>1}
-    {<e a e'>1}
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \set Score.repeatCommands = #'((volta "2.-4."))
+    <f'' a d>1 <e a e'>
+    \set Score.repeatCommands = #'((volta #f) end-repeat)
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    \repeat unfold 4 {<f a d>1 <e a e'>}
   }
 }
-rightOrganP = \relative {
-  \key d \minor
-  \repeat unfold 4 {<f'' a d>1 <e a e'>}
-}
-
 
 leftOrgan = \relative {
   \key d \minor
-  \repeat volta 4 {<e' a>1}
-  \alternative {
-    {<e a>1}
-    {<e a>1}
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \set Score.repeatCommands = #'((volta "2.-4."))
+    <e' a>1 <e a>1
+    \set Score.repeatCommands = #'((volta #f) end-repeat)
   }
-}
-leftOrganP = \relative {
-  \key d \minor
-  \repeat unfold 4 {<e' a>1 <e a>}
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    \repeat unfold 4 {<e' a>1 <e a>}
+  }
 }
 
 fusOrgan = \relative {
   \key d \minor
   \clef "bass"
-  \repeat volta 4 {d1}
-  \alternative {
-    {cis1}
-    {cis1}
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \set Score.repeatCommands = #'((volta "2.-4."))
+    d1 cis1
+    \set Score.repeatCommands = #'((volta #f) end-repeat)
   }
-}
-fusOrganP = \relative {
-  \key d \minor
-  \clef "bass"
-  \repeat unfold 4 {d1 cis}
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    \repeat unfold 4 {d1 cis}
+  }
 }

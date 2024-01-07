@@ -61,12 +61,12 @@ organPart = \new StaffGroup \with {
 \new PianoStaff 
 <<
   \new Staff = "RH" \with {
-  } \rightOrganP
+  } \removeWithTag #'Part \rightOrgan
   \new Staff = "LH" \with {
-  } \leftOrganP
+  } \removeWithTag #'Part \leftOrgan
 >>
 \new Staff = "PF" \with {
-  } \fusOrganP
+  } \removeWithTag #'Part \fusOrgan
 >>
 
 bassPart = \new Staff \with {

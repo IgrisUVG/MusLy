@@ -44,16 +44,16 @@ dynamic = {
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new StaffGroup \with {
-    systemStartDelimiter = #'SystemStartSquare
+    %systemStartDelimiter = #'SystemStartSquare
   } <<
     \new PianoStaff
     <<
       \new Staff = "RH" \with {
       } \removeWithTag #'Partitur \rightOrgan
       \new Staff = "LH" \with {
-      } \leftOrgan
+      } \removeWithTag #'Partitur \leftOrgan
     >>
     \new Staff = "PF" \with {
-    } \fusOrgan
+    } \removeWithTag #'Partitur \fusOrgan
   >>
 }

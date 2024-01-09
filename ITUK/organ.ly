@@ -17,17 +17,50 @@ rightOrgan = \relative {
   }
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
-    \repeat volta 2 {}
+    \repeat volta 2 {
+      <<
+        {
+          g2 fis
+        }
+        \\
+        {
+          d1
+        }
+      >>
+      <h d fis>2 <h e> <g d'> <fis~ cis'>
+    }
     \alternative {
-      {}
+      {<fis h>1}
       {
+        <fis h fis'>4 r
         \set Score.repeatCommands = #'((volta #f))
+        r2
       }
     }
 
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
+    <<
+      {
+        g'2 fis
+      }
+      \\
+      {
+        d1
+      }
+    >>
+    <h d fis>2 <h e> <g d'> <fis~ cis'> <fis h>1
+    <<
+      {
+        g'2 fis
+      }
+      \\
+      {
+        d1
+      }
+    >>
+    <h d fis>2 <h e> <g d'> <fis~ cis'> <fis h fis'>4 r r2
   }
 }
 
@@ -47,17 +80,51 @@ leftOrgan = \relative {
   \tag #'Part {
     \repeat volta 2 {
       <c g'>2
+      <<
+        {
+          <d a'~>2 q e
+        }
+        \\
+        {
+          s2 fis1
+        }
+      >>
+      <g, e'>2 <a e'^~>
     }
     \alternative {
-      {}
+      {<g e'>1}
       {
+        <g e'>4 r
         \set Score.repeatCommands = #'((volta #f))
+        r2
       }
     }
 
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
+      <c g'>2
+      <<
+        {
+          <d a'~>2 q e
+        }
+        \\
+        {
+          s2 fis1
+        }
+      >>
+      <g, e'>2 <a e'^~> <g e'>1
+      <c g'>2
+      <<
+        {
+          <d a'~>2 q e
+        }
+        \\
+        {
+          s2 fis1
+        }
+      >>
+      <g, e'>2 <a e'^~> <g e'>4 r r2
   }
 }
 
@@ -90,6 +157,6 @@ fusOrgan = \relative {
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
     e2 fis fis g c, d e1
-    e2 fis fis g c, d e4
+    e2 fis fis g c, d e4 r r2
   }
 }

@@ -15,6 +15,20 @@ rightOrgan = \relative {
   \tag #'Partitur {
     \repeat unfold 4 {<f a d>1 <e a e'>}
   }
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \repeat volta 2 {}
+    \alternative {
+      {}
+      {
+        \set Score.repeatCommands = #'((volta #f))
+      }
+    }
+
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+  }
 }
 
 leftOrgan = \relative {
@@ -27,7 +41,23 @@ leftOrgan = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 4 {<e' a>1 <e a>}
+    \repeat unfold 4 {<e a>1 <e a>}
+  }
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \repeat volta 2 {
+      <c g'>2
+    }
+    \alternative {
+      {}
+      {
+        \set Score.repeatCommands = #'((volta #f))
+      }
+    }
+
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
   }
 }
 

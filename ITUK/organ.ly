@@ -44,6 +44,22 @@ fusOrgan = \relative {
   \tag #'Partitur {
     \repeat unfold 4 {d1 cis}
   }
-  e2 fis fis g c, d e1
-  e2 fis fis g c, d e4
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \repeat volta 2 {e2 fis fis g c, d}
+    \alternative {
+      {e1}
+      {
+        e4 r
+        \set Score.repeatCommands = #'((volta #f))
+        r2
+      }
+    }
+
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    e2 fis fis g c, d e1
+    e2 fis fis g c, d e4
+  }
 }

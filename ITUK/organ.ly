@@ -7,7 +7,7 @@ rightOrgan = \relative {
   \key d \minor
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
-    \set Score.repeatCommands = #'((volta "2.-4."))
+    \set Score.repeatCommands = #'((volta "1.-4."))
     <f'' a d>1 <e a e'>
     \set Score.repeatCommands = #'((volta #f) end-repeat)
   }
@@ -60,7 +60,7 @@ rightOrgan = \relative {
         d1
       }
     >>
-    <h d fis>2 <h e> <g d'> <fis~ cis'> <fis h fis'>4 r r2
+    <h d fis>2 <h e> <g d'> <fis_~ cis'> <fis h fis'>4 r r2
   }
 }
 
@@ -68,7 +68,7 @@ leftOrgan = \relative {
   \key d \minor
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
-    \set Score.repeatCommands = #'((volta "2.-4."))
+    \set Score.repeatCommands = #'((volta "1.-4."))
     <e' a>1 <e a>1
     \set Score.repeatCommands = #'((volta #f) end-repeat)
   }
@@ -133,7 +133,7 @@ fusOrgan = \relative {
   \clef "bass"
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
-    \set Score.repeatCommands = #'((volta "2.-4."))
+    \set Score.repeatCommands = #'((volta "1.-4."))
     d1 cis1
     \set Score.repeatCommands = #'((volta #f) end-repeat)
   }

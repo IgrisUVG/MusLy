@@ -106,8 +106,9 @@ rightPiano = \relative {
   \bar "||"
   \break
   R1*7
-  \bar "||"
+  \bar ".|:"
   \mergeDifferentlyDottedOn
+  \set Score.repeatCommands = #'((volta "1.-3."))
   <<
     {
       e16 g fis e g8. <g_~ a~>16
@@ -129,6 +130,7 @@ rightPiano = \relative {
   >>
   \bar ":|."
   \time 3/4
+  \set Score.repeatCommands = #'((volta #f))
   <<
     {
       e'16 g fis e g <fis g a>8 <e_~ g a~>16 q4
@@ -291,10 +293,12 @@ leftPiano = \relative {
   \bar "||"
   \break
   R1*7
-  \bar "||"
+  \bar ".|:"
+  \set Score.repeatCommands = #'((volta "1.-3."))
   e,16 h' d8 <a e'>8. <h fis'>16~ q2
   \bar ":|."
   \time 3/4
+  \set Score.repeatCommands = #'((volta #f))
   e,16 h' d8 <a e' a>16 <h fis' a>8 <a e' h'>16~ q4
   \bar "||"
   \break

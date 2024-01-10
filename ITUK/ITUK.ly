@@ -10,7 +10,8 @@
 
 %#(set-global-staff-size 16)
 \paper {
-  indent = 3.0\cm  % space for instrumentName
+  system-separator-markup = \slashSeparator
+  indent = 2.0\cm  % space for instrumentName
   %short-indent = 1.5\cm  % space for shortInstrumentName
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
@@ -25,6 +26,9 @@
 }
 
 \layout {
+  \context {
+    \RemoveEmptyStaffContext
+  }
   \context {
     \Score
     \remove "Bar_number_engraver"
@@ -58,14 +62,14 @@ organPart = \new StaffGroup \with {
   systemStartDelimiter = #'SystemStartSquare
   instrumentName = "Organ"
 } <<
-\new PianoStaff 
-<<
-  \new Staff = "RH" \with {
-  } \removeWithTag #'Part \rightOrgan
-  \new Staff = "LH" \with {
-  } \removeWithTag #'Part \leftOrgan
->>
-\new Staff = "PF" \with {
+  \new PianoStaff
+  <<
+    \new Staff = "RH" \with {
+    } \removeWithTag #'Part \rightOrgan
+    \new Staff = "LH" \with {
+    } \removeWithTag #'Part \leftOrgan
+  >>
+  \new Staff = "PF" \with {
   } \removeWithTag #'Part \fusOrgan
 >>
 

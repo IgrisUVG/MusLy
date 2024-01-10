@@ -97,32 +97,33 @@ rightPianoP = \relative {
   \stemUp
   <gis cis>8 <h e> <e a>4
   \stemNeutral
-
   \bar "||"
   \break
   R1*7
   \bar "||"
+  \break
   \mergeDifferentlyDottedOn
-  <<
-    {
-      e16 g fis e g8. <g_~ a~>16
-      \stemDown
-      q2
-      \stemNeutral
-    }
-    \\
-    {
-      g,8 a16 g g' h, c d~ d2
-    }
-    \\
-    {
-      \voiceTwo
-      s2
-      \once \override Rest.extra-offset = #'(.5 . 3)
-      r4 \tuplet 3/2 {<e fis>8 d a}
-    }
-  >>
-  \bar ":|."
+  \repeat unfold 3 {
+    <<
+      {
+        e16 g fis e g8. <g_~ a~>16
+        \stemDown
+        q2
+        \stemNeutral
+      }
+      \\
+      {
+        g,8 a16 g g' h, c d~ d2
+      }
+      \\
+      {
+        \voiceTwo
+        s2
+        \once \override Rest.extra-offset = #'(.5 . 3)
+        r4 \tuplet 3/2 {<e fis>8 d a}
+      }
+    >>
+  }
   \time 3/4
   <<
     {
@@ -193,8 +194,7 @@ rightPianoP = \relative {
   >>
   <gis cis>8 <fis h>
   \key d \minor
-  %\bar ".|:"
-  \repeat volta 3 {
+  \repeat unfold 2 {
     <<
       {
         s4
@@ -210,40 +210,49 @@ rightPianoP = \relative {
         q8 e16 f
       }
     >>
+    <<
+      {
+        a8. s16
+        <cis d>16 h g a~ a8. s16
+        <cis d>16 h g a
+      }
+      \\
+      {
+        cis,8. <e gis>16~ q8 e16 fis
+        cis8. <e gis>16~ q8 e16 fis
+      }
+    >>
   }
-  \alternative {
+  <<
     {
-      <<
-        {
-          a8. s16
-          <cis d>16 h g a~ a8. s16
-          <cis d>16 h g a
-        }
-        \\
-        {
-          cis,8. <e gis>16~ q8 e16 fis
-          cis8. <e gis>16~ q8 e16 fis
-        }
-      >>
+      s4
+      <c' d>16 h g a~ a8. s16
+      <c d>16 h g a
     }
+    \\
     {
-      <<
-        {
-          s4
-          <c' des>16 h! as f~ f8. s16
-          <c' des>16 h! as f
-        }
-        \\
-        {
-          \stemUp
-          <c as'>8. <es as>16~
-          \stemDown
-          q8 e16 es c8. <es as>16~
-          q8 e16 es
-        }
-      >>
+      \stemUp
+      <e a>8. <d g>16~
+      \stemDown
+      q8 e16 f e8. <d g>16~
+      q8 e16 f
     }
-  }
+  >>
+  <<
+    {
+      s4
+      <c' des>16 h! as f~ f8. s16
+      <c' des>16 h! as f
+    }
+    \\
+    {
+      \stemUp
+      <c as'>8. <es as>16~
+      \stemDown
+      q8 e16 es c8. <es as>16~
+      q8 e16 es
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%% LH %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -281,19 +290,16 @@ leftPianoP = \relative {
       d,8 a' h c e d a d,
     }
   >>
-  a8 e' a <gis cis>
-  \set Score.repeatCommands = #'((volta #f))
+  a8 e' a <gis cis>  
   \stemDown
   \top <h e> <e a> <gis cis>4 \bot
   \stemNeutral
-
-
   \bar "||"
   \break
   R1*7
   \bar "||"
-  e,16 h' d8 <a e'>8. <h fis'>16~ q2
-  \bar ":|."
+  \break
+  \repeat unfold 3 {e,16 h' d8 <a e'>8. <h fis'>16~ q2}
   \time 3/4
   e,16 h' d8 <a e' a>16 <h fis' a>8 <a e' h'>16~ q4
   \bar "||"
@@ -366,29 +372,21 @@ leftPianoP = \relative {
     }
   >>
   \key d \minor
-  %\bar ".|:"
-  \repeat volta 3 {
-    a16 e' h' a~ a g8 e16
-    a,16 e' h' a~ a g8 a,16
-  }
-  \alternative {
-    {
-      <<
-        {
-          \repeat unfold 2 {s4 h'8 s}
-        }
-        \\
-        {
-          fis,16 cis' gis' <a h>~ a gis8 d16
-          fis,16 cis' gis' <a h>~ a gis8 h,16
-        }
-      >>
+  \repeat unfold 2 {
+    \repeat unfold 2 {
+      a16 e' h' a~ a g8 e16
     }
-    {
-      f16 c' g' <as b>~ q as8 c,16
-      \set Score.repeatCommands = #'((volta #f))
-      f,16 c' g' <as b>~ q as8 c,16
-    }
+    <<
+      {
+        \repeat unfold 2 {s4 h'8 s}
+      }
+      \\
+      {
+        fis,16 cis' gis' <a h>~ a gis8 d16
+        fis,16 cis' gis' <a h>~ a gis8 h,16
+      }
+    >>
   }
-  %\bar ":|."
+  \repeat unfold 2 {a16 e' h' a~ a g8 e16}
+  \repeat unfold 2 {f,16 c' g' <as b>~ q as8 c,16}
 }

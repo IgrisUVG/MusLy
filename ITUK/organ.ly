@@ -60,7 +60,16 @@ rightOrgan = \relative {
         d1
       }
     >>
-    <h d fis>2 <h e> <g d'> <fis_~ cis'> <fis h fis'>4 r r2
+    <h d fis>2 <h e> <g d'> <fis_~ cis'> <fis h fis'>4
+    <<
+      {
+        s4 d''2
+      }
+      \\
+      {
+        <h~ e^~>2. <h e fis>4
+      }
+    >>
   }
 }
 
@@ -124,7 +133,8 @@ leftOrgan = \relative {
           s2 fis1
         }
       >>
-      <g, e'>2 <a e'^~> <g e'>4 r r2
+      <g, e'>2 <a e'^~> <g e'>4 e'' d2
+      fis4 e d2
   }
 }
 

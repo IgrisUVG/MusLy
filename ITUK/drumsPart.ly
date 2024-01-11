@@ -4,7 +4,7 @@
 
 \header {
   title = "ITUK"
-  subsubtitle = "Piano"
+  subsubtitle = "Drums"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -37,17 +37,9 @@
   \override Staff.TimeSignature.stencil = ##f
 }
 
-\include "piano.ly"
+\include "drums.ly"
 
-dynamic = {
-  \override Hairpin.to-barline = ##f
-
-}
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
-  \new PianoStaff <<
-    \new Staff = "RH" \rightPiano
-    %\new Dynamics = "DYN" \dynamic
-    \new Staff = "LH" \leftPiano
-  >>
+  \new DrumStaff \drum
 }

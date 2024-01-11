@@ -4,7 +4,7 @@
 
 \header {
   title = "ITUK"
-  subsubtitle = "Piano"
+  subsubtitle = "Guitar"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -16,11 +16,9 @@
   markup-system-spacing.basic-distance = #26
   system-system-spacing.basic-distance = #25
   last-bottom-spacing.basic-distance = #25
-  left-margin = 15
-  right-margin = 15
-  %two-sided = ##t
-  %inner-margin = 20
-  %outer-margin = 15
+  two-sided = ##t
+  inner-margin = 20
+  outer-margin = 15
 }
 
 \layout {
@@ -37,17 +35,12 @@
   \override Staff.TimeSignature.stencil = ##f
 }
 
-\include "piano.ly"
+\include "guitar.ly"
 
-dynamic = {
-  \override Hairpin.to-barline = ##f
-
-}
 %%%%%%%%%%%%%%%%%%%%%%
 \score {
-  \new PianoStaff <<
-    \new Staff = "RH" \rightPiano
-    %\new Dynamics = "DYN" \dynamic
-    \new Staff = "LH" \leftPiano
+  \new StaffGroup <<
+    \new ChordNames \removeWithTag #'Partitur \guitarChords
+    \new RhythmicStaff \removeWithTag #'Partitur \guitar
   >>
 }

@@ -16,9 +16,11 @@
   markup-system-spacing.basic-distance = #26
   system-system-spacing.basic-distance = #25
   last-bottom-spacing.basic-distance = #25
-  two-sided = ##t
-  inner-margin = 20
-  outer-margin = 15
+  left-margin = 15
+  right-margin = 15
+  %two-sided = ##t
+  %inner-margin = 20
+  %outer-margin = 15
 }
 
 \layout {

@@ -31,7 +31,7 @@
   }
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \override Staff.TimeSignature.stencil = ##f
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
@@ -42,6 +42,7 @@
 \include "tenor.ly"
 \include "pianoP.ly"
 \include "organ.ly"
+\include "guitar.ly"
 \include "bass.ly"
 \include "drums.ly"
 
@@ -52,10 +53,8 @@ tenorSaxPart = \new Staff \with {
 pianoPart = \new PianoStaff \with {
   instrumentName = "Piano"
 } <<
-  \new Staff = "RH" \with {
-  } \rightPianoP
-  \new Staff = "LH" \with {
-  } \leftPianoP
+  \new Staff = "RH" \rightPianoP
+  \new Staff = "LH" \leftPianoP
 >>
 
 organPart = \new StaffGroup \with {
@@ -64,13 +63,19 @@ organPart = \new StaffGroup \with {
 } <<
   \new PianoStaff
   <<
-    \new Staff = "RH" \with {
-    } \removeWithTag #'Part \rightOrgan
-    \new Staff = "LH" \with {
-    } \removeWithTag #'Part \leftOrgan
+    \new Staff = "RH" \removeWithTag #'Part \rightOrgan
+    \new Staff = "LH" \removeWithTag #'Part \leftOrgan
   >>
-  \new Staff = "PF" \with {
-  } \removeWithTag #'Part \fusOrgan
+  \new Staff = "PF" \removeWithTag #'Part \fusOrgan
+>>
+
+guitarPart = \new StaffGroup \with {
+  instrumentName = "Guitar"
+} <<
+  \new ChordNames \removeWithTag #'Part \guitarChords
+  \new Staff \with {
+    \override StaffSymbol.line-count = #1
+  }\removeWithTag #'Part \guitar
 >>
 
 bassPart = \new Staff \with {
@@ -84,10 +89,11 @@ drumsPart = \new DrumStaff \with {
 \score {
   \new StaffGroup
   <<
-    \tenorSaxPart
+    %\tenorSaxPart
     \pianoPart
     \organPart
-    \bassPart
+    \guitarPart
+    %\bassPart
     \drumsPart
   >>
 }

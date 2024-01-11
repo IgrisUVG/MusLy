@@ -70,6 +70,8 @@ rightPiano = \relative {
   \key d \minor
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
+  %\partial 4
+  %s4
   \repeat volta 4 {
     <e' a d>4<g c>8 <f a>4. h4
   }
@@ -259,6 +261,8 @@ leftPiano = \relative {
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   \clef "bass"
+  %\partial 4
+  %s4
   \repeat volta 4 {
     <<
       {

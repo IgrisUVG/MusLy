@@ -2,9 +2,11 @@
 
 \language "deutsch"
 
-%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
 rightOrgan = \relative {
   \key d \minor
+  \override MultiMeasureRest.expand-limit = #2
+  \set Score.skipBars = ##t
+  \tag #'Partitur {\partial 4 s4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
     \set Score.repeatCommands = #'((volta "1.-4."))
@@ -32,18 +34,48 @@ rightOrgan = \relative {
     \alternative {
       {<fis h>1}
       {
-        <fis h fis'>4 r
-        \set Score.repeatCommands = #'((volta #f))
-        r2
+        <fis h fis'>4
+        %\set Score.repeatCommands = #'((volta #f))
+        <<
+          {
+            s4 d''2
+          }
+          \\
+          {
+            <h~ e^~>2. <h e fis>4
+          }
+        >>
       }
     }
-
+    <<
+      {
+        s4 d2
+      }
+      \\
+      {
+        <h~ e^~>2. <h e fis>4
+      }
+    >>
+    <<
+      {
+        s4 d2
+        \time 3/4
+        s2 d4
+      }
+      \\
+      {
+        <h~ e^~>2.
+        \time 3/4
+        <h e fis>4
+        <h~ e^~>2
+      }
+    >>
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
     <<
       {
-        g'2 fis
+        g2 fis
       }
       \\
       {
@@ -70,11 +102,59 @@ rightOrgan = \relative {
         <h~ e^~>2. <h e fis>4
       }
     >>
+    <<
+      {
+        s4 d2
+      }
+      \\
+      {
+        <h~ e^~>2. <h e fis>4
+      }
+    >>
+    <<
+      {
+        s4 d2
+        \time 3/4
+        s2 d4
+      }
+      \\
+      {
+        <h~ e^~>2.
+        \time 3/4
+        <h e fis>4
+        <h~ e^~>2
+      }
+    >>
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \time 9/4
+  \key a \major
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1 1 1 1 1 1)
+  \grace {s8}
+  R4*9
+  \time 5/4
+  R4*5
+  \time 4/4
+  R1
+  \key d \minor
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \repeat volta 3 {<f a c>1}
+    \alternative {{<e a e'>}{<f as f'>}}
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    \repeat unfold 2 {<f a c>1 <e a e'>} <f a c> <f as f'>
   }
 }
 
 leftOrgan = \relative {
   \key d \minor
+  \override MultiMeasureRest.expand-limit = #2
+  \set Score.skipBars = ##t  
+  \tag #'Partitur {\partial 4 s4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
     \set Score.repeatCommands = #'((volta "1.-4."))
@@ -103,44 +183,76 @@ leftOrgan = \relative {
     \alternative {
       {<g e'>1}
       {
-        <g e'>4 r
+        <g e'>4 e''
         \set Score.repeatCommands = #'((volta #f))
-        r2
+        d2
       }
     }
+    fis4 e d2
+    fis4 e d2
+    \time 3/4
+    fis4 e d
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    <c, g'>2
+    <<
+      {
+        <d a'~>2 q e
+      }
+      \\
+      {
+        s2 fis1
+      }
+    >>
+    <g, e'>2 <a e'^~> <g e'>1
+    <c g'>2
+    <<
+      {
+        <d a'~>2 q e
+      }
+      \\
+      {
+        s2 fis1
+      }
+    >>
+    <g, e'>2 <a e'^~> <g e'>4 e'' d2
+    fis4 e d2
+    fis4 e d2
+    \time 3/4
+    fis4 e d
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \time 9/4
+  \key a \major
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1 1 1 1 1 1)
+  \grace {s8}
+  R4*9
+  \time 5/4
+  R4*5
+  \time 4/4
+  R1
+  \key d \minor
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \repeat volta 3 {<e, a>1}
+    \alternative {{<e a>}{<des as'>}}
 
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-      <c g'>2
-      <<
-        {
-          <d a'~>2 q e
-        }
-        \\
-        {
-          s2 fis1
-        }
-      >>
-      <g, e'>2 <a e'^~> <g e'>1
-      <c g'>2
-      <<
-        {
-          <d a'~>2 q e
-        }
-        \\
-        {
-          s2 fis1
-        }
-      >>
-      <g, e'>2 <a e'^~> <g e'>4 e'' d2
-      fis4 e d2
+    \repeat unfold 5 {<e' a>1} <des as'>
   }
 }
 
 fusOrgan = \relative {
   \key d \minor
   \clef "bass"
+  \override MultiMeasureRest.expand-limit = #2
+  \set Score.skipBars = ##t
+  \tag #'Partitur {\partial 4 s4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
     \set Score.repeatCommands = #'((volta "1.-4."))
@@ -162,11 +274,38 @@ fusOrgan = \relative {
         r2
       }
     }
-
+    R1*2
+    \time 3/4
+    R2.
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
     e2 fis fis g c, d e1
-    e2 fis fis g c, d e4 r r2
+    e2 fis fis g c, d e4 r r2 R1*2
+    \time 3/4
+    R2.
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \time 9/4
+  \key a \major
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1 1 1 1 1 1)
+  \grace {s8}
+  R4*9
+  \time 5/4
+  R4*5
+  \time 4/4
+  R1
+  \key d \minor
+%%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
+  \tag #'Part {
+    \repeat volta 3 {a1}
+    \alternative {{cis,}{as'}}
+
+  }
+%%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
+  \tag #'Partitur {
+    \repeat unfold 2 {a1 cis,} a' as
   }
 }

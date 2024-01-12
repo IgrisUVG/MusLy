@@ -6,7 +6,7 @@ rightOrgan = \relative {
   \key d \minor
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
-  \tag #'Partitur {\partial 4 s4}
+  \tag #'Partitur {\partial 4 r4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
     \set Score.repeatCommands = #'((volta "1.-4."))
@@ -154,7 +154,7 @@ leftOrgan = \relative {
   \key d \minor
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t  
-  \tag #'Partitur {\partial 4 s4}
+  \tag #'Partitur {\partial 4 r4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
     \set Score.repeatCommands = #'((volta "1.-4."))
@@ -252,7 +252,7 @@ fusOrgan = \relative {
   \clef "bass"
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
-  \tag #'Partitur {\partial 4 s4}
+  \tag #'Partitur {\partial 4 r4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
     \set Score.repeatCommands = #'((volta "1.-4."))

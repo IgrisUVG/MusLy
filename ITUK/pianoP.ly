@@ -71,7 +71,7 @@ rightPianoP = \relative {
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   \partial 4
-  s4
+  r4
   \repeat unfold 3{
     <e' a d>4<g c>8 <f a>4. h4
     <<
@@ -264,7 +264,7 @@ leftPianoP = \relative {
   \set Score.skipBars = ##t
   \clef "bass"
   \partial 4
-  s4
+  r4
   \repeat unfold 3 {
     <<
       {

@@ -49,7 +49,8 @@ guitarChords = \chordmode {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 2 {d1:m7.9 a:maj7} d1:m7.9 f:9/des
+    \repeat unfold 2 {d1:m7.9 a:maj7}
+    d1:m7.9 f:9/des d1:m7.9 a:maj7
   }
 }
 
@@ -100,6 +101,6 @@ guitar = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 2 {h4 h h h h h h h} h4 h h h h h h h
+    \repeat unfold 4 {h4 h h h h h h h}
   }
 }

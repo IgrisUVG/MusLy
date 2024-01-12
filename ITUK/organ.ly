@@ -146,7 +146,8 @@ rightOrgan = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 2 {<f a c>1 <e a e'>} <f a c> <f as f'>
+    \repeat unfold 2 {<f a c>1 <e a e'>}
+    <f a c> <f as f'> <f a c> <e a e'>
   }
 }
 
@@ -243,7 +244,8 @@ leftOrgan = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 5 {<e' a>1} <des as'>
+    \repeat unfold 5 {<e a>1} <des as'>
+    \repeat unfold 2 {<e a>}
   }
 }
 
@@ -306,6 +308,6 @@ fusOrgan = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 2 {a1 cis,} a' as
+    \repeat unfold 2 {a1 cis,} a' as a cis,
   }
 }

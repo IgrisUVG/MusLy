@@ -8,7 +8,7 @@
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
-%#(set-global-staff-size 16)
+#(set-global-staff-size 16)
 \paper {
   system-separator-markup = \slashSeparator
   indent = 2.0\cm  % space for instrumentName

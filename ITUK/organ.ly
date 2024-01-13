@@ -143,6 +143,7 @@ rightOrgan = \relative {
   \tag #'Part {
     \repeat volta 3 {<f a c>1}
     \alternative {{<e a e'>}{<f as f'>}}
+    <f a? c> <e a e'>
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
@@ -154,7 +155,7 @@ rightOrgan = \relative {
 leftOrgan = \relative {
   \key d \minor
   \override MultiMeasureRest.expand-limit = #2
-  \set Score.skipBars = ##t  
+  \set Score.skipBars = ##t
   \tag #'Partitur {\partial 4 r4}
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
@@ -240,7 +241,7 @@ leftOrgan = \relative {
   \tag #'Part {
     \repeat volta 3 {<e, a>1}
     \alternative {{<e a>}{<des as'>}}
-
+    <e a?> <e a>
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
@@ -304,7 +305,7 @@ fusOrgan = \relative {
   \tag #'Part {
     \repeat volta 3 {a1}
     \alternative {{cis,}{as'}}
-
+    a? cis,
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {

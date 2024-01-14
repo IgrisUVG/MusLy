@@ -253,6 +253,33 @@ rightPiano = \relative {
       >>
     }
   }
+  <<
+    {
+      s4
+      <c' d>16 h g a~ a8. s16
+      <c d>16 h g a~
+    }
+    \\
+    {
+      \stemUp
+      <e a>8. <d g>16~
+      \stemDown
+      q8 e16 f e8. <d g>16~
+      q8 e16 f
+    }
+  >>
+  <<
+    {
+      a8. s16
+      <cis d>16 h g a~ a8. s16
+      <cis d>16 h g a
+    }
+    \\
+    {
+      cis,8. <e gis>16~ q8 e16 fis
+      cis8. <e gis>16~ q8 e16 fis
+    }
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%% LH %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -398,5 +425,17 @@ leftPiano = \relative {
       f,16 c' g' <as b>~ q as8 c,16
     }
   }
+  a16 e' h' a~ a g8 e16
+  a,16 e' h' a~ a g8 a,16
+  <<
+    {
+      \repeat unfold 2 {s4 h'8 s}
+    }
+    \\
+    {
+      fis,16 cis' gis' <a h>~ a gis8 d16
+      fis,16 cis' gis' <a h>~ a gis8 h,16
+    }
+  >>
   %\bar ":|."
 }

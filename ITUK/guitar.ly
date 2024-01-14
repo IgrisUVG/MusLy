@@ -46,6 +46,7 @@ guitarChords = \chordmode {
   \tag #'Part {
     \repeat volta 3 {d1:m7.9}
     \alternative {{a:maj7}{f:9/des}}
+    d:m7.9 a:maj7
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
@@ -98,6 +99,7 @@ guitar = \relative {
   \tag #'Part {
     \repeat volta 3 {d4 d d d}
     \alternative {{a a a a}{f f f f}}
+    d d d d a a a a
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {

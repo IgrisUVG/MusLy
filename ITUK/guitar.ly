@@ -103,6 +103,6 @@ guitar = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 4 {h4 h h h h h h h}
+    \repeat unfold 4 {h'4 h h h h h h h}
   }
 }

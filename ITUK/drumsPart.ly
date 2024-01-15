@@ -32,6 +32,7 @@
   \context{
     \Score
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
+    \override BarNumber.break-visibility = ##(#t #t #t)
     %\remove "Bar_number_engraver"
   }
   \override Staff.TimeSignature.stencil = ##f

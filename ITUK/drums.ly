@@ -4,6 +4,7 @@
 
 
 drum = \drummode {
+  \set Score.barNumberVisibility = #all-bar-numbers-visible
   \override MultiMeasureRest.expand-limit = #2
   \set Score.skipBars = ##t
   \partial 4
@@ -33,5 +34,5 @@ drum = \drummode {
       sn4 bd r8. bd16~ bd4 s
     }
   >>
-  bd4
+  bd4 sn16 bd8. bd4 \acciaccatura {cymr16 cymr} cymr4
 }

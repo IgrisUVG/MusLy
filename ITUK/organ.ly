@@ -309,6 +309,6 @@ fusOrgan = \relative {
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%
   \tag #'Partitur {
-    \repeat unfold 2 {a1 cis,} a' as a cis,
+    \repeat unfold 2 {a'1 cis,} a' as a cis,
   }
 }

@@ -92,8 +92,8 @@ drumsPart = \new DrumStaff \with {
     %\tenorSaxPart
     \pianoPart
     \organPart
+    \drumsPart
     \guitarPart
     \bassPart
-    \drumsPart
   >>
 }

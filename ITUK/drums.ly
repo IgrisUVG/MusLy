@@ -69,4 +69,15 @@ drum = \drummode {
   R4*5
   \time 4/4
   r2 \tuplet 3/2 {tommh4 tomml \acciaccatura sn8 sn4}
+  \repeat unfold 16 {
+    <<
+      {
+        \repeat unfold 4 {cyms8}
+      }
+      \\
+      {
+        bd4 sn
+      }
+    >>
+  }
 }

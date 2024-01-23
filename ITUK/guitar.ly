@@ -31,7 +31,7 @@ guitarChords = \chordmode {
   \repeat unfold 3 {e4:m9 a8.:m6 h16:7.9 s2}
   \time 3/4
   e4:m9 a8.:m6 h16:7.9 s4
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \time 9/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
@@ -97,8 +97,24 @@ guitar = \relative {
   R1
 %%%%%%%%%%%%%%%%%% Part %%%%%%%%%%%%%%%%%%%%
   \tag #'Part {
-    \repeat volta 3 {d4 d d d}
-    \alternative {{a a a a}{f f f f}}
+    \repeat volta 3 {
+      \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+      \once \override Score.RehearsalMark.extra-offset = #'(2 . 2.5)
+      \mark \markup{\fret-diagram #"6-x;5-x;4-o;3-5;2-6;1-o;"}
+      d4 d d d
+    }
+    \alternative {
+      {
+        \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+        \mark \markup{\fret-diagram #"6-x;5-o;4-6;3-6;2-5;1-o;"}
+        a a a a
+      }
+      {
+        \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+        \mark \markup{\fret-diagram #"6-x;5-4;4-3-(;3-5;2-6;1-3-);"}
+        f f f f
+      }
+    }
     d d d d a a a a
   }
 %%%%%%%%%%%%%%%% Partitur %%%%%%%%%%%%%%%%%%

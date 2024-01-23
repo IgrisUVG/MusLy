@@ -63,10 +63,10 @@ drum = \drummode {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1 1 1 1 1 1)
-  \grace {s8}
+  \tag #'Partitur {\grace {s8}}
   R4*9
   \time 5/4
   R4*5
   \time 4/4
-  R1
+  r2 \tuplet 3/2 {tommh4 tomml \acciaccatura sn8 sn4}
 }

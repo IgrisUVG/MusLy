@@ -80,18 +80,18 @@ guitarPart = \new StaffGroup \with {
 
 bassPart = \new Staff \with {
   instrumentName = "Bass"
-} \bass
+}\removeWithTag #'Part \bass
 
 drumsPart = \new DrumStaff \with {
   instrumentName = "Drums"
-} \drum
+}\removeWithTag #'Part \drum
 
 \score {
   \new StaffGroup
   <<
     %\tenorSaxPart
     \pianoPart
-    \organPart
+    %\organPart
     \drumsPart
     \guitarPart
     \bassPart

@@ -189,7 +189,7 @@ guitarTwo = \relative{
   >>
   e8 fis[( e]) \appoggiatura a,-\markup {
     \postscript #"0.5 1.4 moveto 2.2 0.4 rlineto stroke"
-  } h\3 c a
+  } h\4 c a
   \tag #'Part {
     \break
   }

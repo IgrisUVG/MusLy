@@ -16,12 +16,14 @@
   top-markup-spacing.basic-distance = #3
   markup-system-spacing.basic-distance = #22
   system-system-spacing.basic-distance = #18
-  last-bottom-spacing.basic-distance = #15
+  last-bottom-spacing.basic-distance = #20
   left-margin = 20
   right-margin = 20
   %two-sided = ##t
   %inner-margin = 25
   %outer-margin = 15
+  footnote-padding = 2
+  footnote-footer-padding = 7
 }
 
 \layout {

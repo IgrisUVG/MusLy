@@ -342,9 +342,46 @@ guitarMusic = \relative {
       c-2
     }
   >>
+%%%%%%%%%%%% Footnote %%%%%%%%%%%%%%
   \override Score.FootnoteItem.annotation-line = ##f
-  \footnote \markup "*" #'(0 . 2)
-  \markup { \super "*" \italic " Editorial 1" } Staff.BarLine
+  \footnote \markup "*" #'(0 . 4)
+  \markup {
+    \null
+    *
+    \null
+    \score {
+      \new Staff \with {
+        \magnifyStaff #0.8
+      }
+      \relative {
+        \key e \major
+        \time 2/4
+        \omit Staff.TimeSignature
+        <<
+          {
+            b''4^\markup{\teeny VIII}
+          }
+          \\
+          {
+            e,16\rest f c^( b)
+          }
+          \\
+          {
+            \voiceTwo
+            f4
+          }
+        >>
+        \once\override Fingering.extra-offset = #'(0 . -3.3)
+        a16( g) f
+        \once\override Fingering.extra-offset = #'(0 . -3.3)
+        es
+      }
+      \layout {
+        indent = 0
+      }
+    }
+  } Staff.BarLine
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   <<
     {
       b''4^\markup{\teeny VIII}
@@ -756,9 +793,50 @@ guitarMusic = \relative {
   <a,, h' e!\3>^\markup{\teeny IX}
   \set fingeringOrientations = #'(right)
   <h''-4 dis-3>\noBeam
+%%%%%%%%%%%% Footnote %%%%%%%%%%%%%%
+%{
   %\override Score.FootnoteItem.annotation-line = ##f
-  \footnote \markup "**" #'(0 . 2)
-  \markup { \super "**" \italic " Editorial 2" } Staff.BarLine
+  \footnote \markup "**" #'(0 . 4)
+  \markup {
+    **
+    \score {
+      \new Staff \with {
+        \magnifyStaff #0.8
+      }
+      \relative {
+        \key e \major
+        \time 2/4
+        \omit Staff.TimeSignature
+        \set fingeringOrientations = #'(up right)
+        <cis'_\6-2 ais'-1 fis'-4>
+        <<
+          {
+            s8
+            \once\override Slur.positions = #'(0 . 1)
+            \tag #'Partitur {
+              \shape #'((0 . 0) (1 . 0) (0.5 . 0.5) (0 . 0)) Slur
+            }
+            h''8.( a16
+            \stemDown
+            <e, h' gis'>8)<c' a'>
+          }
+          \\
+          {
+            s8 h\rest <c e>
+          }
+          \\
+          {
+            g,\glissando \stemDown dis'4
+          }
+        >>
+      }
+      \layout {
+        indent = 0
+      }
+    }
+  } Staff.BarLine
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \set fingeringOrientations = #'(up right)
   <cis,,_\6-2 ais'-1 fis'-4>
   <<

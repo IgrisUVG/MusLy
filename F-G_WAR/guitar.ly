@@ -342,6 +342,9 @@ guitarMusic = \relative {
       c-2
     }
   >>
+  \override Score.FootnoteItem.annotation-line = ##f
+  \footnote \markup "*" #'(0 . 2)
+  \markup { \super "*" \italic " Editorial 1" } Staff.BarLine
   <<
     {
       b''4^\markup{\teeny VIII}
@@ -457,7 +460,7 @@ guitarMusic = \relative {
     \\
     {
       \override Fingering.staff-padding = #'()
-      r8 s 
+      r8 s
       \once\override Fingering.extra-offset = #'(0 . -.2)
       e^3
     }
@@ -489,9 +492,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      s8 
+      s8
       \once\override Fingering.extra-offset = #'(0 . -.2)
-      a,^3 s dis s 
+      a,^3 s dis s
       \once\override Fingering.extra-offset = #'(0 . -.2)
       gis^4
     }
@@ -552,9 +555,9 @@ guitarMusic = \relative {
     }
     \\
     {
-      s8 
+      s8
       \once\override Fingering.extra-offset = #'(0 . -.2)
-      cis,^4 s dis^3 s 
+      cis,^4 s dis^3 s
       \once\override Fingering.extra-offset = #'(0 . -.2)
       fis^4
     }
@@ -753,6 +756,9 @@ guitarMusic = \relative {
   <a,, h' e!\3>^\markup{\teeny IX}
   \set fingeringOrientations = #'(right)
   <h''-4 dis-3>\noBeam
+  %\override Score.FootnoteItem.annotation-line = ##f
+  \footnote \markup "**" #'(0 . 2)
+  \markup { \super "**" \italic " Editorial 2" } Staff.BarLine
   \set fingeringOrientations = #'(up right)
   <cis,,_\6-2 ais'-1 fis'-4>
   <<

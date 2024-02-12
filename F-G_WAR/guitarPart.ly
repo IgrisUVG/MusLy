@@ -42,6 +42,7 @@
 \include "guitar.ly"
 \include "dynamicG.ly"
 \include "ossia.ly"
+\include "footnote.ly"
 
 \score {
   \new StaffGroup <<

@@ -33,6 +33,11 @@
   \context {
     \Staff \RemoveEmptyStaves
     \override VerticalAxisGroup.remove-first = ##t
+    \override Fingering.stencil = ##f
+    \override StringNumber.stencil = ##f
+    \override StrokeFinger.stencil = ##f
+    \override TextScript.stencil = ##f
+    \override TextSpanner.stencil = ##f
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }

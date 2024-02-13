@@ -367,7 +367,11 @@ guitarMusic = \relative {
     }
     \\
     {
-      e,16\rest f^3 c^2^( b)
+      e,16\rest f^3 
+      \once\override Fingering.extra-offset = #'(0 . 0.5)
+      c^(^2^\markup {
+        \postscript #"1.2 -0.5 moveto 1.8 -0.4 rlineto stroke"
+      } b)^2
     }
     \\
     {
@@ -375,10 +379,9 @@ guitarMusic = \relative {
       f4
     }
   >>
-  \once\override Fingering.extra-offset = #'(0 . -3.3)
-  a16-4( g) f
-  \once\override Fingering.extra-offset = #'(0 . -3.3)
-  es-2
+  \override Fingering.extra-offset = #'(0 . -3.3)
+  a16-1_(g-4) f-1 es-4
+  \revert Fingering.extra-offset
   <<
     {
       \once\override Fingering.extra-offset = #'(0 . -2.8)

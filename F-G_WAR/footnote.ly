@@ -14,9 +14,7 @@ footnotA = \relative {
     }
     \\
     {
-      e,16\rest f-3 c^(-2-\markup {
-        \postscript #"1 0.8 moveto 1.8 -0.3 rlineto stroke"
-      } b)-2
+      e,16\rest f^3 c^2^( b)
     }
     \\
     {
@@ -24,9 +22,10 @@ footnotA = \relative {
       f4
     }
   >>
-  \override Fingering.extra-offset = #'(0 . -3.3)
-  a16-1_(g-4) f-1 es-4
-  \revert Fingering.extra-offset
+  \once\override Fingering.extra-offset = #'(0 . -3.3)
+  a16-4( g) f
+  \once\override Fingering.extra-offset = #'(0 . -3.3)
+  es-2
 }
 
 footnotB = \relative {
@@ -41,7 +40,8 @@ footnotB = \relative {
         s8
         \once\override Slur.positions = #'(0 . 1)
         \shape #'((0 . 0) (0.5 . 0) (0 . 0.5) (1 . 0)) Slur
-        h''8.( a16)        
+        \once \override TextScript.extra-offset = #'(-0.5 . -1)
+        h''8.(^\markup{\magnify #0.6 V} a16)
       }
       \\
       {
@@ -49,7 +49,9 @@ footnotB = \relative {
       }
       \\
       {
-        g,\glissando \stemDown dis'4
+        g,\glissando \stemDown
+        \once\override Fingering.extra-offset = #'(0.2 . 0)
+        dis'4_2
       }
     >>
   }

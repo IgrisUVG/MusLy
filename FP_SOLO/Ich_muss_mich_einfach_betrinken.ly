@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #25
-  top-markup-spacing.basic-distance = #15
-  markup-system-spacing.basic-distance = #25
-  system-system-spacing.basic-distance = #22
-  last-bottom-spacing.basic-distance = #25
+  top-system-spacing.basic-distance = #20
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #15
+  last-bottom-spacing.basic-distance = #20
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -72,6 +72,8 @@ xLV =
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
+\include "changePitch.ly"
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 rechts = \relative {
   \clef treble
@@ -89,6 +91,19 @@ rechts = \relative {
       c4 h8
     }
   >>
+  \override TextScript.extra-offset = #'(0 . 2)
+  \changePitch {c4 c8}{
+    c <a e'><a es'><c g'><h d><h e>
+    <e, g><c e gis><c f a><a' c><c e><h d>
+    <a c><a d><c e>^"poco rit."<h d><a c><h g'>
+  }
+  \bar "||"
+  \break
+  \shape #'((0.5 . -2) (0 . 0) (0 . 0) (-0.3 . 0)) Slur
+  g'4.^~^(^"Tempo I" g8 es h d c g
+  b a e! g4 fis8)
+  \once \override TextScript.extra-offset = #'(4 . 2)
+  r^"rit." \makeOctaves 1 {b8. a16}
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -97,7 +112,57 @@ links = \relative {
   \time 9/8
   \partial 4.
   c4 \stemUp <h f'>8\stemNeutral
-  <a e'>4
+  <a e'>4<f c'>8<fis c'>4
+  <<
+    {
+      e'!8 d4
+    }
+    \\
+    {
+      \dotsUp
+      g,4.
+    }
+  >>
+  <g f'>8 c,4 b8 a4 <f' es'>8
+  <<
+    {
+      e'!4 f8
+    }
+    \\
+    {
+      g,4.
+    }
+  >>
+  <a e'>4<f es'>8
+  <<
+    {
+      e'4 f8
+    }
+    \\
+    {
+      g,4.
+    }
+  >>
+  <fis e'>4<a dis>8
+  \bar "||"
+  <<
+    {
+      \top \stemDown a'8\rest <g h> q\bot \stemUp
+      \changePitch {c8 c8 c8}{        
+        r <d f> q
+        r <c es> q
+        r <cis e!> cis
+        r <a cis> q
+        r <fis d'> q
+      }
+    }
+    \\
+    {
+      \changePitch{c4 c8}{
+        e r g r c, r a r d r c s
+      }
+    }
+  >>
 }
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {

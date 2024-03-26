@@ -76,7 +76,8 @@ bot = \change Staff = "LH"
 rechts = \relative {
   \clef treble
   \key c \minor
-  \time 4/4\override Score.RehearsalMark.extra-offset = #'(0 . 2)
+  \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(0 . 2)
   \mark "Allegro"
   \clef bass
   <es g c es>2-><g b d g>-><fis a c fis>1->
@@ -130,7 +131,7 @@ rechts = \relative {
       r8 g'16^( ges d es) f^( e
       \stemDown
       c des) es^( d b h) des^( c
-      as heses) ces^( b des ases) heses^( as
+      as heses) ces^( b ges ases) heses^( as
       fes f) ases^( ges d es) f^( fes
       <b,? f'!>1)
     }

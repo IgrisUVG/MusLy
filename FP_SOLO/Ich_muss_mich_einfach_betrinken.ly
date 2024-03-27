@@ -12,11 +12,11 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #20
-  top-markup-spacing.basic-distance = #8
-  markup-system-spacing.basic-distance = #20
-  system-system-spacing.basic-distance = #15
-  last-bottom-spacing.basic-distance = #20
+  top-system-spacing.basic-distance = #25
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #25
+  system-system-spacing.basic-distance = #25
+  last-bottom-spacing.basic-distance = #25
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -143,7 +143,7 @@ rechts = \relative {
   <<
     {
       \voiceTwo
-      <des des'>8 \bot 
+      <des des'>8 \bot
       \stemUp
       ges as b \top
       \stemDown
@@ -164,6 +164,25 @@ rechts = \relative {
   <eses eses'>(<des des'>)
   \stemNeutral
   <b b'>
+  \repeat tremolo 4 {des''32 b}
+  \repeat tremolo 6 {des32 b}
+  \repeat tremolo 12 {des32 as}
+  \repeat tremolo 6 {des32 ges,}
+  \repeat tremolo 6 {ces32 ges}
+  \repeat tremolo 12 {b32 ges}
+  \repeat tremolo 6 {as32^"rit." ges}
+  \repeat tremolo 6 {as32 f}
+  \repeat tremolo 12 {des'32^"a Tempo" des,}
+  \repeat tremolo 12 {des'32 des,}
+  \repeat tremolo 6 {des'32 des,}
+  \repeat tremolo 6 {ces'32 ces,}
+  \repeat tremolo 6 {b'32 b,}
+  \repeat tremolo 6 {as'32 as,}
+  \repeat tremolo 12 {ges'32 ges,}
+  \repeat tremolo 12 {ges''32 ges,}
+  \repeat tremolo 12 {ges'16}
+  ges2.
+  \bar "|."
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -207,6 +226,7 @@ links = \relative {
   \bar "||"
   <<
     {
+      \override TextScript.extra-offset = #'(1 . 2)
       \top \stemDown a'8\rest <g h> q\bot \stemUp
       \changePitch {c8 c8 c8}{
         r <d f> q
@@ -226,7 +246,7 @@ links = \relative {
         r <g, b e><g b>
         r <a c> q
         r <a d> q
-        r <fis a d> q
+        r^"accel." <fis a d> q
         r <fis a d> q
         r <fis a d> q
       }
@@ -264,6 +284,12 @@ links = \relative {
 dynamic = {
   \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
+  \time 9/8
+  \partial 4.
+  s4.
+  s4.*30
+  \time 6/8
+  s2.*9\f s2.-"dim" s2.*3\p s4. s-"dim" s2.*3 s2.\pp
 }
 
 %%%%%%%%%%%%%%%%%%%%%%

@@ -243,12 +243,12 @@ rechts = \relative {
     }
     \\
     {
-      \tweak #'duration-log #0 
+      \tweak #'duration-log #0
       d,16^( as g as fis' d cis d as' fis eis fis d' as g as)
       \tweak #'duration-log #0
       d,^( h ais h g' d cis d h' g fis g d' h ais h)
       \tweak #'duration-log #0
-      es,^( b? a b ges' es d es b' ges f ges es' b a b)      
+      es,^( b? a b ges' es d es b' ges f ges es' b a b)
     }
   >>
   \omit Staff.TimeSignature
@@ -256,6 +256,30 @@ rechts = \relative {
   \repeat tremolo 8 {g'32 ges}
   \time 4/4
   <as, c f as>8-^ r r4 <g h d g>8-^ r r4
+  s8 <c,, es><c es g c><g' c es g><a des f a>(<es g c es>)<c es g> c
+  <<
+    {
+      \bot gis2( h! b!1) \top
+      \repeat tremolo 16 {<f''! a>32( <d' f!>}
+      <fis, fis'>1)
+    }
+    \\
+    {
+      \stemUp
+      r8 e, <e gis h><gis h e gis>
+      <a cis fis a>(<e gis h e>)<e gis> \bot <h, e gis h> \top
+      r <cis' e><cis e g cis><g' cis e g>
+      <as d fis as>(<e g cis e>)<e g> \bot <cis, e g cis> \top
+      \stemDown
+      s
+      \autoBeamOff
+      \crossStaff {
+        <d' fis> s s s s <d fis a> d
+        s <dis gis> s s s s <dis gis h> dis
+      }
+      \autoBeamOn
+    }
+  >>
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -337,13 +361,36 @@ links = \relative {
   f'16( e f g as2)~ as4 ges es e <f,, f'> g''16( fis g as b2)
   g1 ges f e d2~ d8\noBeam cis b? a
   \makeOctaves #1 {
-    g1 fis f! es 
+    g1 fis f! es
     \omit Staff.TimeSignature
     \time 2/4
     ces2
     \time 4/4
     c8-^ r r4 des8-^ r r4
   }
+  <<
+    {
+      \once \override Rest.extra-offset = #'(0 . 2)
+      r8
+      \autoBeamOff
+      \crossStaff {
+        <es' g>8 s s s s g <c, es g>
+        s <e gis h> h' s s s <gis h> s
+        s <e g> s s s s <g cis> s
+      }
+      \autoBeamOn
+      r8
+      \stemDown
+      <fis a> \top <d' fis a d><a' d fis a>
+      <b e g b>^(<fis a d fis>) \bot a, <d, fis a>
+      r <gis h> \top <dis' gis h dis><h' dis gis h>
+      <c e ais c>(<gis h dis gis>) \bot h, <dis, gis h>
+    }
+    \\
+    {
+      <c, c'>1<h h'><b! b'!><a a'><gis gis'>
+    }
+  >>
 }
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {

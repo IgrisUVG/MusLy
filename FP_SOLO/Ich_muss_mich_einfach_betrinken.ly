@@ -99,11 +99,71 @@ rechts = \relative {
   }
   \bar "||"
   \break
-  \shape #'((0.5 . -2) (0 . 0) (0 . 0) (-0.3 . 0)) Slur
+  \shape #'((0 . -2) (0 . 0) (0 . 0) (-1 . 0)) Slur
   g'4.^~^(^"Tempo I" g8 es h d c g
   b a e! g4 fis8)
   \once \override TextScript.extra-offset = #'(4 . 2)
   r^"rit." \makeOctaves 1 {b8. a16}
+  \shape #'((0 . -2) (0 . 0) (0 . 0) (-1 . 0)) Slur
+  g'4.^~^(^"Tempo I" g8 es h d c g b a e! g f4)
+  <<
+    {
+      e'4\rest s8
+    }
+    \\
+    {
+      s8 as, as
+    }
+  >>
+  <<
+    {
+      \shape #'((0 . -2) (0 . 0) (0 . 0) (-1 . 0)) Slur
+      g'4.~( g8 es h d c g b a e! g4 fis8)
+    }
+    \\
+    {
+      s2. s4. s r8 d4
+    }
+  >>
+  \clef bass
+  d8( fis a fis a d
+  \clef treble
+  a d fis d fis a)
+  \bar "||"
+  \break
+  \time 6/8
+  \override Score.RehearsalMark.extra-offset = #'(6 . 0)
+  \mark "Allegretto"
+  \bot ges,,8 des'  as'
+  \top b des b'
+  as ges des
+  \bot b ges es \top
+  \clef bass
+  r <ces ces'>(-><b b'>) ges' <f as>(<des des'>)->
+  <<
+    {
+      \voiceTwo
+      <des des'>8 \bot 
+      \stemUp
+      ges as b \top
+      \stemDown
+      es des
+    }
+    \\
+    {
+      \voiceOne
+      \hideNotes r8\unHideNotes
+      \clef treble
+      des ges4 b
+    }
+  >>
+  \clef bass
+  r8 eses,, heses'
+  \clef treble
+  \stemDown \bot ges' \top
+  <eses eses'>(<des des'>)
+  \stemNeutral
+  <b b'>
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -148,21 +208,57 @@ links = \relative {
   <<
     {
       \top \stemDown a'8\rest <g h> q\bot \stemUp
-      \changePitch {c8 c8 c8}{        
+      \changePitch {c8 c8 c8}{
         r <d f> q
         r <c es> q
         r <cis e!> cis
         r <a cis> q
         r <fis d'> q
+        r <g' h><g h>
+        r <g h> g
+        r <h, g'> h
+        r <c es!> q
+        r <f, d'><f d'>
+        r <fis d'> q
+        r <g' b><g b>
+        r <es g> q
+        r <d fis> q
+        r <g, b e><g b>
+        r <a c> q
+        r <a d> q
+        r <fis a d> q
+        r <fis a d> q
+        r <fis a d> q
       }
     }
     \\
     {
       \changePitch{c4 c8}{
-        e r g r c, r a r d r c s
+        e r g r c, r a r d r c r
+        e r es r d r f r b, r ces r
+        g r a r b r c r d r d r
+        a r f r d r
       }
     }
   >>
+  \bar "||"
+  \time 6/8
+  s2. \makeOctaves 1 {es2. ces'4. des ges,2. ges}
+  ges'8 des' as' b des b'
+  b,,, f' des' f des' as'
+  ces,,, ges' es' ges es' ces'
+  des,,, b' ges' b ges' des'
+  des,,, as' es' as des as'
+  ges,, des' ges b des b'
+  b,,, f' des' f des' as'
+  ces,,, ges' es' ges ces es
+  des,, b' ges' des, as' f'
+  ges, des' ges a, c f
+  \clef treble
+  ges des' ges a, c f
+  ges des' ges a, c f
+  ges2.
+  \bar "|."
 }
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {

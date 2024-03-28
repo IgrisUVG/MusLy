@@ -280,6 +280,78 @@ rechts = \relative {
       \autoBeamOn
     }
   >>
+  <c! es!>2^><es g!>^><es fis>^> r
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  ces'''16 b fis g heses as e f g ges d es f fes c des
+  es d! b ces des c as heses ces b fis g heses as e f
+  \ottava #0
+  g ges d es f fes c des es d b ces des c as heses
+  ces b fis g heses as e f g ges d es f fes c des
+  d!1
+  \once\override Score.RehearsalMark.extra-offset = #'(-2 . 2)
+  \mark \markup {\musicglyph #"scripts.ufermata"}
+  es4^"dolcissimo" es <ces es>
+  <<
+    {
+      as'8( ges)
+    }
+    \\
+    {
+      \autoBeamOff
+      \crossStaff des
+      \autoBeamOn
+    }
+  >>
+  <<
+    {
+      f8( g) as4 es'( des) a2 r
+    }
+    \\
+    {
+      <as, ces es>4<b c f><fes' g b><des ges>
+      <d! f><c e f><ces es f><b d f>
+    }
+  >>
+  <<
+    {
+      ces'8 b4 e, f c'8~ c ces4 b heses as8~ as g4 ges f e8
+    }
+    \\
+    {
+      \autoBeamOff
+      \crossStaff {es4 d d c}
+      \autoBeamOn
+      <ces es f><c fes><des es ges><deses es f>
+      <g, d'! f><c e><c d><b des>
+    }
+  >>
+  <b d f>4<a cis e><g c es><g b d>
+  <a cis g'><a c es><h d f><b es ges>
+  <des fes g><des fes as des><des fes g des'><d fis a d>
+  <d f! as c><c e g c><c es ges b><b d g b>
+  <ces f as ces>(^><b ges' b>^><ges ces ges'>)^> r
+  <des' g b des>(^><ces as' ces>^><des heses' des>)^> r
+  <d fis d'>-^ r <f b des f>-^ r
+  \break
+  e'8( a, cis e) f( e) as( g) ges( ces, es ges) g( fis) b( a)
+  des( c) as!( b c) f,( as g) f( e des b a as a as)
+  g( c, e g) as( g) ces( b) f'( f, ges c f f, g cis
+  f f, as d g g, h dis) g( c, e g) as( g) ces( b)
+  a( d, fis a) b( a) des( c) h( e, gis h) c( h) es( d)
+  \break
+  <<
+    {
+      e1->
+    }
+    \\
+    {
+      \stemUp
+      r8 \bot g,,,^( b \top e des \bot g, b \top e f c d! as' g des e b'
+      a d, f h c g as es' e a, c fis f h, d gis)
+    }
+  >>
+  <a, cis fis a>2-><cis e gis cis>-><c! es! f! c'!>\fermata r\fermata
 }
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
@@ -391,6 +463,74 @@ links = \relative {
       <c, c'>1<h h'><b! b'!><a a'><gis gis'>
     }
   >>
+  <<
+    {
+      \autoBeamOff
+      \crossStaff {<es''! g!>2<g b!><fis a>}
+      \autoBeamOn
+    }
+    \\
+    {
+      <g,,! c g'!>2<ges b es ges><f! c' f!>
+    }
+  >>
+  r2
+  \clef treble
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  es'''''16 fes es d cis d cis c h c h b a b a as
+  g as g fis f ges f fes es fes es d
+  \ottava #0
+  cis d cis c
+  h c h b a b a as g as g fis f ges f fes
+  es fes es d cis d cis c
+  \clef bass
+  h c h b a b a as
+  g1
+  ges4
+  <<
+    {
+      g4
+      \autoBeamOff
+      \crossStaff as
+      \autoBeamOn
+    }
+    \\
+    {
+      f fes <es b'>
+    }
+  >>
+  d4 des c ces b a as g
+  <<
+    {
+      \voiceTwo
+      <f' b>4<g! b><gis h> a
+    }
+    \\
+    {
+      ges,4 f fes es
+    }
+  >>
+  d des c ces b a as g
+  \makeOctaves 1 {
+    f4 e' es d cis c h b a as g fis f e es d
+    des2( eses4) r es2( fes4) r
+  }
+  <d' g d'>-^ r <des f b des>-^ r
+  r8 g'( e a, f' d b g) r heses'( ges ces, g' e c a)
+  as( c f ges f as c b) a( c f e c f, e d)
+  r b'( g c, as' f des b) c'( b c c, b' a b b, as' g as as,
+  \stemDown
+  g' f g g,)
+  r b'( g c, as' f des b) r c'( a d, b' g es c) r d'( h e, c' a f d)
+  \stemDown
+  \shape #'(
+             ((0 . 0) (8 . 12) (0 . 5) (-.5 . -5))
+             ((0 . -8) (0 . 5) (-3 . 6) (0 . 0))
+             ) Slur
+  des_( g, b e des g, b e f c d! as' g des e b'
+  a d, f h c g as \top es' e \bot a, c \top fis f \bot h, \top d gis) \bot
+  <fis,, cis' fis>2<e h' e><es! a es'!>\fermata r\fermata
 }
 %%%%%%%%%%%%D%%%%%%%%%%%%
 dynamic = {
@@ -400,7 +540,10 @@ dynamic = {
   s1\pp s1*8\pocoCr s1\f s1*2\fff s1\mf s\p s\pp s\mp s1*3\mf
   s1*3-\markup {dim} s1*7\pp s2 s2\< s1 s1*3\f
   s2 s-\markup {poco a poco dimin} s1*2 s1\p\< s\f s\sp s4 s2.\pocoCr
-  s1 s4 s2.\< s2\sp\< s\ff
+  s1 s4 s2.\< s2\sp\< s\ff s4. s8\mp s1 s s2 s4\> s\! s1\sf
+  s4\p s\> s4. s8\! s1*3\fff s2. s4-\markup {dimin} s1*2 s1\p
+  s1*7\pp s4 s2.-\markup {cresc} s1*2 s1*3\ff s1*6\mf
+  s4. s8-\markup {poco cresc} s2 s1*3 s1*7\fff
 }
 
 %%%%%%%%%%%%%%%%%%%%%%

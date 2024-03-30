@@ -46,4 +46,5 @@
     \new Staff = "RH" \rechtsFour
     \new Staff = "LH" \linksFour
   >>
+  %\midi {}
 }

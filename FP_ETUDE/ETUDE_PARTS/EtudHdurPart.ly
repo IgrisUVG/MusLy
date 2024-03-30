@@ -42,4 +42,5 @@
     \new Dynamics = "Dynamics_pf" \dynamicHdur
     \new Staff = "LH" \linksHdur
   >>
+  %\midi {}
 }

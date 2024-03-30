@@ -42,4 +42,5 @@
     \new Staff = "upper" \rechtsQuell
     \new Staff = "lower" \linksQuell
   >>
+  %\midi {}
 }

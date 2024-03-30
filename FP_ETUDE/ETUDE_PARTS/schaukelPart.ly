@@ -39,4 +39,5 @@
     \new Dynamics = "Dynamics_pf" \dynamicSchau
     \new Staff = "LH" << \globalSchau \linksSchau >>
   >>
+  %\midi {}
 }

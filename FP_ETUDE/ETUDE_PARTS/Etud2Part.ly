@@ -41,4 +41,9 @@
     \new Staff = "RH" <<\globalTwo \rechtsTwo>>
     \new Staff = "LH" <<\globalTwo \linksTwo>>
   >>
+  %{
+  \midi {
+    \tempo 4 = 180
+  }
+  %}
 }

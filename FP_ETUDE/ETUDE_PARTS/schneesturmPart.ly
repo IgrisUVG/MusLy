@@ -40,4 +40,5 @@
     \new Dynamics = "Dynamics_pf" \dynamicSchnee
     \new Staff = "LH" << \globalSchnee \linksSchnee >>
   >>
+  %\midi {}
 }

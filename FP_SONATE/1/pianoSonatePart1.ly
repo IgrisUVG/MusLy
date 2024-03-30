@@ -25,8 +25,8 @@
 \layout {
   indent = 10
   \context {
-  	\PianoStaff
-  	\consists #Span_stem_engraver
+    \PianoStaff
+    \consists #Span_stem_engraver
   }
   \context{
     \Score
@@ -50,7 +50,7 @@
   %{
   \layout { }
   \midi {
-  	\tempo 4 = 200
+    \tempo 2 = 150
   }
   %}
 }

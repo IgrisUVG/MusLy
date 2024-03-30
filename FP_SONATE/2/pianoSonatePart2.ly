@@ -48,10 +48,10 @@
     \new Dynamics = "DYN" \dynamic
     \new Staff = "LH" \links
   >>
-  %{
+  %%{
   \layout { }
   \midi {
-  	\tempo 4 = 100
+    \tempo 4 = 100
   }
   %}
 }

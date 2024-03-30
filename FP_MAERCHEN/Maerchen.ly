@@ -59,6 +59,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   %\pageBreak
   %%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
@@ -79,6 +80,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   %\pageBreak
   %%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
@@ -99,6 +101,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   %\pageBreak
   %%%%%%%%%%%%%%%%%%%%% VIERTE %%%%%%%%%%%%%%%%%%%
@@ -119,5 +122,6 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }  
 }

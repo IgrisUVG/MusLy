@@ -112,12 +112,12 @@
       }
       <<
         \new Staff = "Staff_clarinet1" {
-          \transpose b c'
+          %\transpose b c'
           \clarinetOneMusic
         }
 
         \new Staff = "Staff_clarinet2" {
-          \transpose b c'
+          %\transpose b c'
           \clarinetTwoMusic
         }
       >>
@@ -159,11 +159,11 @@
       }
       <<
         \new Staff = "Staff_trumpet1" {
-          \transpose b c'
+          %\transpose b c'
           \trumpetOneMusic
         }
         \new Staff = "Staff_trumpet2" {
-          \transpose b c'
+          %\transpose b c'
           \trumpetTwoMusic
         }
       >>
@@ -184,11 +184,11 @@
       }
       <<
         \new Staff = "Staff_hornI" {
-          \transpose f c'
+          %\transpose f c'
           \cornoOneMusic
         }
         \new Staff = "Staff_horn2" {
-          \transpose f c'
+          %\transpose f c'
           \cornoTwoMusic
         }
       >>
@@ -292,4 +292,5 @@
       >>
     >>
   >>
+  %\midi {}
 }

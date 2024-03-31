@@ -31,7 +31,8 @@
     %\remove "Bar_number_engraver"
   }
 }
-\include "..\flute1.ly"
+\include "..\flute.ly"
 \score {
-  \fluteOneMusic
+  \fluteEinsMusic
+  %\midi {}
 }

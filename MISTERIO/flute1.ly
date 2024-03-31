@@ -1,6 +1,6 @@
 \version "2.18.0"
 \language "deutsch"
-fluteOneMusic = \relative {
+fluteEinsMusic = \relative {
   %\override Staff.TimeSignature #'stencil = ##f
   \set Score.skipBars = ##t
   \time 4/4 R1*2

@@ -34,4 +34,5 @@
 \include "..\flute2.ly"
 \score {
   \fluteTwoMusic
+  %\midi {}
 }

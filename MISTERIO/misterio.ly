@@ -1,4 +1,5 @@
-\version "2.18.2"
+\version "2.19.15"
+%\version "2.18.2"
 
 \language "deutsch"
 
@@ -8,6 +9,7 @@
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
 \paper {
@@ -24,6 +26,7 @@
   inner-margin = 20
   outer-margin = 10
 }
+
 \layout {
   \context {
     \RemoveEmptyStaffContext
@@ -40,8 +43,7 @@
   }
 }
 
-\include "flute1.ly"
-\include "flute2.ly"
+\include "flute.ly"
 \include "oboe.ly"
 \include "clarinet1.ly"
 \include "clarinet2.ly"
@@ -81,10 +83,10 @@
       }
       <<
         \new Staff = "Staff_flute" {
-          \fluteOneMusic
+          \fluteEinsMusic
         }
         \new Staff = "Staff_flute" {
-          \fluteTwoMusic
+          \fluteZweiMusic
         }
       >>
       \new StaffGroup = "GrandStaff_oboe" \with {
@@ -102,10 +104,10 @@
       }
       <<
         \new Staff = "Staff_oboe" {
-          \oboeMusic
+          \oboeEinsMusic
         }
         \new Staff = "Staff_oboe" {
-          \oboeMusic
+          \oboeZweiMusic
         }
       >>
       \new StaffGroup = "GrandStaff_clarinetto" \with {

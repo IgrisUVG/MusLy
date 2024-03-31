@@ -34,4 +34,5 @@
 \include "..\vni1.ly"
 \score {
   \vniOneMusic
+  %\midi {}
 }

@@ -109,4 +109,5 @@ LH = \relative {
     \new Staff = "RH" \RH
     \new Staff = "LH" \LH
   >>
+  %\midi {}
 }

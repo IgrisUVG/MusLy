@@ -46,4 +46,5 @@
      \new Dynamics = "Dynamics_pf" \dynamicDrzehn
      \new Staff = "LH" \dreizehnteLH
   >>
+  %\midi {}
 }

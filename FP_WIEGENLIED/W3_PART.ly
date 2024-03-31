@@ -42,4 +42,5 @@
     \new Staff = "RH" \dritteRH
     \new Staff = "LH" \dritteLH
   >>
+  %\midi {}
 }

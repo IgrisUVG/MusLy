@@ -3,7 +3,7 @@
 \language "deutsch"
 
 \header {
-  title = "Колыбельная № 11"
+  title = "Колыбельная № 10"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -26,21 +26,18 @@
   \context {
     \Score
     \remove "Bar_number_engraver"
-    %\override StaffGrouper.staff-staff-spacing.basic-distance = #16
+    \override StaffGrouper.staff-staff-spacing.basic-distance = #11
   }
-  ragged-last = ##t
 }
 
-\include "W11.ly"
+\include "W10.ly"
 
 \score {
   \new PianoStaff
   <<
-    \new Staff = "RH" \elfteRH
-    \new Lyrics \elfteVerseEins
-    %\new Lyrics \elfteVerseZwei
-    %\new Dynamics = "Dynamics_pf" \dynamicElf
-    \new Staff = "LH" \elfteLH
+    \new Staff = "RH" \zehnteRH
+    %\new Dynamics = "Dynamics_pf" \dynamicSieben
+    \new Staff = "LH" \zehnteLH
   >>
   %\midi {}
 }

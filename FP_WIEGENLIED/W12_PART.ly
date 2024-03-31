@@ -42,4 +42,5 @@
     \new Staff = "RH" \zwolfteRH
     \new Staff = "LH" \zwolfteLH
   >>
+  %\midi {}
 }

@@ -39,4 +39,5 @@
     %\new Dynamics = "Dynamics_pf" \dynamicSechs
     \new Staff = "LH" \sechsteLH
   >>
+  \midi {}
 }

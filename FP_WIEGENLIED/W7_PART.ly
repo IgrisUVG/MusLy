@@ -39,4 +39,5 @@
     \new Dynamics = "Dynamics_pf" \dynamicSieben
     \new Staff = "LH" \siebenteLH
   >>
+  %\midi {}
 }

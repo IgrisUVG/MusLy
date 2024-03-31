@@ -40,4 +40,5 @@
     \new Dynamics = "Dynamics_pf" \dynamicVier
     \new Staff = "LH" \vierteLH
   >>
+  %\midi {}
 }

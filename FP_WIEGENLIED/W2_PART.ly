@@ -42,4 +42,5 @@
     \new Staff = "RH" \zweiteRH
     \new Staff = "LH" \zweiteLH
   >>
+  %\midi {}
 }

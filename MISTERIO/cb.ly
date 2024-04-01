@@ -1,4 +1,5 @@
-\version "2.18.2"
+\version "2.19.15"
+%\version "2.18.2"
 
 \language "deutsch"
 
@@ -20,5 +21,15 @@ makeOctaves =
 cbMusic = \relative {
   \clef "bass_8"
   \set Score.skipBars = ##t
-  
+  \time 4/4 R1*2
+  \time 3/4 r2.
+  \time 4/4 r1
+  \time 3/4 r2.
+  \time 4/4 R1*2
+  \time 3/4 r2.
+  \time 4/4 r1
+  \time 3/4 r4 es,2
+  \time 5/4 r1 r4
+  \time 3/4 as,4( g f)
+  \time 4/4
 }

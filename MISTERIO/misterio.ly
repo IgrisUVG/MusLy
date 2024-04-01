@@ -52,8 +52,8 @@
 %%%%%%%%%%%%%%%%%%
 
 \include "trumpet.ly"
-\include "corno1.ly"
-\include "corno2.ly"
+\include "corno.ly"
+%\include "corno2.ly"
 \include "trombon.ly"
 \include "tuba.ly"
 %%%%%%%%%%%%%%%%%%
@@ -85,9 +85,9 @@
         \new Staff = "Staff_flute" {
           \fluteEinsMusic
         }
-        \new Staff = "Staff_flute" {
+        %{\new Staff = "Staff_flute" {
           \fluteZweiMusic
-        }
+        %}
       >>
       \new StaffGroup = "GrandStaff_oboe" \with {
         instrumentName = \markup {
@@ -106,9 +106,9 @@
         \new Staff = "Staff_oboe" {
           \oboeEinsMusic
         }
-        \new Staff = "Staff_oboe" {
+        %{\new Staff = "Staff_oboe" {
           \oboeZweiMusic
-        }
+        %}
       >>
       \new StaffGroup = "GrandStaff_clarinetto" \with {
         instrumentName = \markup {
@@ -128,21 +128,20 @@
       <<
         \new Staff = "Staff_clarinet1" {
           \transpose b c'
-          \clarinetOneMusic
+          \clarinetEinsMusic
         }
 
         \new Staff = "Staff_clarinet2" {
           \transpose b c'
-          \clarinetTwoMusic
+          \clarinetZweiMusic
         }
         \new Staff = "Staff_clarinet1" {
           \transpose b c'
-          \clarinetOneMusic
+          \clarinetDreiMusic
         }
-
         \new Staff = "Staff_clarinet2" {
           \transpose b c'
-          \clarinetTwoMusic
+          \clarinetVierMusic
         }
       >>
       \new Staff = "Staff_ClarinetBass" {
@@ -197,11 +196,11 @@
       <<
         \new Staff = "Staff_trumpet1" {
           \transpose b c'
-          \trumpetMusic
+          \trumpetEinsMusic
         }
         \new Staff = "Staff_trumpet2" {
           \transpose b c'
-          \trumpetMusic
+          \trumpetZweiMusic
         }
       >>
       \new StaffGroup = "GrandStaff_corni" \with {
@@ -222,11 +221,11 @@
       <<
         \new Staff = "Staff_hornI" {
           \transpose f c'
-          \cornoOneMusic
+          \cornoEinsMusic
         }
         \new Staff = "Staff_horn2" {
           \transpose f c'
-          \cornoTwoMusic
+          \cornoZweiMusic
         }
       >>
       \new StaffGroup = "GrandStaff_trombon" \with {

@@ -19,4 +19,12 @@ vniOneMusic = \relative {
       c1~ c~ c2.~ c1~ c2.~ c1~ c~ c2.~ c1~ c2.~ c1~ c4
     }
   >>
+  \time 3/4 g'4( b c)
+  \time 4/4 R1*5
+  f,,2.(^"Solo" g4 a b c d g,1)~
+  \repeat tremolo 32 {g32~^"Tutti"}
+  \repeat unfold 5 {
+    \repeat tremolo 32 {g32~}
+  }
+  \repeat tremolo 32 {g32}
 }

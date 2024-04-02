@@ -17,13 +17,13 @@
   %#(set-paper-size "a4")
   indent = 1.5\cm  % space for instrumentName
   short-indent = 1.0\cm  % space for shortInstrumentName
-  top-system-spacing #'basic-distance = #15
-  top-markup-spacing #'basic-distance = #8
-  markup-system-spacing #'basic-distance = #26
-  system-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #15
+  top-system-spacing.basic-distance = #15
+  top-markup-spacing.basic-distance = #8
+  markup-system-spacing.basic-distance = #26
+  system-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #15
   two-sided = ##t
-  inner-margin = 20
+  inner-margin = 15
   outer-margin = 10
 }
 
@@ -53,7 +53,6 @@
 
 \include "trumpet.ly"
 \include "corno.ly"
-%\include "corno2.ly"
 \include "trombon.ly"
 \include "tuba.ly"
 %%%%%%%%%%%%%%%%%%
@@ -82,12 +81,12 @@
         systemStartDelimiter = #'SystemStartSquare
       }
       <<
-        \new Staff = "Staff_flute" {
+        \new Staff = "Staff_flute1" {
           \fluteEinsMusic
         }
-        %{\new Staff = "Staff_flute" {
+        \new Staff = "Staff_flute2" {
           \fluteZweiMusic
-        %}
+        }
       >>
       \new StaffGroup = "GrandStaff_oboe" \with {
         instrumentName = \markup {
@@ -103,12 +102,12 @@
         systemStartDelimiter = #'SystemStartSquare
       }
       <<
-        \new Staff = "Staff_oboe" {
+        \new Staff = "Staff_oboe1" {
           \oboeEinsMusic
         }
-        %{\new Staff = "Staff_oboe" {
+        \new Staff = "Staff_oboe2" {
           \oboeZweiMusic
-        %}
+        }
       >>
       \new StaffGroup = "GrandStaff_clarinetto" \with {
         instrumentName = \markup {
@@ -135,11 +134,11 @@
           \transpose b c'
           \clarinetZweiMusic
         }
-        \new Staff = "Staff_clarinet1" {
+        \new Staff = "Staff_clarinet3" {
           \transpose b c'
           \clarinetDreiMusic
         }
-        \new Staff = "Staff_clarinet2" {
+        \new Staff = "Staff_clarinet4" {
           \transpose b c'
           \clarinetVierMusic
         }
@@ -172,7 +171,7 @@
         \new Staff = "Staff_fagotto" {
           \set Staff.instrumentName = #"Contrafagotto"
           \set Staff.shortInstrumentName = #"CFag"
-          \fagottoMusic
+          \contraFagottoMusic
         }
       >>
     >>
@@ -231,7 +230,8 @@
       \new StaffGroup = "GrandStaff_trombon" \with {
         instrumentName = \markup {
           \right-column {
-            "4 Tromboni"
+            "Tromboni"
+            \line {"e Tuba"}
           }
         }
         shortInstrumentName = \markup {
@@ -259,13 +259,13 @@
         \new Staff = "Staff_violinI" {
           \set Staff.instrumentName = #"Violini I"
           \set Staff.shortInstrumentName = #"V-ni I"
-          \vniOneMusic
+          \vniEinsMusic
         }
 
         \new Staff = "Staff_violinII" {
           \set Staff.instrumentName = #"Violini II"
           \set Staff.shortInstrumentName = #"V-ni II"
-          \vniTwoMusic
+          \vniZweiMusic
         }
       >>
       \new Staff = "Staff_viola" {

@@ -1,7 +1,9 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
-\include "noteHeads.ly"
-vniTwoMusic = \relative {
+
+vniZweiMusic = \relative {
   \set Score.skipBars = ##t
   \time 4/4 R1*2
   \time 3/4 r2.

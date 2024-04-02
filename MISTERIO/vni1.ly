@@ -1,6 +1,9 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
-vniOneMusic = \relative {
+
+vniEinsMusic = \relative {
   \set Score.skipBars = ##t
   <<
     {

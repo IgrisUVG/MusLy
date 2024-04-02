@@ -4,7 +4,7 @@
 \language "deutsch"
 
 clarinetBassMusic = \relative {
-  \clef bass
+  %\clef bass
   \set Score.skipBars = ##t
   \time 4/4 R1*2
   \time 3/4 r2.

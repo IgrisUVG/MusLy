@@ -15,6 +15,8 @@ trumpetEinsMusic = \relative {
   \time 4/4 r2. f''4->~
   \time 3/4 f2.
   \time 5/4 r1 r4
+  \time 3/4 r2 f,4->
+  \time 4/4 b2-> r
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

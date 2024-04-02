@@ -31,5 +31,5 @@ cbMusic = \relative {
   \time 3/4 r4 es,2
   \time 5/4 r1 r4
   \time 3/4 as,4( g f)
-  \time 4/4
+  \time 4/4 R1*18 r2 ges'\laissezVibrer^"picc"
 }

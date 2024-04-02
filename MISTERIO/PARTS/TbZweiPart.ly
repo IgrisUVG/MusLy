@@ -5,7 +5,7 @@
 
 \header {
   title = "Misterio"
-  subtitle = "Flute II"
+  subtitle = \markup {"Tromba in B" \tiny \flat "II"}
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -31,8 +31,11 @@
     %\remove "Bar_number_engraver"
   }
 }
-\include "..\flute.ly"
+
+\include "../trumpet.ly"
+
 \score {
-  \fluteZweiMusic
+  \transpose b c'
+  \trumpetZweiMusic
   %\midi {}
 }

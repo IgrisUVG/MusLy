@@ -5,7 +5,7 @@
 
 \header {
   title = "Misterio"
-  subtitle = "Flute II"
+  subtitle = "Violini I"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -31,8 +31,10 @@
     %\remove "Bar_number_engraver"
   }
 }
-\include "..\flute.ly"
+
+\include "..\vni1.ly"
+
 \score {
-  \fluteZweiMusic
+  \vniEinsMusic
   %\midi {}
 }

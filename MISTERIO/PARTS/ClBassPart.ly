@@ -5,7 +5,7 @@
 
 \header {
   title = "Misterio"
-  subtitle = "Flute II"
+  subtitle = \markup {"Clarinetto basso in B" \tiny \flat}
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -31,8 +31,11 @@
     %\remove "Bar_number_engraver"
   }
 }
-\include "..\flute.ly"
+
+\include "..\clarinetBass.ly"
+
 \score {
-  \fluteZweiMusic
+  \transpose b, c'
+  \clarinetBassMusic
   %\midi {}
 }

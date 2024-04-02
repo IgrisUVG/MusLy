@@ -16,8 +16,9 @@ cornoEinsMusic = \relative {
   \time 3/4 r2.
   \time 5/4 f'1->~ f4
   \time 3/4 es2.->
-  \time 4/4 R1*13
-  \repeat unfold 2 {\tuplet 3/2 {a4-- h-- g--}} a1
+  \time 4/4 R1*25 r2. ges,4( des'2. b4 ges es'2 f4~ f2 es4 c)
+  r c2( b4 as c2 des4~ des as2 b4~ b2 as'4 f
+  e!)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

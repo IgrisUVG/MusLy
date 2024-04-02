@@ -5,7 +5,7 @@
 
 \header {
   title = "Misterio"
-  subtitle = "Flute und Oboe"
+  subtitle = "Clarinetti"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -33,16 +33,18 @@
   }
 }
 
-\include "..\flute.ly"
-\include "..\oboe.ly"
+\include "..\clarinet1.ly"
+\include "..\clarinet2.ly"
+\include "..\clarinetBass.ly"
 
 \score {
   \new StaffGroup
   <<
-    \fluteEinsMusic
-    \fluteZweiMusic
-    \oboeEinsMusic
-    \oboeZweiMusic
+    \transpose b c' \clarinetEinsMusic
+    \transpose b c' \clarinetZweiMusic
+    \transpose b c' \clarinetDreiMusic
+    \transpose b c' \clarinetVierMusic
+    \transpose b, c' \clarinetBassMusic
   >>
   %\midi {}
 }

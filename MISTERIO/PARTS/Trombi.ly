@@ -5,7 +5,7 @@
 
 \header {
   title = "Misterio"
-  subtitle = "Corni"
+  subtitle = "Clarinetti"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -33,18 +33,18 @@
   }
 }
 
-\include "..\corno.ly"
+\include "../trumpet.ly"
 
 \score {
   \new StaffGroup
   <<
     \new Staff {
-      \transpose f c'
-      \cornoEinsMusic
+      \transpose b c'
+      \trumpetEinsMusic
     }
     \new Staff {
-      \transpose f c'
-      \cornoZweiMusic
+      \transpose b c'
+      \trumpetZweiMusic
     }
   >>
   %\midi {}

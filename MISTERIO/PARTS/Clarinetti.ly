@@ -40,11 +40,11 @@
 \score {
   \new StaffGroup
   <<
-    \transpose b c' \clarinetEinsMusic
-    \transpose b c' \clarinetZweiMusic
-    \transpose b c' \clarinetDreiMusic
-    \transpose b c' \clarinetVierMusic
-    \transpose b, c' \clarinetBassMusic
+    \new Staff {\transpose b c' \clarinetEinsMusic}
+    \new Staff {\transpose b c' \clarinetZweiMusic}
+    \new Staff {\transpose b c' \clarinetDreiMusic}
+    \new Staff {\transpose b c' \clarinetVierMusic}
+    \new Staff {\transpose b, c' \clarinetBassMusic}
   >>
   %\midi {}
 }

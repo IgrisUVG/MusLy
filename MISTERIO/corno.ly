@@ -19,9 +19,24 @@ cornoEinsMusic = \relative {
   \time 4/4 R1*13
   \repeat unfold 2 {\tuplet 3/2 {a4-- h-- g--}} a1  
   R1*10
+  %Фрагмент из новой партитуры
+  %r2. des4( as'2. f4 des b'2 c4~ c2 b4 g) r g2( f4 es g2 as4~ as es2 f4~ f2)
+  %Фрагмент из старой партитуры
   r2. ges,4( des'2. b4 ges es'2 f4~ f2 es4 c)
-  r c2( b4 as c2 des4~ des as2 b4~ b2 as'4 f
-  e!)
+  r c2( b4 as c2 des4~ des as2 b4~ b2 
+  %as'4 f e!)
+  %Продолжение из новой
+  es4 c)
+  <<
+    {
+      R1
+    }
+    \\
+    {
+      b2( as4 fes)
+    }
+  >>
+  R1*5
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,7 +54,15 @@ cornoZweiMusic = \relative {
   \time 5/4 b1->~ b4
   \time 3/4 b2.->
   \time 4/4 R1*4
-  es,2.( f4 g a b c f,2 d'~ d1~ d) R1*16
-  r2. des4( as'2. f4 des b'2 c4~ c2 b4 g)
-  r g2( f4 es g2 as4~ as es2 f4~ f2)
+  es,2.( f4 g a b c f,2 d'~ d1~ d) R1*23
+  <<
+    {
+      r2 des( c4 as) r2 R1
+    }
+    \\
+    {
+      R1 r2 ges( f4 des) r2
+    }
+  >>
+  R1*4
 }

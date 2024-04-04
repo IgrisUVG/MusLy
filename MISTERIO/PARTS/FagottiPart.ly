@@ -33,19 +33,13 @@
   }
 }
 
-\include "..\corno.ly"
+\include "..\fagotto.ly"
 
 \score {
   \new StaffGroup
   <<
-    \new Staff {
-      \transpose f c'
-      \cornoEinsMusic
-    }
-    \new Staff {
-      \transpose f c'
-      \cornoZweiMusic
-    }
+    \new Staff \fagottoMusic
+    \new Staff \contraFagottoMusic
   >>
   %\midi {}
 }

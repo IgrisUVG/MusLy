@@ -21,8 +21,7 @@ fluteEinsMusic = \relative {
   des4.( ges8) des'4( as~ as b--) r b,--(
   f'2. des4 b ges'2 as4~ as2 ges4 es)
   r4 es2( des4 c es2 f4~ f c2 des4~ des2 c'4 as des1~
-  des2) c( b as~ as1 ges4 f2) es4( b'2. ges4 es) c'2( des4~
-  des) %r4 r2 R1*4
+  des2) c( b as~ as1 ges4 f2) es4( b'2. ges4 es) c'2( des4) R1*6
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,5 +40,5 @@ fluteZweiMusic = \relative {
   \time 4/4 R1*13 c''1\trill R1*8
   r2. b4( f'2. des4 b ges'2 as4~ as2 ges4 f es des c b)
   des( c) es( des) ges( f es ges f des) ges( f)
-  ges2( as4 ges~ ges f es des es2 as a!4) %r4 r2  R1*4
+  ges2( as4 ges~ ges f es des es2 as) R1*6
 }

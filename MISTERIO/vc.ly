@@ -22,7 +22,5 @@ vcMusic = \relative {
     \repeat tremolo 32 {d32~}
   }
   \repeat tremolo 32 {d32}
-  R1*15 r2 as8^"picc" ges f es
-  des c b as ges f es des
-  c2-"arco" des	g4
+  R1*15 
 }

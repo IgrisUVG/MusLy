@@ -126,20 +126,20 @@
       }
       <<
         \new Staff = "Staff_clarinet1" {
-          \transpose b c'
+          %\transpose b c'
           \clarinetEinsMusic
         }
 
         \new Staff = "Staff_clarinet2" {
-          \transpose b c'
+          %\transpose b c'
           \clarinetZweiMusic
         }
         \new Staff = "Staff_clarinet3" {
-          \transpose b c'
+          %\transpose b c'
           \clarinetDreiMusic
         }
         \new Staff = "Staff_clarinet4" {
-          \transpose b c'
+          %\transpose b c'
           \clarinetVierMusic
         }
       >>
@@ -156,7 +156,7 @@
             \line { "in B" \smaller \flat }
           }
         }
-        \transpose b, c'
+        %\transpose b, c'
         \clarinetBassMusic
       }
       \new StaffGroup = "GrandStaff_fagotti" \with {
@@ -194,7 +194,7 @@
       }
       <<
         \new Staff = "Staff_trumpet1" {
-          \transpose b c'
+          %\transpose b c'
           \trumpetEinsMusic
         }
         \new Staff = "Staff_trumpet2" {
@@ -219,11 +219,11 @@
       }
       <<
         \new Staff = "Staff_hornI" {
-          \transpose f c'
+          %\transpose f c'
           \cornoEinsMusic
         }
         \new Staff = "Staff_horn2" {
-          \transpose f c'
+          %\transpose f c'
           \cornoZweiMusic
         }
       >>

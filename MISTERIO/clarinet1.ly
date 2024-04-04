@@ -23,8 +23,8 @@ clarinetEinsMusic = \relative {
   a'1-- R1 r2 g( des'1)
   R1*5 b,,4.( es8 b'4 des8 as b4 as8 es ges2 as b c b ces4 b as2)
   c!8( b) des( c) c( b c des) des4( b8 ges ces4 c8 e
-  f es des c b as ges f es des c b c2) des( es~ es4 ces ges') as(
-  a!)
+  f es des c b as ges f es des c b c2) des( es~ es4 ces as'2~ as4) r r2
+  R1*3 r2 c, R1
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,5 +44,6 @@ clarinetZweiMusic = \relative {
   R1*7 f,4.( b8 f'4 as8 es f4 es8 b des c b as
   ges des) es( des) f( es) ges( f) as( ges) b( as) as( ges as b)
   ces( b ges des es ges  as c des c b as ges f es des)
-  es4.( as8 es'4 ges8 des es4 des8 as c4 as f des b ges des'2.)
+  es4.( as8 es'4 ges8 des es4 des8 as c4 as f des b ges des'2.) r4
+  R1*3 r2 as R1
 }

@@ -30,4 +30,8 @@ vniEinsMusic = \relative {
     \repeat tremolo 32 {g32~}
   }
   \repeat tremolo 32 {g32}
+  R1*21
+  \key des \major
+  as'8-> des4-- b16( f ges8) ges ges b as es es ges
+  f16 ges f es f es des es f as ges f ges es f ges as f ges as b c des c
 }

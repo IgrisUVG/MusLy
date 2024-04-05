@@ -32,4 +32,7 @@ cbMusic = \relative {
   \time 5/4 r1 r4
   \time 3/4 as,4( g f)
   \time 4/4 R1*18 r2 ges'\laissezVibrer^"picc"
+  R1*17
+  \key des \major
+  R1*3
 }

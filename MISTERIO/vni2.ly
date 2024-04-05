@@ -41,4 +41,7 @@ vniZweiMusic = \relative {
     \repeat tremolo 32 {g32~}
   }
   \repeat tremolo 32 {g32}
+  R1*21
+  \key des \major
+  R1*3
 }

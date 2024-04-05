@@ -16,5 +16,5 @@ trombonMusic = \relative {
   \time 3/4 r2.
   \time 5/4 r1 r4
   \time 3/4 r2.
-  \time 4/4 R1*34 r8. c'16 c8. f,16 f4 r R1
+  \time 4/4 R1*34 r8. c'16 c8. f,16 f4 r R1*12
 }

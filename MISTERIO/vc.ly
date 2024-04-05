@@ -22,5 +22,7 @@ vcMusic = \relative {
     \repeat tremolo 32 {d32~}
   }
   \repeat tremolo 32 {d32}
-  R1*15 
+  R1*21
+  \key des \major
+  R1*3
 }

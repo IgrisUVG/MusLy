@@ -21,4 +21,8 @@ vleMusic = \relative {
     \repeat tremolo 32 {d32~}
   }
   \repeat tremolo 32 {d32}
+  R1*21
+  \key des \major
+  R1*2
+  des8-> as'4-- f16( c des8) des des f
 }

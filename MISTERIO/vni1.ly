@@ -5,6 +5,8 @@
 
 vniEinsMusic = \relative {
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   <<
     {
       \time 4/4 s1*2

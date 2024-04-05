@@ -50,17 +50,17 @@ vniEinsMusic = \relative {
   c'8-> f4-- d16( a b8) b b d c g g b a16 b a g a g f g
   \key b \major
   b4 r r2 R1*5
-  \key d \major
+  %\key d \major
   a'8-> d4-- h16( fis g8) g g h a e e g fis16 g fis e fis e d e
   fis a g fis g e fis g a fis g a h cis d cis 
   h a g fis g e fis g a fis e d e g fis e
   fis4 e2 d4~ d r r2
-  \key fis \major
+  %\key fis \major
   ais'8-> dis4-- h16( fis gis8) gis gis h ais eis eis gis
   g16 b a g a f g a
-  \key b \major
+  %\key b \major
   b g a b c d es d c es d c d b c d es c d e fis g a g f es d c b g a b
-  \key d \major
+  %\key d \major
   h d cis h cis a h cis d h cis d e fis g fis
   e d cis h cis a h cis d h a g a cis h a
   \key g \major

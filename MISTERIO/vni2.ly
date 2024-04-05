@@ -60,7 +60,7 @@ vniZweiMusic = \relative {
   r d8-> g4-- es16( b c8) c c es d a a c
   b16 c b a b a g a b d c b c a b c d b c d es f g f es d c b c a b c
   d g, a b fis a g a b c d es d e fis g
-  \key d \major
+  %\key d \major
   fis4 e2 d4~ d cis d r R1*2
   
 }

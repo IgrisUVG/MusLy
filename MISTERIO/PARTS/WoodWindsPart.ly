@@ -49,12 +49,12 @@
   \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
-\include "..\flute.ly"
-\include "..\oboe.ly"
-\include "..\clarinet1.ly"
-\include "..\clarinet2.ly"
-\include "..\clarinetBass.ly"
-\include "..\fagotto.ly"
+\include "../flute.ly"
+\include "../oboe.ly"
+\include "../clarinet1.ly"
+\include "../clarinet2.ly"
+\include "../clarinetBass.ly"
+\include "../fagotto.ly"
 
 \score {
   \new StaffGroup = "StaffGroup_woodwinds" <<

@@ -49,11 +49,11 @@
   \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
-\include "..\vni1.ly"
-\include "..\vni2.ly"
-\include "..\vle.ly"
-\include "..\vc.ly"
-\include "..\cb.ly"
+\include "../vni1.ly"
+\include "../vni2.ly"
+\include "../vle.ly"
+\include "../vc.ly"
+\include "../cb.ly"
 
 \score {
   \new StaffGroup = "StaffGroup_strings" <<

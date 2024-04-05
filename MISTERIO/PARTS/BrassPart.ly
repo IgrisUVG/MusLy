@@ -30,7 +30,7 @@
 
 \layout {
   \context {
-    %\RemoveEmptyStaffContext
+    \RemoveEmptyStaffContext
   }
   \context {
     \Score
@@ -40,7 +40,7 @@
   \context {
     \Staff
     %\RemoveEmptyStaves
-    %\override VerticalAxisGroup.remove-first = ##t
+    \override VerticalAxisGroup.remove-first = ##t
     %\RemoveAllEmptyStaves
     %\consists "Timing_translator"
     %\consists "Default_bar_line_engraver"
@@ -49,10 +49,10 @@
   \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
-\include "..\trumpet.ly"
-\include "..\corno.ly"
-\include "..\trombon.ly"
-\include "..\tuba.ly"
+\include "../trumpet.ly"
+\include "../corno.ly"
+\include "../trombon.ly"
+\include "../tuba.ly"
 
 \score {
   \new StaffGroup = "StaffGroup_brass" <<

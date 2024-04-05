@@ -43,5 +43,24 @@ vniZweiMusic = \relative {
   \repeat tremolo 32 {g32}
   R1*21
   \key des \major
-  R1*3
+  R1*4
+  as8-> des4-- b16( f ges8) ges ges b as es es ges
+  f16 ges f es f es des es f as ges f ges es f ges as f ges as b c des c
+  b as ges f ges es f ges as f es des es ges f es
+  f4 es2 des4~ des c des c des16 b' as ges as es f ges f as ges f ges des ges f
+  ges4 as2 ges4~ ges f ges f ges f2 es4~ es f es2 des4 r r2 R1*5
+  ges8-> des'4-- b16( f ges8) ges ges b as es es ges f16 ges f es f es des es
+  f ges f es f des es f ges es f ges as b ces b 
+  as ges f es f des es f ges es des ces des f es f
+  \key es \major
+  ges4 r r2 R1*5 g8-> c4-- as16( es f8) f f as g d d f es16 f es d es d c d 
+  es g f es f d es f g es f g a b c b
+  \key b \major
+  c4 r r2
+  r d8-> g4-- es16( b c8) c c es d a a c
+  b16 c b a b a g a b d c b c a b c d b c d es f g f es d c b c a b c
+  d g, a b fis a g a b c d es d e fis g
+  \key d \major
+  fis4 e2 d4~ d cis d r R1*2
+  
 }

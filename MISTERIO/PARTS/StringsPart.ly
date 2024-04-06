@@ -29,6 +29,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     %\RemoveEmptyStaffContext
   }
@@ -95,5 +96,5 @@
       }
     >>
   >>
-  \midi {}
+  %\midi {}
 }

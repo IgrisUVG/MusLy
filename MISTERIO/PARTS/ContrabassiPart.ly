@@ -26,6 +26,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     \override BarNumber.break-visibility = ##(#t #t #t)
@@ -33,7 +34,7 @@
   }
 }
 
-\include "..\cb.ly"
+\include "../cb.ly"
 
 \score {
   \cbMusic

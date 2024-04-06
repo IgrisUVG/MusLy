@@ -26,6 +26,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     \override BarNumber.break-visibility = ##(#t #t #t)

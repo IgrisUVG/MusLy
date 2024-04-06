@@ -26,12 +26,14 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#t #t #t)
     %\remove "Bar_number_engraver"
   }
 }
-\include "..\oboe.ly"
+\include "../oboe.ly"
 \score {
   \oboeZweiMusic
   %\midi {}

@@ -29,13 +29,14 @@
   indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#t #t #t)
     %\remove "Bar_number_engraver"
   }
 }
 
-\include "..\clarinet1.ly"
-\include "..\clarinet2.ly"
-\include "..\clarinetBass.ly"
+\include "../clarinet1.ly"
+\include "../clarinet2.ly"
+\include "../clarinetBass.ly"
 
 \score {
   \new StaffGroup

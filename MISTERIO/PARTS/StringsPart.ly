@@ -30,7 +30,7 @@
 
 \layout {
   \context {
-    \RemoveEmptyStaffContext
+    %\RemoveEmptyStaffContext
   }
   \context {
     \Score
@@ -40,7 +40,7 @@
   \context {
     \Staff
     %\RemoveEmptyStaves
-    \override VerticalAxisGroup.remove-first = ##t
+    %\override VerticalAxisGroup.remove-first = ##t
     %\RemoveAllEmptyStaves
     %\consists "Timing_translator"
     %\consists "Default_bar_line_engraver"
@@ -95,4 +95,5 @@
       }
     >>
   >>
+  \midi {}
 }

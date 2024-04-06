@@ -66,5 +66,5 @@ vniEinsMusic = \relative {
   h d cis h cis a h cis d h cis d e fis g fis
   e d cis h cis a h cis d h a g a cis h a
   \key g \major
-  g4 r r2
+  g4 r r2 R1
 }

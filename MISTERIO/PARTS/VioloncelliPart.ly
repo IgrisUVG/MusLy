@@ -28,11 +28,12 @@
 \layout {
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#t #t #t)
     %\remove "Bar_number_engraver"
   }
 }
 
-\include "..\vc.ly"
+\include "../vc.ly"
 
 \score {
   \vcMusic

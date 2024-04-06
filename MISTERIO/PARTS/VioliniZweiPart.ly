@@ -33,7 +33,7 @@
   }
 }
 
-\include "..\vni2.ly"
+\include "../vni2.ly"
 
 \score {
   \vniZweiMusic

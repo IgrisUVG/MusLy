@@ -37,6 +37,6 @@
 \include "../fagotto.ly"
 
 \score {
-  \fagottoMusic
+  \contraFagottoMusic
   %\midi {}
 }

@@ -18,4 +18,5 @@ trombonMusic = \relative {
   \time 3/4 r2.
   \time 4/4 R1*34 r8. c'16 c8. f,16 f4 r R1*53
   \key g \major
+  h4 a8( g) g4 g8( fis) g4 g d2
 }

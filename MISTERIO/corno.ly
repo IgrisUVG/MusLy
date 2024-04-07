@@ -38,6 +38,7 @@ cornoEinsMusic = \relative {
   >>
   R1*54
   \key g \major
+  d'4 e d h d c8( h) a2
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -67,4 +68,5 @@ cornoZweiMusic = \relative {
   >>
   R1*53
   \key g \major
+  h'4 a8( g) g4 g8( fis) g4 g d2
 }

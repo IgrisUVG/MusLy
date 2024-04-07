@@ -25,7 +25,8 @@ clarinetEinsMusic = \relative {
   c!8( b) des( c) c( b c des) des4( b8 ges ces4 c8 e
   f es des c b as ges f es des c b c2) des( es~ es4 ces as'2~ as4) r r2
   R1*3 \repeat unfold 4 {r2 c, R1}
-  R1*2
+  R1*43
+  \key g \major
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

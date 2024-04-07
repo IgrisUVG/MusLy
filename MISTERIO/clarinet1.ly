@@ -48,5 +48,6 @@ clarinetZweiMusic = \relative {
   ces( b ges des es ges  as c des c b as ges f es des)
   es4.( as8 es'4 ges8 des es4 des8 as c4 as f des b ges des'2.) r4
   R1*3 \repeat unfold 4 {r2 as R1}
-  R1*2
+  R1*43
+  \key g \major
 }

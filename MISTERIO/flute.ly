@@ -7,6 +7,8 @@
 fluteEinsMusic = \relative {
   %\override Staff.TimeSignature #'stencil = ##f
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -29,6 +31,8 @@ fluteEinsMusic = \relative {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fluteZweiMusic = \relative {
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -44,4 +48,5 @@ fluteZweiMusic = \relative {
   des( c) es( des) ges( f es ges f des) ges( f)
   ges2( as4 ges~ ges f es des es2 as) R1*55
   \key g \major
+  d,4 e d e d c8( h) a2
 }

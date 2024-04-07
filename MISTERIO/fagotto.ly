@@ -6,6 +6,8 @@
 fagottoMusic = \relative {
   \clef bass
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -22,11 +24,14 @@ fagottoMusic = \relative {
   c4.( f8 c'4 es8 b c4 b8 f as2) R1*2
   \repeat unfold 5 {c,4.( f8 c'4 es8 b c4 b8 f as2)} R1*42
   \key g \major
+  g4 c d e a, g fis2
 }
 
 contraFagottoMusic = \relative {
   \clef "bass_8"
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -41,4 +46,5 @@ contraFagottoMusic = \relative {
   f,,4.( b8 f'4 as8 es f4 es8 b des2) r
   \repeat unfold 5 {f,4.( b8 f'4 as8 es f4 es8 b des2)} r2 R1*41
   \key g \major
+  g,4 c d e a, g fis2
 }

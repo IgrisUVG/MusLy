@@ -6,6 +6,8 @@
 clarinetBassMusic = \relative {
   %\clef bass
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -22,4 +24,5 @@ clarinetBassMusic = \relative {
   \repeat unfold 3 {b,4._( es8 b'4 des8 as b4 as8 es ges2)}
   b,4._( es8 b'4 des8 as b4 as8 es ges2~ ges4) r r2 R1*42
   \key g \major
+  g,4 c d e a, g fis2
 }

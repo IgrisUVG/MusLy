@@ -70,5 +70,6 @@ vniZweiMusic = \relative {
   dis cis h ais h gis ais his d f es d es c d es
   f d es f g a b a g b a g a f g a b g a b c d es d c b a g f d e fis
   g h a g a fis g a h g a h c d e d c h a g a fis g a h g fis e fis a g fis
+  \key g \major
   g4 r r2 R1
 }

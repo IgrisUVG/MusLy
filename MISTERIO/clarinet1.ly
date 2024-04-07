@@ -6,6 +6,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clarinetEinsMusic = \relative {
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -27,11 +29,14 @@ clarinetEinsMusic = \relative {
   R1*3 \repeat unfold 4 {r2 c, R1}
   R1*43
   \key g \major
+  g'4 g c h e, e a2
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clarinetZweiMusic = \relative {
   \set Score.skipBars = ##t
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1
@@ -50,4 +55,5 @@ clarinetZweiMusic = \relative {
   R1*3 \repeat unfold 4 {r2 as R1}
   R1*43
   \key g \major
+  %d4 e d e d c8( h) a2
 }

@@ -23,7 +23,7 @@ oboeEinsMusic = \relative {
   f4 des b ges'~ ges as2. ges4 es) r es(~
   es des c es~ es b2 c4~ c) r r2 R1*50
   \key g \major
-  g4 g c h e, e a2
+  g4 g c h e, e a2 \repeat unfold 2 {g4 g c a8( g) g4 fis g2}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,5 +45,5 @@ oboeZweiMusic = \relative {
   r as( b2 as4 ges2) f4( c'2. as4 f des'2 es4~ es2 des4 b)
   r b2( as4 ges b2 f4~ f ges2) r4 R1*50
   \key g \major
-  d4 e d e d c8( h) a2
+  %d4 e d h d c8( h) a2
 }

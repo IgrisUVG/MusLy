@@ -25,7 +25,7 @@ fluteEinsMusic = \relative {
   r4 es2( des4 c es2 f4~ f c2 des4~ des2 c'4 as des1~
   des2) c( b as~ as1 ges4 f2) es4( b'2. ges4 es) c'2( des4) R1*55
   \key g \major
-  g,4 g c h e, e a2
+  g,4 g c h e, e a2 \repeat unfold 2 {g4 g c a8( g) g4 fis g2}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,5 +48,5 @@ fluteZweiMusic = \relative {
   des( c) es( des) ges( f es ges f des) ges( f)
   ges2( as4 ges~ ges f es des es2 as) R1*55
   \key g \major
-  d,4 e d e d c8( h) a2
+  d,4 e d e d c8( h) a2 e'4 d d8( e) e4 d4.( c8 h2) c4 d d8( e) e4 d2 d
 }

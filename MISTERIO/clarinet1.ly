@@ -55,5 +55,5 @@ clarinetZweiMusic = \relative {
   R1*3 \repeat unfold 4 {r2 as R1}
   R1*43
   \key g \major
-  %d4 e d e d c8( h) a2
+  g'4 g c h e, e a2
 }

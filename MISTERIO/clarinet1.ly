@@ -29,7 +29,7 @@ clarinetEinsMusic = \relative {
   R1*3 \repeat unfold 4 {r2 c, R1}
   R1*43
   \key g \major
-  g'4 g c h e, e a2
+  g'4 g c h e, e a2 \repeat unfold 2 {g4 g c a8( g) g4 fis g2}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,5 +55,5 @@ clarinetZweiMusic = \relative {
   R1*3 \repeat unfold 4 {r2 as R1}
   R1*43
   \key g \major
-  g'4 g c h e, e a2
+  g'4 g c h e, e a2 \repeat unfold 2 {g4 g c a8( g) g4 fis g2}
 }

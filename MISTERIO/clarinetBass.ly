@@ -24,5 +24,5 @@ clarinetBassMusic = \relative {
   \repeat unfold 3 {b,4._( es8 b'4 des8 as b4 as8 es ges2)}
   b,4._( es8 b'4 des8 as b4 as8 es ges2~ ges4) r r2 R1*42
   \key g \major
-  g,4 c d e a, g fis2
+  g,4 c d e a, g fis2 e4 h' c h d2 e d4 h c a d2 g,
 }

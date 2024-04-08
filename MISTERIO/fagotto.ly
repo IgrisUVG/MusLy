@@ -24,7 +24,7 @@ fagottoMusic = \relative {
   c4.( f8 c'4 es8 b c4 b8 f as2) R1*2
   \repeat unfold 5 {c,4.( f8 c'4 es8 b c4 b8 f as2)} R1*42
   \key g \major
-  g4 c d e a, g fis2
+  g4 c d e a, g fis2 e4 h' c h d2 e d4 h c a d2 g,
 }
 
 contraFagottoMusic = \relative {
@@ -46,5 +46,5 @@ contraFagottoMusic = \relative {
   f,,4.( b8 f'4 as8 es f4 es8 b des2) r
   \repeat unfold 5 {f,4.( b8 f'4 as8 es f4 es8 b des2)} r2 R1*41
   \key g \major
-  g,4 c d e a, g fis2
+  g,4 c d e a, g fis2 e4 h' c h d2 e d4 h c a d2 g,
 }

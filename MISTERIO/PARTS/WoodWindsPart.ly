@@ -35,13 +35,15 @@
   }
   \context {
     \Score
+    %\remove "Bar_number_engraver"
+    \override VerticalAxisGroup.remove-first = ##t
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
   }
   \context {
     \Staff
     %\RemoveEmptyStaves
-    \override VerticalAxisGroup.remove-first = ##t
+    %\override VerticalAxisGroup.remove-first = ##t
     %\RemoveAllEmptyStaves
     %\consists "Timing_translator"
     %\consists "Default_bar_line_engraver"

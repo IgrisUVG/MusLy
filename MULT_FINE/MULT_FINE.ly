@@ -29,8 +29,12 @@
 
 \layout {
   \context {
+    \RemoveEmptyStaffContext
+  }
+  \context {
     \Score
     \remove "Bar_number_engraver"
+    \override VerticalAxisGroup.remove-first = ##t
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }

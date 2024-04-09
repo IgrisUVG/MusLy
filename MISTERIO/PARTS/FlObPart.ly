@@ -29,8 +29,10 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#t #t #t)
     %\remove "Bar_number_engraver"
+    \override BarNumber.break-visibility = ##(#t #t #t)
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
   }
 }
 
@@ -40,10 +42,10 @@
 \score {
   \new StaffGroup
   <<
-    \fluteEinsMusic
-    \fluteZweiMusic
-    \oboeEinsMusic
-    \oboeZweiMusic
+    \new Staff {\fluteEinsMusic}
+    \new Staff {\fluteZweiMusic}
+    \new Staff {\oboeEinsMusic}
+    \new Staff {\oboeZweiMusic}
   >>
   %\midi {}
 }

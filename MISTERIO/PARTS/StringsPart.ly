@@ -16,6 +16,8 @@
 \paper {
   system-separator-markup = \slashSeparator
   #(set-paper-size "a4")
+  indent = 1.2\cm
+  short-indent = 0.5\cm
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26

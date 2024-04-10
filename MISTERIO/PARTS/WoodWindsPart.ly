@@ -12,10 +12,12 @@
 }
 
 #(ly:set-option 'relative-includes #t)
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 \paper {
   system-separator-markup = \slashSeparator
   #(set-paper-size "a4")
+  indent = 1.5\cm
+  short-indent = 0.5\cm
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
@@ -29,7 +31,7 @@
 }
 
 \layout {
-  indent = 10
+  %indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"

@@ -5,7 +5,8 @@
 
 vniEinsMusic = \relative {
   \set Score.skipBars = ##t
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  %\set Staff.explicitClefVisibility = #end-of-line-invisible
+  %\set Staff.explicitClefVisibility = #begin-of-line-visible
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   <<
@@ -55,7 +56,7 @@ vniEinsMusic = \relative {
   b4 r r2 R1*5
   %\key d \major
   a'8-> d4-- h16( fis g8) g g h a e e g fis16 g fis e fis e d e
-  fis a g fis g e fis g a fis g a h cis d cis 
+  fis a g fis g e fis g a fis g a h cis d cis
   h a g fis g e fis g a fis e d e g fis e
   fis4 e2 d4~ d r r2
   %\key fis \major

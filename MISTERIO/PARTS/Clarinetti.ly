@@ -33,6 +33,7 @@
     %\remove "Bar_number_engraver"
     \RemoveEmptyStaves
     \override VerticalAxisGroup.remove-first = ##t
+    \override TimeSignature.break-visibility = ##(#f #t #t)
   }
 }
 

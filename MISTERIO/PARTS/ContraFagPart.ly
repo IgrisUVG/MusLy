@@ -5,7 +5,7 @@
 
 \header {
   title = "Misterio"
-  subtitle = "Fagotto"
+  subtitle = "Contrafagotto"
   meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -30,6 +30,7 @@
   \context {
     \Score
     \override BarNumber.break-visibility = ##(#t #t #t)
+    \override TimeSignature.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
 }

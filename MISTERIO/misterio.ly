@@ -36,6 +36,7 @@
     \override BarNumber.break-visibility = ##(#t #t #t)
     \RemoveEmptyStaves
     \override VerticalAxisGroup.remove-first = ##t
+    \override TimeSignature.break-visibility = ##(#f #t #t)
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
   }

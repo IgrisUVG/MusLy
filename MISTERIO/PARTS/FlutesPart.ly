@@ -33,6 +33,7 @@
     \override BarNumber.break-visibility = ##(#t #t #t)
     \RemoveEmptyStaves
     \override VerticalAxisGroup.remove-first = ##t
+    \override TimeSignature.break-visibility = ##(#f #t #t)
   }
 }
 

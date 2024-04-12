@@ -8,6 +8,7 @@ vleMusic = \relative {
   \set Score.skipBars = ##t
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
+  \set Staff.explicitClefVisibility = #begin-of-line-visible
   \time 4/4 R1*2
   \time 3/4 r2.
   \time 4/4 r1

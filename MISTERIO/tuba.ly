@@ -19,5 +19,5 @@ tubaMusic = \relative {
   \time 3/4 r2.
   \time 4/4 R1*34 r2 r8. ges16 ges8. des16 des8. b16 b2 r4 R1*52
   \key g \major
-  g4 c d e a, g fis2
+  g4 c d e a, g fis2 e4 h' c h d2 e d4 h c a d2 g,
 }

@@ -131,82 +131,82 @@ drumMusic = \drummode {
   >>
   \times 2/3 {bd4 bd bd}
   <<
-  	{
-  		cymc4 r8 cymr r cymr r cymr
-  		r cymr r cymr r cymr r cymr
-  	}
-  	\\
-  	{
-  		\once\override Rest.extra-offset = #'(0 . 2.7)
-  		r16 cb8. bd4 bd bd bd bd bd bd
-  	}
+    {
+      cymc4 r8 cymr r cymr r cymr
+      r cymr r cymr r cymr r cymr
+    }
+    \\
+    {
+      \once\override Rest.extra-offset = #'(0 . 2.7)
+      r16 cb8. bd4 bd bd bd bd bd bd
+    }
   >>
   <<
-  	{
-  		cymc2 s s1*7
-  	}
-  	\\
-  	{
-  		\voiceOne
-  		\stemDown
-  		hhho1:32~ hhho1:32~ hhho1:32~ hhho1:32~
-  		hhho1:32~ hhho1:32~ hhho1:32~ hhho1:32
-  	}
-  	\\
-  	{
-  		\voiceTwo
-  		s1*5 \repeat unfold 12 {bd4}
-  	}
+    {
+      cymc2 s s1*7
+    }
+    \\
+    {
+      \voiceOne
+      \stemDown
+      hhho1:32~ hhho1:32~ hhho1:32~ hhho1:32~
+      hhho1:32~ hhho1:32~ hhho1:32~ hhho1:32
+    }
+    \\
+    {
+      \voiceTwo
+      s1*5 \repeat unfold 12 {bd4}
+    }
   >>
   <bd cymc>4 r2. R1*3 r2. cymc4 R1*3 r4 bd2.:32 R1*3
   r2 r8
   <<
-  	{
-  		cymc cymc cymc cymc4
-  	}
-  	\\
-  	{
-  		bd8 bd bd bd4
-  	}
+    {
+      cymc cymc cymc cymc4
+    }
+    \\
+    {
+      bd8 bd bd bd4
+    }
   >>
   r2.
   \changePitch {\ritmWithRest}{
-  	bd bd bd bd r
-  	bd bd bd bd cymc bd bd bd bd cymc
-  	bd bd bd bd cymc bd bd bd bd cymc
+    bd bd bd bd r
+    bd bd bd bd cymc bd bd bd bd cymc
+    bd bd bd bd cymc bd bd bd bd cymc
   }
   R1*2 <bd cymc>4 hhho r2 R1*2
   <<
-  	{
-  		\repeat unfold 2 {s1 r2 cymc->}
-  	}
-  	\\
-  	{
-  		\voiceOne
-  		\repeat unfold 16 {bd8[ bd]}
-  	}
+    {
+      \repeat unfold 2 {s1 r2 cymc->}
+    }
+    \\
+    {
+      \voiceOne
+      \repeat unfold 16 {bd8[ bd]}
+    }
   >>
   hhho1->
   \repeat unfold 6 {
-		<<
-			{
-				cymc2
-			}
-			\\
-			{
-				bd
-			}
-		>>
-		r4 bd8. bd16
+    <<
+      {
+        cymc2
+      }
+      \\
+      {
+        bd
+      }
+    >>
+    r4 bd8. bd16
   }
   <<
-  	{
-  		cymc2
-  	}
-  	\\
-  	{
-  		bd
-  	}
+    {
+      cymc2
+    }
+    \\
+    {
+      bd
+    }
   >>
   r r2. <bd cymc>4 hhho1 R1*2 cymc2\fermata s \bar "||"
   R1*5 cymc2 r R1*5
@@ -215,18 +215,18 @@ drumMusic = \drummode {
   \bar "."
   \revert Staff.TimeSignature.stencil
   \time 3/4
-  <bd hhho cymc>2.-> cymc R2.*43 
+  <bd hhho cymc>2.-> cymc R2.*43
   \extendLV #6
   \override LaissezVibrerTie.direction = 1
   cymc2.\laissezVibrer R2.*4
   <<
-  	{
-  		cymc2.-> cymc->
-  	}
-  	\\
-  	{
-  		bd2.:32~ bd2.:32
-  	}
+    {
+      cymc2.-> cymc->
+    }
+    \\
+    {
+      bd2.:32~ bd2.:32
+    }
   >>
   \cadenzaOn
   hhho1-> s2 s2. s2. s2.
@@ -235,7 +235,7 @@ drumMusic = \drummode {
   \time 4/4
   R1 r2 \times 2/3 {bd8 bd bd} bd4 hhho1 R1*5
   r4 <bd cymc>-> r2 R1 cymc1
-   R1*11
+  R1*11
   \bar "||"
   \cadenzaOn
   r1 r8 \bar ""
@@ -253,23 +253,23 @@ drumMusic = \drummode {
   R1*7 r2 <bd cymc>4 r \repeat unfold 3 {q r q r q q q r}
   R1*2 r2. r16 cymr r8 r2 r8. cymr16 r4
   <<
-  	{
-  		\override Rest.extra-offset = #'(0 . -5.5)
-  		bd4 r bd r bd bd bd
-  	}
-  	\\
-  	{
-  		\extendLV #3
-  		\override LaissezVibrerTie.direction = 1  		
-  		cymc1^>\laissezVibrer
-  	}
+    {
+      \override Rest.extra-offset = #'(0 . -5.5)
+      bd4 r bd r bd bd bd
+    }
+    \\
+    {
+      \extendLV #3
+      \override LaissezVibrerTie.direction = 1
+      cymc1^>\laissezVibrer
+    }
   >>
   \extendLV #3
-  \override LaissezVibrerTie.direction = 1  		
+  \override LaissezVibrerTie.direction = 1
   cymc4->\laissezVibrer
-  sn16.-- sn32-^ r8 r2 bd8-- r 
+  sn16.-- sn32-^ r8 r2 bd8-- r
   r2. r8 \acciaccatura {\slashI sn32 sn sn sn} sn16-^ r
-  r bd r8 r8. \acciaccatura {\slashI sn32 sn sn sn} sn16-^ 
+  r bd r8 r8. \acciaccatura {\slashI sn32 sn sn sn} sn16-^
   r8 cymr16-. r r4 r16 cymr16-. r8 r2. R1 sn1:32~ sn1:32
   r4 sn16-. r8. r16 sn-. r8 r sn16-. r
   \times 2/3 {sn16-.[ r sn16-. r sn16-. r]} r2.

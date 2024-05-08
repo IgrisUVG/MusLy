@@ -36,6 +36,6 @@
 \include "../drums.ly"
 
 \drums {
-  \new Staff
+  %\new DrumStaff
   \drumMusic
 }

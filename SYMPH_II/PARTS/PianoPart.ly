@@ -11,7 +11,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #10
   markup-system-spacing.basic-distance = #20
@@ -36,6 +36,7 @@
     %\remove "Bar_number_engraver"
   }
 }
+
 %%%%%%%%%%% RH %%%%%%%%%%%%
 \include "../rechts.ly"
 %%%%%%%%%%% LH %%%%%%%%%%%%

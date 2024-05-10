@@ -13,7 +13,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #5
   markup-system-spacing.basic-distance = #15
@@ -33,7 +33,9 @@
     %\remove "Bar_number_engraver"
   }
 }
+
 \include "../timpani.ly"
+
 \score {
   \new Staff
   \timpMusic

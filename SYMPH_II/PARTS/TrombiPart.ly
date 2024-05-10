@@ -13,7 +13,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #15
@@ -37,15 +37,15 @@
 \include "..\trumpet2.ly"
 \score {
   \new StaffGroup = "GrandStaff_clarinetto"
-      <<
-        \new Staff = "Staff_trumpet1" {
-          \transpose b c'
-          \trumpetOneMusic
-        }
+  <<
+    \new Staff = "Staff_trumpet1" {
+      \transpose b c'
+      \trumpetOneMusic
+    }
 
-        \new Staff = "Staff_trumpet2" {
-          \transpose b c'
-          \trumpetTwoMusic
-        }
-      >>
+    \new Staff = "Staff_trumpet2" {
+      \transpose b c'
+      \trumpetTwoMusic
+    }
+  >>
 }

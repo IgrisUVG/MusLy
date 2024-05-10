@@ -12,7 +12,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #20
   top-markup-spacing.basic-distance = #5
   markup-system-spacing.basic-distance = #20
@@ -32,8 +32,10 @@
     %\remove "Bar_number_engraver"
   }
 }
+
 \include "..\tuba.ly"
+
 \score {
   \new Staff
-    \tubaMusic
+  \tubaMusic
 }

@@ -20,15 +20,17 @@
   markup-system-spacing.basic-distance = #26
   system-system-spacing.basic-distance = #28
   last-bottom-spacing.basic-distance = #15
-  two-sided = ##t
-  inner-margin = 20
-  outer-margin = 15
+  left-margin = 15
+  right-margin = 15
+  %two-sided = ##t
+  %inner-margin = 25
+  %outer-margin = 15
 }
 
 \layout {
   \context {
     \RemoveEmptyStaffContext
-  }  
+  }
   \context {
     \Score
     %\remove "Timing_translator"
@@ -41,11 +43,13 @@
     %\consists "Default_bar_line_engraver"
   }
 }
+
 %\include "..\vni1.ly"
 %\include "..\vni2.ly"
 \include "..\vle.ly"
 \include "..\vc.ly"
 \include "..\cb.ly"
+
 \score {
   \new StaffGroup = "StaffGroup_strings" <<
     %{
@@ -70,22 +74,22 @@
         %\set Staff.shortInstrumentName = #"V-le"
         \vleMusic
       }
-      %}
+    %}
 
-      \new StaffGroup = "GrandStaff_bassi" \with {
-        systemStartDelimiter = #'SystemStartSquare
+    \new StaffGroup = "GrandStaff_bassi" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_cello" {
+        \set Staff.instrumentName = #"Violoncelli"
+        %\set Staff.shortInstrumentName = #"Vc"
+        \vcMusic
       }
-      <<
-        \new Staff = "Staff_cello" {
-          \set Staff.instrumentName = #"Violoncelli"
-          %\set Staff.shortInstrumentName = #"Vc"
-          \vcMusic
-        }
-        \new Staff = "Staff_bass" {
-          \set Staff.instrumentName = #"Contrabassi"
-          %\set Staff.shortInstrumentName = #"Cb"
-          \cbMusic
-        }
-      >>
+      \new Staff = "Staff_bass" {
+        \set Staff.instrumentName = #"Contrabassi"
+        %\set Staff.shortInstrumentName = #"Cb"
+        \cbMusic
+      }
     >>
+  >>
 }

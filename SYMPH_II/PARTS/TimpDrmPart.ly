@@ -13,6 +13,7 @@
 
 \paper {
   %#(set-paper-size "a4")
+  indent = 1.2\cm
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #15
@@ -30,6 +31,8 @@
     \Score
     %\remove "Bar_number_engraver"
   }
+  \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "../timpani.ly"

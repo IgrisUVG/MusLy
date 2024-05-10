@@ -12,7 +12,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #15
@@ -32,17 +32,19 @@
     %\remove "Bar_number_engraver"
   }
 }
+
 \include "..\trombon1.ly"
 \include "..\trombon2.ly"
+
 \score {
   \new StaffGroup = "GrandStaff_trombon"
-      <<
-        \new Staff = "Staff_trombon1" {
-          \trombonOneMusic
-        }
+  <<
+    \new Staff = "Staff_trombon1" {
+      \trombonOneMusic
+    }
 
-        \new Staff = "Staff_trombon2" {
-          \trombonTwoMusic
-        }
-      >>
+    \new Staff = "Staff_trombon2" {
+      \trombonTwoMusic
+    }
+  >>
 }

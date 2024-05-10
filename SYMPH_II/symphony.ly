@@ -28,12 +28,15 @@
 }
 \layout {
   \context {
-    \RemoveEmptyStaffContext
+    %\RemoveEmptyStaffContext
   }
   \context {
     \Score
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
+    %\remove "Bar_number_engraver"
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
   }
   \context {
     \Staff
@@ -45,6 +48,7 @@
     \consists #Span_stem_engraver
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "flute.ly"

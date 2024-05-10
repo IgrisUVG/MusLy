@@ -13,7 +13,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #15
@@ -33,10 +33,12 @@
     %\remove "Bar_number_engraver"
   }
 }
+
 \include "../corno1.ly"
 \include "../corno2.ly"
+
 \score {
-  \new StaffGroup = "GrandStaff_corni" 
+  \new StaffGroup = "GrandStaff_corni"
   <<
     \new Staff = "Staff_hornI" {
       \transpose f c'

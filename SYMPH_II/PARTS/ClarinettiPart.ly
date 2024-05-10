@@ -13,7 +13,7 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #5
   markup-system-spacing.basic-distance = #20
@@ -31,10 +31,14 @@
   \context {
     \Score
     %\remove "Bar_number_engraver"
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
   }
 }
+
 \include "..\clarinet1.ly"
 \include "..\clarinet2.ly"
+
 \score {
   \new StaffGroup = "GrandStaff_clarinetto"
   <<

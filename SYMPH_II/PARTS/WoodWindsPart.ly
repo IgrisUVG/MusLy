@@ -14,7 +14,9 @@
 #(set-global-staff-size 16)
 \paper {
   system-separator-markup = \slashSeparator
-  #(set-paper-size "a4")
+  %#(set-paper-size "a4")
+  indent = 1.2\cm
+  short-indent = 0.5\cm
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
@@ -35,6 +37,9 @@
     \Score
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
+    %\remove "Bar_number_engraver"
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
   }
   \context {
     \Staff
@@ -42,6 +47,7 @@
     %\consists "Default_bar_line_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "../flute.ly"

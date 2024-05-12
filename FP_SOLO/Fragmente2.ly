@@ -738,5 +738,5 @@ dynamic = {
     \new Dynamics = "DYN" \dynamic
     \new Staff = "LH" \links
   >>
-  \midi {}
+  %\midi {}
 }

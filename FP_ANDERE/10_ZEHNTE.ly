@@ -5,7 +5,7 @@
 
 \header {
   title = \markup { \fontsize #3 "10" }
-  meter = "Lent"
+  %meter = "Lent"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -68,6 +68,8 @@ rechts = \relative {
   \clef treble
   \key ges \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Lent"
   %\override Score.SpacingSpanner.strict-note-spacing = ##t
   %\set Score.proportionalNotationDuration = #(ly:make-moment 1/8)
   %\set Staff.printKeyCancellation = ##f

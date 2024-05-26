@@ -39,6 +39,9 @@
 }
 
 %%%%%%%%% SCRIPTS %%%%%%%%%
+top = \change Staff = "RH"
+bot = \change Staff = "LH"
+
 makeOctaves =
 #(define-music-function (parser location arg mus)
    (integer? ly:music?)
@@ -63,11 +66,41 @@ pocoCr =
 rechts = \relative {
   \clef treble
   \omit Staff.TimeSignature
+  <des' e g as c>1<dis fis g d'!><e f! gis dis'><es fes a e'!>
+  \cadenzaOn
+  <d e! b' fis'>1\fermata
+  s4 s32
+  \cadenzaOff
+  \bar "|"
+  \break
+  g'2
 }
+
 %%%%%%%%%%% LH %%%%%%%%%%%%
 links = \relative {
   \clef bass
   \omit Staff.TimeSignature
+  <e fis b>1<cis g' a c!><d! fis a b><h! f'! g b>
+  \cadenzaOn
+  <<
+    {
+      <e fis a>1
+    }
+    \\
+    {
+      d4^( g,4. as8
+      \override Beam.grow-direction = #RIGHT
+      a64[ b h c cis d dis e f fis g gis a b h c
+      \top cis d dis e f fis g]
+      \override Beam.grow-direction = #'()
+      gis64[ a b h c cis d dis e f fis])
+    }
+  >>
+  \cadenzaOff
+  \bar "|"
+  \break
+  \bot
+  h,,,,16
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

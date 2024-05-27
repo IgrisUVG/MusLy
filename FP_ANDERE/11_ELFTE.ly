@@ -73,7 +73,24 @@ rechts = \relative {
   \cadenzaOff
   \bar "|"
   \break
-  g'2
+  \time 2/4
+  \override TrillSpanner.bound-details.left.text = \markup{
+    \musicglyph #"scripts.trill" \raise #0.65 \teeny \flat
+  }
+  g'2\startTrillSpan
+  a!\startTrillSpan
+  \revert TrillSpanner.bound-details.left.text
+  h!\startTrillSpan
+  \time 5/4
+  \override TrillSpanner.bound-details.left.text = \markup{
+    \musicglyph #"scripts.trill" \raise #0.65 \teeny \flat
+  }
+  d1(\startTrillSpan s4
+  \time 15/8
+  d8)\stopTrillSpan d4.~ d16 d!~ d[ cis c cis] f,[ cis' f, a]
+  gis2.\startTrillSpan
+  \time 4/4
+  <ces, f b>2-^\stopTrillSpan q
 }
 
 %%%%%%%%%%% LH %%%%%%%%%%%%
@@ -84,10 +101,11 @@ links = \relative {
   \cadenzaOn
   <<
     {
-      <e fis a>1
+      <e fis a>1 s4 s32
     }
     \\
     {
+      \shape #'((1 . -1) (0 . 2) (-4 . 1) (0 . -.5)) Slur
       d4^( g,4. as8
       \override Beam.grow-direction = #RIGHT
       a64[ b h c cis d dis e f fis g gis a b h c
@@ -100,7 +118,24 @@ links = \relative {
   \bar "|"
   \break
   \bot
-  h,,,,16
+  \time 2/4
+  \omit TupletNumber
+  \omit TupletBracket
+  \tuplet 10/8 2 {
+    h,,,,16[( f' as d h' as d, h f as,])
+    g[( e' g dis' c' g dis c e, ges,])
+    f[( es' gis d'! h' gis d h es, fis,])
+  }
+  \time 5/4
+  e!8\noBeam
+  \clef treble
+  <cis'''' e>->[(<h d><a c>])<c es>->(<b des><as ces>[)<h d>->(<a c><g b>])
+  \time 15/8
+  <cis e>->[(<h d><a c>])<c es>->(<b des><as ces>[)<h d>->(<a c><g b>])
+  \clef bass
+  f,, g!
+  \once \undo \omit TupletNumber
+  \tuplet 3/2 {a8[ h cis]} dis16 f g a
 }
 
 %%%%%%%%%%%%D%%%%%%%%%%%%

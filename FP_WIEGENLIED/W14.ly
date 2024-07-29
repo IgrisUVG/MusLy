@@ -35,16 +35,21 @@ fakeBassClefShift = {
 %%%%%%%%%%% RH %%%%%%%%%%%%
 viezehnteRH = \relative {
   \clef treble
-  \time 4/4
+  \time 10/4
   %\key c \major
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-    \repeat unfold 5 {c'''16 f, as, f'}
-    c' f, b, f' c' f, h, f' c' f, c f c' f, d! f c' f, e! f
-  }
-  %\bar "|."
-  
+  \repeat unfold 5 {c'''16 f, as, f'}
+  c' f, b, f' c' f, h, f' c' f, c f
+  \bar ""
+  \break
+  c' f, d! f c' f, e! f
+  \repeat unfold 5 {c'16 f, as, f'}
+  c' f, b, f' c' f, h, f' c' f, c f c' f, d! f c' f, e! f
+}
+%\bar "|."
+
 %%%%%%%% DYNAMIC %%%%%%%%%%
 dynamicVierzehn = {
   \override Hairpin.to-barline = ##f
@@ -73,5 +78,5 @@ viezehnteBass = \relative {
   \override Staff.TimeSignature.stencil = ##f
   \ottava #-1
   \set Staff.ottavation = #"8"
-  des,,1 ges,
+  des,,1 ges, d!
 }

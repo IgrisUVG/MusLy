@@ -29,6 +29,12 @@
     \remove "Bar_number_engraver"
     %\override StaffGrouper.staff-staff-spacing.padding = #0
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #1
+    \remove "Timing_translator"
+    \remove "Default_bar_line_engraver"
+  }\context {
+    \Staff
+    \consists "Timing_translator"
+    \consists "Default_bar_line_engraver"
   }
 }
 
@@ -41,7 +47,7 @@
   }
   <<
     \new Staff = "RH" \viezehnteRH
-    \new Dynamics = "Dynamics_pf" \dynamicVierzehn 
+    \new Dynamics = "Dynamics_pf" \dynamicVierzehn
     \new Staff = "LH" \viezehnteLH
     \new Staff = "B" \viezehnteBass
   >>

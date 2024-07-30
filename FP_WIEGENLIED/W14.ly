@@ -41,12 +41,35 @@ viezehnteRH = \relative {
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
   \repeat unfold 5 {c'''16 f, as, f'}
-  c' f, b, f' c' f, h, f' c' f, c f
+  c' f, b, f'
+  c' f, h, f'
+  c' f, c f
   \bar ""
   \break
-  c' f, d! f c' f, e! f
-  \repeat unfold 5 {c'16 f, as, f'}
-  c' f, b, f' c' f, h, f' c' f, c f c' f, d! f c' f, e! f
+  c' f, d! f
+  c' f, e! f
+  %%%%%%%%%%%%%
+  c'16 f, as, f'
+  des'16 f, as, f'
+  c'16 f, as, f'
+  des'16 f, as, f'
+  c'16 f, as, f'
+  des' f, b, f'
+  c' f, h, f'
+  des' f, c f
+  c' f, d! f
+  des' f, e! f
+  %%%%%%%%%%%%%
+  c'16 f, as, g'
+  des'16 f, as, g'
+  c16 f, as, g'
+  des'16 f, as, g'
+  c16 f, as, g'
+  des' f, b, g'
+  c f, h, g'
+  des' f, c g'
+  c f, d! g
+  des' f, e! g
 }
 %\bar "|."
 
@@ -64,17 +87,20 @@ viezehnteLH = \relative {
   %\key c \major
   %\time 12/16
   %\override Fingering.staff-padding = #'()
-  \override Staff.BarLine.stencil = ##f
-  \override Score.SpanBar.stencil = ##f
+  %\override Staff.BarLine.stencil = ##f
+  %\override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  r4 f'2. s8 g! a! b c4 g es des
+  r4 f'2. s8 g! a! b c4 g 
+  \time 7/4
+  es des r8 e <gis h>1
+  f2 s8 g! a! b
 }
 
 viezehnteBass = \relative {
   \clef bass
   \time 4/4
-  \override Staff.BarLine.stencil = ##f
-  \override Score.SpanBar.stencil = ##f
+  %\override Staff.BarLine.stencil = ##f
+  %\override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
   \ottava #-1
   \set Staff.ottavation = #"8"

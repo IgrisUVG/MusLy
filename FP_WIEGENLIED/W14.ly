@@ -55,17 +55,22 @@ viezehnteRH = \relative {
   des'16 f, as, f'
   c'16 f, as, f'
   des' f, b, f'
+  \bar ""
+  \break
   c' f, h, f'
   des' f, c f
   c' f, d! f
-  des' f, e! f
-  \bar ""
-  \break
+  des'! f, e! f
+  %\bar ""
+  %\break
   %%%%%%%%%%%%%
   c'16 f, as, g'
+  \tweak Accidental.stencil ##f
   des'16 f, as, g'
   c16 f, as, g'
   des'16 f, as, g'
+  \bar ""
+  \break
   c16 f, as, g'
   des' f, b, g'
   c f, h, g'
@@ -76,7 +81,10 @@ viezehnteRH = \relative {
   \break
   %%%%%%%%%%%%%
   c16 f, as, g'
+  \tweak Accidental.stencil ##f
   des'16 ges, as, f'
+  \bar ""
+  \break
   c'16 g as, ges'
   des'16 f, as, g'
   c16 ges as, f'
@@ -85,6 +93,14 @@ viezehnteRH = \relative {
   des' ges, c, f
   c' g d! ges
   des' f, e! g
+  %%%%%%%%%%%%%
+  \time 4/2
+  c16 f, gis, g'!
+  cis16 f, gis,! g'!
+  c16 f, gis,! g'!
+  cis16 f, gis,! g'!
+  c16 f, gis,! g'!
+  f2.
 }
 %\bar "|."
 
@@ -109,17 +125,27 @@ viezehnteLH = \relative {
   \time 7/4
   es des r8 e <gis h>1
   \time 6/4
-  f2 s8 g![ a! b] des4
+  \tweak duration-log #1 f4
   \bar ""
   \break
-  as
+  s
+  s8 g![ a! b] d!4
+  %\bar ""
+  %\break
+  a
   \time 7/4
-  f e r8 gis <h e!>1
+  fis e r8 gis
+  \bar ""
+  \break
+  <h e!>1
   \time 6/4
   f2
+  %\bar ""
+  %\break
+  s8 g![ a! b]
   \bar ""
   \break
-  s8 g![ a! b] h4 fis dis d cis1
+  h4 fis dis d cis1
 }
 
 viezehnteBass = \relative {
@@ -130,13 +156,15 @@ viezehnteBass = \relative {
   \override Staff.TimeSignature.stencil = ##f
   %\ottava #-1
   %\set Staff.ottavation = #"8"
-  des,1 ges, d! b' \tweak duration-log #-1 g
-  \bar ""
-  \break 
-  s es 
-  \tweak Stem.stencil ##f
-  \tweak duration-log #0 b'2
-  \bar ""
-  \break 
-  s d1 fis, a\breve
+  des,1 ges, d! b' g\breve
+  %\bar ""
+  %\break 
+  es1
+  %\tweak Stem.stencil ##f
+  %\tweak duration-log #0 
+  b'
+  %\bar ""
+  %\break 
+  %s 
+  d1 fis, a\breve
 }

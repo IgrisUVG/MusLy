@@ -59,6 +59,8 @@ viezehnteRH = \relative {
   des' f, c f
   c' f, d! f
   des' f, e! f
+  \bar ""
+  \break
   %%%%%%%%%%%%%
   c'16 f, as, g'
   des'16 f, as, g'
@@ -69,6 +71,19 @@ viezehnteRH = \relative {
   c f, h, g'
   des' f, c g'
   c f, d! g
+  des' f, e! g
+  \bar ""
+  \break
+  %%%%%%%%%%%%%
+  c16 f, as, g'
+  des'16 ges, as, f'
+  c'16 g as, ges'
+  des'16 f, as, g'
+  c16 ges as, f'
+  des' g, b, ges'
+  c! f,! h, g'
+  des' ges, c, f
+  c' g d! ges
   des' f, e! g
 }
 %\bar "|."
@@ -93,16 +108,35 @@ viezehnteLH = \relative {
   r4 f'2. s8 g! a! b c4 g 
   \time 7/4
   es des r8 e <gis h>1
-  f2 s8 g! a! b
+  \time 6/4
+  f2 s8 g![ a! b] des4
+  \bar ""
+  \break
+  as
+  \time 7/4
+  f e r8 gis <h e!>1
+  \time 6/4
+  f2
+  \bar ""
+  \break
+  s8 g![ a! b] h4 fis dis d cis1
 }
 
 viezehnteBass = \relative {
   \clef bass
-  \time 4/4
+  \time 4/2
   %\override Staff.BarLine.stencil = ##f
   %\override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  \ottava #-1
-  \set Staff.ottavation = #"8"
-  des,,1 ges, d!
+  %\ottava #-1
+  %\set Staff.ottavation = #"8"
+  des,1 ges, d! b' \tweak duration-log #-1 g
+  \bar ""
+  \break 
+  s es 
+  \tweak Stem.stencil ##f
+  \tweak duration-log #0 b'2
+  \bar ""
+  \break 
+  s d1 fis, a\breve
 }

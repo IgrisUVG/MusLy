@@ -102,7 +102,7 @@ viezehnteRH = \relative {
   c16 f, gis,! g'!
   f2.
 }
-%\bar "|."
+\bar "|."
 
 %%%%%%%% DYNAMIC %%%%%%%%%%
 dynamicVierzehn = {
@@ -118,8 +118,8 @@ viezehnteLH = \relative {
   %\key c \major
   %\time 12/16
   %\override Fingering.staff-padding = #'()
-  %\override Staff.BarLine.stencil = ##f
-  %\override Score.SpanBar.stencil = ##f
+  \override Staff.BarLine.stencil = ##f
+  \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
   r4 f'2. s8 g! a! b c4 g 
   \time 7/4
@@ -151,8 +151,8 @@ viezehnteLH = \relative {
 viezehnteBass = \relative {
   \clef bass
   \time 4/2
-  %\override Staff.BarLine.stencil = ##f
-  %\override Score.SpanBar.stencil = ##f
+  \override Staff.BarLine.stencil = ##f
+  \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
   %\ottava #-1
   %\set Staff.ottavation = #"8"

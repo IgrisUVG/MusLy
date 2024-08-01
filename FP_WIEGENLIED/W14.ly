@@ -77,22 +77,22 @@ viezehnteRH = \relative {
   des' f, c g'
   c f, d! g
   des' f, e! g
-  \bar ""
-  \break
+  %\bar ""
+  %\break
   %%%%%%%%%%%%%
   c16 f, as, g'
   \tweak Accidental.stencil ##f
   des'16 ges, as, f'
   \bar ""
   \break
-  c'16 g as, ges'
-  des'16 f, as, g'
-  c16 ges as, f'
-  des' g, b, ges'
-  c! f,! h, g'
-  des' ges, c, f
-  c' g d! ges
-  des' f, e! g
+  c'16 g as, fis'
+  cis'16 f, as, g'
+  c16 fis, as, f'
+  cis' g b, fis'
+  c'! f,! h, g'
+  cis fis, c! f
+  c' g d fis
+  cis' f, e g
   %%%%%%%%%%%%%
   \time 4/2
   c16 f, gis, g'!
@@ -101,8 +101,10 @@ viezehnteRH = \relative {
   cis16 f, gis,! g'!
   c16 f, gis,! g'!
   f2.
+  \revert Staff.BarLine.stencil
+  \revert Score.SpanBar.stencil
+  \bar "|."
 }
-\bar "|."
 
 %%%%%%%% DYNAMIC %%%%%%%%%%
 dynamicVierzehn = {
@@ -121,7 +123,7 @@ viezehnteLH = \relative {
   \override Staff.BarLine.stencil = ##f
   \override Score.SpanBar.stencil = ##f
   \override Staff.TimeSignature.stencil = ##f
-  r4 f'2. s8 g! a! b c4 g 
+  r4 f'2. s8 g! a! b c4 g
   \time 7/4
   es des r8 e <gis h>1
   \time 6/4
@@ -158,13 +160,15 @@ viezehnteBass = \relative {
   %\set Staff.ottavation = #"8"
   des,1 ges, d! b' g\breve
   %\bar ""
-  %\break 
+  %\break
   es1
   %\tweak Stem.stencil ##f
-  %\tweak duration-log #0 
+  %\tweak duration-log #0
   b'
   %\bar ""
-  %\break 
-  %s 
+  %\break
+  %s
   d1 fis, a\breve
+  \revert Staff.BarLine.stencil
+  \bar "|."
 }

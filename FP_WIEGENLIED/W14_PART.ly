@@ -11,13 +11,13 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #20
-  top-markup-spacing.basic-distance = #5
-  markup-system-spacing.basic-distance = #25
-  system-system-spacing.basic-distance = #25
+  top-system-spacing.basic-distance = #30
+  top-markup-spacing.basic-distance = #10
+  markup-system-spacing.basic-distance = #40
+  system-system-spacing.basic-distance = #35
   %score-system-spacing.basic-distance = #40
   %score-markup-spacing.basic-distance = #25
-  last-bottom-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #30
   left-margin = 15
   right-margin = 15
 }
@@ -47,8 +47,8 @@
   }
   <<
     \new Staff = "RH" \viezehnteRH
-    \new Dynamics = "Dynamics_pf" \dynamicVierzehn
     \new Staff = "LH" \viezehnteLH
+    \new Dynamics = "Dynamics_pf" \dynamicVierzehn
     \new Staff = "B" \viezehnteBass
   >>
 }

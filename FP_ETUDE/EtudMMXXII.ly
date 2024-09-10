@@ -12,7 +12,7 @@ rechtsMMXXII = \relative {
   \time 12/8
   \ottava #1
   \set Staff.ottavation = #"8"
-  es''''8 as, c, f b des c
+  es''''8 as, c, f b des c f, as,
   %\bar "|."
 }
 %%%%%%%% DYNAMIC %%%%%%%%%%

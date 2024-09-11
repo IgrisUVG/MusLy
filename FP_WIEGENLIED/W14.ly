@@ -66,9 +66,9 @@ viezehnteRH = \relative {
   %%%%%%%%%%%%%
   c'16 f, as, g'
   \tweak Accidental.stencil ##f
-  des'16 f, as, g'
+  des'16 f,! as, g'
   c16 f, as, g'
-  des'16 f, as, g'
+  des'16 f, as, g'!
   \bar ""
   \break
   c16 f, as, g'
@@ -81,8 +81,8 @@ viezehnteRH = \relative {
   %\break
   %%%%%%%%%%%%%
   c16 f, as, g'
-  \tweak Accidental.stencil ##f
-  des'16 ges, as, f'
+  %\tweak Accidental.stencil ##f
+  cis16 fis, as, f'
   \bar ""
   \break
   c'16 g as, fis'
@@ -95,7 +95,7 @@ viezehnteRH = \relative {
   cis' f, e g
   %%%%%%%%%%%%%
   \time 4/2
-  c16 f, gis, g'!
+  c!16 f, gis, g'!
   cis16 f, gis,! g'!
   c16 f, gis,! g'!
   cis16 f, gis,! g'!

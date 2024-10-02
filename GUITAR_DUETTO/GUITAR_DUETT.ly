@@ -29,7 +29,16 @@
     \Score
     %proportionalNotationDuration = #(ly:make-moment 1/20)
     %\override SpacingSpanner.uniform-stretching = ##t
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
+  }
+  \context {
+    \Staff %\RemoveEmptyStaves
+    %\override VerticalAxisGroup.remove-first = ##t
+    \override Fingering.stencil = ##f
+    \override StringNumber.stencil = ##f
+    \override StrokeFinger.stencil = ##f
+    \override TextScript.stencil = ##f
+    \override TextSpanner.stencil = ##f
   }
   indent = #15
   ragged-right = ##f

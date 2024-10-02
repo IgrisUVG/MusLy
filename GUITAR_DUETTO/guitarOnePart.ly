@@ -28,7 +28,7 @@
   indent = 1.3\cm
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
 }
 

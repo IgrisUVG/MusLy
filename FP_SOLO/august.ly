@@ -1133,7 +1133,11 @@ links = \relative {
       r4 r8
       <<
         {
-          <fis'_~ c'~> q2
+          <fis'_~ c'~>
+          \once \override Stem.cross-staff = ##t
+          \once \override Stem.length = #19
+          \once \override Stem.Y-offset = #-5
+          q2
         }
         \\
         {
@@ -1168,7 +1172,11 @@ links = \relative {
       r4 r8
       <<
         {
-          <fis'_~ c'~> q2
+          <fis'_~ c'~>
+          \once \override Stem.cross-staff = ##t
+          \once \override Stem.length = #19
+          \once \override Stem.Y-offset = #-5
+          q2
         }
         \\
         {
@@ -1254,40 +1262,38 @@ links = \relative {
         \xLV #6 <cis,, d'>4_\laissezVibrer s
         r4 r8
         <<
-          {
+          \new Voice  {
+            \voiceOne
             \autoBeamOff
-            \crossStaff
-            <d''_~ e_~ gis^~ ais^~>
-            %\crossStaff
-            q2
-            \crossStaff
+            \crossStaff <d''_~ e_~ gis^~ ais^~>
             \autoBeamOn
+            q2
           }
           \\
-          {
+          \new Voice {
             s8
             <<
               {
                 \once \override Stem.length = #12
-                %\once \override NoteColumn.force-hshift = #1.7
+                \once \override NoteColumn.force-hshift = #.4
                 g,4
               }
               \\
               {
                 \voiceThree
-                \once \override NoteHead.X-offset = #0.8
+                \once \override NoteHead.X-offset = #1.9
                 \once \override Stem.rotation = #'(25 0 0)
-                \once \override Stem.extra-offset = #'(-0.25 . -0.2)
+                \once \override Stem.extra-offset = #'(0.85 . -0.2)
                 \once \override Stem.length = #9.5
                 \hide Flag
                 %\once \override Flag.stencil = ##f
-                \once \override Accidental.extra-offset = #'(2.7 . 0)
+                \once \override Accidental.extra-offset = #'(3 . 0)
                 gis4
               }
             >>
           }
           \\
-          {
+          \new Voice {
             \voiceTwo
             s8
             %\once \override NoteColumn.force-hshift = #1.7

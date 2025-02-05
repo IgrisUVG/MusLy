@@ -516,9 +516,9 @@ rechts = {
                     as! d, b es ces fes,
                     \ottava #0
                     as d, b es ces fes,
-                    as! d, b es ces fes,
+                    as d, b es ces fes,
                     \stemUp
-                    as! d, \change Staff = LH b \change Staff = RH es ces
+                    as d, \change Staff = LH b \change Staff = RH es ces
                     \change Staff = LH
                     fes, \mergeDifferentlyHeadedOn 
                     des heses' \change Staff = RH es \change Staff = LH f,!

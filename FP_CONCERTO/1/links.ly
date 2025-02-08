@@ -387,7 +387,7 @@ links = {
   }
   \relative b {
 %%%%%%%%%%%%%%%%%%
-    <d, d'>16( fes ges g)<c, c'>( es f ges)<ces, ces'>( d e f)
+    <des, des'>16( fes ges g)<c, c'>( es f ges)<ces, ces'>( d e f)
     <b, b'>( des es fes)<a, a'>( c d es) <as, as'>( ces des d)
     <g, g'>( b c des)<ges, ges'>( a h c)<f, f'>( as b ces) s2
     \set baseMoment = #(ly:make-moment 1/8)

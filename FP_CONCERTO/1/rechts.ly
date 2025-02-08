@@ -13,7 +13,7 @@ rechts = {
   \stemUp
   b, es ges b
   \clef treble
-  es' 
+  es'
   \stemNeutral
   ges' b' es'' ges'' b'' es'''ges''' b'''
   es''''4) r\fermata
@@ -40,9 +40,9 @@ rechts = {
   \ottava #0
   r\fermata
   r\p ces'16( d' f' ces'')<b b'>8(<as! as'!>) b16( es' ges' a')
-  b'8. ges'16^( b'4) 
+  b'8. ges'16^( b'4)
   \stemUp
-  ces''8. as'16^( 
+  ces''8. as'16^(
   \stemNeutral
   ces''4)
   b'8. ges'16( b'4)
@@ -51,7 +51,7 @@ rechts = {
   <deses' deses''>8(<ces' ces''>) d'16( es' ges' <ces' ces''>)
   \relative es' {
     es16\mp ges b es ges, as des ces ges b es f ges a, c es e g h e fis, g d' c
-    b g f e es c h a g b d g a, b f' es d ges, a c f, as b es es,\< ges b es    
+    b g f e es c h a g b d g a, b f' es d ges, a c f, as b es es,\< ges b es
     \change Staff = LH
     f, ges
     \change Staff = RH
@@ -65,7 +65,7 @@ rechts = {
     \change Staff = RH
     ges a
     \change Staff = LH
-    es ges 
+    es ges
     \change Staff = RH
     a c
     \change Staff = LH
@@ -94,21 +94,29 @@ rechts = {
     \clef bass
     \times 4/6 {\change Staff = LH f,( ges a \change Staff = RH b d es)}
     \stemUp
-    \times 4/6 {\change Staff = LH es,( f ges \change Staff = RH
-                \stemDown
-                a b d)}
+    \times 4/6 {
+      \change Staff = LH es,( f ges \change Staff = RH
+      \stemDown
+      a b d)
+    }
     \stemUp
-    \times 4/6 {\change Staff = LH a,16( b d \change Staff = RH
-                \stemDown
-                es ges des')}
+    \times 4/6 {
+      \change Staff = LH a,16( b d \change Staff = RH
+      \stemDown
+      es ges des')
+    }
     \stemUp
-    \times 4/6 {\change Staff = LH ges,,( a b \change Staff = RH
-                \stemDown
-                d es ges)}
+    \times 4/6 {
+      \change Staff = LH ges,,( a b \change Staff = RH
+      \stemDown
+      d es ges)
+    }
     \stemUp
-    \times 4/6 {\change Staff = LH f,( ges a \change Staff = RH
-                \stemDown
-                b d es)}
+    \times 4/6 {
+      \change Staff = LH f,( ges a \change Staff = RH
+      \stemDown
+      b d es)
+    }
     \stemUp
     \change Staff = LH
     es,32( f ges a b
@@ -149,7 +157,7 @@ rechts = {
     \makeOctaves #1 {
       es16 d es fes es f fes es fes es fes f e ges f e f e f ges f g ges f
       \clef treble
-      ges f ges g ges as g ges g ges g as g a as g as g as a as b a as a as a b a ces b a 
+      ges f ges g ges as g ges g ges g as g a as g as g as a as b a as a as a b a ces b a
       b g as a b a b h c des d es e f fis g as g as b a b c b fis g as b c des d es
       \ottava #1
       \set Staff.ottavation = #"8"
@@ -161,10 +169,10 @@ rechts = {
   R2*4 \break
   r4 r8. <c'' es'' ges'' c'''>16
   \override TupletBracket #'bracket-visibility = ##t
-  \times 2/3{<ces''! f'' ces'''!>4 <g' c'' f'' g''> <as' c'' f'' as''>}  
+  \times 2/3{<ces''! f'' ces'''!>4 <g' c'' f'' g''> <as' c'' f'' as''>}
   d'16 a' e'' g'' h' f'' a'' d''' g' des''! fes'' b'' b' es'' g'' des'''
   as' es'' deses''' fes''' fes'' ces''' fes''' as'''
-  des'' as'' des''' f'''b'' f''' 
+  des'' as'' des''' f'''b'' f'''
   \ottava #1
   \set Staff.ottavation = #"8"
   as''' des''''
@@ -203,7 +211,7 @@ rechts = {
     <b'' b'''> <f ''f'''> <ges'' ges'''> <c''' c''''> <f'' f'''> <ges'' ges'''>
     <des''' des''''> <gis'' gis'''> <a'' a'''><es''' es''''> <gis'' gis'''> <a'' a'''>
   }
-  \relative es'''{      
+  \relative es'''{
     \override TupletNumber #'transparent = ##f
     \override TupletBracket #'bracket-visibility = ##t
     \tuplet 3/2 2 {
@@ -279,7 +287,7 @@ rechts = {
     {
       g''16 e'' cis'' d'' e'' h' c'' e''
       \stemDown
-      <b' fis''>16 a'' <e'' c'''>8   
+      <b' fis''>16 a'' <e'' c'''>8
       \stemNeutral
       s8 <g' c''>
     }
@@ -441,168 +449,170 @@ rechts = {
   \ottava #0
   R2 \break
   \set Staff.beatStructure = #'()
-  \relative es'' {%%%%%%%%%%%%%
-                  \stemUp
-                  f8.\f des16^( f4) ges8. es16^( ges4)
-                  \stemNeutral
-                  f8. des16( f4)
-                  r4 b,16( c des <b b'>)<a a'>8(<as as'>) g16( as h <f f'>)
-                  <ases ases'>8(<ges ges'>) a16( b des <ges, ges'>)
-                  <b b'>8(<a a'>) h16( c d <g, g'>)
-                  <des' des'>8(<c c'>) d16( es ges ces!)
-                  <e, e'>( b' c des)<es, es'>(a h c)<d, d'>( as' b ces)<des, des'>( g a b)
-                  <c, c'>( ges' as heses)<ces, ces'>( f g as)<b, b'>(fes' ges! ases)
-                  <a, a'>(es' f ges)<as,! as'!>(d e f)<g, g'>( des' es fes)
-                  <ges,! ges'!>( c d es)<f, f'>( ces' des eses)
-                  <<
-                    {
-                      <e, e'>2->~^( q4 <des des'>_><c c'>_><b b'>_>)
-                    }
-                    \\
-                    {
-                      e16( des' b des,
-                      \change Staff = LH
-                      \stemUp
-                      b des, b e,)
-                      \change Staff = RH
-                      s2 s
-                    }
-                  >>
-                  \set baseMoment = #(ly:make-moment 1/8)
-                  \set beatStructure = #'(2 2 2 2)
-                  \set subdivideBeams = ##t
-                  \override TupletNumber #'transparent = ##t
-                  \override TupletBracket #'bracket-visibility = ##f
-                  \tuplet 6/4 4 {
-                    des''16( a' e b' f c' a des b e c f des a' e b' f c' a des b
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    e c f
-                    des a' e b' f ces'!)
-                  }
-                  <c, e a c>8-><des e a des>->
-                  \override TupletNumber #'transparent = ##f
-                  \override TupletBracket #'bracket-visibility = ##t
-                  \tuplet 3/2 {<f b des f>4.<e b' des e>8<f b des f>4}
-                  <ges heses des ges>4
-                  \ottava #0  r
-                  \override TupletNumber #'transparent = ##t
-                  \override TupletBracket #'bracket-visibility = ##f
-                  \tuplet 6/4 4 {
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    f'16( e es des c ces b a as ges f e
-                    \ottava #0
-                    es des c ces b a as ges f e es des
-                    c ces b a as ges \parenthesize f e es des c ces)
-                  }
-                  b4->
-                  \tuplet 6/4 4 {
-                    \change Staff = LH g16 \change Staff = RH
-                    a' d, b' ges! des'! g, a' d, b' ges! des'!
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    g, a' d, b' ges! des'!
-                    \set subdivideBeams = ##f
-                    fes ases, es' ces ges ces,
-                    \ottava #0
-                    fes ases, es' ces ges ces,
-                    fes ases, es' ces ges ces,
-                    \change Staff = LH
-                    fes ases, es' ces ges ces,
-                    e a \change Staff = RH fis' \change Staff = LH g,
-                    \change Staff = RH dis' h'
-                    e, a fis' g, dis' h' e, a fis' g, dis' h'
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    e, a fis' g, dis' h'
-                    as! d, b es ces fes,
-                    \ottava #0
-                    as d, b es ces fes,
-                    as d, b es ces fes,
-                    \stemUp
-                    as d, \change Staff = LH b \change Staff = RH es ces
-                    \change Staff = LH
-                    fes, \mergeDifferentlyHeadedOn 
-                    des heses' \change Staff = RH es \change Staff = LH f,!
-                    \change Staff = RH des' as' 
-                    \stemNeutral
-                    ges heses es f, des' as'
-                    ges heses es f, des' as'
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    ges heses es f, des' as'
-                    a e h c dis, a \ottava #0 a' e h c dis, a a' e h c dis, a
-                    a' e \change Staff = LH h c dis, a
-                    des, as'' \change Staff = RH es' \change Staff = LH fes,
-                    \change Staff = RH des' g
-                    <<
-                      {
-                        des as' es' fes, des' g
-                      }
-                      \\
-                      {
-                        des,4
-                      }
-                    >>
-                    des'16 as' es' fes, des' g
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    des as' es' fes, des' g
-                    as f h, c g c, \ottava #0 as' f h, c g c,  as' f h, c g c,
-                    as' f h, c \change Staff = LH g c, a f' h e,
-                    \change Staff = RH c' gis' a, f' h e, c' gis' a, f' h e, c' gis'
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    a, f' h e, c' gis' a d, fis, e' b e, \ottava #0
-                    a d, fis, e' b e, a d, fis, e' b e, a d, \change Staff = LH fis,
-                    \change Staff = RH e' \change Staff = LH b e,
-                    \stemUp b f' d' es, ges c \stemNeutral
-                    <<
-                      {
-                        b \change Staff = RH f' d' es, ges c
-                      }
-                      \\
-                      {
-                        b,4
-                      }
-                    >>
-                    \change Staff = RH
-                    b'16 f' d' es, ges c
-                    \ottava #1
-                    \set Staff.ottavation = #"8"
-                    b f' d' es, ges c
-                    heses ges c, \ottava #0 des as des, heses' ges c, des as des,
-                    heses' ges c, des \change Staff = LH as des,
-                    heses' ges c, des as eses des as' des es as, f'
-                    des as' \change Staff = RH des es \change Staff = LH as,
-                    \change Staff = RH f' des as' des es as, f' des as' des es as, f'
-                  }
-  }%%%%%%%%%%%%%%%%  
+  \relative es'' {
+%%%%%%%%%%%%%
+    \stemUp
+    f8.\f des16^( f4) ges8. es16^( ges4)
+    \stemNeutral
+    f8. des16( f4)
+    r4 b,16( c des <b b'>)<a a'>8(<as as'>) g16( as h <f f'>)
+    <ases ases'>8(<ges ges'>) a16( b des <ges, ges'>)
+    <b b'>8(<a a'>) h16( c d <g, g'>)
+    <des' des'>8(<c c'>) d16( es ges ces!)
+    <e, e'>( b' c des)<es, es'>(a h c)<d, d'>( as' b ces)<des, des'>( g a b)
+    <c, c'>( ges' as heses)<ces, ces'>( f g as)<b, b'>(fes' ges! ases)
+    <a, a'>(es' f ges)<as,! as'!>(d e f)<g, g'>( des' es fes)
+    <ges,! ges'!>( c d es)<f, f'>( ces' des eses)
+    <<
+      {
+        <e, e'>2->~^( q4 <des des'>_><c c'>_><b b'>_>)
+      }
+      \\
+      {
+        e16( des' b des,
+        \change Staff = LH
+        \stemUp
+        b des, b e,)
+        \change Staff = RH
+        s2 s
+      }
+    >>
+    \set baseMoment = #(ly:make-moment 1/8)
+    \set beatStructure = #'(2 2 2 2)
+    \set subdivideBeams = ##t
+    \override TupletNumber #'transparent = ##t
+    \override TupletBracket #'bracket-visibility = ##f
+    \tuplet 6/4 4 {
+      des''16( a' e b' f c' a des b e c f des a' e b' f c' a des b
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      e c f
+      des a' e b' f ces'!)
+    }
+    <c, e a c>8-><des e a des>->
+    \override TupletNumber #'transparent = ##f
+    \override TupletBracket #'bracket-visibility = ##t
+    \tuplet 3/2 {<f b des f>4.<e b' des e>8<f b des f>4}
+    <ges heses des ges>4
+    \ottava #0  r
+    \override TupletNumber #'transparent = ##t
+    \override TupletBracket #'bracket-visibility = ##f
+    \tuplet 6/4 4 {
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      f'16( e es des c ces b a as ges f e
+      \ottava #0
+      es des c ces b a as ges f e es des
+      c ces b a as ges \parenthesize f e es des c ces)
+    }
+    b4->
+    \tuplet 6/4 4 {
+      \change Staff = LH g16 \change Staff = RH
+      a' d, b' ges! des'! g, a' d, b' ges! des'!
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      g, a' d, b' ges! des'!
+      \set subdivideBeams = ##f
+      fes ases, es' ces ges ces,
+      \ottava #0
+      fes ases, es' ces ges ces,
+      fes ases, es' ces ges ces,
+      \change Staff = LH
+      fes ases, es' ces ges ces,
+      e a \change Staff = RH fis' \change Staff = LH g,
+      \change Staff = RH dis' h'
+      e, a fis' g, dis' h' e, a fis' g, dis' h'
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      e, a fis' g, dis' h'
+      as! d, b es ces fes,
+      \ottava #0
+      as d, b es ces fes,
+      as d, b es ces fes,
+      \stemUp
+      as d, \change Staff = LH b \change Staff = RH es ces
+      \change Staff = LH
+      fes, \mergeDifferentlyHeadedOn
+      des heses' \change Staff = RH es \change Staff = LH f,!
+      \change Staff = RH des' as'
+      \stemNeutral
+      ges heses es f, des' as'
+      ges heses es f, des' as'
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      ges heses es f, des' as'
+      a e h c dis, a \ottava #0 a' e h c dis, a a' e h c dis, a
+      a' e \change Staff = LH h c dis, a
+      des, as'' \change Staff = RH es' \change Staff = LH fes,
+      \change Staff = RH des' g
+      <<
+        {
+          des as' es' fes, des' g
+        }
+        \\
+        {
+          des,4
+        }
+      >>
+      des'16 as' es' fes, des' g
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      des as' es' fes, des' g
+      as f h, c g c, \ottava #0 as' f h, c g c,  as' f h, c g c,
+      as' f h, c \change Staff = LH g c, a f' h e,
+      \change Staff = RH c' gis' a, f' h e, c' gis' a, f' h e, c' gis'
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      a, f' h e, c' gis' a d, fis, e' b e, \ottava #0
+      a d, fis, e' b e, a d, fis, e' b e, a d, \change Staff = LH fis,
+      \change Staff = RH e' \change Staff = LH b e,
+      \stemUp b f' d' es, ges c \stemNeutral
+      <<
+        {
+          b \change Staff = RH f' d' es, ges c
+        }
+        \\
+        {
+          b,4
+        }
+      >>
+      \change Staff = RH
+      b'16 f' d' es, ges c
+      \ottava #1
+      \set Staff.ottavation = #"8"
+      b f' d' es, ges c
+      heses ges c, \ottava #0 des as des, heses' ges c, des as des,
+      heses' ges c, des \change Staff = LH as des,
+      heses' ges c, des as eses des as' des es as, f'
+      des as' \change Staff = RH des es \change Staff = LH as,
+      \change Staff = RH f' des as' des es as, f' des as' des es as, f'
+    }
+  }%%%%%%%%%%%%%%%%
   <<
     {
       s8 g''' fis''' e''' h'''4 s8 g''' fis''' e''' a'''4 s8 a''' gis''' fis''' c''''4 s8 heses'''
-      as''' ges''' ces''''4 s8 as''' g''' f''' 
+      as''' ges''' ces''''4 s8 as''' g''' f'''
       \repeat unfold 4 {ces'''' as''' g''' f'''} b''' ges'''! f''' es'''
       \repeat unfold 3 {b''' ges''' f''' es'''}
       \repeat unfold 8 {b''' f''' e''' d'''}
     }
     \\
     {
-      \relative es''' {%%%%%%%%%%%%%
-                       \override TupletNumber #'transparent = ##t
-                       \tuplet 6/4 4 {
-                         g,16 fis c' g' h, e, fis' h, e, e' h e,
-                         h'' es, as, d g, c, b' fis d' g b, d,
-                         fis' b, d, e' b d, a'' des, ges, c f, b,
-                         g' fis d' a' d, fis, gis' d fis, fis' d fis,
-                         c'' fes, b, es as, c, fes ces' fes heses ces, fes,
-                         as' ces, fes, ges' ces, fes, ces'' ges heses, fes' as, c,
-                         des g es' as des, f,! g' des f, f' des f,
-                         \repeat unfold 4 {ces'' es, g, as' des, f,! g' des f, f' des f,}
-                         \repeat unfold 4 {b' ces, f, ges' b, es, f' b, es, es' b es,}
-                         \repeat unfold 8 {b'' ces, f, f' as, d, e' as, d, d' as d,}
-                       }
+      \relative es''' {
+%%%%%%%%%%%%%
+        \override TupletNumber #'transparent = ##t
+        \tuplet 6/4 4 {
+          g,16 fis c' g' h, e, fis' h, e, e' h e,
+          h'' es, as, d g, c, b' fis d' g b, d,
+          fis' b, d, e' b d, a'' des, ges, c f, b,
+          g' fis d' a' d, fis, gis' d fis, fis' d fis,
+          c'' fes, b, es as, c, fes ces' fes heses ces, fes,
+          as' ces, fes, ges' ces, fes, ces'' ges heses, fes' as, c,
+          des g es' as des, f,! g' des f, f' des f,
+          \repeat unfold 4 {ces'' es, g, as' des, f,! g' des f, f' des f,}
+          \repeat unfold 4 {b' ces, f, ges' b, es, f' b, es, es' b es,}
+          \repeat unfold 8 {b'' ces, f, f' as, d, e' as, d, d' as d,}
+        }
       }%%%%%%%%%%%%%%
     }
   >>
@@ -619,7 +629,7 @@ rechts = {
   \stemUp
   b, es ges b
   \clef treble
-  es' 
+  es'
   \stemNeutral
   ges' b' es'' ges'' b'' es'''
   \ottava #1

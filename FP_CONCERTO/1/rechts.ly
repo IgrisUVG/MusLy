@@ -277,7 +277,10 @@ rechts = {
   <d'' e''>16 a'' cis''' f''' <h'' e'''> a'' <e'' f''> h'
   <<
     {
-      g''16 e'' cis'' d'' e'' h' c'' e'' <b' fis''>16 a'' <e'' c'''>8      
+      g''16 e'' cis'' d'' e'' h' c'' e''
+      \stemDown
+      <b' fis''>16 a'' <e'' c'''>8   
+      \stemNeutral
       s8 <g' c''>
     }
     \\

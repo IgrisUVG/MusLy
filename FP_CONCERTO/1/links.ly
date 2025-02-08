@@ -77,7 +77,7 @@ links = {
   r4 s
   \stemDown
   a4->
-  \clef bass 
+  \clef bass
   \stemUp
   ges^> f^>
   \stemDown
@@ -104,10 +104,10 @@ links = {
   \relative es {
     \makeOctaves #-1 {
       es,16 d es fes es f fes es fes es fes f e ges f e f e f ges f g ges f
-      ges f ges g ges as g ges g ges g as g a as g as g as a as b a as a as a b a ces b a 
+      ges f ges g ges as g ges g ges g as g a as g as g as a as b a as a as a b a ces b a
       b g as a b a b h c des d es e f fis g as g as b a b c b fis g as b c des d es
       \clef treble
-      e f g as b as b c h c des c b as ges as g as f as 
+      e f g as b as b c h c des c b as ges as g as f as
       \clef bass
       e f des f
       c f ces f b, ces a b ces eses c des b ces as a g as! f ges eses fes des eses es!8 r r4
@@ -136,7 +136,7 @@ links = {
     }
     \override TupletNumber #'transparent = ##f
     \override TupletBracket #'bracket-visibility = ##t
-    \tuplet 3/2 2 {    
+    \tuplet 3/2 2 {
       <b c es b'>4<ges c es ges><a c es a>
       <des es ges des'><h es ges h><c es ges c>
       \override TupletNumber #'transparent = ##t
@@ -181,7 +181,7 @@ links = {
       a'16\rest fis' dis' e' f' b d' h
     }
     \\
-    { 
+    {
       f16 c' e' \change Staff = RH f' \change Staff = LH
       s4 r4 c( h,) s4 a
     }
@@ -321,7 +321,7 @@ links = {
   \clef bass
   \set Staff.beatStructure = #'()
   <<
-    {      
+    {
       b,16_( des'
       \change Staff = RH
       \stemDown
@@ -349,7 +349,7 @@ links = {
     {
       b,4 f ces ges
     }
-  >>  
+  >>
   \change Staff = LH
   \stemNeutral
   \relative b {b16( des e f) f,( b des e) ges,( b c es ges8)}
@@ -385,36 +385,38 @@ links = {
     <a, a>8--<f, f>--<ges, ges>--<b, b>--<e, e>--<f, f>--
     <ces ces'>--<f, f>--<ges, ges>--<c c'>--<g, g>--<as, as>--
   }
-  \relative b {%%%%%%%%%%%%%%%%%%
-               <d, d'>16( fes ges g)<c, c'>( es f ges)<ces, ces'>( d e f)
-               <b, b'>( des es fes)<a, a'>( c d es) <as, as'>( ces des d)
-               <g, g'>( b c des)<ges, ges'>( a h c)<f, f'>( as b ces) s2
-               \set baseMoment = #(ly:make-moment 1/8)
-               \set beatStructure = #'(2 2 2 2)
-               \set subdivideBeams = ##t
-               \override TupletNumber #'transparent = ##f
-               \tuplet 6/4 4 {b,16( f' e b' f c'
-                              \override TupletNumber #'transparent = ##t   
-                              a des b e c f des a' e b' f c' a des b e c f)
-               }
-               <e, e'>4-><des des'>-><c c'>-><b b'>->
-               <e, e'>4-><des des'>-><c c'>-><b b'>->
-               <ges ges'>-> r4
-               <f'' b f'>8.<des b' des>16<f b des f>4
-               <ges a ces ges'>8.<es a ces es>16<ges a ces ges'>4
-               <f b f'>8.<des b' des>16<f b f'>4
-               \tuplet 6/4 {g,16 a' d, b' ges! des'!}
-               g,4_> ges!-> f-> ces2 s \stemDown e,_\laissezVibrer s
-               \stemNeutral <as, as'>2\laissezVibrer s
-               \stemDown <des des'>\laissezVibrer s
-               \stemNeutral <a a'>\laissezVibrer s
-               \stemDown <des, des'>\laissezVibrer s
-               \stemNeutral <f f'>\laissezVibrer s
-               \stemDown <a a'>\laissezVibrer s 
-               \stemNeutral <d d'>\laissezVibrer s
-               \stemDown <b b'>\laissezVibrer s
-               \stemNeutral <ges ges'>\laissezVibrer s
-               \stemDown <des des'>\laissezVibrer s
+  \relative b {
+%%%%%%%%%%%%%%%%%%
+    <d, d'>16( fes ges g)<c, c'>( es f ges)<ces, ces'>( d e f)
+    <b, b'>( des es fes)<a, a'>( c d es) <as, as'>( ces des d)
+    <g, g'>( b c des)<ges, ges'>( a h c)<f, f'>( as b ces) s2
+    \set baseMoment = #(ly:make-moment 1/8)
+    \set beatStructure = #'(2 2 2 2)
+    \set subdivideBeams = ##t
+    \override TupletNumber #'transparent = ##f
+    \tuplet 6/4 4 {
+      b,16( f' e b' f c'
+      \override TupletNumber #'transparent = ##t
+      a des b e c f des a' e b' f c' a des b e c f)
+    }
+    <e, e'>4-><des des'>-><c c'>-><b b'>->
+    <e, e'>4-><des des'>-><c c'>-><b b'>->
+    <ges ges'>-> r4
+    <f'' b f'>8.<des b' des>16<f b des f>4
+    <ges a ces ges'>8.<es a ces es>16<ges a ces ges'>4
+    <f b f'>8.<des b' des>16<f b f'>4
+    \tuplet 6/4 {g,16 a' d, b' ges! des'!}
+    g,4_> ges!-> f-> ces2 s \stemDown e,_\laissezVibrer s
+    \stemNeutral <as, as'>2\laissezVibrer s
+    \stemDown <des des'>\laissezVibrer s
+    \stemNeutral <a a'>\laissezVibrer s
+    \stemDown <des, des'>\laissezVibrer s
+    \stemNeutral <f f'>\laissezVibrer s
+    \stemDown <a a'>\laissezVibrer s
+    \stemNeutral <d d'>\laissezVibrer s
+    \stemDown <b b'>\laissezVibrer s
+    \stemNeutral <ges ges'>\laissezVibrer s
+    \stemDown <des des'>\laissezVibrer s
   }%%%%%%%%%%%%%%%%%%%%%%
   <<
     {

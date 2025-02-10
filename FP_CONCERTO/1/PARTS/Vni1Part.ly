@@ -6,7 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz I"
-  subsubtitle = "Flauto"
+  subsubtitle = "Violini I"
   composer = "I. G."
   tagline = ##f
 }
@@ -23,17 +23,17 @@
   outer-margin = 15
 }
 
-\layout {
+\layout {  
   indent = 10
   \context {
     \Score
-    %\override BarNumber.break-visibility = ##(#t #t #t)
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     \remove "Bar_number_engraver"
   }
 }
 
-\include "../flute.ly"
+\include "../vni1.ly"
 
 \score {
-  \new Staff \fluteMusic
+  \new Staff \vniOneMusic
 }

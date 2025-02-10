@@ -6,7 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz I"
-  subsubtitle = "Flauto"
+  subsubtitle = "Oboe"
   composer = "I. G."
   tagline = ##f
 }
@@ -23,17 +23,17 @@
   outer-margin = 15
 }
 
-\layout {
+\layout {  
   indent = 10
   \context {
     \Score
-    %\override BarNumber.break-visibility = ##(#t #t #t)
-    \remove "Bar_number_engraver"
+    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\remove "Bar_number_engraver"
   }
 }
 
-\include "../flute.ly"
+\include "../oboe.ly"
 
 \score {
-  \new Staff \fluteMusic
+  \new Staff \oboeMusic
 }

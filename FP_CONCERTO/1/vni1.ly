@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 vniOneMusic = \relative es'' {
   \time 2/4
   \key es \minor
@@ -11,7 +14,7 @@ vniOneMusic = \relative es'' {
   R2*13 b'8( as) r4 des8( ces) r4 b( as g-.) r4
   R2*11 r4 es( f g as b c d) r es(\( d c) f4.( es8)\)
   a,( b c b f4) r R2*5
-  es'16( ges e f d es ces c b ces! as b g as f ges 
+  es'16( ges e f d es ces c b ces! as b g as f ges
   e f d es des d h c b ces! b as g as ces) es\noBeam (
   d8 des) r8. b16( deses8 ces) r8. g16( b8 as) r4
   r4 d'( des! ces b as) es'4.( des8 h4 a gis8 fis4 e8)
@@ -53,10 +56,10 @@ vniOneMusic = \relative es'' {
   }
   \repeat unfold 2 { \repeat tremolo 8 c16 }
   \set Staff.beatStructure = #'( 1 4)
-  \repeat tremolo 4 c16 c( h c d) d( c d es) 
+  \repeat tremolo 4 c16 c( h c d) d( c d es)
   \ottava #1
   \set Staff.ottavation = #"8"
-  es( d es f) f( es f g) g( f g as) b( c b c b c b as) g( as g f es f es des 
+  es( d es f) f( es f g) g( f g as) b( c b c b c b as) g( as g f es f es des
   \ottava #0
   c des c b as b as g f g f es des es des c des c des es) es( des es f)
   ges( f ges as) as( ges as b) b( as b ces) ces( b ces des)

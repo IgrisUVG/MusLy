@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -26,8 +27,10 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
@@ -40,35 +43,35 @@
 \include "..\cb.ly"
 \score {
   \new StaffGroup = "StaffGroup_strings" <<
-      \new StaffGroup = "GrandStaff_violins" \with {
-        systemStartDelimiter = #'SystemStartSquare
+    \new StaffGroup = "GrandStaff_violins" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_violinI" {
+        \set Staff.instrumentName = #"V-ni I"
+        \vniOneMusic
       }
-      <<
-        \new Staff = "Staff_violinI" {
-          \set Staff.instrumentName = #"V-ni I"
-          \vniOneMusic
-        }
-        \new Staff = "Staff_violinII" {
-          \set Staff.instrumentName = #"V-ni II"
-          \vniTwoMusic
-        }
-      >>
-      \new Staff = "Staff_viola" {
-        \set Staff.instrumentName = #"V-le"
-        \vleMusic
+      \new Staff = "Staff_violinII" {
+        \set Staff.instrumentName = #"V-ni II"
+        \vniTwoMusic
       }
-      \new StaffGroup = "GrandStaff_bassi" \with {
-        systemStartDelimiter = #'SystemStartSquare
-      }
-      <<
-        \new Staff = "Staff_cello" {
-          \set Staff.instrumentName = #"Vc"
-          \vcMusic
-        }
-        \new Staff = "Staff_bass" {
-          \set Staff.instrumentName = #"Cb"
-          \cbMusic
-        }
-      >>
     >>
+    \new Staff = "Staff_viola" {
+      \set Staff.instrumentName = #"V-le"
+      \vleMusic
+    }
+    \new StaffGroup = "GrandStaff_bassi" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_cello" {
+        \set Staff.instrumentName = #"Vc"
+        \vcMusic
+      }
+      \new Staff = "Staff_bass" {
+        \set Staff.instrumentName = #"Cb"
+        \cbMusic
+      }
+    >>
+  >>
 }

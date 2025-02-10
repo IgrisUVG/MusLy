@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 oboeMusic = \relative es'' {
   \time 2/4
   \key es \minor
@@ -33,7 +36,7 @@ oboeMusic = \relative es'' {
   r4 f-. r ges-. b-. r R2*15 f2~( f~ f e8) r r4 R2*9 e2~( e4 d des! ces
   es b as2) R2*3 d2~ d f~( f ges~ ges) as~ as R2*4  r8 as ges( fes) r4
   r8 fes \repeat unfold 5 {es( des) r4} \repeat unfold 4 {f8( es) r4}
-  \repeat unfold 8 {des8( ces) r4} 
+  \repeat unfold 8 {des8( ces) r4}
   \once \override TrillSpanner #'(bound-details right padding) = #1.2
   es2~ \startTrillSpan es~ es~ es
   \once \override TrillSpanner #'(bound-details right padding) = #1.2

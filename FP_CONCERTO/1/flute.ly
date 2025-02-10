@@ -1,5 +1,8 @@
+\version "2.19.15"
 \version "2.18.0"
+
 \language "deutsch"
+
 fluteMusic = \relative es'' {
   \time 2/4
   \key es \minor
@@ -10,7 +13,7 @@ fluteMusic = \relative es'' {
   b''16
   \times 2/3{a4 f ges\fermata}
   \ottava #0
-   r4 r8.
+  r4 r8.
   \ottava #1
   \set Staff.ottavation = #"8"
   c16
@@ -54,19 +57,19 @@ fluteMusic = \relative es'' {
   gis fis heses4. as8 c,8 des es des as4) r R2*3 a'2~ a b~( b heses~ heses)
   as~ as R2 r8 f es( d) r4 r8 c b( a) r4 r8 as'! ges( fes) r4 r8 fes'
   \repeat unfold 5 {es8( des) r4} \repeat unfold 4 {f8( es) r4}
-  \repeat unfold 8 {des8( ces) r4} 
+  \repeat unfold 8 {des8( ces) r4}
   \once \override TrillSpanner #'(bound-details right padding) = #1.2
   g2~ \startTrillSpan g~ g~ g
   \once \override TrillSpanner #'(bound-details right padding) = #1.2
   g~\startTrillSpan g
-  \override TrillSpanner.bound-details.left.text = \markup{ 
-  				\musicglyph #"scripts.trill" \raise #1.65 \teeny  \natural
-  		}
+  \override TrillSpanner.bound-details.left.text = \markup{
+    \musicglyph #"scripts.trill" \raise #1.65 \teeny  \natural
+  }
   \once \override TrillSpanner #'(bound-details right padding) = #1.2
   f~\startTrillSpan f
-  \override TrillSpanner.bound-details.left.text = \markup{ 
-  				\musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat
-  		}
+  \override TrillSpanner.bound-details.left.text = \markup{
+    \musicglyph #"scripts.trill" \raise #1.65 \teeny  \flat
+  }
   f~\startTrillSpan \afterGrace f
   { es16[ f]\stopTrillSpan } ges4-. r R2*15
   \ottava #1 \set Staff.ottavation = #"8" b'2\fermata \ottava #0 R2

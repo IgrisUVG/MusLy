@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 vcMusic = \relative es {
   \clef bass
   \time 2/4
@@ -12,8 +15,8 @@ vcMusic = \relative es {
   a8 r as r g r ges r f r fes r es r d r des r c r ces r b r a r r4
   R2*6 b'8( as) r4 des,8( ces) r4 es4.( b8 b4-.) r4 R2*2
   ces'8.( b16) r4 R2
-  \override TupletNumber #'transparent = ##t
-  \override TupletBracket #'bracket-visibility = #'if-no-beam
+  \override TupletNumber.transparent = ##t
+  \override TupletBracket.bracket-visibility = #'if-no-beam
   \repeat unfold 16 {\times 2/3{es,8 a, b}}
   \set tupletSpannerDuration = #(ly:make-moment 2 8)
   \times 2/3 {
@@ -24,7 +27,7 @@ vcMusic = \relative es {
     {
       \override NoteColumn.ignore-collision = ##t
       \stemDown
-       f'2( g as~ as cis~ cis~ \hideNotes cis)
+      f'2( g as~ as cis~ cis~ \hideNotes cis)
     }
     \\
     {
@@ -32,7 +35,7 @@ vcMusic = \relative es {
     }
   >>
   ges,,8( f'4 es8 es4. des8 g2) R2*2
-  \override TupletNumber #'transparent = ##f
+  \override TupletNumber.transparent = ##f
   \times 4/6 {des16 des des des des des}  \times 2/3 {c8. a16 c8}
   ges'4.( f8) ces'2~( ces8[ es des as] b4. as8) r as4( ges8)
   des'2~( des8[ f es b] as4. g8) f4( es) b'4.( c8 b4 as~ as g)

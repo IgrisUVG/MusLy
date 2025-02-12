@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
 
 \language "deutsch"
 
@@ -14,7 +15,7 @@
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
 \paper {
-   #(set-paper-size "a4")
+  #(set-paper-size "a4")
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
@@ -28,11 +29,13 @@
 \layout {
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 
+\include "..\makeOctaves.ly"
 \include "..\trumpet.ly"
 \include "..\corno1.ly"
 \include "..\corno2.ly"
@@ -41,46 +44,46 @@
 
 \score {
   \new StaffGroup = "StaffGroup_brass" <<
-      \new Staff = "Staff_trumpet" {
-        \set Staff.instrumentName = #"Tr in  B"
-        %\transpose b c'
-        \trumpetMusic
+    \new Staff = "Staff_trumpet" {
+      \set Staff.instrumentName = #"Tr in  B"
+      %\transpose b c'
+      %\trumpetMusic
+    }
+    \new StaffGroup = "GrandStaff_corni" \with {
+      instrumentName = \markup {
+        \center-column {
+          "Corni"
+          \line { "in F" }
+        }
       }
-      \new StaffGroup = "GrandStaff_corni" \with {
-        instrumentName = \markup {
-          \center-column {
-            "Corni"
-            \line { "in F" }
-          }
-        }
-        systemStartDelimiter = #'SystemStartSquare
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_hornI" {
+        %\transpose f c'
+        %\cornoOneMusic
       }
-      <<
-        \new Staff = "Staff_hornI" {
-          %\transpose f c' 
-          \cornoOneMusic
-        }
-        \new Staff = "Staff_horn2" {
-          %\transpose f c' 
-          \cornoTwoMusic
-        }
-      >>
-      \new StaffGroup = "GrandStaff_trombon_e_tuba" \with {
-        instrumentName = \markup {
-          \center-column {
-            "Tromboni"
-            \line { "e Tuba" }
-          }
-        }
-        systemStartDelimiter = #'SystemStartSquare
+      \new Staff = "Staff_horn2" {
+        %\transpose f c'
+        %\cornoTwoMusic
       }
-      <<
-        \new Staff = "Staff_trombon" {
-          \trombonMusic
-        }
-        \new Staff = "Staff_tuba" {
-          \tubaMusic
-        }
-      >>
     >>
+    \new StaffGroup = "GrandStaff_trombon_e_tuba" \with {
+      instrumentName = \markup {
+        \center-column {
+          "Tromboni"
+          \line { "e Tuba" }
+        }
+      }
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_trombon" {
+        \trombonMusic
+      }
+      \new Staff = "Staff_tuba" {
+        \tubaMusic
+      }
+    >>
+  >>
 }

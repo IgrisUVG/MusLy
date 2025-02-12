@@ -6,9 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz I"
-  subsubtitle = \markup {
-      "Clarinetti in B I"
-  }
+  subsubtitle = "Bass trombon e Tuba"
   composer = "I. G."
   tagline = ##f
 }
@@ -34,10 +32,8 @@
   }
 }
 
-\include "..\clarinet1.ly"
+\include "..\tuba.ly"
 
 \score {
-  \new Staff
-  \transpose b c'
-  \clarinetOneMusic
+  \new Staff \tubaMusic
 }

@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 cornoTwoMusic = \relative es {
   \clef bass
   \time 2/4
@@ -8,7 +11,7 @@ cornoTwoMusic = \relative es {
   r4 r8. b'16 \times 2/3{a4 f ges\fermata}
   r4 r8. c16 \times 2/3{ces!4 as a\fermata}
   R2*14 <es ges>2~ q~ q
-  R2*14 
+  R2*14
   \clef treble
   des'8( ces) r4 es( c8 d es4-.) r4
   R2*7 r4 as,~ as2~ as <as b>-> q-> q-> q~( q
@@ -28,7 +31,7 @@ cornoTwoMusic = \relative es {
     }
     \\
     {
-     \stemNeutral ges2( f)
+      \stemNeutral ges2( f)
     }
   >>
   \clef treble
@@ -39,7 +42,7 @@ cornoTwoMusic = \relative es {
     {
       \override NoteColumn.ignore-collision = ##t
       \stemDown
-      \single \hide Flag b8( 
+      \single \hide Flag b8(
       \stemUp as g) b8 g4 f8~ f g4.~ g2
     }
     \\

@@ -1,6 +1,10 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
-\include "makeOctaves.ly"
+
+%\include "makeOctaves.ly"
+
 trombonMusic = \relative es {
   \clef bass
   \time 2/4
@@ -21,7 +25,7 @@ trombonMusic = \relative es {
   >>
   r4 R2*8
   \clef treble
-  \repeat unfold 4 {r8. f'16 f8 r} 
+  \repeat unfold 4 {r8. f'16 f8 r}
   \clef bass
   R2 b,2->~ b4.. b16 b8 r r4 r8. as16 c8 r
   b8. g16 b4 R2

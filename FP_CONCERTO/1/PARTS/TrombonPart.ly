@@ -6,9 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz I"
-  subsubtitle = \markup {
-      "Clarinetti in B I"
-  }
+  subsubtitle = "Tromboni"
   composer = "I. G."
   tagline = ##f
 }
@@ -29,15 +27,14 @@
   indent = 10
   \context {
     \Score
-    %\override BarNumber.break-visibility = ##(#f #t #t)
-    \remove "Bar_number_engraver"
+    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\remove "Bar_number_engraver"
   }
 }
 
-\include "..\clarinet1.ly"
+\include "..\makeOctaves.ly"
+\include "..\trombon.ly"
 
 \score {
-  \new Staff
-  \transpose b c'
-  \clarinetOneMusic
+  \new Staff \trombonMusic
 }

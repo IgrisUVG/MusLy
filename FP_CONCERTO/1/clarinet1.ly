@@ -1,5 +1,8 @@
-\version "2.18.0"
+\version "2.19.15"
+%\version "2.18.0"
+
 \language "deutsch"
+
 clarinetOneMusic = \relative es'' {
   \time 2/4
   \key es \minor
@@ -22,7 +25,7 @@ clarinetOneMusic = \relative es'' {
   \set tupletSpannerDuration = #(ly:make-moment 2 8)
   \times 4/6 {
     es16( des ces b as ges
-    \override TupletNumber #'transparent = ##t
+    \override TupletNumber.transparent = ##t
     fes es des ces b as
     ges fes es des ces b as ges f! fes es d
   }

@@ -8,8 +8,10 @@
   subtitle = "Satz I"
   subsubtitle = "Clarinetti in B"
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
+#(ly:set-option 'relative-includes #t)
 
 \paper {
   #(set-paper-size "a4")

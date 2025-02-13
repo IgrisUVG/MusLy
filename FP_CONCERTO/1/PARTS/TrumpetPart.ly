@@ -8,7 +8,7 @@
   subtitle = "Satz I"
   subsubtitle = "Trombe in B"
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 \paper {

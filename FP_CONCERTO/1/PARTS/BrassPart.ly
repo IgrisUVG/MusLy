@@ -29,8 +29,8 @@
 \layout {
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
@@ -47,7 +47,7 @@
     \new Staff = "Staff_trumpet" {
       \set Staff.instrumentName = #"Tr in  B"
       %\transpose b c'
-      %\trumpetMusic
+      \trumpetMusic
     }
     \new StaffGroup = "GrandStaff_corni" \with {
       instrumentName = \markup {

@@ -4,8 +4,9 @@
 \language "deutsch"
 
 \header {
-  title = ""
-  meter = ""
+  title = "Klavierkonzert"
+  subtitle = "Satz I"
+  subsubtitle = "Clarinetti in B"
   composer = "I. G."
   tagline = ##f
 }
@@ -23,6 +24,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     \remove "Bar_number_engraver"
@@ -34,18 +36,10 @@
 
 \score {
   \new StaffGroup
-  \with {
-    instrumentName = \markup {
-      \right-column {
-        "Clarinetti"
-        \line { "in B" \smaller \flat }
-      }
-    }
-  }
   <<
-    \transpose b c' 
+    \transpose b c'
     \clarinetOneMusic
-    \transpose b c' 
+    \transpose b c'
     \clarinetTwoMusic
   >>
 }

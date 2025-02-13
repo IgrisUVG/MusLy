@@ -6,9 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz I"
-  subsubtitle = \markup {
-    "Clarinetto in B II, III"
-  }
+  subsubtitle = "Clarinetti in B II, III"
   composer = "I. G."
   tagline = ##f
 }

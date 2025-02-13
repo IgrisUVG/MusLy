@@ -6,10 +6,11 @@
 %\include "../base.ly"
 
 \header {
-  title = ""
-  meter = ""
+  title = "Klavierkonzert"
+  subtitle = "Satz II"
+  subsubtitle = "Clarinetti in B I"
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 #(ly:set-option 'relative-includes #t)
@@ -27,21 +28,17 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+
 \include "..\clarinet1.ly"
+
 \score {
-  \new Staff \with {
-    instrumentName = \markup {
-      \center-column {
-       "Clarinet"
-        \line { "in B" \smaller \flat }
-      }
-    }
-  }
+  \new Staff
   \transpose b c' 
   \clarinetOneMusic
 }

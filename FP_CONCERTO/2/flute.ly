@@ -8,7 +8,7 @@
 fluteMusic = \relative e' {
   \base
   \override MultiMeasureRest.expand-limit = #3
-  g2_( a h fis g a a) a 
+  g2_( a h fis g a a) a
   \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark "rit."
   a a

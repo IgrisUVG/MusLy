@@ -7,7 +7,6 @@
   title = "Klavierkonzert"
   subtitle = "Satz II"
   subsubtitle = "Brass"
-  meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -33,6 +32,7 @@
     %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "..\dynamicBrass.ly"

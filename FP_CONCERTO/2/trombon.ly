@@ -4,6 +4,7 @@
 \language "deutsch"
 
 \include "makeOctaves.ly"
+\include "base.ly"
 
 trombonMusic = \relative e {
   \base

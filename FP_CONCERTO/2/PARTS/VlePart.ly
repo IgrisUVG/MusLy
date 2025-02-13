@@ -6,7 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz II"
-  subsubtitle = "Trombe in B"
+  subsubtitle = "Viole"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -25,18 +25,17 @@
   outer-margin = 15
 }
 
-\layout {
+\layout {  
+  indent = 10
   \context {
     \Score
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     \remove "Bar_number_engraver"
   }
 }
 
-\include "..\trumpet.ly"
-%\include "..\base.ly"
+\include "..\vle.ly"
 
 \score {
-  \new Staff
-  \transpose b c'
-  \trumpetMusic
+  \new Staff \vleMusic
 }

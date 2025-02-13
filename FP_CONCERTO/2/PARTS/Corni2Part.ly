@@ -6,7 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz II"
-  subsubtitle = "Trombe in B"
+  subsubtitle = "Corni in F II"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -26,17 +26,18 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     \remove "Bar_number_engraver"
   }
 }
 
-\include "..\trumpet.ly"
-%\include "..\base.ly"
+\include "../corno2.ly"
 
 \score {
   \new Staff
-  \transpose b c'
-  \trumpetMusic
+  \transpose f c'
+  \cornoTwoMusic
 }

@@ -4,10 +4,11 @@
 \language "deutsch"
 
 \header {
-  title = ""
-  meter = ""
+  title = "Klavierkonzert"
+  subtitle = "Satz II"
+  subsubtitle = "Clarinetti in B II, III"
   composer = "I. G."
-  tagline = ##f
+  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
 
 #(ly:set-option 'relative-includes #t)
@@ -25,21 +26,17 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+
 \include "..\clarinet2.ly"
+
 \score {
-  \new Staff \with {
-    instrumentName = \markup {
-      \center-column {
-       "Clarinet"
-        \line { "in B" \smaller \flat }
-      }
-    }
-  }
-  \transpose b c' 
+  \new Staff
+  \transpose b c'
   \clarinetTwoMusic
 }

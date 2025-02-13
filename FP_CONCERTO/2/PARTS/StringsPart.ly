@@ -44,37 +44,37 @@
 
 \score {
   \new StaffGroup = "StaffGroup_strings" <<
-      \new StaffGroup = "GrandStaff_violins" \with {
-        systemStartDelimiter = #'SystemStartSquare
+    \new StaffGroup = "GrandStaff_violins" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_violinI" {
+        \set Staff.instrumentName = #"V-ni I"
+        \vniOneMusic
       }
-      <<
-        \new Staff = "Staff_violinI" {
-          \set Staff.instrumentName = #"V-ni I"
-          \vniOneMusic
-        }
-        \new Dynamics \dynamicString
-        \new Staff = "Staff_violinII" {
-          \set Staff.instrumentName = #"V-ni II"
-          \vniTwoMusic
-        }
-      >>
-      \new Staff = "Staff_viola" {
-        \set Staff.instrumentName = #"V-le"
-        \vleMusic
+      \new Dynamics \dynamicString
+      \new Staff = "Staff_violinII" {
+        \set Staff.instrumentName = #"V-ni II"
+        \vniTwoMusic
       }
-      \new Dynamics \dynamicStringAlt
-      \new StaffGroup = "GrandStaff_bassi" \with {
-        systemStartDelimiter = #'SystemStartSquare
-      }
-      <<
-        \new Staff = "Staff_cello" {
-          \set Staff.instrumentName = #"Vc"
-          \vcMusic
-        }
-        \new Staff = "Staff_bass" {
-          \set Staff.instrumentName = #"Cb"
-          \cbMusic
-        }
-      >>
     >>
+    \new Staff = "Staff_viola" {
+      \set Staff.instrumentName = #"V-le"
+      \vleMusic
+    }
+    \new Dynamics \dynamicStringAlt
+    \new StaffGroup = "GrandStaff_bassi" \with {
+      systemStartDelimiter = #'SystemStartSquare
+    }
+    <<
+      \new Staff = "Staff_cello" {
+        \set Staff.instrumentName = #"Vc"
+        \vcMusic
+      }
+      \new Staff = "Staff_bass" {
+        \set Staff.instrumentName = #"Cb"
+        \cbMusic
+      }
+    >>
+  >>
 }

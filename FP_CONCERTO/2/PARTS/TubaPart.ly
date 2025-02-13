@@ -6,7 +6,7 @@
 \header {
   title = "Klavierkonzert"
   subtitle = "Satz II"
-  subsubtitle = "Trombe in B"
+  subsubtitle = "Bass trombon e Tuba"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -26,17 +26,16 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     \remove "Bar_number_engraver"
   }
 }
 
-\include "..\trumpet.ly"
-%\include "..\base.ly"
+\include "..\tuba.ly"
 
 \score {
-  \new Staff
-  \transpose b c'
-  \trumpetMusic
+  \new Staff \tubaMusic
 }

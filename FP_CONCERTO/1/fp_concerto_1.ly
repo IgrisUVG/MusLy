@@ -30,8 +30,10 @@
 
 \layout {
   \context { \RemoveEmptyStaffContext }
+  \override PianoStaff.InstrumentName.self-alignment-X = #RIGHT
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
-  \override Staff.shortInstrumentName.self-alignment-X = #RIGHT
+  %\override Staff.shortInstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 %%%%%%%%%%%%%%%%%%
@@ -93,13 +95,13 @@
         instrumentName = \markup {
           \right-column {
             "Clarinetti"
-            \line { "in B" \smaller \flat }
+            \line { "in B"}
           }
         }
         shortInstrumentName = \markup {
           \right-column {
             "Cl"
-            \line { "in B" \smaller \flat }
+            \line { "in B" }
           }
         }
         systemStartDelimiter = #'SystemStartSquare
@@ -123,8 +125,18 @@
     >>
     \new StaffGroup = "StaffGroup_brass" <<
       \new Staff = "Staff_trumpet" {
-        \set Staff.instrumentName = #"Trombe in  B"
-        \set Staff.shortInstrumentName = #"Tr in  B"
+        \set Staff.instrumentName = \markup {
+          \right-column {
+            "Trombe"
+            \line { "in B" }
+          }
+        }
+        \set Staff.shortInstrumentName = \markup {
+          \right-column {
+            "Tr"
+            \line { "in B" }
+          }
+        }
         \transpose b c'
         \trumpetMusic
       }

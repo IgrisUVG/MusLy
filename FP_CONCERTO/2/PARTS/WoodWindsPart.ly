@@ -7,7 +7,6 @@
   title = "Klavierkonzert"
   subtitle = "Satz II"
   subsubtitle = "Wood"
-  meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -17,10 +16,10 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-system-spacing.basic-distance = #20
+  top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
-  system-system-spacing.basic-distance = #28
+  system-system-spacing.basic-distance = #33
   last-bottom-spacing.basic-distance = #20
   two-sided = ##t
   inner-margin = 20
@@ -28,11 +27,13 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
+  \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
 }
 
 \include "..\dynamicWoodwind.ly"
@@ -56,8 +57,8 @@
     \new StaffGroup = "GrandStaff_clarinetto" \with {
       instrumentName = \markup {
         \right-column {
-          "Clarinetti"
-          \line { "in B" \smaller \flat }
+          "Cl"
+          \line { "in B" }
         }
       }
       systemStartDelimiter = #'SystemStartSquare

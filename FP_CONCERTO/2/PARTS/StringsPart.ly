@@ -7,7 +7,6 @@
   title = "Klavierkonzert"
   subtitle = "Satz II"
   subsubtitle = "Strings"
-  meter = ""
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
@@ -28,6 +27,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"

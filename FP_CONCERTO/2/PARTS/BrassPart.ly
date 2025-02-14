@@ -27,6 +27,7 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
     %\remove "Bar_number_engraver"
@@ -45,7 +46,12 @@
 \score {
   \new StaffGroup = "StaffGroup_brass" <<
     \new Staff = "Staff_trumpet" {
-      \set Staff.instrumentName = #"Tr in  B"
+      \set Staff.instrumentName = \markup {
+        \right-column {
+          "Tr"
+          \line { "in B" }
+        }
+      }
       %\transpose b c'
       \trumpetMusic
     }
@@ -53,7 +59,7 @@
     \new StaffGroup = "GrandStaff_corni" \with {
       instrumentName = \markup {
         \right-column {
-          "Corni"
+          "Cor"
           \line { "in F" }
         }
       }
@@ -72,8 +78,8 @@
     \new StaffGroup = "GrandStaff_trombon_e_tuba" \with {
       instrumentName = \markup {
         \right-column {
-          "Tromboni"
-          \line { "e Tuba" }
+          "Trb"
+          \line { "e Tb" }
         }
       }
       systemStartDelimiter = #'SystemStartSquare

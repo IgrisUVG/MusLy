@@ -13,6 +13,7 @@
 
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
+
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #15
@@ -26,8 +27,10 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
@@ -44,51 +47,51 @@
 \score {
   \new StaffGroup = "StaffGroup_woodwinds" <<
     \new Staff = "Staff_flute" {
-      \set Staff.instrumentName = #"2 Flauti"
+      \set Staff.instrumentName = #"Fl"
       \fluteMusic
     }
     \new Staff = "Staff_oboe" {
-      \set Staff.instrumentName = #"2 Oboi"
+      \set Staff.instrumentName = #"Ob"
       \oboeMusic
     }
     \new StaffGroup = "GrandStaff_clarinetto" \with {
       instrumentName = \markup {
         \right-column {
-          "4 Clarinetti"
-          \line { "in B" \smaller \flat }
+          "Cl"
+          \line { "in B" }
         }
       }
       systemStartDelimiter = #'SystemStartSquare
     }
     <<
       \new Staff = "Staff_clarinet1" {
-        %\transpose b c'
+        \transpose b c'
         \clarinetOneMusic
       }
       \new Staff = "Staff_clarinet2" {
-        %\transpose b c'
+        \transpose b c'
         \clarinetTwoMusic
       }
     >>
     \new Staff = "Staff_clarinetA" {
       \set Staff.instrumentName = \markup {
         \right-column {
-          "Clarinetto"
+          "Cl"
           \line { "in A" }
         }
       }
-      %\transpose a c'
+      \transpose a c'
       \clarinetInAMusic
     }
     \new Staff = "Staff_ClarinetBass" {
       \set Staff.instrumentName = \markup {
         \right-column {
-          "Clarinetto basso"
-          \line { "in B" \smaller \flat }
+          "Cl b"
+          \line { "in B" }
         }
       }
-      %\transpose b, c'
-      \removeWithTag #'inB
+      \transpose b, c'
+      \removeWithTag #'inC
       \clarinetBassMusic
     }
     \new Staff = "Staff_fagotto" {

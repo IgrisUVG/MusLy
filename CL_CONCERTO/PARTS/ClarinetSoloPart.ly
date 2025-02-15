@@ -29,11 +29,14 @@
   indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
 }
+
 \include "../clarinetSolo.ly"
 \include "../dynamicClarinetSolo.ly"
+
 \score {
   <<
     \new Staff

@@ -27,8 +27,10 @@
 }
 
 \layout {
+  indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
@@ -43,14 +45,14 @@
 \score {
   \new StaffGroup = "StaffGroup_brass" <<
     \new Staff = "Staff_trumpet" {
-      \set Staff.instrumentName = #"Trombi in  B"
+      \set Staff.instrumentName = #"Tr in  B"
       %\transpose b c'
       \trumpetMusic
     }
     \new StaffGroup = "GrandStaff_corni" \with {
       instrumentName = \markup {
         \center-column {
-          "Corni"
+          "Cor"
           \line { "in F" }
         }
       }
@@ -69,8 +71,8 @@
     \new StaffGroup = "GrandStaff_trombon_e_tuba" \with {
       instrumentName = \markup {
         \center-column {
-          "Tromboni"
-          \line { "e Tuba" }
+          "Trb"
+          \line { "e Tb" }
         }
       }
       systemStartDelimiter = #'SystemStartSquare

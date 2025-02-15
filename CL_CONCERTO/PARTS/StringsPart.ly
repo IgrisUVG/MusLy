@@ -27,13 +27,16 @@
 }
 
 \layout {
-  \context {
+  indent = 10
+  %\context {
     %\RemoveEmptyStaffContext
-  }
+  %}
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
+  %{
   \context {
     \Score
     \remove "Timing_translator"
@@ -44,6 +47,7 @@
     \consists "Timing_translator"
     \consists "Default_bar_line_engraver"
   }
+  %}
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
 

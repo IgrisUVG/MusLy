@@ -9,8 +9,10 @@
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 }
+
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
+
 \paper {
   system-separator-markup = \slashSeparator
   %#(set-paper-size "a4")
@@ -25,9 +27,14 @@
   inner-margin = 20
   outer-margin = 15
 }
+
 \layout {
   \context {
     \RemoveEmptyStaffContext
+    \override PianoStaff.InstrumentName.self-alignment-X = #RIGHT
+    \override Staff.InstrumentName.self-alignment-X = #RIGHT
+    %\override Staff.shortInstrumentName.self-alignment-X = #RIGHT
+    \override StaffGroup.InstrumentName.self-alignment-X = #RIGHT
   }
   \context {
     \Score
@@ -40,8 +47,10 @@
     \consists "Default_bar_line_engraver"
   }
 }
+
 %%%%%%%%%%%%%%%%%%
 \include "clarinetSolo.ly"
+\include "dynamicClarinetSolo.ly"
 %%%%%%%%%%%%%%%%%%
 
 \include "flute.ly"
@@ -66,6 +75,7 @@
 \include "vc.ly"
 \include "cb.ly"
 %%%%%%%%%%%%%%%%%%
+
 \score {
   <<
     \new Staff = "Staff_clarinet_Solo" {
@@ -88,6 +98,7 @@
       %\consists #Span_stem_engraver
       %\transpose b c'
       \clarinetSoloMusic
+      \new Dynamics \dynamicClarinetSolo
     }
     \new StaffGroup = "StaffGroup_woodwinds" <<
       \new Staff = "Staff_flute" {

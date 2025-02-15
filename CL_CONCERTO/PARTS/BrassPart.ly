@@ -46,7 +46,7 @@
   \new StaffGroup = "StaffGroup_brass" <<
     \new Staff = "Staff_trumpet" {
       \set Staff.instrumentName = #"Tr in  B"
-      %\transpose b c'
+      \transpose b c'
       \trumpetMusic
     }
     \new StaffGroup = "GrandStaff_corni" \with {
@@ -60,11 +60,11 @@
     }
     <<
       \new Staff = "Staff_hornI" {
-        %\transpose f c'
+        \transpose f c'
         \cornoOneMusic
       }
       \new Staff = "Staff_horn2" {
-        %\transpose f c'
+        \transpose f c'
         \cornoTwoMusic
       }
     >>

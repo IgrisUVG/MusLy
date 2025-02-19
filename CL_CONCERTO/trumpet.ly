@@ -76,10 +76,11 @@ trumpetMusic = \relative es' {
       s2. s4 \stemUp g2^>~ \hideNotes g2.~ g
     }
   >>
-  R2.*13 r2 <cis, g' as c>4-.-^ R2.*11 r2.\fermata
+  R2.*13 r2 <cis, g' as d>4-.-^ R2.*11 r2.\fermata
   %%%%%%%%%%%%%%%%%%%
   \bar "||" \cadenzaOn R1*10 \cadenzaOff \bar "||"
   %%%%%%%%%%%%%%%%%%%
+  \set Score.currentBarNumber = 192
   R2.*6
   \makeOctaves #-1 {d8( cis c4 h~ h8) e(->~ e2 fis2.)}<b, d>
   b~ b~ b b~ b~ b b~ b~ b

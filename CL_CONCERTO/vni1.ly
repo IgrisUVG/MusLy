@@ -33,6 +33,7 @@ vniOneMusic = \relative {
   %%%%%%%%%%%%%%%%%%%
   \bar "||" \cadenzaOn R1*10 \cadenzaOff \bar "||"
   %%%%%%%%%%%%%%%%%%%
+  \set Score.currentBarNumber = 192
   h'4( a d, g fis h, e d cis gis fis h, dis2 cis4 ais2.)
   R2.*3 r4 f8( es d4)
   \repeat unfold 4 {<ges b es>2. <fes as des>}

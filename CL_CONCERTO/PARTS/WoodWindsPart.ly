@@ -76,11 +76,14 @@
     \new Staff = "Staff_clarinetA" {
       \set Staff.instrumentName = \markup {
         \right-column {
-          "Cl"
-          \line { "in A" }
+          %"Cl"
+          "Ba. Hn"
+          %\line { "in A" }
+          \line { "in F" }
         }
       }
-      \transpose a c'
+      %\transpose a c'
+      \transpose f c'
       \clarinetInAMusic
     }
     \new Staff = "Staff_ClarinetBass" {

@@ -91,11 +91,12 @@ fluteMusic = \relative es'' {
   \set Staff.ottavation = #"8"
   h'2
   \ottava #0
-  r4 R2.*2 s2 <es,, ges>4~ 
+  r4 R2.*2 r2 <es,, ges>4~ 
   \repeat unfold 8 {q2.~} q2. R2.*2 r2.\fermata
   %%%%%%%%%%%%%%%%%%%
   \bar "||" \cadenzaOn R1*10 \cadenzaOff \bar "||"
   %%%%%%%%%%%%%%%%%%%
+  \set Score.currentBarNumber = 192
   R2.*5
   <dis gis>2. r4 <gis, h>8(<a cis><h d>4~ 
   q8)<gis' cis>_(->~<gis cis~>2<a cis>2.)<b d> R2.*9

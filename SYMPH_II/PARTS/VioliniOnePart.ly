@@ -30,11 +30,12 @@
   indent = 10
   \context {
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\remove "Bar_number_engraver"
   }
 }
 
-\include "../vni1.ly"
+\include "..\vni1.ly"
 
 \score {
   \new Staff \vniOneMusic

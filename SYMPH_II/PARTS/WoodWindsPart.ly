@@ -31,6 +31,8 @@
 
 \layout {
   \context {
+    \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {

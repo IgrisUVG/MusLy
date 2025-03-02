@@ -32,6 +32,7 @@
   }
   \context{
     \Score
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
     %\remove "Bar_number_engraver"
   }

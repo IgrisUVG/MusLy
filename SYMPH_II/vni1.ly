@@ -82,7 +82,7 @@ vniOneMusic = \relative {
   <b f' b des>4--
   \override TextScript.extra-offset = #'(1 . 0)
   q--^\markup {\italic sim} q q
-  <b f' b c> q <a es' a c> q <fis dis' fis h!> q q q
+  <b f' b c> q <a es' a c> q <fis dis' fis h!> <fis dis' fis h> q q
   <e e' b'><e e' g b><fis d' fis a>-><d' a' d fis>
   q q <fis a d a'>2(
   <h, d g d'>4<e, g c g'><d' f! b f'!><f as des as'>~

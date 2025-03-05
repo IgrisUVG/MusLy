@@ -136,8 +136,8 @@ vcMusic = \relative {
   }
   ges'16( f! es des ces b as ges
   f8-.) r4. r8 <es' a>(\noBeam<e g>)<cis fis>(
-  <a f'>)-. r4. r8 <es' a>(\noBeam<e g>)<cis fis>(
-  <a f'>16)-. r8.
+  <a f'!>)-. r4. r8 <es' a>(\noBeam<e g>)<cis fis>(
+  <a f'!>16)-. r8.
   \shape #'((0 . 0) (0 . 0) (2 . 0) (5 . -1)) Slur
   f'8( g16 a <es a>4<fis a>)
   <<

@@ -121,7 +121,7 @@ fluteMusic = \relative {
                  ((0 . 2) (1 . 8) (2 . 8) (1 . 1))
                  ) Slur %}
       %\shape #'((0 . 0) (1 . 12) (2 . 12) (1 . 0)) Slur
-      \shape #'((0 . 1.5) (1 . 8) (2 . 8) (1 . 1.5)) Slur
+      %\shape #'((0 . 1.5) (1 . 8) (2 . 8) (1 . 1.5)) Slur
       eis,4_( fis2 des g2.) ges s4
     }
     \\

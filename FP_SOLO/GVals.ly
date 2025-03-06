@@ -111,7 +111,7 @@ links = \relative {
   \partial 4 r4
   ges,2. as b4 <ces b'>2 <<{s4 ces'2}\\{des,2.}>>
   ges, as b4 <ces b'>2
-  es,2. f ges4 <as b'>2 <<{s4 as'2}\\{b,2.}>>
+  es,2. f ges4 <as ges'>2 <<{s4 as'2}\\{b,2.}>>
   es, f ges4 <as ges'>2 ges4 <as ges'>2
   d,2. g d g a
   %\pageBreak

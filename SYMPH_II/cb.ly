@@ -172,11 +172,11 @@ cbMusic = \relative {
   <dis' ais'>2( <cis gis'> <h fis'>1)
   R1 \bar "||"
   R1*7
-  es4 des ces h ges fes es4. r8
+  es4 des ces b ges fes es4. r8
   g4 f es b' as4. g'8( des4) r
   b as ges f des' ces b4. r8
   \makeOctaves #1 {
-    d4 ces heses as fes' eses des4. r8
+    des4 ces heses as fes' eses des4. r8
     f4 es des as ges4.
   }
   f'8( h,!4) r

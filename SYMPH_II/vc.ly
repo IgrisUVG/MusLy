@@ -296,7 +296,7 @@ vcMusic = \relative {
   <dis gis>2( <cis fis> <h e>1)
   R1 \bar "||"
   R1*7
-  es4 des ces h ges fes es4. r8
+  es4 des ces b ges fes es4. r8
   g4 f es b' as4. g'8( des4) r
   <b f'><as f'><ges f'><f f'> des' ces b4. r8
   <des fes>4<ces es><des fes><ces es>

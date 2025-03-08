@@ -83,7 +83,7 @@ trumpetOneMusic = \relative {
       g,1->( as2 d,!)
     }
   >>
-  R1*7 r2 h'4( c) des( c8.) es16-. des4->( c8.) es16-.
+  R1*7 r2 b'4( c) des( c8.) es16-. des4->( c8.) es16-.
   f4( es8.) as16-. f4->( ges) f( es2 b4 b) r2. R1*4
   a4( g8.) h16 a4( g8.) h16 c4( h8.) e16 c4( d c d cis2)
   R1*4 f,4( as8.) f16 es2 f4( ges8.) as16 b4( c) des r2. R1*6

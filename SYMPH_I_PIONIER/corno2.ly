@@ -5,6 +5,9 @@
 cornoTwoMusic = \relative {
   \key as \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)
   \clef treble
-  as2( f4 as c b as2)
+  as2( f4 as c b as2) b8 as g ges f e es d~ d2 f
 }

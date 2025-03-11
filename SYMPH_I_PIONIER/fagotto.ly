@@ -5,9 +5,9 @@
 fagottoMusic = \relative {
   \key as \major
   \time 4/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(1 1 1 1)
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
   \clef bass
   f8( es c16) b-. r es-. as,8-- as'( b as)
   c,( es b) as( des es) f8. es16~

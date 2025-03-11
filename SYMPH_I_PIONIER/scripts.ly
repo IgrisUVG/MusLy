@@ -2,8 +2,6 @@
 
 \language "deutsch"
 
-%%%%%%%%% SCRIPTS %%%%%%%%%
-
 slash =
 #(define-music-function (parser location ang stem-fraction protrusion)
    (number? number? number?)
@@ -61,26 +59,4 @@ slashI = {
 
 slashII = {
   \slash 45 0.5 0.8
-}
-
-clarinetMusic = \relative {
-  \key as \major
-  \time 4/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(1 1 1 1)
-  \clef treble
-  as8( b16 es f) as-. b-. c( es) g-. as8-- es( f
-  as, g es4) f16-. b( as) g-. as4--
-  \set subdivideBeams = ##t
-  \set baseMoment = #(ly:make-moment 1/8)
-  \set beatStructure = #'(2 2 2 2)
-  f'32( es des c as' ges f es) es( des c b) ges'-. b,( c as)
-  des( c b as e' d c h) b( as ges f d' c b a)
-  b( f-.)g( b-.) b( d-.) f( d-.)
-  f( b-.) as( es-.) es( ges-.) as( c-.)
-  des( as-.) as( f-.) f( des-.) des( as-.)
-  as( des-.) des( g,-.) ges( des'-.) des( ges,-.)
-  f( es-.) es( b-.) as( es-.) es( as-.) \acciaccatura {\slashI as16( c es} as2.)~
-  as ges4( as1 a) h~ h2 b~ b as~ as r
 }

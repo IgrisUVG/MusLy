@@ -174,12 +174,12 @@
       %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
       %\consists #Span_stem_engraver
     }
-    <<
-      \new Staff = "RH" \RemoveEmptyStaves \rechts
-      %\new Dynamics = "DYN" \dynamicPiano
-      \new Staff = "LH" \RemoveEmptyStaves \links
-      %\new Dynamics = "PED" \RemoveEmptyStaves \pedal
-    >>
+%    <<
+%      \new Staff = "RH" \RemoveEmptyStaves \rechts
+%      %\new Dynamics = "DYN" \dynamicPiano
+%      \new Staff = "LH" \RemoveEmptyStaves \links
+%      %\new Dynamics = "PED" \RemoveEmptyStaves \pedal
+%    >>
 
     %%%%%%%%%%%%%%%% DRUMS %%%%%%%%%%%%%%%%
     \new StaffGroup = "StaffGroup_drums" <<

@@ -34,10 +34,11 @@
   }
 }
 
+%\include "..\scripts.ly"
 \include "..\clarinet.ly"
 
 \score {
   \new Staff
-  \transpose b c'
+  %\transpose b c'
   \clarinetMusic
 }

@@ -5,15 +5,21 @@
 fluteMusic = \relative {
   \key as \major
   \time 4/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(1 1 1 1)
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
   \clef treble
+  \compressFullBarRests
   r4 as''2.(~ as4. c16 es
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(2 2 2 2)
   as32 g f es des c b as g f es des c b as g-.)
   r4 as'4.\startTrillSpan( c,8\stopTrillSpan es f
-  b,2\startTrillSpan)
+  b,2\startTrillSpan) as~\stopTrillSpan as1
+  es''8( des c f c b g es c2 b4 g'8 f gis2. gis4)
+  fis e2.~ e2 es( des4) g,8.( as16) as2~ as r
+  \time 3/4
+  R2.*15
+  r4 es''( d c2~ c8 des f4 g as~ as) r2 r as4~ as2 r4
 }

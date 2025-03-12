@@ -38,6 +38,6 @@
 
 \score {
   \new Staff
-  \transpose b c'
+  %\transpose b c'
   \trumpetMusic
 }

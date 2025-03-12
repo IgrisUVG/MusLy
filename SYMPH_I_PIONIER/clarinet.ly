@@ -69,7 +69,8 @@ clarinetMusic = \relative {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1 1)
-  \clef treble
+  \clef treble  
+  \compressFullBarRests
   as8( b16 es f) as-. b-. c( es) g-. as8-- es( f
   as, g es4) f16-. b( as) g-. as4--
   \set subdivideBeams = ##t
@@ -82,5 +83,9 @@ clarinetMusic = \relative {
   des( as-.) as( f-.) f( des-.) des( as-.)
   as( des-.) des( g,-.) ges( des'-.) des( ges,-.)
   f( es-.) es( b-.) as( es-.) es( as-.) \acciaccatura {\slashI as16( c es} as2.)~
-  as ges4( as1 a) h~ h2 b~ b as~ as r
+  as g4( as1 a) h~ h2 b~ b as~ as r
+  \time 3/4
+  R2.*15
+  r4 g'2~( g4 es4. f8-.) b4( des2 c4) r2 r c4~ c2 r4 
+  
 }

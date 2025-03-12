@@ -9,5 +9,11 @@ cornoTwoMusic = \relative {
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
+  \compressFullBarRests
   as2( f4 as c b as2) b8 as g ges f e es d~ d2 f
+  es2-- es--~ es2. es4( f1 fis2 e) e1~ e2 f~ f as~ as r
+  \time 3/4
+  R2.*20
+  \clef bass
+  c,2( b4 as f es~ es2 g4 des'2)
 }

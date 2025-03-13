@@ -244,51 +244,168 @@
     }
   }
   \score {
-    %<<
-    %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
-    \new StaffGroup = "StaffGroup_strings" <<
-      \new StaffGroup = "GrandStaff_violins" \with {
-        systemStartDelimiter = #'SystemStartSquare
-      }
+    <<
+      %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_woodwinds"
       <<
-        \new Staff = "Staff_violinI" {
-          \set Staff.instrumentName = #"Violini I"
-          \set Staff.shortInstrumentName = #"V-ni I"
-          \vniOneMusicDrei
+        \new Staff = "Staff_flute" {
+          \set Staff.instrumentName = #"Flauto"
+          \set Staff.shortInstrumentName = #"Fl"
+          \fluteMusicDrei
         }
 
-        \new Staff = "Staff_violinII" {
-          \set Staff.instrumentName = #"Violini II"
-          \set Staff.shortInstrumentName = #"V-ni II"
-          \vniTwoMusicDrei
+        \new Staff = "Staff_oboe" {
+          \set Staff.instrumentName = #"Oboe"
+          \set Staff.shortInstrumentName = #"Ob"
+          \oboeMusicDrei
+        }
+        \new Staff = "Staff_clarinet" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Clarinetto"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Cl"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \clarinetMusicDrei
+        }
+        \new Staff = "Staff_fagotti" {
+          \set Staff.instrumentName = #"Fagotto"
+          \set Staff.shortInstrumentName = #"Fag"
+          \fagottoMusicDrei
         }
       >>
-      \new Staff = "Staff_viola" {
-        \set Staff.instrumentName = #"Viole"
-        \set Staff.shortInstrumentName = #"V-le"
-        \vleMusicDrei
-      }
 
-      \new StaffGroup = "GrandStaff_bassi" \with {
-        systemStartDelimiter = #'SystemStartSquare
+      %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_brass"
+      <<
+        \new StaffGroup = "GrandStaff_corni" \with {
+          instrumentName = \markup {
+            \right-column {
+              "2 Corni"
+              \line { "in F" }
+            }
+          }
+          shortInstrumentName = \markup {
+            \right-column {
+              "Cor"
+              \line { "in F" }
+            }
+          }
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_hornI" {
+            \transpose f c'
+            \cornoOneMusicDrei
+          }
+          \new Staff = "Staff_horn2" {
+            \transpose f c'
+            \cornoTwoMusicDrei
+          }
+        >>
+        \new Staff = "Staff_trumpet1" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Tromba"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Tb"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \trumpetMusicDrei
+        }
+      >>
+
+      %%%%%%%%%%%%%%%% PIANO %%%%%%%%%%%%%%%%
+      \new PianoStaff  \with {
+        instrumentName = #"Piano"
+        shortInstrumentName = #"F-p"
+        %fontSize = #1
+        %\override StaffSymbol.staff-space = #(magstep 1)
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        %\consists #Span_stem_engraver
       }
       <<
-        \new Staff = "Staff_cello" {
-          \set Staff.instrumentName = #"Violoncelli"
-          \set Staff.shortInstrumentName = #"Vc"
-          \vcMusicDrei
+        \new Staff = "RH" \RemoveEmptyStaves \rechtsDrei
+        %\new Dynamics = "DYN" \dynamicPiano
+        \new Staff = "LH" \RemoveEmptyStaves \linksDrei
+        %\new Dynamics = "PED" \RemoveEmptyStaves \pedal
+      >>
+
+      %%%%%%%%%%%%%%%% DRUMS %%%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_drums" <<
+        \new Staff = "Staff_timpani" {
+          \set Staff.instrumentName = #"Timpani"
+          \set Staff.shortInstrumentName = #"Timp"
+          \timpMusicDrei
         }
-        \new Staff = "Staff_bass" {
-          \set Staff.instrumentName = #"Contrabassi"
-          \set Staff.shortInstrumentName = #"Cb"
-          \cbMusicDrei
+      >>
+
+      %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_strings" <<
+        \new StaffGroup = "GrandStaff_violins" \with {
+          systemStartDelimiter = #'SystemStartSquare
         }
+        <<
+          \new Staff = "Staff_violinI" {
+            \set Staff.instrumentName = #"Violini I"
+            \set Staff.shortInstrumentName = #"V-ni I"
+            \vniOneMusicDrei
+          }
+
+          \new Staff = "Staff_violinII" {
+            \set Staff.instrumentName = #"Violini II"
+            \set Staff.shortInstrumentName = #"V-ni II"
+            \vniTwoMusicDrei
+          }
+        >>
+        \new Staff = "Staff_viola" {
+          \set Staff.instrumentName = #"Viole"
+          \set Staff.shortInstrumentName = #"V-le"
+          \vleMusicDrei
+        }
+
+        \new StaffGroup = "GrandStaff_bassi" \with {
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_cello" {
+            \set Staff.instrumentName = #"Violoncelli"
+            \set Staff.shortInstrumentName = #"Vc"
+            \vcMusicDrei
+          }
+          \new Staff = "Staff_bass" {
+            \set Staff.instrumentName = #"Contrabassi"
+            \set Staff.shortInstrumentName = #"Cb"
+            \cbMusicDrei
+          }
+        >>
       >>
     >>
-    %>>
     %\midi {}
     %\paper { }
-    %\layout { }
+    \layout {
+      \context {
+        \Score
+        %\remove "Timing_translator"
+        %\remove "Default_bar_line_engraver"
+        %\remove "Bar_number_engraver"
+        \RemoveEmptyStaves
+        \override VerticalAxisGroup.remove-first = ##t
+      }
+    }
     \header {
       title = "Dritte Teil"
       composer = ##f

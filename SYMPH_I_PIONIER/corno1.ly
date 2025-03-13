@@ -20,6 +20,16 @@ cornoOneMusic = \relative {
   f2)
 }
 
+cornoOneMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}
 
 cornoOneMusicVier = \relative {
   \key as \major

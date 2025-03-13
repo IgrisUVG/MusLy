@@ -24,6 +24,16 @@ fluteMusic = \relative {
   r4 es''( d c2~ c8 des f4 g as~ as) r2 r as4~ as2 r4
 }
 
+fluteMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}
 
 fluteMusicVier = \relative {
   \key as \major

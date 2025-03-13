@@ -28,6 +28,17 @@ fagottoMusic = \relative {
   R2.*20 as,2 r4
 }
 
+fagottoMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef bass
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}
+
 fagottoMusicVier = \relative {
   \key as \major
   \time 4/4

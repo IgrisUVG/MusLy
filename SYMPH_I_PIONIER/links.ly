@@ -45,6 +45,16 @@ links = \relative {
   des,2. s4 s1
 }
 
+linksDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef bass
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}
 
 linksVier = \relative {
   \key as \major

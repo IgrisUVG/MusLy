@@ -16,6 +16,13 @@ timpMusic = \relative {
   R2.*19 r2 as4:32~ as2:32 r4
 }
 
+timpMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \clef bass
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}
 
 timpMusicVier = \relative {
   \key as \major

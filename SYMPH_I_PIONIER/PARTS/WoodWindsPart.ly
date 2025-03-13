@@ -82,7 +82,7 @@
           \line { "in B" }
         }
       }
-      %\transpose b c'
+      \transpose b c'
       \clarinetMusic
     }
     \new Staff = "Staff_fagotti" {

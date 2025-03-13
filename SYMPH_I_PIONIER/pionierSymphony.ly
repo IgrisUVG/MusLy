@@ -109,7 +109,7 @@
             \line { "in B" }
           }
         }
-        %\transpose b c'
+        \transpose b c'
         \clarinetMusic
       }
       \new Staff = "Staff_fagotti" {
@@ -139,11 +139,11 @@
       }
       <<
         \new Staff = "Staff_hornI" {
-          %\transpose f c'
+          \transpose f c'
           \cornoOneMusic
         }
         \new Staff = "Staff_horn2" {
-          %\transpose f c'
+          \transpose f c'
           \cornoTwoMusic
         }
       >>
@@ -160,7 +160,7 @@
             \line { "in B" }
           }
         }
-        %\transpose b c'
+        \transpose b c'
         \trumpetMusic
       }
     >>

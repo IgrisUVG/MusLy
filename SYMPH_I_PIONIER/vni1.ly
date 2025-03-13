@@ -28,3 +28,26 @@ vniOneMusic = \relative {
   es4.) des8( c b a2~ a8 c f4. des8 b' as b, as f4) r8 as,~(
   as2 c'4~ c2) r4
 }
+
+vniOneMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+  r1*3
+}
+
+vniOneMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}

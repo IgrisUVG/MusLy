@@ -40,5 +40,18 @@ links = \relative {
   as) c'->( <es, as> c <as es' as>4) r
   <es' c' es>4.
   \stemDown
-  <as,, es' as>~ q2 r4
+  <as,, es' as>~ q2 r4 R2.*2
+  \time 4/4
+  des,2. s4 s1
+}
+
+
+linksVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef bass
+  \compressFullBarRests
 }

@@ -21,3 +21,14 @@ oboeMusic = \relative {
   R2.*15
   r4 b''2( c4 a g8f-.) des'4( es2~ es4) r2 r es4~ es2 r4
 }
+
+
+oboeMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+}

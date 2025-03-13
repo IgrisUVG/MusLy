@@ -2,6 +2,9 @@
 
 \language "deutsch"
 
+top = \change Staff = "RH"
+bot = \change Staff = "LH"
+
 rechts = \relative {
   \key as \major
   \time 4/4
@@ -41,11 +44,40 @@ rechts = \relative {
   \set Staff.ottavation = #"8"
   es''32( c as es
   \ottava #0
-  c as es c 
+  c as es c
   \stemUp
   as es
-  \change Staff = LH
+  \bot
   c as <c, es as>4.~ q2)
-  \change Staff = RH
-  r4
+  \top
+  r4 R2.*2
+  \time 4/4
+  <<
+    {
+      r16 c'''64[(
+      \bot \clef treble as
+      \top b \bot g] \top as \bot f \top g \bot des \top f \bot b, \top des \bot as
+      \top b[ \bot g \top as \bot f \top g \bot des \top f \bot \clef bass b,] \top des \bot as
+      \top \clef bass b \bot g \top as \bot f \top g \bot des
+      \top f32 \bot b, \top des16. \bot as as,4)
+    }
+    \\
+    {
+      \bot
+      \stemUp
+      as'2. s4
+    }
+  >>
+  r8 <b es g>16 \bot <c,, c'>~ q2.
+}
+
+
+rechtsVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
 }

@@ -15,5 +15,18 @@ cornoOneMusic = \relative {
   \time 3/4
   R2.*20
   \clef bass
-  c,2.~( c b4 as g f2)
+  c,2.~( c b4 as g 
+  \time 4/4
+  f2)
+}
+
+
+cornoOneMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
 }

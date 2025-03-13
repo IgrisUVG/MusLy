@@ -2,13 +2,6 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  %meter = "Grave"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
-
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
 \paper {
@@ -79,117 +72,179 @@
 \include "cb.ly"
 %%%%%%%%%%%%%%%%%%
 
-\score {
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #4 "Pioniersymphonie"}
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
 
-  <<
-    %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
-    \new StaffGroup = "StaffGroup_woodwinds"
+  \score {
     <<
-      \new Staff = "Staff_flute" {
-        \set Staff.instrumentName = #"Flauto"
-        \set Staff.shortInstrumentName = #"Fl"
-        \fluteMusic
-      }
-
-      \new Staff = "Staff_oboe" {
-        \set Staff.instrumentName = #"Oboe"
-        \set Staff.shortInstrumentName = #"Ob"
-        \oboeMusic
-      }
-      \new Staff = "Staff_clarinet" {
-        \set Staff.instrumentName = \markup {
-          \right-column {
-            "Clarinetto"
-            \line { "in B" }
-          }
-        }
-        \set Staff.shortInstrumentName = \markup {
-          \right-column {
-            "Cl"
-            \line { "in B" }
-          }
-        }
-        \transpose b c'
-        \clarinetMusic
-      }
-      \new Staff = "Staff_fagotti" {
-        \set Staff.instrumentName = #"Fagotto"
-        \set Staff.shortInstrumentName = #"Fag"
-        \fagottoMusic
-      }
-    >>
-
-    %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
-    \new StaffGroup = "StaffGroup_brass"
-    <<
-      \new StaffGroup = "GrandStaff_corni" \with {
-        instrumentName = \markup {
-          \right-column {
-            "2 Corni"
-            \line { "in F" }
-          }
-        }
-        shortInstrumentName = \markup {
-          \right-column {
-            "Cor"
-            \line { "in F" }
-          }
-        }
-        systemStartDelimiter = #'SystemStartSquare
-      }
+      %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_woodwinds"
       <<
-        \new Staff = "Staff_hornI" {
-          \transpose f c'
-          \cornoOneMusic
+        \new Staff = "Staff_flute" {
+          \set Staff.instrumentName = #"Flauto"
+          \set Staff.shortInstrumentName = #"Fl"
+          \fluteMusic
         }
-        \new Staff = "Staff_horn2" {
-          \transpose f c'
-          \cornoTwoMusic
+
+        \new Staff = "Staff_oboe" {
+          \set Staff.instrumentName = #"Oboe"
+          \set Staff.shortInstrumentName = #"Ob"
+          \oboeMusic
+        }
+        \new Staff = "Staff_clarinet" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Clarinetto"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Cl"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \clarinetMusic
+        }
+        \new Staff = "Staff_fagotti" {
+          \set Staff.instrumentName = #"Fagotto"
+          \set Staff.shortInstrumentName = #"Fag"
+          \fagottoMusic
         }
       >>
-      \new Staff = "Staff_trumpet1" {
-        \set Staff.instrumentName = \markup {
-          \right-column {
-            "Tromba"
-            \line { "in B" }
-          }
-        }
-        \set Staff.shortInstrumentName = \markup {
-          \right-column {
-            "Tb"
-            \line { "in B" }
-          }
-        }
-        \transpose b c'
-        \trumpetMusic
-      }
-    >>
 
-    %%%%%%%%%%%%%%%% PIANO %%%%%%%%%%%%%%%%
-    \new PianoStaff  \with {
-      instrumentName = #"Piano"
-      shortInstrumentName = #"F-p"
-      %fontSize = #1
-      %\override StaffSymbol.staff-space = #(magstep 1)
-      %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
-      %\consists #Span_stem_engraver
+      %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_brass"
+      <<
+        \new StaffGroup = "GrandStaff_corni" \with {
+          instrumentName = \markup {
+            \right-column {
+              "2 Corni"
+              \line { "in F" }
+            }
+          }
+          shortInstrumentName = \markup {
+            \right-column {
+              "Cor"
+              \line { "in F" }
+            }
+          }
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_hornI" {
+            \transpose f c'
+            \cornoOneMusic
+          }
+          \new Staff = "Staff_horn2" {
+            \transpose f c'
+            \cornoTwoMusic
+          }
+        >>
+        \new Staff = "Staff_trumpet1" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Tromba"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Tb"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \trumpetMusic
+        }
+      >>
+
+      %%%%%%%%%%%%%%%% PIANO %%%%%%%%%%%%%%%%
+      \new PianoStaff  \with {
+        instrumentName = #"Piano"
+        shortInstrumentName = #"F-p"
+        %fontSize = #1
+        %\override StaffSymbol.staff-space = #(magstep 1)
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        %\consists #Span_stem_engraver
+      }
+      <<
+        \new Staff = "RH" \RemoveEmptyStaves \rechts
+        %\new Dynamics = "DYN" \dynamicPiano
+        \new Staff = "LH" \RemoveEmptyStaves \links
+        %\new Dynamics = "PED" \RemoveEmptyStaves \pedal
+      >>
+
+      %%%%%%%%%%%%%%%% DRUMS %%%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_drums" <<
+        \new Staff = "Staff_timpani" {
+          \set Staff.instrumentName = #"Timpani"
+          \set Staff.shortInstrumentName = #"Timp"
+          \timpMusic
+        }
+      >>
+
+      %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_strings" <<
+        \new StaffGroup = "GrandStaff_violins" \with {
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_violinI" {
+            \set Staff.instrumentName = #"Violini I"
+            \set Staff.shortInstrumentName = #"V-ni I"
+            \vniOneMusic
+          }
+
+          \new Staff = "Staff_violinII" {
+            \set Staff.instrumentName = #"Violini II"
+            \set Staff.shortInstrumentName = #"V-ni II"
+            \vniTwoMusic
+          }
+        >>
+        \new Staff = "Staff_viola" {
+          \set Staff.instrumentName = #"Viole"
+          \set Staff.shortInstrumentName = #"V-le"
+          \vleMusic
+        }
+
+        \new StaffGroup = "GrandStaff_bassi" \with {
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_cello" {
+            \set Staff.instrumentName = #"Violoncelli"
+            \set Staff.shortInstrumentName = #"Vc"
+            \vcMusic
+          }
+          \new Staff = "Staff_bass" {
+            \set Staff.instrumentName = #"Contrabassi"
+            \set Staff.shortInstrumentName = #"Cb"
+            \cbMusic
+          }
+        >>
+      >>
+    >>
+    %\midi {}
+    %\paper { }
+    %\layout { }
+    \header {
+      title = "Erste Teil"
+      composer = ##f
+      %breakbefore = ##t
     }
-    <<
-      \new Staff = "RH" \RemoveEmptyStaves \rechts
-      %\new Dynamics = "DYN" \dynamicPiano
-      \new Staff = "LH" \RemoveEmptyStaves \links
-      %\new Dynamics = "PED" \RemoveEmptyStaves \pedal
-    >>
-
-    %%%%%%%%%%%%%%%% DRUMS %%%%%%%%%%%%%%%%
-    \new StaffGroup = "StaffGroup_drums" <<
-      \new Staff = "Staff_timpani" {
-        \set Staff.instrumentName = #"Timpani"
-        \set Staff.shortInstrumentName = #"Timp"
-        \timpMusic
-      }
-    >>
-
+  }
+  \score {
+    %<<
     %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
     \new StaffGroup = "StaffGroup_strings" <<
       \new StaffGroup = "GrandStaff_violins" \with {
@@ -199,19 +254,19 @@
         \new Staff = "Staff_violinI" {
           \set Staff.instrumentName = #"Violini I"
           \set Staff.shortInstrumentName = #"V-ni I"
-          \vniOneMusic
+          \vniOneMusicDrei
         }
 
         \new Staff = "Staff_violinII" {
           \set Staff.instrumentName = #"Violini II"
           \set Staff.shortInstrumentName = #"V-ni II"
-          \vniTwoMusic
+          \vniTwoMusicDrei
         }
       >>
       \new Staff = "Staff_viola" {
         \set Staff.instrumentName = #"Viole"
         \set Staff.shortInstrumentName = #"V-le"
-        \vleMusic
+        \vleMusicDrei
       }
 
       \new StaffGroup = "GrandStaff_bassi" \with {
@@ -221,15 +276,183 @@
         \new Staff = "Staff_cello" {
           \set Staff.instrumentName = #"Violoncelli"
           \set Staff.shortInstrumentName = #"Vc"
-          \vcMusic
+          \vcMusicDrei
         }
         \new Staff = "Staff_bass" {
           \set Staff.instrumentName = #"Contrabassi"
           \set Staff.shortInstrumentName = #"Cb"
-          \cbMusic
+          \cbMusicDrei
         }
       >>
     >>
-  >>
-  %\midi {}
+    %>>
+    %\midi {}
+    %\paper { }
+    %\layout { }
+    \header {
+      title = "Dritte Teil"
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+  \score {
+    <<
+      %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_woodwinds"
+      <<
+        \new Staff = "Staff_flute" {
+          \set Staff.instrumentName = #"Flauto"
+          \set Staff.shortInstrumentName = #"Fl"
+          \fluteMusicVier
+        }
+
+        \new Staff = "Staff_oboe" {
+          \set Staff.instrumentName = #"Oboe"
+          \set Staff.shortInstrumentName = #"Ob"
+          \oboeMusicVier
+        }
+        \new Staff = "Staff_clarinet" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Clarinetto"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Cl"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \clarinetMusicVier
+        }
+        \new Staff = "Staff_fagotti" {
+          \set Staff.instrumentName = #"Fagotto"
+          \set Staff.shortInstrumentName = #"Fag"
+          \fagottoMusicVier
+        }
+      >>
+
+      %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_brass"
+      <<
+        \new StaffGroup = "GrandStaff_corni" \with {
+          instrumentName = \markup {
+            \right-column {
+              "2 Corni"
+              \line { "in F" }
+            }
+          }
+          shortInstrumentName = \markup {
+            \right-column {
+              "Cor"
+              \line { "in F" }
+            }
+          }
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_hornI" {
+            \transpose f c'
+            \cornoOneMusicVier
+          }
+          \new Staff = "Staff_horn2" {
+            \transpose f c'
+            \cornoTwoMusicVier
+          }
+        >>
+        \new Staff = "Staff_trumpet1" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Tromba"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Tb"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \trumpetMusicVier
+        }
+      >>
+
+      %%%%%%%%%%%%%%%% PIANO %%%%%%%%%%%%%%%%
+      \new PianoStaff  \with {
+        instrumentName = #"Piano"
+        shortInstrumentName = #"F-p"
+        %fontSize = #1
+        %\override StaffSymbol.staff-space = #(magstep 1)
+        %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
+        %\consists #Span_stem_engraver
+      }
+      <<
+        \new Staff = "RH" \RemoveEmptyStaves \rechtsVier
+        %\new Dynamics = "DYN" \dynamicPiano
+        \new Staff = "LH" \RemoveEmptyStaves \linksVier
+        %\new Dynamics = "PED" \RemoveEmptyStaves \pedal
+      >>
+
+      %%%%%%%%%%%%%%%% DRUMS %%%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_drums" <<
+        \new Staff = "Staff_timpani" {
+          \set Staff.instrumentName = #"Timpani"
+          \set Staff.shortInstrumentName = #"Timp"
+          \timpMusicVier
+        }
+      >>
+
+      %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_strings" <<
+        \new StaffGroup = "GrandStaff_violins" \with {
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_violinI" {
+            \set Staff.instrumentName = #"Violini I"
+            \set Staff.shortInstrumentName = #"V-ni I"
+            \vniOneMusicVier
+          }
+
+          \new Staff = "Staff_violinII" {
+            \set Staff.instrumentName = #"Violini II"
+            \set Staff.shortInstrumentName = #"V-ni II"
+            \vniTwoMusicVier
+          }
+        >>
+        \new Staff = "Staff_viola" {
+          \set Staff.instrumentName = #"Viole"
+          \set Staff.shortInstrumentName = #"V-le"
+          \vleMusicVier
+        }
+
+        \new StaffGroup = "GrandStaff_bassi" \with {
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_cello" {
+            \set Staff.instrumentName = #"Violoncelli"
+            \set Staff.shortInstrumentName = #"Vc"
+            \vcMusicVier
+          }
+          \new Staff = "Staff_bass" {
+            \set Staff.instrumentName = #"Contrabassi"
+            \set Staff.shortInstrumentName = #"Cb"
+            \cbMusicVier
+          }
+        >>
+      >>
+    >>
+    %\midi {}
+    %\paper { }
+    %\layout { }
+    \header {
+      title = "Vierte Teil"
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
 }

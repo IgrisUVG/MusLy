@@ -15,3 +15,11 @@ timpMusic = \relative {
   \time 3/4
   R2.*19 r2 as4:32~ as2:32 r4
 }
+
+
+timpMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \clef bass
+  \compressFullBarRests
+}

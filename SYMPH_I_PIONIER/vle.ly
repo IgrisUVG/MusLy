@@ -19,3 +19,26 @@ vleMusic = \relative {
   \time 3/4
   R2.*18 r2 r8 es,8~ es2.~ es2 r4
 }
+
+vleMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef alto
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+  R1*2
+}
+
+vleMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef alto
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}

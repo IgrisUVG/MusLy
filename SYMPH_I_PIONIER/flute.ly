@@ -23,3 +23,14 @@ fluteMusic = \relative {
   R2.*15
   r4 es''( d c2~ c8 des f4 g as~ as) r2 r as4~ as2 r4
 }
+
+
+fluteMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+}

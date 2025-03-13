@@ -66,9 +66,9 @@ slashII = {
 clarinetMusic = \relative {
   \key as \major
   \time 4/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(1 1 1 1)
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
   \clef treble  
   \compressFullBarRests
   as8( b16 es f) as-. b-. c( es) g-. as8-- es( f
@@ -86,6 +86,23 @@ clarinetMusic = \relative {
   as g4( as1 a) h~ h2 b~ b as~ as r
   \time 3/4
   R2.*15
-  r4 g'2~( g4 es4. f8-.) b4( des2 c4) r2 r c4~ c2 r4 
-  
+  r4 g'2~( g4 es4. f8-.) b4( des2 c4) r2 r c4~ c2 r4 R2.*2
+  \time 4/4
+  \set subdivideBeams = ##f
+  r16 des,8.~ des b'16->( a) b,8.-. h16->( c8.~ c2.) b4( as g f2~
+  f2. as4 des2. b4 g' f es2~ es) r4 es,8( f16 b
+  c es f g b des es8 b c es, des b4 ces16 f es des es2)
+  r2 fes4.( es8 des ces b2~ b8) des ges4. es ces'4 b as2.
+  \bar "|."
+}
+
+
+clarinetMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble  
+  \compressFullBarRests
 }

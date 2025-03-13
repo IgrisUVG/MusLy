@@ -22,3 +22,27 @@ cbMusic = \relative {
   \time 3/4
   R2.*18 r2 r8 <as, es'>8~ q2.~ q2 r4
 }
+
+cbMusicDrei = \relative {
+  \key h \minor
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef "bass_8"
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+  h,,16( h') h h h a fis d' c h ais a d d d d
+  cis c ais g g g g fis e e e e fis g ais h
+}
+
+cbMusicVier = \relative {
+  \key as \major
+  \time 4/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef "bass_8"
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
+}

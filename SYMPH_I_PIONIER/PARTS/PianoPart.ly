@@ -2,20 +2,20 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  subtitle = "Piano"
-  %meter = "Grave"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
+%\header {
+%  title = "Pioniersymphonie"
+%  subtitle = "Piano"
+%  %meter = "Grave"
+%  composer = "I. G."
+%  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+%}
 
 \paper {
   %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #25
-  top-markup-spacing.basic-distance = #10
+  top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #20
-  system-system-spacing.basic-distance = #30
+  system-system-spacing.basic-distance = #25
   last-bottom-spacing.basic-distance = #25
   %two-sided = ##t
   %inner-margin = 25
@@ -44,12 +44,50 @@
 \include "../links.ly"
 %%%%%%%%%%%%D%%%%%%%%%%%%
 
-\score {
-  \new PianoStaff
-  <<
-    \new Staff = "RH" \rechts
-    %\new Dynamics = "DYN" \dynamic
-    \new Staff = "LH" \links
-    %\new Dynamics = "PED" \pedal
-  >>
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #3 "Pioniersymphonie"}
+    subtitle = "Piano"
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff
+    <<
+      \new Staff = "RH" \rechts
+      %\new Dynamics = "DYN" \dynamic
+      \new Staff = "LH" \links
+      %\new Dynamics = "PED" \pedal
+    >>
+    \header {
+      title = "Erste Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff
+    <<
+      \new Staff = "RH" \rechtsVier
+      %\new Dynamics = "DYN" \dynamic
+      \new Staff = "LH" \linksVier
+      %\new Dynamics = "PED" \pedal
+    >>
+    \header {
+      title = "Vierte Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
 }

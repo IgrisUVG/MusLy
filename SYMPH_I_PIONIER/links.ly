@@ -1,7 +1,33 @@
 \version "2.19.15"
-%\version "2.18.0"
 
 \language "deutsch"
+
+#(define (octave-up m t)
+   (let* ((octave (1- t))
+          (new-note (ly:music-deep-copy m))
+          (new-pitch (ly:make-pitch
+                      octave
+                      (ly:pitch-notename (ly:music-property m 'pitch))
+                      (ly:pitch-alteration (ly:music-property m 'pitch)))))
+     (set! (ly:music-property new-note 'pitch) new-pitch)
+     new-note))
+
+#(define (octavize-chord elements t)
+   (cond ((null? elements) elements)
+     ((eq? (ly:music-property (car elements) 'name) 'NoteEvent)
+      (cons (car elements)
+        (cons (octave-up (car elements) t)
+          (octavize-chord (cdr elements) t))))
+     (else (cons (car elements) (octavize-chord (cdr elements ) t)))))
+
+#(define (octavize music t)
+   (if (eq? (ly:music-property music 'name) 'EventChord)
+       (ly:music-set-property! music 'elements (octavize-chord
+                                                (ly:music-property music 'elements) t)))
+   music)
+
+makeOctaves = #(define-music-function (parser location arg mus) (integer? ly:music?)
+                 (music-map (lambda (x) (octavize x arg)) (event-chord-wrap! mus)))
 
 links = \relative {
   \key as \major
@@ -41,8 +67,26 @@ links = \relative {
   <es' c' es>4.
   \stemDown
   <as,, es' as>~ q2 r4 R2.*2
+  \stemNeutral
   \time 4/4
-  des,2. s4 s1
+  des,2. s4 s1 r2. des'4 f, r2.
+  \makeOctaves #1 {
+    des'2 as4 b c des es f g r2. R1 r2 ces,4 b g16
+  }
+  es'' fes f ges g as a b b, a' as g ges fes es <es, as des>2 r
+  r2. es''16 ces des b ces4
+  <<
+    {
+      \stemDown
+      <as es'>2.
+    }
+    \\
+    {
+      \stemUp
+      s4 as,,2
+    }
+  >>
+  \bar "|."
 }
 
 linksDrei = \relative {

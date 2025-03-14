@@ -2,6 +2,33 @@
 
 \language "deutsch"
 
+#(define (octave-up m t)
+   (let* ((octave (1- t))
+          (new-note (ly:music-deep-copy m))
+          (new-pitch (ly:make-pitch
+                      octave
+                      (ly:pitch-notename (ly:music-property m 'pitch))
+                      (ly:pitch-alteration (ly:music-property m 'pitch)))))
+     (set! (ly:music-property new-note 'pitch) new-pitch)
+     new-note))
+
+#(define (octavize-chord elements t)
+   (cond ((null? elements) elements)
+     ((eq? (ly:music-property (car elements) 'name) 'NoteEvent)
+      (cons (car elements)
+        (cons (octave-up (car elements) t)
+          (octavize-chord (cdr elements) t))))
+     (else (cons (car elements) (octavize-chord (cdr elements ) t)))))
+
+#(define (octavize music t)
+   (if (eq? (ly:music-property music 'name) 'EventChord)
+       (ly:music-set-property! music 'elements (octavize-chord
+                                                (ly:music-property music 'elements) t)))
+   music)
+
+makeOctaves = #(define-music-function (parser location arg mus) (integer? ly:music?)
+                 (music-map (lambda (x) (octavize x arg)) (event-chord-wrap! mus)))
+
 top = \change Staff = "RH"
 bot = \change Staff = "LH"
 
@@ -68,7 +95,17 @@ rechts = \relative {
       as'2. s4
     }
   >>
-  r8 <b es g>16 \bot <c,, c'>~ q2.
+  r8 <b es g>16 \bot <c,, c'>~ q2. \top R1*3
+  \stemNeutral
+  \clef treble
+  r2 c'''32 es g b c des f des c b g es c8~ c4 r2. R1
+  \makeOctaves #1 {
+    des'4. ces8 b as g4~ g4. b8 es4. ces8 as' g fes4
+  }
+  \set subdivideBeams = ##f
+  des'16 ces b8 es,16 fes ces8 r4 des16 as b ges fes4 r
+  r <as c es as>2.
+  \bar "|."
 }
 
 rechtsDrei = \relative {

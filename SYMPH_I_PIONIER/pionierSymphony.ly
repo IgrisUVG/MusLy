@@ -7,8 +7,9 @@
 \paper {
   system-separator-markup = \slashSeparator
   %#(set-paper-size "a4")
-  indent = 1.5\cm  % space for instrumentName
-  short-indent = 1.0\cm  % space for shortInstrumentName
+  indent = 1.5\cm
+  short-indent = 1.0\cm
+  
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   %markup-system-spacing.basic-distance = #26

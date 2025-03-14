@@ -2,14 +2,14 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  %meter = "Grave"
-  subtitle = "2 Corni"
-  subsubtitle = "in F"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
+%\header {
+%  title = "Pioniersymphonie"
+%  %meter = "Grave"
+%  subtitle = "2 Corni"
+%  subsubtitle = "in F"
+%  composer = "I. G."
+%  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+%}
 
 \paper {
   %#(set-paper-size "a4")
@@ -37,16 +37,74 @@
 \include "../corno1.ly"
 \include "../corno2.ly"
 
-\score {
-  \new StaffGroup = "GrandStaff_corni"
-  <<
-    \new Staff = "Staff_hornI" {
-      \transpose f c'
-      \cornoOneMusic
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #3 "Pioniersymphonie"}
+    subtitle = "2 Corni"
+    subsubtitle = "in B"
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new StaffGroup = "GrandStaff_corni"
+    <<
+      \new Staff = "Staff_hornI" {
+        \transpose f c'
+        \cornoOneMusic
+      }
+      \new Staff = "Staff_horn2" {
+        \transpose f c'
+        \cornoTwoMusic
+      }
+    >>
+    \header {
+      title = "Erste Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
     }
-    \new Staff = "Staff_horn2" {
-      \transpose f c'
-      \cornoTwoMusic
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\score {
+  %  \new StaffGroup = "GrandStaff_corni"
+  %  <<
+  %    \new Staff = "Staff_hornI" {
+  %      \transpose f c'
+  %      \cornoOneMusicDrei
+  %    }
+  %    \new Staff = "Staff_horn2" {
+  %      \transpose f c'
+  %      \cornoTwoMusicDrei
+  %    }
+  %  >>
+  %}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new StaffGroup = "GrandStaff_corni"
+    <<
+      \new Staff = "Staff_hornI" {
+        \transpose f c'
+        \cornoOneMusicVier
+      }
+      \new Staff = "Staff_horn2" {
+        \transpose f c'
+        \cornoTwoMusicVier
+      }
+    >>
+    \header {
+      title = "Vierte Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
     }
-  >>
+  }
 }

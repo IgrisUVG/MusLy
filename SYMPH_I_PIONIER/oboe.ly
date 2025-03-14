@@ -19,7 +19,14 @@ oboeMusic = \relative {
   c2.) g'4( b g8 es' d2 dis h) gis g~ g1 f4 es2.~ es2 r
   \time 3/4
   R2.*15
-  r4 b''2( c4 a g8f-.) des'4( es2~ es4) r2 r es4~ es2 r4
+  r4 b''2( c4 a g8f-.) des'4( es2~ es4) r2 r es4~ es2 r4 R2.*2
+  \time 4/4   
+  \set subdivideBeams = ##f
+  as,,16( a b h c des d es des c h b a as8.) r8 es8.\trill r r2
+  as2.( g4 f es des2~ des2. f4 b2. g4 es' des c2~
+  c) r4 f,8( g16 c des) fes-. ges-. as( ces) es-. f8-- ces( des fes, es
+  b2 as) R1*2 r2 c'
+  \bar "|."
 }
 
 oboeMusicDrei = \relative {

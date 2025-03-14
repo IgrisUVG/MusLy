@@ -2,21 +2,21 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  %meter = "Grave"
-  subtitle = "Clarinetto"
-  subsubtitle = "in B"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
+%\header {
+%  title = "Pioniersymphonie"
+%  %meter = "Grave"
+%  subtitle = "Clarinetto"
+%  subsubtitle = "in B"
+%  composer = "I. G."
+%  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+%}
 
 \paper {
   %#(set-paper-size "a4")
-  top-system-spacing.basic-distance = #25
+  top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #5
-  markup-system-spacing.basic-distance = #20
-  system-system-spacing.basic-distance = #21
+  markup-system-spacing.basic-distance = #15
+  system-system-spacing.basic-distance = #20
   last-bottom-spacing.basic-distance = #15
   left-margin = 15
   right-margin = 15
@@ -37,8 +37,50 @@
 %\include "..\scripts.ly"
 \include "..\clarinet.ly"
 
-\score {
-  \new Staff
-  \transpose b c'
-  \clarinetMusic
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #3 "Pioniersymphonie"}
+    subtitle = "Clarinetto"
+    subsubtitle = "in B"
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+    \transpose b c'
+    \clarinetMusic
+    \header {
+      title = "Erste Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\score {
+  %  \new Staff
+  %  \transpose b c'
+  %  \clarinetMusicDrei
+  %}  
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+    \transpose b c'
+    \clarinetMusicVier
+    \header {
+      title = "Vierte Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
 }

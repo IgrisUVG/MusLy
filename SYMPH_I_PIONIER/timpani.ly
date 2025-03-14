@@ -13,7 +13,10 @@ timpMusic = \relative {
   f'1:32 es1:32 as,16-. r8. r2. r2 b16-. r8. r4 es2:32 as,8-. r4.
   as2:32 r
   \time 3/4
-  R2.*19 r2 as4:32~ as2:32 r4
+  R2.*19 r2 as4:32~ as2:32 r4 R2.*2
+  \time 4/4
+  es'8:32 r8 es8:32 r8 es4:32 as,16 r8. R1 r2 as8:32 b-. r4 R1*8
+  r4. es8 as, r as r as r4. as2:32
 }
 
 timpMusicDrei = \relative {

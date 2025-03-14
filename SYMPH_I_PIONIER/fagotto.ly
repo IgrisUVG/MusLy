@@ -25,7 +25,11 @@ fagottoMusic = \relative {
   des-. c-. b-. as-. g-. as-. b-. c-.
   des-. es-.f-.g-. as-. b-. c-. des( es2--~ es) r
   \time 3/4
-  R2.*20 as,2 r4
+  R2.*20 as,2 r4 R2.*2
+  \time 4/4
+  r4 g2. g16 c,8.~ c2 des16 as' des,8 es2 f r2. f4~( f2 es4 des c b2.)
+  des4( g2. es4 c' b as~ as2.) r4 R1 r2 r8. as16 r8. ges16
+  ces, fes es des as8-. r r16 as b g as8-. r ges16 es fes des es2.
 }
 
 fagottoMusicDrei = \relative {

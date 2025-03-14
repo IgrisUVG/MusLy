@@ -26,7 +26,14 @@ vniOneMusic = \relative {
   es 2.:16~ es4:16 r2 R2.*6
   c'2.( b4 as g f2.~ f2) as4( f'2~ f8 des b2 f4 es b' g'8 f
   es4.) des8( c b a2~ a8 c f4. des8 b' as b, as f4) r8 as,~(
-  as2 c'4~ c2) r4
+  as2 c'4~ c2) r4 R2.*2
+  \time 4/4
+  c1:32 r4 as'2.~( as g4 f1 des2 c4 b c des8 b g4 f
+  es16) c( des es~ es) b( c des~ des) as( b c~ c) des es f
+  \tuplet 3/2 4 {g,8 b es b es g es g b g b es} b'1~ b2 r
+  as,,8( b16 es fes) as b ces( es) ges as8-- es( fes
+  as, ges es4) fes8( b as4) g( as2.)
+  \bar "|."
 }
 
 vniOneMusicDrei = \relative {
@@ -40,6 +47,10 @@ vniOneMusicDrei = \relative {
   \override MultiMeasureRest.expand-limit = #2
   r1*3 r4. h''8 ais2 e8 fis d4. cis8 h4 a r2.
   \bar "||"
+  \unset beamExceptions
+  %\unset baseMoment
+  %\unset beatStructure
+  a4 d8 e fis4( a g) h8( a g fis e d)
 }
 
 vniOneMusicVier = \relative {

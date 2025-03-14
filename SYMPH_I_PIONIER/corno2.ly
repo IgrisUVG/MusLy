@@ -17,7 +17,11 @@ cornoTwoMusic = \relative {
   \clef bass
   c,2( b4 as f es~ es2 g4
   \time 4/4
-  des'2)
+  des'2) r R1*2
+  \clef treble
+  r2. f'4~( f2 es4 des c b2.)
+  des4_( g2. es4 c b as~ as2 g~ g4) r2. R1 r4 ces2.~( ces4 c2.)
+  \bar "|."
 }
 
 cornoTwoMusicDrei = \relative {

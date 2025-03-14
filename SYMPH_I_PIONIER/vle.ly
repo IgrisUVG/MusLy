@@ -29,12 +29,13 @@ vleMusicDrei = \relative {
   \clef alto
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*2
+  R1*2 r8 fis' e2 h8 cis a4. g8 fis4 e c4. d e8 g a4 cis2.
+  \bar "||"
 }
 
 vleMusicVier = \relative {
   \key as \major
-  \time 4/4
+  \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)

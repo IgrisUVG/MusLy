@@ -38,16 +38,18 @@ vniOneMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  r1*3
+  r1*3 r4. h''8 ais2 e8 fis d4. cis8 h4 a r2.
+  \bar "||"
 }
 
 vniOneMusicVier = \relative {
   \key as \major
-  \time 4/4
+  \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  des''2.:16
 }

@@ -26,7 +26,7 @@ timpMusicDrei = \relative {
 
 timpMusicVier = \relative {
   \key as \major
-  \time 4/4
+  \time 3/4
   \clef bass
   \compressFullBarRests
 }

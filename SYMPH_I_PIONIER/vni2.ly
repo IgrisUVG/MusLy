@@ -34,12 +34,13 @@ vniTwoMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*4
+  R1*4 r4 d''8 h a h e, d R1
+  \bar "||"
 }
 
 vniTwoMusicVier = \relative {
   \key as \major
-  \time 4/4
+  \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)

@@ -33,12 +33,15 @@ cbMusicDrei = \relative {
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
   h,,16( h') h h h a fis d' c h ais a d d d d
-  cis c ais g g g g fis e e e e fis g ais h
+  cis c ais g g g g fis e e e e fis g ais h h h h c c c c d
+  es f ges cis, d e e e e a, h cis d d d d c h h h b e, fis g
+  a a a a g g g fis fis e fis g a a g a h h a h cis cis cis cis~ cis2
+  \bar "||"
 }
 
 cbMusicVier = \relative {
   \key as \major
-  \time 4/4
+  \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)

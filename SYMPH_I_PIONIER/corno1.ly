@@ -33,7 +33,7 @@ cornoOneMusicDrei = \relative {
 
 cornoOneMusicVier = \relative {
   \key as \major
-  \time 4/4
+  \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)

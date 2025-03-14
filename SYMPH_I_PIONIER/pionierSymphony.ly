@@ -82,7 +82,8 @@
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
-
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -243,8 +244,11 @@
       %breakbefore = ##t
     }
   }
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     <<
+      %{
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
       \new StaffGroup = "StaffGroup_woodwinds"
       <<
@@ -352,6 +356,7 @@
           \timpMusicDrei
         }
       >>
+      %}
 
       %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
       \new StaffGroup = "StaffGroup_strings" <<
@@ -402,8 +407,8 @@
         %\remove "Timing_translator"
         %\remove "Default_bar_line_engraver"
         %\remove "Bar_number_engraver"
-        \RemoveEmptyStaves
-        \override VerticalAxisGroup.remove-first = ##t
+        %\RemoveEmptyStaves
+        %\override VerticalAxisGroup.remove-first = ##t
       }
     }
     \header {
@@ -412,6 +417,8 @@
       %breakbefore = ##t
     }
   }
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%

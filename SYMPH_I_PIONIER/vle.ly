@@ -17,7 +17,12 @@ vleMusic = \relative {
   as16( g es8~ es2.~ es) es4( f1 fis2 fis4 e) d1~ d2 des
   f16( g as b c des es f as2~ as) r
   \time 3/4
-  R2.*18 r2 r8 es,8~ es2.~ es2 r4
+  R2.*18 r2 r8 es,8~ es2.~ es2 r4 R2.*2
+  \time 4/4
+  des16_( f as c es g b g es c as f es4)
+  r4 es'16 as,8.~ as2 c4_( b as g as2 b4. b'8 as4 des, es f
+  g b, c f, g) r2. R1 g'1~ g2 r es,1~ es4 es es es es es2.
+  \bar "|."
 }
 
 vleMusicDrei = \relative {

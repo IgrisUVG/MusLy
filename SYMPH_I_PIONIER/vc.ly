@@ -21,7 +21,12 @@ vcMusic = \relative {
   b'2 r4 as'8 des, es4 r as,8 c es f <c as'>4. c8 es f b,4
   b1 dis e~ e2 es b as~ as r
   \time 3/4
-  R2.*18 r2 r8 <as c>8~ q2.~ q2 r4
+  R2.*18 r2 r8 <as c>8~ q2.~ q2 r4 R2.*2
+  \time 4/4
+  des2.:16 as4 R1*2 r4 f'2.~ f2:16 es4:16 des4:16 c4:16 b2.:16~
+  b2:16 as4:16 g4:16 es2.:16~ es8:16 es8 R1*2
+  as1~ as4 as as as as as2.
+  \bar "|."
 }
 
 vcMusicDrei = \relative {

@@ -92,7 +92,7 @@ clarinetMusic = \relative {
   r16 des,8.~ des b'16->( a) b,8.-. h16->( c8.~ c2.) b4( as g f2~
   f2. as4 des2. b4 g' f es2~ es) r4 es,8( f16 b
   c) es-. f-. g( b) des-. es8-- b( c es, des b4) ces16( f es des es2)
-  r2 fes4.( es8 des ces b2~ b8) des ges4. es ces'4 b as2.
+  r2 fes4.( es8 des ces b2~ b8) des( ges4. es ces'4 b as2.)
   \bar "|."
 }
 

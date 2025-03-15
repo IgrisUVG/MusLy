@@ -43,8 +43,7 @@
   }
   \header {
     title = \markup {\fontsize #3 "Pioniersymphonie"}
-    subtitle = "Timpani"
-    subsubtitle = "As Es B F"
+    subtitle = "Violini I"
     %meter = "Grave"
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -56,17 +55,22 @@
     \header {
       title = "Erste Teil"
       subtitle = ##f
-      subsubtitle = ##f
       composer = ##f
       %breakbefore = ##t
     }
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new Staff
-  %  \vniOneMusicDrei
-  %}
+  \score {
+    \new Staff
+    \vniOneMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
@@ -75,7 +79,6 @@
     \header {
       title = "Vierte Teil"
       subtitle = ##f
-      subsubtitle = ##f
       composer = ##f
       %breakbefore = ##t
     }

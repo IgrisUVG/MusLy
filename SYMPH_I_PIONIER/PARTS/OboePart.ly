@@ -10,6 +10,8 @@
 %  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 %}
 
+#(ly:set-option 'relative-includes #t)
+
 \paper {
   %#(set-paper-size "a4")
   top-system-spacing.basic-distance = #15

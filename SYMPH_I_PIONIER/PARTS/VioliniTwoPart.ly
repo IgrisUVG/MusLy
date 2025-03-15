@@ -2,20 +2,21 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  subtitle = "Violini II"
-  %meter = "Grave"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
+%\header {
+%  title = "Pioniersymphonie"
+%  subtitle = "Violini II"
+%  %meter = "Grave"
+%  composer = "I. G."
+%  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+%}
 
 #(ly:set-option 'relative-includes #t)
+
 \paper {
   %#(set-paper-size "a4")
-  top-system-spacing.basic-distance = #20
+  top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #5
-  markup-system-spacing.basic-distance = #20
+  markup-system-spacing.basic-distance = #15
   system-system-spacing.basic-distance = #18
   last-bottom-spacing.basic-distance = #15
   left-margin = 15
@@ -36,6 +37,50 @@
 
 \include "../vni2.ly"
 
-\score {
-  \new Staff \vniTwoMusic
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #3 "Pioniersymphonie"}
+    subtitle = "Violini II"
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+    \vniTwoMusic
+    \header {
+      title = "Erste Teil"
+      subtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+    \vniTwoMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new Staff
+    \vniTwoMusicVier
+    \header {
+      title = "Vierte Teil"
+      subtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
 }

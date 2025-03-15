@@ -50,7 +50,63 @@ vniOneMusicDrei = \relative {
   \unset beamExceptions
   %\unset baseMoment
   %\unset beatStructure
-  a4 d8 e fis4( a g) h8( a g fis e d)
+  a4 d8 e fis4( a g) h8( a g fis e d fis4) a8( g fis e d cis
+  d4) h8( ais h4) \tuplet 3/2 {cis,8( d e} d2) e fis
+  <<
+    {
+      g2
+    }
+    \\
+    {
+      r4 e
+    }
+  >>
+  e2 h cis1
+  #(define afterGraceFraction (cons 15 16))
+  \afterGrace d''1\startTrillSpan {cis16(\stopTrillSpan d} a2) d4 e
+  fis2 a g h4 a g fis e d8 r R1 r2 cis4( h a g) g( fis e d fis2) e r R1
+  r2.
+  <<
+    {
+      s4 d''2
+    }
+    \\
+    {
+      \voiceOne
+      %\omit TupletNumber
+      s8 \tuplet 3/2 {fis,16 a a^~}
+      \stemDown
+      a2
+    }
+    \\
+    {
+      \voiceTwo
+      %\omit TupletNumber
+      \omit TupletBracket
+      \once \override Rest.Y-offset = 3
+      \tuplet 3/2 {r16 fis fis} fis8~\noBeam fis2
+    }
+  >>
+  cis'32 b a g e d cis b
+  g' e d cis b a g e
+  cis' b a g e d cis b
+  g' e d cis b a g e
+  r2 R1
+  \repeat tremolo 16 {d''32 fis} \repeat tremolo 16 {d32 fis}
+  \repeat tremolo 8 {d32 fis}
+  \repeat tremolo 4 {cis32 fis} \repeat tremolo 4 {cis32 e}
+  \repeat tremolo 12 {d32 fis}
+  \repeat tremolo 2 {cis32 fis} \repeat tremolo 2 {cis32 e}
+  \tuplet 9/8 2 {
+    d'16 a fis d a gis a d fis
+    a fis d a fis eis fis a d
+    fis d a fis d cis d fis a
+    d a fis  d a gis a d fis
+    a fis d a fis eis fis a d
+    fis d a fis d cis d fis a
+    d a fis  d a gis a d fis
+  }
+  r2 R1*3
 }
 
 vniOneMusicVier = \relative {

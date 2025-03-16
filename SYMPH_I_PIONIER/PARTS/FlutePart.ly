@@ -56,15 +56,19 @@
       title = "Erste Teil"
       subtitle = ##f
       composer = ##f
-      %breakbefore = ##t
     }
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new Staff
-  %  \fluteMusicDrei
-  %}
+  \score {
+    \new Staff
+    \fluteMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+    }
+  }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
@@ -74,7 +78,6 @@
       title = "Vierte Teil"
       subtitle = ##f
       composer = ##f
-      %breakbefore = ##t
     }
   }
 }

@@ -42,6 +42,9 @@ vcMusicDrei = \relative {
   h h h c c c c d es f ges a g e e e e e e e d d d d c h h h b b b b
   a a a a g g g h h h c c c d d d e e e fis fis g a <fis h>~ q2
   \bar "||"
+  \unset beamExceptions
+  R1*6 h,4 e8 fis g4( h a) cis8( h a g fis e d1)
+  \repeat unfold 10 {a8-.} r2.
 }
 
 vcMusicVier = \relative {

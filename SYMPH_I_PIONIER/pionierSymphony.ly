@@ -9,7 +9,7 @@
   %#(set-paper-size "a4")
   indent = 1.5\cm
   short-indent = 1.0\cm
-  
+
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   %markup-system-spacing.basic-distance = #26
@@ -22,7 +22,7 @@
 \layout {
   \context {
     \Score
-    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {
@@ -30,7 +30,7 @@
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
     %\remove "Bar_number_engraver"
-    \RemoveEmptyStaves
+    %\RemoveEmptyStaves
     %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
@@ -83,7 +83,7 @@
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
-  
+
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   %{
   \score {
@@ -250,9 +250,13 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     <<
-      %{
+      %{%}
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
       \new StaffGroup = "StaffGroup_woodwinds"
+      \with {
+        \RemoveEmptyStaves
+        \override VerticalAxisGroup.remove-first = ##t
+      }
       <<
         \new Staff = "Staff_flute" {
           \set Staff.instrumentName = #"Flauto"
@@ -290,6 +294,10 @@
 
       %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
       \new StaffGroup = "StaffGroup_brass"
+      \with {
+        \RemoveEmptyStaves
+        \override VerticalAxisGroup.remove-first = ##t
+      }
       <<
         \new StaffGroup = "GrandStaff_corni" \with {
           instrumentName = \markup {
@@ -342,6 +350,8 @@
         %\override StaffSymbol.staff-space = #(magstep 1)
         %\override StaffGrouper.staff-staff-spacing.basic-distance = #15
         %\consists #Span_stem_engraver
+        \RemoveEmptyStaves
+        \override VerticalAxisGroup.remove-first = ##t
       }
       <<
         \new Staff = "RH" \RemoveEmptyStaves \rechtsDrei
@@ -351,7 +361,12 @@
       >>
 
       %%%%%%%%%%%%%%%% DRUMS %%%%%%%%%%%%%%%%
-      \new StaffGroup = "StaffGroup_drums" <<
+      \new StaffGroup = "StaffGroup_drums"
+      \with {
+        \RemoveEmptyStaves
+        \override VerticalAxisGroup.remove-first = ##t
+      }
+      <<
         \new Staff = "Staff_timpani" {
           \set Staff.instrumentName = #"Timpani"
           \set Staff.shortInstrumentName = #"Timp"
@@ -361,7 +376,8 @@
       %}
 
       %%%%%%%%%%%%%%% STRINGS %%%%%%%%%%%%%%%
-      \new StaffGroup = "StaffGroup_strings" <<
+      \new StaffGroup = "StaffGroup_strings"
+      <<
         \new StaffGroup = "GrandStaff_violins" \with {
           systemStartDelimiter = #'SystemStartSquare
         }
@@ -419,8 +435,9 @@
       %breakbefore = ##t
     }
   }
-  %{
+
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%

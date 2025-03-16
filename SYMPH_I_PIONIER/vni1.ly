@@ -62,7 +62,7 @@ vniOneMusicDrei = \relative {
     }
   >>
   e2 h cis1
-  #(define afterGraceFraction (cons 15 16))
+  #(define afterGraceFraction (cons 31 32))
   \afterGrace d''1\startTrillSpan {cis16(\stopTrillSpan d} a2) d4 e
   fis2 a g h4 a g fis e d8 r R1 r2 cis4( h a g) g( fis e d fis2) e r R1
   r2.
@@ -83,8 +83,8 @@ vniOneMusicDrei = \relative {
       \voiceTwo
       %\omit TupletNumber
       \omit TupletBracket
-      \once \override Rest.Y-offset = 3
-      \tuplet 3/2 {r16 fis fis} fis8~\noBeam fis2
+      \once \override TupletNumber.Y-offset = -1.3
+      \tuplet 3/2 {r16[ fis fis]} fis8~\noBeam fis2
     }
   >>
   cis'32 b a g e d cis b
@@ -99,6 +99,8 @@ vniOneMusicDrei = \relative {
   \repeat tremolo 2 {cis32 fis} \repeat tremolo 2 {cis32 e}
   \tuplet 9/8 2 {
     d'16 a fis d a gis a d fis
+    \omit TupletNumber
+    \omit TupletBracket
     a fis d a fis eis fis a d
     fis d a fis d cis d fis a
     d a fis  d a gis a d fis
@@ -107,6 +109,28 @@ vniOneMusicDrei = \relative {
     d a fis  d a gis a d fis
   }
   r2 R1*3
+  \tuplet 3/2 4 {
+    \undo \omit TupletNumber
+    a8( h cis)
+    \omit TupletNumber
+    d4( h8) fis'( e d) d4( cis8) cis( d e) fis4( d8) a'( g fis) fis4( e8)
+    e( fis g) a4( fis8) g( a h) c4( a8) h( cis? d)
+  }
+  eis4~
+  \undo \omit TupletNumber
+  \undo \omit TupletBracket
+  \tuplet 3/2 {eis8 gis,,4~} gis4 R1
+  \tuplet 9/8 2 {
+    cis''16 a fis cis a gis a cis fis
+    \omit TupletNumber
+    a fis cis a fis eis fis a cis
+    fis cis a fis cis his cis fis a
+    cis a fis cis a gis a cis fis
+    a fis cis a fis eis fis a cis
+    fis cis a fis cis his cis fis a
+  }
+  R1 \repeat unfold 2 {e'8-- fis-- e'4--}
+  b,1
 }
 
 vniOneMusicVier = \relative {

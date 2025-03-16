@@ -36,6 +36,78 @@ vleMusicDrei = \relative {
   \override MultiMeasureRest.expand-limit = #2
   R1*2 r8 fis' e2 h8 cis a4. g8 fis4 e c4. d e8 g a4 cis2.
   \bar "||"
+  \unset beamExceptions
+  R1*3 fis,4 h8 cis d4( fis e) g8( fis e d cis h d4) fis8( e d cis h a
+  gis2) g a1~ a
+  \tuplet 3/2 8 {
+    \omit TupletBracket
+    a16( h c) fis,( g a)
+    \omit TupletNumber
+    d,( e fis) e( fis g) g( a h) a( h c) d( a fis) g( fis cis?)
+  }
+  d8 a' fis fis' f e d a
+  \tuplet 3/2 {h16( d h)} r8 fis d' g, a a
+  \tuplet 3/2 8 {
+    d16( cis h
+    a g fis) h( a g fis e d) a'( g fis e d cis
+  }
+  d4) r8 R1*4 r8
+  <<
+    {
+      \omit TupletBracket
+      \omit TupletNumber
+      s8 \tuplet 3/2 8 {cis'16 a' a a a a}
+    }
+    \\
+    {
+      \omit TupletBracket
+      \tuplet 3/2 {r16[ cis, cis]} cis4
+    }
+  >>
+  <g' b>8 r4. f2 r4 r8 \tuplet 3/2 {r16[ d d]}
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  <<
+    {
+      s8 \tuplet 3/2 {fis16 a a} a4~
+      \stemDown
+      a2~ a
+    }
+    \\
+    {
+      \voiceOne
+      \tuplet 3/2 {d,16 fis fis}
+      \stemDown
+      fis4._~ fis2~ fis
+    }
+    \\
+    {
+      \voiceTwo
+      d2~ d~ d
+    }
+  >>
+  r2 r2. g32 e d cis b a g e R1*2
+  a4 d8 e fis4( a g) h8( a g fis e d fis4) a8( g fis e d cis)
+  R1 r2 a a a r
+  \undo \omit TupletNumber
+  \tuplet 9/8 2 {a'16 fis d a fis eis fis a d}
+  \tuplet 3/2 4 {
+    a8( h cis)
+    \omit TupletNumber
+    d4( h8) fis'( e d) d4( cis8) cis( d e) fis4( d8) a'( g fis) fis4( e8)
+    e( fis g) a4( fis8) fis( g a) h4( a8)
+    a,8( h cis) d4( h8) fis'( e d) d4( cis8)
+    cis( d e) fis4( d8) a'( g fis) fis4( e8)
+    e( fis g) a4( fis8) g( a h) c4( a8)
+  }
+  \undo \omit TupletNumber
+  \tuplet 6/4 {h,16 cis es gis h cis} r2. R1*2 r2 a, a a
+  \tuplet 9/8 2 {
+    cis'16 a fis cis a gis a cis fis
+    \omit TupletNumber
+    a fis cis a fis eis fis a cis
+  }
+  R1 cis
 }
 
 vleMusicVier = \relative {

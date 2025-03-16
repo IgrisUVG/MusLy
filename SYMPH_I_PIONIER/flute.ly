@@ -41,6 +41,7 @@ fluteMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50 e'''1
 }
 
 fluteMusicVier = \relative {

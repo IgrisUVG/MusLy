@@ -12,7 +12,7 @@ cbMusic = \relative {
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
   des8->( g,) as->( es) c'4 des as es' f, c'
-  des,8( c b4-.) des8( c b4)  
+  des,8( c b4-.) des8( c b4)
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(2 2 2 2)
@@ -42,6 +42,18 @@ cbMusicDrei = \relative {
   es f ges cis, d e e e e a, h cis d d d d c h h h b e, fis g
   a a a a g g g fis fis e fis g a a g a h h a h cis cis cis cis~ cis2
   \bar "||"
+  \unset beamExceptions
+  R1*8 d,1 \repeat unfold 3 {d4 fis8( a h cis h a)} d,1~ d4. cis8 h e4.~
+  e2 a,~ a1 R1 a2 r r
+  <<
+    {
+
+    }
+    \\
+    {
+
+    }
+  >>
 }
 
 cbMusicVier = \relative {

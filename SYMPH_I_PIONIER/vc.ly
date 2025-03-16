@@ -44,7 +44,44 @@ vcMusicDrei = \relative {
   \bar "||"
   \unset beamExceptions
   R1*6 h,4 e8 fis g4( h a) cis8( h a g fis e d1)
-  \repeat unfold 10 {a8-.} r2.
+  \repeat unfold 10 {a8-.} r2. R1 r2.
+  g'16 a32( h c h a g
+  fis16) g32( a h a g fis
+  e16) fis32( g a g fis e
+  d16) e32( fis g fis e d
+  cis16) d32( e fis e d cis
+  h16) cis32( d e d cis h
+  a4) r2 R1*2
+  <<
+    {
+      \tuplet 3/2 {r16[ a e']} e4.
+    }
+    \\
+    {
+      \omit TupletNumber
+      \tuplet 3/2 {s16 a,8~} a4.
+    }
+  >>
+  <cis' e>8 r4. <h d>2 r8 \tuplet 3/2 {r16[ fis fis]}
+  <<
+    {
+      \omit TupletBracket
+      \tuplet 3/2 {fis16 a a} a8\noBeam~ a1~ a2
+    }
+    \\
+    {
+      fis4~ fis1~ fis2
+    }
+  >>
+  r2 R1 cis'32 b a g e d cis b r2. R1*4
+  d4 g8 a h4( d cis) e8( d cis h a g a4) h8( a g fis e d
+  e4) g8( fis e d cis h) a4( h g a~ a h his cis~ cis2 d)
+  cis4( d2 e4 fis2. g4 a2 d,) R1 r4
+  \tuplet 6/4 4 {
+    cis'16 h gis eis cis h gis eis cis eis gis h
+  }
+  r4 fis'4 h8 cis d4( fis e) g8( fis e d cis h cis4) d8( cis h a g fis
+  g4) h8( a g fis e d cis1) g
 }
 
 vcMusicVier = \relative {

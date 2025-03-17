@@ -98,6 +98,11 @@ linksDrei = \relative {
   \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \cadenzaOn
+  \clef treble
+  s1*2 s4. s16
+  \cadenzaOff
 }
 
 linksVier = \relative {

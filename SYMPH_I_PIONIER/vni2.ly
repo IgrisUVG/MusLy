@@ -139,7 +139,9 @@ vniTwoMusicDrei = \relative {
   }
   r2 gis4 a2 a a r R1 a'2 a
   \repeat tremolo 8 {a32 cis} \repeat tremolo 8 {a32 c}
-  b1
+  \cadenzaOn
+  b1~ b  s4. s16
+  \cadenzaOff
 }
 
 vniTwoMusicVier = \relative {

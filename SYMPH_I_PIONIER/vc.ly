@@ -81,7 +81,10 @@ vcMusicDrei = \relative {
     cis'16 h gis eis cis h gis eis cis eis gis h
   }
   r4 fis'4 h8 cis d4( fis e) g8( fis e d cis h cis4) d8( cis h a g fis
-  g4) h8( a g fis e d cis1) g
+  g4) h8( a g fis e d cis1) 
+  \cadenzaOn
+  g1~ g  s4. s16
+  \cadenzaOff
 }
 
 vcMusicVier = \relative {
@@ -90,7 +93,7 @@ vcMusicVier = \relative {
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
-  \clef "bass_8"
+  \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
 }

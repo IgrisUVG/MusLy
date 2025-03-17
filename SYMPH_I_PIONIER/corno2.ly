@@ -33,6 +33,10 @@ cornoTwoMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \cadenzaOn
+  e1~ e  s4. s16
+  \cadenzaOff
 }
 
 cornoTwoMusicVier = \relative {

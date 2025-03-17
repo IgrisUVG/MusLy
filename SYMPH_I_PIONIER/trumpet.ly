@@ -30,6 +30,10 @@ trumpetMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \cadenzaOn
+  <e'' g>1~ q  s4. s16
+  \cadenzaOff
 }
 
 trumpetMusicVier = \relative {

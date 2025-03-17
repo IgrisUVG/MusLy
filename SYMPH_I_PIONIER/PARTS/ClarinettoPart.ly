@@ -45,7 +45,7 @@
   }
   \header {
     title = \markup {\fontsize #3 "Pioniersymphonie"}
-    subtitle = "Clarinetto"
+    subtitle = "Clarinetti"
     subsubtitle = "in B"
     %meter = "Grave"
     composer = "I. G."
@@ -66,11 +66,16 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new Staff
-  %  \transpose b c'
-  %  \clarinetMusicDrei
-  %}  
+  \score {
+    \new Staff
+    \transpose b c'
+    \clarinetMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+    }
+  }  
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {

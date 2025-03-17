@@ -64,10 +64,15 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new Staff
-  %  \timpMusicDrei
-  %}
+  \score {
+    \new Staff
+    \timpMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+    }
+  }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {

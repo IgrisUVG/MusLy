@@ -74,19 +74,24 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new StaffGroup = "GrandStaff_corni"
-  %  <<
-  %    \new Staff = "Staff_hornI" {
-  %      \transpose f c'
-  %      \cornoOneMusicDrei
-  %    }
-  %    \new Staff = "Staff_horn2" {
-  %      \transpose f c'
-  %      \cornoTwoMusicDrei
-  %    }
-  %  >>
-  %}
+  \score {
+    \new StaffGroup = "GrandStaff_corni"
+    <<
+      \new Staff = "Staff_hornI" {
+        \transpose f c'
+        \cornoOneMusicDrei
+      }
+      \new Staff = "Staff_horn2" {
+        \transpose f c'
+        \cornoTwoMusicDrei
+      }
+    >>
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+    }
+  }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {

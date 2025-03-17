@@ -61,10 +61,15 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new Staff
-  %  \fagottoMusicDrei
-  %}
+  \score {
+    \new Staff
+    \fagottoMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+    }
+  }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {

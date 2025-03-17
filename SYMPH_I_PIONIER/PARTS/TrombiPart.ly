@@ -65,11 +65,16 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %\score {
-  %  \new Staff
-  %  \transpose b c'
-  %  \trumpetMusicDrei
-  %}
+  \score {
+    \new Staff
+    \transpose b c'
+    \trumpetMusicDrei
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      composer = ##f
+    }
+  }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {

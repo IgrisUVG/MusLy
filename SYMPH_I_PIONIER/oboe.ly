@@ -38,6 +38,10 @@ oboeMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \cadenzaOn
+  b'1~ b  s4. s16
+  \cadenzaOff
 }
 
 oboeMusicVier = \relative {

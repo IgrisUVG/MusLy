@@ -25,6 +25,10 @@ timpMusicDrei = \relative {
   \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \cadenzaOn
+  b,1:32~ b1:32  s4. s16
+  \cadenzaOff
 }
 
 timpMusicVier = \relative {

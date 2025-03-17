@@ -41,6 +41,10 @@ fagottoMusicDrei = \relative {
   \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \cadenzaOn
+  e1~ e  s4. s16
+  \cadenzaOff
 }
 
 fagottoMusicVier = \relative {

@@ -57,7 +57,9 @@
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
+  
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new PianoStaff
     <<
@@ -74,8 +76,26 @@
       %breakbefore = ##t
     }
   }
-
+  %}
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \score {
+    \new PianoStaff
+    <<
+      \new Staff = "RH" \rechtsDrei
+      %\new Dynamics = "DYN" \dynamic
+      \new Staff = "LH" \linksDrei
+      %\new Dynamics = "PED" \pedal
+    >>
+    \header {
+      title = "Dritte Teil"
+      subtitle = ##f
+      subsubtitle = ##f
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new PianoStaff
     <<
@@ -92,4 +112,5 @@
       %breakbefore = ##t
     }
   }
+  %}
 }

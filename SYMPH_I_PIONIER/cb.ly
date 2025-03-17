@@ -58,7 +58,9 @@ cbMusicDrei = \relative {
   a1~ a~ a a4_( h g a~ a h his cis~ cis2 d) R1
   r2. \tuplet 6/4 {gis16 eis cis h a gis} fis1 R1*3
   a1:16%-"stacc."
-  e1
+  \cadenzaOn
+  e1~ e  s4. s16
+  \cadenzaOff
 }
 
 cbMusicVier = \relative {

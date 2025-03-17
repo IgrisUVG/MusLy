@@ -130,7 +130,9 @@ vniOneMusicDrei = \relative {
     fis cis a fis cis his cis fis a
   }
   R1 \repeat unfold 2 {e'8-- fis-- e'4--}
-  b,1
+  \cadenzaOn
+  b,1~ b  s4. s16
+  \cadenzaOff
 }
 
 vniOneMusicVier = \relative {

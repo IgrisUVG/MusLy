@@ -107,7 +107,10 @@ vleMusicDrei = \relative {
     \omit TupletNumber
     a fis cis a fis eis fis a cis
   }
-  R1 cis
+  R1
+  \cadenzaOn
+  cis1~ cis  s4. s16
+  \cadenzaOff
 }
 
 vleMusicVier = \relative {

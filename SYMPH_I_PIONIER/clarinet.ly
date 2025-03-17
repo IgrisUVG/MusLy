@@ -104,7 +104,11 @@ clarinetMusicDrei = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  \override MultiMeasureRest.expand-limit = #2
+  \override MultiMeasureRest.expand-limit = #2  
+  R1*50
+  \cadenzaOn
+  <cis'' b'>1~ q  s4. s16
+  \cadenzaOff
 }
 
 clarinetMusicVier = \relative {

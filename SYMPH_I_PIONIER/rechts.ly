@@ -117,6 +117,25 @@ rechtsDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  R1*50
+  \break
+  \cadenzaOn
+  \omit TupletBracket
+  \bot \tuplet 5/4 {b32[( cis e g b]} \top \tuplet 5/4 {cis[ e g b cis])}
+  \bot cis,,[( e g b] \top \tuplet 5/4 {cis[ e g b cis])}
+  \bot e,,[( g b \top cis] e[ g b cis])
+  \bot \tuplet 3/2 {g,[( b cis]} \top e[ g b cis])
+  \bot \tuplet 3/2 {b,[( cis e]}
+  \bar ""
+  \top \tuplet 3/2 {g[ b cis])}
+  \bot \tuplet 3/2 {cis,[( e g]} \top b[ cis])
+  \bar ""
+  \bot e,[( g] \top b[ cis]) \bot g[( b] \top cis[ e])
+  \bot b[( cis] \top e[ g]) \bot cis,[( e] \top g[ b])
+  b[( g e cis] g'[ e cis b])
+  \bot cis[( e] \top g[ b]) \bot cis,[( e] \top g[ b])
+  b[( g e cis] g'[ e cis b])
+  \cadenzaOff
 }
 
 rechtsVier = \relative {

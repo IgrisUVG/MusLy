@@ -2,12 +2,12 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  %meter = "Grave"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
+%\header {
+%  title = "Pioniersymphonie"
+%  %meter = "Grave"
+%  composer = "I. G."
+%  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+%}
 
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
@@ -39,8 +39,8 @@
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
     %\remove "Bar_number_engraver"
-    \RemoveEmptyStaves
-    \override VerticalAxisGroup.remove-first = ##t
+    %\RemoveEmptyStaves
+    %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
     \Staff
@@ -57,44 +57,161 @@
 \include "../vc.ly"
 \include "../cb.ly"
 
-\score {
-  \new StaffGroup = "StaffGroup_strings" <<
-    \new StaffGroup = "GrandStaff_violins" \with {
-      systemStartDelimiter = #'SystemStartSquare
-    }
-    <<
-      \new Staff = "Staff_violinI" {
-        \set Staff.instrumentName = #"Violini I"
-        \set Staff.shortInstrumentName = #"V-ni I"
-        \vniOneMusic
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #4 "Pioniersymphonie"}
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  \score {
+    \new StaffGroup = "StaffGroup_strings" <<
+      \new StaffGroup = "GrandStaff_violins" \with {
+        systemStartDelimiter = #'SystemStartSquare
+      }
+      <<
+        \new Staff = "Staff_violinI" {
+          \set Staff.instrumentName = #"Violini I"
+          \set Staff.shortInstrumentName = #"V-ni I"
+          \vniOneMusic
+        }
+
+        \new Staff = "Staff_violinII" {
+          \set Staff.instrumentName = #"Violini II"
+          \set Staff.shortInstrumentName = #"V-ni II"
+          \vniTwoMusic
+        }
+      >>
+      \new Staff = "Staff_viola" {
+        \set Staff.instrumentName = #"Viole"
+        \set Staff.shortInstrumentName = #"V-le"
+        \vleMusic
       }
 
-      \new Staff = "Staff_violinII" {
-        \set Staff.instrumentName = #"Violini II"
-        \set Staff.shortInstrumentName = #"V-ni II"
-        \vniTwoMusic
+      \new StaffGroup = "GrandStaff_bassi" \with {
+        systemStartDelimiter = #'SystemStartSquare
       }
+      <<
+        \new Staff = "Staff_cello" {
+          \set Staff.instrumentName = #"Violoncelli"
+          \set Staff.shortInstrumentName = #"Vc"
+          \vcMusic
+        }
+        \new Staff = "Staff_bass" {
+          \set Staff.instrumentName = #"Contrabassi"
+          \set Staff.shortInstrumentName = #"Cb"
+          \cbMusic
+        }
+      >>
     >>
-    \new Staff = "Staff_viola" {
-      \set Staff.instrumentName = #"Viole"
-      \set Staff.shortInstrumentName = #"V-le"
-      \vleMusic
+    \header {
+      title = "Erste Teil"
+      composer = ##f
+      %breakbefore = ##t
     }
+  }
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  \score {
+    \new StaffGroup = "StaffGroup_strings" <<
+      \new StaffGroup = "GrandStaff_violins" \with {
+        systemStartDelimiter = #'SystemStartSquare
+      }
+      <<
+        \new Staff = "Staff_violinI" {
+          \set Staff.instrumentName = #"Violini I"
+          \set Staff.shortInstrumentName = #"V-ni I"
+          \vniOneMusicDrei
+        }
 
-    \new StaffGroup = "GrandStaff_bassi" \with {
-      systemStartDelimiter = #'SystemStartSquare
-    }
-    <<
-      \new Staff = "Staff_cello" {
-        \set Staff.instrumentName = #"Violoncelli"
-        \set Staff.shortInstrumentName = #"Vc"
-        \vcMusic
+        \new Staff = "Staff_violinII" {
+          \set Staff.instrumentName = #"Violini II"
+          \set Staff.shortInstrumentName = #"V-ni II"
+          \vniTwoMusicDrei
+        }
+      >>
+      \new Staff = "Staff_viola" {
+        \set Staff.instrumentName = #"Viole"
+        \set Staff.shortInstrumentName = #"V-le"
+        \vleMusicDrei
       }
-      \new Staff = "Staff_bass" {
-        \set Staff.instrumentName = #"Contrabassi"
-        \set Staff.shortInstrumentName = #"Cb"
-        \cbMusic
+
+      \new StaffGroup = "GrandStaff_bassi" \with {
+        systemStartDelimiter = #'SystemStartSquare
       }
+      <<
+        \new Staff = "Staff_cello" {
+          \set Staff.instrumentName = #"Violoncelli"
+          \set Staff.shortInstrumentName = #"Vc"
+          \vcMusicDrei
+        }
+        \new Staff = "Staff_bass" {
+          \set Staff.instrumentName = #"Contrabassi"
+          \set Staff.shortInstrumentName = #"Cb"
+          \cbMusicDrei
+        }
+      >>
     >>
-  >>
+    \header {
+      title = "Dritte Teil"
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  \score {
+    \new StaffGroup = "StaffGroup_strings" <<
+      \new StaffGroup = "GrandStaff_violins" \with {
+        systemStartDelimiter = #'SystemStartSquare
+      }
+      <<
+        \new Staff = "Staff_violinI" {
+          \set Staff.instrumentName = #"Violini I"
+          \set Staff.shortInstrumentName = #"V-ni I"
+          \vniOneMusicVier
+        }
+
+        \new Staff = "Staff_violinII" {
+          \set Staff.instrumentName = #"Violini II"
+          \set Staff.shortInstrumentName = #"V-ni II"
+          \vniTwoMusicVier
+        }
+      >>
+      \new Staff = "Staff_viola" {
+        \set Staff.instrumentName = #"Viole"
+        \set Staff.shortInstrumentName = #"V-le"
+        \vleMusicVier
+      }
+
+      \new StaffGroup = "GrandStaff_bassi" \with {
+        systemStartDelimiter = #'SystemStartSquare
+      }
+      <<
+        \new Staff = "Staff_cello" {
+          \set Staff.instrumentName = #"Violoncelli"
+          \set Staff.shortInstrumentName = #"Vc"
+          \vcMusicVier
+        }
+        \new Staff = "Staff_bass" {
+          \set Staff.instrumentName = #"Contrabassi"
+          \set Staff.shortInstrumentName = #"Cb"
+          \cbMusicVier
+        }
+      >>
+    >>
+    \header {
+      title = "Vierte Teil"
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
 }

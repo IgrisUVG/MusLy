@@ -2,12 +2,12 @@
 
 \language "deutsch"
 
-\header {
-  title = "Pioniersymphonie"
-  %meter = "Grave"
-  composer = "I. G."
-  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
-}
+%\header {
+%  title = "Pioniersymphonie"
+%  %meter = "Grave"
+%  composer = "I. G."
+%  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+%}
 
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
@@ -56,39 +56,58 @@
 \include "../clarinet.ly"
 \include "../fagotto.ly"
 
-\score {
-  \new StaffGroup = "StaffGroup_woodwinds" <<
-    \new Staff = "Staff_flute" {
-      \set Staff.instrumentName = #"3 Flauti"
-      \set Staff.shortInstrumentName = #"Fl"
-      \fluteMusic
-    }
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+  \header {
+    title = \markup {\fontsize #4 "Pioniersymphonie"}
+    %meter = "Grave"
+    composer = "I. G."
+    tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
+  }
 
-    \new Staff = "Staff_oboe" {
-      \set Staff.instrumentName = #"3 Oboi"
-      \set Staff.shortInstrumentName = #"Ob"
-      \oboeMusic
-    }
-    \new Staff = "Staff_clarinet" {
-      \set Staff.instrumentName = \markup {
-        \right-column {
-          "Clarinetto"
-          \line { "in B" }
-        }
+  %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \score {
+    \new StaffGroup = "StaffGroup_woodwinds" <<
+      \new Staff = "Staff_flute" {
+        \set Staff.instrumentName = #"3 Flauti"
+        \set Staff.shortInstrumentName = #"Fl"
+        \fluteMusic
       }
-      \set Staff.shortInstrumentName = \markup {
-        \right-column {
-          "Cl"
-          \line { "in B" }
-        }
+
+      \new Staff = "Staff_oboe" {
+        \set Staff.instrumentName = #"3 Oboi"
+        \set Staff.shortInstrumentName = #"Ob"
+        \oboeMusic
       }
-      \transpose b c'
-      \clarinetMusic
+      \new Staff = "Staff_clarinet" {
+        \set Staff.instrumentName = \markup {
+          \right-column {
+            "Clarinetto"
+            \line { "in B" }
+          }
+        }
+        \set Staff.shortInstrumentName = \markup {
+          \right-column {
+            "Cl"
+            \line { "in B" }
+          }
+        }
+        \transpose b c'
+        \clarinetMusic
+      }
+      \new Staff = "Staff_fagotti" {
+        \set Staff.instrumentName = #"Fagotto"
+        \set Staff.shortInstrumentName = #"Fag"
+        \fagottoMusic
+      }
+    >>
+    \header {
+      title = "Erste Teil"
+      composer = ##f
+      %breakbefore = ##t
     }
-    \new Staff = "Staff_fagotti" {
-      \set Staff.instrumentName = #"Fagotto"
-      \set Staff.shortInstrumentName = #"Fag"
-      \fagottoMusic
-    }
-  >>
+  }
 }

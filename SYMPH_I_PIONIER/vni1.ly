@@ -45,7 +45,7 @@ vniOneMusicDrei = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  r1*3 r4. h''8 ais2 e8 fis d4. cis8 h4 a r2.
+  R1*3 r4. h''8 ais2 e8 fis d4. cis8 h4 a r2.
   \bar "||"
   \unset beamExceptions
   %\unset baseMoment

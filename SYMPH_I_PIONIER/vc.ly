@@ -75,7 +75,7 @@ vcMusicDrei = \relative {
   >>
   r2 R1 cis'32 b a g e d cis b r2. R1*4
   d4 g8 a h4( d cis) e8( d cis h a g a4) h8( a g fis e d
-  e4) g8( fis e d cis h) a4( h g a~ a h his cis~ cis2 d)
+  e4) g8( fis e d cis h) a4_( h g a~ a h his cis~ cis2 d)
   cis4( d2 e4 fis2. g4 a2 d,) R1 r4
   \tuplet 6/4 4 {
     cis'16 h gis eis cis h gis eis cis eis gis h

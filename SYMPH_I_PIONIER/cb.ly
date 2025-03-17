@@ -47,13 +47,18 @@ cbMusicDrei = \relative {
   e2 a,~ a1 R1 a2 r r
   <<
     {
-
+      \tuplet 3/2 {r16[ d' d]} d4.~ d1~ d2
     }
     \\
     {
-
+      d,2~ d1~ d2
     }
   >>
+  r2 R1 r4 cis'32 b a g e d cis b a2~ a1~ a R1*2 d1 R1*3
+  a1~ a~ a a4_( h g a~ a h his cis~ cis2 d) R1
+  r2. \tuplet 6/4 {gis16 eis cis h a gis} fis1 R1*3
+  a1:16%-"stacc."
+  e1
 }
 
 cbMusicVier = \relative {

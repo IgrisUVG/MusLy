@@ -64,7 +64,7 @@ vniOneMusicDrei = \relative {
   e2 h cis1
   #(define afterGraceFraction (cons 31 32))
   \afterGrace d''1\startTrillSpan {cis16(\stopTrillSpan d} a2) d4 e
-  fis2 a g h4 a g fis e d8 r R1 r2 cis4( h a g) g( fis e d fis2) e r R1
+  fis2 a g h4 a g fis e d8 r R1 r2 cis4( h a g) g( fis e d fis2 e) r R1
   r2.
   <<
     {

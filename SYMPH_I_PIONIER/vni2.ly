@@ -78,7 +78,7 @@ vniTwoMusicDrei = \relative {
     g,16( d' g,) a( d a) fis( d' fis,) g( h g) fis( a fis) e( a e)
   }
   fis8( e d) a'8( d cis4) d8( e, fis g a) cis,( h) g'( e) a,(
-  gis) e' d4
+  gis) e'( d4)
   \undo \omit TupletNumber
   \repeat percent 4 {\tuplet 3/2 8 {a'16 cis e a, cis e}}
   \omit TupletNumber

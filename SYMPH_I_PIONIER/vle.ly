@@ -46,9 +46,11 @@ vleMusicDrei = \relative {
     d,( e fis) e( fis g) g( a h) a( h c) d( a fis) g( fis cis?)
   }
   d8 a' fis fis' f e d a
+  \undo \omit TupletNumber
   \tuplet 3/2 {h16( d h)} r8 fis d' g, a a
   \tuplet 3/2 8 {
     d16( cis h
+    \omit TupletNumber
     a g fis) h( a g fis e d) a'( g fis e d cis
   }
   d4) r8 R1*4 r8

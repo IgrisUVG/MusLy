@@ -50,6 +50,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \vniTwoMusic
@@ -60,8 +61,9 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \vniTwoMusicDrei
@@ -72,7 +74,7 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff

@@ -103,7 +103,7 @@ vleMusicDrei = \relative {
     e( fis g) a4( fis8) g( a h) c4( a8)
   }
   \undo \omit TupletNumber
-  \tuplet 6/4 {h,16 cis es gis h cis} r2. R1*2 r2 a, a a
+  \tuplet 6/4 {h,16 cis eis gis h cis} r2. R1*2 r2 a, a a
   \tuplet 9/8 2 {
     cis'16 a fis cis a gis a cis fis
     \omit TupletNumber
@@ -124,4 +124,5 @@ vleMusicVier = \relative {
   \clef alto
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  des'2.:16~ des2.:16
 }

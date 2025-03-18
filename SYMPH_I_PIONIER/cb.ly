@@ -72,4 +72,5 @@ cbMusicVier = \relative {
   \clef "bass_8"
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  f,2.( e4 des c b2.~ b2)
 }

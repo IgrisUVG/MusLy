@@ -55,5 +55,5 @@ fluteMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  des'16 e g b des e g b des e g b
+  des'16 e g b des e g b des e g b des b g e des b g e des b g e
 }

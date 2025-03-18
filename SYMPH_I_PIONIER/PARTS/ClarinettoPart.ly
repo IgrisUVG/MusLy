@@ -52,6 +52,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \transpose b c'
@@ -64,8 +65,9 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \transpose b c'
@@ -73,21 +75,30 @@
     \header {
       title = "Dritte Teil"
       subtitle = ##f
+      subsubtitle = ##f
       composer = ##f
     }
-  }  
-
+  }
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
-    \new Staff
-    \transpose b c'
-    \clarinetMusicVier
+    \new StaffGroup = "GrandStaff_clarinetto"
+    <<
+      \new Staff = "Staff_clarinet1" {
+        \transpose b c'
+        \clarinetOneMusicVier
+      }
+
+      \new Staff = "Staff_clarinet2" {
+        \transpose b c'
+        \clarinetTwoMusicVier
+      }
+    >>
     \header {
-      title = "Vierte Teil"
+      title = "Dritte Teil"
       subtitle = ##f
       subsubtitle = ##f
       composer = ##f
-      %breakbefore = ##t
     }
   }
 }

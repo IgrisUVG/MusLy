@@ -146,4 +146,5 @@ rechtsVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  \repeat unfold 12 {\bot b16 \top des}
 }

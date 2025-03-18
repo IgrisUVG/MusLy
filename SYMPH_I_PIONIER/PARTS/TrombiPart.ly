@@ -50,7 +50,9 @@
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
+
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \transpose b c'
@@ -63,8 +65,9 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \transpose b c'
@@ -75,12 +78,21 @@
       composer = ##f
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+
   \score {
-    \new Staff
-    \transpose b c'
-    \trumpetMusicVier
+    \new StaffGroup = "GrandStaff_trombi"
+    <<
+      \new Staff = "Staff_trumpet1" {
+        %\transpose b c'
+        \trumpetOneMusicVier
+      }
+      \new Staff = "Staff_trumpet2" {
+        %\transpose b c'
+        \trumpetTwoMusicVier
+      }
+    >>
     \header {
       title = "Vierte Teil"
       subtitle = ##f

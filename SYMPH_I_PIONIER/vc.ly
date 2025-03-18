@@ -96,4 +96,5 @@ vcMusicVier = \relative {
   \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
+  f2.( e4 des c b2.~ b2)
 }

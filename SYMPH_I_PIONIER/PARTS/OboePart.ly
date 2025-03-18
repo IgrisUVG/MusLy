@@ -49,6 +49,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \oboeMusic
@@ -59,8 +60,9 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \oboeMusicDrei
@@ -70,7 +72,7 @@
       composer = ##f
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff

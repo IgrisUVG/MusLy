@@ -113,4 +113,5 @@ linksVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef bass
   \compressFullBarRests
+  s2.*2
 }

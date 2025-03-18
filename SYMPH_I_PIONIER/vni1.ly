@@ -144,5 +144,5 @@ vniOneMusicVier = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  des''2.:16
+  des''2.:16~ des2.:16
 }

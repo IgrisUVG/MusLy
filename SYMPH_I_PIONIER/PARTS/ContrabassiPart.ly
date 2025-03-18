@@ -50,6 +50,7 @@
   }
   
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \cbMusic
@@ -60,8 +61,9 @@
       %breakbefore = ##t
     }
   }
-  
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new Staff
     \cbMusicDrei
@@ -72,7 +74,7 @@
       %breakbefore = ##t
     }
   }
-  
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff

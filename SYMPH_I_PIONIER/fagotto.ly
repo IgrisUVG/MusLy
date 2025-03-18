@@ -55,4 +55,5 @@ fagottoMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef bass
   \compressFullBarRests
+  \repeat unfold 2 {b,4^!---> b---> b--->}
 }

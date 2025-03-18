@@ -36,7 +36,7 @@ trumpetMusicDrei = \relative {
   \cadenzaOff
 }
 
-trumpetMusicVier = \relative {
+trumpetOneMusicVier = \relative {
   \key as \major
   \time 3/4
   \set beamExceptions = #'()
@@ -44,4 +44,16 @@ trumpetMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  b''2.->~ b
+}
+
+trumpetTwoMusicVier = \relative {
+  \key as \major
+  \time 3/4
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  \compressFullBarRests
+  des''2.->~ des
 }

@@ -51,7 +51,9 @@
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
+
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new StaffGroup = "GrandStaff_corni"
     <<
@@ -72,8 +74,9 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
   \score {
     \new StaffGroup = "GrandStaff_corni"
     <<
@@ -92,17 +95,18 @@
       composer = ##f
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+
   \score {
     \new StaffGroup = "GrandStaff_corni"
     <<
       \new Staff = "Staff_hornI" {
-        \transpose f c'
+        %\transpose f c'
         \cornoOneMusicVier
       }
       \new Staff = "Staff_horn2" {
-        \transpose f c'
+        %\transpose f c'
         \cornoTwoMusicVier
       }
     >>

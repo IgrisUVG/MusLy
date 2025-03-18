@@ -52,5 +52,5 @@ oboeMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  R2.*2
+  R2.*17 r4. b'4( as8)
 }

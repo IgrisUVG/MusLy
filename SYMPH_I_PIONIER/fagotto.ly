@@ -52,8 +52,8 @@ fagottoMusicVier = \relative {
   \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
-  \set beatStructure = #'(1 1 1 1)
+  \set beatStructure = #'(1 1 1)
   \clef bass
   \compressFullBarRests
-  \repeat unfold 2 {b,4^!---> b---> b--->}
+  \repeat unfold 14 {b,4^!---> b---> b--->} es8 r r2
 }

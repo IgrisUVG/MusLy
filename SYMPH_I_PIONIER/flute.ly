@@ -55,5 +55,31 @@ fluteMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  des'16 e g b des e g b des e g b des b g e des b g e des b g e
+  \repeat unfold 2 {
+    des'16 e g b des e g
+    \ottava #1
+    \set Staff.ottavation = #"8"
+    b des e g b des b g e des b
+    \ottava #0
+    g e des b g e
+  }
+  c e g b c e g
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  b c e g b c b g e c b
+  \ottava #0
+  g e c b g e
+  d f as h d f
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  as h d f as h d h as f d h as
+  \ottava #0
+  f d h as f
+  e f fis g as a b h c des d es
+  e f fis g as a b h c des d es
+  f e es d des c h b a as g fis
+  f e es d des c h b a as g f
+  es e f fis g as a b h c des d
+  es e f fis g as a b h c des d
+  es8 r r2 R2.*2 r4. fes4( es8)
 }

@@ -85,12 +85,12 @@
     \new StaffGroup = "GrandStaff_clarinetto"
     <<
       \new Staff = "Staff_clarinet1" {
-        \transpose b c'
+        %\transpose b c'
         \clarinetOneMusicVier
       }
 
       \new Staff = "Staff_clarinet2" {
-        \transpose b c'
+        %\transpose b c'
         \clarinetTwoMusicVier
       }
     >>

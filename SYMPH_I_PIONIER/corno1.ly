@@ -46,5 +46,5 @@ cornoOneMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  g'2.->~ g
+  \repeat unfold 3 {g'2.->~ g} as->~ as R2.*2
 }

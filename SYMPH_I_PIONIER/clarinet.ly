@@ -116,10 +116,17 @@ clarinetOneMusicVier = \relative {
   \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
-  \set beatStructure = #'(1 1 1 1)
+  \set beatStructure = #'(1 1 1)
   \clef treble  
   \compressFullBarRests
-  \repeat unfold 4 {des''16[ es e f e es]}
+  \repeat unfold 8 {des''16[ es e f e es]}
+  \repeat unfold 4 {c[ d es e es d]}
+  \repeat unfold 4 {h[ des d es d des]}
+  b2.~ b~ b~ b~ b~ b
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  g'8( as b) b4( f8) f( g as) as4( es8)
+  es( f g) g4( f8) f( es des) des4( c8)
 }
 
 clarinetTwoMusicVier = \relative {
@@ -127,8 +134,15 @@ clarinetTwoMusicVier = \relative {
   \time 3/4
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
-  \set beatStructure = #'(1 1 1 1)
+  \set beatStructure = #'(1 1 1)
   \clef treble  
   \compressFullBarRests
-  \repeat unfold 4 {des''16[ es e f e es]}
+  \repeat unfold 8 {des''16[ es e f e es]}
+  \repeat unfold 4 {c[ d es e es d]}
+  \repeat unfold 4 {h[ des d es d des]}
+  b2.~ b~ b~ b~ b~ b
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  es8( f g) g4( d8) des!( es f) f4( c8)
+  c( des es) es4( d8) des!( c b) as4.
 }

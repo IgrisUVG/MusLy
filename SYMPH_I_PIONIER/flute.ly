@@ -82,4 +82,5 @@ fluteMusicVier = \relative {
   es e f fis g as a b h c des d
   es e f fis g as a b h c des d
   es8 r r2 R2.*2 r4. fes4( es8)
+  R2.*3
 }

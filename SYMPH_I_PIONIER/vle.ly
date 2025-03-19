@@ -124,5 +124,7 @@ vleMusicVier = \relative {
   \clef alto
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  des'2.:16~ des2.:16
+  des'2.:16~ des2.:16~ des2.:16~ des2.:16(
+  c2.:16~) c2.:16( h2.:16~) h2.:16( c2.:16~) c2.:16
+  ces2.:16_( b2.:16 as2.:16~) as2.:16( b8) r r2
 }

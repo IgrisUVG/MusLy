@@ -36,5 +36,6 @@ timpMusicVier = \relative {
   \time 3/4
   \clef bass
   \compressFullBarRests
-  \repeat unfold 2 {b,4-.-> b-. b-.}  
+  \repeat unfold 14 {b,4-.-> b-. b-.}
+  \repeat unfold 2 {b2.~-"tremolo" b~ b~ b}
 }

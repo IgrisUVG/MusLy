@@ -71,7 +71,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-
+  %{
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -161,4 +161,189 @@
       %breakbefore = ##t
     }
   }
+  %}
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \score {
+    <<
+      %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_woodwinds" <<
+        \new Staff = "Staff_flute" {
+          \set Staff.instrumentName = #"3 Flauti"
+          \set Staff.shortInstrumentName = #"Fl"
+          \fluteMusicDrei
+        }
+
+        \new Staff = "Staff_oboe" {
+          \set Staff.instrumentName = #"3 Oboi"
+          \set Staff.shortInstrumentName = #"Ob"
+          \oboeMusicDrei
+        }
+        \new Staff = "Staff_clarinet" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Clarinetto"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Cl"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \clarinetMusicDrei
+        }
+        \new Staff = "Staff_fagotti" {
+          \set Staff.instrumentName = #"Fagotto"
+          \set Staff.shortInstrumentName = #"Fag"
+          \fagottoMusicDrei
+        }
+      >>
+      %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_brass"
+      <<
+        \new StaffGroup = "GrandStaff_corni" \with {
+          instrumentName = \markup {
+            \right-column {
+              "2 Corni"
+              \line { "in F" }
+            }
+          }
+          shortInstrumentName = \markup {
+            \right-column {
+              "Cor"
+              \line { "in F" }
+            }
+          }
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_hornI" {
+            \transpose f c'
+            \cornoOneMusicDrei
+          }
+          \new Staff = "Staff_horn2" {
+            \transpose f c'
+            \cornoTwoMusicDrei
+          }
+        >>
+        \new Staff = "Staff_trumpet1" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Tromba"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Tb"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \trumpetMusicDrei
+        }
+      >>
+    >>
+    \header {
+      title = "Dtirtte Teil"
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
+  \score {
+    <<
+      %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_woodwinds" <<
+        \new Staff = "Staff_flute" {
+          \set Staff.instrumentName = #"3 Flauti"
+          \set Staff.shortInstrumentName = #"Fl"
+          \fluteMusic
+        }
+
+        \new Staff = "Staff_oboe" {
+          \set Staff.instrumentName = #"3 Oboi"
+          \set Staff.shortInstrumentName = #"Ob"
+          \oboeMusic
+        }
+        \new Staff = "Staff_clarinet" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Clarinetto"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Cl"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \clarinetMusic
+        }
+        \new Staff = "Staff_fagotti" {
+          \set Staff.instrumentName = #"Fagotto"
+          \set Staff.shortInstrumentName = #"Fag"
+          \fagottoMusic
+        }
+      >>
+      %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
+      \new StaffGroup = "StaffGroup_brass"
+      <<
+        \new StaffGroup = "GrandStaff_corni" \with {
+          instrumentName = \markup {
+            \right-column {
+              "2 Corni"
+              \line { "in F" }
+            }
+          }
+          shortInstrumentName = \markup {
+            \right-column {
+              "Cor"
+              \line { "in F" }
+            }
+          }
+          systemStartDelimiter = #'SystemStartSquare
+        }
+        <<
+          \new Staff = "Staff_hornI" {
+            \transpose f c'
+            \cornoOneMusic
+          }
+          \new Staff = "Staff_horn2" {
+            \transpose f c'
+            \cornoTwoMusic
+          }
+        >>
+        \new Staff = "Staff_trumpet1" {
+          \set Staff.instrumentName = \markup {
+            \right-column {
+              "Tromba"
+              \line { "in B" }
+            }
+          }
+          \set Staff.shortInstrumentName = \markup {
+            \right-column {
+              "Tb"
+              \line { "in B" }
+            }
+          }
+          \transpose b c'
+          \trumpetMusic
+        }
+      >>
+    >>
+    \header {
+      title = "Vierte Teil"
+      composer = ##f
+      %breakbefore = ##t
+    }
+  }
+  %}
 }

@@ -44,7 +44,12 @@ trumpetOneMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  b''2.->~ b
+  b''2.->~ b b->~ b c->~ c h->~ h
+  r8 es,4-> e8( f ges~ ges4) g8( as4->) g8( b2.->) b->
+  heses8->( as~ as2) heses8->( as~ as2)
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  b,2._( as g4. f es2.)
 }
 
 trumpetTwoMusicVier = \relative {
@@ -55,5 +60,10 @@ trumpetTwoMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  des''2.->~ des
+  des''2.->~ des des->~ des e->~ e d->~ d
+  r8 es,4-> e8( f ges~ ges4) g8( as4->) g8( b2.->) b->
+  heses8->( as~ as2) heses8->( as~ as2)
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  es4.( d des! c b2.~ b4. as)
 }

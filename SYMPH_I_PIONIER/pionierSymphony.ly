@@ -530,11 +530,11 @@
         }
         <<
           \new Staff = "Staff_trumpet1" {
-            %\transpose b c'
+            \transpose b c'
             \trumpetOneMusicVier
           }
           \new Staff = "Staff_trumpet2" {
-            %\transpose b c'
+            \transpose b c'
             \trumpetTwoMusicVier
           }
         >>

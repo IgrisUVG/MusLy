@@ -69,7 +69,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  
+  %{
   \score {
     \new StaffGroup = "StaffGroup_strings" <<
       \new StaffGroup = "GrandStaff_violins" \with {
@@ -116,9 +116,9 @@
       %breakbefore = ##t
     }
   }
-  
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  
+  %{
   \score {
     \new StaffGroup = "StaffGroup_strings" <<
       \new StaffGroup = "GrandStaff_violins" \with {
@@ -165,7 +165,7 @@
       %breakbefore = ##t
     }
   }
-  
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   
   \score {

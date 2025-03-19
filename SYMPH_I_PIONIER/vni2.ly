@@ -153,5 +153,7 @@ vniTwoMusicVier = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  b'2.:16~ b2.:16
+  b'2.:16~ b2.:16~ b2.:16~ b2.:16~ b2.:16~ b2.:16(
+  h2.:16~) h2.:16( as2.:16~) as2.:16~ as2.:16(
+  b2.:16 as2.:16~) as2.:16( g8) r r2
 }

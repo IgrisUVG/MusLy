@@ -48,4 +48,6 @@ cornoTwoMusicVier = \relative {
   \clef treble
   \compressFullBarRests
   R2.*10
+  %\clef bass
+  f2.( fes) R2.*2 b2.~ b~ b~ b4.~ b4( as8)
 }

@@ -146,5 +146,13 @@ rechtsVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  \repeat unfold 12 {\bot b16 \top des}
+  \override MultiMeasureRest.expand-limit = #2
+  \repeat unfold 24 {\bot b16 \top des}
+  \repeat unfold 12 {\bot c16 \top e}
+  \repeat unfold 12 {\bot h16 \top d}
+  \repeat unfold 12 {\bot as16 \top c}
+  \repeat unfold 6 {\bot as16 \top ces}
+  \repeat unfold 6 {\bot g16 \top b}
+  \repeat unfold 12 {\bot f16 \top as}
+  R2.*4
 }

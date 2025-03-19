@@ -113,5 +113,6 @@ linksVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef bass
   \compressFullBarRests
-  s2.*2
+  \override MultiMeasureRest.expand-limit = #2
+  s2.*14 es8 r r2 R2.*3
 }

@@ -47,4 +47,6 @@ cornoOneMusicVier = \relative {
   \clef treble
   \compressFullBarRests
   \repeat unfold 3 {g'2.->~ g} as->~ as R2.*2
+  %\clef bass
+  as,2.( g) R2.*2 b2.~ b~ b~ b4.~ b4( as8)
 }

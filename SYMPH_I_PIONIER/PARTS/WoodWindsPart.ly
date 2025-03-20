@@ -68,7 +68,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-
+  %{
   \score {
     \new StaffGroup = "StaffGroup_woodwinds" <<
       \new Staff = "Staff_flute" {
@@ -107,7 +107,103 @@
     \header {
       title = "Erste Teil"
       composer = ##f
-      %breakbefore = ##t
     }
   }
+  %}
+  %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %{
+  \score {
+    \new StaffGroup = "StaffGroup_woodwinds" <<
+      \new Staff = "Staff_flute" {
+        \set Staff.instrumentName = #"3 Flauti"
+        \set Staff.shortInstrumentName = #"Fl"
+        \fluteMusicDrei
+      }
+
+      \new Staff = "Staff_oboe" {
+        \set Staff.instrumentName = #"3 Oboi"
+        \set Staff.shortInstrumentName = #"Ob"
+        \oboeMusicDrei
+      }
+      \new Staff = "Staff_clarinet" {
+        \set Staff.instrumentName = \markup {
+          \right-column {
+            "Clarinetto"
+            \line { "in B" }
+          }
+        }
+        \set Staff.shortInstrumentName = \markup {
+          \right-column {
+            "Cl"
+            \line { "in B" }
+          }
+        }
+        \transpose b c'
+        \clarinetMusicDrei
+      }
+      \new Staff = "Staff_fagotti" {
+        \set Staff.instrumentName = #"Fagotto"
+        \set Staff.shortInstrumentName = #"Fag"
+        \fagottoMusicDrei
+      }
+    >>
+    \header {
+      title = "Dtirtte Teil"
+      composer = ##f
+    }
+  }
+  %}
+  %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \score {
+    \new StaffGroup = "StaffGroup_woodwinds" <<
+      \new Staff = "Staff_flute" {
+        \set Staff.instrumentName = #"3 Flauti"
+        \set Staff.shortInstrumentName = #"Fl"
+        \fluteMusicVier
+      }
+
+      \new Staff = "Staff_oboe" {
+        \set Staff.instrumentName = #"3 Oboi"
+        \set Staff.shortInstrumentName = #"Ob"
+        \oboeMusicVier
+      }
+      \new StaffGroup = "GrandStaff_clarinetto" \with {
+        instrumentName = \markup {
+          \right-column {
+            "2 Clarinetti"
+            \line { "in B" }
+          }
+        }
+        shortInstrumentName = \markup {
+          \right-column {
+            "Cl"
+            \line { "in B" }
+          }
+        }
+        systemStartDelimiter = #'SystemStartSquare
+      }
+      <<
+        \new Staff = "Staff_clarinet1" {
+          \transpose b c'
+          \clarinetOneMusicVier
+        }
+
+        \new Staff = "Staff_clarinet2" {
+          \transpose b c'
+          \clarinetTwoMusicVier
+        }
+      >>
+      \new Staff = "Staff_fagotti" {
+        \set Staff.instrumentName = #"Fagotto"
+        \set Staff.shortInstrumentName = #"Fag"
+        \fagottoMusicVier
+      }
+    >>
+    \header {
+      title = "Vierte Teil"
+      composer = ##f
+    }
+  }
+
 }

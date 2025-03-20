@@ -39,8 +39,8 @@
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
     %\remove "Bar_number_engraver"
-    \RemoveEmptyStaves
-    \override VerticalAxisGroup.remove-first = ##t
+    %\RemoveEmptyStaves
+    %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
     \Staff
@@ -163,7 +163,7 @@
   }
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-
+  %{
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -253,9 +253,9 @@
       %breakbefore = ##t
     }
   }
-
+  %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -263,34 +263,44 @@
         \new Staff = "Staff_flute" {
           \set Staff.instrumentName = #"3 Flauti"
           \set Staff.shortInstrumentName = #"Fl"
-          \fluteMusic
+          \fluteMusicVier
         }
 
         \new Staff = "Staff_oboe" {
           \set Staff.instrumentName = #"3 Oboi"
           \set Staff.shortInstrumentName = #"Ob"
-          \oboeMusic
+          \oboeMusicVier
         }
-        \new Staff = "Staff_clarinet" {
-          \set Staff.instrumentName = \markup {
+        \new StaffGroup = "GrandStaff_clarinetto" \with {
+          instrumentName = \markup {
             \right-column {
-              "Clarinetto"
+              "2 Clarinetti"
               \line { "in B" }
             }
           }
-          \set Staff.shortInstrumentName = \markup {
+          shortInstrumentName = \markup {
             \right-column {
               "Cl"
               \line { "in B" }
             }
           }
-          \transpose b c'
-          \clarinetMusic
+          systemStartDelimiter = #'SystemStartSquare
         }
+        <<
+          \new Staff = "Staff_clarinet1" {
+            \transpose b c'
+            \clarinetOneMusicVier
+          }
+
+          \new Staff = "Staff_clarinet2" {
+            \transpose b c'
+            \clarinetTwoMusicVier
+          }
+        >>
         \new Staff = "Staff_fagotti" {
           \set Staff.instrumentName = #"Fagotto"
           \set Staff.shortInstrumentName = #"Fag"
-          \fagottoMusic
+          \fagottoMusicVier
         }
       >>
       %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
@@ -314,29 +324,38 @@
         <<
           \new Staff = "Staff_hornI" {
             \transpose f c'
-            \cornoOneMusic
+            \cornoOneMusicVier
           }
           \new Staff = "Staff_horn2" {
             \transpose f c'
-            \cornoTwoMusic
+            \cornoTwoMusicVier
           }
         >>
-        \new Staff = "Staff_trumpet1" {
-          \set Staff.instrumentName = \markup {
+        \new StaffGroup = "GrandStaff_trombi" \with {
+          instrumentName = \markup {
             \right-column {
-              "Tromba"
+              "2 Trombi"
               \line { "in B" }
             }
           }
-          \set Staff.shortInstrumentName = \markup {
+          shortInstrumentName = \markup {
             \right-column {
               "Tb"
               \line { "in B" }
             }
           }
-          \transpose b c'
-          \trumpetMusic
+          systemStartDelimiter = #'SystemStartSquare
         }
+        <<
+          \new Staff = "Staff_trumpet1" {
+            \transpose b c'
+            \trumpetOneMusicVier
+          }
+          \new Staff = "Staff_trumpet2" {
+            \transpose b c'
+            \trumpetTwoMusicVier
+          }
+        >>
       >>
     >>
     \header {
@@ -345,5 +364,5 @@
       %breakbefore = ##t
     }
   }
-  %}
+
 }

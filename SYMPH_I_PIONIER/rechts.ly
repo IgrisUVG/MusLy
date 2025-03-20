@@ -147,12 +147,39 @@ rechtsVier = \relative {
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  \repeat unfold 24 {\bot b16 \top des}
-  \repeat unfold 12 {\bot c16 \top e}
-  \repeat unfold 12 {\bot h16 \top d}
-  \repeat unfold 12 {\bot as16 \top c}
-  \repeat unfold 6 {\bot as16 \top ces}
-  \repeat unfold 6 {\bot g16 \top b}
-  \repeat unfold 12 {\bot f16 \top as}
+  \repeat unfold 4 {\repeat tremolo 6 {\bot b16 \top des}}
+  %\repeat unfold 24 {\bot b16 \top des}
+  \repeat unfold 2 {\repeat tremolo 6 {\bot c16 \top e}}
+  %\repeat unfold 12 {\bot c16 \top e}
+  \repeat unfold 2 {\repeat tremolo 6 {\bot h16 \top d}}
+  %\repeat unfold 12 {\bot h16 \top d}
+  \repeat unfold 2 {\repeat tremolo 6 {\bot as16 \top c}}
+  %\repeat unfold 12 {\bot as16 \top c}
+  \repeat tremolo 6 {\bot as16 \top ces}
+  %\repeat unfold 6 {\bot as16 \top ces}
+  \repeat tremolo 6 {\bot g16 \top b}
+  %\repeat unfold 6 {\bot g16 \top b}
+  \repeat unfold 2 {\repeat tremolo 6 {\bot f16 \top as}}
+  %\repeat unfold 12 {\bot f16 \top as}
   R2.*4
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  es'''16( b' a b g b) e,( f g as) es[( d] des! c b as) es'( d
+  g f) as( g f es)
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  es( des c b)
+  \ottava #0
+  b( as g f) es( d c b as g) g[( f e d]) d[( c h a])
+  \bot \stemUp g^( c,) \stemNeutral
+  \top s2. s4
+  des'16 d e f g as b ces des d e f g as
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  b ces des d e f g as b ces des d e f g4
+  \ottava #0
+  \clef bass
+  \repeat unfold 6 {g,,,,16 a h a}
 }

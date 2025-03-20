@@ -516,7 +516,7 @@
         \new StaffGroup = "GrandStaff_trombi" \with {
           instrumentName = \markup {
             \right-column {
-              "5 Trombi"
+              "2 Trombi"
               \line { "in B" }
             }
           }

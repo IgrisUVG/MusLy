@@ -115,4 +115,28 @@ linksVier = \relative {
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
   s2.*14 es8 r r2 R2.*3
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  g4-- es'8( f,4) d'8( des!4)
+  \clef treble
+  r8 g'16( f) as( g f es)
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  es( des c b)
+  b( as g f) es( d c b 
+  \clef bass
+  as g) g[( f e d]) d[( c h a]) 
+  \stemDown
+  g_( c,)
+  \stemNeutral
+  des d e f g as b ces des d e f g as b ces
+  s2 s2.
+  \clef treble
+  \ottava #1
+  \set Staff.ottavation = #"8"
+  g''16 as b ces des d e f g4
+  \ottava #0
+  \clef bass
+  \repeat unfold 6 {g,,,,16 a h a}
+  
 }

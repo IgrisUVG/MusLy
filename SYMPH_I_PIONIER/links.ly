@@ -123,9 +123,9 @@ linksVier = \relative {
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   es( des c b)
-  b( as g f) es( d c b 
+  b( as g f) es( d c b
   \clef bass
-  as g) g[( f e d]) d[( c h a]) 
+  as g) g[( f e d]) d[( c h a])
   \stemDown
   g_( c,)
   \stemNeutral
@@ -138,5 +138,42 @@ linksVier = \relative {
   \ottava #0
   \clef bass
   \repeat unfold 6 {g,,,,16 a h a}
+  \repeat unfold 6 {fis16 g a g}
+  b16 h c des d es e f
+  \tuplet 3/2 {fes4( es8)}
+  R2.*20
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  \makeOctaves #1 {
+    b2. b-- a-- g-- fis-- g
+  }
+  R2.*18
+  r2
+  <<
+    {
+      \stemDown
+      \makeOctaves #1 {
+        a8 b c r c d r d es
+      }
+    }
+    \\
+    {
+      \stemUp
+      s4 r8 g,, r r g r r g      
+    }
+  >>
+  r2 R2.*7
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  r4
+  \tuplet 3/2 4 {
+    \makeOctaves #1 {
+      g'8 as b h des d e f g as4( g8)
+    }
+  } r4
+  <ces, eses geses as>-> r <des f as>->
+  r4 <ceses eses geses as ceses> r <fes, ces' fes> r2R2.*3
+  \key a \major
+  \time 2/4
   
 }

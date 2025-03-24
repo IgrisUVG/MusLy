@@ -155,5 +155,10 @@ vniTwoMusicVier = \relative {
   \override MultiMeasureRest.expand-limit = #2
   b'2.:16~ b2.:16~ b2.:16~ b2.:16~ b2.:16~ b2.:16(
   h2.:16~) h2.:16( as2.:16~) as2.:16~ as2.:16(
-  b2.:16 as2.:16~) as2.:16( g8) r r2
+  b2.:16 as2.:16~) as2.:16( g8) r r2 R2.*2  
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4. des4( c8)
+  es'8( f g) g4( d8) des!( es f) f4( c8)
+  c( des es) es4( d8) d( c b) a4( g8)
 }

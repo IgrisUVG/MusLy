@@ -74,5 +74,8 @@ cbMusicVier = \relative {
   \override MultiMeasureRest.expand-limit = #2
   f,2.( e4 des c b2.~ b2) des4( g2.-> e4 b' a as!2) g4(
   ges2->) f4( fes2->) fes4:16~ fes!2.:16 f!2.:16 fes2.:16
-  des2.:16 d2.:16 es8 r r2
+  des2.:16 d2.:16 es8 r r2 R2.*2  
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4. as,
 }

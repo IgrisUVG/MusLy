@@ -126,5 +126,8 @@ vleMusicVier = \relative {
   \override MultiMeasureRest.expand-limit = #2
   des'2.:16~ des2.:16~ des2.:16~ des2.:16(
   c2.:16~) c2.:16( h2.:16~) h2.:16( c2.:16~) c2.:16
-  ces2.:16_( b2.:16 as2.:16~) as2.:16( b8) r r2
+  ces2.:16_( b2.:16 as2.:16~) as2.:16( b8) r r2 R2.*2  
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4. b4( as8)
 }

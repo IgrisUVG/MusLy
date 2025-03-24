@@ -55,6 +55,7 @@ fluteMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   \repeat unfold 2 {
     des'16 e g b des e g
     \ottava #1
@@ -82,5 +83,32 @@ fluteMusicVier = \relative {
   es e f fis g as a b h c des d
   es e f fis g as a b h c des d
   es8 r r2 R2.*2 r4. fes4( es8)
-  R2.*3
+  R2.*3 r4. c
+  \repeat unfold 4 {\repeat tremolo 6 {f,16 as}}
+  \repeat unfold 2 {\repeat tremolo 6 {g16 h}}
+  \repeat unfold 2 {\repeat tremolo 6 {fis16 a}}
+  \repeat tremolo 6 {g16 as!}
+  fis2.~\startTrillSpan fis~ fis
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4.\stopTrillSpan gis'8.( fis16 e8)
+  c16( d c b a[ b a g] f g f es)
+  d8( es f) f4\trill( c8) c( d es) es4\trill( b8)
+  b( c d) d4\trill( c8) c\prall( b a) 
+  #(define afterGraceFraction (cons 11 12))
+  \afterGrace a4\(\trill {g16[( a]} b8)\)
+  g'4.--~ g8. a16.-- b--
+  c4.---> g4--~ g32 c16.--
+  d4.---> g,4--~ g32 d'16.--
+  es4.--->( d8--) r4 R2.*3 f,2. R2.*3 b2. R2.*13
+  g,2.( fis4 es d c) r2 R2.*4
+  r2 a''8( b c) r c( d) r d( es) r4 r4. R2.*6
+  r2 a,8( h c) r c( d) r d( e2.) R2.
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  r4 \tuplet 3/2 4 {g,8( as-> b h des-> d e f-> g) as4( g8)} r4
+  R2.*2 r2 eses,4-- r f-- r geses-- r as-- R2.
+  \key a \major
+  \time 2/4
+  
 }

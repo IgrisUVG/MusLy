@@ -77,5 +77,6 @@ cbMusicVier = \relative {
   des2.:16 d2.:16 es8 r r2 R2.*2  
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
-  r4. as,
+  r4. as, R2.*3 r4. c
+  \repeat unfold 6 {f,4-> f f}
 }

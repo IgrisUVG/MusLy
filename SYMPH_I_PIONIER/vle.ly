@@ -130,4 +130,5 @@ vleMusicVier = \relative {
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   r4. b4( as8)
+  R2.*3 r4. dis4( e8)
 }

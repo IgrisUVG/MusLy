@@ -101,6 +101,7 @@
   \score {
     \new PianoStaff
     <<
+      \set PianoStaff.connectArpeggios = ##t
       \new Staff = "RH" \rechtsVier
       %\new Dynamics = "DYN" \dynamic
       \new Staff = "LH" \linksVier

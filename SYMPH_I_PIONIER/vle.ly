@@ -130,5 +130,14 @@ vleMusicVier = \relative {
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   r4. b4( as8)
-  R2.*3 r4. dis4( e8)
+  R2.*3 r4. dis4( e8)  
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  as,2.:16~ as2.:16~ as2.:16~ as2.:16
+  g2.:16~ g2.:16 fis2.:16~ fis2.:16
+  \repeat unfold 3 {\tuplet 3/2 {fes'4->( es8)}}
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  d8( e fis) fis4( cis8) cis( d e) e4( h8)
+  h( cis d) d4( cis8) cis( h a) a4( gis8)
 }

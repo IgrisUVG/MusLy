@@ -152,4 +152,14 @@ vniOneMusicVier = \relative {
   r4. fes4( es8)
   g'8( as b) b4( f8) f( g as) as4( es8)
   es( f g) g4( f8) f( e d) d4( c8)
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  as2.:16~ as2.:16~ as2.:16~ as2:16 \tuplet 3/2 {f''4( es8)}
+  g,,,16( as a b h c des d es e f fis g as a b h c des d es e f fis)
+  a,2.:16~ a2.:16
+  \repeat unfold 3 {\tuplet 3/2 {fes'4->( es8)}}
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  d8( e fis) fis4( cis8) cis( d e) e4( h8)
+  h( cis d) d4( cis8) cis( h a) a4( gis8)
 }

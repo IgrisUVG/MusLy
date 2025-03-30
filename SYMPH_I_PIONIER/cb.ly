@@ -79,4 +79,7 @@ cbMusicVier = \relative {
   \set beatStructure = #'(3 3)
   r4. as, R2.*3 r4. c
   \repeat unfold 6 {f,4-> f f}
+  f4-> f \tuplet 3/2 {c'4( b8)} f4-> f f
+  \repeat unfold 3 {\tuplet 3/2 {fes4-> r8}}
+  d'4._( a a h d a h e,)
 }

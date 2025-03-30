@@ -105,7 +105,7 @@ vcMusicVier = \relative {
   es4. d des! c b b' a fis4( g8)
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
-  c,2.( h4 as g f2.~ f2) as4( des2. h f' e es2) d4(
+  c,2.( h4 as g f2.~ f2) as4( des2. h4 f' e es2) d4(
   des!2) c4( ces2) \tuplet 3/2 {fes4( es8)} 
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)

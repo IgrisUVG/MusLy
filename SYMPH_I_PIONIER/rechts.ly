@@ -214,5 +214,5 @@ rechtsVier = \relative {
   r <geses as ceses eses> r <fes as ces fes> r2 R2.*3
   \key a \major
   \time 2/4
-  
+  <e e' cis'>2\arpeggio
 }

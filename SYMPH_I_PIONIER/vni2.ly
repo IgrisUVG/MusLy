@@ -160,5 +160,13 @@ vniTwoMusicVier = \relative {
   \set beatStructure = #'(3 3)
   r4. des4( c8)
   es'8( f g) g4( d8) des!( es f) f4( c8)
-  c( des es) es4( d8) d( c b) a4( g8)
+  c( des es) es4( d8) d( c b) a4( g8)  
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  f2.:16~ f2.:16~ f2.:16~ f2:16 \tuplet 3/2 {f'4( es8)}
+  f,2.:16~ f2.:16 fis2.:16~ fis2.:16
+  \repeat unfold 3 {\tuplet 3/2 {fes4->( es8)}}
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  fis8( g a) a4( e8) e( fis g) g4( d8) d( e fis) fis4( e8) e( dis cis) h4. 
 }

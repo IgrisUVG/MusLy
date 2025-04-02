@@ -175,5 +175,14 @@ linksVier = \relative {
   r4 <ceses eses geses as ceses> r <fes, ces' fes> r2R2.*3
   \key a \major
   \time 2/4
-  <a cis a'>2\arpeggio
+  <a cis a'>2\arpeggio <gis cis gis'>\arpeggio
+  <fis cis' a'>~\arpeggio q4 r
+  <d' fis a d>2\arpeggio <h fis' dis'>\arpeggio
+  <e gis h e>4\arpeggio r
+  <cis e gis cis>2\arpeggio <h e gis h>\arpeggio
+  <a cis e a>\arpeggio <a cis fis a>4\arpeggio r
+  R2*13
+  <es es'>4 <des des'> <es es'>2
+  \key as \major
+  
 }

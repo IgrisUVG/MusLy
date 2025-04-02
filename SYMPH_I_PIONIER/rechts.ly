@@ -214,5 +214,13 @@ rechtsVier = \relative {
   r <geses as ceses eses> r <fes as ces fes> r2 R2.*3
   \key a \major
   \time 2/4
-  <e e' cis'>2\arpeggio
+  <e e' cis'>2\arpeggio <eis eis' cis'>\arpeggio
+  <fis fis' cis'>~\arpeggio q4 r
+  <fis d' a'>2\arpeggio <fis dis' h'>\arpeggio
+  <gis e' h'>4\arpeggio r
+  <gis e' cis'>2\arpeggio <gis e' h'>\arpeggio
+  <a cis a'>\arpeggio q4\arpeggio r
+  R2*13
+  <es es'>4 <des des'> <es g b des>2
+  \key as \major
 }

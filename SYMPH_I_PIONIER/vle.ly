@@ -140,4 +140,12 @@ vleMusicVier = \relative {
   \set beatStructure = #'(3 3)
   d8( e fis) fis4( cis8) cis( d e) e4( h8)
   h( cis d) d4( cis8) cis( h a) a4( gis8)
+  R2.*7 r4. e'4~ e32 es16. es4.->( d8) r r R2.*7
+  es4.( d) b2.( a g fis d) r4. r8 a'( b c->) r c( d->) r d(
+  es->) r4 r4. R2.
+  g,16 as g a g b g h g c g des'
+  g, d' g, es' g, e' g, f' g, fis' g, g'
+  g, as' g, a' g, b' g, a' g, as' g, g'
+  g, fis' g, f' g, e' g, es' g, d' g, des'
+  g, c g h g b g a g as g8
 }

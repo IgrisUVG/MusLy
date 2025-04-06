@@ -110,4 +110,13 @@ vcMusicVier = \relative {
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   a8( b d4 a) a8( h~ h4 g8 gis) gis( a~ a4 a,) a8( gis fis) fis4( e8)
+  R2.*5 es'2.~( es d4. c b2.) R2.*6 r4. e4( es8 b2.)
+  b2.( a g fis g8--) g-- g-- g-- g-- g--
+  g-- g-- g-- g-- g-- g-- R2.
+  g8-- g-- g-- g-- g-- g-- g-- g-- g-- g-- g-- g-- R2.
+  r4 g16 as g a g b g h g c g des'
+  g, d' g, es' g, e' g, f' g, fis' g, g'
+  g, as' g, a' g, b' g, a' g, as' g, g'
+  g, fis' g, f' g, e' g, es' g, d' g, des'
+  g, c g h g b g a g as g8 g
 }

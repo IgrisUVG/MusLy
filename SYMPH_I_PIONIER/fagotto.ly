@@ -55,5 +55,13 @@ fagottoMusicVier = \relative {
   \set beatStructure = #'(1 1 1)
   \clef bass
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   \repeat unfold 14 {b,4^!---> b---> b--->} es8 r r2
+  R2.*6 r4. fis4( g8)
+  \repeat unfold 2 {f8-. as-. f-. d-. h-. r R2.}
+  f'8-. g-. f-. d-. h-. r R2. fis'8-. a-. fis-. es-. c-. r R2.
+  g'8-. b-. g-. es-. ces-. r  R2.*3
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4. a'4( gis8) ges2. R2.*8 b2.( es, c f) d'( c h4. b4 a8 b2.)
 }

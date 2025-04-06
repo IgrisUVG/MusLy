@@ -94,7 +94,7 @@ fluteMusicVier = \relative {
   r4.\stopTrillSpan gis'8.( fis16 e8)
   c16( d c b a[ b a g] f g f es)
   d8( es f) f4\trill( c8) c( d es) es4\trill( b8)
-  b( c d) d4\trill( c8) c\prall( b a) 
+  b( c d) d4\trill( c8) c\prall( b a)
   #(define afterGraceFraction (cons 11 12))
   \afterGrace a4\(\trill {g16[( a]} b8)\)
   g'4.--~ g8. a16.-- b--
@@ -110,5 +110,33 @@ fluteMusicVier = \relative {
   R2.*2 r2 eses,4-- r f-- r geses-- r as-- R2.
   \key a \major
   \time 2/4
-  
+  R2*21
+  \tuplet 3/2 4 {
+    dis,8 eis fis gis fis eis
+    es f ges as ges f
+  }
+  es2
+  \key as \major
+  R2*12
+  fis2( f! e4) r
+  R2*5
+  \acciaccatura d'8
+  \tuplet 3/2 4 {
+    c8( a g f g d
+    e f g f g as!
+    g a b c d e
+  }
+  f2)
+  R2*3
+  r4 f,~( f8[ es des ces] g'2) R2
+  r16 es,( as c es as c es des c b g es b g es)
+  r16 es( as c es as c es f es c as f4~
+  f16) d( h as f as h d) f2~ 
+  f16 d( h as f as h d)
+  f( d h as f as h d)
+  f( d h as f as h d
+  \time 3/4
+  f2.) R2.*7 r4. des16( es f g as b
+  c2. des4 c b) as2.( b4 as f) f2. R2.*13
+  \bar "|."
 }

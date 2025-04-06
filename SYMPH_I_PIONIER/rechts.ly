@@ -223,4 +223,55 @@ rechtsVier = \relative {
   R2*13
   <es es'>4 <des des'> <es g b des>2
   \key as \major
+  \tuplet 6/4 4 {
+    \stemDown
+    \bot as,,16 es' c'
+    \top es as c es c as es
+    \bot c es,
+    c e c'
+    \top e gis c es! c gis e!
+    \bot c g
+    f as c
+    \top f as f' c as f
+    \bot c as f
+    \stemNeutral
+    c as f e f e f e f e f as
+    \stemDown
+    des as' f'
+    \top as des f
+    as f des as
+    \bot f as,
+    b b, f' d'
+    \top as' d
+    b' f b,
+    \bot f b, d,
+    es g b
+    \top es g b
+    es b g es
+    \bot b g
+    c c, g'
+    \top es' g c
+    g es c
+    \bot es, g, c
+    es g g,
+    \top b' g' b
+    es b es,
+    \bot g, es g,
+    as es' c'
+    \top es as c
+    es c as es
+    \bot c es,
+    f as c
+    \top f as f
+    \bot c as
+    \top
+    \clef bass
+    c, as f8
+    \stemNeutral
+    \repeat unfold 18 {
+      \bot es16
+      \top es
+    }
+  }
+  R2*21
 }

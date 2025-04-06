@@ -69,7 +69,7 @@ clarinetMusic = \relative {
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
-  \clef treble  
+  \clef treble
   \compressFullBarRests
   as8( b16 es f) as-. b-. c( es) g-. as8-- es( f
   as, g es4) f16-. b( as) g-. as4--
@@ -104,7 +104,7 @@ clarinetMusicDrei = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
-  \override MultiMeasureRest.expand-limit = #2  
+  \override MultiMeasureRest.expand-limit = #2
   R1*50
   \cadenzaOn
   <cis'' b'>1~ q  s4. s16
@@ -117,8 +117,9 @@ clarinetOneMusicVier = \relative {
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1)
-  \clef treble  
+  \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   \repeat unfold 8 {des''16[ es e f e es]}
   \repeat unfold 4 {c[ d es e es d]}
   \repeat unfold 4 {h[ des d es d des]}
@@ -127,6 +128,28 @@ clarinetOneMusicVier = \relative {
   \set beatStructure = #'(3 3)
   g'8( as b) b4( f8) f( g as) as4( es8)
   es( f g) g4( f8) f( es des) des4( c8)
+  R2.*3 r4. des4( c8)
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \repeat unfold 2 {
+    as,16 h d f as h d f as h d f
+    as f d h as f d h as f d h
+  }
+  g h d f g h d f g h d f
+  g f d h g f d h g f d h
+  a c es fis a c es fis a c es fis
+  a fis es c a fis es c a fis es c
+  b h c des d es e f \tuplet 3/2 {fes4( es8)} R2.*3
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4. c''4( h8) a2.
+  f,8( g as) as4( es8) c\prall( d es) es4( b8)
+  b\prall( c d) d4( c8) c( b a) c4( d8) R2.*3
+  r4. r4 r32 c'16.
+  d4.->~ d8 es( f es4.->~ es8) d( c b4.->~ b8) c g b4.( a)
+  g4.~ g8 a\( b c4.->( g4)\) c8( d4.->) g,4-- d'8\(
+  es4.->( d)\) R2.*17
+  r8 a'8( b c) r c( d) r d( es) r4
 }
 
 clarinetTwoMusicVier = \relative {
@@ -135,8 +158,9 @@ clarinetTwoMusicVier = \relative {
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1)
-  \clef treble  
+  \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   \repeat unfold 8 {des''16[ es e f e es]}
   \repeat unfold 4 {c[ d es e es d]}
   \repeat unfold 4 {h[ des d es d des]}
@@ -145,4 +169,23 @@ clarinetTwoMusicVier = \relative {
   \set beatStructure = #'(3 3)
   es8( f g) g4( d8) des!( es f) f4( c8)
   c( des es) es4( d8) des!( c b) as4.
+  R2.*3 r4. a4( g8)
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \repeat unfold 2 {
+    f,16 as h d f as h d f as h d
+    f d h as f d h as f d h as
+  }
+  f g h d f g h d f g h d
+  f d h g f d h g f d h g
+  fis a c es fis a c es fis a c es
+  fis es c a fis es c a fis es c a
+  b h c des d es e f \tuplet 3/2 {fes4( es8)} R2.*3
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  r4. a'4( gis8) ges2.
+  f,,8( g as) as4( es8) c'\prall( d es) es4( b8)
+  b\prall( c d) d4( c8) c( b a) c4( b8) R2.*4
+  b2.~ b c~ c es~ es d4. c b2. R2.*22
+  r8 a'8( b c) r c( d) r d( es) r4
 }

@@ -168,5 +168,9 @@ vniTwoMusicVier = \relative {
   \repeat unfold 3 {\tuplet 3/2 {fes4->( es8)}}
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
-  fis8( g a) a4( e8) e( fis g) g4( d8) d( e fis) fis4( e8) e( dis cis) h4. 
+  fis8( g a) a4( e8) e( fis g) g4( d8) d( e fis) fis4( e8) e( dis cis) h4.
+  R2.*7 r4. e4~ e32 es16. es4.->( d8) r r R2.*7
+  b'4.~ b4 c,8 d4.~ d8. es16. f
+  es4.~ es8. d16. c b4.~ b8. c16. g b4.( a) g2.
+  g'2.:16~ g2.:16~ g2.:16~ g2.:16  a2.:16  
 }

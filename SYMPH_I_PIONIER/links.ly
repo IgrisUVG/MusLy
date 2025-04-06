@@ -184,5 +184,5 @@ linksVier = \relative {
   R2*13
   <es es'>4 <des des'> <es es'>2
   \key as \major
-  
+  s2*14 R2*21
 }

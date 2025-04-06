@@ -162,4 +162,7 @@ vniOneMusicVier = \relative {
   \set beatStructure = #'(3 3)
   d8( e fis) fis4( cis8) cis( d e) e4( h8)
   h( cis d) d4( cis8) cis( h a) a4( gis8)
+  R2.*16 b'4.~ b4 c,8 d4.~ d8. es16. f
+  es4.~ es8. d16. c b4.~ b8. c16. g b4.( a) g,2.
+  d''2.:16~ d2.:16~ d2.:16~ d2.:16  es2.:16  
 }

@@ -81,5 +81,8 @@ cbMusicVier = \relative {
   \repeat unfold 6 {f,4-> f f}
   f4-> f \tuplet 3/2 {c'4( b8)} f4-> f f
   \repeat unfold 3 {\tuplet 3/2 {fes4-> r8}}
-  d'4._( a a h d a h e,)
+  d'4._( a a h d a h e,) R2.*5
+  es'2._( c g4.~ g4~ g32 a16. b2) r4 R2.*7
+  b2. b_( c d es g,8)-- g-- g-- g-- g-- g--
+  \repeat unfold 13 {g-- g-- g-- g-- g-- g--}
 }

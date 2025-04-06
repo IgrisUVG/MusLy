@@ -60,5 +60,34 @@ oboeMusicVier = \relative {
   d,8( es f) f4( c8) es( f g) 4( d8) d( es f) f4( es8) es( d c) es4( d8)
   des'!2.( c h4. b4~ b32 a16. b2) r4 f2.( g e f) R2.*2 r4. g4( f8 b2.)
   R2.*13 g2.( fis4 es d c) r2 R2.*9
-  r8 a'( h c) r c( d) r d( e) r4 R2.*2 r2 a,8( h c) r c( d) r d( e2.) R2.
+  r8 a'( h c) r c( d) r d( e) r4 R2.*2 r2 a,8( h c) r c( d) r d( e2.)
+  R2.*5 r2 geses,4-- r f-- r as-- r as(\startTrillSpan
+  gis2.)\stopTrillSpan
+  \key a \major
+  \time 2/4
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  R2*13
+  r4. e8
+  \tuplet 3/2 4 {
+    a8 h cis d fis, gis a4( ais8)
+  }
+  h4
+  R2*5
+  \tuplet 3/2 4 {
+    dis8 eis fis gis fis eis
+    es f ges as ges f
+  }
+  es4 b
+  \key as \major
+  R2*12
+  fis'2( f! e4) r
+  R2*5
+  \tuplet 3/2 4 {
+    g8( fis e d4) d8-- d4-- d8-- d4-- d8( e4) e8( g4) g8(
+  }
+  as2) R2 r4 c,~( c8[ b a ges] f2) R b R c,( es c f) f~-> f f-> f-> f->
+  \time 3/4
+  R2.*11 c'2.( des4 c b as2. b4 as f e2.) R2.*11
+  \bar "|."
 }

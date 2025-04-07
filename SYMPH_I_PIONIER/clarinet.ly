@@ -149,7 +149,11 @@ clarinetOneMusicVier = \relative {
   d4.->~ d8 es( f es4.->~ es8) d( c b4.->~ b8) c g b4.( a)
   g4.~ g8 a\( b c4.->( g4)\) c8( d4.->) g,4-- d'8\(
   es4.->( d)\) R2.*17
-  r8 a'8( b c) r c( d) r d( es) r4
+  r8 a'8( b c) r c( d) r d( es) r4 R2.*10
+  r4. g,4.:8 g2.:8 g2.
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \tuplet 3/2 4 {g8( as-> b h des-> d e f-> g) as4( g8)} r2
 }
 
 clarinetTwoMusicVier = \relative {
@@ -187,5 +191,9 @@ clarinetTwoMusicVier = \relative {
   f,,8( g as) as4( es8) c'\prall( d es) es4( b8)
   b\prall( c d) d4( c8) c( b a) c4( b8) R2.*4
   b2.~ b c~ c es~ es d4. c b2. R2.*22
-  r8 a'8( b c) r c( d) r d( es) r4
+  r8 a'8( b c) r c( d) r d( es) r4 R2.*5
+  r4. d4.:8 c4.:8 h4.:8 b!2.
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \tuplet 3/2 4 {g'8( as-> b h des-> d e f-> g) as4( g8)} r2
 }

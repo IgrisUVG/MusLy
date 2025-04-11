@@ -11,7 +11,7 @@
 %  tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
 %}
 
-#(ly:set-option 'relative-includes #t)
+#(ly:set-option 'C #t)
 
 \paper {
   %#(set-paper-size "a4")

@@ -161,6 +161,7 @@ clarinetOneMusicVier = \relative {
   cis'4. d8 cis4. h8 a4. gis8 fis4) r8 fis(
   d'4. cis8 h4. a8 g4) r8 e(
   e'4. fis8 e4. d8 cis4. h8 a4) r8 a( c4. d8~ d4. a8 g4) r8 e'
+  \tuplet 3/2 4 {cis'8 d e fis, d' cis h a fis cis'4( h8)}
 }
 
 clarinetTwoMusicVier = \relative {
@@ -210,4 +211,5 @@ clarinetTwoMusicVier = \relative {
   cis'4. d8 cis4. h8 a4. gis8 fis4) r8 fis(
   d'4. cis8 h4. a8 g4) r8 e(
   e'4. fis8 e4. d8 cis4. h8 a4) r8 a( c4. d8~ d4. a8 g4) r4
+  e d cis h
 }

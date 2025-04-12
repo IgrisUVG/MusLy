@@ -125,12 +125,12 @@ vniTwoMusicDrei = \relative {
   a2 a a r R1 a2 a
   cis,,4( d2 e4 fis2. g4 a2 d,) e4( fis g a) a,_( h' a g fis1)
   r4 \tuplet 6/4 4 {
-    eis'16 gis  h 
+    eis'16 gis  h
     \ottava #1
     \set Staff.ottavation = #"8"
     cis eis gis h
     \ottava #0
-    eis,, gis  h 
+    eis,, gis  h
     \ottava #1
     \set Staff.ottavation = #"8"
     cis eis gis h gis eis cis h
@@ -155,12 +155,12 @@ vniTwoMusicVier = \relative {
   \override MultiMeasureRest.expand-limit = #2
   b'2.:16~ b2.:16~ b2.:16~ b2.:16~ b2.:16~ b2.:16(
   h2.:16~) h2.:16( as2.:16~) as2.:16~ as2.:16(
-  b2.:16 as2.:16~) as2.:16( g8) r r2 R2.*2  
+  b2.:16 as2.:16~) as2.:16( g8) r r2 R2.*2
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   r4. des4( c8)
   es'8( f g) g4( d8) des!( es f) f4( c8)
-  c( des es) es4( d8) d( c b) a4( g8)  
+  c( des es) es4( d8) d( c b) a4( g8)
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   f2.:16~ f2.:16~ f2.:16~ f2:16 \tuplet 3/2 {f'4( es8)}
@@ -172,5 +172,11 @@ vniTwoMusicVier = \relative {
   R2.*7 r4. e4~ e32 es16. es4.->( d8) r r R2.*7
   b'4.~ b4 c,8 d4.~ d8. es16. f
   es4.~ es8. d16. c b4.~ b8. c16. g b4.( a) g2.
-  g'2.:16~ g2.:16~ g2.:16~ g2.:16  a2.:16  
+  g'2.:16~ g2.:16~ g2.:16~ g2.:16  a2.:16  R2.*22
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \repeat unfold 2 {
+    \tuplet 3/2 4 {g8( as b h des d e f g) as4( g8)}
+  }
+  r4
 }

@@ -73,14 +73,14 @@ oboeMusicVier = \relative {
     a8 h cis d fis, gis a4( ais8)
   }
   h4
-  R2*5
+  R2*7
   \tuplet 3/2 4 {
     dis8 eis fis gis fis eis
     es f ges as ges f
   }
   es4 b
   \key as \major
-  R2*12
+  R2*11
   fis'2( f! e4) r
   R2*5
   \tuplet 3/2 4 {

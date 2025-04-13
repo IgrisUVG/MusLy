@@ -110,14 +110,14 @@ fluteMusicVier = \relative {
   R2.*2 r2 eses,4-- r f-- r geses-- r as-- R2.
   \key a \major
   \time 2/4
-  R2*21
+  R2*23
   \tuplet 3/2 4 {
     dis,8 eis fis gis fis eis
     es f ges as ges f
   }
   es2
   \key as \major
-  R2*12
+  R2*11
   fis2( f! e4) r
   R2*5
   \acciaccatura d'8

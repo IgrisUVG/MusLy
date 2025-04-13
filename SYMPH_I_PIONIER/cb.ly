@@ -85,4 +85,29 @@ cbMusicVier = \relative {
   es'2._( c g4.~ g4~ g32 a16. b2) r4 R2.*7
   b2. b_( c d es g,8)-- g-- g-- g-- g-- g--
   \repeat unfold 13 {g-- g-- g-- g-- g-- g--}
+  g-- g-- g-- g--as( b ces) g-- ces( des) g,-- des'(
+  es) g,-- g-- g-- g-- g--
+  \repeat unfold 5 {g-- g-- g-- g-- g-- g--}
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  R2.*8 r2 \tuplet 3/2 {g8( as b}
+  ces4)-> \tuplet 3/2 {as8( b ces} des4)->
+  \tuplet 3/2 {b8( ces des} eses4)-> \tuplet 3/2 {ces8( des eses}
+  fes4)-> r2 R2.*3
+  \key a \major
+  \time 2/4
+  a,2( cis fis,~ fis4) r d'2( dis e4) r
+  cis2( h a fis4) r e'2 d cis R2*2
+  a4 gis fis e e' eis fis2 a,4 gis fis cis' dis cis dis cis es des es2  
+  \key as \major
+  as c f,~ f4 r des'2 d es c b as f es~ es~
+  \tuplet 3/2 4 {es8 es es es es es}
+  es2~( es8[ f es des] c2~) c~ c~ c~ c~ c
+  f,~ f~ f~ f~ f~ f~ f R2
+  as2_( es' as, f) f->~ f f-> f-> f->
+  \time 3/4
+  f2.( des'4 es2 f2. es4 des2 c2.~ c4) des es e f r
+  f,2. f f f f f f f f f c' c4( f,) r
+  f'2.~( f4 es des c b as g2.~ g4) as2~( as4 b h~ h2) r8 e,( f2.)
+  \bar "|."
 }

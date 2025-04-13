@@ -159,9 +159,34 @@ clarinetOneMusicVier = \relative {
   \key a \major
   \time 2/4
   cis'4. d8 cis4. h8 a4. gis8 fis4) r8 fis(
-  d'4. cis8 h4. a8 g4) r8 e(
-  e'4. fis8 e4. d8 cis4. h8 a4) r8 a( c4. d8~ d4. a8 g4) r8 e'
-  \tuplet 3/2 4 {cis'8 d e fis, d' cis h a fis cis'4( h8)}
+  d'4. cis8 h4. a8 gis4) r8 e(
+  e'4. fis8 e4. d8 cis4. h8 a4) r8 a( cis4. d8~ d4. a8 gis4) r8 e'
+  \tuplet 3/2 4 {cis'8 d e fis, d' cis h a fis cis'4( h8)} R2*6
+  \tuplet 3/2 4 {
+    dis,,8 eis fis gis fis eis
+    dis eis fis gis fis eis
+    es f g as g f
+  }
+  es4( g)
+  \key as \major
+  R2*9 c4.( b8 as4) r8 as( a4. h8 c4. f,8 e4) r
+  as,16( c es as c es as b c f es des c b as b
+  c a fis es c a fis es c a fis g gis a b h
+  c e g c e g c e~ e4) d(-. c-. h-. a2)\startTrillSpan
+  f'16(\stopTrillSpan h, c d e c as f c as f c h d f as
+  h d f as g e c b g e c b a c es ges
+  a c es ges f d b as f d b as g b des fes
+  g b des fes g fes des b g as a b h c des d
+  es2) b,( as c) d( c) d-> d-> d->
+  \time 3/4
+  r16 c'( f as f c as f c as f as des8) r r2
+  r16 c'( f as f c as f c as f as b8) r r2
+  r16 c'( e g e c g e c g e g as8) r r2
+  r4 r8 des16( es f g as b
+  c2. des4 c b as2. b4 as f e2.)
+  f4( as b as2.) b4( as f e2.)
+  f4( as b g2. f4) f r R2.*8
+  \bar "|."
 }
 
 clarinetTwoMusicVier = \relative {
@@ -209,7 +234,23 @@ clarinetTwoMusicVier = \relative {
   \key a \major
   \time 2/4
   cis'4. d8 cis4. h8 a4. gis8 fis4) r8 fis(
-  d'4. cis8 h4. a8 g4) r8 e(
-  e'4. fis8 e4. d8 cis4. h8 a4) r8 a( c4. d8~ d4. a8 g4) r4
-  e d cis h
+  d'4. cis8 h4. a8 gis4) r8 e(
+  e'4. fis8 e4. d8 cis4. h8 a4) r8 a( c4. d8~ d4. a8 gis4) r4
+  e d cis h R2*6
+  \tuplet 3/2 4 {
+    dis8 eis fis gis fis eis
+    dis eis fis gis fis eis
+    es f g as g f
+  }
+  es2
+  \key as \major
+  R2*9 c'4.( b8 as4) r8 as( es2 d des!4) r R2*16
+  as2( g as~ as) as~ as as-> as-> as->
+  \time 3/4
+  R2. r4 c( b as) r2 r4 as( f e) r2 r4 as( g~
+  g) r8 des'16( es f g as b
+  c2. des4 c b as2. b4 as f e2.)
+  f4( as b as2.) b4( as f e2.)
+  f4( as b g2. f4) f r R2.*8
+  \bar "|."
 }

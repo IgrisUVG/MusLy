@@ -44,12 +44,36 @@ trumpetOneMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   b''2.->~ b b->~ b c->~ c h->~ h
   r8 es,4-> e8( f ges~ ges4) g8( as4->) g8( b2.->) b->
   heses8->( as~ as2) heses8->( as~ as2)
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
-  b,2._( as g4. f es2.)
+  b,2._( as g4. f es2.) R2.*3 r4. c'
+  c2.( h4 as g f2.~ f2) as4( des2. h4 f' e es!2) d4( des!2) c4(
+  ces2) \tuplet 3/2 {fes4( es8)} R2.*3 r4. dis4( e8) es!2. R2.*4
+  g,4.--~ g8. a16.-- b--
+  c4.---> g4--~ g32 c16.--
+  d4.---> g,4--~ g32 d'16.--
+  es4.--->( d8--) r4 R2.*7 es4.( d)
+  R2.*4 g,,2. R2.*23
+  r8 a'( h c) r c( d) r d( e) r4 R2.*2
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \repeat unfold 2 {
+    \tuplet 3/2 4 {g,8( as-> b h des-> d e f-> g) as4( g8)}
+  } r4 as,-> r as-> r ceses-> r ces-> r2 R2.*3
+  \key a \major
+  \time 2/4
+  cis4.( d8 cis4. h8 a4. gis8 fis4) r8 fis(
+  d'4. cis8 h4. a8 gis4) r8 e(
+  e'4. fis8 e4. d8 cis4. h8 a4) r8 a( cis4. d8~ d4. a8 gis4) r R2*10
+  \tuplet 3/2 4 {es'8 f ges as ges f} es2
+  \key as \major
+  c4.( des8 c4. b8 as4. g8 f4) r8 f(
+  des'4. c8 b4. as8 g4) r8 es(
+  es'4. f8 es4. des8 c4. b8 as4) r8 as
 }
 
 trumpetTwoMusicVier = \relative {
@@ -60,10 +84,11 @@ trumpetTwoMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   des''2.->~ des des->~ des e->~ e d->~ d
   r8 es,4-> e8( f ges~ ges4) g8( as4->) g8( b2.->) b->
   heses8->( as~ as2) heses8->( as~ as2)
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
-  es4.( d des! c b2.~ b4. as)
+  es4.( d des! c b2.~ b4. as) R2.*3
 }

@@ -30,8 +30,8 @@
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
     %\remove "Bar_number_engraver"
-    %\RemoveEmptyStaves
-    %\override VerticalAxisGroup.remove-first = ##t
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
   }
   \context {
     \Staff

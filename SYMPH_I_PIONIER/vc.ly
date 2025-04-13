@@ -118,5 +118,33 @@ vcMusicVier = \relative {
   g, d' g, es' g, e' g, f' g, fis' g, g'
   g, as' g, a' g, b' g, a' g, as' g, g'
   g, fis' g, f' g, e' g, es' g, d' g, des'
-  g, c g h g b g a g as g8 g
+  g, c g h g b g a g as g8 g r8 a( b c->) r c( d->) r d(
+  es->) r4 r4. R2.*8 r4. r8 a,( b c) r c( d) r d(
+  es) r4 r4. R2.*3
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  \repeat unfold 2 {
+    \tuplet 3/2 4 {g,8( as b h des d e f g) as4( g8)}
+  }
+  \tuplet 3/2 {g,8( as b}
+  ces4)-> \tuplet 3/2 {as8( b ces} des4)->
+  \tuplet 3/2 {b8( ces des} eses4)-> \tuplet 3/2 {ces8( des eses}
+  fes4)-> r2 R2.*3
+  \key a \major
+  \time 2/4
+  a,2( cis fis,~ fis4) r d'2( dis e4) r
+  cis2( h a fis4) r e'2 d cis R2*2
+  a4 gis fis e e' eis fis2 a,4 gis fis cis' dis cis dis cis es des es2  
+  \key as \major
+  as c f,~ f4 r des'2 d es c b as f R2*3
+  as2~( as fis~ fis8) g( fis e) e2~( e4 f g as b2 c)
+  as~( as4 g~ g ges~ ges f~ f fes~ fes2) R2
+  as,2_( es' as, f) f->~ f f-> f-> f->
+  \time 3/4
+  f2.( des'4 es2 f2. es4 des2 c2.~ c4) des es e f r
+  as,2.~ as4 c( b c2.) b4( c b c2.~ c~ c4) as'( c,
+  des es) b( c) h( b as2.) e~ e4 r8 des16_( es f g as b
+  c2. des4 c b as2. b4 as f e2.)
+  f4( b as g2 f4) f2.
+  \bar "|."
 }

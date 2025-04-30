@@ -192,4 +192,12 @@ vniOneMusicVier = \relative {
   }
   es2  
   \key as \major
+  R2*5
+  b'4.( as8 g4) r8 g(
+  es'4. f8 es4. des8 c4. b8 as4) r8 as R2*3
+  as'2~( as a4. h8~ h2 c~ c~ c~ c)
+  f,~( f~ f4 e~ e es~ es d~ d des~ des2) R2
+  \repeat unfold 2 {\tuplet 3/2 2 {r4 c es as2( g4)}}
+  R2 \tuplet 3/2 {as2( g4)} R2 f-> f->
+  \time 3/4
 }

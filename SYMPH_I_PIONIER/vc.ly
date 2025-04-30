@@ -137,7 +137,7 @@ vcMusicVier = \relative {
   a4 gis fis e e' eis fis2 a,4 gis fis cis' dis cis dis cis es des es2  
   \key as \major
   as c f,~ f4 r des'2 d es c b as f R2*3
-  as2~( as fis~ fis8) g( fis e) e2~( e4 f g as b2 c)
+  as2~( as fis~ fis8)[ g( fis e)] e2~( e4 f g as b2 c)
   as~( as4 g~ g ges~ ges f~ f fes~ fes2) R2
   as,2_( es' as, f) f->~ f f-> f-> f->
   \time 3/4

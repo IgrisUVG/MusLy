@@ -274,4 +274,13 @@ rechtsVier = \relative {
     }
   }
   R2*21
+  \clef treble
+  \stemUp
+  f'''16 c as f 
+  c \bot as f c f2^>
+  \stemNeutral
+  \top r r
+  \time 3/4  
+  R2.*27
+  \bar "|."
 }

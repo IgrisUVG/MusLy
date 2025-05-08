@@ -57,10 +57,9 @@ trumpetOneMusicVier = \relative {
   c4.---> g4--~ g32 c16.--
   d4.---> g,4--~ g32 d'16.--
   es4.--->( d8--) r4 R2.*7 es4.( d)
-  R2.*4 g,,2. R2.*23
-  r8 a'( h c) r c( d) r d( e) r4 R2.*2
-  \set baseMoment = #(ly:make-moment 1/4)
+  R2.*4 g,,2. R2.*23\set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1)
+  r8 a'( h c) r c( d) r d( e) r4 R2.*2  
   \repeat unfold 2 {
     \tuplet 3/2 4 {g,8( as-> b h des-> d e f-> g) as4( g8)}
   } r4 as,-> r as-> r ceses-> r ces-> r2 R2.*3
@@ -90,5 +89,12 @@ trumpetTwoMusicVier = \relative {
   heses8->( as~ as2) heses8->( as~ as2)
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
-  es4.( d des! c b2.~ b4. as) R2.*3
+  es4.( d des! c b2.~ b4. as) R2.*3 r4. a'4( g8)
+  c2.( h4 as g f2.~ f2) as4( des2. h4 f' e es!2) d4( des!2) c4(
+  ces2) \tuplet 3/2 {fes4( es8)} R2.*3 r4. dis4( e8) es!2. R2.*4
+  g,4.--~ g8. a16.-- b--
+  c4.---> g4--~ g32 c16.--
+  d4.---> g,4--~ g32 d'16.--
+  es4.--->( d8--) r4 R2.*7 es4.( d)
+  R2.*4 g,,2. R2.*23
 }

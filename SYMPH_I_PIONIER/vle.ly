@@ -174,5 +174,11 @@ vleMusicVier = \relative {
   as'~( as4 g~ g ges~ ges f~ f fes~ fes2) R2
   \tuplet 3/2 2 {r4 as, as as2( g4) as as as as2( g4)}
   R2 \tuplet 3/2 {as2( g4)} R2 f-> f->
-  \time 3/4
+  \time 3/4  
+  c'2.( des4 c b as2. b4 as f e2.) f4 as b g r2
+  R2.*3
+  r4 r8 des16( es f g as b
+  c2. des4 c b as2.) b4( as f e2.)
+  f4( as b g2. f4) f r R2.*8
+  \bar "|."
 }

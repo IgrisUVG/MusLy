@@ -31,7 +31,7 @@
 \layout {
   \context {
     \Score
-    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {
@@ -256,9 +256,10 @@
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \score {
+  \score {    
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
+      %{
       \new StaffGroup = "StaffGroup_woodwinds" <<
         \new Staff = "Staff_flute" {
           \set Staff.instrumentName = #"3 Flauti"
@@ -303,6 +304,7 @@
           \fagottoMusicVier
         }
       >>
+      %}
       %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
       \new StaffGroup = "StaffGroup_brass"
       <<
@@ -323,11 +325,11 @@
         }
         <<
           \new Staff = "Staff_hornI" {
-            \transpose f c'
+            %\transpose f c'
             \cornoOneMusicVier
           }
           \new Staff = "Staff_horn2" {
-            \transpose f c'
+            %\transpose f c'
             \cornoTwoMusicVier
           }
         >>
@@ -348,11 +350,11 @@
         }
         <<
           \new Staff = "Staff_trumpet1" {
-            \transpose b c'
+            %\transpose b c'
             \trumpetOneMusicVier
           }
           \new Staff = "Staff_trumpet2" {
-            \transpose b c'
+            %\transpose b c'
             \trumpetTwoMusicVier
           }
         >>

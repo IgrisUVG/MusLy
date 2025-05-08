@@ -64,4 +64,24 @@ fagottoMusicVier = \relative {
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   r4. a'4( gis8) ges2. R2.*8 b2.( es, c f) d'( c h4. b4 a8 b2.)
+  R2.*3 c,,2. R2.*5 g'2.( fis4 es d c) r2
+  R2. g''2.( fis4 es d c) r2 R2.*17
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1 1)
+  \clef treble
+  r4 \tuplet 3/2 4 {g'8( as-> b h des-> d e f-> g) as4( g8)} r4
+  \clef bass
+  ces,,4-> r des-> r eses-> r fes-> \tuplet 3/2 {g,8( as b}
+  ces4)-> \tuplet 3/2 {as8( b ces} des4)->
+  \tuplet 3/2 {b8( ces des} eses4)-> \tuplet 3/2 {ces8( des eses}
+  fes4)-> R2.
+  \key a \major
+  \time 2/4
+  R2*15
+  r4 \tuplet 3/2 {r8 fis4} R2*9 es2
+  \key as \major
+  R2*22 f2( e4 d h b) R2*8 f'2 f->~ f f-> f-> f->
+  \time 3/4
+  R2.*19 as,2.~( as4 g f~ f2.) b,4( h c) c2 des4~ des2.~ des2 c4~ c2.
+  \bar "|."
 }

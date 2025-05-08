@@ -206,4 +206,9 @@ vniTwoMusicVier = \relative {
   \repeat unfold 2 {\tuplet 3/2 2 {r4 c es as2( g4)}}
   R2 \tuplet 3/2 {as2( g4)} R2 f-> f->
   \time 3/4
+  c'2.( des4 c b as2. b4 as f e2.) f4 as b g r2
+  c'2.( des4 c b as2. b4) r8 des,,16( es f g as b
+  c2. des4 c b as2.) b4( as f e2.)
+  f4( as b g2. f4) f r R2.*8
+  \bar "|."
 }

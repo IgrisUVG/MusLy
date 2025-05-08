@@ -10,6 +10,7 @@ cornoOneMusic = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   es'2( des4 f es es as2) f8 es4 des c8 b4~ b2 as2
   b8 c~ c2.~ c es4( d1 dis) e1~ e2 es des c~ c r
   \time 3/4
@@ -46,7 +47,15 @@ cornoOneMusicVier = \relative {
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   \repeat unfold 3 {g'2.->~ g} as->~ as R2.*2
-  %\clef bass
-  as,2.( g) R2.*2 b2.~ b~ b~ b4.~ b4( as8)
+  \clef bass
+  as,2.( g) R2.*2 b2.~ b~ b~ b4.~ b4( as8) R2.*3 r4. g
+  c2.( h4 as g f2.~ f2) as4( des2. h4 f' e es!2) d4( des!2) c4(
+  ces2) \tuplet 3/2 {fes4( es8)} R2.*3 r4. h c2.
+  b2.~ b~ b~ b R2.*11 b2. b,( c d es b) R2.*2
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  r8 a( h c) r c( d) r d( es) r4 R2.*2
+  g2.( fis4 es d c) r2 R2.*20
 }

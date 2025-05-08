@@ -185,4 +185,13 @@ linksVier = \relative {
   <es es'>4 <des des'> <es es'>2
   \key as \major
   s2*14 R2*21
+  \stemDown
+  \top as''16 f c \bot as 
+  f c as f f2_>  
+  \stemNeutral
+  <f f'>-> q->
+  \time 3/4
+  R2.*26
+  as,2.
+  \bar "|."
 }

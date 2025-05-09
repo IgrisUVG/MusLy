@@ -58,4 +58,16 @@ cornoOneMusicVier = \relative {
   \set beatStructure = #'(1 1 1)
   r8 a( h c) r c( d) r d( es) r4 R2.*2
   g2.( fis4 es d c) r2 R2.*20
+  r4 \tuplet 3/2 {as'4( g8)} r4 as-> r as-> r ceses-> r ces-> r2 R2.*3
+  \key a \major
+  \time 2/4
+  R2*24
+  \tuplet 3/2 4 {es,8 f ges as ges f} es2
+  \key as \major
+  R2*9 c'4.( b8 as4) r8 as R2*13
+  r4 c,~( c8[ b a ges] f2) R2 des'2 R2*2 b'2 R2 f2 f~ f f-> f-> f->
+  \time 3/4  
+  R2.*7 f2.~( f4 es2 c2. f4) es2( e2. f4) es!( f~ f2.)
+  des4( c b g2) c4~( c2 des4 e2.~ e4 f) r R2.*8
+  \bar "|."
 }

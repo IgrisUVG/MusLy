@@ -66,4 +66,17 @@ cornoTwoMusicVier = \relative {
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   \repeat unfold 12 {g'8-- g-- g-- g-- g-- g--} g8-- g-- g-- r4.
+  R2.*4 r4 \tuplet 3/2 {as4( g8)} r4 ces-> r des-> r eses-> r fes-> r2 R2.*3
+  \key a \major
+  \time 2/4
+  \set baseMoment = #(ly:make-moment 1/4)
+  \set beatStructure = #'(1 1 1)
+  R2*24
+  \tuplet 3/2 4 {es8 f ges as ges f} es2
+  \key as \major
+  R2*9 c'4.( b8 as4) r8 as R2*17 des,2 R2*2 b'2 R2 f2 f~ f f-> f-> f->
+  \time 3/4  
+  R2.*7 f2.~( f4 es2 c2. f4) es2( e2. f4) es!( des c as g f2.)
+  g( f) g~ g4 f r R2.*8
+  \bar "|."
 }

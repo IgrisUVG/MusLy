@@ -36,6 +36,27 @@ timpMusicVier = \relative {
   \time 3/4
   \clef bass
   \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = #2
   \repeat unfold 14 {b,4-.-> b-. b-.}
   \repeat unfold 2 {b2.~-"tremolo" b~ b~ b}
+  \repeat unfold 9 {f'4->-. f-. f-.} R2.*3
+  r4. es4.:32~ es2.:32 R2.*4 es2.-> es-> f-> b,->
+  \set beamExceptions = #'()
+  \set baseMoment = #(ly:make-moment 1/8)
+  \set beatStructure = #'(3 3)
+  \repeat unfold 3 {r8 b-. b-. b-.-> r r}
+  \repeat unfold 2 {r8 f'-. f->}
+  \repeat unfold 2 {r8 es-. es-. es-.-> r r}
+  r8 f-. f-. f-.-> f-. f-. b,2.:32 R2.*35
+  f'4-> r f-> r b,-> r as-> r2 R2.*3
+  \key a \major
+  \time 2/4
+  R2*26
+  \key as \major
+  R2*28 b2:32 R2*2 es2:32 R2 f2:32 f2:32->~ f2:32
+  \repeat unfold 3 {f2:32->}
+  \time 3/4
+  R2.*11 f2.-> R2.*6 r4 f r 
+  \repeat unfold 7 {f2.:32~} f2.:32
+  \bar "|."
 }

@@ -62,12 +62,12 @@ oboeMusicVier = \relative {
   R2.*13 g2.( fis4 es d c) r2 R2.*9
   r8 a'( h c) r c( d) r d( e) r4 R2.*2 r2 a,8( h c) r c( d) r d( e2.)
   R2.*5 r2 geses,4-- r f-- r as-- r as(\startTrillSpan
-  gis2.)\stopTrillSpan
+  gis2.)\stopTrillSpan\startTrillSpan
   \key a \major
   \time 2/4
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
-  R2*13
+  R2*13\stopTrillSpan
   r4. e8
   \tuplet 3/2 4 {
     a8 h cis d fis, gis a4( ais8)

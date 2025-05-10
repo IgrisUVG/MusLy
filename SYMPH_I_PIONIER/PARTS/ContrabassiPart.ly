@@ -30,8 +30,8 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -50,7 +50,7 @@
   }
   
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \cbMusic
@@ -63,7 +63,7 @@
   }
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \cbMusicDrei

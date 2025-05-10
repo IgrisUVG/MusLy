@@ -34,9 +34,9 @@
   }
   \context{
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     %\override StaffGrouper.staff-staff-spacing.basic-distance = #13
-    %\remove "Bar_number_engraver"
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -59,7 +59,7 @@
   }
   
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new PianoStaff
     <<
@@ -76,9 +76,9 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new PianoStaff
     <<
@@ -95,7 +95,8 @@
       %breakbefore = ##t
     }
   }
-  %}
+  \pageBreak
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   
   \score {

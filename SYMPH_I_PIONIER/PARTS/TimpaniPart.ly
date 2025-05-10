@@ -31,8 +31,8 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -50,9 +50,9 @@
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
-  
+
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \timpMusic
@@ -64,9 +64,9 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \timpMusicDrei
@@ -75,8 +75,11 @@
       subtitle = ##f
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff

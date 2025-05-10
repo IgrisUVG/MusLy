@@ -30,8 +30,8 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -49,7 +49,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \fluteMusic
@@ -59,9 +59,9 @@
       composer = ##f
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \fluteMusicDrei
@@ -70,8 +70,11 @@
       subtitle = ##f
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff

@@ -5,6 +5,8 @@
 fluteMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -35,13 +37,18 @@ fluteMusic = \relative {
 fluteMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   e'''1~ e  s4. s16
   \cadenzaOff
@@ -50,6 +57,8 @@ fluteMusicDrei = \relative {
 fluteMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -137,6 +146,12 @@ fluteMusicVier = \relative {
   f( d h as f as h d
   \time 3/4
   f2.) R2.*7 r4. des16( es f g as b
-  c2. des4 c b) as2.( b4 as f) f2. R2.*13
+  c2. des4 c b)
+  \override Score.RehearsalMark.extra-offset = #'(6 . 2)
+  \mark "Moderato"
+  as2.( b4 as f) f2. R2.*5
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }

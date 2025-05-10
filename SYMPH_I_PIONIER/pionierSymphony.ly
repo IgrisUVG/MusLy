@@ -4,6 +4,7 @@
 
 #(ly:set-option 'relative-includes #t)
 #(set-global-staff-size 16)
+
 \paper {
   system-separator-markup = \slashSeparator
   %#(set-paper-size "a4")
@@ -13,24 +14,25 @@
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #8
   %markup-system-spacing.basic-distance = #26
-  system-system-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #15
   last-bottom-spacing.basic-distance = #15
   two-sided = ##t
   inner-margin = 20
   outer-margin = 10
 }
+
 \layout {
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {
     \Score
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
-    %\remove "Bar_number_engraver"
-    %\RemoveEmptyStaves
+    \remove "Bar_number_engraver"
+    \RemoveEmptyStaves
     %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
@@ -85,7 +87,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -246,9 +248,10 @@
       %breakbefore = ##t
     }
   }
-  %}
+  \pageBreak
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -433,7 +436,7 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \score {

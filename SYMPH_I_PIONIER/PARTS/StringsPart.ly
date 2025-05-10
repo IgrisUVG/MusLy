@@ -31,15 +31,15 @@
 \layout {
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {
     \Score
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
-    %\remove "Bar_number_engraver"
-    %\RemoveEmptyStaves
+    \remove "Bar_number_engraver"
+    \RemoveEmptyStaves
     %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
@@ -69,7 +69,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new StaffGroup = "StaffGroup_strings" <<
       \new StaffGroup = "GrandStaff_violins" \with {
@@ -118,7 +118,7 @@
   }
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new StaffGroup = "StaffGroup_strings" <<
       \new StaffGroup = "GrandStaff_violins" \with {

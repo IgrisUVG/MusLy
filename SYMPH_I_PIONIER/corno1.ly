@@ -53,7 +53,14 @@ cornoOneMusicVier = \relative {
   as,2.( g) R2.*2 b2.~ b~ b~ b4.~ b4( as8) R2.*3 r4. g
   c2.( h4 as g f2.~ f2) as4( des2. h4 f' e es!2) d4( des!2) c4(
   ces2) \tuplet 3/2 {fes4( es8)} R2.*3 r4. h c2.
-  b2.~ b~ b~ b R2.*11 b2. b,( c d es b) R2.*2
+  b2.~ b~ b~ b 
+  \clef treble
+  g'4.--~ g8. a16.-- b--
+  c4.---> g4--~ g32 c16.--
+  d4.---> g,4--~ g32 d'16.--
+  es4.--->( d8--) r4
+  \clef bass
+  R2.*7 b,2. b,( c d es b) R2.*2
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1)
   r8 a( h c) r c( d) r d( es) r4 R2.*2

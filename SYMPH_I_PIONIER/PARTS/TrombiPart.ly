@@ -31,8 +31,8 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -52,7 +52,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \transpose b c'
@@ -65,9 +65,9 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \transpose b c'
@@ -77,8 +77,11 @@
       subtitle = ##f
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \score {

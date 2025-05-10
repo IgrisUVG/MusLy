@@ -31,15 +31,15 @@
 \layout {
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {
     \Score
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
-    %\remove "Bar_number_engraver"
-    %\RemoveEmptyStaves
+    \remove "Bar_number_engraver"
+    \RemoveEmptyStaves
     %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
@@ -71,7 +71,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -163,7 +163,7 @@
   }
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
@@ -252,14 +252,16 @@
       composer = ##f
       %breakbefore = ##t
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \score {    
+  \score {
     <<
       %%%%%%%%%%%%%%% WOODWINDS %%%%%%%%%%%%%%%
-      %{
       \new StaffGroup = "StaffGroup_woodwinds" <<
         \new Staff = "Staff_flute" {
           \set Staff.instrumentName = #"3 Flauti"
@@ -304,7 +306,6 @@
           \fagottoMusicVier
         }
       >>
-      %}
       %%%%%%%%%%%%%%% BRASS %%%%%%%%%%%%%%%
       \new StaffGroup = "StaffGroup_brass"
       <<

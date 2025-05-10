@@ -53,7 +53,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new StaffGroup = "GrandStaff_corni"
     <<
@@ -74,9 +74,9 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new StaffGroup = "GrandStaff_corni"
     <<
@@ -94,8 +94,11 @@
       subtitle = ##f
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \score {

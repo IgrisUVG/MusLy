@@ -17,7 +17,7 @@
   top-system-spacing.basic-distance = #15
   top-markup-spacing.basic-distance = #5
   markup-system-spacing.basic-distance = #15
-  system-system-spacing.basic-distance = #20
+  system-system-spacing.basic-distance = #15
   last-bottom-spacing.basic-distance = #15
   left-margin = 15
   right-margin = 15
@@ -30,8 +30,8 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -49,7 +49,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \oboeMusic
@@ -60,9 +60,9 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \oboeMusicDrei
@@ -71,8 +71,11 @@
       subtitle = ##f
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new Staff

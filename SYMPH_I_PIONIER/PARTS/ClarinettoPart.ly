@@ -15,11 +15,11 @@
 
 \paper {
   %#(set-paper-size "a4")
-  top-system-spacing.basic-distance = #15
+  top-system-spacing.basic-distance = #20
   top-markup-spacing.basic-distance = #5
   markup-system-spacing.basic-distance = #15
   system-system-spacing.basic-distance = #20
-  last-bottom-spacing.basic-distance = #15
+  last-bottom-spacing.basic-distance = #20
   left-margin = 15
   right-margin = 15
   %two-sided = ##t
@@ -31,8 +31,8 @@
   indent = 10
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
-    %\remove "Bar_number_engraver"
+    %\override BarNumber.break-visibility = ##(#f #t #t)
+    \remove "Bar_number_engraver"
   }
 }
 
@@ -52,7 +52,7 @@
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
   }
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \transpose b c'
@@ -65,9 +65,9 @@
       %breakbefore = ##t
     }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new Staff
     \transpose b c'
@@ -78,8 +78,11 @@
       subsubtitle = ##f
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
-  %}
+  %
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
   \score {
     \new StaffGroup = "GrandStaff_clarinetto"

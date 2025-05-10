@@ -31,16 +31,16 @@
 \layout {
   \context {
     \Score
-    \override BarNumber.break-visibility = ##(#f #t #t)
+    %\override BarNumber.break-visibility = ##(#f #t #t)
     %\RemoveEmptyStaffContext
   }
   \context {
     \Score
     %\remove "Timing_translator"
     %\remove "Default_bar_line_engraver"
-    %\remove "Bar_number_engraver"
+    \remove "Bar_number_engraver"
     \RemoveEmptyStaves
-    \override VerticalAxisGroup.remove-first = ##t
+    %\override VerticalAxisGroup.remove-first = ##t
   }
   \context {
     \Staff
@@ -68,7 +68,7 @@
   }
 
   %%%%%%%%%%%%%%%%%%%%%%%%%% ERsTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new StaffGroup = "StaffGroup_woodwinds" <<
       \new Staff = "Staff_flute" {
@@ -111,7 +111,7 @@
   }
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% DRITTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
-  %{
+  %
   \score {
     \new StaffGroup = "StaffGroup_woodwinds" <<
       \new Staff = "Staff_flute" {
@@ -151,7 +151,11 @@
       title = "Dtirtte Teil"
       composer = ##f
     }
+    \layout {
+      ragged-last = ##f
+    }
   }
+  \pageBreak
   %}
   %%%%%%%%%%%%%%%%%%%%%%%%%% VIERTE TEIL %%%%%%%%%%%%%%%%%%%%%%%%%%
 

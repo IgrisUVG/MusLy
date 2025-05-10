@@ -54,7 +54,14 @@ cornoTwoMusicVier = \relative {
   f2.( fes) R2.*2 b2.~ b~ b~ b4.~ b4( as8) R2.*3 r4. g,
   c2.( h4 as g f2.~ f2) as4( des2. h4 f' e es!2) d4( des!2) c4(
   ces2) \tuplet 3/2 {fes4( es8)} R2.*3 r4. h c2.
-  b'2.~ b~ b~ b R2.*11 b,2. b_( c d es
+  b'2.~ b~ b~ b
+  \clef treble
+  g'4.--~ g8. a16.-- b--
+  c4.---> g4--~ g32 c16.--
+  d4.---> g,4--~ g32 d'16.--
+  es4.--->( d8--) r4
+  \clef bass
+  R2.*7 b,,2. b_( c d es
   \set baseMoment = #(ly:make-moment 1/8)
   \set beatStructure = #'(3 3)
   g,8)-- g-- g-- g-- g-- g--
@@ -75,7 +82,7 @@ cornoTwoMusicVier = \relative {
   \tuplet 3/2 4 {es8 f ges as ges f} es2
   \key as \major
   R2*9 c'4.( b8 as4) r8 as R2*17 des,2 R2*2 b'2 R2 f2 f~ f f-> f-> f->
-  \time 3/4  
+  \time 3/4
   R2.*7 f2.~( f4 es2 c2. f4) es2( e2. f4) es!( des c as g f2.)
   g( f) g~ g4 f r R2.*8
   \bar "|."

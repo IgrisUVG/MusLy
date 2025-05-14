@@ -10,7 +10,7 @@
   tagline = ##f
 }
 
-%#(set-global-staff-size 18)
+#(set-global-staff-size 18)
 \paper {
   #(set-paper-size "a4")
   top-system-spacing.basic-distance = #20

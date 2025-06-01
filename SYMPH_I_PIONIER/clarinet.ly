@@ -66,6 +66,8 @@ slashII = {
 clarinetMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -99,13 +101,18 @@ clarinetMusic = \relative {
 clarinetMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   <cis'' b'>1~ q  s4. s16
   \cadenzaOff
@@ -114,6 +121,8 @@ clarinetMusicDrei = \relative {
 clarinetOneMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1)

@@ -5,6 +5,8 @@
 cbMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -31,6 +33,8 @@ cbMusic = \relative {
 cbMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -42,6 +46,8 @@ cbMusicDrei = \relative {
   es f ges cis, d e e e e a, h cis d d d d c h h h b e, fis g
   a a a a g g g fis fis e fis g a a g a h h a h cis cis cis cis~ cis2
   \bar "||"
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
   \unset beamExceptions
   R1*8 d,1 \repeat unfold 3 {d4 fis8( a h cis h a)} d,1~ d4. cis8 h e4.~
   e2 a,~ a1 R1 a2 r r
@@ -66,6 +72,8 @@ cbMusicDrei = \relative {
 cbMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -107,7 +115,12 @@ cbMusicVier = \relative {
   as2_( es' as, f) f->~ f f-> f-> f->
   \time 3/4
   f2.( des'4 es2 f2. es4 des2 c2.~ c4) des es e f r
-  f,2. f f f f f f f f f c' c4( f,) r
+  f,2. f f f
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato" 
+  f f f f f f c' c4( f,) r
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
   f'2.~( f4 es des c b as g2.~ g4) as2~( as4 b h~ h2) r8 e,( f2.)
   \bar "|."
 }

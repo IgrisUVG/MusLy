@@ -5,6 +5,8 @@
 cornoTwoMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -28,13 +30,18 @@ cornoTwoMusic = \relative {
 cornoTwoMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   e1~ e  s4. s16
   \cadenzaOff
@@ -43,6 +50,8 @@ cornoTwoMusicDrei = \relative {
 cornoTwoMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -83,7 +92,13 @@ cornoTwoMusicVier = \relative {
   \key as \major
   R2*9 c'4.( b8 as4) r8 as R2*17 des,2 R2*2 b'2 R2 f2 f~ f f-> f-> f->
   \time 3/4
-  R2.*7 f2.~( f4 es2 c2. f4) es2( e2. f4) es!( des c as g f2.)
-  g( f) g~ g4 f r R2.*8
+  R2.*7 f2.~( f4 es2 c2. f4) es2(
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato"
+  e2. f4) es!( des c as g f2.)
+  g( f) g~ g4 f r
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }

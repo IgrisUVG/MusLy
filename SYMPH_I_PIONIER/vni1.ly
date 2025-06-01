@@ -5,6 +5,8 @@
 vniOneMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -39,6 +41,8 @@ vniOneMusic = \relative {
 vniOneMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -50,6 +54,8 @@ vniOneMusicDrei = \relative {
   \unset beamExceptions
   %\unset baseMoment
   %\unset beatStructure
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
   a4 d8 e fis4( a g) h8( a g fis e d fis4) a8( g fis e d cis
   d4) h8( ais h4) \tuplet 3/2 {cis,8( d e} d2) e fis
   <<
@@ -138,6 +144,8 @@ vniOneMusicDrei = \relative {
 vniOneMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -202,7 +210,12 @@ vniOneMusicVier = \relative {
   \time 3/4
   c2.( des4 c b as2. b4 as f e2.) f4 as b g r2
   c'2.( des4 c b as2. b4) r8 des,,16( es f g as b
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato" 
   c2. des4 c b as2.) b4( as f e2.)
-  f4( as b g2. f4) f r R2.*8
+  f4( as b g2. f4) f r
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }

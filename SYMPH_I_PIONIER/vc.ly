@@ -5,6 +5,8 @@
 vcMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -32,6 +34,8 @@ vcMusic = \relative {
 vcMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -42,6 +46,8 @@ vcMusicDrei = \relative {
   h h h c c c c d es f ges a g e e e e e e e d d d d c h h h b b b b
   a a a a g g g h h h c c c d d d e e e fis fis g a <fis h>~ q2
   \bar "||"
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
   \unset beamExceptions
   R1*6 h,4 e8 fis g4( h a) cis8( h a g fis e d1)
   \repeat unfold 10 {a8-.} r2. R1 r2.
@@ -90,6 +96,8 @@ vcMusicDrei = \relative {
 vcMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -142,8 +150,13 @@ vcMusicVier = \relative {
   as,2_( es' as, f) f->~ f f-> f-> f->
   \time 3/4
   f2.( des'4 es2 f2. es4 des2 c2.~ c4) des es e f r
-  as,2.~ as4 c( b c2.) b4( c b c2.~ c~ c4) as'( c,
+  as,2.~ as4 c( b c2.) b4( c b
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato" 
+  c2.~ c~ c4) as'( c,
   des es) b( c) h( b as2.) e~ e4 r8 des16_( es f g as b
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
   c2. des4 c b as2. b4 as f e2.)
   f4( b as g2 f4) f2.
   \bar "|."

@@ -5,6 +5,8 @@
 fagottoMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -35,13 +37,17 @@ fagottoMusic = \relative {
 fagottoMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
-  \clef bass
-  \compressFullBarRests
+  \clef bass\compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   e1~ e  s4. s16
   \cadenzaOff
@@ -50,6 +56,8 @@ fagottoMusicDrei = \relative {
 fagottoMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1)
@@ -82,6 +90,13 @@ fagottoMusicVier = \relative {
   \key as \major
   R2*22 f2( e4 d h b) R2*8 f'2 f->~ f f-> f-> f->
   \time 3/4
-  R2.*19 as,2.~( as4 g f~ f2.) b,4( h c) c2 des4~ des2.~ des2 c4~ c2.
+  R2.*11
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato"
+  R2.*8
+  %\break
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  as,2.~( as4 g f~ f2.) b,4( h c) c2 des4~ des2.~ des2 c4~ c2.
   \bar "|."
 }

@@ -5,6 +5,8 @@
 cornoOneMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -16,7 +18,7 @@ cornoOneMusic = \relative {
   \time 3/4
   R2.*20
   \clef bass
-  c,2.~( c b4 as g 
+  c,2.~( c b4 as g
   \time 4/4
   f2) r R1*2
   \clef treble
@@ -27,13 +29,18 @@ cornoOneMusic = \relative {
 cornoOneMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   g1~ g  s4. s16
   \cadenzaOff
@@ -42,6 +49,8 @@ cornoOneMusicDrei = \relative {
 cornoOneMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -53,7 +62,7 @@ cornoOneMusicVier = \relative {
   as,2.( g) R2.*2 b2.~ b~ b~ b4.~ b4( as8) R2.*3 r4. g
   c2.( h4 as g f2.~ f2) as4( des2. h4 f' e es!2) d4( des!2) c4(
   ces2) \tuplet 3/2 {fes4( es8)} R2.*3 r4. h c2.
-  b2.~ b~ b~ b 
+  b2.~ b~ b~ b
   \clef treble
   g'4.--~ g8. a16.-- b--
   c4.---> g4--~ g32 c16.--
@@ -73,8 +82,14 @@ cornoOneMusicVier = \relative {
   \key as \major
   R2*9 c'4.( b8 as4) r8 as R2*13
   r4 c,~( c8[ b a ges] f2) R2 des'2 R2*2 b'2 R2 f2 f~ f f-> f-> f->
-  \time 3/4  
-  R2.*7 f2.~( f4 es2 c2. f4) es2( e2. f4) es!( f~ f2.)
-  des4( c b g2) c4~( c2 des4 e2.~ e4 f) r R2.*8
+  \time 3/4
+  R2.*7 f2.~( f4 es2 c2. f4) es2(
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato"
+  e2. f4) es!( f~ f2.)
+  des4( c b g2) c4~( c2 des4 e2.~ e4 f) r
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }

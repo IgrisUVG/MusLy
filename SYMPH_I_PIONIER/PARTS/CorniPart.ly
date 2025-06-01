@@ -46,7 +46,7 @@
   \header {
     title = \markup {\fontsize #3 "Pioniersymphonie"}
     subtitle = "2 Corni"
-    subsubtitle = "in B"
+    subsubtitle = "in f"
     %meter = "Grave"
     composer = "I. G."
     tagline = \markup {\char ##x00A9 "Ilja Grischunin"}
@@ -92,6 +92,7 @@
     \header {
       title = "Dritte Teil"
       subtitle = ##f
+      subsubtitle = ##f
       composer = ##f
     }
     \layout {

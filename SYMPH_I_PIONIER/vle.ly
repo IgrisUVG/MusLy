@@ -5,6 +5,8 @@
 vleMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -28,6 +30,8 @@ vleMusic = \relative {
 vleMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -36,6 +40,8 @@ vleMusicDrei = \relative {
   \override MultiMeasureRest.expand-limit = #2
   R1*2 r8 fis' e2 h8 cis a4. g8 fis4 e c4. d e8 g a4 cis2.
   \bar "||"
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
   \unset beamExceptions
   R1*3 fis,4 h8 cis d4( fis e) g8( fis e d cis h d4) fis8( e d cis h a
   gis2) g a1~ a
@@ -118,6 +124,8 @@ vleMusicDrei = \relative {
 vleMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -178,7 +186,12 @@ vleMusicVier = \relative {
   c'2.( des4 c b as2. b4 as f e2.) f4 as b g r2
   R2.*3
   r4 r8 des16( es f g as b
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato" 
   c2. des4 c b as2.) b4( as f e2.)
-  f4( as b g2. f4) f r R2.*8
+  f4( as b g2. f4) f r
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }

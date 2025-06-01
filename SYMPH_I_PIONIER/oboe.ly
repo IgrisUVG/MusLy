@@ -5,6 +5,8 @@
 oboeMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -32,13 +34,18 @@ oboeMusic = \relative {
 oboeMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
   \clef treble
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   b'1~ b  s4. s16
   \cadenzaOff
@@ -47,6 +54,8 @@ oboeMusicDrei = \relative {
 oboeMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \set beamExceptions = #'()
   \set baseMoment = #(ly:make-moment 1/4)
   \set beatStructure = #'(1 1 1 1)
@@ -61,8 +70,11 @@ oboeMusicVier = \relative {
   des'!2.( c h4. b4~ b32 a16. b2) r4 f2.( g e f) R2.*2 r4. g4( f8 b2.)
   R2.*13 g2.( fis4 es d c) r2 R2.*9
   r8 a'( h c) r c( d) r d( e) r4 R2.*2 r2 a,8( h c) r c( d) r d( e2.)
-  R2.*5 r2 geses,4-- r f-- r as-- r as(\startTrillSpan
-  gis2.)\stopTrillSpan\startTrillSpan
+  R2.*5 r2 geses,4-- r f-- r as-- r
+  \once \override TrillSpanner #'(bound-details right padding) = #1.2
+  as(\startTrillSpan
+  \once \override TrillSpanner #'(bound-details right padding) = #13
+  gis2.)\startTrillSpan
   \key a \major
   \time 2/4
   \set baseMoment = #(ly:make-moment 1/4)
@@ -88,6 +100,12 @@ oboeMusicVier = \relative {
   }
   as2) R2 r4 c,~( c8[ b a ges] f2) R b R c,( es c f) f~-> f f-> f-> f->
   \time 3/4
-  R2.*11 c'2.( des4 c b as2. b4 as f e2.) R2.*11
+  R2.*11
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato"
+  c'2.( des4 c b as2. b4 as f e2.) R2.*3
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }

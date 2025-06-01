@@ -73,6 +73,7 @@
     \header {
       title = "Dritte Teil"
       subtitle = ##f
+      subsubtitle = ##f
       composer = ##f
     }
     \layout {

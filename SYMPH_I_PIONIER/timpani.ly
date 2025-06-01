@@ -5,6 +5,8 @@
 timpMusic = \relative {
   \key as \major
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Allegro"
   \clef bass
   \compressFullBarRests
   as,8-. r r2. es'4:32 as,-. r f'8-. r
@@ -22,10 +24,15 @@ timpMusic = \relative {
 timpMusicDrei = \relative {
   \key h \minor
   \time 4/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Adagio"
   \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2
-  R1*50
+  R1*6
+  \override Score.RehearsalMark.extra-offset = #'(10 . 2)
+  \mark "Allegro pastorale"
+  R1*44
   \cadenzaOn
   b,1:32~ b1:32  s4. s16
   \cadenzaOff
@@ -34,6 +41,8 @@ timpMusicDrei = \relative {
 timpMusicVier = \relative {
   \key as \major
   \time 3/4
+  \override Score.RehearsalMark.extra-offset = #'(4 . 2)
+  \mark "Presto"
   \clef bass
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = #2

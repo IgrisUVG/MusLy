@@ -98,7 +98,7 @@
       }
     >>
     \header {
-      title = "Dritte Teil"
+      title = "Vierte Teil"
       subtitle = ##f
       subsubtitle = ##f
       composer = ##f

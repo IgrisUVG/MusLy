@@ -183,9 +183,15 @@ clarinetOneMusicVier = \relative {
   r16 c'( f as f c as f c as f as b8) r r2
   r16 c'( e g e c g e c g e g as8) r r2
   r4 r8 des16( es f g as b
-  c2. des4 c b as2. b4 as f e2.)
+  c2. des4 c b as2. b4 as f
+  \override Score.RehearsalMark.extra-offset = #'(6 . 1)
+  \mark "Moderato"
+  e2.)
   f4( as b as2.) b4( as f e2.)
-  f4( as b g2. f4) f r R2.*8
+  f4( as b g2. f4) f r
+  \override Score.RehearsalMark.extra-offset = #'(4 . 1)
+  \mark "Adagio"
+  R2.*8
   \bar "|."
 }
 

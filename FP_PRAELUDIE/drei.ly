@@ -4,96 +4,113 @@
 \language "deutsch"
 
 %%%%%%%%%%% RH %%%%%%%%%%%%
-rechtsDrei = {
+rechtsDrei = \relative {
   \clef treble
   \key a \major
   \time 3/4
   \once\override Score.RehearsalMark.extra-offset = #'(4 . 2)
   \mark "Lento"
-  R2. R r4 <e'' a'' cis'''>( <fis'' a'' d'''>)
-  r <f'' a'' dis'''>( <gis'' c''' e'''>)
+  R2. R r4 <e'' a cis>( <fis a d>)
+  r <f a dis>( <gis c e>)
   \break
   \bar "S.|:-S"
-  r4 <e'' a'' cis'''>( <fis'' a'' d'''>)
-  r <<{s4 s8 e''}\\{<f'' a'' dis'''>4^( <gis'' c''' e'''>)}>>
-  a''8[ h''] cis'''[ e'''!] f'''[ cis''''] h'''4. a'''8 gis'''[ a''']
-  <cis'''' e''''>8. e'''16
-  << {e'''4 s}\\{<e'' a'' cis'''>^( <fis'' a'' d'''>) }>>
-  r <<
+  r4 <e a cis>( <fis a d>)
+  r
+  <<
     {
-      s4 s8 <e' e''>
-      \override NoteColumn.force-hshift = #-1.3
-      s4 <e'' a''> <a'' d'''> s <d''' f'''> <h'' e'''>
-      s \stemDown <e'' a'' cis'''>^( <fis'' a'' d'''>)
+      s4 s8 e
     }
     \\
     {
-      <f'' a'' dis'''>4^( <gis'' c''' e'''>)
-      <a' a''>8[ <h' h''>] <cis'' cis'''>[ <e''! e'''!>]
-      <f'' f'''>[ <a'' a'''>] <h'' h'''>4. <a'' a'''>8 <gis'' gis'''> <a'' a'''>
-      <e'' e'''>2.
+      <f a dis>4^( <gis c e>)
     }
   >>
-  r4 <f'' a'' dis'''>4^(
+  a8[ h] cis[ e!] f[ cis'] h4. a8 gis[ a]
+  <cis e>8. e,16
+  <<
+    {
+      e4 s
+    }
+    \\
+    {
+      <e, a cis>^( <fis a d>)
+    }
+  >>
+  r
+  <<
+    {
+      s4 s8 <e, e'>
+      \override NoteColumn.force-hshift = #-1.3
+      s4 <e' a> <a d> s <d f> <h e>
+      s \stemDown <e, a cis>^( <fis a d>)
+    }
+    \\
+    {
+      <f a dis>4^( <gis c e>)
+      <a, a'>8[ <h h'>] <cis cis'>[ <e! e'!>]
+      <f f'>[ <a a'>] <h h'>4. <a a'>8 <gis gis'> <a a'>
+      <e e'>2.
+    }
+  >>
+  r4 <f a dis>4^(
   \once \override Score.RehearsalMark.extra-offset = #'( 6 . -3 )
   %\once \override Score.RehearsalMark #'font-size = #1
   \mark \markup { \musicglyph #"scripts.coda" }
-  <gis'' c''' e'''>)
-  r16 <a' c''>-> q q->~ q <h' es''>-> <a' c''>-. r
-  r <a'' c'''>-> q q->~ q <h'' es'''>-> <a'' c'''>-. r r
+  <gis c e>)
+  r16 <a, c>-> q q->~ q <h es>-> <a c>-. r
+  r <a' c>-> q q->~ q <h es>-> <a c>-. r r
   \ottava #1
   \set Staff.ottavation = #"8"
-  <a''' c''''>-> q q->~ q <h''' es''''>-> <a''' c''''>-.
+  <a' c>-> q q->~ q <h es>-> <a c>-.
   \ottava #0 r
-  R2.*3 r2 r8 e''16 e''' a' e''' h' e''' cis'' e''' e''! e''' f'' e''' cis''' e'''
-  h'' e''' f''' c'''' h''' a''' gis''' a'''
+  R2.*3 r2 r8 e,16 e' a,, e'' h, e' cis, e' e,! e' f, e' cis e
+  h e f c' h a gis a
   \set subdivideBeams = ##t
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
   \set baseMoment = #(ly:make-moment 1 8)
   \omit TupletBracket
-  e''' e'''' \times 2/3 {cis''''16 a''' f'''} e'''32 cis''' a'' f'' e''8 r2 R2.
-  r4 <e'' a'' cis'''>( <fis'' a'' d'''>)
-  r <<
-    {
-      \stemDown
-      <f'' a'' dis'''>4^( <gis'' c''' e'''>)
-      s2. s s4 <e'' a'' cis'''>^( <fis'' a'' d'''>)
-    }
-    \\
-    {
-      s4 s8 e''^.^( a''8^.[ h''^.] cis'''^.[ e'''!^.]
-      f'''^.[ cis''''^.] h'''4.) a'''8^( gis'''[ a''']
-      <e''' e''''>8.) <e''' e''''>16^( \stemUp e'''4) s
-    }
-  >>
-  r <<
-    {
-      s4 s8 <e' e''>
-    }
-    \\
-    {
-      <f'' a'' dis'''>4^( <gis'' c''' e'''>)
-    }
-  >>
-  <a' cis'' e'' a''>8[ <h' e'' a''h''>]
-  <cis'' e'' a'' cis'''>[ <e''! a'' cis''' e'''!>]
-  <f'' a'' d''' f'''>[ <cis''' e''' a''' cis''''>]
-  <h'' d''' f''' h'''>4.<a'' c''' f''' a'''>8
-  <gis'' h'' e''' gis'''>[ <a'' h'' e''' a'''>]
+  e e' \times 2/3 {cis16 a f} e32 cis a f e8 r2 R2.
+  r4 <e a cis>( <fis a d>) r
   <<
     {
-      <e'' a'' cis''' e'''>2.
+      \stemDown
+      <f a dis>4^( <gis c e>)
+      s2. s s4 <e a cis>^( <fis a d>)
     }
     \\
     {
-      \times 2/3 {a'8\rest[ <e' a' cis''><e' a' h'>]}
-      \times 2/3 {<e' a' cis''>8<a' cis'' e''><cis'' e'' a''>}
-      \times 2/3 {<e'' a'' cis'''>8<a'' e''' fis'''><d''' fis''' a'''>}
+      s4 s8 e^.^( a8^.[ h^.] cis^.[ e!^.]
+      f^.[ cis'^.] h4.) a8^( gis[ a]
+      <e e'>8.) q16^( \stemUp e4) s
     }
   >>
-  <h'' d''' f''' h'''>4. <a'' c''' f''' a'''>8
-  <gis'' h'' e''' gis'''><h'' e''' gis''' h'''>
-  <a'' cis''' e''' a'''>2. R
+  r
+  <<
+    {
+      s4 s8 <e,, e'>
+    }
+    \\
+    {
+      <f' a dis>4^( <gis c e>)
+    }
+  >>
+  <a, cis e a>8[ <h e a h>] <cis e a cis>[ <e! a cis e!>]
+  <f a d f>[ <cis' e a cis>]
+  <h d f h>4.<a c f a>8 <gis h e gis>[ <a h e a>]
+  <<
+    {
+      <e a cis e>2.
+    }
+    \\
+    {
+      \times 2/3 {a,8\rest[ <e a cis><e a h>]}
+      \times 2/3 {<e a cis>8<a cis e><cis e a>}
+      \times 2/3 {<e a cis>8<a e' fis><d fis a>}
+    }
+  >>
+  <h d f h>4. <a c f a>8
+  <gis h e gis><h e gis h>
+  <a cis e a>2. R
   r4
   <<
     {
@@ -105,34 +122,34 @@ rechtsDrei = {
         %          (( 0 . 0) (0.5 . -0.5) (1 . -1) (2 . -1))
         %         ((0 . -1) (0.5 . -0.5) (0 . 0) (0 . 0))
         %        ) Slur
-        dis''''16[_( e'''']
+        dis'16[_( e]
       }
       \hideNotes
-      a'''4)
+      a,4)
       \unHideNotes
     }
     \\
     {
-      \repeat tremolo 4 {cis'''16^( e'''}
-      \repeat tremolo 4 {cis'''16 e'''}
+      \repeat tremolo 4 {cis,16^( e}
+      \repeat tremolo 4 {cis16 e}
       \ottava #1
       \set Staff.ottavation = #"8"
-      \times 4/5 {f'''16 gis''' a''' cis'''' e''''}
-      \repeat tremolo 6 {f''''16 e''''!}
-      \repeat tremolo 6 {f''''16 e''''!}
+      \times 4/5 {f16 gis a cis e}
+      \repeat tremolo 6 {f16 e!}
+      \repeat tremolo 6 {f16 e!}
       \cadenzaOn
-      a'''4)
+      a,4)
     }
   >>
   \ottava #0
-  \relative a'{
+  %\relative a'{
     \set baseMoment = #(ly:make-moment 1 2)
-    cis'16[ a f e] f[ e cis a] cis[ e f a] cis[ a f e]
+    cis,16[ a f e] f[ e cis a] cis[ e f a] cis[ a f e]
     cis[ a cis e] f[ a f e] cis[ a f a]\bar "|"
     e[ f a cis] e[ f a cis e cis] f[ e cis a f e] a[ f e cis a f] h[ a f e cis a]
     \clef bass
     d[ cis a f e cis] f[ e cis a f e] a[ f e cis]
-  }
+  %}
   \cadenzaOff
   \bar "||"
   %\once\override Score.MetronomeMark.extra-offset = #'(-2 . 2)
@@ -142,36 +159,36 @@ rechtsDrei = {
   R2.
   \clef treble
   R2.
-  \repeat unfold 12 {a''16 cis''' b'' cis''' }
-  e'''8 <cis'' e'' a'' cis'''>2-> <fis' a' d'' fis''>8
-  <a' c'' f'' a''>4. <gis' h' e'' gis''>
-  r8 <cis'' e'' a'' cis'''>2-> <fis a d' fis'>8
-  <a c' f' a'>4. <gis h e' gis'>
-  <a a'>8[ <cis' cis''>] <f' f''>[ <e'! e''!>]~(
+  \repeat unfold 12 {a''''16 cis b cis}
+  e8 <cis, e a cis>2-> <fis, a d fis>8
+  <a c f a>4. <gis h e gis>
+  r8 <cis e a cis>2-> <fis,, a d fis>8
+  <a c f a>4. <gis h e gis>
+  <a a'>8[ <cis cis'>] <f f'>[ <e! e'!>]~(
   \override Beam.gap = #0
-  \repeat tremolo 4 {e'32 e''}
-  \repeat tremolo 12 {e'32 e'')}
-  <a' a''>8[ <cis'' cis'''>] <f'' f'''>[ <e''! e'''!>]~(
-  \repeat tremolo 4 {e''32 e'''}
-  \repeat tremolo 12 {e''32 e''')}
+  \repeat tremolo 4 {e32 e'}
+  \repeat tremolo 12 {e,32 e')}
+  <a, a'>8[ <cis cis'>] <f f'>[ <e! e'!>]~(
+  \repeat tremolo 4 {e32 e'}
+  \repeat tremolo 12 {e,32 e')}
   \ottava #1
   \set Staff.ottavation = #"8"
-  <a'' a'''>8[ <cis''' cis''''>] <f''' f''''>[ <e'''! e''''!>]~(
-  \repeat tremolo 4 {e'''32 e''''}
-  \repeat tremolo 12 {e'''32 e'''')}
-  <a'' a'''>8[ <cis''' cis''''>] <f''' f''''>[ <e'''! e''''!>]~(
-  \repeat tremolo 4 {e'''32 e''''}
-  \repeat tremolo 12 {f'''32 f'''')}
-  <e''' a''' cis'''' e''''>8
+  <a, a'>8[ <cis cis'>] <f f'>[ <e! e'!>]~(
+  \repeat tremolo 4 {e32 e'}
+  \repeat tremolo 12 {e,32 e')}
+  <a,, a'>8[ <cis cis'>] <f f'>[ <e! e'!>]~(
+  \repeat tremolo 4 {e32 e'}
+  \repeat tremolo 12 {f,32 f')}
+  <e, a cis e>8
   \ottava #0
-  <e' e''>4 <es' es''>8 <d d'>[ <d' d''>]
-  <f' f''>[ <cis'' cis'''>] <c'' c'''> <e'' e'''>4
-  <h'' h'''>8 <a'' cis'''! e''' a'''>4 r r \bar "||"
+  <e,, e'>4 <es es'>8 <d, d'>[ <d' d'>]
+  <f f'>[ <cis' cis'>] <c c'> <e e'>4
+  <h' h'>8 <a cis! e a>4 r r \bar "||"
   %\once\override Score.MetronomeMark.extra-offset = #'(2.5 . -2)
   %\tempo "Primo tempo"
   \once\override Score.RehearsalMark.extra-offset = #'(13 . -3)
   \mark "Primo tempo"
-  <cis'' f'' a'' cis'''>4\fermata r2 R2. \bar ":|.S-S"
+  <cis, f a cis>4\fermata r2 R2. \bar ":|.S-S"
   \cadenzaOn
   \stopStaff
   s4
@@ -179,7 +196,7 @@ rechtsDrei = {
   \startStaff
   \cadenzaOff
   \mark \markup { \musicglyph #"scripts.coda" }
-  <a'' cis''' e''' a'''>2._\fermata
+  <a' cis e a>2._\fermata
   \bar "|."
   \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \override Score.RehearsalMark.direction = #DOWN
@@ -267,8 +284,8 @@ voiceA = \relative e {
   \cadenzaOff
   s2.
 }
-voiceB = \relative a, {
-  \repeat unfold 11 {a,2 r4 f2 r4}
+voiceB = \relative {
+  \repeat unfold 11 {a,,2 r4 f2 r4}
   \repeat unfold 6 {a2 r4 <e f>2 r4}
   \repeat unfold 3 {a2 r4 \acciaccatura { \stemUp f16[e f e]~} <e f>2 r4}
   \clef treble

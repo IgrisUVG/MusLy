@@ -28,7 +28,7 @@
 
 %%%%%%%%%%%%%%%%%%%%% INCLUDE %%%%%%%%%%%%%%%%%%%
 \include "pianoScripts.ly"
-\include "einsEXP.ly"
+\include "eins.ly"
 \include "zwei.ly"
 \include "drei.ly"
 \include "dreiBis.ly"
@@ -70,6 +70,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% ZWEITE %%%%%%%%%%%%%%%%%%%
@@ -91,6 +92,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%% DRITTE %%%%%%%%%%%%%%%%%%%
@@ -112,6 +114,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%% DRITTE BIS %%%%%%%%%%%%%%%%%%%
@@ -135,6 +138,7 @@
       }
       ragged-last = ##t
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% FIERTE %%%%%%%%%%%%%%%%%%%
@@ -157,6 +161,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% FUNFTE %%%%%%%%%%%%%%%%%%%
@@ -179,6 +184,7 @@
         %proportionalNotationDuration = #(ly:make-moment 1/8)
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% SECHSTE %%%%%%%%%%%%%%%%%%%
@@ -200,6 +206,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% SIEBENTE %%%%%%%%%%%%%%%%%%%
@@ -221,6 +228,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%% ACHTE %%%%%%%%%%%%%%%%%%%
@@ -242,6 +250,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% NEUNTE %%%%%%%%%%%%%%%%%%%
@@ -263,6 +272,7 @@
         \remove "Bar_number_engraver"
       }
     }
+    %\midi {}
   }
   \pageBreak
 %%%%%%%%%%%%%%%%%%%%% ZEHNTE %%%%%%%%%%%%%%%%%%%
@@ -285,5 +295,6 @@
         %proportionalNotationDuration = #(ly:make-moment 1/8)
       }
     }
+    %\midi {}
   }
 }

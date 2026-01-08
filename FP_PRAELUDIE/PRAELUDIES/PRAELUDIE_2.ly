@@ -4,7 +4,7 @@
 \language "deutsch"
 
 \header {
-  title = "№2"
+  title = "№ 2"
   %meter = "Lento"
   composer = "I. G."
   tagline = \markup {\char ##x00A9 "Ilja Grischunin"}

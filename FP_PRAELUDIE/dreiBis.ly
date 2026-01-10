@@ -59,7 +59,7 @@ voiceA = \relative {
   c64_( f a c f32 c a f e2.)
   \bar "||" \break
   \key a \minor
-  \override TupletBracket #'bracket-visibility = ##f
+  \override TupletBracket.bracket-visibility = ##f
   \set subdivideBeams = ##t
   \set baseMoment = #(ly:make-moment 1 16)
   \set beatStructure = #'(2 2 2 2 2 2 2 2 2 2 2)
@@ -232,7 +232,8 @@ voiceA = \relative {
     g'16[ a b f' b, a g a b e b a g a b
     es b a g a b d b a g a b]
   }
-  \bar "||"\break
+  \bar "||"
+  \break
   \clef treble
   \key a \major
   \set subdivideBeams = ##f

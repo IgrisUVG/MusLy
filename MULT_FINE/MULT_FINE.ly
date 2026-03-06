@@ -13,7 +13,7 @@
 %#(set-global-staff-size 16)
 \paper {
   indent = 3.0\cm  % space for instrumentName
-  %short-indent = 1.5\cm  % space for shortInstrumentName
+  short-indent = 1\cm  % space for shortInstrumentName
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
   markup-system-spacing.basic-distance = #26
@@ -50,17 +50,19 @@
     <<
       \new Staff = "Staff_flute" {
         \set Staff.instrumentName = #"Flute"
-        % shortInstrumentName, midiInstrument, etc.
-        % may be set here as well
+        \set Staff.shortInstrumentName = #"Fl"
         \fluteMusic
       }
       \new Staff = "Staff_clarinet" {
         \set Staff.instrumentName =
-        \markup { \concat { "Clarinet in B" \flat } }
+        \markup { "Clarinet in B" }
+        \set Staff.shortInstrumentName =
+        \markup \right-column { "Cl" \line { "in B" } }
         \transpose b c' \clarinetMusic
       }
       \new Staff = "Staff_cello" {
         \set Staff.instrumentName = #"Cello"
+        \set Staff.shortInstrumentName = #"Vc"
         \celloMusic
       }
       \new GrandStaff = "GrandStaff_violins" \with {
@@ -69,10 +71,12 @@
       <<
         \new Staff = "Staff_violinI" {
           \set Staff.instrumentName = #"Archi I"
+          \set Staff.shortInstrumentName = #"A I"
           \archiIMusic
         }
         \new Staff = "Staff_violinII" {
           \set Staff.instrumentName = #"Archi II"
+          \set Staff.shortInstrumentName = #"A II"
           \archiIIMusic
         }
       >>

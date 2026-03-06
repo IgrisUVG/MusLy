@@ -12,7 +12,7 @@
 
 %#(set-global-staff-size 16)
 \paper {
-  indent = 3.0\cm  % space for instrumentName
+  indent = 2.5\cm  % space for instrumentName
   short-indent = 1\cm  % space for shortInstrumentName
   top-system-spacing.basic-distance = #25
   top-markup-spacing.basic-distance = #8
@@ -34,7 +34,7 @@
   \context {
     \Score
     \remove "Bar_number_engraver"
-    \override VerticalAxisGroup.remove-first = ##t
+    %\override VerticalAxisGroup.remove-first = ##t
   }
   \override Staff.InstrumentName.self-alignment-X = #RIGHT
 }
@@ -55,7 +55,7 @@
       }
       \new Staff = "Staff_clarinet" {
         \set Staff.instrumentName =
-        \markup { "Clarinet in B" }
+        \markup \right-column { "Clarinet" \line { " in B" } }
         \set Staff.shortInstrumentName =
         \markup \right-column { "Cl" \line { "in B" } }
         \transpose b c' \clarinetMusic
@@ -82,4 +82,5 @@
       >>
     >>
   >>
+  %\midi {}
 }

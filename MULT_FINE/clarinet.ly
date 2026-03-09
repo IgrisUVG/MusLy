@@ -3,7 +3,7 @@
 \language "deutsch"
 
 clarinetMusic = \relative {
-  \override Score.BarNumber.break-visibility = ##(#t #t #t)
+  %\override Score.BarNumber.break-visibility = ##(#t #t #t)
   \key d \major
   \time 3/4
   \override MultiMeasureRest.expand-limit = #2

@@ -28,7 +28,7 @@
   indent = 10
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \context {
     %\Staff \RemoveEmptyStaves
@@ -47,7 +47,7 @@
       \transpose b c'
       \clarinetMusic
     }
-    
+
     %\new Dynamics
     %\removeWithTag #'Bass
     %\dynamic

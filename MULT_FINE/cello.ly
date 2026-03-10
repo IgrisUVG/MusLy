@@ -3,7 +3,7 @@
 \language "deutsch"
 
 celloMusic = \relative {
-  \override Score.BarNumber.break-visibility = ##(#t #t #t)
+  %\override Score.BarNumber.break-visibility = ##(#t #t #t)
   %\clef bass
   \clef alto
   \key d \major

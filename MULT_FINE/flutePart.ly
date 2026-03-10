@@ -28,7 +28,7 @@
   indent = 10
   \context {
     \Score
-    \remove "Bar_number_engraver"
+    %\remove "Bar_number_engraver"
   }
   \context {
     %\Staff \RemoveEmptyStaves
@@ -45,7 +45,7 @@
     \new Staff {
       \fluteMusic
     }
-    
+
     %\new Dynamics
     %\removeWithTag #'Bass
     %\dynamic

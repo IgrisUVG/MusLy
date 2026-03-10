@@ -3,7 +3,7 @@
 \language "deutsch"
 
 archiIMusic = \relative {
-  \override Score.BarNumber.break-visibility = ##(#t #t #t)
+  %\override Score.BarNumber.break-visibility = ##(#t #t #t)
   \clef alto
   \key d \major
   \time 3/4
@@ -45,7 +45,7 @@ archiIMusic = \relative {
 }
 
 archiIIMusic = \relative {
-  \override Score.BarNumber.break-visibility = ##(#t #t #t)
+  %\override Score.BarNumber.break-visibility = ##(#t #t #t)
   \clef bass
   \key d \major
   \time 3/4
